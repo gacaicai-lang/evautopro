@@ -1,46 +1,24 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ====== EV Auto Pro Design Tokens ======
- * Reverse-engineered from Tough Lighting (similar B2B aesthetic)
- * Adapted for China NEV export
- * ======================================== */
-@theme {
-  /* Brand red (industrial / urgent — works for both lights and automotive) */
-  --color-brand-50:  #fef2f0;
-  --color-brand-500: #e53e2f;
-  --color-brand-600: #cc3526;
-  --color-brand-700: #b22e21;
-
-  /* ink = high-grade neutral grays (= Tailwind zinc rebadged) */
-  --color-ink-50:  #fafafa;
-  --color-ink-100: #f4f4f5;
-  --color-ink-200: #e4e4e7;
-  --color-ink-300: #d4d4d8;
-  --color-ink-400: #a1a1aa;
-  --color-ink-500: #71717a;
-  --color-ink-600: #52525b;
-  --color-ink-700: #3f3f46;
-  --color-ink-800: #27272a;
-  --color-ink-900: #18181b;
-
-  /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Inter', system-ui, sans-serif;
+/* ====== EV Auto Pro Base Styles ====== */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply font-sans text-ink-900 bg-white antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  html[dir='rtl'] body { direction: rtl; }
 }
 
-/* Base */
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--font-sans);
-  color: var(--color-ink-900);
-  background: white;
-  font-feature-settings: 'cv11', 'ss01';
-}
-
-/* RTL for Arabic */
-html[dir='rtl'] body { direction: rtl; }
-
-/* B2B form aesthetic */
-input, textarea, select {
-  font-family: inherit;
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 bg-brand-500 text-white font-semibold rounded-lg transition-colors;
+  }
+  .btn-primary:hover { @apply bg-brand-600; }
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 bg-white border border-ink-300 text-ink-900 font-semibold rounded-lg transition-colors;
+  }
+  .btn-secondary:hover { @apply border-ink-500; }
 }

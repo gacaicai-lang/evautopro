@@ -1,0 +1,214 @@
+# Decap CMS Config — EV Auto Pro
+# 后台 URL: /admin/  → GitHub OAuth 登录 → 可视化编辑 → push GitHub → CF Pages 自动重建
+
+backend:
+  name: github
+  repo: gacaicai-lang/evautopro
+  branch: main
+  base_url: https://api.netlify.com   # OAuth 中转（免费）
+
+# 媒体上传到 public/uploads/
+media_folder: 'public/uploads'
+public_folder: '/uploads'
+
+# 站点 URL（CF Pages 部署后改这里）
+site_url: https://evautopro.com
+display_url: https://evautopro.com
+
+# 4 语言（i18n 内容字段会自动复制 4 份让你逐语言写）
+i18n:
+  structure: multiple_folders
+  locales: [en, ru, ar, es]
+  default_locale: en
+
+# ============ Collections ============
+collections:
+
+  # ------ 1. 车型 ------
+  - name: cars
+    label: '🚗 Cars (车型)'
+    label_singular: 'Car'
+    folder: 'src/content/cars'
+    create: true
+    slug: '{{brand}}-{{model_slug}}'
+    i18n: true
+    fields:
+      - { label: 'Title (H1)', name: title, widget: string, i18n: true }
+      - { label: 'Slug (不变)', name: slug, widget: string, i18n: duplicate }
+      - { label: 'Brand', name: brand, widget: relation, collection: brands, search_fields: [name], value_field: slug, display_fields: [name], i18n: duplicate }
+      - { label: 'Model Export Name', name: model_export, widget: string, i18n: duplicate, hint: 'Coolray 不是 Binyue, Atlas 不是 Boyue' }
+      - { label: 'Year', name: year, widget: number, default: 2026, i18n: duplicate }
+      - { label: 'Body Type', name: body_type, widget: select, options: [Sedan, SUV, MPV, Pickup, Hatchback, Coupe], i18n: duplicate }
+      - { label: 'Fuel Type', name: fuel_type, widget: select, options: [BEV, PHEV, EREV, HEV, ICE], i18n: duplicate }
+      - { label: 'Drive', name: drive_type, widget: select, options: [FWD, RWD, AWD, 4WD], i18n: duplicate }
+      - { label: 'Seats', name: seats, widget: number, default: 5, i18n: duplicate }
+      - label: 'Pricing'
+        name: pricing
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: 'FOB Min (USD)', name: fob_min, widget: number }
+          - { label: 'FOB Max (USD)', name: fob_max, widget: number }
+          - { label: 'EXW Min (USD)', name: exw_min, widget: number, required: false }
+          - { label: 'EXW Max (USD)', name: exw_max, widget: number, required: false }
+      - { label: 'MOQ', name: moq, widget: number, default: 1, i18n: duplicate }
+      - { label: 'Stock Units', name: stock_units, widget: number, required: false, i18n: duplicate }
+      - { label: 'Lead Time (days)', name: lead_time_days, widget: number, default: 15, i18n: duplicate }
+      - { label: 'Hero Image', name: hero_image, widget: image, i18n: duplicate }
+      - { label: 'Gallery', name: gallery, widget: list, field: { label: 'Image', name: img, widget: image }, i18n: duplicate, required: false }
+      - { label: 'YouTube URL', name: youtube_url, widget: string, required: false, i18n: duplicate }
+      - label: 'Specifications'
+        name: specs
+        widget: object
+        i18n: duplicate
+        fields:
+          - { label: 'Battery (kWh)', name: battery_kwh, widget: number, required: false }
+          - { label: 'Range WLTP (km)', name: range_wltp, widget: number, required: false }
+          - { label: 'Motor Power (PS)', name: motor_ps, widget: number, required: false }
+          - { label: 'Top Speed (km/h)', name: top_speed, widget: number, required: false }
+          - { label: '0-100 (sec)', name: accel_0_100, widget: number, required: false }
+          - { label: 'Dimensions (L×W×H mm)', name: dimensions, widget: string, required: false }
+          - { label: 'Wheelbase (mm)', name: wheelbase, widget: number, required: false }
+      - { label: 'Description', name: body, widget: markdown, i18n: true }
+      - label: 'FAQ'
+        name: faqs
+        widget: list
+        i18n: true
+        fields:
+          - { label: 'Question', name: q, widget: string }
+          - { label: 'Answer', name: a, widget: text }
+      - label: 'Supported Markets'
+        name: supported_markets
+        widget: select
+        multiple: true
+        options: [Russia, UAE, Kazakhstan, Uzbekistan, Saudi Arabia, Egypt, Brazil, Mexico]
+        i18n: duplicate
+      - label: 'Certifications'
+        name: certifications
+        widget: select
+        multiple: true
+        options: [CE, GCC, EAC, INMETRO, SASO, GSO, NOM]
+        i18n: duplicate
+        required: false
+      - { label: 'Featured on Homepage?', name: featured, widget: boolean, default: false, i18n: duplicate }
+
+  # ------ 2. 品牌 ------
+  - name: brands
+    label: '🏷 Brands (品牌)'
+    label_singular: 'Brand'
+    folder: 'src/content/brands'
+    create: true
+    slug: '{{slug}}'
+    i18n: true
+    fields:
+      - { label: 'Brand Name', name: name, widget: string, i18n: duplicate }
+      - { label: 'Slug', name: slug, widget: string, i18n: duplicate }
+      - { label: 'Chinese Name', name: name_cn, widget: string, required: false, i18n: duplicate }
+      - { label: 'Country', name: country, widget: select, options: [China, Germany, Japan, Korea, USA], i18n: duplicate }
+      - { label: 'Type', name: type, widget: string, hint: 'EV+PHEV / Joint Venture / etc', i18n: duplicate }
+      - { label: 'Logo', name: logo, widget: image, required: false, i18n: duplicate }
+      - { label: 'Authorized Dealer?', name: authorized, widget: boolean, default: false, i18n: duplicate }
+      - { label: 'Hero Image', name: hero_image, widget: image, required: false, i18n: duplicate }
+      - { label: 'Tagline', name: tagline, widget: string, i18n: true }
+      - { label: 'Description', name: body, widget: markdown, i18n: true }
+
+  # ------ 3. 博客 ------
+  - name: blog
+    label: '📝 Blog (博客长文)'
+    label_singular: 'Post'
+    folder: 'src/content/blog'
+    create: true
+    slug: '{{slug}}'
+    i18n: true
+    fields:
+      - { label: 'Title (H1)', name: title, widget: string, i18n: true }
+      - { label: 'Slug', name: slug, widget: string, i18n: duplicate }
+      - { label: 'Author', name: author, widget: string, default: 'Cai', i18n: duplicate }
+      - { label: 'Publish Date', name: date, widget: datetime, i18n: duplicate }
+      - { label: 'Category', name: category, widget: select, options: ['Market Guide', 'Buyer Guide', 'Export Process', 'Comparison', 'Industry News'], i18n: duplicate }
+      - { label: 'Read Time', name: read_time, widget: string, default: '8 min', i18n: duplicate }
+      - { label: 'Featured Image', name: featured_image, widget: image, i18n: duplicate }
+      - { label: 'Meta Description', name: meta_description, widget: text, i18n: true, hint: '150-160 字符,SEO 用' }
+      - { label: 'Focus Keyword', name: focus_keyword, widget: string, i18n: true, hint: '主关键词,如 "chinese ev export to russia"' }
+      - { label: 'Body', name: body, widget: markdown, i18n: true }
+      - { label: 'Featured on Homepage?', name: featured, widget: boolean, default: false, i18n: duplicate }
+
+  # ------ 4. 船报新闻 ------
+  - name: news
+    label: '🚢 News (出口船报)'
+    label_singular: 'Shipment News'
+    folder: 'src/content/news'
+    create: true
+    slug: '{{slug}}'
+    i18n: true
+    fields:
+      - { label: 'Headline (H1)', name: title, widget: string, i18n: true, hint: '"30 units Jetour T2 → Tashkent"' }
+      - { label: 'Slug', name: slug, widget: string, i18n: duplicate }
+      - { label: 'Date', name: date, widget: datetime, i18n: duplicate }
+      - { label: 'Quantity', name: quantity, widget: number, i18n: duplicate }
+      - { label: 'Model', name: model, widget: relation, collection: cars, search_fields: [title], value_field: slug, display_fields: [title], i18n: duplicate }
+      - { label: 'Destination Country', name: country, widget: string, i18n: duplicate }
+      - { label: 'Destination Port', name: port, widget: string, required: false, i18n: duplicate }
+      - { label: 'Shipping Method', name: shipping_method, widget: select, options: [RoRo, Container, 'Block Train', Truck], i18n: duplicate }
+      - { label: 'Lead Image', name: lead_image, widget: image, i18n: duplicate, hint: '装船现场照' }
+      - { label: 'Story', name: body, widget: markdown, i18n: true }
+      - { label: 'Show on Live Feed?', name: live_feed, widget: boolean, default: true, i18n: duplicate }
+
+  # ------ 5. 案例 ------
+  - name: case_studies
+    label: '⭐ Case Studies (客户案例)'
+    label_singular: 'Case Study'
+    folder: 'src/content/case-studies'
+    create: true
+    slug: '{{slug}}'
+    i18n: true
+    fields:
+      - { label: 'Title (H1)', name: title, widget: string, i18n: true }
+      - { label: 'Slug', name: slug, widget: string, i18n: duplicate }
+      - { label: 'Client Name', name: client_name, widget: string, i18n: true }
+      - { label: 'Client Country', name: country, widget: string, i18n: duplicate }
+      - { label: 'Date', name: date, widget: datetime, i18n: duplicate }
+      - { label: 'Hero Image', name: hero_image, widget: image, i18n: duplicate }
+      - { label: 'Video URL', name: video_url, widget: string, required: false, i18n: duplicate, hint: 'YouTube/Vimeo URL 或港口拍车视频' }
+      - { label: 'Volume', name: volume, widget: string, i18n: duplicate, hint: '"50 units" 或 "$1.2M"' }
+      - { label: 'Models Involved', name: models, widget: list, field: { label: 'Model', name: model, widget: relation, collection: cars, search_fields: [title], value_field: slug, display_fields: [title] }, i18n: duplicate }
+      - { label: 'Testimonial Quote', name: quote, widget: text, required: false, i18n: true }
+      - { label: 'Body (Story)', name: body, widget: markdown, i18n: true }
+
+  # ------ 6. 市场国家页 ------
+  - name: markets
+    label: '🌍 Markets (市场国家页)'
+    label_singular: 'Market'
+    folder: 'src/content/markets'
+    create: true
+    slug: '{{slug}}'
+    i18n: true
+    fields:
+      - { label: 'Country Name', name: name, widget: string, i18n: true }
+      - { label: 'Slug', name: slug, widget: string, i18n: duplicate }
+      - { label: 'Country Code', name: code, widget: string, hint: 'RU/AE/KZ/...', i18n: duplicate }
+      - { label: 'Tagline', name: tagline, widget: string, i18n: true }
+      - { label: 'Hero Image', name: hero_image, widget: image, i18n: duplicate }
+      - { label: 'Import Duty %', name: import_duty, widget: string, required: false, i18n: duplicate }
+      - { label: 'VAT %', name: vat, widget: string, required: false, i18n: duplicate }
+      - { label: 'Required Certification', name: certifications, widget: list, field: { label: 'Cert', name: cert, widget: string }, i18n: duplicate }
+      - { label: 'Available Shipping Methods', name: shipping, widget: list, field: { label: 'Method', name: method, widget: string }, i18n: duplicate }
+      - { label: 'Recommended Models', name: recommended, widget: list, field: { label: 'Model', name: model, widget: relation, collection: cars, search_fields: [title], value_field: slug, display_fields: [title] }, i18n: duplicate }
+      - { label: 'Body', name: body, widget: markdown, i18n: true }
+
+  # ------ 7. 站点设置 ------
+  - name: settings
+    label: '⚙ Settings'
+    files:
+      - file: 'src/content/settings/global.json'
+        label: 'Global'
+        name: global
+        i18n: true
+        fields:
+          - { label: 'Site Name', name: site_name, widget: string, default: 'EV Auto Pro', i18n: duplicate }
+          - { label: 'Tagline', name: tagline, widget: string, i18n: true }
+          - { label: 'Phone', name: phone, widget: string, i18n: duplicate }
+          - { label: 'WhatsApp', name: whatsapp, widget: string, i18n: duplicate }
+          - { label: 'Email', name: email, widget: string, i18n: duplicate }
+          - { label: 'Address', name: address, widget: text, i18n: true }
+          - { label: 'WeChat ID', name: wechat, widget: string, required: false, i18n: duplicate }

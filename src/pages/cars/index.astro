@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// 50+ models snapshot（后期由 Decap CMS 接管）
+const cars = [
+  // P0 首批 8 个
+  { slug: 'changan-uni-t', brand: 'Changan', name: 'UNI-T', body: 'Coupe SUV', fuel: 'ICE', price_min: 13800, price_max: 17200, moq: 1, stock: 45, authorized: true },
+  { slug: 'jetour-t2', brand: 'Jetour', name: 'T2', body: '7-Seater SUV', fuel: 'PHEV', price_min: 22500, price_max: 28900, moq: 1, stock: 30, authorized: true },
+  { slug: 'geely-coolray', brand: 'Geely', name: 'Coolray', body: 'Compact SUV', fuel: 'ICE', price_min: 15200, price_max: 18800, moq: 1, stock: 28, authorized: true },
+  { slug: 'deepal-s07', brand: 'Deepal', name: 'S07', body: 'Mid SUV', fuel: 'EREV', price_min: 24800, price_max: 32500, moq: 1, stock: 18, authorized: true },
+  { slug: 'changan-cs55-plus', brand: 'Changan', name: 'CS55 Plus', body: 'SUV', fuel: 'ICE', price_min: 14500, price_max: 17900, moq: 1, stock: 50, authorized: true },
+  { slug: 'deepal-s09', brand: 'Deepal', name: 'S09', body: 'Large SUV', fuel: 'EREV', price_min: 36500, price_max: 45800, moq: 1, stock: 12, authorized: true },
+  { slug: 'geely-atlas', brand: 'Geely', name: 'Atlas', body: 'Mid SUV', fuel: 'ICE', price_min: 17800, price_max: 22500, moq: 1, stock: 22, authorized: true },
+  { slug: 'deepal-s05', brand: 'Deepal', name: 'S05', body: 'Compact SUV', fuel: 'BEV', price_min: 19200, price_max: 24500, moq: 1, stock: 15, authorized: true },
+  // P1 第二批
+  { slug: 'changan-uni-k', brand: 'Changan', name: 'UNI-K', body: 'Mid SUV', fuel: 'PHEV', price_min: 19500, price_max: 24800, moq: 1, stock: 20, authorized: true },
+  { slug: 'changan-uni-z', brand: 'Changan', name: 'UNI-Z', body: 'Coupe SUV', fuel: 'ICE', price_min: 14200, price_max: 17500, moq: 1, stock: 25, authorized: true },
+  { slug: 'changan-cs75-plus', brand: 'Changan', name: 'CS75 Plus', body: 'Mid SUV', fuel: 'ICE', price_min: 16800, price_max: 20500, moq: 1, stock: 35, authorized: true },
+  { slug: 'jetour-x70-plus', brand: 'Jetour', name: 'X70 Plus', body: '7-Seater SUV', fuel: 'ICE', price_min: 18500, price_max: 23200, moq: 1, stock: 18, authorized: true },
+  { slug: 'jetour-dasheng', brand: 'Jetour', name: 'Dasheng', body: 'SUV', fuel: 'PHEV', price_min: 21800, price_max: 27500, moq: 1, stock: 14, authorized: true },
+  { slug: 'geely-emgrand', brand: 'Geely', name: 'Emgrand', body: 'Sedan', fuel: 'ICE', price_min: 11500, price_max: 14200, moq: 1, stock: 40, authorized: true },
+  { slug: 'geely-monjaro', brand: 'Geely', name: 'Monjaro', body: 'Mid SUV', fuel: 'ICE', price_min: 22800, price_max: 28500, moq: 1, stock: 12, authorized: true },
+  { slug: 'volkswagen-id-3', brand: 'Volkswagen', name: 'ID.3', body: 'Hatchback', fuel: 'BEV', price_min: 24500, price_max: 28800, moq: 5, stock: 8, authorized: true },
+  { slug: 'volkswagen-id-7', brand: 'Volkswagen', name: 'ID.7', body: 'Sedan', fuel: 'BEV', price_min: 35200, price_max: 41500, moq: 5, stock: 6, authorized: true },
+];
+
+// Filters
+const bodyTypes = [...new Set(cars.map(c => c.body))].sort();
+const fuelTypes = [...new Set(cars.map(c => c.fuel))].sort();
+const brands = [...new Set(cars.map(c => c.brand))].sort();
+---
+
+<BaseLayout
+  title="All Cars for Export from China | EV Auto Pro"
+  description="Browse 50+ Chinese new energy and ICE vehicles available for export. Filter by body type, fuel, brand. Direct FOB pricing, MOQ 1."
+>
+  <section class="bg-ink-50 border-b border-ink-200 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-ink-500 mb-3">
+        <a href="/" class="hover:text-brand-500">Home</a>
+        <span class="mx-1">·</span>
+        <span class="text-ink-900 font-medium">All Cars</span>
+      </nav>
+      <h1 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-3">All Cars for Export</h1>
+      <p class="text-base text-ink-600 max-w-2xl">
+        {cars.length} models available. FOB from $11,500 · MOQ 1-5 units · Lead time 3-30 days · RoRo / Container / Block Train / Truck.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-[240px_1fr] gap-8">
+        {/* Sidebar filters */}
+        <aside class="space-y-6">
+          <div>
+            <h3 class="font-semibold text-sm text-ink-900 mb-3 uppercase tracking-wider">Body Type</h3>
+            <ul class="space-y-1">
+              {bodyTypes.map(b => (
+                <li><a href={`/cars/?body=${b}`} class="text-sm text-ink-600 hover:text-brand-500">{b}</a></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm text-ink-900 mb-3 uppercase tracking-wider">Fuel Type</h3>
+            <ul class="space-y-1">
+              {fuelTypes.map(f => (
+                <li><a href={`/cars/?fuel=${f}`} class="text-sm text-ink-600 hover:text-brand-500">{f}</a></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm text-ink-900 mb-3 uppercase tracking-wider">Brand</h3>
+            <ul class="space-y-1">
+              {brands.map(b => (
+                <li><a href={`/brands/${b.toLowerCase()}/`} class="text-sm text-ink-600 hover:text-brand-500">{b}</a></li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+
+        {/* Car grid */}
+        <div>
+          <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+            {cars.map(c => (
+              <a href={`/cars/${c.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
+                <div class="aspect-[16/10] bg-ink-100 flex items-center justify-center text-ink-300 text-xs">
+                  car-{c.slug}.jpg
+                </div>
+                <div class="p-5">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="px-2 py-0.5 bg-ink-100 text-ink-600 text-xs rounded">{c.body}</span>
+                    <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{c.fuel}</span>
+                    {c.authorized && <span class="px-2 py-0.5 bg-brand-500 text-white text-[10px] font-bold rounded">★</span>}
+                  </div>
+                  <div class="text-xs text-ink-500 mb-1">{c.brand}</div>
+                  <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{c.name}</h3>
+                  <div class="flex items-end justify-between">
+                    <div>
+                      <div class="text-xs text-ink-500">From</div>
+                      <div class="text-lg font-bold text-ink-900">${c.price_min.toLocaleString()}</div>
+                      <div class="text-xs text-ink-400">FOB Shanghai</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-xs text-ink-500">In stock</div>
+                      <div class="text-sm font-semibold text-ink-900">{c.stock} units</div>
+                      <div class="text-xs text-ink-400">MOQ {c.moq}</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

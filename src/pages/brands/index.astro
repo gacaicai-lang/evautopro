@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// 35 brands (照搬 ihkaauto.com/brand 同款矩阵)
+const brands = [
+  { slug: 'aito', name: 'AITO', cn: '问界', type: 'EV+EREV', country: 'China', authorized: false },
+  { slug: 'avatr', name: 'AVATR', cn: '阿维塔', type: 'EV', country: 'China', authorized: false },
+  { slug: 'aion', name: 'Aion', cn: '埃安', type: 'EV', country: 'China', authorized: false },
+  { slug: 'audi', name: 'Audi', cn: '奥迪', type: 'JV', country: 'Germany', authorized: false },
+  { slug: 'bmw', name: 'BMW', cn: '宝马', type: 'JV', country: 'Germany', authorized: false },
+  { slug: 'byd', name: 'BYD', cn: '比亚迪', type: 'EV+PHEV', country: 'China', authorized: false },
+  { slug: 'byd-leopard', name: 'BYD Leopard', cn: '方程豹', type: 'EV+EREV', country: 'China', authorized: false },
+  { slug: 'buick', name: 'Buick', cn: '别克', type: 'JV', country: 'USA', authorized: false },
+  { slug: 'changan', name: 'Changan', cn: '长安', type: 'EV+PHEV+ICE', country: 'China', authorized: true },
+  { slug: 'chery', name: 'Chery', cn: '奇瑞', type: 'EV+PHEV+ICE', country: 'China', authorized: false },
+  { slug: 'chevrolet', name: 'Chevrolet', cn: '雪佛兰', type: 'JV', country: 'USA', authorized: false },
+  { slug: 'deepal', name: 'Deepal', cn: '深蓝', type: 'EV+EREV', country: 'China', authorized: true },
+  { slug: 'denza', name: 'Denza', cn: '腾势', type: 'EV', country: 'China', authorized: false },
+  { slug: 'dongfeng', name: 'Dongfeng', cn: '东风', type: 'EV+ICE', country: 'China', authorized: false },
+  { slug: 'foton', name: 'Foton', cn: '福田', type: 'Commercial+EV', country: 'China', authorized: false },
+  { slug: 'ford', name: 'Ford', cn: '福特', type: 'JV', country: 'USA', authorized: false },
+  { slug: 'gac-mitsubishi', name: 'GAC Mitsubishi', cn: '广汽三菱', type: 'JV', country: 'China', authorized: false },
+  { slug: 'geely', name: 'Geely', cn: '吉利', type: 'EV+PHEV+ICE', country: 'China', authorized: true },
+  { slug: 'haval', name: 'Haval', cn: '哈弗', type: 'SUV+EV', country: 'China', authorized: false },
+  { slug: 'honda', name: 'Honda', cn: '本田', type: 'JV', country: 'Japan', authorized: false },
+  { slug: 'hyundai', name: 'Hyundai', cn: '现代', type: 'JV', country: 'Korea', authorized: false },
+  { slug: 'jetour', name: 'Jetour', cn: '捷途', type: 'SUV', country: 'China', authorized: true },
+  { slug: 'kia', name: 'Kia', cn: '起亚', type: 'JV', country: 'Korea', authorized: false },
+  { slug: 'leapmotor', name: 'Leapmotor', cn: '零跑', type: 'EV', country: 'China', authorized: false },
+  { slug: 'lexus', name: 'Lexus', cn: '雷克萨斯', type: 'Import', country: 'Japan', authorized: false },
+  { slug: 'mazda', name: 'Mazda', cn: '马自达', type: 'JV', country: 'Japan', authorized: false },
+  { slug: 'nissan', name: 'Nissan', cn: '日产', type: 'JV', country: 'Japan', authorized: false },
+  { slug: 'qiyuan', name: 'Qiyuan', cn: '启源', type: 'EV+PHEV', country: 'China', authorized: true },
+  { slug: 'saic', name: 'SAIC', cn: '上汽', type: 'EV+ICE', country: 'China', authorized: false },
+  { slug: 'tesla', name: 'Tesla', cn: '特斯拉', type: 'EV', country: 'USA', authorized: false },
+  { slug: 'toyota', name: 'Toyota', cn: '丰田', type: 'JV', country: 'Japan', authorized: false },
+  { slug: 'volkswagen', name: 'Volkswagen', cn: '大众', type: 'JV', country: 'Germany', authorized: true },
+  { slug: 'voyah', name: 'Voyah', cn: '岚图', type: 'EV+EREV', country: 'China', authorized: false },
+  { slug: 'wuling', name: 'Wuling', cn: '五菱', type: 'EV', country: 'China', authorized: false },
+  { slug: 'xiaomi', name: 'Xiaomi', cn: '小米', type: 'EV', country: 'China', authorized: false },
+  { slug: 'xpeng', name: 'Xpeng', cn: '小鹏', type: 'EV', country: 'China', authorized: false },
+  { slug: 'zeekr', name: 'Zeekr', cn: '极氪', type: 'EV', country: 'China', authorized: false },
+];
+
+// Featured first
+const sortedBrands = [...brands].sort((a, b) => (b.authorized ? 1 : 0) - (a.authorized ? 1 : 0));
+---
+
+<BaseLayout
+  title="All Car Brands | EV Auto Pro China Exporter"
+  description="Browse 35 Chinese car brands available for export. Authorized direct supply from Changan, Deepal, Jetour, Geely, VW China, Qiyuan."
+>
+  <section class="bg-ink-50 border-b border-ink-200 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-ink-500 mb-3">
+        <a href="/" class="hover:text-brand-500">Home</a>
+        <span class="mx-1">·</span>
+        <span class="text-ink-900 font-medium">Brands</span>
+      </nav>
+      <h1 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-3">All Car Brands</h1>
+      <p class="text-base text-ink-600 max-w-2xl">
+        35 Chinese car brands available for export. <strong class="text-brand-500">6 authorized dealer brands</strong> + 29 sourced brands. Direct factory pricing, transparent FOB.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Filter strip -->
+      <div class="flex flex-wrap items-center gap-2 mb-8 text-sm">
+        <span class="font-semibold text-ink-700 mr-2">Filter:</span>
+        <button class="px-3 py-1 bg-brand-500 text-white rounded-full">All (35)</button>
+        <button class="px-3 py-1 bg-white border border-ink-200 hover:border-brand-500 text-ink-700 rounded-full">Authorized (6)</button>
+        <button class="px-3 py-1 bg-white border border-ink-200 hover:border-brand-500 text-ink-700 rounded-full">China NEV (20)</button>
+        <button class="px-3 py-1 bg-white border border-ink-200 hover:border-brand-500 text-ink-700 rounded-full">Joint Venture (10)</button>
+        <button class="px-3 py-1 bg-white border border-ink-200 hover:border-brand-500 text-ink-700 rounded-full">Import (1)</button>
+      </div>
+
+      <!-- Brand grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {sortedBrands.map(b => (
+          <a href={`/brands/${b.slug}/`}
+             class="group relative block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-5 text-center transition-all">
+            {b.authorized && (
+              <span class="absolute top-2 right-2 px-2 py-0.5 bg-brand-500 text-white text-[10px] font-bold rounded-full">
+                ★ AUTHORIZED
+              </span>
+            )}
+            <div class="w-16 h-16 mx-auto mb-3 rounded-lg bg-ink-100 group-hover:bg-brand-50 flex items-center justify-center text-ink-700 group-hover:text-brand-500 font-bold text-2xl transition-colors">
+              {b.name.charAt(0)}
+            </div>
+            <div class="font-semibold text-sm text-ink-900 mb-1">{b.name}</div>
+            <div class="text-xs text-ink-500">{b.cn}</div>
+            <div class="text-[10px] text-ink-400 mt-2 truncate">{b.type}</div>
+            <div class="text-[10px] text-ink-400 mt-0.5">{b.country}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 bg-ink-900">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-white mb-3">Don't see your preferred brand?</h2>
+      <p class="text-base text-ink-300 mb-6">Tell us which model you need. We source from 100+ Chinese OEMs.</p>
+      <a href="/contact/quote/" class="inline-flex items-center px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
+        Request Custom Sourcing
+      </a>
+    </div>
+  </section>
+</BaseLayout>

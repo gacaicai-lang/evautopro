@@ -1,0 +1,299 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// 单车型详情母版 demo — UNI-T（基于 master-03-car-detail.md）
+// 后期由 Decap CMS 接管，每个车型 markdown frontmatter 渲染同款模板
+const car = {
+  brand: 'Changan',
+  brand_cn: '长安',
+  brand_slug: 'changan',
+  model: 'UNI-T',
+  year: 2026,
+  subtitle: 'Sport Coupe SUV',
+  body_type: 'Coupe SUV',
+  fuel_type: 'ICE',
+  drive: 'FWD',
+  seats: 5,
+  pricing: {
+    fob_min: 13800, fob_max: 17200,
+    exw_min: 13200, exw_max: 16500,
+    cif: [
+      { country: 'Russia (St. Petersburg)', min: 16500, max: 20300 },
+      { country: 'UAE (Jebel Ali)', min: 15200, max: 18800 },
+      { country: 'Kazakhstan (Aktau, Block Train)', min: 15800, max: 19400 },
+    ],
+  },
+  specs: {
+    motor_ps: 188,
+    torque_nm: 300,
+    top_speed: 205,
+    accel: 7.5,
+    dimensions: '4515×1870×1565',
+    wheelbase: 2710,
+    weight: 1455,
+    tires: '225/55 R19',
+    transmission: '7-Speed DCT',
+  },
+  features: {
+    exterior: ['Matrix LED Headlights', 'Panoramic Sunroof', '19" Alloy Wheels'],
+    interior: ['10.25" Touchscreen', 'Wireless Charging', 'Heated/Ventilated Seats'],
+    safety: ['Lane Keep Assist', '360° Camera', 'ACC', '6 Airbags'],
+  },
+  stock_status: 'In Stock',
+  stock_units: 45,
+  lead_time_days: 15,
+  moq: 1,
+  supported_markets: ['Russia', 'Kazakhstan', 'UAE', 'Saudi Arabia', 'Mexico', 'Egypt'],
+  shipping_methods: ['RoRo', 'Container', 'Block Train', 'Truck'],
+  certifications: ['GCC', 'EAC'],
+  payment_terms: ['T/T 30+70', 'L/C at sight'],
+  faqs: [
+    { q: 'How can I purchase the Changan UNI-T for export?', a: 'Send us your target market and quantity via the quote form. We respond within 24 hours with FOB Shanghai and CIF prices, MOQ details, and lead time.' },
+    { q: 'What is the minimum order quantity for the UNI-T?', a: 'MOQ is 1 unit for container shipment. For RoRo shipments to Russia or UAE, we recommend ≥5 units to optimize freight cost.' },
+    { q: 'Do you have Changan UNI-T in stock?', a: 'Yes, we currently have 45 units in stock at our Shanghai bonded warehouse. Pre-order slots for the 2026 facelift open in Q2 2026.' },
+    { q: 'How is the UNI-T shipped to Kazakhstan?', a: 'We ship via Block Train through Khorgos border, delivered to Aktau or Almaty terminal in 18-22 days. Container ratesheet on request.' },
+    { q: 'What payment methods do you accept?', a: 'T/T 30% deposit + 70% before shipment is our standard. L/C at sight from major banks accepted. OA after first successful order.' },
+  ],
+};
+
+const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export from China`;
+---
+
+<BaseLayout
+  title={fullTitle}
+  description={`Buy ${car.year} ${car.brand} ${car.model} direct from authorized China exporter. FOB Shanghai from $${car.pricing.fob_min.toLocaleString()}. ${car.stock_units} units in stock. Ships to Russia, UAE, Kazakhstan. MOQ ${car.moq}.`}
+>
+  {/* H1 + Breadcrumb */}
+  <section class="bg-ink-50 border-b border-ink-200 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-ink-500 mb-3">
+        <a href="/" class="hover:text-brand-500">Home</a> ·
+        <a href="/cars/" class="hover:text-brand-500">Cars</a> ·
+        <a href={`/brands/${car.brand_slug}/`} class="hover:text-brand-500">{car.brand}</a> ·
+        <span class="text-ink-900">{car.model}</span>
+      </nav>
+      <h1 class="text-3xl lg:text-4xl font-bold text-ink-900">{fullTitle}</h1>
+      <p class="text-base text-ink-600 mt-2">{car.subtitle}</p>
+    </div>
+  </section>
+
+  {/* H2.1 Hero + Quick specs */}
+  <section class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10">
+        {/* Gallery */}
+        <div>
+          <div class="aspect-[4/3] rounded-2xl bg-ink-100 border border-ink-200 flex items-center justify-center text-ink-400 text-sm mb-3">
+            car-{car.brand_slug}-{car.model.toLowerCase()}.jpg<br/><span class="text-xs">P0 · 1600×1200</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2">
+            {[1,2,3,4].map(i => (
+              <div class="aspect-square bg-ink-100 rounded-lg flex items-center justify-center text-ink-300 text-[10px]">
+                view-{i}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick info */}
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-2 py-0.5 bg-ink-100 text-ink-700 text-xs rounded">{car.body_type}</span>
+            <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{car.fuel_type}</span>
+            <span class="px-2 py-0.5 bg-green-50 text-green-700 text-xs rounded">★ Authorized Dealer</span>
+          </div>
+
+          <div class="border-t border-b border-ink-200 py-6 my-6">
+            <div class="text-xs text-ink-500 mb-1">FOB Shanghai · USD</div>
+            <div class="text-4xl font-bold text-ink-900">${car.pricing.fob_min.toLocaleString()} – ${car.pricing.fob_max.toLocaleString()}</div>
+            <div class="text-sm text-ink-500 mt-2">Per unit · Container shipment</div>
+          </div>
+
+          <dl class="grid grid-cols-2 gap-4 text-sm mb-6">
+            <div><dt class="text-ink-500 text-xs">Year</dt><dd class="font-semibold text-ink-900">{car.year}</dd></div>
+            <div><dt class="text-ink-500 text-xs">Body</dt><dd class="font-semibold text-ink-900">{car.body_type}</dd></div>
+            <div><dt class="text-ink-500 text-xs">Drive</dt><dd class="font-semibold text-ink-900">{car.drive}</dd></div>
+            <div><dt class="text-ink-500 text-xs">Seats</dt><dd class="font-semibold text-ink-900">{car.seats}</dd></div>
+            <div><dt class="text-ink-500 text-xs">Stock</dt><dd class="font-semibold text-ink-900">{car.stock_units} units</dd></div>
+            <div><dt class="text-ink-500 text-xs">Lead time</dt><dd class="font-semibold text-ink-900">{car.lead_time_days} days</dd></div>
+            <div><dt class="text-ink-500 text-xs">MOQ</dt><dd class="font-semibold text-ink-900">{car.moq} unit</dd></div>
+            <div><dt class="text-ink-500 text-xs">HS Code</dt><dd class="font-semibold text-ink-900">8703.23</dd></div>
+          </dl>
+
+          <div class="flex flex-wrap gap-2">
+            <a href="/contact/quote/?model=changan-uni-t" class="btn-primary">Get Best Price</a>
+            <a href="https://wa.me/?text=Hi, I'm interested in Changan UNI-T for export" class="btn-secondary">WhatsApp Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* H2.2 Description */}
+  <section class="py-12 bg-ink-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-ink">
+      <h2 class="text-2xl font-bold text-ink-900 mb-4">About the {car.year} {car.brand} {car.model}</h2>
+      <p class="text-base text-ink-700 leading-relaxed mb-4">
+        EV Auto Pro is an <a href={`/brands/${car.brand_slug}/`} class="text-brand-500 underline">authorized {car.brand} exporter</a>. We currently have <strong>{car.stock_units} units in stock</strong> at our Shanghai bonded warehouse with delivery within <strong>{car.lead_time_days} days</strong> via RoRo, container, or block train.
+      </p>
+      <p class="text-base text-ink-700 leading-relaxed">
+        The {car.model} is Changan's flagship sport coupe SUV — 188 PS turbocharged engine, 7-DCT, matrix LED headlights, panoramic sunroof, and a 10.25" infotainment touchscreen with wireless CarPlay. Best-suited for dealer markets in Russia, UAE, Saudi Arabia, Kazakhstan, and Egypt.
+      </p>
+    </div>
+  </section>
+
+  {/* H2.3 Specifications */}
+  <section class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-ink-900 mb-6">Key Specifications</h2>
+      <div class="grid sm:grid-cols-2 gap-x-12 gap-y-3 text-sm">
+        <dl class="contents">
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">Engine</dt><dd class="font-semibold text-ink-900">1.5T DCT</dd>
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">Max Power</dt><dd class="font-semibold text-ink-900">{car.specs.motor_ps} PS</dd>
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">Max Torque</dt><dd class="font-semibold text-ink-900">{car.specs.torque_nm} Nm</dd>
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">Top Speed</dt><dd class="font-semibold text-ink-900">{car.specs.top_speed} km/h</dd>
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">0–100 km/h</dt><dd class="font-semibold text-ink-900">{car.specs.accel} sec</dd>
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">Transmission</dt><dd class="font-semibold text-ink-900">{car.specs.transmission}</dd>
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">Dimensions (L×W×H)</dt><dd class="font-semibold text-ink-900">{car.specs.dimensions} mm</dd>
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">Wheelbase</dt><dd class="font-semibold text-ink-900">{car.specs.wheelbase} mm</dd>
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">Curb Weight</dt><dd class="font-semibold text-ink-900">{car.specs.weight} kg</dd>
+          <dt class="text-ink-500 col-span-2 sm:col-span-1">Tires</dt><dd class="font-semibold text-ink-900">{car.specs.tires}</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  {/* H2.4 Features */}
+  <section class="py-12 bg-ink-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-ink-900 mb-6">Features & Configuration</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {Object.entries(car.features).map(([cat, items]) => (
+          <div class="bg-white border border-ink-200 rounded-xl p-5">
+            <h3 class="font-semibold text-sm text-brand-500 uppercase tracking-wider mb-3">{cat}</h3>
+            <ul class="space-y-2">
+              {items.map(item => (
+                <li class="flex items-start gap-2 text-sm text-ink-700">
+                  <span class="text-brand-500 mt-0.5">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* H2.5 Pricing & Trade Terms */}
+  <section class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-ink-900 mb-6">Pricing & Trade Terms</h2>
+
+      <h3 class="font-semibold text-base text-ink-900 mb-3">FOB Shanghai (USD per unit)</h3>
+      <div class="bg-white border border-ink-200 rounded-xl p-5 mb-6">
+        <div class="text-3xl font-bold text-ink-900">${car.pricing.fob_min.toLocaleString()} – ${car.pricing.fob_max.toLocaleString()}</div>
+        <div class="text-sm text-ink-500 mt-1">Container shipment · MOQ {car.moq}</div>
+      </div>
+
+      <h3 class="font-semibold text-base text-ink-900 mb-3">CIF to Major Markets</h3>
+      <div class="bg-white border border-ink-200 rounded-xl overflow-hidden mb-6">
+        <table class="w-full text-sm">
+          <thead class="bg-ink-50 text-ink-500 text-xs uppercase">
+            <tr><th class="text-left px-4 py-3">Destination</th><th class="text-right px-4 py-3">USD</th></tr>
+          </thead>
+          <tbody>
+            {car.pricing.cif.map(c => (
+              <tr class="border-t border-ink-200"><td class="px-4 py-3 text-ink-900">{c.country}</td><td class="px-4 py-3 text-right font-semibold text-ink-900">${c.min.toLocaleString()} – ${c.max.toLocaleString()}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="font-semibold text-base text-ink-900 mb-3">Payment Terms</h3>
+      <div class="flex flex-wrap gap-2">
+        {car.payment_terms.map(p => (
+          <span class="px-3 py-1 bg-ink-100 text-ink-700 text-sm rounded-full">{p}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* H2.7 Export Services */}
+  <section class="py-12 bg-ink-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-white mb-6">Export Services Included</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🔍</div><h3 class="font-semibold text-white text-sm mb-1">Third-Party Inspection</h3><p class="text-xs text-ink-400">Multi-point QC before container loading</p></div>
+        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">📋</div><h3 class="font-semibold text-white text-sm mb-1">Export License</h3><p class="text-xs text-ink-400">MoFCOM full document package</p></div>
+        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🚢</div><h3 class="font-semibold text-white text-sm mb-1">Door-to-Port Logistics</h3><p class="text-xs text-ink-400">RoRo / Container / Block Train</p></div>
+        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🛠</div><h3 class="font-semibold text-white text-sm mb-1">After-Sales Parts</h3><p class="text-xs text-ink-400">Moscow / Almaty / Dubai depots</p></div>
+      </div>
+    </div>
+  </section>
+
+  {/* H2.8 FAQ */}
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-ink-900 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-3">
+        {car.faqs.map(f => (
+          <details class="group bg-white border border-ink-200 rounded-xl p-5 hover:border-brand-500 transition-colors">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-ink-900">
+              <span>{f.q}</span>
+              <svg class="w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-3 text-sm text-ink-600 leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* H2.10 Bottom Quote CTA */}
+  <section class="py-16 bg-brand-500">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-3">Ready to import the {car.model}?</h2>
+      <p class="text-base text-white/90 mb-6">Get FOB + CIF quote within 24 hours. {car.stock_units} units in stock now.</p>
+      <a href="/contact/quote/?model=changan-uni-t" class="inline-flex items-center px-8 py-3 bg-white hover:bg-ink-100 text-brand-500 font-semibold rounded-lg transition-colors">
+        Request a Quote
+      </a>
+    </div>
+  </section>
+
+  {/* JSON-LD Vehicle Schema */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Vehicle',
+    name: fullTitle,
+    brand: { '@type': 'Brand', name: car.brand },
+    model: car.model,
+    modelDate: car.year,
+    bodyType: car.body_type,
+    fuelType: car.fuel_type,
+    driveWheelConfiguration: car.drive,
+    seatingCapacity: car.seats,
+    vehicleEngine: {
+      '@type': 'EngineSpecification',
+      enginePower: { '@type': 'QuantitativeValue', value: car.specs.motor_ps, unitText: 'PS' },
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'USD',
+      lowPrice: car.pricing.fob_min,
+      highPrice: car.pricing.fob_max,
+      availability: 'https://schema.org/InStock',
+      seller: { '@type': 'Organization', name: 'EV Auto Pro', url: 'https://evautopro.com' },
+    },
+  })} />
+
+  {/* FAQPage Schema */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: car.faqs.map(f => ({
+      '@type': 'Question', name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  })} />
+</BaseLayout>
