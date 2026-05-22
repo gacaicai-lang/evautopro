@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// FAQ structure synthesized from ihkaauto.com/faq (4 categories × 6-8 Qs)
+// Adapted for evautopro.com business context
+
+const categories = [
+  {
+    id: 'sourcing',
+    icon: '🚗',
+    label: 'Product Sourcing & Inventory',
+    questions: [
+      { q: 'What is the source of EV Auto Pro\'s vehicles?', a: 'We source directly from 6 authorized OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour) under signed dealer MoUs, plus active sourcing from 35 additional Chinese brands. Every unit traceable to factory invoice — no grey market.' },
+      { q: 'Are all vehicles stored in China?', a: 'Yes. We maintain 200+ units in our Shanghai bonded warehouse for immediate shipment. Custom orders are produced at factory then transferred to our warehouse before export.' },
+      { q: 'Do you sell new vehicles or only used cars?', a: 'We specialize in brand-new vehicles (latest model year 2026). Certified used cars launching Q3 2026 — currently we focus on new EV / PHEV / EREV / ICE.' },
+      { q: 'What vehicle types do you specialize in?', a: 'Coupe SUVs, family SUVs, sedans, MPVs, and pickup trucks across BEV / PHEV / EREV / Hybrid / ICE drivetrains. Plus right-hand drive (RHD) variants for UK / SA / PK / ID markets.' },
+      { q: 'Can I inspect vehicles in person before purchase?', a: 'Yes. You can visit our Shanghai warehouse or arrange a factory tour. We also provide free photo/video inspection reports for remote buyers (3-5 days turnaround).' },
+      { q: 'What if my desired vehicle is unavailable?', a: 'We can place a custom factory order (30-60 days lead time) or recommend equivalent models from our 35-brand sourcing network. Send us your spec — we respond within 24h.' },
+      { q: 'How is vehicle condition verified before shipment?', a: 'Multi-point inspection at our bonded warehouse covering exterior, interior, electrical, drivetrain, battery (for EV/PHEV), and software systems. Full photo + video report shared before container loading.' },
+      { q: 'Are vehicles inspected before shipping?', a: 'Every single unit. We follow a 360° pre-shipment inspection protocol — same standard for retail and bulk dealer orders.' },
+    ],
+  },
+  {
+    id: 'logistics',
+    icon: '🚢',
+    label: 'Logistics & Customs Clearance',
+    questions: [
+      { q: 'Which regions does EV Auto Pro serve?', a: 'Active in 60+ countries. Primary markets: Russia & CIS, Middle East (UAE/SA/Egypt), Central Asia (Kazakhstan/Uzbekistan), LATAM (Brazil/Mexico), Africa, SE Asia.' },
+      { q: 'Do you handle export documentation and compliance?', a: 'Yes — full document package including MoFCOM export license, commercial invoice, packing list, B/L, certificate of origin, vehicle export certificate, and destination-specific certs (EAC / GCC / INMETRO / SASO / NOM).' },
+      { q: 'How soon can my vehicle ship?', a: 'In-stock units: 3-15 days from PI signing. Custom factory orders: 30-60 days. Lead time depends on shipping route and destination port readiness.' },
+      { q: 'What shipment details are required?', a: 'Destination port, target arrival date, preferred shipping method (RoRo / Container / Block Train / Truck), consignee company details, and import license (if required by destination country).' },
+      { q: 'What export documents are provided?', a: 'Commercial Invoice, Packing List, Bill of Lading (B/L), Certificate of Origin (CO), Vehicle Export Certificate, Insurance Policy, and destination-specific certification (EAC for Russia/CIS, GCC for ME, INMETRO for Brazil, etc).' },
+      { q: 'What are typical shipping times?', a: 'Russia (St. Petersburg via RoRo): 30-45 days · UAE (Jebel Ali RoRo): 18-25 days · Kazakhstan (Block Train via Khorgos): 18-22 days · Brazil (Santos container): 35-50 days · Africa (varies by port): 25-45 days.' },
+      { q: 'What fees apply at destination?', a: 'Import duty (varies by country, 10-40%), VAT, port handling, customs broker fees, last-mile delivery. We can include a CIF + duty estimate in your quote — transparent line-item breakdown.' },
+      { q: 'When to choose RoRo vs Container shipping?', a: 'RoRo: lower cost, fastest, recommended for ≥10 units. Container (40HC): better for ≤8 units, more protection, supports CKD/SKD parts. Block Train: best for Central Asia (Khorgos route).' },
+    ],
+  },
+  {
+    id: 'payment',
+    icon: '💰',
+    label: 'Payment & Transactions',
+    questions: [
+      { q: 'Is buying from EV Auto Pro secure for international purchases?', a: 'Yes. We are MOFCOM-licensed, AEO-certified, ISO 9001 certified. Standard payment terms: T/T 30% deposit + 70% before shipment. L/C at sight accepted from major banks. Every transaction backed by signed PI + B/L.' },
+      { q: 'What payment methods are accepted?', a: 'T/T bank wire (standard), L/C at sight (major banks), Western Union for small orders, OA (open account) after first successful order with credit verification. We do NOT accept crypto or third-party escrow.' },
+      { q: 'Are shipping costs included in quotes?', a: 'We provide FOB (Free On Board, before sea freight), CIF (Cost+Insurance+Freight to destination port), and EXW (Ex Works factory) options. You choose which Incoterm fits your import setup.' },
+      { q: 'What is the difference between CIF and FOB?', a: 'FOB = price to load on ship at Shanghai port (you handle ocean freight). CIF = price including freight + insurance to your destination port (we handle shipping). EXW = factory pickup price (you arrange all logistics). CIF is simplest for first-time importers.' },
+      { q: 'Can I pay in my local currency?', a: 'We invoice in USD by default. Bank wire from RUB / AED / KZT / BRL / etc converts at your bank rate. CNY direct settlement available for select markets — contact us.' },
+      { q: 'How is payment confirmation communicated?', a: 'Email + WhatsApp confirmation within 2 business hours of receipt. Bank slip + SWIFT code shared for your record. Production / shipment milestone unlocked automatically upon confirmation.' },
+    ],
+  },
+  {
+    id: 'quality',
+    icon: '🛡',
+    label: 'Compliance & Quality Assurance',
+    questions: [
+      { q: 'Which Chinese EVs meet EU standards?', a: 'Geely (Coolray, Atlas), VW China (ID.3, ID.7), and select BYD models meet EU WVTA homologation. For Russia / CIS, EAC certification applies. We handle homologation paperwork for each destination.' },
+      { q: 'How do Chinese NEV batteries perform in high-temperature regions (Middle East / Africa)?', a: 'CATL / BYD blade batteries are LFP chemistry — thermally stable up to 60°C ambient. We recommend BEV with LFP for desert markets. PHEV / EREV models suit areas with limited charging infrastructure.' },
+      { q: 'How to evaluate charging feasibility for Chinese NEVs in Africa?', a: 'Most Chinese NEVs support GB/T (China standard). For destinations without GB/T infrastructure, we supply CCS2 (Europe), Type 1 (US/Japan), or CHAdeMO adapter cables. PHEV alternative reduces charging dependence.' },
+      { q: 'What is the warranty on exported vehicles?', a: 'Standard 5-year / 100,000 km vehicle warranty (varies by brand). 8-year / 160,000 km battery warranty on BEV / PHEV. Warranty fulfillment via local authorized dealer or our parts depot network.' },
+      { q: 'Do you offer after-sales parts supply?', a: 'Yes. We maintain spare parts depots in Moscow, Almaty, Dubai. Other markets: parts ship from Shanghai within 7-14 days. OEM + aftermarket inventory available.' },
+      { q: 'Are these cars compliant with Russian EAC certification?', a: 'Yes. All vehicles exported to Russia / CIS undergo EAC certification through our in-house compliance team. Documentation handled end-to-end — no delays at Russian customs.' },
+    ],
+  },
+];
+
+// Generate FAQPage JSON-LD for SEO
+const allFaqs = categories.flatMap(c => c.questions);
+---
+
+<BaseLayout
+  title="FAQ | EV Auto Pro — China NEV Export Common Questions"
+  description="30 common questions about buying Chinese new energy vehicles from EV Auto Pro. Sourcing, logistics, payment, compliance answered."
+>
+  {/* ============ Hero Banner ============ */}
+  <section class="relative h-64 lg:h-80 overflow-hidden">
+    <div class="absolute inset-0 bg-ink-900">
+      <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover opacity-40" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-12">
+      <div>
+        <h1 class="text-5xl lg:text-6xl font-bold text-white mb-3">FAQ</h1>
+        <p class="text-lg text-ink-300">Frequently Asked Questions</p>
+      </div>
+    </div>
+  </section>
+
+  {/* Breadcrumb */}
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <nav class="text-xs text-ink-500">
+      <a href="/" class="hover:text-brand-500">Home</a>
+      <span class="mx-2">&gt;&gt;</span>
+      <span class="text-ink-900">FAQ</span>
+    </nav>
+  </div>
+
+  {/* ============ Intro + Category Nav ============ */}
+  <section class="pt-8 pb-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-5">
+        Common questions about importing Chinese cars
+      </h2>
+      <p class="text-base lg:text-lg text-ink-600 leading-relaxed">
+        30 questions covering sourcing, logistics, payment, and compliance.<br/>
+        Can't find your answer? <a href="/contact/" class="text-brand-500 underline">Contact us</a> — Cai replies personally within 24h.
+      </p>
+    </div>
+
+    {/* Category quick nav */}
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {categories.map(c => (
+          <a href={`#${c.id}`} class="group flex flex-col items-center gap-3 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-6 text-center transition-all">
+            <div class="text-4xl">{c.icon}</div>
+            <div class="text-sm font-semibold text-ink-900 group-hover:text-brand-500 leading-tight">{c.label}</div>
+            <div class="text-xs text-ink-500">{c.questions.length} questions</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ FAQ by Category ============ */}
+  {categories.map(cat => (
+    <section id={cat.id} class="py-16 even:bg-ink-50 scroll-mt-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-4 mb-10">
+          <div class="text-5xl">{cat.icon}</div>
+          <div>
+            <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-1">About</p>
+            <h2 class="text-2xl lg:text-3xl font-bold text-ink-900">{cat.label}</h2>
+          </div>
+        </div>
+        <div class="space-y-3">
+          {cat.questions.map(faq => (
+            <details class="group bg-white border border-ink-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors">
+              <summary class="flex items-start justify-between gap-4 cursor-pointer p-5 list-none">
+                <span class="font-semibold text-base text-ink-900 flex-1 group-open:text-brand-500 transition-colors">{faq.q}</span>
+                <svg class="flex-shrink-0 w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 pt-1 text-sm text-ink-700 leading-relaxed border-t border-ink-100">
+                <div class="pt-4">{faq.a}</div>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  {/* ============ Still have questions CTA ============ */}
+  <section class="py-20 bg-ink-900">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-3">Still have questions?</h2>
+      <p class="text-base text-ink-300 mb-8">
+        Cai personally reviews every inquiry. Reply within 24h, in English / Chinese / Russian.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/contact/quote/" class="inline-flex items-center px-8 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
+          Request a Quote
+        </a>
+        <a href="https://wa.me/8613800000000" class="inline-flex items-center px-8 py-3 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
+          💬 WhatsApp Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* FAQPage Schema (SEO) */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: allFaqs.map(f => ({
+      '@type': 'Question', name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  })} />
+</BaseLayout>
