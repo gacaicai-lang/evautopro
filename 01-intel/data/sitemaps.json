@@ -1,0 +1,943 @@
+{
+  "ihkaauto.com": {
+    "total": 200,
+    "patterns": {
+      "/cars/": 196,
+      "/about/": 1,
+      "/news/": 2,
+      "/contact/": 1
+    },
+    "samples": {
+      "/cars/": [
+        "/cars",
+        "/cars/detail/onvo-l60",
+        "/cars/detail/stelato-s9"
+      ],
+      "/about/": [
+        "/about"
+      ],
+      "/news/": [
+        "/news",
+        "/news/list"
+      ],
+      "/contact/": [
+        "/contact"
+      ]
+    }
+  },
+  "dongfengsouth.com": {
+    "urls": [],
+    "patterns": {}
+  },
+  "cars-in-china.com": {
+    "total": 101,
+    "patterns": {
+      "/news/": 4,
+      "/ar/": 12,
+      "/es/": 12,
+      "/pt/": 12,
+      "/fr/": 11,
+      "/ru/": 11,
+      "/id/": 11,
+      "/vi/": 10,
+      "/tr/": 10,
+      "/HOME/": 1,
+      "/contact-us/": 1,
+      "/thank-you/": 1,
+      "/about-us/": 1,
+      "/privacy-policy/": 1,
+      "/2025-byd-han-l-dm-i-2/": 1,
+      "/2026-byd-datang/": 1,
+      "/2025-byd-sea-lion-06-ev/": 1
+    },
+    "samples": {
+      "/news/": [
+        "/news/50-units-used-nissan-sylphy-shipped-to-middle-east",
+        "/news/200units-used-volkswagen-id-6-crozz-shipped-to-affrica",
+        "/news/hyundai-elantra-packed-and-set-off-to-dubai"
+      ],
+      "/ar/": [
+        "/ar/news/50-units-used-nissan-sylphy-shipped-to-middle-east",
+        "/ar/news/200units-used-volkswagen-id-6-crozz-shipped-to-affrica",
+        "/ar/news/hyundai-elantra-packed-and-set-off-to-dubai"
+      ],
+      "/es/": [
+        "/es/news/50-units-used-nissan-sylphy-shipped-to-middle-east",
+        "/es/news/200units-used-volkswagen-id-6-crozz-shipped-to-affrica",
+        "/es/news/hyundai-elantra-packed-and-set-off-to-dubai"
+      ],
+      "/pt/": [
+        "/pt/news/50-units-used-nissan-sylphy-shipped-to-middle-east",
+        "/pt/news/200units-used-volkswagen-id-6-crozz-shipped-to-affrica",
+        "/pt/news/hyundai-elantra-packed-and-set-off-to-dubai"
+      ],
+      "/fr/": [
+        "/fr/news/50-units-used-nissan-sylphy-shipped-to-middle-east",
+        "/fr/news/200units-used-volkswagen-id-6-crozz-shipped-to-affrica",
+        "/fr/news/hyundai-elantra-packed-and-set-off-to-dubai"
+      ],
+      "/ru/": [
+        "/ru/news/50-units-used-nissan-sylphy-shipped-to-middle-east",
+        "/ru/news/200units-used-volkswagen-id-6-crozz-shipped-to-affrica",
+        "/ru/news/hyundai-elantra-packed-and-set-off-to-dubai"
+      ],
+      "/id/": [
+        "/id/news/50-units-used-nissan-sylphy-shipped-to-middle-east",
+        "/id/news/200units-used-volkswagen-id-6-crozz-shipped-to-affrica",
+        "/id/news/hyundai-elantra-packed-and-set-off-to-dubai"
+      ],
+      "/vi/": [
+        "/vi/news/50-units-used-nissan-sylphy-shipped-to-middle-east",
+        "/vi/news/200units-used-volkswagen-id-6-crozz-shipped-to-affrica",
+        "/vi/news/hyundai-elantra-packed-and-set-off-to-dubai"
+      ],
+      "/tr/": [
+        "/tr/news/50-units-used-nissan-sylphy-shipped-to-middle-east",
+        "/tr/news/200units-used-volkswagen-id-6-crozz-shipped-to-affrica",
+        "/tr/news/hyundai-elantra-packed-and-set-off-to-dubai"
+      ],
+      "/HOME/": [
+        "/"
+      ],
+      "/contact-us/": [
+        "/contact-us"
+      ],
+      "/thank-you/": [
+        "/thank-you"
+      ],
+      "/about-us/": [
+        "/about-us"
+      ],
+      "/privacy-policy/": [
+        "/privacy-policy"
+      ],
+      "/2025-byd-han-l-dm-i-2/": [
+        "/2025-byd-han-l-dm-i-2"
+      ],
+      "/2026-byd-datang/": [
+        "/2026-byd-datang"
+      ],
+      "/2025-byd-sea-lion-06-ev/": [
+        "/2025-byd-sea-lion-06-ev"
+      ]
+    }
+  },
+  "zeexauto.com": {
+    "total": 189,
+    "patterns": {
+      "/agents.md/": 1,
+      "/blogs/": 94,
+      "/es/": 94
+    },
+    "samples": {
+      "/agents.md/": [
+        "/agents.md"
+      ],
+      "/blogs/": [
+        "/blogs/blog",
+        "/blogs/blog-may-help",
+        "/blogs/buying-guide"
+      ],
+      "/es/": [
+        "/es/blogs/blog",
+        "/es/blogs/blog-may-help",
+        "/es/blogs/buying-guide"
+      ]
+    }
+  },
+  "ydchinauto.com": {
+    "urls": [],
+    "patterns": {}
+  },
+  "auto-from-china.com": {
+    "total": 200,
+    "patterns": {
+      "/the-difference-between-container-shipping-and-ro-ro-shipping-which-is-better-for-exporting-automobiles/": 1,
+      "/the-relationship-between-volvo-and-geely-independent-operations-with-strategic-collaboration/": 1,
+      "/the-launch-of-a-new-luxury-era-in-ev-xiaomi-su7-ultra/": 1,
+      "/the-ultimate-guide-to-chen-tian-auto-parts-market/": 1,
+      "/everything-you-need-to-know-about-byds-automotive-brands/": 1,
+      "/why-you-should-care-about-ev-phev-and-erev-which-you-would-choose-2/": 1,
+      "/case-study-how-auto-from-china-helped-a-uae-dealership-expand-with-byd-han-dm-i-xpeng-p7-aion-y-plus-ev-charging-solutions/": 1,
+      "/bringing-affordable-hybrid-cars-to-rwanda-toyota-levin-corolla-hybrid/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-saudi-arabia-customs-clearance-documentation-and-best-practices/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-egypt-documentation-customs-clearance-and-avoiding-common-pitfalls/": 1,
+      "/denza-n9-officially-launched-byds-new-flagship-electric-mpv-for-global-markets/": 1,
+      "/xiaomi-yu7-revealed-the-rugged-suv-brother-of-su7-is-coming/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-palestine-documentation-customs-clearance-risk-management/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-turkmenistan-documentation-customs-clearance-logistics/": 1,
+      "/complete-guide-to-exporting-tricycles-from-china-documentation-customs-clearance-and-logistics-strategy/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-vietnam-double-clearance-ddp-procedures-documentation-best-practices/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-egypt-documentation-customs-and-dual-clearance-ddp-explained/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-cambodia-double-clearance-ddp-process-documentation-and-risk-management/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-vietnam-ddp-customs-clearance-regulatory-insights/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-congo-documentation-customs-procedures-and-logistics/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-turkey-customs-clearance-documentation-regulatory-insights/": 1,
+      "/global-automotive-export-logistics-guide-shipping-methods-documentation-and-best-practices-for-international-car-traders/": 1,
+      "/comprehensive-guide-how-to-export-cars-from-china-to-thailand-customs-clearance-certification-and-risk-management-2025/": 1,
+      "/how-to-export-cars-from-china-to-russia-a-complete-customs-clearance-and-compliance-guide-for-2025/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-south-africa-and-nigeria-customs-clearance-certifications-and-risk-mitigation/": 1,
+      "/full-guide-to-exporting-cars-from-china-to-france-customs-clearance-certification-and-compliance/": 1,
+      "/how-to-export-chinese-vehicles-to-the-uk-full-customs-clearance-process/": 1,
+      "/complete-guide-to-exporting-chinese-vehicles-to-italy-customs-clearance-documentation-and-regulatory-compliance/": 1,
+      "/complete-guide-to-exporting-chinese-vehicles-to-japan-customs-clearance-compliance-and-certification/": 1,
+      "/full-guide-to-exporting-cars-from-china-to-indonesia-clearance-documentation-taxation-and-risk-management/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-kenya-clearance-documentation-and-risk-control/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-qatar-clearance-process-compliance-and-risk-management/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-russia-eac-certification-customs-clearance-and-risk-control/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-germany-documentation-customs-procedures-and-compliance-strategies/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-canada-documentation-compliance-shipping-and-clearance/": 1,
+      "/full-guide-to-exporting-vehicles-from-china-to-south-korea-documentation-customs-clearance-kc-certification-and-regulatory-requirements/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-the-czech-republic-documentation-customs-and-compliance/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-spain-documentation-compliance-shipping-and-customs/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-thailand-customs-clearance-regulations-and-strategic-tips/": 1,
+      "/full-guide-to-exporting-vehicles-from-china-to-europe-customs-clearance-documentation-regulatory-compliance/": 1,
+      "/complete-guide-to-exporting-vehicles-to-the-middle-east-customs-compliance-documentation-risk-management/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-the-united-states-compliance-documentation-and-customs-clearance-strategy/": 1,
+      "/comprehensive-guide-to-exporting-vehicles-from-china-to-kuwait-documentation-gcc-compliance-and-customs-clearance-procedures/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-singapore-clearance-process-documentation-and-key-compliance-tips/": 1,
+      "/comprehensive-guide-to-exporting-vehicles-from-china-to-vietnam-regulatory-compliance-customs-clearance-and-strategic-considerations/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-cambodia-clearance-process-regulations-and-risk-mitigation/": 1,
+      "/complete-guide-to-exporting-vehicles-from-china-to-the-uae-documentation-customs-and-delivery-workflow/": 1,
+      "/complete-guide-to-exporting-cars-from-china-to-india-documentation-customs-clearance-taxation-and-risk-mitigation/": 1,
+      "/zeekr-x-officially-launched-a-compact-luxury-ev-suv-with-bold-design-and-smart-tech/": 1,
+      "/byd-god-eye-tianshen-zhi-yan-intelligent-driving-platform-officially-unveiled/": 1,
+      "/xpeng-g6-2024-facelift-launches-smarter-smoother-and-even-more-competitive/": 1,
+      "/xpeng-g9-facelift-launched-smarter-simpler-and-more-competitive-than-ever/": 1,
+      "/toyota-bozhi-3x-bz3x-officially-launched-a-china-first-compact-electric-suv-by-gac-toyota/": 1,
+      "/byd-xia-officially-unveiled-a-new-flagship-sedan-redefining-the-dynasty-series/": 1,
+      "/complete-guide-to-importing-construction-machinery-from-china-procedures-documentation-risk-management/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-the-philippines-2025-edition/": 1,
+      "/complete-guide-to-importing-used-cars-from-china-to-comoros-2025-edition/": 1,
+      "/complete-guide-to-importing-used-cars-from-china-to-niger-2025/": 1,
+      "/complete-guide-to-exporting-used-cars-from-china-to-angola-customs-clearance-compliance/": 1,
+      "/complete-guide-to-importing-used-vehicles-from-china-to-south-africa-step-by-step/": 1,
+      "/complete-guide-to-importing-used-vehicles-from-china-to-andorra-step-by-step-customs-process-risk-management/": 1,
+      "/complete-guide-to-importing-electric-tricycles-from-china-to-india-customs-certification-risk-avoidance/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-belgium-customs-documentation-and-eu-compliance/": 1,
+      "/complete-guide-to-importing-vehicles-from-china-to-the-philippines-customs-clearance-taxes-and-regulatory-requirements/": 1,
+      "/complete-guide-to-importing-vehicles-from-china-to-turkey-customs-clearance-and-tax-process-explained/": 1,
+      "/complete-guide-to-importing-excavators-and-construction-machinery-from-china-step-by-step-customs-process-and-compliance-tips/": 1,
+      "/complete-guide-to-importing-tires-from-china-to-germany-e-mark-certification-customs-clearance-and-compliance/": 1,
+      "/complete-guide-to-importing-tires-from-china-to-the-uae-gcc-certification-labeling-and-customs-clearance-steps/": 1,
+      "/complete-guide-to-importing-tires-from-china-to-russia-eac-certification-customs-procedure-and-risk-prevention/": 1,
+      "/complete-guide-to-importing-tires-from-china-to-canada-customs-process-csa-certification-risk-management/": 1,
+      "/complete-guide-to-importing-tires-from-china-to-the-united-states-documentation-dot-compliance-customs-clearance/": 1,
+      "/complete-guide-to-importing-auto-parts-from-china-customs-procedures-documentation-compliance-tips/": 1,
+      "/complete-guide-to-importing-vehicles-from-china-to-the-uk-documentation-ukca-compliance-customs-procedures/": 1,
+      "/complete-guide-to-importing-tricycles-from-china-documentation-shipping-customs-clearance-process/": 1,
+      "/complete-guide-to-importing-used-cars-from-china-to-ethiopia-licensing-compliance-end-to-end-logistics/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-ethiopia-documentation-clearance-ectn-compliance/": 1,
+      "/complete-guide-to-importing-excavators-from-china-to-south-africa-documentation-clearance-compliance/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-croatia-2025/": 1,
+      "/how-to-import-used-cars-from-china-to-the-czech-republic-complete-2025-guide/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-bulgaria-2025-edition/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-serbia-2025-edition/": 1,
+      "/complete-guide-to-importing-used-cars-from-china-to-costa-rica-2025-edition/": 1,
+      "/complete-guide-to-importing-new-energy-vehicles-nevs-from-china-to-el-salvador-documentation-customs-clearance-2025/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-guinea-clearance-process-risk-warnings-2025/": 1,
+      "/how-to-import-used-cars-from-china-to-bangladesh-2025-step-by-step-process-with-compliance-tips/": 1,
+      "/how-to-import-used-cars-from-china-to-cameroon-2025-complete-step-by-step-guide/": 1,
+      "/how-to-import-used-cars-from-china-to-rwanda-2025-step-by-step-customs-and-compliance-guide/": 1,
+      "/how-to-import-cars-from-china-to-mexico-2025-complete-customs-clearance-guide/": 1,
+      "/how-to-import-cars-from-china-to-brazil-2025-complete-customs-clearance-guide/": 1,
+      "/how-to-import-cars-from-china-to-mali-2025-step-by-step-guide/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-tanzania-2025/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-uganda-2025-edition/": 1,
+      "/complete-guide-to-importing-bulldozers-from-china-to-indonesia-2025-edition/": 1,
+      "/complete-guide-to-importing-cars-from-china-to-india-2025-edition/": 1,
+      "/complete-guide-to-importing-vehicles-from-china-to-gambia-2025/": 1,
+      "/complete-guide-to-importing-used-cars-from-china-to-the-democratic-republic-of-the-congo-drc/": 1,
+      "/global-ev-range-testing-standards-explained-cltc-wltp-wltc-nedc-and-epa-compared/": 1,
+      "/all-new-tank-500-to-open-pre-sale-on-august-11-equipped-with-coffee-pilot-ultra-lidar-and-lounge-class-comfort-features/": 1,
+      "/2026-saic-maxus-interstellar-x-eterron-9-ev-official-images-released-launch-set/": 1,
+      "/2025-changan-uni-v-third-generation-officially-launches/": 1,
+      "/2026-maxus-interstellar-eterron-9-pickup-series-officially-launched-with-ice-and-ev-options/": 1,
+      "/sample-page/": 1,
+      "/shop-2/": 1,
+      "/cart-2/": 1,
+      "/shop/": 1,
+      "/cart/": 1,
+      "/checkout/": 1,
+      "/my-account/": 1,
+      "/compare/": 1,
+      "/car-options/": 1,
+      "/coming-soon/": 1,
+      "/auto-loan-calculator/": 1,
+      "/contact-us/": 1,
+      "/about-us/": 1,
+      "/checkout-2/": 1,
+      "/my-account-2/": 1,
+      "/HOME/": 1,
+      "/sell-a-car/": 1,
+      "/logistics/": 1,
+      "/auto-parts/": 1,
+      "/ev-charging/": 1,
+      "/imports-from-china/": 1,
+      "/news-page/": 1,
+      "/knowledge-center/": 1,
+      "/case-study/": 1,
+      "/new-cars/": 1,
+      "/used-cars/": 1,
+      "/pickup-truck/": 1,
+      "/special-vehicles/": 1,
+      "/hot-models/": 1,
+      "/car-brands/": 54,
+      "/inspect/": 1,
+      "/blog/": 1,
+      "/listings/": 14
+    },
+    "samples": {
+      "/the-difference-between-container-shipping-and-ro-ro-shipping-which-is-better-for-exporting-automobiles/": [
+        "/the-difference-between-container-shipping-and-ro-ro-shipping-which-is-better-for-exporting-automobiles"
+      ],
+      "/the-relationship-between-volvo-and-geely-independent-operations-with-strategic-collaboration/": [
+        "/the-relationship-between-volvo-and-geely-independent-operations-with-strategic-collaboration"
+      ],
+      "/the-launch-of-a-new-luxury-era-in-ev-xiaomi-su7-ultra/": [
+        "/the-launch-of-a-new-luxury-era-in-ev-xiaomi-su7-ultra"
+      ],
+      "/the-ultimate-guide-to-chen-tian-auto-parts-market/": [
+        "/the-ultimate-guide-to-chen-tian-auto-parts-market"
+      ],
+      "/everything-you-need-to-know-about-byds-automotive-brands/": [
+        "/everything-you-need-to-know-about-byds-automotive-brands"
+      ],
+      "/why-you-should-care-about-ev-phev-and-erev-which-you-would-choose-2/": [
+        "/why-you-should-care-about-ev-phev-and-erev-which-you-would-choose-2"
+      ],
+      "/case-study-how-auto-from-china-helped-a-uae-dealership-expand-with-byd-han-dm-i-xpeng-p7-aion-y-plus-ev-charging-solutions/": [
+        "/case-study-how-auto-from-china-helped-a-uae-dealership-expand-with-byd-han-dm-i-xpeng-p7-aion-y-plus-ev-charging-solutions"
+      ],
+      "/bringing-affordable-hybrid-cars-to-rwanda-toyota-levin-corolla-hybrid/": [
+        "/bringing-affordable-hybrid-cars-to-rwanda-toyota-levin-corolla-hybrid"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-saudi-arabia-customs-clearance-documentation-and-best-practices/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-saudi-arabia-customs-clearance-documentation-and-best-practices"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-egypt-documentation-customs-clearance-and-avoiding-common-pitfalls/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-egypt-documentation-customs-clearance-and-avoiding-common-pitfalls"
+      ],
+      "/denza-n9-officially-launched-byds-new-flagship-electric-mpv-for-global-markets/": [
+        "/denza-n9-officially-launched-byds-new-flagship-electric-mpv-for-global-markets"
+      ],
+      "/xiaomi-yu7-revealed-the-rugged-suv-brother-of-su7-is-coming/": [
+        "/xiaomi-yu7-revealed-the-rugged-suv-brother-of-su7-is-coming"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-palestine-documentation-customs-clearance-risk-management/": [
+        "/complete-guide-to-exporting-cars-from-china-to-palestine-documentation-customs-clearance-risk-management"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-turkmenistan-documentation-customs-clearance-logistics/": [
+        "/complete-guide-to-exporting-cars-from-china-to-turkmenistan-documentation-customs-clearance-logistics"
+      ],
+      "/complete-guide-to-exporting-tricycles-from-china-documentation-customs-clearance-and-logistics-strategy/": [
+        "/complete-guide-to-exporting-tricycles-from-china-documentation-customs-clearance-and-logistics-strategy"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-vietnam-double-clearance-ddp-procedures-documentation-best-practices/": [
+        "/complete-guide-to-exporting-cars-from-china-to-vietnam-double-clearance-ddp-procedures-documentation-best-practices"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-egypt-documentation-customs-and-dual-clearance-ddp-explained/": [
+        "/complete-guide-to-exporting-cars-from-china-to-egypt-documentation-customs-and-dual-clearance-ddp-explained"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-cambodia-double-clearance-ddp-process-documentation-and-risk-management/": [
+        "/complete-guide-to-exporting-cars-from-china-to-cambodia-double-clearance-ddp-process-documentation-and-risk-management"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-vietnam-ddp-customs-clearance-regulatory-insights/": [
+        "/complete-guide-to-exporting-cars-from-china-to-vietnam-ddp-customs-clearance-regulatory-insights"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-congo-documentation-customs-procedures-and-logistics/": [
+        "/complete-guide-to-exporting-cars-from-china-to-congo-documentation-customs-procedures-and-logistics"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-turkey-customs-clearance-documentation-regulatory-insights/": [
+        "/complete-guide-to-exporting-cars-from-china-to-turkey-customs-clearance-documentation-regulatory-insights"
+      ],
+      "/global-automotive-export-logistics-guide-shipping-methods-documentation-and-best-practices-for-international-car-traders/": [
+        "/global-automotive-export-logistics-guide-shipping-methods-documentation-and-best-practices-for-international-car-traders"
+      ],
+      "/comprehensive-guide-how-to-export-cars-from-china-to-thailand-customs-clearance-certification-and-risk-management-2025/": [
+        "/comprehensive-guide-how-to-export-cars-from-china-to-thailand-customs-clearance-certification-and-risk-management-2025"
+      ],
+      "/how-to-export-cars-from-china-to-russia-a-complete-customs-clearance-and-compliance-guide-for-2025/": [
+        "/how-to-export-cars-from-china-to-russia-a-complete-customs-clearance-and-compliance-guide-for-2025"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-south-africa-and-nigeria-customs-clearance-certifications-and-risk-mitigation/": [
+        "/complete-guide-to-exporting-cars-from-china-to-south-africa-and-nigeria-customs-clearance-certifications-and-risk-mitigation"
+      ],
+      "/full-guide-to-exporting-cars-from-china-to-france-customs-clearance-certification-and-compliance/": [
+        "/full-guide-to-exporting-cars-from-china-to-france-customs-clearance-certification-and-compliance"
+      ],
+      "/how-to-export-chinese-vehicles-to-the-uk-full-customs-clearance-process/": [
+        "/how-to-export-chinese-vehicles-to-the-uk-full-customs-clearance-process"
+      ],
+      "/complete-guide-to-exporting-chinese-vehicles-to-italy-customs-clearance-documentation-and-regulatory-compliance/": [
+        "/complete-guide-to-exporting-chinese-vehicles-to-italy-customs-clearance-documentation-and-regulatory-compliance"
+      ],
+      "/complete-guide-to-exporting-chinese-vehicles-to-japan-customs-clearance-compliance-and-certification/": [
+        "/complete-guide-to-exporting-chinese-vehicles-to-japan-customs-clearance-compliance-and-certification"
+      ],
+      "/full-guide-to-exporting-cars-from-china-to-indonesia-clearance-documentation-taxation-and-risk-management/": [
+        "/full-guide-to-exporting-cars-from-china-to-indonesia-clearance-documentation-taxation-and-risk-management"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-kenya-clearance-documentation-and-risk-control/": [
+        "/complete-guide-to-exporting-cars-from-china-to-kenya-clearance-documentation-and-risk-control"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-qatar-clearance-process-compliance-and-risk-management/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-qatar-clearance-process-compliance-and-risk-management"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-russia-eac-certification-customs-clearance-and-risk-control/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-russia-eac-certification-customs-clearance-and-risk-control"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-germany-documentation-customs-procedures-and-compliance-strategies/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-germany-documentation-customs-procedures-and-compliance-strategies"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-canada-documentation-compliance-shipping-and-clearance/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-canada-documentation-compliance-shipping-and-clearance"
+      ],
+      "/full-guide-to-exporting-vehicles-from-china-to-south-korea-documentation-customs-clearance-kc-certification-and-regulatory-requirements/": [
+        "/full-guide-to-exporting-vehicles-from-china-to-south-korea-documentation-customs-clearance-kc-certification-and-regulatory-requirements"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-the-czech-republic-documentation-customs-and-compliance/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-the-czech-republic-documentation-customs-and-compliance"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-spain-documentation-compliance-shipping-and-customs/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-spain-documentation-compliance-shipping-and-customs"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-thailand-customs-clearance-regulations-and-strategic-tips/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-thailand-customs-clearance-regulations-and-strategic-tips"
+      ],
+      "/full-guide-to-exporting-vehicles-from-china-to-europe-customs-clearance-documentation-regulatory-compliance/": [
+        "/full-guide-to-exporting-vehicles-from-china-to-europe-customs-clearance-documentation-regulatory-compliance"
+      ],
+      "/complete-guide-to-exporting-vehicles-to-the-middle-east-customs-compliance-documentation-risk-management/": [
+        "/complete-guide-to-exporting-vehicles-to-the-middle-east-customs-compliance-documentation-risk-management"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-the-united-states-compliance-documentation-and-customs-clearance-strategy/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-the-united-states-compliance-documentation-and-customs-clearance-strategy"
+      ],
+      "/comprehensive-guide-to-exporting-vehicles-from-china-to-kuwait-documentation-gcc-compliance-and-customs-clearance-procedures/": [
+        "/comprehensive-guide-to-exporting-vehicles-from-china-to-kuwait-documentation-gcc-compliance-and-customs-clearance-procedures"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-singapore-clearance-process-documentation-and-key-compliance-tips/": [
+        "/complete-guide-to-exporting-cars-from-china-to-singapore-clearance-process-documentation-and-key-compliance-tips"
+      ],
+      "/comprehensive-guide-to-exporting-vehicles-from-china-to-vietnam-regulatory-compliance-customs-clearance-and-strategic-considerations/": [
+        "/comprehensive-guide-to-exporting-vehicles-from-china-to-vietnam-regulatory-compliance-customs-clearance-and-strategic-considerations"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-cambodia-clearance-process-regulations-and-risk-mitigation/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-cambodia-clearance-process-regulations-and-risk-mitigation"
+      ],
+      "/complete-guide-to-exporting-vehicles-from-china-to-the-uae-documentation-customs-and-delivery-workflow/": [
+        "/complete-guide-to-exporting-vehicles-from-china-to-the-uae-documentation-customs-and-delivery-workflow"
+      ],
+      "/complete-guide-to-exporting-cars-from-china-to-india-documentation-customs-clearance-taxation-and-risk-mitigation/": [
+        "/complete-guide-to-exporting-cars-from-china-to-india-documentation-customs-clearance-taxation-and-risk-mitigation"
+      ],
+      "/zeekr-x-officially-launched-a-compact-luxury-ev-suv-with-bold-design-and-smart-tech/": [
+        "/zeekr-x-officially-launched-a-compact-luxury-ev-suv-with-bold-design-and-smart-tech"
+      ],
+      "/byd-god-eye-tianshen-zhi-yan-intelligent-driving-platform-officially-unveiled/": [
+        "/byd-god-eye-tianshen-zhi-yan-intelligent-driving-platform-officially-unveiled"
+      ],
+      "/xpeng-g6-2024-facelift-launches-smarter-smoother-and-even-more-competitive/": [
+        "/xpeng-g6-2024-facelift-launches-smarter-smoother-and-even-more-competitive"
+      ],
+      "/xpeng-g9-facelift-launched-smarter-simpler-and-more-competitive-than-ever/": [
+        "/xpeng-g9-facelift-launched-smarter-simpler-and-more-competitive-than-ever"
+      ],
+      "/toyota-bozhi-3x-bz3x-officially-launched-a-china-first-compact-electric-suv-by-gac-toyota/": [
+        "/toyota-bozhi-3x-bz3x-officially-launched-a-china-first-compact-electric-suv-by-gac-toyota"
+      ],
+      "/byd-xia-officially-unveiled-a-new-flagship-sedan-redefining-the-dynasty-series/": [
+        "/byd-xia-officially-unveiled-a-new-flagship-sedan-redefining-the-dynasty-series"
+      ],
+      "/complete-guide-to-importing-construction-machinery-from-china-procedures-documentation-risk-management/": [
+        "/complete-guide-to-importing-construction-machinery-from-china-procedures-documentation-risk-management"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-the-philippines-2025-edition/": [
+        "/complete-guide-to-importing-cars-from-china-to-the-philippines-2025-edition"
+      ],
+      "/complete-guide-to-importing-used-cars-from-china-to-comoros-2025-edition/": [
+        "/complete-guide-to-importing-used-cars-from-china-to-comoros-2025-edition"
+      ],
+      "/complete-guide-to-importing-used-cars-from-china-to-niger-2025/": [
+        "/complete-guide-to-importing-used-cars-from-china-to-niger-2025"
+      ],
+      "/complete-guide-to-exporting-used-cars-from-china-to-angola-customs-clearance-compliance/": [
+        "/complete-guide-to-exporting-used-cars-from-china-to-angola-customs-clearance-compliance"
+      ],
+      "/complete-guide-to-importing-used-vehicles-from-china-to-south-africa-step-by-step/": [
+        "/complete-guide-to-importing-used-vehicles-from-china-to-south-africa-step-by-step"
+      ],
+      "/complete-guide-to-importing-used-vehicles-from-china-to-andorra-step-by-step-customs-process-risk-management/": [
+        "/complete-guide-to-importing-used-vehicles-from-china-to-andorra-step-by-step-customs-process-risk-management"
+      ],
+      "/complete-guide-to-importing-electric-tricycles-from-china-to-india-customs-certification-risk-avoidance/": [
+        "/complete-guide-to-importing-electric-tricycles-from-china-to-india-customs-certification-risk-avoidance"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-belgium-customs-documentation-and-eu-compliance/": [
+        "/complete-guide-to-importing-cars-from-china-to-belgium-customs-documentation-and-eu-compliance"
+      ],
+      "/complete-guide-to-importing-vehicles-from-china-to-the-philippines-customs-clearance-taxes-and-regulatory-requirements/": [
+        "/complete-guide-to-importing-vehicles-from-china-to-the-philippines-customs-clearance-taxes-and-regulatory-requirements"
+      ],
+      "/complete-guide-to-importing-vehicles-from-china-to-turkey-customs-clearance-and-tax-process-explained/": [
+        "/complete-guide-to-importing-vehicles-from-china-to-turkey-customs-clearance-and-tax-process-explained"
+      ],
+      "/complete-guide-to-importing-excavators-and-construction-machinery-from-china-step-by-step-customs-process-and-compliance-tips/": [
+        "/complete-guide-to-importing-excavators-and-construction-machinery-from-china-step-by-step-customs-process-and-compliance-tips"
+      ],
+      "/complete-guide-to-importing-tires-from-china-to-germany-e-mark-certification-customs-clearance-and-compliance/": [
+        "/complete-guide-to-importing-tires-from-china-to-germany-e-mark-certification-customs-clearance-and-compliance"
+      ],
+      "/complete-guide-to-importing-tires-from-china-to-the-uae-gcc-certification-labeling-and-customs-clearance-steps/": [
+        "/complete-guide-to-importing-tires-from-china-to-the-uae-gcc-certification-labeling-and-customs-clearance-steps"
+      ],
+      "/complete-guide-to-importing-tires-from-china-to-russia-eac-certification-customs-procedure-and-risk-prevention/": [
+        "/complete-guide-to-importing-tires-from-china-to-russia-eac-certification-customs-procedure-and-risk-prevention"
+      ],
+      "/complete-guide-to-importing-tires-from-china-to-canada-customs-process-csa-certification-risk-management/": [
+        "/complete-guide-to-importing-tires-from-china-to-canada-customs-process-csa-certification-risk-management"
+      ],
+      "/complete-guide-to-importing-tires-from-china-to-the-united-states-documentation-dot-compliance-customs-clearance/": [
+        "/complete-guide-to-importing-tires-from-china-to-the-united-states-documentation-dot-compliance-customs-clearance"
+      ],
+      "/complete-guide-to-importing-auto-parts-from-china-customs-procedures-documentation-compliance-tips/": [
+        "/complete-guide-to-importing-auto-parts-from-china-customs-procedures-documentation-compliance-tips"
+      ],
+      "/complete-guide-to-importing-vehicles-from-china-to-the-uk-documentation-ukca-compliance-customs-procedures/": [
+        "/complete-guide-to-importing-vehicles-from-china-to-the-uk-documentation-ukca-compliance-customs-procedures"
+      ],
+      "/complete-guide-to-importing-tricycles-from-china-documentation-shipping-customs-clearance-process/": [
+        "/complete-guide-to-importing-tricycles-from-china-documentation-shipping-customs-clearance-process"
+      ],
+      "/complete-guide-to-importing-used-cars-from-china-to-ethiopia-licensing-compliance-end-to-end-logistics/": [
+        "/complete-guide-to-importing-used-cars-from-china-to-ethiopia-licensing-compliance-end-to-end-logistics"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-ethiopia-documentation-clearance-ectn-compliance/": [
+        "/complete-guide-to-importing-cars-from-china-to-ethiopia-documentation-clearance-ectn-compliance"
+      ],
+      "/complete-guide-to-importing-excavators-from-china-to-south-africa-documentation-clearance-compliance/": [
+        "/complete-guide-to-importing-excavators-from-china-to-south-africa-documentation-clearance-compliance"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-croatia-2025/": [
+        "/complete-guide-to-importing-cars-from-china-to-croatia-2025"
+      ],
+      "/how-to-import-used-cars-from-china-to-the-czech-republic-complete-2025-guide/": [
+        "/how-to-import-used-cars-from-china-to-the-czech-republic-complete-2025-guide"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-bulgaria-2025-edition/": [
+        "/complete-guide-to-importing-cars-from-china-to-bulgaria-2025-edition"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-serbia-2025-edition/": [
+        "/complete-guide-to-importing-cars-from-china-to-serbia-2025-edition"
+      ],
+      "/complete-guide-to-importing-used-cars-from-china-to-costa-rica-2025-edition/": [
+        "/complete-guide-to-importing-used-cars-from-china-to-costa-rica-2025-edition"
+      ],
+      "/complete-guide-to-importing-new-energy-vehicles-nevs-from-china-to-el-salvador-documentation-customs-clearance-2025/": [
+        "/complete-guide-to-importing-new-energy-vehicles-nevs-from-china-to-el-salvador-documentation-customs-clearance-2025"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-guinea-clearance-process-risk-warnings-2025/": [
+        "/complete-guide-to-importing-cars-from-china-to-guinea-clearance-process-risk-warnings-2025"
+      ],
+      "/how-to-import-used-cars-from-china-to-bangladesh-2025-step-by-step-process-with-compliance-tips/": [
+        "/how-to-import-used-cars-from-china-to-bangladesh-2025-step-by-step-process-with-compliance-tips"
+      ],
+      "/how-to-import-used-cars-from-china-to-cameroon-2025-complete-step-by-step-guide/": [
+        "/how-to-import-used-cars-from-china-to-cameroon-2025-complete-step-by-step-guide"
+      ],
+      "/how-to-import-used-cars-from-china-to-rwanda-2025-step-by-step-customs-and-compliance-guide/": [
+        "/how-to-import-used-cars-from-china-to-rwanda-2025-step-by-step-customs-and-compliance-guide"
+      ],
+      "/how-to-import-cars-from-china-to-mexico-2025-complete-customs-clearance-guide/": [
+        "/how-to-import-cars-from-china-to-mexico-2025-complete-customs-clearance-guide"
+      ],
+      "/how-to-import-cars-from-china-to-brazil-2025-complete-customs-clearance-guide/": [
+        "/how-to-import-cars-from-china-to-brazil-2025-complete-customs-clearance-guide"
+      ],
+      "/how-to-import-cars-from-china-to-mali-2025-step-by-step-guide/": [
+        "/how-to-import-cars-from-china-to-mali-2025-step-by-step-guide"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-tanzania-2025/": [
+        "/complete-guide-to-importing-cars-from-china-to-tanzania-2025"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-uganda-2025-edition/": [
+        "/complete-guide-to-importing-cars-from-china-to-uganda-2025-edition"
+      ],
+      "/complete-guide-to-importing-bulldozers-from-china-to-indonesia-2025-edition/": [
+        "/complete-guide-to-importing-bulldozers-from-china-to-indonesia-2025-edition"
+      ],
+      "/complete-guide-to-importing-cars-from-china-to-india-2025-edition/": [
+        "/complete-guide-to-importing-cars-from-china-to-india-2025-edition"
+      ],
+      "/complete-guide-to-importing-vehicles-from-china-to-gambia-2025/": [
+        "/complete-guide-to-importing-vehicles-from-china-to-gambia-2025"
+      ],
+      "/complete-guide-to-importing-used-cars-from-china-to-the-democratic-republic-of-the-congo-drc/": [
+        "/complete-guide-to-importing-used-cars-from-china-to-the-democratic-republic-of-the-congo-drc"
+      ],
+      "/global-ev-range-testing-standards-explained-cltc-wltp-wltc-nedc-and-epa-compared/": [
+        "/global-ev-range-testing-standards-explained-cltc-wltp-wltc-nedc-and-epa-compared"
+      ],
+      "/all-new-tank-500-to-open-pre-sale-on-august-11-equipped-with-coffee-pilot-ultra-lidar-and-lounge-class-comfort-features/": [
+        "/all-new-tank-500-to-open-pre-sale-on-august-11-equipped-with-coffee-pilot-ultra-lidar-and-lounge-class-comfort-features"
+      ],
+      "/2026-saic-maxus-interstellar-x-eterron-9-ev-official-images-released-launch-set/": [
+        "/2026-saic-maxus-interstellar-x-eterron-9-ev-official-images-released-launch-set"
+      ],
+      "/2025-changan-uni-v-third-generation-officially-launches/": [
+        "/2025-changan-uni-v-third-generation-officially-launches"
+      ],
+      "/2026-maxus-interstellar-eterron-9-pickup-series-officially-launched-with-ice-and-ev-options/": [
+        "/2026-maxus-interstellar-eterron-9-pickup-series-officially-launched-with-ice-and-ev-options"
+      ],
+      "/sample-page/": [
+        "/sample-page"
+      ],
+      "/shop-2/": [
+        "/shop-2"
+      ],
+      "/cart-2/": [
+        "/cart-2"
+      ],
+      "/shop/": [
+        "/shop"
+      ],
+      "/cart/": [
+        "/cart"
+      ],
+      "/checkout/": [
+        "/checkout"
+      ],
+      "/my-account/": [
+        "/my-account"
+      ],
+      "/compare/": [
+        "/compare"
+      ],
+      "/car-options/": [
+        "/car-options"
+      ],
+      "/coming-soon/": [
+        "/coming-soon"
+      ],
+      "/auto-loan-calculator/": [
+        "/auto-loan-calculator"
+      ],
+      "/contact-us/": [
+        "/contact-us"
+      ],
+      "/about-us/": [
+        "/about-us"
+      ],
+      "/checkout-2/": [
+        "/checkout-2"
+      ],
+      "/my-account-2/": [
+        "/my-account-2"
+      ],
+      "/HOME/": [
+        "/"
+      ],
+      "/sell-a-car/": [
+        "/sell-a-car"
+      ],
+      "/logistics/": [
+        "/logistics"
+      ],
+      "/auto-parts/": [
+        "/auto-parts"
+      ],
+      "/ev-charging/": [
+        "/ev-charging"
+      ],
+      "/imports-from-china/": [
+        "/imports-from-china"
+      ],
+      "/news-page/": [
+        "/news-page"
+      ],
+      "/knowledge-center/": [
+        "/knowledge-center"
+      ],
+      "/case-study/": [
+        "/case-study"
+      ],
+      "/new-cars/": [
+        "/new-cars"
+      ],
+      "/used-cars/": [
+        "/used-cars"
+      ],
+      "/pickup-truck/": [
+        "/pickup-truck"
+      ],
+      "/special-vehicles/": [
+        "/special-vehicles"
+      ],
+      "/hot-models/": [
+        "/hot-models"
+      ],
+      "/car-brands/": [
+        "/car-brands",
+        "/car-brands/byd",
+        "/car-brands/aeolus"
+      ],
+      "/inspect/": [
+        "/inspect"
+      ],
+      "/blog/": [
+        "/blog"
+      ],
+      "/listings/": [
+        "/listings/2024-aito-m9-erev",
+        "/listings/2024-yangwang-u9-standard-edition",
+        "/listings/aeolus-l7-ev-2024"
+      ]
+    }
+  },
+  "nev-in-china.com": {
+    "total": 89,
+    "patterns": {
+      "/brabus-exports-a-large-number-of-toyota-cars-to-russia/": 1,
+      "/a-large-number-of-leapmotor-vehicles-are-exported-to-uzbekistan/": 1,
+      "/shandong-brabus-exports-yangwang-u8-to-kazakhstan/": 1,
+      "/ten-volkswagen-cars-are-exported-to-kyrgyzstan/": 1,
+      "/bmw-ix3-and-mercedes-eqe-350-export-to-russia/": 1,
+      "/volkswagen-id6-cross-exported-to-uzbekistan/": 1,
+      "/changan-benben-estar-export-to-israel/": 1,
+      "/warmly-celebrate-the-geely-monjaro-l-car-sales-of-25-units-a-day/": 1,
+      "/the-135th-canton-fair-was-a-complete-success/": 1,
+      "/in-2023-brabus-will-export-more-than-1000-new-energy-vehicles-with-annual-sales-reaching-580-million/": 1,
+      "/brabus-is-a-company-focusing-on-import-and-export-business/": 1,
+      "/brabus-to-export-tens-of-thousands-of-volkswagen-vehicles-by-2023/": 1,
+      "/HOME/": 1,
+      "/ru/": 9,
+      "/fr/": 9,
+      "/es/": 9,
+      "/pt/": 9,
+      "/th/": 9,
+      "/id/": 8,
+      "/vi/": 8,
+      "/ar/": 7,
+      "/about-us/": 1,
+      "/contact-us/": 1,
+      "/thank-you/": 1,
+      "/privacy-policy/": 1,
+      "/products/": 1,
+      "/byd-denza-n8l/": 1,
+      "/byd-shark/": 1,
+      "/byd-denza-z9/": 1
+    },
+    "samples": {
+      "/brabus-exports-a-large-number-of-toyota-cars-to-russia/": [
+        "/brabus-exports-a-large-number-of-toyota-cars-to-russia"
+      ],
+      "/a-large-number-of-leapmotor-vehicles-are-exported-to-uzbekistan/": [
+        "/a-large-number-of-leapmotor-vehicles-are-exported-to-uzbekistan"
+      ],
+      "/shandong-brabus-exports-yangwang-u8-to-kazakhstan/": [
+        "/shandong-brabus-exports-yangwang-u8-to-kazakhstan"
+      ],
+      "/ten-volkswagen-cars-are-exported-to-kyrgyzstan/": [
+        "/ten-volkswagen-cars-are-exported-to-kyrgyzstan"
+      ],
+      "/bmw-ix3-and-mercedes-eqe-350-export-to-russia/": [
+        "/bmw-ix3-and-mercedes-eqe-350-export-to-russia"
+      ],
+      "/volkswagen-id6-cross-exported-to-uzbekistan/": [
+        "/volkswagen-id6-cross-exported-to-uzbekistan"
+      ],
+      "/changan-benben-estar-export-to-israel/": [
+        "/changan-benben-estar-export-to-israel"
+      ],
+      "/warmly-celebrate-the-geely-monjaro-l-car-sales-of-25-units-a-day/": [
+        "/warmly-celebrate-the-geely-monjaro-l-car-sales-of-25-units-a-day"
+      ],
+      "/the-135th-canton-fair-was-a-complete-success/": [
+        "/the-135th-canton-fair-was-a-complete-success"
+      ],
+      "/in-2023-brabus-will-export-more-than-1000-new-energy-vehicles-with-annual-sales-reaching-580-million/": [
+        "/in-2023-brabus-will-export-more-than-1000-new-energy-vehicles-with-annual-sales-reaching-580-million"
+      ],
+      "/brabus-is-a-company-focusing-on-import-and-export-business/": [
+        "/brabus-is-a-company-focusing-on-import-and-export-business"
+      ],
+      "/brabus-to-export-tens-of-thousands-of-volkswagen-vehicles-by-2023/": [
+        "/brabus-to-export-tens-of-thousands-of-volkswagen-vehicles-by-2023"
+      ],
+      "/HOME/": [
+        "/"
+      ],
+      "/ru/": [
+        "/ru",
+        "/ru/about-us",
+        "/ru/contact-us"
+      ],
+      "/fr/": [
+        "/fr",
+        "/fr/about-us",
+        "/fr/contact-us"
+      ],
+      "/es/": [
+        "/es",
+        "/es/about-us",
+        "/es/contact-us"
+      ],
+      "/pt/": [
+        "/pt",
+        "/pt/about-us",
+        "/pt/contact-us"
+      ],
+      "/th/": [
+        "/th",
+        "/th/about-us",
+        "/th/contact-us"
+      ],
+      "/id/": [
+        "/id",
+        "/id/about-us",
+        "/id/contact-us"
+      ],
+      "/vi/": [
+        "/vi",
+        "/vi/about-us",
+        "/vi/contact-us"
+      ],
+      "/ar/": [
+        "/ar",
+        "/ar/about-us",
+        "/ar/contact-us"
+      ],
+      "/about-us/": [
+        "/about-us"
+      ],
+      "/contact-us/": [
+        "/contact-us"
+      ],
+      "/thank-you/": [
+        "/thank-you"
+      ],
+      "/privacy-policy/": [
+        "/privacy-policy"
+      ],
+      "/products/": [
+        "/products"
+      ],
+      "/byd-denza-n8l/": [
+        "/byd-denza-n8l"
+      ],
+      "/byd-shark/": [
+        "/byd-shark"
+      ],
+      "/byd-denza-z9/": [
+        "/byd-denza-z9"
+      ]
+    }
+  },
+  "mashangauto.com": {
+    "total": 125,
+    "patterns": {
+      "/news/": 67,
+      "/new-car-launch/": 13,
+      "/uncategorized/": 1,
+      "/car-culture/": 1,
+      "/HOME/": 1,
+      "/contact-us/": 1,
+      "/about-us/": 1,
+      "/forthing/": 1,
+      "/product/": 25,
+      "/become-an-agent/": 1,
+      "/byd-formula-leopard-series/": 1,
+      "/privacy-policy/": 1,
+      "/shipping/": 1,
+      "/membership/": 1,
+      "/must-know-for-buyers/": 1,
+      "/my-account/": 1,
+      "/import-regulation/": 1,
+      "/how-to-pay/": 1,
+      "/cart/": 1,
+      "/faq/": 1,
+      "/how-to-buy/": 1,
+      "/checkout/": 1,
+      "/models/": 1
+    },
+    "samples": {
+      "/news/": [
+        "/news/wuling-yangguang-for-africa",
+        "/news/best-electric-car-africa-byd-atto-3",
+        "/news/chinese-cars-vs-japanese-cars-nigeria"
+      ],
+      "/new-car-launch/": [
+        "/new-car-launch/2026-byd-yuan-plus-next-gen-electric-suv-debuts-in-beijing",
+        "/new-car-launch/dongfeng-forthing-s7-review",
+        "/new-car-launch/changan-cs75-plus-hev-redefining-the-global-hybrid-suv-market"
+      ],
+      "/uncategorized/": [
+        "/uncategorized/mashang-auto-ghana-office-opening"
+      ],
+      "/car-culture/": [
+        "/car-culture/honda-civic-accord-in-nigeria-reliable"
+      ],
+      "/HOME/": [
+        "/"
+      ],
+      "/contact-us/": [
+        "/contact-us"
+      ],
+      "/about-us/": [
+        "/about-us"
+      ],
+      "/forthing/": [
+        "/forthing"
+      ],
+      "/product/": [
+        "/product",
+        "/product",
+        "/product/byd-e5-20162018-used"
+      ],
+      "/become-an-agent/": [
+        "/become-an-agent"
+      ],
+      "/byd-formula-leopard-series/": [
+        "/byd-formula-leopard-series"
+      ],
+      "/privacy-policy/": [
+        "/privacy-policy"
+      ],
+      "/shipping/": [
+        "/shipping"
+      ],
+      "/membership/": [
+        "/membership"
+      ],
+      "/must-know-for-buyers/": [
+        "/must-know-for-buyers"
+      ],
+      "/my-account/": [
+        "/my-account"
+      ],
+      "/import-regulation/": [
+        "/import-regulation"
+      ],
+      "/how-to-pay/": [
+        "/how-to-pay"
+      ],
+      "/cart/": [
+        "/cart"
+      ],
+      "/faq/": [
+        "/faq"
+      ],
+      "/how-to-buy/": [
+        "/how-to-buy"
+      ],
+      "/checkout/": [
+        "/checkout"
+      ],
+      "/models/": [
+        "/models"
+      ]
+    }
+  }
+}

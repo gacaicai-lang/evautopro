@@ -1,0 +1,39 @@
+{
+  "domain": "evautopro.com",
+  "project_name": "EV Auto Pro",
+  "industry": "China NEV B2B Export",
+  "primary_market": "Russia + Central Asia",
+  "secondary_markets": ["UAE", "LATAM", "Africa", "SE Asia"],
+  "languages": ["en", "ru", "ar", "es"],
+  "tech_stack": {
+    "framework": "Astro 5.x",
+    "styling": "Tailwind v4",
+    "cms": "Decap CMS (Git-backed)",
+    "hosting": "Cloudflare Pages",
+    "domain_registrar": "Cloudflare Registrar",
+    "repo": "github.com/gacaicai-lang/evautopro (pending creation)"
+  },
+  "authorized_brands": ["Changan", "Deepal", "Qiyuan", "Geely", "Volkswagen", "Jetour"],
+  "brands_displayed": 35,
+  "first_8_models": [
+    "Changan UNI-T", "Jetour T2", "Geely Coolray", "Deepal S07",
+    "Deepal S05", "Deepal S09", "Changan CS55 Plus", "Geely Atlas"
+  ],
+  "design_reference": [
+    "https://b2b-growth-site-front.vercel.app/ (Tough Lighting visual)",
+    "https://www.ihkaauto.com/ (B2B structure + 35-brand grid)"
+  ],
+  "design_tokens": {
+    "brand_red": "#e53e2f",
+    "brand_red_hover": "#cc3526",
+    "brand_red_soft_bg": "#fef2f0",
+    "ink_palette": "zinc 50-900 rebadged as ink-*"
+  },
+  "stage": "03-build skeleton",
+  "created": "2026-05-22",
+  "stage_log": [
+    "2026-05-22 v0 5-section homepage written",
+    "2026-05-22 reverse-engineered Tough Lighting Tailwind tokens",
+    "2026-05-22 17-section blueprint approved (ihka reference)"
+  ]
+}

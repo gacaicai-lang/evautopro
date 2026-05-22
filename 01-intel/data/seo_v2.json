@@ -1,0 +1,676 @@
+{
+  "keywords": [
+    {
+      "market": "Global EN",
+      "keyword": "china ev export",
+      "volume": 170,
+      "cpc": 0.53,
+      "competition": 2,
+      "low_top_bid": 0.21,
+      "high_top_bid": 0.75
+    },
+    {
+      "market": "Global EN",
+      "keyword": "chinese ev export",
+      "volume": 50,
+      "cpc": 0.83,
+      "competition": 4,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "Global EN",
+      "keyword": "china electric car export",
+      "volume": 10,
+      "cpc": 1.49,
+      "competition": 33,
+      "low_top_bid": 0.28,
+      "high_top_bid": 1.02
+    },
+    {
+      "market": "Global EN",
+      "keyword": "chinese electric vehicle manufacturer",
+      "volume": 720,
+      "cpc": 1.32,
+      "competition": 27,
+      "low_top_bid": 0.21,
+      "high_top_bid": 1.16
+    },
+    {
+      "market": "Global EN",
+      "keyword": "chinese ev supplier",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "Global EN",
+      "keyword": "chinese ev wholesale",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "Global EN",
+      "keyword": "chinese ev distributor",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "Global EN",
+      "keyword": "chinese ev dealer",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "Global EN",
+      "keyword": "import ev from china",
+      "volume": 20,
+      "cpc": 0.34,
+      "competition": 47,
+      "low_top_bid": 0.07,
+      "high_top_bid": 1.07
+    },
+    {
+      "market": "Global EN",
+      "keyword": "buy chinese electric car",
+      "volume": 50,
+      "cpc": 0.68,
+      "competition": 100,
+      "low_top_bid": 0.25,
+      "high_top_bid": 1.25
+    },
+    {
+      "market": "Global EN",
+      "keyword": "byd export",
+      "volume": 140,
+      "cpc": 1.21,
+      "competition": 20,
+      "low_top_bid": 0.23,
+      "high_top_bid": 1.32
+    },
+    {
+      "market": "Global EN",
+      "keyword": "byd wholesale",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "Global EN",
+      "keyword": "byd distributor",
+      "volume": 260,
+      "cpc": 2.62,
+      "competition": 28,
+      "low_top_bid": 0.4,
+      "high_top_bid": 4.44
+    },
+    {
+      "market": "Global EN",
+      "keyword": "china nev export",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "Global EN",
+      "keyword": "china ev exporter",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "Global EN",
+      "keyword": "wholesale chinese ev",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "Global EN",
+      "keyword": "chinese ev for sale",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "china ev export",
+      "volume": 40,
+      "cpc": null,
+      "competition": 0,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "chinese ev export",
+      "volume": 20,
+      "cpc": null,
+      "competition": 7,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "china electric car export",
+      "volume": 10,
+      "cpc": null,
+      "competition": 71,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "chinese electric vehicle manufacturer",
+      "volume": 320,
+      "cpc": 0.02,
+      "competition": 13,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "chinese ev supplier",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "chinese ev wholesale",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "chinese ev distributor",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "chinese ev dealer",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "import ev from china",
+      "volume": 10,
+      "cpc": null,
+      "competition": 50,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "buy chinese electric car",
+      "volume": 20,
+      "cpc": 0.26,
+      "competition": 100,
+      "low_top_bid": 0.26,
+      "high_top_bid": 3.17
+    },
+    {
+      "market": "US",
+      "keyword": "byd export",
+      "volume": 20,
+      "cpc": null,
+      "competition": 15,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "byd wholesale",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "byd distributor",
+      "volume": 20,
+      "cpc": null,
+      "competition": 0,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "china nev export",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "china ev exporter",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "wholesale chinese ev",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "US",
+      "keyword": "chinese ev for sale",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "china ev export",
+      "volume": 10,
+      "cpc": null,
+      "competition": 0,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "chinese ev export",
+      "volume": 10,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "china electric car export",
+      "volume": 10,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "chinese electric vehicle manufacturer",
+      "volume": 10,
+      "cpc": null,
+      "competition": 0,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "chinese ev supplier",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "chinese ev wholesale",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "chinese ev distributor",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "chinese ev dealer",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "import ev from china",
+      "volume": 10,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "buy chinese electric car",
+      "volume": 10,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "byd export",
+      "volume": 10,
+      "cpc": null,
+      "competition": 0,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "byd wholesale",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "byd distributor",
+      "volume": 10,
+      "cpc": null,
+      "competition": 45,
+      "low_top_bid": 0.64,
+      "high_top_bid": 1.26
+    },
+    {
+      "market": "UAE",
+      "keyword": "china nev export",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "china ev exporter",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "wholesale chinese ev",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    },
+    {
+      "market": "UAE",
+      "keyword": "chinese ev for sale",
+      "volume": null,
+      "cpc": null,
+      "competition": null,
+      "low_top_bid": null,
+      "high_top_bid": null
+    }
+  ],
+  "sites": [
+    {
+      "target": "zeexauto.com",
+      "US_organic_kw": 373,
+      "US_organic_etv": 373.9,
+      "US_traffic_value_usd": 969.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 373,
+      "Global_organic_etv": 373.9,
+      "Global_traffic_value_usd": 969.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "portauto.com",
+      "US_organic_kw": 2,
+      "US_organic_etv": 0.3,
+      "US_traffic_value_usd": 0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 2,
+      "Global_organic_etv": 0.3,
+      "Global_traffic_value_usd": 0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "ev-b2b.com",
+      "US_organic_kw": 51,
+      "US_organic_etv": 75.6,
+      "US_traffic_value_usd": 157.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 51,
+      "Global_organic_etv": 75.6,
+      "Global_traffic_value_usd": 157.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "nev-in-china.com",
+      "US_organic_kw": 141,
+      "US_organic_etv": 73.7,
+      "US_traffic_value_usd": 99.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 141,
+      "Global_organic_etv": 73.7,
+      "Global_traffic_value_usd": 99.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "ihkaauto.com",
+      "US_organic_kw": 1149,
+      "US_organic_etv": 8972.3,
+      "US_traffic_value_usd": 26465.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 1149,
+      "Global_organic_etv": 8972.3,
+      "Global_traffic_value_usd": 26465.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "sicily-evs.com",
+      "US_organic_kw": 93,
+      "US_organic_etv": 65.6,
+      "US_traffic_value_usd": 210.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 93,
+      "Global_organic_etv": 65.6,
+      "Global_traffic_value_usd": 210.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "exvehicles.com",
+      "US_organic_kw": 66,
+      "US_organic_etv": 51.4,
+      "US_traffic_value_usd": 70.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 66,
+      "Global_organic_etv": 51.4,
+      "Global_traffic_value_usd": 70.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "cars-in-china.com",
+      "US_organic_kw": 265,
+      "US_organic_etv": 396.2,
+      "US_traffic_value_usd": 286.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 265,
+      "Global_organic_etv": 396.2,
+      "Global_traffic_value_usd": 286.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "mashangauto.com",
+      "US_organic_kw": 114,
+      "US_organic_etv": 143.2,
+      "US_traffic_value_usd": 124.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 114,
+      "Global_organic_etv": 143.2,
+      "Global_traffic_value_usd": 124.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "electricautochina.com"
+    },
+    {
+      "target": "auto-from-china.com",
+      "US_organic_kw": 349,
+      "US_organic_etv": 446.0,
+      "US_traffic_value_usd": 947.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 349,
+      "Global_organic_etv": 446.0,
+      "Global_traffic_value_usd": 947.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "bairuidatrading.com"
+    },
+    {
+      "target": "dongfengsouth.com",
+      "US_organic_kw": 379,
+      "US_organic_etv": 1994.7,
+      "US_traffic_value_usd": 2136.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 379,
+      "Global_organic_etv": 1994.7,
+      "Global_traffic_value_usd": 2136.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "tjygqc.com",
+      "US_organic_kw": 86,
+      "US_organic_etv": 191.6,
+      "US_traffic_value_usd": 305.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 86,
+      "Global_organic_etv": 191.6,
+      "Global_traffic_value_usd": 305.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "ydchinauto.com",
+      "US_organic_kw": 298,
+      "US_organic_etv": 1900.6,
+      "US_traffic_value_usd": 2065.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 298,
+      "Global_organic_etv": 1900.6,
+      "Global_traffic_value_usd": 2065.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "leveldrive.by"
+    },
+    {
+      "target": "eastmotors.by"
+    },
+    {
+      "target": "kitaj-rulit.ru",
+      "US_organic_kw": 1,
+      "US_organic_etv": 0.1,
+      "US_traffic_value_usd": 0.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 1,
+      "Global_organic_etv": 0.1,
+      "Global_traffic_value_usd": 0.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "jptrade.ru",
+      "US_organic_kw": 30,
+      "US_organic_etv": 55.4,
+      "US_traffic_value_usd": 36.0,
+      "US_paid_kw": 0,
+      "US_paid_etv": 0,
+      "Global_organic_kw": 30,
+      "Global_organic_etv": 55.4,
+      "Global_traffic_value_usd": 36.0,
+      "Global_paid_kw": 0,
+      "Global_paid_etv": 0
+    },
+    {
+      "target": "greenhub.by"
+    }
+  ],
+  "generated_at": "2026-05-22 14:56"
+}
