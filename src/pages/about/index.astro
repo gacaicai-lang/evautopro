@@ -90,36 +90,36 @@ const team = [
     <div class="absolute inset-0">
       <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover opacity-30" />
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-      <nav class="text-xs text-ink-400 mb-4">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
+      <nav class="text-xs text-ink-400 mb-6">
         <a href="/" class="hover:text-brand-500">Home</a> · <span class="text-white">About</span>
       </nav>
-      <h1 class="text-3xl lg:text-5xl font-bold text-white leading-tight mb-4 max-w-3xl">
+      <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-4xl">
         Your Trusted Partner for China NEV Procurement & Global Distribution
       </h1>
-      <p class="text-base lg:text-lg text-ink-300 max-w-2xl">
+      <p class="text-lg lg:text-xl text-ink-300 max-w-2xl leading-relaxed">
         EV Auto Pro — Your one-stop hub for sourcing Chinese auto products
       </p>
     </div>
   </section>
 
   {/* ============ 2. ABOUT EV Auto Pro + 6 数据卡 + Video ============ */}
-  <section class="py-16 lg:py-20">
+  <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-10">
+      <div class="grid lg:grid-cols-12 gap-16">
         {/* Left: Story + 6 stats */}
         <div class="lg:col-span-7">
-          <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">About EV Auto Pro</p>
-          <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 mb-5">A founder-led China NEV exporter</h2>
-          <p class="text-sm text-ink-700 leading-relaxed mb-8">
+          <p class="text-sm font-semibold text-brand-500 uppercase tracking-wider mb-4">About EV Auto Pro</p>
+          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-8 leading-tight">A founder-led China NEV exporter</h2>
+          <p class="text-base lg:text-lg text-ink-700 leading-relaxed mb-12">
             EV Auto Pro is a professional Chinese new energy vehicle exporter, specializing in global dealer partnerships for high-quality new vehicles, quality used cars, and OEM spare parts. With direct partnerships spanning <strong>6 authorized OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour)</strong> plus 35 additional brands, we deliver one-stop sourcing solutions for international buyers. Founded in Guangzhou by Cai with 15 years of cross-border trade experience, we pivoted to NEV export in 2022.
           </p>
-          <div class="grid grid-cols-3 gap-4">
+          <div class="grid grid-cols-3 gap-6">
             {aboutStats.map(s => (
-              <div class="border-l-2 border-brand-500 pl-3">
-                <div class="text-2xl lg:text-3xl font-bold text-ink-900">{s.num}</div>
-                <div class="text-xs text-ink-700 font-semibold mt-1">{s.label}</div>
-                <div class="text-[10px] text-ink-500">{s.sub}</div>
+              <div class="border-l-2 border-brand-500 pl-4 py-2">
+                <div class="text-3xl lg:text-4xl font-bold text-ink-900">{s.num}</div>
+                <div class="text-sm text-ink-700 font-semibold mt-2">{s.label}</div>
+                <div class="text-xs text-ink-500 mt-1">{s.sub}</div>
               </div>
             ))}
           </div>
@@ -142,16 +142,16 @@ const team = [
   </section>
 
   {/* ============ 3. GLOBAL COOPERATION (6 hexagon 菱形) ============ */}
-  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink-900 via-ink-800 to-ink-900 relative overflow-hidden">
+  <section class="py-24 lg:py-32 bg-gradient-to-br from-ink-900 via-ink-800 to-ink-900 relative overflow-hidden">
     <div class="absolute inset-0 opacity-5">
       <div class="w-full h-full" style="background-image: radial-gradient(circle, rgba(229,62,47,0.3) 1px, transparent 1px); background-size: 30px 30px;"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
+      <div class="text-center mb-20">
         <h2 class="text-3xl lg:text-4xl font-bold text-white">GLOBAL <span class="text-brand-500">COOPERATION</span></h2>
         <p class="text-base text-ink-400 mt-3">We look forward to building long-term partnerships</p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 max-w-5xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-10 max-w-6xl mx-auto">
         {hexagonStats.map(h => (
           <div class="relative aspect-square flex flex-col items-center justify-center bg-gradient-to-br from-brand-500 to-brand-700 text-white p-6 text-center"
                style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
@@ -165,9 +165,9 @@ const team = [
   </section>
 
   {/* ============ 4. WHAT WE HAVE (3 业务大卡 + 图) ============ */}
-  <section class="py-16 lg:py-20">
+  <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-10">
+      <div class="mb-16">
         <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">What We Offer</p>
         <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">New cars · Quality used cars · Reliable spare parts</h2>
       </div>
@@ -201,13 +201,13 @@ const team = [
   </section>
 
   {/* ============ 5. ONE-STOP EXPORT (8-step grid with images) ============ */}
-  <section class="py-16 lg:py-20 bg-ink-50">
+  <section class="py-24 lg:py-32 bg-ink-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-10">
+      <div class="mb-16">
         <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">One-Stop China Car Export Services</p>
         <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">From Order to Delivery — No Surprises</h2>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         {exportProcess.map(p => (
           <div class="bg-white rounded-xl overflow-hidden border border-ink-200 hover:border-brand-500 hover:shadow-md transition-all">
             <div class="aspect-[4/3] bg-ink-100 overflow-hidden relative">
@@ -225,9 +225,9 @@ const team = [
   </section>
 
   {/* ============ 6. PARTNER & CUSTOMER CASES (3 大客户证言) ============ */}
-  <section class="py-16 lg:py-20">
+  <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-10">
+      <div class="mb-16">
         <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Partner & Customer Cases</p>
         <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Your vehicle has arrived</h2>
       </div>
@@ -255,9 +255,9 @@ const team = [
   </section>
 
   {/* ============ 7. TRUSTED BY GLOBAL DEALERS (4 区域 + 大图) ============ */}
-  <section class="py-16 lg:py-20 bg-ink-50">
+  <section class="py-24 lg:py-32 bg-ink-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-10">
+      <div class="mb-16">
         <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Trusted by Global Dealers</p>
         <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Asia · Africa · Middle East · Europe · LATAM</h2>
       </div>
@@ -278,17 +278,17 @@ const team = [
   </section>
 
   {/* ============ 8. KEY EMPLOYEES (5 圆形头像 + 电话) ============ */}
-  <section class="py-16 lg:py-20">
+  <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
+      <div class="text-center mb-20">
         <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Key Employees</p>
         <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Our professionals</h2>
         <p class="text-sm text-ink-500 mt-2">5-person founder-led team · Guangzhou HQ</p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 max-w-6xl mx-auto">
         {team.map(t => (
           <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-ink-100 hover:border-brand-500 transition-colors">
+            <div class="w-36 h-36 mx-auto mb-5 rounded-full overflow-hidden border-4 border-ink-100 hover:border-brand-500 transition-colors">
               <img src={`/images/testimonial-${t.avatar}.svg`} alt={t.name} class="w-full h-full object-cover" />
             </div>
             <h3 class="font-bold text-base text-ink-900">{t.name}</h3>
@@ -301,7 +301,7 @@ const team = [
   </section>
 
   {/* ============ 9. CTA Banner (双车图 + 询盘) ============ */}
-  <section class="py-16 lg:py-20 bg-ink-900 relative overflow-hidden">
+  <section class="py-24 lg:py-32 bg-ink-900 relative overflow-hidden">
     <div class="absolute inset-0 opacity-30">
       <img src="/images/car-changan-uni-t.svg" alt="" class="w-full h-full object-cover" />
     </div>
