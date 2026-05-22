@@ -1,0 +1,10 @@
+# Cloudflare Pages redirects (also works on GitHub Pages via meta refresh fallback)
+# Old sitemap paths → new flat paths
+/resources/faq/        /faq/        301
+/resources/faq         /faq/        301
+/resources/blog/       /news/       301
+/resources/blog        /news/       301
+/resources/news/       /news/       301
+/resources/news        /news/       301
+/blog/                 /news/       301
+/blog                  /news/       301
