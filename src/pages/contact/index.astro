@@ -56,41 +56,10 @@ const channels = [
   },
 ];
 
-const regionalTeam = [
-  {
-    name: 'Anna I.',
-    role: 'Russia & CIS Director',
-    region: 'Moscow Office',
-    langs: 'Russian · English',
-    avatar: 1,
-  },
-  {
-    name: 'Khalid M.',
-    role: 'Middle East Director',
-    region: 'Dubai Office',
-    langs: 'Arabic · English',
-    avatar: 2,
-  },
-  {
-    name: 'Daniyar K.',
-    role: 'Central Asia Director',
-    region: 'Almaty Office',
-    langs: 'Russian · Kazakh',
-    avatar: 3,
-  },
-  {
-    name: 'Carlos R.',
-    role: 'LATAM Director',
-    region: 'São Paulo Office',
-    langs: 'Spanish · Portuguese',
-    avatar: 4,
-  },
-];
-
 const trustPoints = [
   { icon: '⚡', title: 'Reply within 24h', desc: 'Every inquiry answered same business day' },
-  { icon: '🤝', title: 'Founder-led', desc: 'No layered middlemen, direct negotiation' },
-  { icon: '🌐', title: '4 languages', desc: 'EN / RU / AR / ES native ops support' },
+  { icon: '🤝', title: 'Founder-led', desc: 'Direct negotiation, no layered middlemen' },
+  { icon: '🏭', title: '15+ years export', desc: 'Authorized dealer of 6 China NEV brands' },
   { icon: '🔐', title: 'NDA on request', desc: 'Your sourcing list stays confidential' },
 ];
 ---
@@ -175,28 +144,7 @@ const trustPoints = [
     </div>
   </section>
 
-  {/* ====== 4. Regional Team ====== */}
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Your Regional Contact</p>
-        <h2 class="text-3xl font-bold text-ink-900">Native-language ops in 4 regions</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {regionalTeam.map(t => (
-          <div class="bg-white border border-ink-200 rounded-xl p-6 text-center">
-            <img src={`/images/testimonial-${t.avatar}.svg`} alt={t.name} class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" loading="lazy" />
-            <h3 class="font-bold text-base text-ink-900">{t.name}</h3>
-            <div class="text-xs text-brand-500 font-semibold mt-1">{t.role}</div>
-            <div class="text-xs text-ink-500 mt-2">{t.region}</div>
-            <div class="text-xs text-ink-400 mt-1">{t.langs}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ====== 5. Quick Inquiry Form ====== */}
+  {/* ====== 4. Quick Inquiry Form ====== */}
   <section class="py-16 bg-ink-50">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
@@ -240,33 +188,25 @@ const trustPoints = [
     </div>
   </section>
 
-  {/* ====== 6. Office Info ====== */}
+  {/* ====== 5. Office Info ====== */}
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-3 gap-8">
+      <div class="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
         <div>
-          <h3 class="font-bold text-base text-ink-900 mb-3">🏢 Shanghai HQ</h3>
-          <p class="text-sm text-ink-600 leading-relaxed">
-            Bonded Warehouse Zone<br/>
-            Yangshan Free Trade Port<br/>
-            Shanghai 201306, China
-          </p>
-        </div>
-        <div>
-          <h3 class="font-bold text-base text-ink-900 mb-3">⏰ Operating Hours</h3>
+          <h3 class="font-bold text-base text-ink-900 mb-3">⏰ Business Hours</h3>
           <ul class="text-sm text-ink-600 space-y-1">
-            <li>Mon-Fri: 9:00 - 18:00 CST</li>
+            <li>Mon-Fri: 9:00 - 18:00 CST (UTC+8)</li>
             <li>Sat: 9:00 - 13:00 CST</li>
-            <li>Sun: Closed (WhatsApp on-call)</li>
-            <li class="text-xs text-ink-500 mt-2">Russia/UAE/LATAM: 24h regional ops</li>
+            <li>Sun: Closed</li>
+            <li class="text-xs text-ink-500 mt-3">WhatsApp on-call after hours for urgent orders</li>
           </ul>
         </div>
         <div>
-          <h3 class="font-bold text-base text-ink-900 mb-3">🛂 Compliance Documents</h3>
+          <h3 class="font-bold text-base text-ink-900 mb-3">🛂 Export Compliance</h3>
           <p class="text-sm text-ink-600 leading-relaxed mb-2">
             MoFCOM Export License<br/>
             AEO Customs Certification<br/>
-            ISO 9001:2015
+            ISO 9001:2015 Certified
           </p>
           <a href="/about/certifications/" class="text-sm font-semibold text-brand-500 hover:text-brand-600">View all certificates →</a>
         </div>
