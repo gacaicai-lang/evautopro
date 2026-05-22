@@ -83,13 +83,13 @@ const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export fr
       <div class="grid lg:grid-cols-2 gap-10">
         {/* Gallery */}
         <div>
-          <div class="aspect-[4/3] rounded-2xl bg-ink-100 border border-ink-200 flex items-center justify-center text-ink-400 text-sm mb-3">
-            car-{car.brand_slug}-{car.model.toLowerCase()}.jpg<br/><span class="text-xs">P0 · 1600×1200</span>
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-ink-200 mb-3">
+            <img src="/images/car-hero-changan-uni-t.svg" alt="2026 Changan UNI-T hero" class="w-full h-full object-cover" />
           </div>
           <div class="grid grid-cols-4 gap-2">
             {[1,2,3,4].map(i => (
-              <div class="aspect-square bg-ink-100 rounded-lg flex items-center justify-center text-ink-300 text-[10px]">
-                view-{i}
+              <div class="aspect-square bg-ink-100 rounded-lg overflow-hidden">
+                <img src="/images/car-changan-uni-t.svg" alt={`view ${i}`} class="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>

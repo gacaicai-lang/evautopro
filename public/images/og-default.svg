@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="630" fill="#f4f4f5"/>
+  <rect x="20" y="20" width="56" height="24" rx="4" fill="#e53e2f"/>
+  <text x="48" y="36" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">P0</text>
+  <text x="600.0" y="295.0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="64" fill="#d4d4d8" text-anchor="middle" dominant-baseline="middle">🚗</text>
+  <text x="600.0" y="345.0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#71717a" text-anchor="middle">og-default.jpg</text>
+  <text x="600.0" y="369.0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#a1a1aa" text-anchor="middle">EV Auto Pro · China NEV Export</text>
+  <text x="1180" y="614" font-family="-apple-system, BlinkMacSystemFont, monospace" font-size="11" fill="#d4d4d8" text-anchor="end">1200×630</text>
+</svg>

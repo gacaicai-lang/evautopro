@@ -84,8 +84,8 @@ const brands = [...new Set(cars.map(c => c.brand))].sort();
           <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {cars.map(c => (
               <a href={`/cars/${c.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
-                <div class="aspect-[16/10] bg-ink-100 flex items-center justify-center text-ink-300 text-xs">
-                  car-{c.slug}.jpg
+                <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+                  <img src={`/images/car-${c.slug}.svg`} alt={`${c.brand} ${c.name}`} class="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div class="p-5">
                   <div class="flex items-center gap-2 mb-2">

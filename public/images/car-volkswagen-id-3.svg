@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="500" fill="#f4f4f5"/>
+  <rect x="20" y="20" width="56" height="24" rx="4" fill="#f59e0b"/>
+  <text x="48" y="36" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">P1</text>
+  <text x="400.0" y="230.0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="64" fill="#d4d4d8" text-anchor="middle" dominant-baseline="middle">🚗</text>
+  <text x="400.0" y="280.0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#71717a" text-anchor="middle">car-volkswagen-id-3.jpg</text>
+  <text x="400.0" y="304.0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#a1a1aa" text-anchor="middle">Volkswagen ID 3</text>
+  <text x="780" y="484" font-family="-apple-system, BlinkMacSystemFont, monospace" font-size="11" fill="#d4d4d8" text-anchor="end">800×500</text>
+</svg>

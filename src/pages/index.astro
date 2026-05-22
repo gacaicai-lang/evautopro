@@ -150,13 +150,8 @@ const faqs = [
           </div>
         </div>
         <div class="relative">
-          <div class="aspect-[4/3] rounded-2xl bg-ink-100 border border-ink-200 overflow-hidden flex items-center justify-center">
-            <div class="text-center text-ink-400 p-8">
-              <svg class="w-24 h-24 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16V4a2 2 0 012-2h14a2 2 0 012 2v12M3 16l-1 4h20l-1-4M9 8h6M7 12h10" />
-              </svg>
-              <p class="text-sm">hero-port-loading.jpg<br/><span class="text-xs">P0 · 1600×1200 · 港口装船</span></p>
-            </div>
+          <div class="aspect-[4/3] rounded-2xl bg-ink-100 border border-ink-200 overflow-hidden">
+            <img src="/images/hero-port-loading.svg" alt="China NEV port loading bay" class="w-full h-full object-cover" />
           </div>
           <div class="absolute -bottom-4 -left-4 bg-white border border-ink-200 rounded-xl shadow-lg p-4 max-w-[200px]">
             <div class="text-xs text-ink-500 mb-1">Latest shipment</div>
@@ -199,11 +194,8 @@ const faqs = [
       </div>
       <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
         {featuredBrands.map(b => (
-          <a href={`/brands/${b.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-5 text-center transition-all">
-            <div class="w-14 h-14 mx-auto mb-3 rounded-lg bg-ink-100 group-hover:bg-brand-50 flex items-center justify-center text-ink-700 group-hover:text-brand-500 font-bold text-xl transition-colors">
-              {b.name.charAt(0)}
-            </div>
-            <div class="font-semibold text-sm text-ink-900">{b.name}</div>
+          <a href={`/brands/${b.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-4 text-center transition-all">
+            <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="h-12 mx-auto mb-3 object-contain" />
             <div class="text-xs text-ink-500 mt-1">{b.cn}</div>
             <div class="text-xs text-ink-400 mt-2">{b.models}</div>
           </a>
@@ -225,10 +217,8 @@ const faqs = [
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {featuredCars.map(c => (
           <a href={`/cars/${c.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
-            <div class="aspect-[16/10] bg-ink-100 flex items-center justify-center">
-              <svg class="w-16 h-16 text-ink-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16V4a2 2 0 012-2h14a2 2 0 012 2v12M3 16l-1 4h20l-1-4M9 8h6M7 12h10" />
-              </svg>
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+              <img src={`/images/car-${c.slug}.svg`} alt={`${c.brand} ${c.name}`} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
@@ -295,8 +285,8 @@ const faqs = [
   <section class="py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="aspect-[4/3] rounded-2xl bg-ink-100 border border-ink-200 flex items-center justify-center text-ink-400 text-sm">
-          about-team.jpg<br/><span class="text-xs">P1 · 1200×800 · 团队/办公室</span>
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-ink-200">
+          <img src="/images/about-team.svg" alt="EV Auto Pro team" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div>
           <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">About EV Auto Pro</p>
@@ -354,8 +344,8 @@ const faqs = [
             </a>
           </div>
         </div>
-        <div class="aspect-[4/3] rounded-xl bg-ink-700 border border-ink-600 flex items-center justify-center text-ink-400 text-sm">
-          tool-compare-mockup.jpg<br/><span class="text-xs">P3 · UI 截图</span>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden border border-ink-600">
+          <img src="/images/tool-compare-mockup.svg" alt="Compare & Customize tool preview" class="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
     </div>
@@ -412,12 +402,10 @@ const faqs = [
         <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Trusted by dealers in 60+ countries</h2>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {testimonials.map(t => (
+        {testimonials.map((t, i) => (
           <div class="bg-white border border-ink-200 rounded-xl p-6">
             <div class="flex items-center gap-3 mb-4">
-              <div class="w-12 h-12 rounded-full bg-ink-200 flex items-center justify-center text-ink-700 font-bold">
-                {t.name.charAt(0)}
-              </div>
+              <img src={`/images/testimonial-${i+1}.svg`} alt={t.name} class="w-12 h-12 rounded-full object-cover" loading="lazy" />
               <div>
                 <div class="font-semibold text-sm text-ink-900">{t.name}</div>
                 <div class="text-xs text-ink-500">{t.role}</div>
@@ -440,9 +428,8 @@ const faqs = [
       </div>
       <div class="grid grid-cols-4 lg:grid-cols-8 gap-4">
         {certifications.map(c => (
-          <div class="flex flex-col items-center justify-center p-4 border border-ink-200 rounded-lg bg-white hover:border-brand-500 transition-colors">
-            <div class="font-bold text-sm text-ink-900">{c.name}</div>
-            <div class="text-[10px] text-ink-500 mt-1 text-center">{c.label}</div>
+          <div class="bg-white border border-ink-200 hover:border-brand-500 rounded-lg overflow-hidden transition-colors">
+            <img src={`/images/cert-${c.name.toLowerCase().replace(/\s+/g, '')}.svg`} alt={c.label} class="w-full h-full object-contain" loading="lazy" />
           </div>
         ))}
       </div>
@@ -462,8 +449,8 @@ const faqs = [
       <div class="grid md:grid-cols-3 gap-6">
         {recentBlogs.map(b => (
           <a href={`/resources/blog/${b.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl overflow-hidden transition-all">
-            <div class="aspect-[16/10] bg-ink-100 flex items-center justify-center text-ink-400 text-xs">
-              blog-{b.slug}.jpg
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+              <img src={`/images/blog-${b.slug}.svg`} alt={b.title} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">

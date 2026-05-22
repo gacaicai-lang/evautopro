@@ -86,9 +86,7 @@ const sortedBrands = [...brands].sort((a, b) => (b.authorized ? 1 : 0) - (a.auth
                 ★ AUTHORIZED
               </span>
             )}
-            <div class="w-16 h-16 mx-auto mb-3 rounded-lg bg-ink-100 group-hover:bg-brand-50 flex items-center justify-center text-ink-700 group-hover:text-brand-500 font-bold text-2xl transition-colors">
-              {b.name.charAt(0)}
-            </div>
+            <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="h-12 mx-auto mb-3 object-contain" loading="lazy" />
             <div class="font-semibold text-sm text-ink-900 mb-1">{b.name}</div>
             <div class="text-xs text-ink-500">{b.cn}</div>
             <div class="text-[10px] text-ink-400 mt-2 truncate">{b.type}</div>

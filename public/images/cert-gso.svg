@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="white" stroke="#e4e4e7"/>
+  <text x="100" y="50" font-family="sans-serif" font-size="20" font-weight="800" fill="#18181b" text-anchor="middle">GSO</text>
+  <text x="100" y="72" font-family="sans-serif" font-size="11" fill="#71717a" text-anchor="middle">CERTIFIED</text>
+</svg>
