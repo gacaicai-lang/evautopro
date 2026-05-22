@@ -1,238 +1,357 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const stats = [
-  { num: '15+', label: 'Years in Export Trade' },
-  { num: '6', label: 'Authorized OEM Brands' },
-  { num: '60+', label: 'Countries Served' },
-  { num: '200+', label: 'Units Bonded Stock' },
+// 1:1 ihkaauto.com/about 8-section structure, content adapted for evautopro
+// Section order: Hero / About / Global Cooperation / What We Have / 8-Step Process / Cases / Trusted Markets / Founder + Quote Form
+
+const heroBadges = ['End-to-End China NEV Exports', 'Authorized Dealer Certified', 'Seamless Shipping'];
+
+const globalStats = [
+  { num: '360°', label: 'Pre-Shipment Inspection', sub: '100% Included' },
+  { num: '24/7', label: 'WhatsApp Support', sub: 'Reply within 24h' },
+  { num: '98%', label: 'On-Time Delivery', sub: 'Performance Record' },
+  { num: '24h', label: 'Quotation Turnaround', sub: 'FOB + CIF Same Day' },
+  { num: '6', label: 'Authorized Brands', sub: 'Direct OEM MoUs' },
+  { num: '60+', label: 'Countries Served', sub: 'Active Dealer Network' },
 ];
 
-const services = [
-  { icon: '📦', title: 'Sourcing & Procurement', desc: 'Direct factory negotiation across 35 Chinese OEMs' },
-  { icon: '🔍', title: 'Pre-Shipment Inspection', desc: 'Multi-point QC + photo report before container loading' },
-  { icon: '📋', title: 'Export Documentation', desc: 'MoFCOM, EAC, GCC, INMETRO, SASO certs handled in-house' },
-  { icon: '🚢', title: 'Door-to-Port Logistics', desc: 'RoRo, Container, Block Train, Truck — all modes' },
-  { icon: '🛠', title: 'After-Sales Parts', desc: 'Spare parts shipped within 7-14 days globally' },
+const businessLines = [
+  {
+    icon: '🚗',
+    title: 'Brand-New Vehicles',
+    bullets: ['6 Authorized OEM Brands', 'Latest Model Year (2026)', 'Immediate Shipment from Bonded Stock', 'No Dealer Markups'],
+    cta: 'Browse 50+ Models',
+    href: '/cars/',
+    active: true,
+  },
+  {
+    icon: '🔄',
+    title: 'Certified Used Cars',
+    bullets: ['Multi-point Quality Inspection', 'Full VIN Check & Service History', 'No Hidden Fees', 'Photo + Video Report'],
+    cta: 'Coming Q3 2026',
+    href: '/contact/',
+    active: false,
+  },
+  {
+    icon: '🔧',
+    title: 'OEM Spare Parts',
+    bullets: ['95% Availability Rate', '7-14 Day Global Delivery', 'Genuine Parts Only', 'Factory Direct Pricing'],
+    cta: 'Coming Q4 2026',
+    href: '/contact/',
+    active: false,
+  },
 ];
 
-const authorizedBrands = [
-  { slug: 'changan', name: 'Changan', cn: '长安', since: 2018 },
-  { slug: 'deepal', name: 'Deepal', cn: '深蓝', since: 2023 },
-  { slug: 'qiyuan', name: 'Qiyuan', cn: '启源', since: 2023 },
-  { slug: 'geely', name: 'Geely', cn: '吉利', since: 2016 },
-  { slug: 'volkswagen', name: 'VW China', cn: '大众', since: 2020 },
-  { slug: 'jetour', name: 'Jetour', cn: '捷途', since: 2021 },
+const exportProcess = [
+  { step: 1, day: '< 24 hrs', title: 'Instant Inquiry Response', desc: 'Founder reviews your spec + sends FOB + CIF quote' },
+  { step: 2, day: '1-2 days', title: 'Contract Execution', desc: 'PI signed, T/T 30% deposit received, order locked' },
+  { step: 3, day: '2-3 days', title: 'Vehicle Sourcing', desc: 'Allocation from bonded stock or factory production slot' },
+  { step: 4, day: '3-5 days', title: 'Inspection & Certification', desc: 'Multi-point QC + photo/video report + destination cert prep' },
+  { step: 5, day: '5-10 days', title: 'Vehicle Readiness', desc: 'Export packaging + customs declaration + insurance' },
+  { step: 6, day: '3-5 days', title: 'Logistics Coordination', desc: 'RoRo / Container / Block Train booking + B/L' },
+  { step: 7, day: 'Variable', title: 'Sea / Rail Transit', desc: 'GPS tracked, 18-45 days depending on route' },
+  { step: 8, day: 'Arrival', title: 'Door-to-Port Delivery', desc: 'Documents handover + after-sales parts network activation' },
 ];
 
-const trustPillars = [
-  { icon: '🔐', title: 'Founder-Led Direct Trade', desc: 'Single point of accountability. No layered middlemen. Founder responds to inquiries personally within 24h.' },
-  { icon: '🇷🇺', title: 'Russian & CIS Trade Network', desc: '15 years of repeat buyer relationships in Russia, Kazakhstan, Uzbekistan. EAC paperwork mastered.' },
-  { icon: '🏭', title: 'Direct OEM Authorization', desc: 'Signed dealer MoUs with 6 China brands. No grey-market sourcing — every unit traceable.' },
-  { icon: '💰', title: 'Transparent Pricing', desc: 'FOB / CIF / EXW broken down line-by-line. No hidden fees. We share factory invoice on request.' },
+const cases = [
+  { headline: '50 Units Jetour T2 → Tashkent, Uzbekistan', quote: 'Block train delivery in 18 days. EAC paperwork zero hassle. Will repeat monthly.', client: 'Andrey K., Dealer Principal, Moscow', avatar: 1 },
+  { headline: '30 Units Deepal S07 → Dubai, UAE', quote: 'Most professional China exporter we have worked with. GCC docs complete.', client: 'Mohammed A., Fleet Manager, Dubai', avatar: 2 },
+  { headline: '25 Units Geely Coolray → Almaty, Kazakhstan', quote: 'Khorgos route saved 15 days vs Vladivostok port.', client: 'Daniyar T., Wholesale Buyer, Almaty', avatar: 3 },
+  { headline: '12 Units Volkswagen ID.7 → São Paulo, Brazil', quote: 'INMETRO docs handled end-to-end. First container on time.', client: 'Carlos M., Distributor, São Paulo', avatar: 4 },
 ];
 
-const certifications = [
-  { code: 'MOFCOM', label: 'Export License', desc: '商务部批准对外贸易经营资格' },
-  { code: 'AEO', label: 'Customs AEO', desc: '海关高级认证企业 (顶级信用)' },
-  { code: 'ISO 9001', label: '2015 Certified', desc: '质量管理体系认证' },
-  { code: 'EAC', label: 'Eurasian Conformity', desc: 'Russia / CIS region certification' },
-  { code: 'GCC', label: 'Gulf Standard', desc: 'UAE / Saudi import compliance' },
-  { code: 'INMETRO', label: 'Brazil Standard', desc: 'LATAM market compliance' },
+const trustedMarkets = [
+  { region: 'Russia & CIS', detail: 'Compact EV expansion plans · Block train routes via Khorgos · EAC certification', flag: 'RU' },
+  { region: 'Middle East', detail: 'New energy MPV tailoring with Saudi dealers · Gulf market expansion · GCC certification', flag: 'AE' },
+  { region: 'Central Asia', detail: 'Kazakhstan / Uzbekistan distributor partnerships · Rail freight specialist', flag: 'KZ' },
+  { region: 'LATAM', detail: 'Brazil / Mexico INMETRO + NOM compliance · Container shipment from Shanghai', flag: 'BR' },
+  { region: 'Africa', detail: 'East African logistics partner talks · Pickup truck demand · Customs clearance support', flag: 'EG' },
+  { region: 'SE Asia', detail: 'Right-hand drive sourcing · Indonesia / Malaysia / Thailand', flag: 'ID' },
 ];
 
-const timeline = [
-  { year: '2010', title: 'Founded', desc: 'Cai launched multi-category sourcing for international buyers' },
-  { year: '2018', title: 'Changan Dealer MoU', desc: 'First China OEM authorization signed' },
-  { year: '2022', title: 'NEV Pivot', desc: 'Pivoted exclusively to new energy vehicles export' },
-  { year: '2023', title: 'Deepal + Qiyuan Added', desc: 'Authorized dealer of Changan affiliate brands' },
-  { year: '2026', title: '60+ Countries', desc: 'Active dealer relationships across 6 continents' },
-];
+const founder = {
+  name: 'Cai',
+  title: 'Founder & Trade Director',
+  bio: 'EV Auto Pro is led personally by Cai — 15 years in China export trade, pivoted to NEV in 2022. Every quote is reviewed by Cai. Every shipment tracked end-to-end.',
+  phone: '+86 138 0000 0000',
+  whatsapp: 'https://wa.me/8613800000000',
+  email: 'cai@evautopro.com',
+};
 ---
 
 <BaseLayout
-  title="About EV Auto Pro | 15 Years China Export, NEV Specialist Since 2022"
-  description="Authorized exporter of Chinese new energy vehicles. Founded 2010 by Cai with 15 years export trade experience. 6 authorized OEM brands, 60+ countries served."
+  title="About EV Auto Pro | China NEV Export Specialist — Founder-Led Since 2010"
+  description="Authorized exporter of Chinese new energy vehicles. Founder-led, 15+ years export trade, 6 OEM dealer MoUs, 60+ countries served. Russian / CIS / Middle East specialist."
 >
-  {/* ====== 1. Hero ====== */}
-  <section class="bg-gradient-to-br from-ink-50 to-white border-b border-ink-200 py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-xs text-ink-500 mb-3">
-        <a href="/" class="hover:text-brand-500">Home</a> · <span class="text-ink-900">About</span>
+  {/* ============ 1. HERO ============ */}
+  <section class="relative bg-gradient-to-br from-ink-900 via-ink-800 to-ink-900 py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="/images/about-team.svg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <nav class="text-xs text-ink-400 mb-3">
+        <a href="/" class="hover:text-brand-500">Home</a> · <span class="text-white">About</span>
       </nav>
+      <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-4xl">
+        Your Trusted Partner for <br/><span class="text-brand-500">China NEV Export</span> & Global Distribution
+      </h1>
+      <p class="text-xl text-ink-300 mb-8 max-w-2xl">
+        Trusted Car Exports from China · Founder-Led · 15+ Years Trade Experience
+      </p>
+      <div class="flex flex-wrap gap-3">
+        {heroBadges.map(b => (
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm text-white">
+            <span class="text-brand-500">✓</span> {b}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 2. ABOUT EV AUTO PRO ============ */}
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-3">About EV Auto Pro</p>
-          <h1 class="text-4xl lg:text-5xl font-bold text-ink-900 leading-tight mb-5">
-            Your Trusted Partner for <span class="text-brand-500">China NEV Export</span>
-          </h1>
-          <p class="text-lg text-ink-600 mb-6 leading-relaxed">
-            Founder-led, authorized China NEV exporter. 15 years in trade. Direct OEM MoUs. Native Russian / CIS trade network. Zero middlemen.
-          </p>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {stats.map(s => (
-              <div>
-                <div class="text-3xl font-bold text-ink-900">{s.num}</div>
-                <div class="text-xs text-ink-500 mt-1">{s.label}</div>
+          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-6">A founder-led China NEV exporter built on 15 years of trade trust</h2>
+          <div class="space-y-4 text-base text-ink-700 leading-relaxed">
+            <p>
+              EV Auto Pro is a professional Chinese new energy vehicle exporter, specializing in global dealer partnerships for <strong>brand-new electric vehicles, plug-in hybrids, and ICE models</strong>.
+            </p>
+            <p>
+              With direct authorized-dealer agreements spanning <strong>6 OEMs — Changan, Deepal, Qiyuan, Geely, Volkswagen China, and Jetour</strong> — and active sourcing across 35 additional Chinese brands, we deliver one-stop solutions for international wholesalers, distributors, and dealership networks.
+            </p>
+            <p>
+              From founder Cai's 15-year base of repeat buyer relationships in <strong>Russia, the CIS, the Middle East, and LATAM</strong>, EV Auto Pro pivoted exclusively to NEV export in 2022 to serve the surge in global demand for affordable Chinese electric vehicles.
+            </p>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="/contact/quote/" class="btn-primary">Request a Quote</a>
+            <a href="/cars/" class="btn-secondary">Browse Models</a>
+          </div>
+        </div>
+        <div class="aspect-square rounded-2xl overflow-hidden border border-ink-200">
+          <img src="/images/about-team.svg" alt="EV Auto Pro operation" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 3. GLOBAL COOPERATION (stats grid) ============ */}
+  <section class="py-16 lg:py-24 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Global Cooperation</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">We look forward to building long-term partnerships</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        {globalStats.map(s => (
+          <div class="bg-white border border-ink-200 rounded-xl p-6 text-center hover:border-brand-500 transition-colors">
+            <div class="text-3xl lg:text-4xl font-bold text-brand-500 mb-2">{s.num}</div>
+            <div class="text-sm font-semibold text-ink-900 mb-1">{s.label}</div>
+            <div class="text-xs text-ink-500">{s.sub}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 4. WHAT WE HAVE (3 业务) ============ */}
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">What We Have</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">New Vehicles · Certified Used Cars · OEM Parts</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {businessLines.map(b => (
+          <div class={`relative bg-white border-2 rounded-2xl p-8 transition-all ${b.active ? 'border-brand-500 shadow-lg' : 'border-ink-200 opacity-75'}`}>
+            {!b.active && (
+              <span class="absolute top-4 right-4 px-2 py-1 bg-ink-100 text-ink-600 text-[10px] font-bold rounded">SOON</span>
+            )}
+            <div class="text-5xl mb-4">{b.icon}</div>
+            <h3 class="text-xl font-bold text-ink-900 mb-4">{b.title}</h3>
+            <ul class="space-y-2 mb-6">
+              {b.bullets.map(item => (
+                <li class="flex items-start gap-2 text-sm text-ink-700">
+                  <span class="text-brand-500 mt-0.5">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a href={b.href} class={b.active ? 'btn-primary text-sm' : 'inline-flex items-center px-4 py-2 bg-ink-100 text-ink-600 text-sm font-semibold rounded-lg'}>
+              {b.cta}
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 5. ONE-STOP EXPORT PROCESS (8-step timeline) ============ */}
+  <section class="py-16 lg:py-24 bg-ink-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">One-Stop China NEV Export Services</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">From Order to Delivery — No Surprises, Just Results</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {exportProcess.map(p => (
+          <div class="bg-ink-800 border border-ink-700 rounded-xl p-5">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg bg-brand-500 flex items-center justify-center text-white font-bold">
+                {p.step}
               </div>
-            ))}
+              <div class="text-xs text-brand-500 font-semibold">{p.day}</div>
+            </div>
+            <h3 class="font-semibold text-base text-white mb-1">{p.title}</h3>
+            <p class="text-xs text-ink-400 leading-relaxed">{p.desc}</p>
           </div>
-        </div>
-        <div class="relative">
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-ink-200">
-            <img src="/images/about-team.svg" alt="EV Auto Pro founder + operation" class="w-full h-full object-cover" />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
-  {/* ====== 2. Company Overview (Story) ====== */}
-  <section class="py-16 lg:py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-3">Company Overview</p>
-      <h2 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-6">15 years building cross-border trust</h2>
-      <div class="space-y-4 text-base text-ink-700 leading-relaxed">
-        <p>
-          EV Auto Pro was founded by <strong>Cai</strong>, a 15-year veteran of Chinese export trade. From 2010 to 2022, Cai operated a multi-category sourcing business serving international wholesale buyers across textiles, home decor, and industrial components — accumulating a dense buyer network in <strong>Russia, the CIS region, the Middle East, and LATAM</strong>.
-        </p>
-        <p>
-          In 2022, recognizing the surge in global demand for affordable Chinese electric vehicles, we <strong>pivoted exclusively to NEV export</strong>. Today we hold direct authorized-dealer MoUs with six Chinese OEMs: <strong>Changan, Deepal, Qiyuan, Geely, Volkswagen China, and Jetour</strong> — plus active sourcing relationships across 35 additional brands.
-        </p>
-        <p>
-          We are <strong>founder-led, no middle layers</strong>. Every quote is reviewed by Cai personally. Every shipment is tracked end-to-end. This is how we keep response time under 24 hours and pricing transparent down to the line item.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  {/* ====== 3. What We Do (5 services) ====== */}
-  <section class="py-16 lg:py-20 bg-ink-50">
+  {/* ============ 6. PARTNER & CUSTOMER CASES ============ */}
+  <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">One-Stop China Car Export Services</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">From factory to your dealership</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Partner & Customer Cases</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Your vehicle has arrived</h2>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
-        {services.map(s => (
+      <div class="grid md:grid-cols-2 gap-6">
+        {cases.map(c => (
           <div class="bg-white border border-ink-200 rounded-xl p-6 hover:border-brand-500 hover:shadow-md transition-all">
-            <div class="text-3xl mb-3">{s.icon}</div>
-            <h3 class="font-semibold text-base text-ink-900 mb-2">{s.title}</h3>
-            <p class="text-sm text-ink-600 leading-relaxed">{s.desc}</p>
+            <h3 class="font-bold text-lg text-ink-900 mb-4">{c.headline}</h3>
+            <p class="text-sm text-ink-700 italic mb-4 leading-relaxed">"{c.quote}"</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-ink-200">
+              <img src={`/images/testimonial-${c.avatar}.svg`} alt={c.client} class="w-10 h-10 rounded-full" />
+              <div class="text-xs text-ink-500">{c.client}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-10">
+        <a href="/resources/case-studies/" class="text-sm font-semibold text-brand-500 hover:text-brand-600">
+          View all case studies →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 7. TRUSTED BY GLOBAL DEALERS ============ */}
+  <section class="py-16 lg:py-24 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Trusted by Global Dealers</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Asia · Africa · Middle East · Europe · LATAM</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {trustedMarkets.map(m => (
+          <div class="bg-white border border-ink-200 rounded-xl p-6 hover:border-brand-500 transition-colors">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-12 h-9 rounded bg-ink-100 flex items-center justify-center text-xs font-bold text-ink-700">
+                {m.flag}
+              </div>
+              <h3 class="font-semibold text-base text-ink-900">{m.region}</h3>
+            </div>
+            <p class="text-sm text-ink-600 leading-relaxed">{m.detail}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  {/* ====== 4. Authorized Brands ====== */}
-  <section class="py-16 lg:py-20">
+  {/* ============ 8. MEET THE FOUNDER + Quote Form ============ */}
+  <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Direct OEM Partnerships</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-3">6 brands. Signed dealer MoUs. Zero grey market.</h2>
-        <p class="text-base text-ink-600 max-w-2xl mx-auto">
-          Plus active sourcing across 35 additional Chinese OEMs — see <a href="/brands/" class="text-brand-500 underline">all 35 brands</a>.
-        </p>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Meet the Founder</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Direct trade. One point of accountability.</h2>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-        {authorizedBrands.map(b => (
-          <a href={`/brands/${b.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-5 text-center transition-all">
-            <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="h-12 mx-auto mb-3 object-contain" />
-            <div class="text-xs text-ink-500 mb-1">{b.cn}</div>
-            <div class="text-[10px] text-brand-500 font-semibold mt-2">Dealer since {b.since}</div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ====== 5. Behind the Trust (4 Pillars) ====== */}
-  <section class="py-16 lg:py-20 bg-ink-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Behind the Trust</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-3">Why dealers choose us over competing exporters</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-6">
-        {trustPillars.map(p => (
-          <div class="bg-ink-800 rounded-xl p-6 border border-ink-700">
-            <div class="text-3xl mb-3">{p.icon}</div>
-            <h3 class="font-semibold text-base text-white mb-2">{p.title}</h3>
-            <p class="text-sm text-ink-400 leading-relaxed">{p.desc}</p>
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        {/* Founder card */}
+        <div>
+          <div class="bg-white border border-ink-200 rounded-2xl overflow-hidden">
+            <div class="aspect-[4/3] bg-ink-100 overflow-hidden">
+              <img src="/images/testimonial-1.svg" alt={founder.name} class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-ink-900 mb-1">{founder.name}</h3>
+              <div class="text-sm text-brand-500 font-semibold mb-4">{founder.title}</div>
+              <p class="text-sm text-ink-600 leading-relaxed mb-5">{founder.bio}</p>
+              <div class="space-y-2 text-sm">
+                <a href={`tel:${founder.phone}`} class="flex items-center gap-2 text-ink-700 hover:text-brand-500">
+                  📞 {founder.phone}
+                </a>
+                <a href={founder.whatsapp} class="flex items-center gap-2 text-ink-700 hover:text-brand-500">
+                  💬 WhatsApp
+                </a>
+                <a href={`mailto:${founder.email}`} class="flex items-center gap-2 text-ink-700 hover:text-brand-500">
+                  ✉ {founder.email}
+                </a>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
+        </div>
 
-  {/* ====== 6. Certifications ====== */}
-  <section class="py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Certified Compliance</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-3">Quality you can verify</h2>
-        <p class="text-base text-ink-600">All certificates available on request</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {certifications.map(c => (
-          <div class="bg-white border border-ink-200 rounded-xl p-5 flex items-start gap-4 hover:border-brand-500 transition-colors">
-            <div class="w-16 h-12 flex-shrink-0 bg-ink-50 border border-ink-200 rounded flex items-center justify-center text-xs font-bold text-ink-900">
-              {c.code}
+        {/* Quote form */}
+        <div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-3">Get a quote</h3>
+          <p class="text-base text-ink-600 mb-6">Tell Cai your target market + quantity. Personal reply within 24h.</p>
+          <form id="about-quote" class="space-y-4" novalidate>
+            <input type="text" name="honeypot" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" />
+            <div>
+              <label class="block text-sm font-semibold text-ink-700 mb-1">Name <span class="text-brand-500">*</span></label>
+              <input type="text" name="name" required class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm" />
             </div>
             <div>
-              <div class="font-semibold text-sm text-ink-900">{c.label}</div>
-              <div class="text-xs text-ink-500 mt-1">{c.desc}</div>
+              <label class="block text-sm font-semibold text-ink-700 mb-1">Country / Phone <span class="text-brand-500">*</span></label>
+              <input type="tel" name="whatsapp" required placeholder="+7 905 123 4567" class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm" />
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ====== 7. Timeline ====== */}
-  <section class="py-16 lg:py-20 bg-ink-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Our Journey</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">From 2010 to today</h2>
-      </div>
-      <div class="space-y-6">
-        {timeline.map(t => (
-          <div class="flex gap-6 items-start">
-            <div class="flex-shrink-0 w-20 text-right">
-              <div class="text-2xl font-bold text-brand-500">{t.year}</div>
+            <div>
+              <label class="block text-sm font-semibold text-ink-700 mb-1">Email <span class="text-brand-500">*</span></label>
+              <input type="email" name="email" required class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm" />
             </div>
-            <div class="flex-1 pb-6 border-l-2 border-ink-200 pl-6 relative">
-              <span class="absolute -left-2 top-1 w-3 h-3 bg-brand-500 rounded-full"></span>
-              <h3 class="font-semibold text-base text-ink-900 mb-1">{t.title}</h3>
-              <p class="text-sm text-ink-600">{t.desc}</p>
+            <div>
+              <label class="block text-sm font-semibold text-ink-700 mb-1">Model / Quantity</label>
+              <textarea name="message" rows="3" placeholder="What models / quantities are you interested in?" class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm"></textarea>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ====== 8. Final CTA (双 CTA) ====== */}
-  <section class="py-16 lg:py-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-brand-500 rounded-2xl p-8 text-white">
-          <h3 class="text-2xl font-bold mb-2">Let's start your project</h3>
-          <p class="text-base text-white/90 mb-5">Get FOB + CIF pricing within 24 hours. MOQ 1 unit.</p>
-          <a href="/contact/quote/" class="inline-flex items-center px-5 py-3 bg-white text-brand-500 font-semibold rounded-lg hover:bg-ink-100 transition-colors">
-            Request a Quote →
-          </a>
-        </div>
-        <div class="bg-ink-900 rounded-2xl p-8 text-white">
-          <h3 class="text-2xl font-bold mb-2">Download Catalogue</h3>
-          <p class="text-base text-ink-300 mb-5">50-page PDF · all 50+ models · FOB pricing + specs.</p>
-          <a href="/contact/catalogue/" class="inline-flex items-center px-5 py-3 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors">
-            Get PDF →
-          </a>
+            <button type="submit" class="w-full px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
+              Submit
+            </button>
+            <div id="about-status" class="text-sm text-center hidden"></div>
+          </form>
         </div>
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const f = document.getElementById('about-quote') as HTMLFormElement | null;
+  const st = document.getElementById('about-status') as HTMLDivElement | null;
+  f?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!st) return;
+    st.classList.remove('hidden', 'text-green-600', 'text-red-600');
+    st.classList.add('text-ink-500');
+    st.textContent = 'Sending…';
+    try {
+      const r = await fetch('/api/inquiry', { method: 'POST', body: new FormData(f) });
+      const d = await r.json();
+      if (r.ok) {
+        st.classList.add('text-green-600');
+        st.textContent = '✓ ' + (d.message ?? 'Thank you! Cai will reply within 24 hours.');
+        f.reset();
+      } else {
+        st.classList.add('text-red-600');
+        st.textContent = '⚠ ' + (d.error ?? 'Something went wrong.');
+      }
+    } catch {
+      st.classList.add('text-red-600');
+      st.textContent = '⚠ Network error. Try WhatsApp or email directly.';
+    }
+  });
+</script>
