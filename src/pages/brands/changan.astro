@@ -1,0 +1,370 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Single brand master template — Changan
+// Reusable for 5 other authorized brands (Deepal/Qiyuan/Geely/VW/Jetour)
+// Structure synthesized from cars-in-china/byd + ihka about + Mercedes whitespace aesthetic
+
+const brand = {
+  name: 'Changan',
+  cn: '长安',
+  slug: 'changan',
+  tagline: 'Direct from China\'s Largest State-Owned Auto Brand',
+  hero_image: '/images/about-team.svg', // 真图后替换
+  logo: '/images/brand-changan.svg',
+  authorized_since: 2018,
+  founded: 1862,
+  annual_production: '2.5M units',
+  export_countries: '60+',
+  in_stock: '80+ units',
+};
+
+const heroBadges = [
+  'Authorized Dealer Since 2018',
+  '8 Models Available',
+  'In-Stock Same-Day Ship',
+];
+
+const stats = [
+  { num: '1862', label: 'Brand Founded', sub: 'Chongqing, China' },
+  { num: '2.5M', label: 'Annual Production', sub: 'units / year' },
+  { num: '60+', label: 'Export Countries', sub: 'Global Network' },
+  { num: '80+', label: 'In Bonded Stock', sub: 'Ready to Ship' },
+];
+
+const brandStory = `Changan Auto (长安汽车), founded in 1862 in Chongqing, is the oldest and one of the Big Four state-owned auto manufacturers in China. With 2.5+ million vehicles produced annually, Changan has expanded its export footprint to 60+ countries across Russia, Middle East, Central Asia, LATAM, and Africa.
+
+EV Auto Pro is an authorized Changan exporter since 2018. We hold direct dealer MoUs covering Changan's full passenger vehicle lineup — from UNI series sport coupé SUVs to CS family SUVs to Eado sedans. Every unit traceable to factory invoice. Zero grey market.`;
+
+const models = [
+  { slug: 'changan-uni-t', name: 'UNI-T', body: 'Sport Coupé SUV', fuel: 'ICE', price_min: 13800, stock: 45, ready: true },
+  { slug: 'changan-uni-k', name: 'UNI-K', body: 'Flagship Mid-SUV', fuel: 'PHEV', price_min: 19500, stock: 20, ready: true },
+  { slug: 'changan-uni-z', name: 'UNI-Z', body: 'Coupé SUV', fuel: 'ICE', price_min: 14200, stock: 25, ready: true },
+  { slug: 'changan-cs75-plus', name: 'CS75 Plus', body: 'Mid SUV', fuel: 'ICE', price_min: 16800, stock: 35, ready: true },
+  { slug: 'changan-cs55-plus', name: 'CS55 Plus', body: 'Compact SUV', fuel: 'ICE', price_min: 14500, stock: 50, ready: true },
+  { slug: 'changan-cs35-plus', name: 'CS35 Plus', body: 'Entry SUV', fuel: 'ICE', price_min: 11500, stock: 30, ready: false },
+  { slug: 'changan-x5-plus', name: 'X5 Plus', body: 'Sedan', fuel: 'ICE', price_min: 12800, stock: 28, ready: false },
+  { slug: 'changan-eado', name: 'Eado', body: 'Compact Sedan', fuel: 'ICE', price_min: 10500, stock: 40, ready: false },
+];
+
+const subBrands = [
+  { slug: 'deepal', name: 'Deepal', cn: '深蓝', desc: 'Changan\'s premium EV / EREV sub-brand (since 2022)', models: 5 },
+  { slug: 'qiyuan', name: 'Qiyuan', cn: '启源', desc: 'Changan\'s entry-level EV / PHEV affordable family series', models: 3 },
+];
+
+const advantages = [
+  { icon: '🏛', title: 'State-Owned Backing', desc: '163-year heritage. China central government holds majority stake. Highest financial stability among Chinese OEMs.' },
+  { icon: '⚙', title: 'Self-Developed Powertrain', desc: 'Changan\'s "Blue Whale" engines (1.4T/1.5T/2.0T) — China\'s benchmark turbocharged powerplants.' },
+  { icon: '🚗', title: 'UNI Sport DNA', desc: 'UNI series wins multiple "Most Innovative Design" awards — sport coupé SUVs at compact-SUV pricing.' },
+  { icon: '🔋', title: 'NEV Pivot Done', desc: 'Deepal + Qiyuan sub-brands cover BEV/PHEV/EREV. 2025 NEV market share top 5 in China.' },
+  { icon: '🌍', title: 'Russia & CIS Top Choice', desc: 'Changan is the #1 Chinese ICE brand by sales volume in Russia/CIS region 2025.' },
+  { icon: '✅', title: 'Direct OEM Pricing', desc: 'EV Auto Pro is authorized exporter — factory MSRP, no dealer markup. Verify with factory on request.' },
+];
+
+const markets = [
+  { code: 'RU', name: 'Russia', stat: '#1 Chinese ICE brand', img: '/images/market-ru.svg' },
+  { code: 'KZ', name: 'Kazakhstan', stat: '12,000+ units / year', img: '/images/market-kz.svg' },
+  { code: 'AE', name: 'UAE', stat: 'Top 5 imported Chinese', img: '/images/market-ae.svg' },
+  { code: 'EG', name: 'Egypt', stat: 'CKD assembly partner', img: '/images/market-eg.svg' },
+];
+
+const cases = [
+  { headline: '50 Units Changan UNI-T → St. Petersburg', client: 'Moscow Trade Group', stars: 5, quote: 'EAC compliant. 18-day block train delivery. Repeat monthly.' },
+  { headline: '30 Units CS75 Plus → Almaty', client: 'Kazakhstan Wholesale', stars: 5, quote: 'Khorgos rail freight. Fast, hassle-free.' },
+  { headline: '12 Units UNI-K iDD PHEV → Dubai', client: 'Gulf Auto Dist.', stars: 5, quote: 'GCC compliance complete. PHEV demand growing fast.' },
+];
+
+const brandFaqs = [
+  { q: 'Is EV Auto Pro really an authorized Changan exporter?', a: 'Yes. We hold a signed dealer MoU with Changan Automobile since 2018. We can share the MoU scan on request. Factory invoice provided for every unit — no grey market.' },
+  { q: 'Which Changan models are best for export to Russia / CIS?', a: 'UNI-T (compact coupé SUV) and CS75 Plus (mid SUV) are top sellers in Russia/CIS. UNI-K iDD (PHEV) growing fast in Central Asia. Cold-weather configuration available.' },
+  { q: 'Does Changan support right-hand drive (RHD)?', a: 'Yes for CS75 Plus and select UNI models. Factory RHD batch MOQ: 20 units. Lead time 45-60 days from order.' },
+  { q: 'What is the warranty for Changan exported vehicles?', a: '5-year / 100,000 km vehicle warranty. 8-year / 160,000 km on Deepal/Qiyuan EV batteries. Local warranty fulfillment via Changan authorized partners in major markets.' },
+  { q: 'Can I order custom configuration (paint / interior / wheels)?', a: 'Yes. Custom paint codes (10+ colors), wheel sizes (16-20"), interior trim (cloth/leather), audio upgrade. MOQ varies by spec.' },
+  { q: 'How fast can Changan models ship?', a: 'In-stock units: 3-15 days from PI signing. Custom factory orders: 30-45 days. We maintain 80+ Changan units in Shanghai bonded warehouse.' },
+];
+---
+
+<BaseLayout
+  title="Changan Auto Export | EV Auto Pro Authorized Dealer Since 2018"
+  description="Buy Changan from authorized China exporter. UNI-T / UNI-K / CS75 Plus / CS55 Plus 8 models in stock. FOB from $10,500. MOQ 1. Ships to 60+ countries."
+>
+  {/* ============ 1. HERO 全屏大图 ============ */}
+  <section class="relative bg-ink-900 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={brand.hero_image} alt={`${brand.name} brand`} class="w-full h-full object-cover opacity-30" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
+      <nav class="text-xs text-ink-400 mb-6">
+        <a href="/" class="hover:text-brand-500">Home</a> ·
+        <a href="/brands/" class="hover:text-brand-500">Brands</a> ·
+        <span class="text-white">{brand.name}</span>
+      </nav>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-20 h-20 lg:w-24 lg:h-24 rounded-2xl bg-white p-3 flex items-center justify-center">
+          <img src={brand.logo} alt={brand.name} class="w-full h-full object-contain" />
+        </div>
+        <div class="inline-flex items-center px-3 py-1 bg-brand-500 text-white text-xs font-bold rounded-full">
+          ★ AUTHORIZED EXPORTER
+        </div>
+      </div>
+      <h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight mb-3">{brand.name}</h1>
+      <p class="text-2xl text-brand-500 font-semibold mb-3">{brand.cn}</p>
+      <p class="text-lg lg:text-xl text-ink-300 max-w-2xl mb-10">{brand.tagline}</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        {heroBadges.map(b => (
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm text-white">
+            <span class="text-brand-500">✓</span> {b}
+          </span>
+        ))}
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="#models" class="btn-primary">Browse {models.length} Models</a>
+        <a href="/contact/quote/?brand=changan" class="inline-flex items-center px-6 py-3 bg-white text-ink-900 hover:bg-ink-100 font-semibold rounded-lg transition-colors">
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 2. STATS Strip ============ */}
+  <section class="py-16 lg:py-20 border-b border-ink-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+        {stats.map(s => (
+          <div class="text-center lg:text-left">
+            <div class="text-4xl lg:text-5xl font-bold text-brand-500 mb-2">{s.num}</div>
+            <div class="text-base font-semibold text-ink-900">{s.label}</div>
+            <div class="text-xs text-ink-500 mt-1">{s.sub}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 3. BRAND STORY 双列 (奔驰式大留白) ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-[1fr_1.5fr] gap-16 items-start">
+        <div class="sticky top-24">
+          <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-3">The Brand</p>
+          <h2 class="text-4xl lg:text-5xl font-bold text-ink-900 leading-tight">163 years of Chinese auto heritage</h2>
+        </div>
+        <div class="space-y-6 text-base lg:text-lg text-ink-700 leading-relaxed">
+          {brandStory.split('\n\n').map(para => <p>{para}</p>)}
+          <a href="https://www.changan.com.cn" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:text-brand-600 mt-4">
+            Visit Changan official site ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 4. AUTHORIZED DEALER STATEMENT ============ */}
+  <section class="py-16 bg-ink-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-[80px_1fr] gap-6 items-start">
+        <div class="w-20 h-20 rounded-2xl bg-brand-500 flex items-center justify-center text-4xl">★</div>
+        <div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-2">EV Auto Pro is an authorized Changan exporter</h3>
+          <p class="text-base text-ink-700 leading-relaxed">
+            We hold a signed dealer MoU with Changan Automobile since <strong>{brand.authorized_since}</strong>. Every unit shipped is sourced directly from the factory — no grey market, no rebadged units. Factory invoice provided for every export order on request. Customs and EAC/GCC/INMETRO documentation handled in-house.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 5. MODELS GRID (核心) ============ */}
+  <section id="models" class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4">
+        <div>
+          <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Available Models</p>
+          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">{models.length} Changan models for export</h2>
+        </div>
+        <a href="/cars/?brand=changan" class="text-sm font-semibold text-brand-500 hover:text-brand-600">All Changan models →</a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {models.map(m => (
+          <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
+             class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+              <img src={`/images/car-${m.slug}.svg`} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 bg-ink-100 text-ink-600 text-xs rounded">{m.body}</span>
+                <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{m.fuel}</span>
+              </div>
+              <h3 class="text-base font-semibold text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{m.name}</h3>
+              <div class="flex items-end justify-between">
+                <div>
+                  <div class="text-xs text-ink-500">From FOB</div>
+                  <div class="text-lg font-bold text-ink-900">${m.price_min.toLocaleString()}</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs text-ink-500">In stock</div>
+                  <div class="text-sm font-semibold text-ink-900">{m.stock} units</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 6. SUB-BRAND FAMILY (Changan 旗下子品牌) ============ */}
+  <section class="py-24 lg:py-32 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Changan Family</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Sub-brands under Changan group</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {subBrands.map(b => (
+          <a href={`/brands/${b.slug}/`} class="group flex items-start gap-5 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-2xl p-8 transition-all">
+            <div class="flex-shrink-0 w-20 h-20 rounded-xl bg-ink-100 p-3">
+              <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="w-full h-full object-contain" />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-ink-900 group-hover:text-brand-500 transition-colors">{b.name}</h3>
+              <p class="text-sm text-brand-500 font-semibold mb-2">{b.cn}</p>
+              <p class="text-sm text-ink-600 leading-relaxed mb-3">{b.desc}</p>
+              <div class="text-xs text-ink-500">{b.models} models · authorized via Changan MoU</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 7. WHY CHANGAN FROM EV AUTO PRO (6 卖点) ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Why Choose Changan</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">6 reasons dealers pick Changan via EV Auto Pro</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {advantages.map(a => (
+          <div class="bg-white border border-ink-200 rounded-2xl p-8 hover:border-brand-500 hover:shadow-md transition-all">
+            <div class="text-4xl mb-4">{a.icon}</div>
+            <h3 class="text-base font-bold text-ink-900 mb-2">{a.title}</h3>
+            <p class="text-sm text-ink-600 leading-relaxed">{a.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 8. BEST-SELLING MARKETS ============ */}
+  <section class="py-24 lg:py-32 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Where Changan Wins</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Top markets for Changan export</h2>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        {markets.map(m => (
+          <a href={`/markets/${m.name.toLowerCase()}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl overflow-hidden transition-all">
+            <div class="aspect-[4/3] bg-ink-100 overflow-hidden">
+              <img src={m.img} alt={m.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-ink-500 font-semibold uppercase tracking-wider mb-1">{m.code}</div>
+              <h3 class="text-lg font-bold text-ink-900 group-hover:text-brand-500 transition-colors">{m.name}</h3>
+              <p class="text-xs text-brand-500 font-semibold mt-2">{m.stat}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 9. CASES & SHIPMENT RECORDS ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Recent Changan Shipments</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Your Changan has arrived</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {cases.map((c, i) => (
+          <div class="bg-white border border-ink-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+              <img src={`/images/testimonial-${i + 1}.svg`} alt={c.client} class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <div class="flex gap-0.5 mb-3">
+                {Array(c.stars).fill(0).map(() => <span class="text-yellow-500 text-sm">★</span>)}
+              </div>
+              <h3 class="text-base font-bold text-ink-900 mb-3 leading-snug">{c.headline}</h3>
+              <p class="text-sm text-ink-700 italic mb-4 leading-relaxed">"{c.quote}"</p>
+              <div class="pt-3 border-t border-ink-200 text-sm font-semibold text-ink-900">{c.client}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 10. BRAND-SPECIFIC FAQ ============ */}
+  <section class="py-24 lg:py-32 bg-ink-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Changan FAQ</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Common Changan questions</h2>
+      </div>
+      <div class="space-y-3">
+        {brandFaqs.map(f => (
+          <details class="group bg-white border border-ink-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer p-5 list-none">
+              <span class="font-semibold text-base text-ink-900 flex-1 group-open:text-brand-500 transition-colors">{f.q}</span>
+              <svg class="flex-shrink-0 w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="px-5 pb-5 pt-1 text-sm text-ink-700 leading-relaxed border-t border-ink-100">
+              <div class="pt-4">{f.a}</div>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 11. DARK CTA ============ */}
+  <section class="py-24 lg:py-32 bg-ink-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Import Changan from China</h2>
+      <p class="text-lg text-ink-300 mb-10 max-w-2xl mx-auto">
+        {models.length} models in stock · FOB from ${Math.min(...models.map(m => m.price_min)).toLocaleString()} · 24h quote · 60+ countries shipped
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/contact/quote/?brand=changan" class="inline-flex items-center px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
+          Request a Quote
+        </a>
+        <a href="https://wa.me/8613800000000?text=Changan%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
+          💬 WhatsApp Cai
+        </a>
+        <a href="/contact/catalogue/?brand=changan" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
+          📕 Catalogue PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Brand JSON-LD Schema (SEO) */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Brand',
+    name: brand.name,
+    alternateName: brand.cn,
+    description: brandStory.replace(/\n/g, ' '),
+    foundingDate: '1862',
+    url: `https://evautopro.com/brands/${brand.slug}/`,
+  })} />
+</BaseLayout>
