@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// 1:1 ihkaauto.com/news layout
+
+const featuredArticle = {
+  slug: '2026-china-nev-export-rules-guide',
+  category: 'Industry News',
+  title: "China's New NEV Export Policy 2026: A Complete Guide by EV Auto Pro",
+  excerpt: 'Starting 2026, China\'s auto export sector pivots to quality with stricter standards for sustainable growth.',
+  hero: '/images/hero-port-loading.svg',
+  date: '2026-05-15',
+};
+
+const carouselItems = [
+  { slug: 'changan-uni-t-vs-jetour-t2-comparison', title: 'Changan UNI-T vs Jetour T2: Which Coupe SUV for Export?', excerpt: 'Both models offer comparable dimensions and powertrains, presenting...', img: '/images/car-changan-uni-t.svg' },
+  { slug: 'top-7-chinese-suv-for-russia-2026', title: 'Top 7 Chinese Off-Road SUVs for Russia in 2026', excerpt: 'These models offer robust performance for diverse terrains and comfortable interiors. Ideal...', img: '/images/usecase-electric-suv.svg' },
+  { slug: 'geely-coolray-export-deep-dive', title: 'Geely Coolray Export Deep Dive: UAE, KZ, BR Markets', excerpt: 'Complete buyer guide for Geely Coolray RHD and LHD variants...', img: '/images/car-geely-coolray.svg' },
+];
+
+const tabs = [
+  { key: 'latest', label: 'Latest News' },
+  { key: 'product', label: 'New Product News' },
+  { key: 'industry', label: 'Industry News' },
+  { key: 'company', label: 'Company Information' },
+];
+
+const articles = [
+  { slug: 'how-to-choose-changan-suv', cat: 'product', title: "How to Choose a Changan SUV: Complete Guide to Changan's NEV Lineup", img: '/images/car-changan-cs55-plus.svg', date: '2026-05-21' },
+  { slug: 'jetour-t2-vs-geely-coolray-africa', cat: 'product', title: 'Jetour T2 vs Geely Coolray: Which Small SUV Fits Africa Better?', img: '/images/car-jetour-t2.svg', date: '2026-05-12' },
+  { slug: 'deepal-s07-alternatives', cat: 'product', title: 'Affordable Deepal S07 Alternatives: Value EREV SUVs from China', img: '/images/car-deepal-s07.svg', date: '2026-05-11' },
+  { slug: 'changan-uni-t-vs-uni-z-comparison', cat: 'product', title: 'Changan UNI-T vs UNI-Z: Comparison, Buying Guide & Alternatives', img: '/images/car-changan-uni-t.svg', date: '2026-05-09' },
+  { slug: 'how-to-choose-jetour-lineup', cat: 'product', title: "How to Choose a Jetour Car: Complete Guide to Jetour's Vehicle Lineup", img: '/images/car-jetour-t2.svg', date: '2026-05-08' },
+  { slug: 'can-you-drive-phev-without-charging', cat: 'industry', title: 'Can You Drive a Plug-In Hybrid Without Charging? An Essential Guide', img: '/images/usecase-phev-hybrid.svg', date: '2026-04-30' },
+];
+
+const sidebarArticles = [
+  { slug: 'can-you-drive-phev-without-charging', tag: 'article', title: 'Can You Drive a Plug-In Hybrid Without Charging? An Essential...', img: '/images/usecase-phev-hybrid.svg', date: '2026-04-30' },
+  { slug: 'guide-to-sourcing-chinese-auto-parts', tag: 'article', title: "A Guide to Sourcing China's Dustproof Auto Parts for African Roads", img: '/images/car-changan-cs55-plus.svg', date: '2026-04-28' },
+  { slug: 'china-vs-japan-vs-usa-models', tag: 'article', title: 'Toyota, Honda, Mercedes: China vs. USA Model Differences & Import Guide', img: '/images/car-volkswagen-id-7.svg', date: '2026-01-31' },
+  { slug: 'import-chinese-cars-to-ghana', tag: 'article', title: 'How to Import Cars from China to Ghana: Process, Costs & Model Guide', img: '/images/market-eg.svg', date: '2026-01-08' },
+];
+---
+
+<BaseLayout
+  title="EV Auto Pro News | China NEV Export Insights, Buyer Guides, Industry Updates"
+  description="Latest China new energy vehicle export news, model comparisons, buyer guides, and industry analysis from EV Auto Pro."
+>
+  {/* ============ 1. Selected News (Featured + Carousel) ============ */}
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold text-ink-900 mb-8">Selected News</h1>
+
+      {/* Featured big article */}
+      <a href={`/news/${featuredArticle.slug}/`} class="block relative rounded-2xl overflow-hidden mb-8 group">
+        <div class="aspect-[21/9] bg-ink-100 relative">
+          <img src={featuredArticle.hero} alt={featuredArticle.title} class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/40 to-transparent"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-10 text-white">
+          <h2 class="text-2xl lg:text-3xl font-bold mb-3 max-w-3xl">{featuredArticle.title}</h2>
+          <p class="text-sm lg:text-base text-white/90 mb-5 max-w-2xl">{featuredArticle.excerpt}</p>
+          <span class="inline-flex items-center px-5 py-2 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-full transition-colors">
+            Read now
+          </span>
+        </div>
+      </a>
+
+      {/* Carousel of 3 (no JS scroll, native) */}
+      <div class="relative">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {carouselItems.map(c => (
+            <a href={`/news/${c.slug}/`} class="group flex gap-3 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-3 transition-all">
+              <div class="flex-shrink-0 w-28 aspect-square bg-ink-100 rounded overflow-hidden">
+                <img src={c.img} alt={c.title} class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-sm font-semibold text-ink-900 group-hover:text-brand-500 line-clamp-2 mb-1">{c.title}</h3>
+                <p class="text-xs text-ink-500 line-clamp-2">{c.excerpt}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 2. Main Articles Section ============ */}
+  <section class="py-12 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Tabs */}
+      <div class="flex flex-wrap gap-2 mb-8">
+        {tabs.map((t, i) => (
+          <button data-tab={t.key} class:list={['px-4 py-2 text-sm font-semibold rounded-md transition-colors', i === 0 ? 'bg-brand-500 text-white' : 'bg-white border border-ink-200 text-ink-700 hover:border-brand-500']}>
+            {t.label}
+          </button>
+        ))}
+      </div>
+
+      <div class="grid lg:grid-cols-[1fr_320px] gap-8">
+        {/* Left: article grid */}
+        <div>
+          <div class="grid sm:grid-cols-2 gap-6">
+            {articles.map(a => (
+              <a href={`/news/${a.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl overflow-hidden transition-all">
+                <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+                  <img src={a.img} alt={a.title} class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="p-5">
+                  <h3 class="text-base font-semibold text-ink-900 group-hover:text-brand-500 transition-colors mb-2 leading-snug">{a.title}</h3>
+                  <div class="text-xs text-ink-500">{a.date}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Pagination */}
+          <div class="flex items-center justify-center gap-2 mt-10">
+            <button class="w-8 h-8 flex items-center justify-center text-ink-500 hover:text-brand-500 border border-ink-200 rounded">‹</button>
+            <button class="w-8 h-8 flex items-center justify-center bg-brand-500 text-white rounded">1</button>
+            <button class="w-8 h-8 flex items-center justify-center text-ink-700 hover:text-brand-500 border border-ink-200 rounded">2</button>
+            <button class="w-8 h-8 flex items-center justify-center text-ink-700 hover:text-brand-500 border border-ink-200 rounded">3</button>
+            <span class="text-ink-500">...</span>
+            <button class="w-8 h-8 flex items-center justify-center text-ink-700 hover:text-brand-500 border border-ink-200 rounded">21</button>
+            <button class="w-8 h-8 flex items-center justify-center text-ink-500 hover:text-brand-500 border border-ink-200 rounded">›</button>
+          </div>
+        </div>
+
+        {/* Right: Sidebar */}
+        <aside>
+          <h3 class="text-base font-bold text-ink-900 mb-5">Guide to Imported Cars from China</h3>
+          <div class="space-y-4">
+            {sidebarArticles.map(a => (
+              <a href={`/news/${a.slug}/`} class="group flex gap-3">
+                <div class="flex-shrink-0 w-20 aspect-square bg-ink-100 rounded overflow-hidden">
+                  <img src={a.img} alt={a.title} class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-[10px] text-ink-500 uppercase font-semibold mb-1">{a.tag}</div>
+                  <h4 class="text-sm font-semibold text-ink-900 group-hover:text-brand-500 line-clamp-3 leading-tight mb-1">{a.title}</h4>
+                  <div class="text-xs text-ink-500">{a.date}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+          <a href="/news/?category=guide" class="block mt-6 text-center text-sm font-semibold text-ink-700 hover:text-brand-500 border border-ink-200 hover:border-brand-500 py-2 rounded transition-colors">
+            See more
+          </a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 3. Bottom Banner (双车图 + Get a Quote) ============ */}
+  <section class="py-16 bg-ink-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="text-brand-500 font-bold text-lg mb-2">EV AUTO PRO</div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white leading-tight mb-3">
+          Import Cars from China
+        </h2>
+        <p class="text-base text-ink-300 mb-6">
+          95% Models & Full Certified · 6 Authorized OEMs · 60+ Countries
+        </p>
+      </div>
+      <div class="bg-white/95 rounded-xl p-6">
+        <h3 class="text-xl font-bold text-ink-900 mb-4">Get a quote</h3>
+        <form id="news-quote" class="space-y-3" novalidate>
+          <input type="text" name="honeypot" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" />
+          <div class="grid grid-cols-2 gap-3">
+            <input type="text" name="name" required placeholder="*Name" class="px-3 py-2 border border-ink-300 rounded text-sm focus:border-brand-500 focus:outline-none" />
+            <input type="text" name="country" required placeholder="*Country" class="px-3 py-2 border border-ink-300 rounded text-sm focus:border-brand-500 focus:outline-none" />
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <input type="tel" name="whatsapp" required placeholder="*WhatsApp" class="px-3 py-2 border border-ink-300 rounded text-sm focus:border-brand-500 focus:outline-none" />
+            <input type="text" name="buyer_type" placeholder="Dealer or individual" class="px-3 py-2 border border-ink-300 rounded text-sm focus:border-brand-500 focus:outline-none" />
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <input type="text" name="car_brand" placeholder="Car Brand" class="px-3 py-2 border border-ink-300 rounded text-sm focus:border-brand-500 focus:outline-none" />
+            <input type="email" name="email" required placeholder="*Email" class="px-3 py-2 border border-ink-300 rounded text-sm focus:border-brand-500 focus:outline-none" />
+          </div>
+          <button type="submit" class="w-full px-6 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded transition-colors text-sm">
+            Submit
+          </button>
+          <div id="news-status" class="text-xs text-center hidden"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Tab filter (v0 visual only — all tabs show same articles; real filter wired when articles tagged in CMS)
+  const tabs = document.querySelectorAll<HTMLButtonElement>('[data-tab]');
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      tabs.forEach(x => {
+        x.classList.remove('bg-brand-500', 'text-white');
+        x.classList.add('bg-white', 'border', 'border-ink-200', 'text-ink-700', 'hover:border-brand-500');
+      });
+      t.classList.remove('bg-white', 'border', 'border-ink-200', 'text-ink-700', 'hover:border-brand-500');
+      t.classList.add('bg-brand-500', 'text-white');
+    });
+  });
+
+  // Quote form
+  const f = document.getElementById('news-quote') as HTMLFormElement | null;
+  const st = document.getElementById('news-status') as HTMLDivElement | null;
+  f?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!st) return;
+    st.classList.remove('hidden', 'text-green-600', 'text-red-600');
+    st.classList.add('text-ink-500');
+    st.textContent = 'Sending…';
+    try {
+      const r = await fetch('/api/inquiry', { method: 'POST', body: new FormData(f) });
+      const d = await r.json();
+      if (r.ok) {
+        st.classList.add('text-green-600');
+        st.textContent = '✓ ' + (d.message ?? 'Thank you!');
+        f.reset();
+      } else {
+        st.classList.add('text-red-600');
+        st.textContent = '⚠ ' + (d.error ?? 'Try again');
+      }
+    } catch {
+      st.classList.add('text-red-600');
+      st.textContent = '⚠ Network error';
+    }
+  });
+</script>
