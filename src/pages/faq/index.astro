@@ -55,10 +55,36 @@ const categories = [
     questions: [
       { q: 'Which Chinese EVs meet EU standards?', a: 'Geely (Coolray, Atlas), VW China (ID.3, ID.7), and select BYD models meet EU WVTA homologation. For Russia / CIS, EAC certification applies. We handle homologation paperwork for each destination.' },
       { q: 'How do Chinese NEV batteries perform in high-temperature regions (Middle East / Africa)?', a: 'CATL / BYD blade batteries are LFP chemistry — thermally stable up to 60°C ambient. We recommend BEV with LFP for desert markets. PHEV / EREV models suit areas with limited charging infrastructure.' },
+      { q: 'Can Chinese cars handle extreme cold weather (Russia / Kazakhstan)?', a: 'Yes. Our cars sold to Russia/CIS undergo cold-weather configuration: upgraded battery thermal management, cold-resistant tires, engine block heaters (for ICE/PHEV). Tested down to -30°C.' },
       { q: 'How to evaluate charging feasibility for Chinese NEVs in Africa?', a: 'Most Chinese NEVs support GB/T (China standard). For destinations without GB/T infrastructure, we supply CCS2 (Europe), Type 1 (US/Japan), or CHAdeMO adapter cables. PHEV alternative reduces charging dependence.' },
-      { q: 'What is the warranty on exported vehicles?', a: 'Standard 5-year / 100,000 km vehicle warranty (varies by brand). 8-year / 160,000 km battery warranty on BEV / PHEV. Warranty fulfillment via local authorized dealer or our parts depot network.' },
-      { q: 'Do you offer after-sales parts supply?', a: 'Yes. We maintain spare parts depots in Moscow, Almaty, Dubai. Other markets: parts ship from Shanghai within 7-14 days. OEM + aftermarket inventory available.' },
       { q: 'Are these cars compliant with Russian EAC certification?', a: 'Yes. All vehicles exported to Russia / CIS undergo EAC certification through our in-house compliance team. Documentation handled end-to-end — no delays at Russian customs.' },
+      { q: 'What is CISPR / EMC certification and does it apply to Chinese cars?', a: 'CISPR 25 covers electromagnetic compatibility for in-vehicle electronics. All our exported vehicles pre-comply with CISPR 25 Class 3+ for global markets. Required for GCC and select EU destinations.' },
+    ],
+  },
+  {
+    id: 'oem',
+    icon: '🔧',
+    label: 'OEM & Customization',
+    questions: [
+      { q: 'Do you support OEM badging / private label?', a: 'Yes. We support OEM badging for orders ≥50 units (single model). Brand removal / dealer logo / custom paint codes available with 30-45 day production lead time.' },
+      { q: 'Can you customize trim / color / interior configuration?', a: 'Yes. Factory custom orders: paint codes (10+ colors), wheel size (16-20"), interior trim (cloth/leather/PU), audio upgrade. MOQ varies by spec — typically ≥10 units per config.' },
+      { q: 'Right-Hand Drive (RHD) conversion available?', a: 'Select models support factory RHD: Geely Coolray / Atlas, Changan CS75 Plus, Jetour T2. We do NOT offer aftermarket RHD conversion (not safe for export markets). MOQ for RHD batch: 20 units.' },
+      { q: 'Can you supply CKD / SKD kits for local assembly?', a: 'Yes. CKD (Complete Knock Down) kits available for Egypt, Pakistan, Algeria markets where local assembly = lower import duty. MOQ 30 units. Factory provides assembly manual + tooling list.' },
+      { q: 'Do you offer fleet-specific configurations (taxi / police / military)?', a: 'Yes for commercial fleets: taxi-grade interior (PU seats, partition glass), additional ports for fleet telematics, dual-battery for police use. Government / military orders require additional licensing — case-by-case.' },
+      { q: 'Can I order pre-loaded language/region software?', a: 'Yes. Infotainment language pre-load: Russian, Arabic, Spanish, Portuguese, French. Navigation maps: Russia/CIS, GCC, LATAM. Specify at PI stage — pre-installed at factory.' },
+    ],
+  },
+  {
+    id: 'warranty',
+    icon: '🛠',
+    label: 'Warranty & After-Sales',
+    questions: [
+      { q: 'What is the manufacturer warranty on exported vehicles?', a: 'Standard 5-year / 100,000 km vehicle warranty (varies by brand). 8-year / 160,000 km battery warranty on BEV / PHEV. We provide warranty card + service manual in destination language.' },
+      { q: 'Where can my customer claim warranty service?', a: 'Authorized dealers in your market (we share network list) or our after-sales depots in Moscow, Almaty, Dubai. For markets without local dealer, we coordinate factory technical support remotely + parts express ship.' },
+      { q: 'Do you cover transit damage / port damage?', a: 'Yes. Marine cargo insurance is included in CIF quotes (or available as optional add-on for FOB). Coverage: ALL RISKS including transit damage, port handling, weather. Claim process: photo evidence + B/L → 14-day resolution.' },
+      { q: 'Do you provide spare parts supply?', a: 'Yes. We maintain parts depots in Moscow / Almaty / Dubai. Other markets: parts ship from Shanghai within 7-14 days. Genuine OEM + quality aftermarket parts. Bulk distributor pricing available.' },
+      { q: 'What if a vehicle has a defect after delivery?', a: 'Report within 7 days of arrival with photo/video evidence. Minor defects (interior trim, lights): replacement parts shipped within 14 days at our cost. Major defects (drivetrain, frame): factory inspection + remedy or replacement unit.' },
+      { q: 'Do you offer technical training for our service team?', a: 'Yes for distributor partners. Factory training (3-5 days, in China) covers diagnostic tools, common repairs, software updates. Remote training via video also available.' },
     ],
   },
 ];
@@ -149,19 +175,43 @@ const allFaqs = categories.flatMap(c => c.questions);
     </section>
   ))}
 
-  {/* ============ Still have questions CTA ============ */}
-  <section class="py-20 bg-ink-900">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-3">Still have questions?</h2>
-      <p class="text-base text-ink-300 mb-8">
-        Cai personally reviews every inquiry. Reply within 24h, in English / Chinese / Russian.
-      </p>
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="/contact/quote/" class="inline-flex items-center px-8 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
-          Request a Quote
+  {/* ============ Still Have Questions? (工业灯同款 3 按钮) ============ */}
+  <section class="py-20 lg:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-3">Still Have Questions?</h2>
+        <p class="text-base text-ink-600">
+          Cai personally reviews every inquiry. Reply within 24h, in English / Chinese / Russian.
+        </p>
+      </div>
+
+      {/* 3 大 CTA 按钮卡 (工业灯同款) */}
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/contact/" class="group block bg-white border-2 border-ink-200 hover:border-brand-500 rounded-2xl p-8 text-center transition-all hover:shadow-lg">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-2 group-hover:text-brand-500 transition-colors">Send Your Inquiry</h3>
+          <p class="text-sm text-ink-600 mb-5">Email, WhatsApp, WeChat — pick your channel.</p>
+          <span class="inline-flex items-center text-sm font-semibold text-brand-500 group-hover:translate-x-1 transition-transform">
+            Contact us →
+          </span>
         </a>
-        <a href="https://wa.me/8613800000000" class="inline-flex items-center px-8 py-3 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
-          💬 WhatsApp Now
+
+        <a href="/contact/quote/" class="group block bg-brand-500 hover:bg-brand-600 rounded-2xl p-8 text-center transition-all hover:shadow-lg">
+          <div class="text-4xl mb-4">📋</div>
+          <h3 class="text-xl font-bold text-white mb-2">Request a Quote</h3>
+          <p class="text-sm text-white/90 mb-5">FOB + CIF pricing within 24h. MOQ 1 unit.</p>
+          <span class="inline-flex items-center text-sm font-semibold text-white group-hover:translate-x-1 transition-transform">
+            Get pricing →
+          </span>
+        </a>
+
+        <a href="/contact/catalogue/" class="group block bg-white border-2 border-ink-200 hover:border-brand-500 rounded-2xl p-8 text-center transition-all hover:shadow-lg">
+          <div class="text-4xl mb-4">📕</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-2 group-hover:text-brand-500 transition-colors">Product Catalogue</h3>
+          <p class="text-sm text-ink-600 mb-5">50-page PDF · all 50+ models · FOB pricing.</p>
+          <span class="inline-flex items-center text-sm font-semibold text-brand-500 group-hover:translate-x-1 transition-transform">
+            Download PDF →
+          </span>
         </a>
       </div>
     </div>
