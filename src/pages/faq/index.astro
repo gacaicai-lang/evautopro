@@ -4,10 +4,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 // FAQ structure synthesized from ihkaauto.com/faq (4 categories × 6-8 Qs)
 // Adapted for evautopro.com business context
 
+// Lucide-style SVG icon paths (24×24 viewBox)
+const ICONS = {
+  car: '<path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>',
+  ship: '<path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2c1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/>',
+  dollar: '<line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/>',
+  wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  tools: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/><path d="M3.5 21 8 16.5"/>',
+};
+
 const categories = [
   {
     id: 'sourcing',
-    icon: '🚗',
+    icon: ICONS.car,
     label: 'Product Sourcing & Inventory',
     questions: [
       { q: 'What is the source of EV Auto Pro\'s vehicles?', a: 'We source directly from 6 authorized OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour) under signed dealer MoUs, plus active sourcing from 35 additional Chinese brands. Every unit traceable to factory invoice — no grey market.' },
@@ -22,7 +32,7 @@ const categories = [
   },
   {
     id: 'logistics',
-    icon: '🚢',
+    icon: ICONS.ship,
     label: 'Logistics & Customs Clearance',
     questions: [
       { q: 'Which regions does EV Auto Pro serve?', a: 'Active in 60+ countries. Primary markets: Russia & CIS, Middle East (UAE/SA/Egypt), Central Asia (Kazakhstan/Uzbekistan), LATAM (Brazil/Mexico), Africa, SE Asia.' },
@@ -37,7 +47,7 @@ const categories = [
   },
   {
     id: 'payment',
-    icon: '💰',
+    icon: ICONS.dollar,
     label: 'Payment & Transactions',
     questions: [
       { q: 'Is buying from EV Auto Pro secure for international purchases?', a: 'Yes. We are MOFCOM-licensed, AEO-certified, ISO 9001 certified. Standard payment terms: T/T 30% deposit + 70% before shipment. L/C at sight accepted from major banks. Every transaction backed by signed PI + B/L.' },
@@ -50,7 +60,7 @@ const categories = [
   },
   {
     id: 'quality',
-    icon: '🛡',
+    icon: ICONS.shield,
     label: 'Compliance & Quality Assurance',
     questions: [
       { q: 'Which Chinese EVs meet EU standards?', a: 'Geely (Coolray, Atlas), VW China (ID.3, ID.7), and select BYD models meet EU WVTA homologation. For Russia / CIS, EAC certification applies. We handle homologation paperwork for each destination.' },
@@ -63,7 +73,7 @@ const categories = [
   },
   {
     id: 'oem',
-    icon: '🔧',
+    icon: ICONS.wrench,
     label: 'OEM & Customization',
     questions: [
       { q: 'Do you support OEM badging / private label?', a: 'Yes. We support OEM badging for orders ≥50 units (single model). Brand removal / dealer logo / custom paint codes available with 30-45 day production lead time.' },
@@ -76,7 +86,7 @@ const categories = [
   },
   {
     id: 'warranty',
-    icon: '🛠',
+    icon: ICONS.tools,
     label: 'Warranty & After-Sales',
     questions: [
       { q: 'What is the manufacturer warranty on exported vehicles?', a: 'Standard 5-year / 100,000 km vehicle warranty (varies by brand). 8-year / 160,000 km battery warranty on BEV / PHEV. We provide warranty card + service manual in destination language.' },
@@ -131,14 +141,18 @@ const allFaqs = categories.flatMap(c => c.questions);
       </p>
     </div>
 
-    {/* Category quick nav */}
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    {/* Category quick nav — 3 列 × 2 行 */}
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {categories.map(c => (
-          <a href={`#${c.id}`} class="group flex flex-col items-center gap-3 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-6 text-center transition-all">
-            <div class="text-4xl">{c.icon}</div>
-            <div class="text-sm font-semibold text-ink-900 group-hover:text-brand-500 leading-tight">{c.label}</div>
-            <div class="text-xs text-ink-500">{c.questions.length} questions</div>
+          <a href={`#${c.id}`} class="group flex items-center gap-4 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-6 transition-all">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-brand-50 group-hover:bg-brand-500 flex items-center justify-center transition-colors">
+              <svg class="w-7 h-7 text-brand-500 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={c.icon} />
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-base font-semibold text-ink-900 group-hover:text-brand-500 leading-tight">{c.label}</div>
+              <div class="text-xs text-ink-500 mt-1">{c.questions.length} questions</div>
+            </div>
           </a>
         ))}
       </div>
@@ -149,8 +163,10 @@ const allFaqs = categories.flatMap(c => c.questions);
   {categories.map(cat => (
     <section id={cat.id} class="py-16 even:bg-ink-50 scroll-mt-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center gap-4 mb-10">
-          <div class="text-5xl">{cat.icon}</div>
+        <div class="flex items-center gap-5 mb-10">
+          <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-brand-500 flex items-center justify-center">
+            <svg class="w-9 h-9 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={cat.icon} />
+          </div>
           <div>
             <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-1">About</p>
             <h2 class="text-2xl lg:text-3xl font-bold text-ink-900">{cat.label}</h2>
