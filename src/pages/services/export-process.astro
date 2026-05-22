@@ -1,0 +1,288 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// 5 大阶段 horizontal timeline
+const phases = [
+  { num: 1, label: 'Inquiry', icon: '💬', desc: 'Send spec → Quote', days: '< 1 day', color: 'brand' },
+  { num: 2, label: 'Order', icon: '📋', desc: 'PI signed → Deposit', days: '1-2 days', color: 'brand' },
+  { num: 3, label: 'Production', icon: '🏭', desc: 'Sourcing + QC', days: '5-15 days', color: 'brand' },
+  { num: 4, label: 'Shipping', icon: '🚢', desc: 'RoRo / Container / Block Train', days: '18-45 days', color: 'brand' },
+  { num: 5, label: 'After-Sales', icon: '🛠', desc: 'Parts + Warranty', days: 'Ongoing', color: 'brand' },
+];
+
+// 8 详细步骤
+const steps = [
+  {
+    num: 1,
+    phase: 'Inquiry',
+    title: 'Instant Inquiry Response',
+    days: '< 24 hours',
+    youDo: ['Send target market + quantity', 'Specify model / spec preferences', 'Share import license (if applicable)'],
+    weDo: ['Founder Cai reviews personally', 'Confirm stock availability', 'Send FOB + CIF quote line-by-line', 'Recommend alternatives if specs unavailable'],
+  },
+  {
+    num: 2,
+    phase: 'Order',
+    title: 'Contract & Pro Forma Invoice',
+    days: '1-2 days',
+    youDo: ['Review PI terms', 'Sign + return PI scan', 'Pay 30% T/T deposit'],
+    weDo: ['Issue formal PI with full breakdown', 'Confirm deposit receipt via SWIFT', 'Lock factory production slot', 'Update milestone tracker'],
+  },
+  {
+    num: 3,
+    phase: 'Production',
+    title: 'Vehicle Sourcing & Allocation',
+    days: '2-3 days',
+    youDo: ['Confirm final config (color/trim/options)', 'Confirm shipping method preference'],
+    weDo: ['Allocate from bonded stock OR place factory order', 'Lock production batch', 'Issue tracking number'],
+  },
+  {
+    num: 4,
+    phase: 'Production',
+    title: 'Pre-Shipment Inspection',
+    days: '3-5 days',
+    youDo: ['Review photo + video report', 'Approve or request adjustment'],
+    weDo: ['Multi-point QC (exterior / interior / drivetrain / electronics)', 'Mileage verification', 'Photo + 360° video report', 'Destination cert pre-check (EAC/GCC/INMETRO)'],
+  },
+  {
+    num: 5,
+    phase: 'Production',
+    title: 'Vehicle Readiness & Final Payment',
+    days: '5-10 days',
+    youDo: ['Pay final 70% balance', 'Provide consignee details', 'Confirm port preference'],
+    weDo: ['Export packaging', 'MoFCOM customs declaration', 'Marine cargo insurance', 'Bonded warehouse exit'],
+  },
+  {
+    num: 6,
+    phase: 'Shipping',
+    title: 'Logistics Booking & B/L',
+    days: '3-5 days',
+    youDo: ['Confirm consignee + notify party', 'Approve B/L draft'],
+    weDo: ['Book RoRo / Container / Block Train', 'Issue Bill of Lading (B/L)', 'Send certificate of origin', 'Share all export documents'],
+  },
+  {
+    num: 7,
+    phase: 'Shipping',
+    title: 'Sea / Rail Transit',
+    days: '18-45 days',
+    youDo: ['Receive GPS tracking updates', 'Prepare destination customs clearance'],
+    weDo: ['Real-time GPS tracking', 'Daily WhatsApp update', 'Coordinate with destination agent', 'Insurance claim support if needed'],
+  },
+  {
+    num: 8,
+    phase: 'After-Sales',
+    title: 'Delivery + Parts Network Activation',
+    days: 'Arrival + Ongoing',
+    youDo: ['Handle local import customs', 'Receive vehicle + documents', 'Begin retail / wholesale'],
+    weDo: ['Document handover (B/L / CO / EAC / etc)', 'Activate parts depot (Moscow / Almaty / Dubai)', 'Technical support hotline', 'Warranty claim coordination'],
+  },
+];
+
+const processFaqs = [
+  { q: 'Can you deliver urgent orders within 7 days?', a: 'Yes for in-stock units to nearby ports (Vladivostok, Jebel Ali, Inchon). Stock check on quote stage. Air freight available for ≤2 units (premium cost).' },
+  { q: 'Can I change order config after PI signed?', a: 'Yes if production not started. Color / trim changes are free within 48h of PI signing. After factory allocation, change request may incur 5-10% fee.' },
+  { q: 'What happens if vehicle fails inspection?', a: 'You can: (a) request replacement unit (no extra cost, 7-day delay), (b) request factory rework (3-5 days), or (c) cancel and refund deposit. We side with you, not the factory.' },
+  { q: 'Who pays for marine cargo insurance?', a: 'Included in CIF quotes (we cover). For FOB orders, you can buy insurance separately OR we coordinate on your behalf (1.5-2% of cargo value).' },
+  { q: 'How is the final balance payment handled?', a: 'T/T 70% before container loading. We send signed photo evidence of loaded vehicle + container number. Payment confirmation triggers B/L release within 24h.' },
+  { q: 'Can I track my shipment in real-time?', a: 'Yes. GPS tracking link sent on B/L issue. Daily WhatsApp update during transit. Final 7 days before arrival: hourly updates.' },
+];
+
+const trustBadges = [
+  { num: '24h', label: 'Reply guarantee' },
+  { num: '98%', label: 'On-time delivery' },
+  { num: '0', label: 'Hidden fees' },
+  { num: 'Cai', label: 'Personal review' },
+];
+---
+
+<BaseLayout
+  title="Export Process | How to Buy Chinese Cars from EV Auto Pro — Step-by-Step Guide"
+  description="Complete 8-step export process from inquiry to delivery. Transparent timeline (30-50 days standard). Each step shows what you do vs what EV Auto Pro handles."
+>
+  {/* ============ 1. Hero ============ */}
+  <section class="relative bg-gradient-to-br from-ink-900 via-ink-800 to-ink-900 py-24 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-15">
+      <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-xs text-ink-400 mb-6">
+        <a href="/" class="hover:text-brand-500">Home</a> · <a href="/services/" class="hover:text-brand-500">Services</a> · <span class="text-white">Export Process</span>
+      </nav>
+      <p class="text-sm font-semibold text-brand-500 uppercase tracking-wider mb-4">Export Process Guide</p>
+      <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-4xl">
+        From Inquiry to Delivery in <span class="text-brand-500">30 Days</span>
+      </h1>
+      <p class="text-lg lg:text-xl text-ink-300 mb-10 max-w-2xl leading-relaxed">
+        Transparent 8-step process. Every milestone tracked. Every fee disclosed up-front. Founder-led, no middlemen.
+      </p>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-3xl">
+        {trustBadges.map(b => (
+          <div>
+            <div class="text-3xl lg:text-4xl font-bold text-white">{b.num}</div>
+            <div class="text-xs text-ink-400 mt-1">{b.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 2. 5 大阶段 Horizontal Timeline ============ */}
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Overview</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">5 phases · 8 milestones · ~30 days</h2>
+      </div>
+
+      {/* Horizontal flow */}
+      <div class="relative">
+        {/* connecting line */}
+        <div class="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-ink-200">
+          <div class="h-full bg-gradient-to-r from-brand-500 to-brand-700 w-full"></div>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
+          {phases.map(p => (
+            <div class="text-center">
+              <div class="w-24 h-24 mx-auto mb-5 rounded-full bg-white border-4 border-brand-500 flex items-center justify-center text-4xl shadow-lg">
+                {p.icon}
+              </div>
+              <div class="text-xs font-bold text-brand-500 uppercase tracking-wider mb-2">Phase {p.num}</div>
+              <h3 class="text-lg font-bold text-ink-900 mb-2">{p.label}</h3>
+              <p class="text-xs text-ink-600 leading-relaxed mb-2">{p.desc}</p>
+              <div class="inline-flex items-center px-2 py-0.5 bg-brand-50 text-brand-700 text-xs font-semibold rounded">
+                {p.days}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 3. 8 Detailed Steps (Vertical Timeline + You/We 双栏) ============ */}
+  <section class="py-20 lg:py-28 bg-ink-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Step-by-Step Breakdown</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">8 milestones · responsibilities at each step</h2>
+      </div>
+
+      <div class="space-y-8">
+        {steps.map(s => (
+          <div class="bg-white border border-ink-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="grid lg:grid-cols-[160px_1fr] gap-0">
+              {/* Step number badge */}
+              <div class="bg-brand-500 text-white p-6 flex flex-col items-center justify-center text-center">
+                <div class="text-5xl font-bold">{s.num}</div>
+                <div class="text-xs uppercase tracking-wider mt-2 opacity-80">Step</div>
+                <div class="text-sm font-semibold mt-3 px-2 py-1 bg-white/20 rounded">{s.days}</div>
+              </div>
+
+              {/* Step content */}
+              <div class="p-6">
+                <div class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-1">{s.phase}</div>
+                <h3 class="text-xl font-bold text-ink-900 mb-5">{s.title}</h3>
+
+                {/* You do / We do 双栏 */}
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div class="bg-ink-50 rounded-lg p-4">
+                    <div class="text-xs font-semibold text-ink-500 uppercase tracking-wider mb-3">👤 You do</div>
+                    <ul class="space-y-2">
+                      {s.youDo.map(item => (
+                        <li class="flex items-start gap-2 text-sm text-ink-700">
+                          <span class="text-ink-400 mt-0.5">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div class="bg-brand-50 rounded-lg p-4">
+                    <div class="text-xs font-semibold text-brand-700 uppercase tracking-wider mb-3">🏭 EV Auto Pro handles</div>
+                    <ul class="space-y-2">
+                      {s.weDo.map(item => (
+                        <li class="flex items-start gap-2 text-sm text-ink-700">
+                          <span class="text-brand-500 mt-0.5">✓</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 4. Process FAQ ============ */}
+  <section class="py-20 lg:py-28">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Process FAQ</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Common process questions</h2>
+      </div>
+      <div class="space-y-3">
+        {processFaqs.map(f => (
+          <details class="group bg-white border border-ink-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer p-5 list-none">
+              <span class="font-semibold text-base text-ink-900 flex-1 group-open:text-brand-500 transition-colors">{f.q}</span>
+              <svg class="flex-shrink-0 w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-5 pb-5 pt-1 text-sm text-ink-700 leading-relaxed border-t border-ink-100">
+              <div class="pt-4">{f.a}</div>
+            </div>
+          </details>
+        ))}
+      </div>
+      <div class="text-center mt-10">
+        <a href="/faq/" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:text-brand-600">
+          See all 40 FAQs →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 5. Dark CTA + Quote ============ */}
+  <section class="py-20 lg:py-28 bg-ink-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to start your order?</h2>
+      <p class="text-lg text-ink-300 mb-8 max-w-2xl mx-auto">
+        Send your target market + quantity. Cai personally reviews your inquiry within 24h.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/contact/quote/" class="inline-flex items-center px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
+          Request a Quote
+        </a>
+        <a href="https://wa.me/8613800000000" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
+          💬 WhatsApp Cai
+        </a>
+        <a href="/contact/catalogue/" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
+          📕 Catalogue PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* HowTo Schema (SEO) */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Import Chinese Cars from EV Auto Pro',
+    description: '8-step process to import Chinese new energy vehicles, from inquiry to door-to-port delivery.',
+    totalTime: 'P30D',
+    step: steps.map(s => ({
+      '@type': 'HowToStep',
+      position: s.num,
+      name: s.title,
+      text: s.weDo.join(' '),
+    })),
+  })} />
+</BaseLayout>
