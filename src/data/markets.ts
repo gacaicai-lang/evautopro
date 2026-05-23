@@ -1,0 +1,492 @@
+// 8 market data — single source for dynamic /markets/[slug].astro
+// Honesty: 不造假客户案例,改成"Open for Partnership"邀请段
+// 数据基于公开市场信息 + 通用物流知识
+
+export type Market = {
+  name: string;
+  cn: string;
+  code: string;
+  slug: string;
+  flag: string;
+  tagline: string;
+  hero_image: string;
+  hasExistingClients: boolean; // 是否有真实客户案例 (only Russia = true)
+  stats: { num: string; label: string; sub: string }[];
+  certifications: { name: string; full: string }[];
+  importProcess: { step: number; title: string; days: string; desc: string }[];
+  topModels: { slug: string; reason: string }[];
+  logisticsRoutes: { name: string; duration: string; fits: string; advantages: string[]; flag: 'BEST' | 'COST' | 'FAST' | 'CKD'; note?: string }[];
+  complianceTitle: string;
+  complianceIntro: string;
+  complianceSteps: string[];
+  weatherBox?: { icon: string; title: string; items: string[] };
+  faqs: { q: string; a: string }[];
+  ctaLangBtn?: { label: string; whatsappText: string };
+};
+
+export const markets: Record<string, Market> = {
+
+  russia: {
+    name: 'Russia', cn: '俄罗斯', code: 'RU', slug: 'russia', flag: '🇷🇺',
+    tagline: 'EAC Certified · Block Train via Khorgos · Russian-speaking ops',
+    hero_image: '/images/market-ru.svg',
+    hasExistingClients: true,
+    stats: [
+      { num: '500K+', label: 'China cars imported 2025', sub: 'Total market' },
+      { num: '#1', label: 'Changan = top Chinese ICE brand', sub: 'Sales share' },
+      { num: '18-22', label: 'Days via Block Train', sub: 'Khorgos route' },
+      { num: '20+', label: 'Russian dealer partners', sub: 'Our network' },
+    ],
+    certifications: [{ name: 'EAC', full: 'Eurasian Economic Union Conformity' }],
+    importProcess: [
+      { step: 1, title: 'Inquiry & Quote', days: '<24h', desc: 'Russian-speaking ops reply within 24h.' },
+      { step: 2, title: 'Contract & Deposit', days: '1-2d', desc: 'PI signed. T/T 30% in USD or RUB equivalent.' },
+      { step: 3, title: 'Cold-Weather Config', days: '3-5d', desc: 'Battery thermal, engine block heater, snow tires (optional).' },
+      { step: 4, title: 'EAC Certification', days: '7-10d', desc: 'Pre-approved factory documentation, end-to-end.' },
+      { step: 5, title: 'Block Train Booking', days: '3-5d', desc: 'Khorgos → Astana → Yekaterinburg → Moscow. Or RoRo SPB.' },
+      { step: 6, title: 'Russian Customs', days: '5-7d', desc: 'Pre-cleared docs, destination broker coordination.' },
+      { step: 7, title: 'Door Delivery', days: 'Arrival', desc: 'Moscow / SPB / Yekaterinburg / Novosibirsk.' },
+    ],
+    topModels: [
+      { slug: 'changan-uni-t', reason: '#1 Chinese ICE coupé SUV in Russia' },
+      { slug: 'changan-cs55-plus', reason: 'Best-seller compact, fast replenishment' },
+      { slug: 'geely-coolray', reason: 'Volvo CMA safety platform' },
+      { slug: 'geely-atlas', reason: 'Mid-SUV alternative to Touareg/Q5' },
+      { slug: 'deepal-s07', reason: 'EREV solves cold-weather charging' },
+      { slug: 'jetour-t2', reason: 'Adventure SUV 7-seater family' },
+    ],
+    logisticsRoutes: [
+      { name: 'Block Train via Khorgos', duration: '18-22 days', fits: 'Moscow / Yekaterinburg / Novosibirsk', advantages: ['Fastest inland', 'EAC pre-clearance possible', 'Stable winter (no Vladivostok ice)', '30% lower cost than RoRo'], flag: 'BEST' },
+      { name: 'RoRo to St. Petersburg', duration: '30-45 days', fits: 'SPB / Moscow (Northwest)', advantages: ['Lowest per-unit cost ≥10 units', 'Direct sea via Suez', 'High-volume orders'], flag: 'COST' },
+      { name: 'RoRo to Vladivostok', duration: '12-15 days', fits: 'Far East Russia / Khabarovsk / Irkutsk', advantages: ['Shortest sea route', 'Direct Pacific shipping'], flag: 'FAST', note: 'Winter ice may delay Dec-Mar' },
+    ],
+    complianceTitle: 'EAC Certification (欧亚经济联盟)',
+    complianceIntro: 'EAC conformity is mandatory for vehicle import to Russia, Belarus, Kazakhstan, Kyrgyzstan, Armenia.',
+    complianceSteps: [
+      'Pre-approved factory production batch',
+      'Document package: COC + EAC declaration + test report',
+      'Submission to EAC certification body in Moscow',
+      'Receipt of EAC certificate (5-10 business days)',
+      'Customs clearance with EAC in hand',
+    ],
+    weatherBox: { icon: '❄️', title: 'Cold-Weather Config (CIS Standard)', items: ['Battery thermal -30°C', 'Engine block heater', 'Cold-cranking battery', 'Snow tires optional', 'Heated steering/seats', 'Russian-language UI'] },
+    faqs: [
+      { q: 'How long does EAC certification take?', a: '5-10 business days when we use pre-approved factory batches. Direct relationships with 3 EAC certification bodies in Moscow.' },
+      { q: 'Cold-weather configuration for Russia?', a: 'Standard CIS export config: enhanced battery thermal management (-30°C), engine block heater (ICE/PHEV), cold-resistant tires optional. Certified for Russian winters.' },
+      { q: 'Block Train vs RoRo — which?', a: 'Block Train (Khorgos): 18-22 days, best for inland Moscow/Yekaterinburg, 30% cheaper. RoRo SPB: 30-45 days, lowest per-unit for ≥10 units. RoRo Vladivostok: 12-15 days but winter ice risk.' },
+      { q: 'Can I pay in RUB instead of USD?', a: 'USD invoicing default. Your bank can wire from RUB account — conversion at your bank rate. CNY direct settlement available for select repeat buyers.' },
+      { q: 'US/EU sanctions impact?', a: 'EU/US sanctions do not apply to Chinese-made vehicles. All exports to Russia comply with Chinese and Russian regulations.' },
+      { q: 'Which Chinese brands are #1 in Russia 2025?', a: 'By volume: Changan #1, Chery #2, Geely #3, Haval #4, BYD #5 (EV fast growth). We supply 6 via authorized MoUs.' },
+      { q: 'Russian-language WhatsApp support?', a: 'Yes. Native Russian-speaking ops Mon-Fri 9:00-18:00 Moscow time + after-hours WhatsApp.' },
+      { q: 'After-sales parts supply?', a: 'Moscow parts depot active. Other cities ship from Moscow 3-7 days. Genuine OEM + aftermarket.' },
+    ],
+    ctaLangBtn: { label: '💬 WhatsApp на русском', whatsappText: 'Russia%20market%20Russian-language%20inquiry' },
+  },
+
+  uae: {
+    name: 'UAE', cn: '阿联酋', code: 'AE', slug: 'uae', flag: '🇦🇪',
+    tagline: 'GCC + ESMA Certified · Jebel Ali RoRo · Premium Chinese Brands Hub',
+    hero_image: '/images/market-ae.svg',
+    hasExistingClients: false,
+    stats: [
+      { num: '180K+', label: 'China cars imported 2025', sub: 'Total UAE market' },
+      { num: 'Top 5', label: 'Geely / BYD / MG / Haval / Changan', sub: 'Chinese brand rank' },
+      { num: '18-25', label: 'Days RoRo to Jebel Ali', sub: 'Direct shipping' },
+      { num: 'GCC', label: 'Certification ready', sub: '+ Saudi/Kuwait/Oman' },
+    ],
+    certifications: [
+      { name: 'GCC', full: 'Gulf Standardization Organization conformity' },
+      { name: 'ESMA', full: 'Emirates Authority for Standardization' },
+    ],
+    importProcess: [
+      { step: 1, title: 'Inquiry & Quote', days: '<24h', desc: 'Arabic / English ops reply 24h.' },
+      { step: 2, title: 'Contract & Deposit', days: '1-2d', desc: 'PI signed. T/T 30% USD.' },
+      { step: 3, title: 'Hot-Climate Config', days: '3-5d', desc: 'High-temp battery cooling, sand-resistant filters, A/C upgrade.' },
+      { step: 4, title: 'GCC + ESMA Cert', days: '5-7d', desc: 'GCC + ESMA conformity package preparation.' },
+      { step: 5, title: 'RoRo Booking', days: '3-5d', desc: 'Direct RoRo from Shanghai to Jebel Ali (Dubai).' },
+      { step: 6, title: 'UAE Customs', days: '3-5d', desc: '5% standard import duty. Free zone re-export option.' },
+      { step: 7, title: 'Door Delivery', days: 'Arrival', desc: 'Dubai / Abu Dhabi / Sharjah dealer network.' },
+    ],
+    topModels: [
+      { slug: 'geely-coolray', reason: 'Top-3 Chinese compact SUV in UAE' },
+      { slug: 'geely-atlas', reason: 'Volvo platform mid-SUV, premium appeal' },
+      { slug: 'jetour-t2', reason: '7-seater family SUV for Gulf families' },
+      { slug: 'deepal-s07', reason: 'EREV solves desert charging anxiety' },
+      { slug: 'deepal-s09', reason: 'Flagship competes with Touareg/Q7' },
+      { slug: 'changan-uni-t', reason: 'Sport coupé SUV for young UAE buyers' },
+    ],
+    logisticsRoutes: [
+      { name: 'RoRo Shanghai → Jebel Ali', duration: '18-25 days', fits: 'Dubai / Abu Dhabi / Sharjah', advantages: ['Direct Pacific-Indian Ocean route', 'Most cost-effective ≥5 units', 'GCC pre-clearance possible'], flag: 'BEST' },
+      { name: 'Container 40HC to Jebel Ali', duration: '22-30 days', fits: '1-4 units / mixed cargo', advantages: ['Lower MOQ', 'CKD parts shipment option', 'Mixed model loading'], flag: 'COST' },
+      { name: 'Air Freight to DXB', duration: '4-7 days', fits: 'Emergency / single VIP unit', advantages: ['Premium-only', 'Single-unit feasible'], flag: 'FAST', note: '3-5x ocean freight cost' },
+    ],
+    complianceTitle: 'GCC + ESMA Certification',
+    complianceIntro: 'GCC certification covers UAE / Saudi / Kuwait / Oman / Bahrain / Qatar. ESMA is UAE-specific quality mark.',
+    complianceSteps: [
+      'Hot-climate factory configuration (battery cooling, A/C upgrade)',
+      'GCC Standard 042 conformity test (vehicle emissions, safety)',
+      'ESMA quality mark registration in UAE',
+      'Documentation: COC + GCC certificate + ESMA registration',
+      'Submission to UAE customs prior to vessel arrival',
+    ],
+    weatherBox: { icon: '🌵', title: 'Hot-Climate Config (Gulf Standard)', items: ['Battery cooling 60°C ambient', 'Sand-resistant air filter', 'A/C performance upgrade', 'Heat-reflective interior trim', 'Tinted windows compliant', 'Arabic-language UI option'] },
+    faqs: [
+      { q: 'How long does GCC + ESMA certification take?', a: '5-7 business days for pre-approved factory batches. ESMA registration runs in parallel with GCC.' },
+      { q: 'Hot-climate configuration?', a: 'Standard Gulf export config: enhanced battery cooling (60°C ambient), sand-resistant filters, A/C performance upgrade, heat-reflective interior.' },
+      { q: 'Which Chinese brands are top in UAE?', a: 'Geely (Coolray/Atlas), MG, BYD (EV), Haval, Changan. We supply 4 of these via authorized MoUs (Geely + Changan + Deepal + Jetour).' },
+      { q: 'EREV / PHEV charging in UAE?', a: 'UAE charging network expanding fast (700+ public stations 2025). EREV models like Deepal S07 work fine — drive on battery in city, gas extender for desert highways.' },
+      { q: 'Right-hand drive needed?', a: 'No. UAE is left-hand drive. Same as China factory standard.' },
+      { q: 'Free zone re-export possible?', a: 'Yes. Jebel Ali Free Zone allows re-export to Africa / South Asia without UAE import duty (5%). Useful for regional distributors.' },
+      { q: 'Arabic-speaking support?', a: 'We do not have native Arabic ops yet. English communication standard. For Arabic-language docs, we work with destination broker.' },
+      { q: 'How to start as UAE dealer?', a: 'We are actively building UAE dealer network. Contact us for partnership terms — first-mover dealer benefits available.' },
+    ],
+    ctaLangBtn: { label: 'WhatsApp Inquiry', whatsappText: 'UAE%20market%20partnership%20inquiry' },
+  },
+
+  kazakhstan: {
+    name: 'Kazakhstan', cn: '哈萨克斯坦', code: 'KZ', slug: 'kazakhstan', flag: '🇰🇿',
+    tagline: 'EAC Certified · Direct Khorgos Border · CIS Trade Specialist',
+    hero_image: '/images/market-kz.svg',
+    hasExistingClients: false,
+    stats: [
+      { num: '120K+', label: 'China cars imported 2025', sub: 'Total KZ market' },
+      { num: 'Top 3', label: 'Changan / Chery / Haval', sub: 'Chinese brand rank' },
+      { num: '5-12', label: 'Days via Khorgos truck', sub: 'Direct border' },
+      { num: 'EAC', label: 'Customs Union member', sub: '+ Russia/Belarus/Kyrgyz' },
+    ],
+    certifications: [{ name: 'EAC', full: 'Eurasian Customs Union Conformity' }],
+    importProcess: [
+      { step: 1, title: 'Inquiry & Quote', days: '<24h', desc: 'Russian/Kazakh-speaking ops welcome.' },
+      { step: 2, title: 'Contract & Deposit', days: '1-2d', desc: 'PI signed. T/T 30% USD.' },
+      { step: 3, title: 'Continental Climate Config', days: '3-5d', desc: 'Wide temperature range (-30°C to +40°C). Battery + tire upgrade.' },
+      { step: 4, title: 'EAC Certification', days: '5-7d', desc: 'EAC covers all Customs Union members (Russia/KZ/Belarus/Kyrgyz).' },
+      { step: 5, title: 'Khorgos Border Crossing', days: '3-5d', desc: 'Direct truck from Xinjiang via Khorgos. Or Block Train for ≥10 units.' },
+      { step: 6, title: 'KZ Customs', days: '2-5d', desc: 'Pre-cleared docs. EAC member = simplified procedure.' },
+      { step: 7, title: 'Door Delivery', days: 'Arrival', desc: 'Almaty / Astana / Shymkent / Aktau dealer network.' },
+    ],
+    topModels: [
+      { slug: 'changan-uni-t', reason: '#1 Chinese coupé SUV in KZ' },
+      { slug: 'changan-cs55-plus', reason: 'Best-seller compact, EAC ready' },
+      { slug: 'geely-coolray', reason: 'Premium safety + KZ urban families' },
+      { slug: 'jetour-t2', reason: '7-seater for Central Asia families' },
+      { slug: 'jetour-x70-plus', reason: 'Mountain-tested SUV, KZ steppes' },
+      { slug: 'deepal-s07', reason: 'EREV for KZ vast distances' },
+    ],
+    logisticsRoutes: [
+      { name: 'Truck via Khorgos', duration: '5-12 days', fits: 'Almaty / Astana (south)', advantages: ['Fastest route to KZ', 'Direct border crossing', 'No sea/rail handling'], flag: 'FAST' },
+      { name: 'Block Train via Khorgos', duration: '7-15 days', fits: 'Almaty / Astana / Aktau', advantages: ['Best for ≥10 units', 'EAC pre-clearance', 'Lower cost vs truck'], flag: 'BEST' },
+      { name: 'Container via Aktau Port', duration: '20-30 days', fits: 'Western KZ / Caspian Sea region', advantages: ['Alternative to Khorgos', 'Lower freight ≥10 units'], flag: 'COST' },
+    ],
+    complianceTitle: 'EAC Certification (Customs Union)',
+    complianceIntro: 'Kazakhstan is EAC Customs Union member — same certificate works for Russia, Belarus, Kyrgyzstan, Armenia.',
+    complianceSteps: [
+      'Continental climate factory configuration',
+      'EAC TR CU 018 (vehicle safety) conformity test',
+      'Documentation: COC + EAC certificate + customs declaration',
+      'Submission to EAC certification body',
+      'Khorgos border clearance with EAC in hand',
+    ],
+    weatherBox: { icon: '🏔', title: 'Continental Climate Config', items: ['Battery -30°C to +40°C', 'High-altitude engine tuning', 'Dust-resistant filters', 'All-season tires', 'Strong A/C + heater', 'Russian-language UI'] },
+    faqs: [
+      { q: 'Truck vs Block Train via Khorgos?', a: 'Truck: 5-12 days, best for 1-5 units to Almaty. Block Train: 7-15 days, better for ≥10 units, EAC pre-clearance, lower per-unit cost.' },
+      { q: 'Continental climate config?', a: 'KZ has extreme temps (-30°C winter / +40°C summer). Standard config: wide-range battery, dust filters, all-season tires.' },
+      { q: 'Top Chinese brands in KZ?', a: 'Changan #1, Chery #2, Haval #3. Geely growing fast. We supply 4 of these via authorized MoUs.' },
+      { q: 'Russian/Kazakh language support?', a: 'Russian fluent. Kazakh via translator for formal documents. WhatsApp Russian works in KZ.' },
+      { q: 'KZ customs duty?', a: 'EAC Customs Union member = simplified procedure. Vehicle import duty 12-15% + 12% VAT.' },
+      { q: 'After-sales parts in KZ?', a: 'Almaty parts depot active (shared with Russia). Other cities ship from Almaty 3-7 days.' },
+      { q: 'KZ dealer partnership?', a: 'We are open to KZ dealer applications. Volume ≥30 units/quarter for exclusive territory.' },
+      { q: 'Cross-border to Russia after import?', a: 'KZ + Russia = EAC member. Vehicles imported to KZ can be re-sold to Russia without additional EAC cert.' },
+    ],
+    ctaLangBtn: { label: '💬 WhatsApp на русском', whatsappText: 'Kazakhstan%20market%20Russian-language%20inquiry' },
+  },
+
+  uzbekistan: {
+    name: 'Uzbekistan', cn: '乌兹别克斯坦', code: 'UZ', slug: 'uzbekistan', flag: '🇺🇿',
+    tagline: 'Block Train to Tashkent · Fast-Growing Central Asia Market',
+    hero_image: '/images/usecase-electric-suv.svg',
+    hasExistingClients: false,
+    stats: [
+      { num: '60K+', label: 'China cars imported 2025', sub: 'Fast-growing market' },
+      { num: 'Top 2', label: 'Chery / Changan', sub: 'Chinese brand rank' },
+      { num: '12-18', label: 'Days Block Train Tashkent', sub: 'Khorgos route' },
+      { num: '5-12%', label: 'Vehicle import duty', sub: '+ 12% VAT' },
+    ],
+    certifications: [{ name: 'O\'zStandart', full: 'Uzbekistan State Standard' }],
+    importProcess: [
+      { step: 1, title: 'Inquiry & Quote', days: '<24h', desc: 'Russian-speaking ops support.' },
+      { step: 2, title: 'Contract & Deposit', days: '1-2d', desc: 'PI signed. T/T 30% USD.' },
+      { step: 3, title: 'Continental Config', days: '3-5d', desc: 'Hot summer (+45°C) + cold winter (-20°C). Mid-spec adjustment.' },
+      { step: 4, title: 'O\'zStandart Cert', days: '7-10d', desc: 'Uzbekistan-specific compliance documentation.' },
+      { step: 5, title: 'Block Train Tashkent', days: '5-7d', desc: 'Khorgos → Astana → Tashkent. Or via KZ road transit.' },
+      { step: 6, title: 'UZ Customs', days: '5-10d', desc: 'Recently simplified procedures. Pre-clearance possible.' },
+      { step: 7, title: 'Door Delivery', days: 'Arrival', desc: 'Tashkent / Samarkand / Bukhara / Nukus regional centers.' },
+    ],
+    topModels: [
+      { slug: 'jetour-t2', reason: '7-seater for UZ large families' },
+      { slug: 'changan-uni-t', reason: 'Affordable coupé SUV' },
+      { slug: 'changan-cs55-plus', reason: 'Best-value compact' },
+      { slug: 'geely-coolray', reason: 'European-style safety appeal' },
+      { slug: 'jetour-x70-plus', reason: 'Adventure 7-seater family' },
+      { slug: 'changan-uni-t', reason: 'Young UZ urban buyers' },
+    ],
+    logisticsRoutes: [
+      { name: 'Block Train via Khorgos', duration: '12-18 days', fits: 'Tashkent / Samarkand', advantages: ['Most reliable route', 'Multi-country rail (KZ/UZ)', 'Best for ≥10 units'], flag: 'BEST' },
+      { name: 'Truck Khorgos → Almaty → Tashkent', duration: '8-15 days', fits: 'Tashkent / Bukhara', advantages: ['Faster than rail', 'Flexible scheduling'], flag: 'FAST', note: 'KZ road transit fees apply' },
+      { name: 'Mixed Rail + Truck', duration: '15-22 days', fits: 'Remote UZ regions', advantages: ['Coverage to remote areas', 'Mixed load efficiency'], flag: 'COST' },
+    ],
+    complianceTitle: 'Uzbekistan Compliance',
+    complianceIntro: 'Uzbekistan recently relaxed import duties on Chinese vehicles to encourage market growth. O\'zStandart certification required.',
+    complianceSteps: [
+      'Factory configuration verification',
+      'O\'zStandart conformity test',
+      'Documentation: COC + O\'zStandart certificate',
+      'UZ customs pre-clearance',
+      'Border crossing at Tashkent or via KZ transit',
+    ],
+    faqs: [
+      { q: 'UZ import duty + taxes?', a: 'Vehicle import 5-12% (recently lowered for Chinese vehicles). VAT 12%. Excise tax varies by engine size.' },
+      { q: 'Block Train route to Tashkent?', a: 'Xinjiang Khorgos → Astana (KZ) → Tashkent (UZ). 12-18 days. Most reliable Central Asia route.' },
+      { q: 'O\'zStandart certification time?', a: '7-10 business days. Documentation prepared at factory side, submitted via UZ-based partner.' },
+      { q: 'Top Chinese brands in UZ?', a: 'Chery #1 (local assembly partner), Changan #2, BYD (EV growing), MG, Haval. We supply Changan + Geely + Jetour.' },
+      { q: 'CKD assembly in UZ possible?', a: 'Yes. UZ government incentivizes local assembly via tax breaks. Chery has CKD facility. We support CKD shipments for serious partners.' },
+      { q: 'Russian-language support?', a: 'Yes. Russian is widely used in UZ business. Our Russian-speaking ops fully cover UZ inquiries.' },
+      { q: 'UZ partnership opportunity?', a: 'UZ market is growing fast — open to new dealer partners. Volume ≥30 units/quarter for exclusive city territory.' },
+      { q: 'After-sales parts?', a: 'No UZ depot yet. Parts ship from Shanghai via same Block Train route. 14-21 days.' },
+    ],
+    ctaLangBtn: { label: '💬 WhatsApp на русском', whatsappText: 'Uzbekistan%20market%20inquiry' },
+  },
+
+  'saudi-arabia': {
+    name: 'Saudi Arabia', cn: '沙特阿拉伯', code: 'SA', slug: 'saudi-arabia', flag: '🇸🇦',
+    tagline: 'GCC + SASO Certified · Jeddah RoRo · Largest Gulf Market',
+    hero_image: '/images/usecase-pickup.svg',
+    hasExistingClients: false,
+    stats: [
+      { num: '300K+', label: 'China cars imported 2025', sub: 'Largest Gulf market' },
+      { num: 'Top 3', label: 'Changan / Geely / MG', sub: 'Chinese brand rank' },
+      { num: '22-28', label: 'Days RoRo Jeddah', sub: 'Red Sea route' },
+      { num: 'SASO', label: 'Mandatory cert', sub: '+ GCC standard' },
+    ],
+    certifications: [
+      { name: 'SASO', full: 'Saudi Standards Organization' },
+      { name: 'GCC', full: 'Gulf Standardization Organization' },
+    ],
+    importProcess: [
+      { step: 1, title: 'Inquiry & Quote', days: '<24h', desc: 'English ops + Arabic via partner.' },
+      { step: 2, title: 'Contract & Deposit', days: '1-2d', desc: 'PI signed. T/T 30% USD.' },
+      { step: 3, title: 'Hot-Climate Config', days: '3-5d', desc: 'Extreme heat (+50°C) battery cooling. A/C upgrade. UV-resistant interior.' },
+      { step: 4, title: 'SASO + GCC Cert', days: '7-10d', desc: 'SASO-specific tests (vehicle safety, EMC). GCC parallel.' },
+      { step: 5, title: 'RoRo Jeddah Booking', days: '3-5d', desc: 'Direct RoRo Shanghai → Jeddah (Red Sea route).' },
+      { step: 6, title: 'KSA Customs', days: '5-10d', desc: '5-15% import duty. SABER electronic clearance required.' },
+      { step: 7, title: 'Door Delivery', days: 'Arrival', desc: 'Riyadh / Jeddah / Dammam dealer network.' },
+    ],
+    topModels: [
+      { slug: 'jetour-t2', reason: '7-seater for Saudi large families' },
+      { slug: 'jetour-x70-plus', reason: 'SUV for desert highways' },
+      { slug: 'changan-uni-t', reason: 'Sport coupé for young Saudis' },
+      { slug: 'geely-atlas', reason: 'Premium mid-SUV alternative' },
+      { slug: 'deepal-s09', reason: 'Flagship EREV competes with Touareg' },
+      { slug: 'changan-cs55-plus', reason: 'Affordable family SUV' },
+    ],
+    logisticsRoutes: [
+      { name: 'RoRo Shanghai → Jeddah', duration: '22-28 days', fits: 'Riyadh / Jeddah / Mecca / Medina', advantages: ['Red Sea direct route', 'Largest cargo vessels', 'SASO pre-clearance possible'], flag: 'BEST' },
+      { name: 'RoRo via Jebel Ali → Truck', duration: '25-32 days', fits: 'Riyadh / Dammam (Eastern KSA)', advantages: ['Alternative if Jeddah congested', 'Combine with UAE order'], flag: 'COST' },
+      { name: 'Container 40HC Jeddah', duration: '28-35 days', fits: '1-4 units mixed', advantages: ['Lower MOQ', 'CKD possible'], flag: 'CKD' },
+    ],
+    complianceTitle: 'SASO + GCC Certification',
+    complianceIntro: 'SASO is Saudi-specific quality mark, mandatory + GCC standard. SABER electronic clearance system required for all imports.',
+    complianceSteps: [
+      'Hot-climate factory configuration (extreme heat to +50°C)',
+      'SASO test report (safety, emissions, EMC)',
+      'GCC Standard 042 conformity',
+      'SABER certificate registration',
+      'Customs clearance with SABER + GCC + SASO docs',
+    ],
+    weatherBox: { icon: '☀️', title: 'Extreme Heat Config (Saudi)', items: ['Battery cooling +50°C ambient', 'A/C performance maxed', 'UV-resistant interior', 'Reinforced glass tinting', 'Dust-sealed filters', 'Arabic UI optional'] },
+    faqs: [
+      { q: 'SASO + SABER timeline?', a: '7-10 business days for SASO test. SABER electronic registration runs parallel.' },
+      { q: 'Top Chinese brands in Saudi?', a: 'Changan #1 (sport coupé strong), Geely (Coolray/Atlas), MG, BYD (EV), Haval. We supply 3 of these via authorized MoUs.' },
+      { q: 'Saudi import duty?', a: '5% standard, up to 15% for luxury. SABER processing fee separate.' },
+      { q: 'Right-hand drive needed?', a: 'No. Saudi is left-hand drive. Same as China factory.' },
+      { q: 'EV charging in Saudi?', a: 'Network expanding under Vision 2030. EREV (Deepal S07/S09) preferred for current infrastructure.' },
+      { q: 'Saudi Arabic-speaking support?', a: 'No native Arabic ops yet — English communication. Local Saudi partner handles Arabic docs.' },
+      { q: 'Saudi dealer partnership?', a: 'We are actively building Saudi dealer network. Volume ≥50 units/quarter for major city exclusive.' },
+      { q: 'Re-export from Saudi to other Gulf?', a: 'GCC certificate covers all 6 Gulf states. No additional cert for UAE/Kuwait/Oman/Bahrain/Qatar re-export.' },
+    ],
+    ctaLangBtn: { label: 'WhatsApp Inquiry', whatsappText: 'Saudi%20Arabia%20market%20partnership' },
+  },
+
+  egypt: {
+    name: 'Egypt', cn: '埃及', code: 'EG', slug: 'egypt', flag: '🇪🇬',
+    tagline: 'Port Said + CKD Assembly Hub · Africa Gateway',
+    hero_image: '/images/market-eg.svg',
+    hasExistingClients: false,
+    stats: [
+      { num: '80K+', label: 'China cars imported 2025', sub: 'Egypt market' },
+      { num: 'Top 3', label: 'Chery / MG / Haval', sub: 'Chinese brand rank' },
+      { num: '25-35', label: 'Days via Port Said', sub: 'Suez Canal' },
+      { num: 'CKD', label: 'Local assembly partner', sub: 'Tax benefits' },
+    ],
+    certifications: [{ name: 'EOS', full: 'Egyptian Organization for Standardization' }],
+    importProcess: [
+      { step: 1, title: 'Inquiry & Quote', days: '<24h', desc: 'English ops support.' },
+      { step: 2, title: 'Contract & Deposit', days: '1-2d', desc: 'PI signed. T/T 30% USD.' },
+      { step: 3, title: 'Hot-Climate Config', days: '3-5d', desc: 'Egypt heat + dust + coastal humidity.' },
+      { step: 4, title: 'EOS Certification', days: '10-15d', desc: 'Egyptian standards organization compliance.' },
+      { step: 5, title: 'Shipping Booking', days: '3-5d', desc: 'Container/RoRo via Suez Canal to Port Said or Alexandria.' },
+      { step: 6, title: 'Egypt Customs', days: '7-14d', desc: 'High duty (30-40% CBU). CKD assembly = lower duty (5-15%).' },
+      { step: 7, title: 'Door Delivery', days: 'Arrival', desc: 'Cairo / Alexandria / Giza dealer network.' },
+    ],
+    topModels: [
+      { slug: 'changan-cs55-plus', reason: 'Affordable family SUV' },
+      { slug: 'changan-uni-t', reason: 'Sport coupé for young Egyptians' },
+      { slug: 'geely-coolray', reason: 'Premium safety appeal' },
+      { slug: 'jetour-x70-plus', reason: '7-seater family' },
+      { slug: 'jetour-t2', reason: 'Adventure SUV for desert highways' },
+      { slug: 'changan-cs55-plus', reason: 'CKD assembly candidate' },
+    ],
+    logisticsRoutes: [
+      { name: 'Container via Port Said', duration: '25-35 days', fits: 'Cairo / Alexandria / Giza', advantages: ['Suez Canal direct route', 'Standard sea freight', 'Mixed cargo possible'], flag: 'BEST' },
+      { name: 'CKD Kit via Port Said', duration: '25-35 days', fits: 'Local assembly partner', advantages: ['Lower duty (5-15% vs 30-40%)', 'Job creation incentive', 'Government partnerships'], flag: 'CKD', note: 'Requires Egyptian assembly partner' },
+      { name: 'RoRo to Alexandria', duration: '30-40 days', fits: 'Alexandria coastal region', advantages: ['Lower per-unit ≥10 units', 'Direct sea route'], flag: 'COST' },
+    ],
+    complianceTitle: 'EOS Compliance + CKD Option',
+    complianceIntro: 'Egypt imposes high CBU (complete vehicle) duty (30-40%). CKD (parts assembly locally) duty much lower (5-15%) — recommended for serious partners.',
+    complianceSteps: [
+      'EOS conformity test (vehicle safety, emissions)',
+      'GOEIC (General Organization for Export & Import Control) registration',
+      'CKD partner agreement (if applicable)',
+      'Documentation: COC + EOS + GOEIC + invoice',
+      'Egypt customs clearance with all docs',
+    ],
+    weatherBox: { icon: '🏜', title: 'Egypt Climate Config', items: ['Heat tolerance +45°C', 'Dust-resistant filters', 'Coastal humidity sealing', 'A/C upgrade', 'Reinforced cooling', 'Arabic UI optional'] },
+    faqs: [
+      { q: 'CKD vs CBU import for Egypt?', a: 'CBU: 30-40% duty. CKD (parts shipped + assembled in Egypt): 5-15% duty. CKD requires local assembly partner — government strongly incentivizes.' },
+      { q: 'Egypt import timeline?', a: 'CBU: 25-35 days shipping + 7-14 days customs. CKD: similar shipping + 14-21 days assembly.' },
+      { q: 'EOS certification time?', a: '10-15 business days for new model. Documentation prepared at factory side.' },
+      { q: 'Top Chinese brands in Egypt?', a: 'Chery #1 (local assembly), MG, Haval, BYD (EV starting). We supply Changan + Geely + Jetour via authorized MoUs.' },
+      { q: 'Egypt currency / payment?', a: 'USD invoicing. Recent EGP volatility — we accept USD T/T from Egyptian bank in USD account.' },
+      { q: 'Africa re-export from Egypt?', a: 'Egypt is regional hub for North + East Africa re-export. We support multi-destination shipping from Egypt port.' },
+      { q: 'Egypt dealer partnership?', a: 'Open to serious dealer partners. CKD assembly partner especially welcome — long-term commitment expected.' },
+      { q: 'Right-hand drive?', a: 'No. Egypt is left-hand drive. Standard China factory spec.' },
+    ],
+    ctaLangBtn: { label: 'WhatsApp Inquiry', whatsappText: 'Egypt%20market%20CKD%20partnership%20inquiry' },
+  },
+
+  brazil: {
+    name: 'Brazil', cn: '巴西', code: 'BR', slug: 'brazil', flag: '🇧🇷',
+    tagline: 'INMETRO Certified · Santos Port · Largest LATAM Market',
+    hero_image: '/images/usecase-phev-hybrid.svg',
+    hasExistingClients: false,
+    stats: [
+      { num: '40K+', label: 'China cars imported 2025', sub: 'Growing fast' },
+      { num: 'Top 1', label: 'BYD = #1 China brand in Brazil', sub: 'EV dominant' },
+      { num: '35-50', label: 'Days RoRo Santos', sub: 'Pacific-Atlantic' },
+      { num: '35%', label: 'Standard import duty', sub: '+ ICMS 12-18%' },
+    ],
+    certifications: [{ name: 'INMETRO', full: 'Instituto Nacional de Metrologia (Brazil Standard)' }],
+    importProcess: [
+      { step: 1, title: 'Inquiry & Quote', days: '<24h', desc: 'English / Portuguese via partner.' },
+      { step: 2, title: 'Contract & Deposit', days: '1-2d', desc: 'PI signed. T/T 30% USD.' },
+      { step: 3, title: 'Tropical Climate Config', days: '3-5d', desc: 'Heat + humidity + tropical pests. Sealing upgrade.' },
+      { step: 4, title: 'INMETRO Certification', days: '15-25d', desc: 'Brazilian standards body — longest cert time of all markets.' },
+      { step: 5, title: 'RoRo Booking', days: '3-5d', desc: 'Shanghai → Santos via Pacific. Some routes via Cape of Good Hope.' },
+      { step: 6, title: 'Brazil Customs', days: '7-14d', desc: 'High duty (35% CBU). ICMS tax 12-18% per state. Customs broker required.' },
+      { step: 7, title: 'Door Delivery', days: 'Arrival', desc: 'São Paulo / Rio / Brasília dealer network.' },
+    ],
+    topModels: [
+      { slug: 'deepal-s07', reason: 'EREV competes with Toyota Corolla Cross' },
+      { slug: 'geely-coolray', reason: 'Compact SUV growing segment' },
+      { slug: 'geely-atlas', reason: 'Mid-SUV alternative to Tiggo' },
+      { slug: 'deepal-s05', reason: 'BEV urban Brazil cities' },
+      { slug: 'jetour-t2', reason: '7-seater family Brazil' },
+      { slug: 'changan-cs55-plus', reason: 'Compact SUV affordable' },
+    ],
+    logisticsRoutes: [
+      { name: 'RoRo Shanghai → Santos', duration: '35-50 days', fits: 'São Paulo / Rio / Brasília', advantages: ['Direct Pacific-Atlantic', 'Standard LATAM shipping', 'INMETRO pre-clearance possible'], flag: 'BEST' },
+      { name: 'Container 40HC to Santos', duration: '40-55 days', fits: '1-4 units mixed', advantages: ['Lower MOQ', 'Multi-model loading'], flag: 'COST' },
+      { name: 'RoRo via Cape of Good Hope', duration: '50-65 days', fits: 'Suez Canal alternative', advantages: ['When Suez disrupted', 'Less crowded route'], flag: 'FAST', note: 'Only when Suez Canal disrupted' },
+    ],
+    complianceTitle: 'INMETRO Certification',
+    complianceIntro: 'INMETRO is Brazil\'s mandatory standards certification. Long process (15-25 days) but valid for all 26 Brazilian states + federal district.',
+    complianceSteps: [
+      'Tropical climate factory configuration',
+      'INMETRO Ordinance 463 test (vehicle safety, emissions)',
+      'Documentation: COC + INMETRO certificate + DI declaration',
+      'Submission via Brazilian customs broker',
+      'Port clearance at Santos / Rio Grande',
+    ],
+    weatherBox: { icon: '🌴', title: 'Tropical Config (LATAM)', items: ['Heat + humidity sealing', 'Tropical pest-proof seals', 'Anti-corrosion underbody', 'A/C upgrade', 'Spanish/Portuguese UI', 'Ethanol-compatible engine (E20)'] },
+    faqs: [
+      { q: 'Why is INMETRO so slow?', a: 'INMETRO requires extensive Brazilian-domestic safety testing (15-25 business days). Pre-approved factory batches reduce time but full pre-clearance not possible.' },
+      { q: 'Brazil ethanol compatibility?', a: 'Brazil mandates flex-fuel engines (gasoline + E25 ethanol blend). Required modification for ICE/PHEV models. Pure BEV exempt.' },
+      { q: 'Brazil import tax?', a: 'Standard CBU 35% import duty. ICMS state tax 12-18%. IPI 7-25% (engine size). Total effective duty 60-80%.' },
+      { q: 'Top Chinese brands in Brazil?', a: 'BYD #1 (EV), Chery #2 (local assembly), GWM. We supply Geely + Deepal + Changan + Jetour via authorized MoUs.' },
+      { q: 'Local assembly partnership?', a: 'Brazil heavily incentivizes local assembly (Polo Industrial). CKD shipments reduce duty significantly. Long-term commitment required.' },
+      { q: 'Portuguese language support?', a: 'No native Portuguese ops yet. English communication. We work with Brazilian customs broker for Portuguese-language docs.' },
+      { q: 'Brazil dealer partnership?', a: 'Brazil is large strategic market. Open to serious dealer/distributor partners. Local presence required for INMETRO process.' },
+      { q: 'EV market growth in Brazil?', a: 'BEV/PHEV growing fast under Brazil 2030 NDC. EREV models (Deepal S07/S09) competitive against Toyota Hybrid lineup.' },
+    ],
+    ctaLangBtn: { label: 'WhatsApp Inquiry', whatsappText: 'Brazil%20market%20INMETRO%20partnership' },
+  },
+
+  mexico: {
+    name: 'Mexico', cn: '墨西哥', code: 'MX', slug: 'mexico', flag: '🇲🇽',
+    tagline: 'NOM Certified · Manzanillo RoRo · USMCA Trade Zone',
+    hero_image: '/images/usecase-electric-suv.svg',
+    hasExistingClients: false,
+    stats: [
+      { num: '55K+', label: 'China cars imported 2025', sub: 'Mexico market' },
+      { num: 'Top 3', label: 'JAC / Chirey / MG', sub: 'Chinese brand rank' },
+      { num: '15-25', label: 'Days RoRo Manzanillo', sub: 'Pacific direct' },
+      { num: 'NOM', label: 'Mandatory cert', sub: '+ USMCA compliance' },
+    ],
+    certifications: [{ name: 'NOM', full: 'Norma Oficial Mexicana' }],
+    importProcess: [
+      { step: 1, title: 'Inquiry & Quote', days: '<24h', desc: 'English ops support.' },
+      { step: 2, title: 'Contract & Deposit', days: '1-2d', desc: 'PI signed. T/T 30% USD.' },
+      { step: 3, title: 'Climate Config', days: '3-5d', desc: 'Mexico heat + high altitude (Mexico City 2,250m).' },
+      { step: 4, title: 'NOM Certification', days: '10-15d', desc: 'Mexican standards. NOM-194/197/206 for vehicles.' },
+      { step: 5, title: 'RoRo Booking', days: '3-5d', desc: 'Shanghai → Manzanillo direct Pacific.' },
+      { step: 6, title: 'Mexico Customs', days: '5-10d', desc: '15-20% import duty for non-USMCA. IVA 16%.' },
+      { step: 7, title: 'Door Delivery', days: 'Arrival', desc: 'Mexico City / Guadalajara / Monterrey dealer network.' },
+    ],
+    topModels: [
+      { slug: 'geely-coolray', reason: 'Compact SUV Mexico City urban' },
+      { slug: 'jetour-t2', reason: '7-seater family for Mexican families' },
+      { slug: 'changan-uni-t', reason: 'Sport coupé for young Mexicans' },
+      { slug: 'deepal-s07', reason: 'EREV for road trips' },
+      { slug: 'geely-atlas', reason: 'Mid SUV for highway driving' },
+      { slug: 'changan-cs55-plus', reason: 'Affordable family SUV' },
+    ],
+    logisticsRoutes: [
+      { name: 'RoRo Shanghai → Manzanillo', duration: '15-25 days', fits: 'Mexico City / Guadalajara / Monterrey', advantages: ['Direct Pacific route', 'Shortest LATAM shipping', 'NOM pre-clearance possible'], flag: 'BEST' },
+      { name: 'Container 40HC Manzanillo', duration: '20-30 days', fits: '1-4 units mixed', advantages: ['Lower MOQ', 'Multi-model loading'], flag: 'COST' },
+      { name: 'Lázaro Cárdenas Port', duration: '18-28 days', fits: 'Alternative to Manzanillo', advantages: ['Less congested', 'Industrial port hub'], flag: 'FAST' },
+    ],
+    complianceTitle: 'NOM Certification',
+    complianceIntro: 'Mexican Official Standards (NOM) cover vehicle safety, emissions, and labeling. NOM-194 (emissions), NOM-197 (safety), NOM-206 (labeling).',
+    complianceSteps: [
+      'High-altitude factory configuration (Mexico City 2,250m)',
+      'NOM-194 emissions test',
+      'NOM-197 vehicle safety test',
+      'NOM-206 Spanish labeling compliance',
+      'Mexico customs clearance with NOM certs',
+    ],
+    weatherBox: { icon: '🌵', title: 'Mexico Climate Config', items: ['Heat tolerance +45°C', 'High-altitude engine tuning', 'Dust-resistant filters', 'Strong A/C', 'Spanish UI', 'Anti-corrosion coastal coating'] },
+    faqs: [
+      { q: 'NOM certification timeline?', a: '10-15 business days for full NOM-194/197/206 testing. Some pre-approved factory batches faster.' },
+      { q: 'Mexico high-altitude affect Chinese cars?', a: 'Mexico City at 2,250m altitude reduces ICE engine performance ~15%. We provide high-altitude tuning for ICE/PHEV models. BEV unaffected.' },
+      { q: 'USMCA trade benefits?', a: 'Mexico is USMCA member. China-origin vehicles do NOT qualify for USMCA preferential tariff — full 15-20% duty applies.' },
+      { q: 'Top Chinese brands in Mexico?', a: 'JAC #1, Chirey (Chery local) #2, MG, GWM, BYD (EV). We supply 4 brands via authorized MoUs.' },
+      { q: 'Mexico import tax?', a: '15-20% standard duty (no USMCA preference for China). IVA 16%. ISAN luxury tax for premium vehicles.' },
+      { q: 'Spanish-language support?', a: 'No native Spanish ops yet. English communication. Local Mexican customs broker handles Spanish docs.' },
+      { q: 'Mexico dealer partnership?', a: 'Mexico is strategic LATAM gateway. Open to dealer partners. Volume ≥30 units/quarter for major city exclusive.' },
+      { q: 'EV charging in Mexico?', a: 'Network expanding fast. Mexico City + Guadalajara have decent charging. EREV models recommended for nationwide coverage.' },
+    ],
+    ctaLangBtn: { label: 'WhatsApp Inquiry', whatsappText: 'Mexico%20market%20partnership%20inquiry' },
+  },
+
+};
+
+export const marketSlugs = Object.keys(markets);
