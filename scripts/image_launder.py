@@ -59,12 +59,15 @@ def launder_image(src: Path, dst: Path, seed: str | None = None) -> Path:
     rng = random.Random(seed or f"{src}-{dst}")
     img = Image.open(src).convert("RGB")
 
-    # Pass 1: crop/composition and tone changes.
+    # Pass 1a: aggressive edge crop — guaranteed to nuke top-left logos,
+    # bottom-edge media-watermarks ("懂车帝", "汽车之家", OEM免责条款 etc).
+    # crops 18-24% per side instead of the prior 7-16% which sometimes left
+    # corner watermarks visible (esp. for media-sourced raws).
     w, h = img.size
-    crop_l = rng.randint(int(w * 0.07), int(w * 0.16))
-    crop_r = rng.randint(int(w * 0.06), int(w * 0.15))
-    crop_t = rng.randint(int(h * 0.06), int(h * 0.14))
-    crop_b = rng.randint(int(h * 0.07), int(h * 0.17))
+    crop_l = rng.randint(int(w * 0.18), int(w * 0.24))
+    crop_r = rng.randint(int(w * 0.17), int(w * 0.23))
+    crop_t = rng.randint(int(h * 0.15), int(h * 0.22))
+    crop_b = rng.randint(int(h * 0.15), int(h * 0.22))
     img = img.crop((crop_l, crop_t, w - crop_r, h - crop_b))
     if rng.random() < 0.3:
         img = ImageOps.mirror(img)
