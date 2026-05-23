@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fef3c7"/>
-      <stop offset="100%" stop-color="#fde68a"/>
+      <stop offset="0%" stop-color="#fee2e2"/>
+      <stop offset="100%" stop-color="#fecaca"/>
     </linearGradient>
     <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#e53e2f"/>
@@ -14,10 +14,10 @@
   <text x="736.0" y="460.0" font-family="-apple-system, sans-serif" font-size="225.0" opacity="0.10" text-anchor="end">🚘</text>
   <!-- Main brand circle -->
   <circle cx="224.00000000000003" cy="250.0" r="110.0" fill="url(#brand)"/>
-  <text x="224.00000000000003" y="288.5" font-family="-apple-system, sans-serif" font-size="154.0" fill="white" text-anchor="middle">⚡</text>
+  <text x="224.00000000000003" y="288.5" font-family="-apple-system, sans-serif" font-size="154.0" fill="white" text-anchor="middle">🚗</text>
   <!-- Title -->
-  <text x="440.00000000000006" y="210.0" font-family="-apple-system, sans-serif" font-size="35.0" font-weight="800" fill="#18181b">VW ID.3</text>
-  <text x="440.00000000000006" y="275.0" font-family="-apple-system, sans-serif" font-size="17.5" fill="#71717a">BEV Hatchback · MEB Platform</text>
+  <text x="440.00000000000006" y="210.0" font-family="-apple-system, sans-serif" font-size="35.0" font-weight="800" fill="#18181b">Changan CS35 Plus</text>
+  <text x="440.00000000000006" y="275.0" font-family="-apple-system, sans-serif" font-size="17.5" fill="#71717a">Entry SUV</text>
   <!-- Top-left label -->
   <!-- Brand watermark bottom -->
   <text x="32.0" y="470.0" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="600" fill="#18181b" opacity="0.45">EV AUTO PRO</text>

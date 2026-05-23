@@ -1,9 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-  <rect width="1200" height="800" fill="#f4f4f5"/>
-  <rect x="20" y="20" width="56" height="24" rx="4" fill="#f59e0b"/>
-  <text x="48" y="36" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">P1</text>
-  <text x="600.0" y="380.0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="64" fill="#d4d4d8" text-anchor="middle" dominant-baseline="middle">👥</text>
-  <text x="600.0" y="430.0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#71717a" text-anchor="middle">about-team.jpg</text>
-  <text x="600.0" y="454.0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#a1a1aa" text-anchor="middle">15-year founder + Russian/Arabic/Spanish ops team</text>
-  <text x="1180" y="784" font-family="-apple-system, BlinkMacSystemFont, monospace" font-size="11" fill="#d4d4d8" text-anchor="end">1200×800</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e53e2f"/>
+      <stop offset="100%" stop-color="#b22e21"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <!-- Decorative scene icon (large, faded, right-bottom) -->
+  <text x="1104.0" y="828.0" font-family="-apple-system, sans-serif" font-size="405.0" opacity="0.10" text-anchor="end">🏢</text>
+  <!-- Main brand circle -->
+  <circle cx="336.00000000000006" cy="450.0" r="198.0" fill="url(#brand)"/>
+  <text x="336.00000000000006" y="519.3" font-family="-apple-system, sans-serif" font-size="277.2" fill="white" text-anchor="middle">👥</text>
+  <!-- Title -->
+  <text x="660.0" y="378.0" font-family="-apple-system, sans-serif" font-size="63.00000000000001" font-weight="800" fill="#18181b">Founder-Led Team</text>
+  <text x="660.0" y="495.00000000000006" font-family="-apple-system, sans-serif" font-size="31.500000000000004" fill="#71717a">15+ Years China Export · Guangzhou HQ</text>
+  <!-- Top-left label -->
+  <rect x="48.0" y="54.0" width="156.0" height="63.00000000000001" rx="31.500000000000004" fill="#e53e2f"/>
+  <text x="126.0" y="90.0" font-family="-apple-system, sans-serif" font-size="27.0" font-weight="700" fill="white" text-anchor="middle">TEAM</text>
+  <!-- Brand watermark bottom -->
+  <text x="48.0" y="846.0" font-family="-apple-system, sans-serif" font-size="22.5" font-weight="600" fill="#18181b" opacity="0.45">EV AUTO PRO</text>
 </svg>
