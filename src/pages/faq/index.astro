@@ -141,15 +141,15 @@ const allFaqs = categories.flatMap(c => c.questions);
       </p>
     </div>
 
-    {/* Category quick nav — 3 列 × 2 行 */}
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    {/* Category quick nav — 3 列 × 2 行 with 真实场景图 */}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {categories.map(c => (
-          <a href={`#${c.id}`} class="group flex items-center gap-4 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-6 transition-all">
-            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-brand-50 group-hover:bg-brand-500 flex items-center justify-center transition-colors">
-              <svg class="w-7 h-7 text-brand-500 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={c.icon} />
+          <a href={`#${c.id}`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-2xl overflow-hidden transition-all">
+            <div class="aspect-[16/9] bg-ink-100 overflow-hidden">
+              <img src={`/images/faq-${c.id}.svg`} alt={c.label} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
-            <div class="flex-1 min-w-0">
+            <div class="p-5">
               <div class="text-base font-semibold text-ink-900 group-hover:text-brand-500 leading-tight">{c.label}</div>
               <div class="text-xs text-ink-500 mt-1">{c.questions.length} questions</div>
             </div>
