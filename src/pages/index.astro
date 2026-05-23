@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Section from '../components/ui/Section.astro';
 import CardGrid from '../components/ui/CardGrid.astro';
 import CTAGroup from '../components/ui/CTAGroup.astro';
+import { cars as carsData } from '../data/cars';
 
 // =====================================================================
 // HOME DATA — replicates the chatgpt-generated EV Auto Pro mockup.
@@ -32,15 +33,27 @@ const partnerBrands = [
   { slug: 'leapmotor', name: 'Leapmotor', href: '/brands/leapmotor/' },
 ];
 
-// 6 featured export-ready vehicles with brand-red badges
-const featuredVehicles = [
-  { slug: 'byd-song-plus-dmi',    brand: 'BYD',     name: 'Song Plus DM-i',  body: 'SUV',  fuel: 'PHEV', drive: 'LHD', seats: '5', range: '1.5L Hybrid',     badge: 'Hot Export'    },
-  { slug: 'byd-atto-3',           brand: 'BYD',     name: 'Atto 3',          body: 'SUV',  fuel: 'BEV',  drive: 'LHD', seats: '5', range: '420km (CLTC)',    badge: 'Ready Stock'   },
-  { slug: 'geely-galaxy-e5',      brand: 'Geely',   name: 'Galaxy E5',       body: 'SUV',  fuel: 'BEV',  drive: 'LHD', seats: '5', range: '530km (CLTC)',    badge: 'Hot Export'    },
-  { slug: 'zeekr-x',              brand: 'Zeekr',   name: 'X',               body: 'SUV',  fuel: 'BEV',  drive: 'LHD', seats: '5', range: '512km (CLTC)',    badge: 'New Arrival'   },
-  { slug: 'li-auto-l7',           brand: 'Li Auto', name: 'L7',              body: 'SUV',  fuel: 'EREV', drive: 'LHD', seats: '5', range: 'CLTC 1315km',     badge: 'Dealer Choice' },
-  { slug: 'chery-icar-03',        brand: 'Chery',   name: 'iCar 03',         body: 'SUV',  fuel: 'BEV',  drive: 'LHD', seats: '5', range: '501km (CLTC)',    badge: 'Hot Export'    },
-];
+// 6 featured vehicles — pulled from cars.ts to guarantee detail pages exist
+// (sorted by stock units desc, take top 6)
+const featuredVehicles = Object.values(carsData)
+  .sort((a, b) => b.stock_units - a.stock_units)
+  .slice(0, 6)
+  .map(c => ({
+    slug:  c.slug,
+    brand: c.brand,
+    name:  c.model,
+    body:  c.body_type,
+    fuel:  c.fuel_type,
+    drive: 'LHD / RHD',
+    seats: String(c.seats),
+    range: c.specs.range_cltc ? `${c.specs.range_cltc} km (CLTC)`
+         : c.specs.range_wltp ? `${c.specs.range_wltp} km (WLTP)`
+         : c.specs.transmission ?? `${c.fuel_type}`,
+    badge: c.stock_units >= 40 ? 'Hot Export'
+         : c.stock_units >= 20 ? 'Ready Stock'
+         : 'New Arrival',
+    hero_image: c.hero_image,
+  }));
 
 // Vehicle types for "By Vehicle Type" column
 const vehicleTypes = [
@@ -224,7 +237,7 @@ const ICONS: Record<string, string> = {
         {featuredVehicles.map(v => (
           <a href={`/cars/${v.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 rounded-xl overflow-hidden transition-all hover:shadow-md">
             <div class="relative aspect-[5/4] bg-ink-100 overflow-hidden">
-              <img src={`/images/car-${v.slug}.svg`} alt={`${v.brand} ${v.name}`} class="w-full h-full object-contain p-3" loading="lazy" onerror="this.style.opacity='0.25'"/>
+              <img src={v.hero_image} alt={`${v.brand} ${v.name}`} class="w-full h-full object-cover" loading="lazy" onerror="this.style.opacity='0.25'"/>
               <span class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-brand-500 text-white text-[10px] font-bold rounded uppercase tracking-wide">{v.badge}</span>
             </div>
             <div class="p-3.5">

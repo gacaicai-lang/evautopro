@@ -60,12 +60,42 @@ export type Car = {
   };
 };
 
+type GalleryTab = 'appearance' | 'console' | 'space' | 'other';
+
+const galleryItem = (src: string, alt: string) => ({ src, alt });
+
+const launderedGallery = (
+  slug: string,
+  model: string,
+  counts: Record<GalleryTab, number> = { appearance: 5, console: 3, space: 3, other: 3 },
+) => ({
+  appearance: Array.from({ length: counts.appearance }, (_, i) =>
+    galleryItem(`/images/真图/laundered/evautopro-${slug}-appearance-${String(i + 1).padStart(2, '0')}.webp`, `${model} exterior view ${i + 1}`)),
+  console: Array.from({ length: counts.console }, (_, i) =>
+    galleryItem(`/images/真图/laundered/evautopro-${slug}-console-${String(i + 1).padStart(2, '0')}.webp`, `${model} cockpit detail ${i + 1}`)),
+  space: Array.from({ length: counts.space }, (_, i) =>
+    galleryItem(`/images/真图/laundered/evautopro-${slug}-space-${String(i + 1).padStart(2, '0')}.webp`, `${model} cabin space ${i + 1}`)),
+  other: Array.from({ length: counts.other }, (_, i) =>
+    galleryItem(`/images/真图/laundered/evautopro-${slug}-other-${String(i + 1).padStart(2, '0')}.webp`, `${model} detail shot ${i + 1}`)),
+});
+
+const fallbackGallery = (src: string, model: string) => ({
+  appearance: [
+    galleryItem(src, `${model} exterior profile`),
+    galleryItem(src, `${model} front 45 degree view`),
+    galleryItem(src, `${model} side profile`),
+  ],
+  console: [galleryItem(src, `${model} cockpit reference`)],
+  space: [galleryItem(src, `${model} cabin reference`)],
+  other: [galleryItem(src, `${model} exterior detail reference`)],
+});
+
 export const cars: Record<string, Car> = {
   'changan-uni-t': {
     brand: 'Changan', brand_cn: '长安', brand_slug: 'changan',
     model: 'UNI-T', slug: 'changan-uni-t', year: 2026,
     subtitle: 'Sport Coupé SUV', body_type: 'Coupé SUV', fuel_type: 'ICE', drive: 'FWD', seats: 5,
-    hero_image: '/images/car-hero-changan-uni-t.svg',
+    hero_image: '/images/真图/laundered/evautopro-changan-uni-t-01.webp',
     pricing: { fob_min: 13800, fob_max: 17200, exw_min: 13200, exw_max: 16500,
       cif: [
         { country: 'Russia (St. Petersburg)', min: 16500, max: 20300 },
@@ -88,6 +118,7 @@ export const cars: Record<string, Car> = {
       { q: 'How does UNI-T ship to Kazakhstan?', a: 'Block Train via Khorgos border, delivered to Aktau / Almaty in 18-22 days. Container ratesheet on request.' },
       { q: 'Payment methods accepted?', a: 'T/T 30% deposit + 70% before shipment is standard. L/C at sight from major banks accepted. OA after first order.' },
     ],
+    gallery: launderedGallery('changan-uni-t', 'Changan UNI-T'),
   },
 
   'jetour-t2': {
@@ -118,6 +149,7 @@ export const cars: Record<string, Car> = {
       { q: 'MOQ + lead time?', a: 'MOQ 1 unit container. 15-day lead time from PI signing. 30 units in stock.' },
       { q: 'Does T2 handle extreme cold (Russia winter)?', a: 'Yes. Battery thermal management down to -30°C. Engine block heater available. CIS cold-weather config standard.' },
     ],
+    gallery: launderedGallery('jetour-t2', 'Jetour T2'),
   },
 
   'geely-coolray': {
@@ -148,6 +180,7 @@ export const cars: Record<string, Car> = {
       { q: 'Best market for Coolray?', a: 'UAE (#1 Chinese compact SUV by sales), Russia (top-3), Brazil (INMETRO certified, growing fast).' },
       { q: 'MOQ + stock?', a: 'MOQ 1 unit. 28 units in Shanghai bonded stock. 15-day shipment from PI signing.' },
     ],
+    gallery: launderedGallery('geely-coolray', 'Geely Coolray'),
   },
 
   'deepal-s07': {
@@ -155,7 +188,7 @@ export const cars: Record<string, Car> = {
     model: 'S07', slug: 'deepal-s07', year: 2026,
     subtitle: 'Mid SUV · EREV Premium',
     body_type: 'Mid SUV', fuel_type: 'EREV', drive: 'RWD', seats: 5,
-    hero_image: '/images/car-deepal-s07.svg',
+    hero_image: '/images/真图/laundered/evautopro-deepal-s07-01.webp',
     pricing: { fob_min: 24800, fob_max: 32500,
       cif: [
         { country: 'Russia (St. Petersburg)', min: 28200, max: 36500 },
@@ -178,6 +211,7 @@ export const cars: Record<string, Car> = {
       { q: 'RHD available?', a: 'Not yet. Factory RHD development for 2026 Q4.' },
       { q: 'Warranty?', a: '5-year / 100K km vehicle. 8-year / 160K km battery + drivetrain. CATL battery cell warranty in parallel.' },
     ],
+    gallery: launderedGallery('deepal-s07', 'Deepal S07'),
   },
 
   'deepal-s05': {
@@ -185,7 +219,7 @@ export const cars: Record<string, Car> = {
     model: 'S05', slug: 'deepal-s05', year: 2026,
     subtitle: 'Compact SUV · BEV Urban',
     body_type: 'Compact SUV', fuel_type: 'BEV', drive: 'RWD', seats: 5,
-    hero_image: '/images/car-deepal-s05.svg',
+    hero_image: '/images/真图/laundered/evautopro-deepal-s05-01.webp',
     pricing: { fob_min: 19200, fob_max: 24500,
       cif: [
         { country: 'Russia (St. Petersburg)', min: 22500, max: 28500 },
@@ -207,6 +241,7 @@ export const cars: Record<string, Car> = {
       { q: 'MOQ?', a: '1 unit container. 15 in stock. 18-day shipment.' },
       { q: 'Warranty?', a: '5-year vehicle / 8-year battery (160K km).' },
     ],
+    gallery: launderedGallery('deepal-s05', 'Deepal S05'),
   },
 
   'deepal-s09': {
@@ -214,7 +249,7 @@ export const cars: Record<string, Car> = {
     model: 'S09', slug: 'deepal-s09', year: 2026,
     subtitle: 'Flagship 6-Seater EREV',
     body_type: 'Flagship SUV', fuel_type: 'EREV', drive: '4WD', seats: 6,
-    hero_image: '/images/car-deepal-s09.svg',
+    hero_image: '/images/真图/laundered/evautopro-deepal-s09-01.webp',
     pricing: { fob_min: 36500, fob_max: 45800,
       cif: [
         { country: 'Russia (Premium)', min: 41200, max: 51500 },
@@ -236,6 +271,7 @@ export const cars: Record<string, Car> = {
       { q: 'Air suspension?', a: 'Standard on Premium trim. Auto-leveling for cargo / passenger load.' },
       { q: 'Warranty + service?', a: '5-year vehicle / 8-year battery. Premium service: dedicated account manager + 24/7 hotline.' },
     ],
+    gallery: launderedGallery('deepal-s09', 'Deepal S09'),
   },
 
   'changan-cs55-plus': {
@@ -243,7 +279,7 @@ export const cars: Record<string, Car> = {
     model: 'CS55 Plus', slug: 'changan-cs55-plus', year: 2026,
     subtitle: 'Compact SUV · Best Seller',
     body_type: 'Compact SUV', fuel_type: 'ICE', drive: 'FWD', seats: 5,
-    hero_image: '/images/car-changan-cs55-plus.svg',
+    hero_image: '/images/真图/laundered/evautopro-changan-cs55-plus-01.webp',
     pricing: { fob_min: 14500, fob_max: 17900,
       cif: [
         { country: 'Russia (St. Petersburg)', min: 17200, max: 20800 },
@@ -266,6 +302,7 @@ export const cars: Record<string, Car> = {
       { q: 'MOQ + lead time?', a: 'MOQ 1 unit container. 12-day shipment — fastest of all Changan models due to bonded warehouse stock.' },
       { q: 'Warranty?', a: '5-year / 100K km. Local warranty via Changan authorized partners in 60+ countries.' },
     ],
+    gallery: launderedGallery('changan-cs55-plus', 'Changan CS55 Plus'),
   },
 
   'geely-atlas': {
@@ -295,6 +332,7 @@ export const cars: Record<string, Car> = {
       { q: 'RHD?', a: 'Yes. Factory RHD batch MOQ 20 units, 45-60 day lead time.' },
       { q: 'MOQ?', a: '1 unit. 22 in stock. 15-day shipment.' },
     ],
+    gallery: launderedGallery('geely-atlas', 'Geely Atlas'),
   },
 };
 

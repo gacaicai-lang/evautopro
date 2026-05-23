@@ -22,3 +22,25 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# car raw source images (only commit laundered/ webp output)
+public/images/真图/changan-uni-t/
+public/images/真图/changan-cs55-plus/
+public/images/真图/deepal-s05/
+public/images/真图/deepal-s07/
+public/images/真图/deepal-s09/
+public/images/真图/changan-uni-k/
+public/images/真图/changan-uni-z/
+public/images/真图/changan-cs75-plus/
+public/images/真图/volkswagen-id-3/
+public/images/真图/volkswagen-id-7/
+
+# astro template backups
+src/pages/cars/*.bak-*
+
+# claude code workspace config (local only)
+.claude/
+
+# codex / launch logs
+nohup.out
+*.nohup

@@ -1,0 +1,2158 @@
+[
+  {
+    "slug": "changan-uni-t",
+    "page": "https://www.changan.com.cn/car/UNI-T-2nd/",
+    "urls": [
+      "https://api.map.baidu.com/images/addrPage.png?v=20121107",
+      "https://api.map.baidu.com/images/blank.gif",
+      "https://api.map.baidu.com/images/copyright_logo.png",
+      "https://api.map.baidu.com/images/mapctrls1d3.gif",
+      "https://api.map.baidu.com/images/mapctrls2d0.png",
+      "https://api.map.baidu.com/images/mapctrls2d0_mb.png",
+      "https://api.map.baidu.com/images/marker_red_sprite.png",
+      "https://api.map.baidu.com/images/markers_new_ie6.png",
+      "https://api.map.baidu.com/images/new-direction-icon.png",
+      "https://api.map.baidu.com/images/panorama/close.png",
+      "https://api.map.baidu.com/images/panorama/close_hover.png",
+      "https://api.map.baidu.com/images/panorama/indoor_exit.png",
+      "https://api.map.baidu.com/images/panorama/indoor_exit_hover.png",
+      "https://api.map.baidu.com/images/panorama/youjiantou.png",
+      "https://api.map.baidu.com/images/panorama/youjiantou_hover.png",
+      "https://api.map.baidu.com/images/panorama/zuojiantou.png",
+      "https://api.map.baidu.com/images/panorama/zuojiantou_hover.png",
+      "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=764&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=768&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=772&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=776&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=765&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=769&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=773&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=777&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=762&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=766&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=770&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=774&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=763&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=767&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=771&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=775&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://webmap0.bdimg.com/newmap/static/common/images/pano_whole/guide_icons_4b871b2.png",
+      "https://webmap0.bdimg.com/newmap/static/common/images/pano_whole/pano-icons_223a291.png",
+      "https://webmap0.bdimg.com/wolfman/static/common/images/index_a2f1ac4.png",
+      "https://webmap0.bdimg.com/wolfman/static/common/images/nav-icon_b5c3223.png",
+      "https://webmap0.bdimg.com/wolfman/static/common/images/nav-icon_ie6_134841b.png",
+      "https://webmap0.bdimg.com/wolfman/static/common/images/ui3/mo_banner_e1aa2e6.png",
+      "https://www.changan.com.cn/car/UNI-T-2nd/iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABeUlEQVQ4jZXTSytFURTA8f+9lHRfCjEUZeYDeIaM1N0lQ6GMfAERSaGUlJkUKeILLK+uxxUzn8FAHhNlcicMj9ZtXW2new/2ZHf2WefX2mutE8tms0SsGqAJeI4Kqo54lwDGgWbgBritFBiPACaAeuABGAAG/5OJApNAHXAIvAB65z4gBlz/hiQNSANHwJOdCxAAvQZdVUJSBqQM8IupwLHtPQZdhpESkPSuEF4KnNjebdBFCUkbkDDgtVIBDTi1vcugXNweFDgIARqwCbxbLXzoDLgHOoGMDlutffARAraAaUM0Zhi4C2WWAQqayWcZYNuAFaDDinwO9IeQQvGDIAi+T5xziu4AU8CSiCzbuY5+HmjRmRGRvC/FPaAK2DVgsQToEpE3m9pHbbVzbshHipkYsGejPi8ia+Va45xrtIltA0ZEpNhiLawC+8AYMCsi62Wb+xPSQWs3KKfIArAKzIjIRhTgQQ0e1Ko10fRG/wpYjbTt+lfPAYUvj2JvwjKgTeYAAAAASUVORK5CYII=",
+      "https://www.changan.com.cn/car/UNI-T-2nd/linear-gradient(270deg, rgb(71, 138, 172), rgba(0, 0, 0, 0))",
+      "https://www.changan.com.cn/car/UNI-T-2nd/linear-gradient(90deg, rgb(71, 138, 172), rgba(0, 0, 0, 0))",
+      "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/api.map.baidu.com/images/blank.gif\")",
+      "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/api.map.baidu.com/images/mapctrls1d3.gif\")",
+      "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/api.map.baidu.com/images/panorama/close.png\")",
+      "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/api.map.baidu.com/images/panorama/indoor_exit.png\")",
+      "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/www.changan.com.cn/staticImg/arrow.png\")",
+      "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/www.changan.com.cn/staticImg/car/UNI-T-2nd/color/car_1/1.png\")",
+      "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/www.changan.com.cn/staticImg/yysj_bg.jpg\")",
+      "https://www.changan.com.cn/img/icon.521db927.png",
+      "https://www.changan.com.cn/img/logo.fc392719.png",
+      "https://www.changan.com.cn/staticImg/arrow.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/banner.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/car_config_bg.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/car_drive/car_drive.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/car_drive/car_drive_whell.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/car_1/1.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/car_1/otherColor/color_01.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/car_1/otherColor/color_02.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_01.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_02.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_03.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_04.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_05.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_06.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_07.png",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img1.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img2.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img3.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img4.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img5.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/1.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/2.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/3.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/4.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/5.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/6.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/7.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/8.jpg",
+      "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/9.jpg",
+      "https://www.changan.com.cn/staticImg/carConfig/rotate360.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_01.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_01_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_02.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_02_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_03.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_03_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_05.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_05_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_06.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_06_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_07.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_07_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_08.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_08_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_09.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_09_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_Know_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_Kwai_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_Tiktok_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_bilibili.jpg",
+      "https://www.changan.com.cn/staticImg/footer/footer_kf.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_kf_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_official_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_official_qiyuan_video.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_qiyuan_Applet.jpg",
+      "https://www.changan.com.cn/staticImg/footer/footer_redBook_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_top.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_top_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_uni_Applet.jpg",
+      "https://www.changan.com.cn/staticImg/footer/footer_uni_app.jpg",
+      "https://www.changan.com.cn/staticImg/footer/footer_wb_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/mobilemid.png",
+      "https://www.changan.com.cn/staticImg/footer/mobilemid_is.png",
+      "https://www.changan.com.cn/staticImg/hall_3d_btn.png",
+      "https://www.changan.com.cn/staticImg/yysj_bg.jpg"
+    ],
+    "downloaded": [
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/banner.jpg",
+        "file": "official-053.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/car_config_bg.jpg",
+        "file": "official-054.jpg",
+        "size": "1920x1076"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/car_1/1.png",
+        "file": "official-057.png",
+        "size": "1920x1280"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img1.jpg",
+        "file": "official-067.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img2.jpg",
+        "file": "official-068.jpg",
+        "size": "1920x1079"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img3.jpg",
+        "file": "official-069.jpg",
+        "size": "1920x1079"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img4.jpg",
+        "file": "official-070.jpg",
+        "size": "1920x1078"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/img5.jpg",
+        "file": "official-071.jpg",
+        "size": "1920x1085"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/1.jpg",
+        "file": "official-072.jpg",
+        "size": "1351x700"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/2.jpg",
+        "file": "official-073.jpg",
+        "size": "1351x700"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/3.jpg",
+        "file": "official-074.jpg",
+        "size": "1351x700"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/4.jpg",
+        "file": "official-075.jpg",
+        "size": "1351x700"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/5.jpg",
+        "file": "official-076.jpg",
+        "size": "1351x700"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/6.jpg",
+        "file": "official-077.jpg",
+        "size": "1351x700"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/7.jpg",
+        "file": "official-078.jpg",
+        "size": "1351x700"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/8.jpg",
+        "file": "official-079.jpg",
+        "size": "1351x700"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/meitu/9.jpg",
+        "file": "official-080.jpg",
+        "size": "1351x700"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/yysj_bg.jpg",
+        "file": "official-116.jpg",
+        "size": "1920x1080"
+      }
+    ],
+    "errors": [
+      {
+        "url": "https://api.map.baidu.com/images/addrPage.png?v=20121107",
+        "reason": "too small: 329x134"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/blank.gif",
+        "reason": "too small: 1x1"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/copyright_logo.png",
+        "reason": "too small: 77x32"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/mapctrls1d3.gif",
+        "reason": "too small: 53x74"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/mapctrls2d0.png",
+        "reason": "too small: 44x464"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/mapctrls2d0_mb.png",
+        "reason": "too small: 48x64"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/marker_red_sprite.png",
+        "reason": "too small: 39x25"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/markers_new_ie6.png",
+        "reason": "too small: 236x93"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/new-direction-icon.png",
+        "reason": "too small: 520x546"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/close.png",
+        "reason": "too small: 56x56"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/close_hover.png",
+        "reason": "too small: 56x56"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/indoor_exit.png",
+        "reason": "too small: 19x17"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/indoor_exit_hover.png",
+        "reason": "too small: 19x17"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/youjiantou.png",
+        "reason": "too small: 28x38"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/youjiantou_hover.png",
+        "reason": "too small: 28x38"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/zuojiantou.png",
+        "reason": "too small: 28x38"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/zuojiantou_hover.png",
+        "reason": "too small: 28x38"
+      },
+      {
+        "url": "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=764&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=768&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=772&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=776&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=765&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=769&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=773&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=777&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=762&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=766&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=770&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=774&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=763&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=767&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=771&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=775&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/newmap/static/common/images/pano_whole/guide_icons_4b871b2.png",
+        "reason": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/newmap/static/common/images/pano_whole/pano-icons_223a291.png",
+        "reason": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/wolfman/static/common/images/index_a2f1ac4.png",
+        "reason": "too small: 411x272"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/wolfman/static/common/images/nav-icon_b5c3223.png",
+        "reason": "too small: 108x166"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/wolfman/static/common/images/nav-icon_ie6_134841b.png",
+        "reason": "too small: 108x166"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/wolfman/static/common/images/ui3/mo_banner_e1aa2e6.png",
+        "reason": "too small: 200x380"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABeUlEQVQ4jZXTSytFURTA8f+9lHRfCjEUZeYDeIaM1N0lQ6GMfAERSaGUlJkUKeILLK+uxxUzn8FAHhNlcicMj9ZtXW2new/2ZHf2WefX2mutE8tms0SsGqAJeI4Kqo54lwDGgWbgBritFBiPACaAeuABGAAG/5OJApNAHXAIvAB65z4gBlz/hiQNSANHwJOdCxAAvQZdVUJSBqQM8IupwLHtPQZdhpESkPSuEF4KnNjebdBFCUkbkDDgtVIBDTi1vcugXNweFDgIARqwCbxbLXzoDLgHOoGMDlutffARAraAaUM0Zhi4C2WWAQqayWcZYNuAFaDDinwO9IeQQvGDIAi+T5xziu4AU8CSiCzbuY5+HmjRmRGRvC/FPaAK2DVgsQToEpE3m9pHbbVzbshHipkYsGejPi8ia+Va45xrtIltA0ZEpNhiLawC+8AYMCsi62Wb+xPSQWs3KKfIArAKzIjIRhTgQQ0e1Ko10fRG/wpYjbTt+lfPAYUvj2JvwjKgTeYAAAAASUVORK5CYII=",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/linear-gradient(270deg, rgb(71, 138, 172), rgba(0, 0, 0, 0))",
+        "reason": "URL can't contain control characters. '/car/UNI-T-2nd/linear-gradient(270deg, rgb(71, 138, 172), rgba(0, 0, 0, 0))' (found at least ' ')"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/linear-gradient(90deg, rgb(71, 138, 172), rgba(0, 0, 0, 0))",
+        "reason": "URL can't contain control characters. '/car/UNI-T-2nd/linear-gradient(90deg, rgb(71, 138, 172), rgba(0, 0, 0, 0))' (found at least ' ')"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/api.map.baidu.com/images/blank.gif\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/api.map.baidu.com/images/mapctrls1d3.gif\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/api.map.baidu.com/images/panorama/close.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/api.map.baidu.com/images/panorama/indoor_exit.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/www.changan.com.cn/staticImg/arrow.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/www.changan.com.cn/staticImg/car/UNI-T-2nd/color/car_1/1.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/UNI-T-2nd/url(\"https:/www.changan.com.cn/staticImg/yysj_bg.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/img/icon.521db927.png",
+        "reason": "too small: 267x233"
+      },
+      {
+        "url": "https://www.changan.com.cn/img/logo.fc392719.png",
+        "reason": "too small: 435x91"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/arrow.png",
+        "reason": "too small: 5x9"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/car_drive/car_drive.png",
+        "reason": "too small: 1098x523"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/car_drive/car_drive_whell.png",
+        "reason": "too small: 129x129"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/car_1/otherColor/color_01.png",
+        "reason": "too small: 63x63"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/car_1/otherColor/color_02.png",
+        "reason": "too small: 63x63"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_01.png",
+        "reason": "too small: 63x63"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_02.png",
+        "reason": "too small: 63x63"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_03.png",
+        "reason": "too small: 63x63"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_04.png",
+        "reason": "too small: 63x63"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_05.png",
+        "reason": "too small: 63x63"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_06.png",
+        "reason": "too small: 63x63"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/UNI-T-2nd/color/color_07.png",
+        "reason": "too small: 63x63"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/carConfig/rotate360.png",
+        "reason": "too small: 119x34"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_01.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_01_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_02.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_02_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_03.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_03_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_05.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_05_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_06.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_06_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_07.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_07_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_08.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_08_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_09.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_09_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_Know_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_Kwai_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_Tiktok_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_bilibili.jpg",
+        "reason": "too small: 128x128"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_kf.png",
+        "reason": "too small: 60x60"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_kf_is.png",
+        "reason": "too small: 58x58"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_official_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_official_qiyuan_video.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_qiyuan_Applet.jpg",
+        "reason": "too small: 536x536"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_redBook_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_top.png",
+        "reason": "too small: 60x60"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_top_is.png",
+        "reason": "too small: 58x58"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_uni_Applet.jpg",
+        "reason": "too small: 258x258"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_uni_app.jpg",
+        "reason": "too small: 500x500"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_wb_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/mobilemid.png",
+        "reason": "too small: 51x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/mobilemid_is.png",
+        "reason": "too small: 51x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/hall_3d_btn.png",
+        "reason": "too small: 209x63"
+      }
+    ]
+  },
+  {
+    "slug": "changan-cs55-plus",
+    "page": "https://www.changan.com.cn/car/cs55plus-4nd",
+    "urls": [
+      "https://api.map.baidu.com/images/addrPage.png?v=20121107",
+      "https://api.map.baidu.com/images/blank.gif",
+      "https://api.map.baidu.com/images/copyright_logo.png",
+      "https://api.map.baidu.com/images/mapctrls1d3.gif",
+      "https://api.map.baidu.com/images/mapctrls2d0.png",
+      "https://api.map.baidu.com/images/mapctrls2d0_mb.png",
+      "https://api.map.baidu.com/images/marker_red_sprite.png",
+      "https://api.map.baidu.com/images/markers_new_ie6.png",
+      "https://api.map.baidu.com/images/new-direction-icon.png",
+      "https://api.map.baidu.com/images/panorama/close.png",
+      "https://api.map.baidu.com/images/panorama/close_hover.png",
+      "https://api.map.baidu.com/images/panorama/indoor_exit.png",
+      "https://api.map.baidu.com/images/panorama/indoor_exit_hover.png",
+      "https://api.map.baidu.com/images/panorama/youjiantou.png",
+      "https://api.map.baidu.com/images/panorama/youjiantou_hover.png",
+      "https://api.map.baidu.com/images/panorama/zuojiantou.png",
+      "https://api.map.baidu.com/images/panorama/zuojiantou_hover.png",
+      "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=764&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=768&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=772&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=776&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=765&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=769&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=773&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=777&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=762&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=766&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=770&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=774&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=763&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=767&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=771&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=775&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+      "https://webmap0.bdimg.com/newmap/static/common/images/pano_whole/guide_icons_4b871b2.png",
+      "https://webmap0.bdimg.com/newmap/static/common/images/pano_whole/pano-icons_223a291.png",
+      "https://webmap0.bdimg.com/wolfman/static/common/images/index_a2f1ac4.png",
+      "https://webmap0.bdimg.com/wolfman/static/common/images/nav-icon_b5c3223.png",
+      "https://webmap0.bdimg.com/wolfman/static/common/images/nav-icon_ie6_134841b.png",
+      "https://webmap0.bdimg.com/wolfman/static/common/images/ui3/mo_banner_e1aa2e6.png",
+      "https://www.changan.com.cn/car/iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABeUlEQVQ4jZXTSytFURTA8f+9lHRfCjEUZeYDeIaM1N0lQ6GMfAERSaGUlJkUKeILLK+uxxUzn8FAHhNlcicMj9ZtXW2new/2ZHf2WefX2mutE8tms0SsGqAJeI4Kqo54lwDGgWbgBritFBiPACaAeuABGAAG/5OJApNAHXAIvAB65z4gBlz/hiQNSANHwJOdCxAAvQZdVUJSBqQM8IupwLHtPQZdhpESkPSuEF4KnNjebdBFCUkbkDDgtVIBDTi1vcugXNweFDgIARqwCbxbLXzoDLgHOoGMDlutffARAraAaUM0Zhi4C2WWAQqayWcZYNuAFaDDinwO9IeQQvGDIAi+T5xziu4AU8CSiCzbuY5+HmjRmRGRvC/FPaAK2DVgsQToEpE3m9pHbbVzbshHipkYsGejPi8ia+Va45xrtIltA0ZEpNhiLawC+8AYMCsi62Wb+xPSQWs3KKfIArAKzIjIRhTgQQ0e1Ko10fRG/wpYjbTt+lfPAYUvj2JvwjKgTeYAAAAASUVORK5CYII=",
+      "https://www.changan.com.cn/car/linear-gradient(-180deg, rgb(255, 255, 255) 88%, rgb(115, 133, 159))",
+      "https://www.changan.com.cn/car/linear-gradient(270deg, rgb(100, 198, 255), rgba(0, 0, 0, 0))",
+      "https://www.changan.com.cn/car/linear-gradient(270deg, rgb(62, 117, 154), rgb(62, 117, 154), rgba(0, 0, 0, 0))",
+      "https://www.changan.com.cn/car/linear-gradient(90deg, rgb(100, 198, 255), rgba(0, 0, 0, 0))",
+      "https://www.changan.com.cn/car/linear-gradient(90deg, rgb(62, 117, 154), rgb(62, 117, 154), rgba(0, 0, 0, 0))",
+      "https://www.changan.com.cn/car/linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0))",
+      "https://www.changan.com.cn/car/url(\"https:/api.map.baidu.com/images/blank.gif\")",
+      "https://www.changan.com.cn/car/url(\"https:/api.map.baidu.com/images/mapctrls1d3.gif\")",
+      "https://www.changan.com.cn/car/url(\"https:/api.map.baidu.com/images/panorama/close.png\")",
+      "https://www.changan.com.cn/car/url(\"https:/api.map.baidu.com/images/panorama/indoor_exit.png\")",
+      "https://www.changan.com.cn/car/url(\"https:/www.changan.com.cn/staticImg/arrow.png\")",
+      "https://www.changan.com.cn/car/url(\"https:/www.changan.com.cn/staticImg/car/cs55plus-4nd/video/cover.jpg\")",
+      "https://www.changan.com.cn/car/url(\"https:/www.changan.com.cn/staticImg/yysj_bg.jpg\")",
+      "https://www.changan.com.cn/img/icon.521db927.png",
+      "https://www.changan.com.cn/img/logo.fc392719.png",
+      "https://www.changan.com.cn/staticImg/arrow.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/banner.jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/car_drive/car_drive.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/car_drive/car_drive_whell.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/car_1/1.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_01.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_02.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_03.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_04.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_05.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img1.jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img2.jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img3.jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img4.jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img5.jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit1.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit2.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit3.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit4.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit5.png",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(1).jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(2).jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(3).jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(4).jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(5).jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(6).jpg",
+      "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/video/cover.jpg",
+      "https://www.changan.com.cn/staticImg/carConfig/bg.jpg",
+      "https://www.changan.com.cn/staticImg/footer/footer_01.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_01_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_02.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_02_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_03.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_03_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_05.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_05_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_06.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_06_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_07.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_07_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_08.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_08_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_09.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_09_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_Know_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_Kwai_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_Tiktok_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_bilibili.jpg",
+      "https://www.changan.com.cn/staticImg/footer/footer_kf.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_kf_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_official_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_official_qiyuan_video.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_qiyuan_Applet.jpg",
+      "https://www.changan.com.cn/staticImg/footer/footer_redBook_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_top.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_top_is.png",
+      "https://www.changan.com.cn/staticImg/footer/footer_uni_Applet.jpg",
+      "https://www.changan.com.cn/staticImg/footer/footer_uni_app.jpg",
+      "https://www.changan.com.cn/staticImg/footer/footer_wb_qiyuan.png",
+      "https://www.changan.com.cn/staticImg/footer/mobilemid.png",
+      "https://www.changan.com.cn/staticImg/footer/mobilemid_is.png",
+      "https://www.changan.com.cn/staticImg/yysj_bg.jpg"
+    ],
+    "downloaded": [
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/banner.jpg",
+        "file": "official-057.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img1.jpg",
+        "file": "official-066.jpg",
+        "size": "1920x1079"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img2.jpg",
+        "file": "official-067.jpg",
+        "size": "1920x1081"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img3.jpg",
+        "file": "official-068.jpg",
+        "size": "1920x1078"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img4.jpg",
+        "file": "official-069.jpg",
+        "size": "1920x1075"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img5.jpg",
+        "file": "official-070.jpg",
+        "size": "1920x1077"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(1).jpg",
+        "file": "official-077.jpg",
+        "size": "2000x1334"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(2).jpg",
+        "file": "official-078.jpg",
+        "size": "2000x1125"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(3).jpg",
+        "file": "official-079.jpg",
+        "size": "2000x1125"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(4).jpg",
+        "file": "official-080.jpg",
+        "size": "2000x1125"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(5).jpg",
+        "file": "official-081.jpg",
+        "size": "2000x1125"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu%20(6).jpg",
+        "file": "official-082.jpg",
+        "size": "2000x1125"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/video/cover.jpg",
+        "file": "official-083.jpg",
+        "size": "1500x949"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/carConfig/bg.jpg",
+        "file": "official-084.jpg",
+        "size": "1920x936"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/yysj_bg.jpg",
+        "file": "official-118.jpg",
+        "size": "1920x1080"
+      }
+    ],
+    "errors": [
+      {
+        "url": "https://api.map.baidu.com/images/addrPage.png?v=20121107",
+        "reason": "too small: 329x134"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/blank.gif",
+        "reason": "too small: 1x1"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/copyright_logo.png",
+        "reason": "too small: 77x32"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/mapctrls1d3.gif",
+        "reason": "too small: 53x74"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/mapctrls2d0.png",
+        "reason": "too small: 44x464"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/mapctrls2d0_mb.png",
+        "reason": "too small: 48x64"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/marker_red_sprite.png",
+        "reason": "too small: 39x25"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/markers_new_ie6.png",
+        "reason": "too small: 236x93"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/new-direction-icon.png",
+        "reason": "too small: 520x546"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/close.png",
+        "reason": "too small: 56x56"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/close_hover.png",
+        "reason": "too small: 56x56"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/indoor_exit.png",
+        "reason": "too small: 19x17"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/indoor_exit_hover.png",
+        "reason": "too small: 19x17"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/youjiantou.png",
+        "reason": "too small: 28x38"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/youjiantou_hover.png",
+        "reason": "too small: 28x38"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/zuojiantou.png",
+        "reason": "too small: 28x38"
+      },
+      {
+        "url": "https://api.map.baidu.com/images/panorama/zuojiantou_hover.png",
+        "reason": "too small: 28x38"
+      },
+      {
+        "url": "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=764&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=768&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=772&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline0.bdimg.com/tile/?qt=vtile&x=776&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=765&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=769&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=773&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline1.bdimg.com/tile/?qt=vtile&x=777&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=762&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=766&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=770&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline2.bdimg.com/tile/?qt=vtile&x=774&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=763&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=767&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=771&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://apimaponline3.bdimg.com/tile/?qt=vtile&x=775&y=160&z=12&styles=pl&scaler=1&udt=20260521&v=2.1&ak=WE2zGN8qgGYQOX1fnppXR9tnBpChFKSK&is_has_bmap_proxy=false&from=jsapi2_0",
+        "reason": "too small: 256x256"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/newmap/static/common/images/pano_whole/guide_icons_4b871b2.png",
+        "reason": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/newmap/static/common/images/pano_whole/pano-icons_223a291.png",
+        "reason": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/wolfman/static/common/images/index_a2f1ac4.png",
+        "reason": "too small: 411x272"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/wolfman/static/common/images/nav-icon_b5c3223.png",
+        "reason": "too small: 108x166"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/wolfman/static/common/images/nav-icon_ie6_134841b.png",
+        "reason": "too small: 108x166"
+      },
+      {
+        "url": "https://webmap0.bdimg.com/wolfman/static/common/images/ui3/mo_banner_e1aa2e6.png",
+        "reason": "too small: 200x380"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABeUlEQVQ4jZXTSytFURTA8f+9lHRfCjEUZeYDeIaM1N0lQ6GMfAERSaGUlJkUKeILLK+uxxUzn8FAHhNlcicMj9ZtXW2new/2ZHf2WefX2mutE8tms0SsGqAJeI4Kqo54lwDGgWbgBritFBiPACaAeuABGAAG/5OJApNAHXAIvAB65z4gBlz/hiQNSANHwJOdCxAAvQZdVUJSBqQM8IupwLHtPQZdhpESkPSuEF4KnNjebdBFCUkbkDDgtVIBDTi1vcugXNweFDgIARqwCbxbLXzoDLgHOoGMDlutffARAraAaUM0Zhi4C2WWAQqayWcZYNuAFaDDinwO9IeQQvGDIAi+T5xziu4AU8CSiCzbuY5+HmjRmRGRvC/FPaAK2DVgsQToEpE3m9pHbbVzbshHipkYsGejPi8ia+Va45xrtIltA0ZEpNhiLawC+8AYMCsi62Wb+xPSQWs3KKfIArAKzIjIRhTgQQ0e1Ko10fRG/wpYjbTt+lfPAYUvj2JvwjKgTeYAAAAASUVORK5CYII=",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/linear-gradient(-180deg, rgb(255, 255, 255) 88%, rgb(115, 133, 159))",
+        "reason": "URL can't contain control characters. '/car/linear-gradient(-180deg, rgb(255, 255, 255) 88%, rgb(115, 133, 159))' (found at least ' ')"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/linear-gradient(270deg, rgb(100, 198, 255), rgba(0, 0, 0, 0))",
+        "reason": "URL can't contain control characters. '/car/linear-gradient(270deg, rgb(100, 198, 255), rgba(0, 0, 0, 0))' (found at least ' ')"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/linear-gradient(270deg, rgb(62, 117, 154), rgb(62, 117, 154), rgba(0, 0, 0, 0))",
+        "reason": "URL can't contain control characters. '/car/linear-gradient(270deg, rgb(62, 117, 154), rgb(62, 117, 154), rgba(0, 0, 0, 0))' (found at least ' ')"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/linear-gradient(90deg, rgb(100, 198, 255), rgba(0, 0, 0, 0))",
+        "reason": "URL can't contain control characters. '/car/linear-gradient(90deg, rgb(100, 198, 255), rgba(0, 0, 0, 0))' (found at least ' ')"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/linear-gradient(90deg, rgb(62, 117, 154), rgb(62, 117, 154), rgba(0, 0, 0, 0))",
+        "reason": "URL can't contain control characters. '/car/linear-gradient(90deg, rgb(62, 117, 154), rgb(62, 117, 154), rgba(0, 0, 0, 0))' (found at least ' ')"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0))",
+        "reason": "URL can't contain control characters. '/car/linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0))' (found at least ' ')"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/url(\"https:/api.map.baidu.com/images/blank.gif\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/url(\"https:/api.map.baidu.com/images/mapctrls1d3.gif\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/url(\"https:/api.map.baidu.com/images/panorama/close.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/url(\"https:/api.map.baidu.com/images/panorama/indoor_exit.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/url(\"https:/www.changan.com.cn/staticImg/arrow.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/url(\"https:/www.changan.com.cn/staticImg/car/cs55plus-4nd/video/cover.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/car/url(\"https:/www.changan.com.cn/staticImg/yysj_bg.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/img/icon.521db927.png",
+        "reason": "too small: 267x233"
+      },
+      {
+        "url": "https://www.changan.com.cn/img/logo.fc392719.png",
+        "reason": "too small: 435x91"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/arrow.png",
+        "reason": "too small: 5x9"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/car_drive/car_drive.png",
+        "reason": "too small: 1062x441"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/car_drive/car_drive_whell.png",
+        "reason": "too small: 240x240"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/car_1/1.png",
+        "reason": "too small: 1080x483"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_01.png",
+        "reason": "too small: 63x64"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_02.png",
+        "reason": "too small: 63x64"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_03.png",
+        "reason": "too small: 63x64"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_04.png",
+        "reason": "too small: 63x64"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/color/color_05.png",
+        "reason": "too small: 63x64"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit1.png",
+        "reason": "too small: 427x116"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit2.png",
+        "reason": "too small: 397x134"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit3.png",
+        "reason": "too small: 581x141"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit4.png",
+        "reason": "too small: 401x140"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/img_tit5.png",
+        "reason": "too small: 482x184"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/car/cs55plus-4nd/meitu/meitu",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_01.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_01_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_02.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_02_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_03.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_03_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_05.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_05_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_06.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_06_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_07.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_07_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_08.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_08_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_09.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_09_is.png",
+        "reason": "too small: 50x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_Know_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_Kwai_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_Tiktok_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_bilibili.jpg",
+        "reason": "too small: 128x128"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_kf.png",
+        "reason": "too small: 60x60"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_kf_is.png",
+        "reason": "too small: 58x58"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_official_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_official_qiyuan_video.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_qiyuan_Applet.jpg",
+        "reason": "too small: 536x536"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_redBook_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_top.png",
+        "reason": "too small: 60x60"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_top_is.png",
+        "reason": "too small: 58x58"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_uni_Applet.jpg",
+        "reason": "too small: 258x258"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_uni_app.jpg",
+        "reason": "too small: 500x500"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/footer_wb_qiyuan.png",
+        "reason": "too small: 200x200"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/mobilemid.png",
+        "reason": "too small: 51x50"
+      },
+      {
+        "url": "https://www.changan.com.cn/staticImg/footer/mobilemid_is.png",
+        "reason": "too small: 51x50"
+      }
+    ]
+  },
+  {
+    "slug": "deepal-s05",
+    "page": "https://www.deepal.com.cn/S05",
+    "urls": [
+      "https://files.deepal.com.cn/operate/materialImgs/1899792484331270146/202605/8198223CBD5254D2E389F657F7FAC986.png",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202511/9A394EE0FEDFFE44936E5F8767CD631D.jpg",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202601/C83B24A130A6508FE5B8FE4CB813ECBC.jpg",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202602/D84D20ECB412F452CE2E0589DB3342F1.jpg",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202603/778C73B34B7D6ED2E4888AC26B576E87.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/21DF7E8FF3D0D905D7E8355F1312A120.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/358B93FA275E26E9D3684111C652EE6C.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/3593E118CC6347B7E58870FFC8210745.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/587C062475860F1C613C83C46B8E5118.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/6856AA0582B4258B9B9C37A7D823029E.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/789CFFD54A2DB1060B60F96007B31993.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/8C4672E5C8B8D838E55329F152A4A6C2.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9466102525ED70EA7EF21CBAB75EB8A8.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B4B607E351E4E5A01005F30F0543BD9A.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B67E1A5299A3DDB190714A23428549AF.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/C004239B7DFC5B8232E78B824FD80721.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/CF1FE7CA47FB76A9868D1606F78B3AD4.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/E6CB8CA5360F341172118680B609153E.png",
+      "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg",
+      "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg",
+      "https://files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg",
+      "https://files.deepal.com.cn/operate/official/1899792484331270146/202604/BAC08E53B99A891315BC6B985FEA73F9.png",
+      "https://files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png",
+      "https://files.deepal.com.cn/operate/official/1944952007325425666/202602/5E3A19768CE1759F17E2869B3DDA6290.png",
+      "https://files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg",
+      "https://staticre.deepal.com.cn/20231107-office/office/public/share_logo.png",
+      "https://www.deepal.com.cn/iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKZSURBVHgB7do9jxJBHIDxAUIt0rEU8BH2AgXlXqfdXaedpZ3nR7hPoHbanZ2d11mKlRhewn2DLchCiaEgFAT/ayjUwM5CvJsXnl9C2MBwBzfMs5MDpQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHIrqRMRRVGlWq0+q9frlSRJYnUiCuoEtFqtV3L19o+bbsrl8nWv14uV57ye4HTVLhaLz+nhjrvjYrF42e/3x8pj3ia63W5Hq9XqixyGe4ZUNpvNy1qtpqbT6TflKS9X8I4k69xKsl/7mGyvJliTZB0vk+1NonMkWcfLZHsxwdskf5JLRTP0Zjtm77hCoRAFQRA2Go0fk8lkrhzndKIPSPJcJu5yMBh0wzBslkql9DG6le5Fsp1dwXmTLBPbXa/XT0ej0e+Jms1mc0nwB/mHR/rmjjIe6kWynVzBB+yS3w2Hw6uMn3MhV2/k0lTZnN1lOzXBxyRZM075nmxnEn1sknV8T7YTK/h/JTnH7/Eu2VZP8H0kWce3ZFub6PtKso5vybZyBT9UknM8D+eTbdUEm0iyjuvJtibRppKs43qyrVjBtiRZx8VkG51gG5Os41qyjSW60+k0l8vld2VZknWOSPZPGd9ThhhbwZK7r0q/co0mWSdvsuUN+ng8Hhv56LGozIky7kuTfG7z5Kbk+d3K5J3LYWZd5Hx8oQwxOcHxrhu3ST6z4Xybh6zMWCb6TJ739b4xkupYGWLsHCznJvmbFJ78c3Oa5OfpeU45JkmSbhAEd3LYUX9/YyR9Te+VIUZ30bIjDWVH+kJ2m4/kXf7RlVWbZbvLvkpfk5ToTjaHh3y7EwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgjV8b1IuSIoqcAwAAAABJRU5ErkJggg==",
+      "https://www.deepal.com.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",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg\")"
+    ],
+    "downloaded": [
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1899792484331270146/202605/8198223CBD5254D2E389F657F7FAC986.png",
+        "file": "official-001.png",
+        "size": "1456x800"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202511/9A394EE0FEDFFE44936E5F8767CD631D.jpg",
+        "file": "official-002.jpg",
+        "size": "1364x768"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202601/C83B24A130A6508FE5B8FE4CB813ECBC.jpg",
+        "file": "official-003.jpg",
+        "size": "2160x1215"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202602/D84D20ECB412F452CE2E0589DB3342F1.jpg",
+        "file": "official-004.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202603/778C73B34B7D6ED2E4888AC26B576E87.jpg",
+        "file": "official-005.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg",
+        "file": "official-006.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg",
+        "file": "official-007.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg",
+        "file": "official-008.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg",
+        "file": "official-009.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg",
+        "file": "official-010.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg",
+        "file": "official-011.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg",
+        "file": "official-031.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg",
+        "file": "official-032.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg",
+        "file": "official-033.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1944952007325425666/202602/5E3A19768CE1759F17E2869B3DDA6290.png",
+        "file": "official-036.png",
+        "size": "1200x1200"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg",
+        "file": "official-037.jpg",
+        "size": "1920x1080"
+      }
+    ],
+    "errors": [
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/21DF7E8FF3D0D905D7E8355F1312A120.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png",
+        "reason": "too small: 1125x601"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/358B93FA275E26E9D3684111C652EE6C.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/3593E118CC6347B7E58870FFC8210745.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/587C062475860F1C613C83C46B8E5118.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/6856AA0582B4258B9B9C37A7D823029E.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png",
+        "reason": "too small: 1125x601"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/789CFFD54A2DB1060B60F96007B31993.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/8C4672E5C8B8D838E55329F152A4A6C2.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9466102525ED70EA7EF21CBAB75EB8A8.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png",
+        "reason": "too small: 1125x604"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B4B607E351E4E5A01005F30F0543BD9A.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B67E1A5299A3DDB190714A23428549AF.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/C004239B7DFC5B8232E78B824FD80721.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/CF1FE7CA47FB76A9868D1606F78B3AD4.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/E6CB8CA5360F341172118680B609153E.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1899792484331270146/202604/BAC08E53B99A891315BC6B985FEA73F9.png",
+        "reason": "too small: 264x78"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://staticre.deepal.com.cn/20231107-office/office/public/share_logo.png",
+        "reason": "too small: 300x300"
+      },
+      {
+        "url": "https://www.deepal.com.cn/iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKZSURBVHgB7do9jxJBHIDxAUIt0rEU8BH2AgXlXqfdXaedpZ3nR7hPoHbanZ2d11mKlRhewn2DLchCiaEgFAT/ayjUwM5CvJsXnl9C2MBwBzfMs5MDpQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHIrqRMRRVGlWq0+q9frlSRJYnUiCuoEtFqtV3L19o+bbsrl8nWv14uV57ye4HTVLhaLz+nhjrvjYrF42e/3x8pj3ia63W5Hq9XqixyGe4ZUNpvNy1qtpqbT6TflKS9X8I4k69xKsl/7mGyvJliTZB0vk+1NonMkWcfLZHsxwdskf5JLRTP0Zjtm77hCoRAFQRA2Go0fk8lkrhzndKIPSPJcJu5yMBh0wzBslkql9DG6le5Fsp1dwXmTLBPbXa/XT0ej0e+Jms1mc0nwB/mHR/rmjjIe6kWynVzBB+yS3w2Hw6uMn3MhV2/k0lTZnN1lOzXBxyRZM075nmxnEn1sknV8T7YTK/h/JTnH7/Eu2VZP8H0kWce3ZFub6PtKso5vybZyBT9UknM8D+eTbdUEm0iyjuvJtibRppKs43qyrVjBtiRZx8VkG51gG5Os41qyjSW60+k0l8vld2VZknWOSPZPGd9ThhhbwZK7r0q/co0mWSdvsuUN+ng8Hhv56LGozIky7kuTfG7z5Kbk+d3K5J3LYWZd5Hx8oQwxOcHxrhu3ST6z4Xybh6zMWCb6TJ739b4xkupYGWLsHCznJvmbFJ78c3Oa5OfpeU45JkmSbhAEd3LYUX9/YyR9Te+VIUZ30bIjDWVH+kJ2m4/kXf7RlVWbZbvLvkpfk5ToTjaHh3y7EwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgjV8b1IuSIoqcAwAAAABJRU5ErkJggg==",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.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",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg\")",
+        "reason": "non-image content-type: text/html"
+      }
+    ]
+  },
+  {
+    "slug": "deepal-s07",
+    "page": "https://www.deepal.com.cn/S07",
+    "urls": [
+      "https://files.deepal.com.cn/operate/materialImgs/1899792484331270146/202605/8198223CBD5254D2E389F657F7FAC986.png",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202511/9A394EE0FEDFFE44936E5F8767CD631D.jpg",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202601/C83B24A130A6508FE5B8FE4CB813ECBC.jpg",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202602/D84D20ECB412F452CE2E0589DB3342F1.jpg",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202603/778C73B34B7D6ED2E4888AC26B576E87.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/21DF7E8FF3D0D905D7E8355F1312A120.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/358B93FA275E26E9D3684111C652EE6C.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/3593E118CC6347B7E58870FFC8210745.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/587C062475860F1C613C83C46B8E5118.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/6856AA0582B4258B9B9C37A7D823029E.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/789CFFD54A2DB1060B60F96007B31993.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/8C4672E5C8B8D838E55329F152A4A6C2.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9466102525ED70EA7EF21CBAB75EB8A8.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B4B607E351E4E5A01005F30F0543BD9A.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B67E1A5299A3DDB190714A23428549AF.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/C004239B7DFC5B8232E78B824FD80721.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/CF1FE7CA47FB76A9868D1606F78B3AD4.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/E6CB8CA5360F341172118680B609153E.png",
+      "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg",
+      "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg",
+      "https://files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg",
+      "https://files.deepal.com.cn/operate/official/1899792484331270146/202604/BAC08E53B99A891315BC6B985FEA73F9.png",
+      "https://files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png",
+      "https://files.deepal.com.cn/operate/official/1944952007325425666/202602/5E3A19768CE1759F17E2869B3DDA6290.png",
+      "https://files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg",
+      "https://staticre.deepal.com.cn/20231107-office/office/public/share_logo.png",
+      "https://www.deepal.com.cn/iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKZSURBVHgB7do9jxJBHIDxAUIt0rEU8BH2AgXlXqfdXaedpZ3nR7hPoHbanZ2d11mKlRhewn2DLchCiaEgFAT/ayjUwM5CvJsXnl9C2MBwBzfMs5MDpQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHIrqRMRRVGlWq0+q9frlSRJYnUiCuoEtFqtV3L19o+bbsrl8nWv14uV57ye4HTVLhaLz+nhjrvjYrF42e/3x8pj3ia63W5Hq9XqixyGe4ZUNpvNy1qtpqbT6TflKS9X8I4k69xKsl/7mGyvJliTZB0vk+1NonMkWcfLZHsxwdskf5JLRTP0Zjtm77hCoRAFQRA2Go0fk8lkrhzndKIPSPJcJu5yMBh0wzBslkql9DG6le5Fsp1dwXmTLBPbXa/XT0ej0e+Jms1mc0nwB/mHR/rmjjIe6kWynVzBB+yS3w2Hw6uMn3MhV2/k0lTZnN1lOzXBxyRZM075nmxnEn1sknV8T7YTK/h/JTnH7/Eu2VZP8H0kWce3ZFub6PtKso5vybZyBT9UknM8D+eTbdUEm0iyjuvJtibRppKs43qyrVjBtiRZx8VkG51gG5Os41qyjSW60+k0l8vld2VZknWOSPZPGd9ThhhbwZK7r0q/co0mWSdvsuUN+ng8Hhv56LGozIky7kuTfG7z5Kbk+d3K5J3LYWZd5Hx8oQwxOcHxrhu3ST6z4Xybh6zMWCb6TJ739b4xkupYGWLsHCznJvmbFJ78c3Oa5OfpeU45JkmSbhAEd3LYUX9/YyR9Te+VIUZ30bIjDWVH+kJ2m4/kXf7RlVWbZbvLvkpfk5ToTjaHh3y7EwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgjV8b1IuSIoqcAwAAAABJRU5ErkJggg==",
+      "https://www.deepal.com.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",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg\")"
+    ],
+    "downloaded": [
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1899792484331270146/202605/8198223CBD5254D2E389F657F7FAC986.png",
+        "file": "official-001.png",
+        "size": "1456x800"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202511/9A394EE0FEDFFE44936E5F8767CD631D.jpg",
+        "file": "official-002.jpg",
+        "size": "1364x768"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202601/C83B24A130A6508FE5B8FE4CB813ECBC.jpg",
+        "file": "official-003.jpg",
+        "size": "2160x1215"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202602/D84D20ECB412F452CE2E0589DB3342F1.jpg",
+        "file": "official-004.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202603/778C73B34B7D6ED2E4888AC26B576E87.jpg",
+        "file": "official-005.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg",
+        "file": "official-006.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg",
+        "file": "official-007.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg",
+        "file": "official-008.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg",
+        "file": "official-009.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg",
+        "file": "official-010.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg",
+        "file": "official-011.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg",
+        "file": "official-031.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg",
+        "file": "official-032.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg",
+        "file": "official-033.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1944952007325425666/202602/5E3A19768CE1759F17E2869B3DDA6290.png",
+        "file": "official-036.png",
+        "size": "1200x1200"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg",
+        "file": "official-037.jpg",
+        "size": "1920x1080"
+      }
+    ],
+    "errors": [
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/21DF7E8FF3D0D905D7E8355F1312A120.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png",
+        "reason": "too small: 1125x601"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/358B93FA275E26E9D3684111C652EE6C.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/3593E118CC6347B7E58870FFC8210745.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/587C062475860F1C613C83C46B8E5118.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/6856AA0582B4258B9B9C37A7D823029E.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png",
+        "reason": "too small: 1125x601"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/789CFFD54A2DB1060B60F96007B31993.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/8C4672E5C8B8D838E55329F152A4A6C2.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9466102525ED70EA7EF21CBAB75EB8A8.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png",
+        "reason": "too small: 1125x604"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B4B607E351E4E5A01005F30F0543BD9A.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B67E1A5299A3DDB190714A23428549AF.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/C004239B7DFC5B8232E78B824FD80721.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/CF1FE7CA47FB76A9868D1606F78B3AD4.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/E6CB8CA5360F341172118680B609153E.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1899792484331270146/202604/BAC08E53B99A891315BC6B985FEA73F9.png",
+        "reason": "too small: 264x78"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://staticre.deepal.com.cn/20231107-office/office/public/share_logo.png",
+        "reason": "too small: 300x300"
+      },
+      {
+        "url": "https://www.deepal.com.cn/iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKZSURBVHgB7do9jxJBHIDxAUIt0rEU8BH2AgXlXqfdXaedpZ3nR7hPoHbanZ2d11mKlRhewn2DLchCiaEgFAT/ayjUwM5CvJsXnl9C2MBwBzfMs5MDpQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHIrqRMRRVGlWq0+q9frlSRJYnUiCuoEtFqtV3L19o+bbsrl8nWv14uV57ye4HTVLhaLz+nhjrvjYrF42e/3x8pj3ia63W5Hq9XqixyGe4ZUNpvNy1qtpqbT6TflKS9X8I4k69xKsl/7mGyvJliTZB0vk+1NonMkWcfLZHsxwdskf5JLRTP0Zjtm77hCoRAFQRA2Go0fk8lkrhzndKIPSPJcJu5yMBh0wzBslkql9DG6le5Fsp1dwXmTLBPbXa/XT0ej0e+Jms1mc0nwB/mHR/rmjjIe6kWynVzBB+yS3w2Hw6uMn3MhV2/k0lTZnN1lOzXBxyRZM075nmxnEn1sknV8T7YTK/h/JTnH7/Eu2VZP8H0kWce3ZFub6PtKso5vybZyBT9UknM8D+eTbdUEm0iyjuvJtibRppKs43qyrVjBtiRZx8VkG51gG5Os41qyjSW60+k0l8vld2VZknWOSPZPGd9ThhhbwZK7r0q/co0mWSdvsuUN+ng8Hhv56LGozIky7kuTfG7z5Kbk+d3K5J3LYWZd5Hx8oQwxOcHxrhu3ST6z4Xybh6zMWCb6TJ739b4xkupYGWLsHCznJvmbFJ78c3Oa5OfpeU45JkmSbhAEd3LYUX9/YyR9Te+VIUZ30bIjDWVH+kJ2m4/kXf7RlVWbZbvLvkpfk5ToTjaHh3y7EwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgjV8b1IuSIoqcAwAAAABJRU5ErkJggg==",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.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",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg\")",
+        "reason": "non-image content-type: text/html"
+      }
+    ]
+  },
+  {
+    "slug": "deepal-s09",
+    "page": "https://www.deepal.com.cn/S09",
+    "urls": [
+      "https://files.deepal.com.cn/operate/materialImgs/1899792484331270146/202605/8198223CBD5254D2E389F657F7FAC986.png",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202511/9A394EE0FEDFFE44936E5F8767CD631D.jpg",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202601/C83B24A130A6508FE5B8FE4CB813ECBC.jpg",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202602/D84D20ECB412F452CE2E0589DB3342F1.jpg",
+      "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202603/778C73B34B7D6ED2E4888AC26B576E87.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/21DF7E8FF3D0D905D7E8355F1312A120.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/358B93FA275E26E9D3684111C652EE6C.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/3593E118CC6347B7E58870FFC8210745.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/587C062475860F1C613C83C46B8E5118.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/6856AA0582B4258B9B9C37A7D823029E.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/789CFFD54A2DB1060B60F96007B31993.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/8C4672E5C8B8D838E55329F152A4A6C2.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9466102525ED70EA7EF21CBAB75EB8A8.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B4B607E351E4E5A01005F30F0543BD9A.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B67E1A5299A3DDB190714A23428549AF.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/C004239B7DFC5B8232E78B824FD80721.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/CF1FE7CA47FB76A9868D1606F78B3AD4.png",
+      "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/E6CB8CA5360F341172118680B609153E.png",
+      "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg",
+      "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg",
+      "https://files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg",
+      "https://files.deepal.com.cn/operate/official/1899792484331270146/202604/BAC08E53B99A891315BC6B985FEA73F9.png",
+      "https://files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png",
+      "https://files.deepal.com.cn/operate/official/1944952007325425666/202602/5E3A19768CE1759F17E2869B3DDA6290.png",
+      "https://files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg",
+      "https://staticre.deepal.com.cn/20231107-office/office/public/share_logo.png",
+      "https://www.deepal.com.cn/iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKZSURBVHgB7do9jxJBHIDxAUIt0rEU8BH2AgXlXqfdXaedpZ3nR7hPoHbanZ2d11mKlRhewn2DLchCiaEgFAT/ayjUwM5CvJsXnl9C2MBwBzfMs5MDpQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHIrqRMRRVGlWq0+q9frlSRJYnUiCuoEtFqtV3L19o+bbsrl8nWv14uV57ye4HTVLhaLz+nhjrvjYrF42e/3x8pj3ia63W5Hq9XqixyGe4ZUNpvNy1qtpqbT6TflKS9X8I4k69xKsl/7mGyvJliTZB0vk+1NonMkWcfLZHsxwdskf5JLRTP0Zjtm77hCoRAFQRA2Go0fk8lkrhzndKIPSPJcJu5yMBh0wzBslkql9DG6le5Fsp1dwXmTLBPbXa/XT0ej0e+Jms1mc0nwB/mHR/rmjjIe6kWynVzBB+yS3w2Hw6uMn3MhV2/k0lTZnN1lOzXBxyRZM075nmxnEn1sknV8T7YTK/h/JTnH7/Eu2VZP8H0kWce3ZFub6PtKso5vybZyBT9UknM8D+eTbdUEm0iyjuvJtibRppKs43qyrVjBtiRZx8VkG51gG5Os41qyjSW60+k0l8vld2VZknWOSPZPGd9ThhhbwZK7r0q/co0mWSdvsuUN+ng8Hhv56LGozIky7kuTfG7z5Kbk+d3K5J3LYWZd5Hx8oQwxOcHxrhu3ST6z4Xybh6zMWCb6TJ739b4xkupYGWLsHCznJvmbFJ78c3Oa5OfpeU45JkmSbhAEd3LYUX9/YyR9Te+VIUZ30bIjDWVH+kJ2m4/kXf7RlVWbZbvLvkpfk5ToTjaHh3y7EwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgjV8b1IuSIoqcAwAAAABJRU5ErkJggg==",
+      "https://www.deepal.com.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",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png\")",
+      "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg\")"
+    ],
+    "downloaded": [
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1899792484331270146/202605/8198223CBD5254D2E389F657F7FAC986.png",
+        "file": "official-001.png",
+        "size": "1456x800"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202511/9A394EE0FEDFFE44936E5F8767CD631D.jpg",
+        "file": "official-002.jpg",
+        "size": "1364x768"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202601/C83B24A130A6508FE5B8FE4CB813ECBC.jpg",
+        "file": "official-003.jpg",
+        "size": "2160x1215"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202602/D84D20ECB412F452CE2E0589DB3342F1.jpg",
+        "file": "official-004.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/materialImgs/1944952007325425666/202603/778C73B34B7D6ED2E4888AC26B576E87.jpg",
+        "file": "official-005.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg",
+        "file": "official-006.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg",
+        "file": "official-007.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg",
+        "file": "official-008.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg",
+        "file": "official-009.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg",
+        "file": "official-010.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg",
+        "file": "official-011.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg",
+        "file": "official-031.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg",
+        "file": "official-032.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg",
+        "file": "official-033.jpg",
+        "size": "1920x1080"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1944952007325425666/202602/5E3A19768CE1759F17E2869B3DDA6290.png",
+        "file": "official-036.png",
+        "size": "1200x1200"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg",
+        "file": "official-037.jpg",
+        "size": "1920x1080"
+      }
+    ],
+    "errors": [
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/21DF7E8FF3D0D905D7E8355F1312A120.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png",
+        "reason": "too small: 1125x601"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/358B93FA275E26E9D3684111C652EE6C.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/3593E118CC6347B7E58870FFC8210745.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/587C062475860F1C613C83C46B8E5118.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/6856AA0582B4258B9B9C37A7D823029E.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png",
+        "reason": "too small: 1125x601"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/789CFFD54A2DB1060B60F96007B31993.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/8C4672E5C8B8D838E55329F152A4A6C2.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9466102525ED70EA7EF21CBAB75EB8A8.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png",
+        "reason": "too small: 1125x604"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B4B607E351E4E5A01005F30F0543BD9A.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/B67E1A5299A3DDB190714A23428549AF.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/C004239B7DFC5B8232E78B824FD80721.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/CF1FE7CA47FB76A9868D1606F78B3AD4.png",
+        "reason": "too small: 120x120"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1542255672441536513/202511/E6CB8CA5360F341172118680B609153E.png",
+        "reason": "too small: 450x450"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1899792484331270146/202604/BAC08E53B99A891315BC6B985FEA73F9.png",
+        "reason": "too small: 264x78"
+      },
+      {
+        "url": "https://files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png",
+        "reason": "too small: 1125x600"
+      },
+      {
+        "url": "https://staticre.deepal.com.cn/20231107-office/office/public/share_logo.png",
+        "reason": "too small: 300x300"
+      },
+      {
+        "url": "https://www.deepal.com.cn/iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKZSURBVHgB7do9jxJBHIDxAUIt0rEU8BH2AgXlXqfdXaedpZ3nR7hPoHbanZ2d11mKlRhewn2DLchCiaEgFAT/ayjUwM5CvJsXnl9C2MBwBzfMs5MDpQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHIrqRMRRVGlWq0+q9frlSRJYnUiCuoEtFqtV3L19o+bbsrl8nWv14uV57ye4HTVLhaLz+nhjrvjYrF42e/3x8pj3ia63W5Hq9XqixyGe4ZUNpvNy1qtpqbT6TflKS9X8I4k69xKsl/7mGyvJliTZB0vk+1NonMkWcfLZHsxwdskf5JLRTP0Zjtm77hCoRAFQRA2Go0fk8lkrhzndKIPSPJcJu5yMBh0wzBslkql9DG6le5Fsp1dwXmTLBPbXa/XT0ej0e+Jms1mc0nwB/mHR/rmjjIe6kWynVzBB+yS3w2Hw6uMn3MhV2/k0lTZnN1lOzXBxyRZM075nmxnEn1sknV8T7YTK/h/JTnH7/Eu2VZP8H0kWce3ZFub6PtKso5vybZyBT9UknM8D+eTbdUEm0iyjuvJtibRppKs43qyrVjBtiRZx8VkG51gG5Os41qyjSW60+k0l8vld2VZknWOSPZPGd9ThhhbwZK7r0q/co0mWSdvsuUN+ng8Hhv56LGozIky7kuTfG7z5Kbk+d3K5J3LYWZd5Hx8oQwxOcHxrhu3ST6z4Xybh6zMWCb6TJ739b4xkupYGWLsHCznJvmbFJ78c3Oa5OfpeU45JkmSbhAEd3LYUX9/YyR9Te+VIUZ30bIjDWVH+kJ2m4/kXf7RlVWbZbvLvkpfk5ToTjaHh3y7EwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgjV8b1IuSIoqcAwAAAABJRU5ErkJggg==",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/iVBORw0KGgoAAAANSUhEUgAAATQAAAFACAYAAAAyMoBIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAB7WSURBVHgB7d3teRNH18DxA+Z7uCvIQvgeUkGUCkIqwFQQUkFMBUAFiAoCFaBUEOc72KKC23cBNs85MPIjyzOzb7O7M7v/33U5JlpZL6vR2Zk583JHkMT5+Xl1eXn5WP95/86dO5Xddvfu3e/s/w/v++XLl0qaaXq/pu6L5/XM3IX7SWnb5E76OV9oGTh87ourq6v/uePbo6Ojrf7z9MGDB6lf4yLdEXSmQWylv37VgnksywsUSGur5WijAfCFBretoBMCWkcazP7UAngiQGJawz/RoPZC0BoBrYOPHz8e65X0jQAD0aD2iwa1jaCVu4LWtLD9KsCwngpaI6B1sOv036fNz9d6+0/680wadhpj0azP7IXVxKzsHB7U2x4LWrsnSEKboBttIpzqP+1nrX1sT/T3Uy2YTwT4fxsNYi/2m5NaViyA/X5wP7KeHVBD68DS7Z7bXtrQjd3/a4F9pz+/aeF9oP/7Vqi1LdmFq409ePjw4S8HwWylx3z9sf8TtEYNrQOtjf3tqXlVetv5p0+fXunx17vUu/t97IKdFd4/Jf34MuTJmpVvtTy80kB2o8al5cGG+Vim/LnvD/X2U0FrZDk7cFfVD5G7bK+url48evRoHfj7Y/nWHF0J5uhWs3Kfy5K/lMjYRbKc3RDQOjo7O/uv1A+mPdWC+VtooKTV2txYNjJa5bvQz/qd/n4bCkT6eT+2rgn956rusbRG9x9BawS0jjSgraVhINJCvI6NALfApjW6Y/1C2ONVgpJY/9hra1aGpi/VNS8PaTlY62M9E7RGQOuoQbPzULQZuve4x/SzFcGale/19zo2D/Pz58+/X15enkiLqXE0N7sjoPXQsNl5qGlgW8m3q/pKkJNo/9jOXvaykna22tx8IOiEYRs9+AZENlDZtCnNhr7ZH+ZxyL4w+vPL3rAPTOdiN3D6cNjFIftM9UL3wdXeK2lJn2Mj6IwaWg8dmp231PWv7T1Xpb+euAGYlWAMtf1jO237yULsAsZqG90R0HrSgvwhQbNw6zqCG62wQD/b4KxZabXidw0D2e8ukPVdQupUa4A/CTojoPWkBfq5S8Wn0Kh/be+5V/Lty8T0qjQa9Y/tfPz48YkbT1ZJAjYPWJ97LeiMgNaTXaFthoCkXeBx68avNRotzni2Xi7caP51i/O9m/GxkoRobvZHQEugzZi0Npr2r+3Qz9ZK4/6xHXfhsMzlShJj7FkaBLQEUiQHYtoGNvea6Gfz+9o/1qZpt9dPdiIDYexZGgS0RLSWZs3OSobTKnGw44LtsdAcbdU/ZhJ3+Mcw9iwRAloinz59OtEvzJ8yvFaJg529fjZbbXcpG7rsmpXrtn1TbgL5KDVckgHpENASccmB/8p4tu6LsGnzRwtZxqh1/9jOUB3+MSQD0iGgJZRoTForXfrXdma4jFHrZuXOkB3+Nd5rc5NhN4kQ0BIaOjkQ0zOwPXb9RCX2s9Uu2xOTaoR/V254zjtBEgS0xDpOWE/FvtyvHnTc09EtY/Tc7WpVSd46NyvNiB3+MSQDEiOgJTZiciCmU+Jgnxv2YePZHkteGk9LCmmyYuwYGHuWHgEtsQmSAzEpAlsWwz70NbxzezVspCP3XiyQZRGkSQakR0AbwBTJgRgXDP7o8+WZaBZCr2blToulr8e0saWIBEkR0AYwZXIgpk/iYN8I2dHO2cp9U3f4xzD2bBgEtIFMnByI6ZU42Lc3WPdn6V9r29XG3jWdJB55XTl0+MeQDBgIAW0gmSQHYnr3r+2zneLdMkZtZiJYM/I0RW1sJ/WSPkMgGTAcAtpAXL/NP5K/6FZ7XViTW4OlBZYf9RxYcLsOcPpcp3rss9XE7Ln79I0dPufYI/y7IhkwHALagHJLDsSk6l8bmzUvNUC+1CBxLGUgGTAgNkkZVpdNVCZhAcESGRogcm4m32Cv1RbXLCiYiRtDh4FQQxvQQKvZjiFp/1pqPbaImxrJgIFRQxuQ9Q913Opuao222htb3y3ipsYWdcMjoA3MdX4XyTVD/8mhGWo7kLsky0rK1XuoDOJoco6gpORAxNYtE72VEeU2XakHkgEjoIY2jvdSPhtEez5Wbc36H/XnpWtelh7MSAaMhBraCApODoQMWltzMxCK7CcLIBkwEmpoI3DJgTldoS3g/GOj8iUx7St76vrKKpkJkgHjIaCNpOTkQMB9fU9/WQCSROyxLi8v1zK/TVxIBoyEJueIZpIcOHThmp99J5RXrlk+NyQDRkQNbVxzSA4cuu+ykL3kuNxSCiQDxkVAG9davq0wMTcrG14hHdmS2DLPLfW2rHk2LgLaiGaYHLjmVrroxG3KMjskA8ZHQBvZDJMDO53HiukXf677UpIMGBkBbWS2kOFMr9w2ELZ1UOvyN4XYsObZ+Aho05hjckAuLy9bByf9m0pmiGTANAho01jLDJMD+iWupCX9mznW0EgGTISANoEZJwe6DIid2yBakgETIqBNZI7JAX1P30lL+uWfXUATkgGTIaBNZI7JAa11/kda0nPwvcwLyYAJEdCmVeJqtjGta2hzQzJgWgS0aW1kXsmBSlrSWl0l80EyYGIEtAkVvOcAPEgGTI+ANrGZJQcqaa+S+SAZMDEC2sRs2R2u7LNAMiADBLQ8zKbZacuND3Hf3JEMyAMBLQ8bmU9yoE2Qms0eCyQD8kBAywDJgbLRZZAPAlomZpQcqAa6b85IBmSCgJYJkgPFIhmQEQJaXubQ7Jzj3MwgkgF5IaBlRK/01uwsOjlweXnZOKDNYC00kgGZIaBlhuRAOegiyA8BLTOaHHglBWuzHNDR0VHpzVOSAZkhoGXGhnAUfuVvHKSurq5KDmgkAzJEQMsTV/7MkQzIEwEtQ7b4o5SbHFhClpNkQKYIaJkqNTnQZhnuLpuq5IBkQL4IaJkqPTkwc3QJZIqAlqkZJAfm6j3JgHwR0PJWXE2gzZLaJW6Qoq95LcgWAS1jhScH5mjrZnMgUwS0zDFzIB8z3Rx6VghomSswOTDbYRv6WawFWSOgZa7A5EDjgFbSFnbWd0YyIH8EtDIwTGB6NDcLQEArAMmByW3dZ4DMEdAKUVByoE0fWiUF0OYmNeRCENAK4ZIDJdTS5pgU2AiKQEArBDMHpkEyoCwEtLIwJm18JAMKQkAriOuYPpXMnZ+fVynukwGSAYUhoBVGkwPvBaMgGVAeAlphCkoOzMFGUBQCWmEsOcCcwuGRDCgTAa1AWkvLfcWHKtF9psRFo0AEtAJZRzVDOAZFMqBQBLRykRwYCMmAchHQyrUWkgNDsHPKIo6FIqAVKufkwOXlZZXiPlPQ2tk7O7eCIhHQClZAcqBENDcLRkArGMmB5DYM1SgbAa18JAcS0YsDQzUKR0Ar31oySw402RE9w13TbajGWlA0AlrhXHKAVTh6ouk+DwS0GSA5kATJgBkgoM2A1tJOM6thlLZqLcmAmSCgzUc2NQytMX5Xd5+c+tBIBswHAW0m2BmqM5IBM0JAmxGSA+2RDJgXAtqMuMUfi6DBt7ZZOhKSATNCQJuRXHaG0mBV1d1Hg28OiYP3JAPmhYA2P9Q4GrJVaQWzQkCbGZIDjVkygPF7M0NAm6EMkgNV3R30NU7a5GQRx3kioM1QIcmBqfvQNoLZIaDNkEsO0JwKYEen+SKgzRdj0sKYGTBTBLSZcsmBU5lGleg+Q2BHpxkjoM0YcxRvIxkwbwS0eVsLQzgObQSzRUCbsZx3hpoCyYD5I6DN3FSLP56fn1ddjg2MRMnMEdBmjp2hrp3aQpiCWSOgLcPid4bSoE7tbAEIaMuwlrySA2PPEmARx4UgoC3ARDtDVZFjowY0mtzLQUBbiIXvDMXYs4UgoC1EhjtDjYUdnRaEgLYsY9ZUgs3Ky8vL0ZqczJZYFgLagoy5+GNN0BoroJEMWBgC2sIsaWcollBaHgLawpS0M1QCjD1bGALawoy1M5Q+x/3IsUqGf37mbS4QAW2ZxkgOTL3ENsmABSKgLZBLDmxlvljEcaEIaAs152WFWMRxuQhoC+WSA4MN4dDH/z50bIQ+tI1gkQhoCzXXxR9JBiwbAW3BZjq/k2TAghHQFmyqxR+1ZvidDOOUZMCyEdAwyOKPGrSq0DGtGQ4ypINFHEFAw1rmsTMU8zZBQFu6uSQHWMQRhoAGawKuJb1gs1ID6BBNTsaegYCGwRZ/HHP5IBZxxFcENOwUW8NhEUfsENDw1ZiLPyZGMgDXCGi4lnjxx1izspJE5jwnFe0R0HAt8eKPoywfNFBCA4UioOHaWIs/psK8TRwioOFQSckBmpu4gYCGG1LO7zw/P6+a3NYRizjiFgIafAaZ35kSizjCh4AGn7XkPYTDXttGgAMENNyScH7n/Ya3tWL7bZIMgA8BDV6JFn8cJKAJ8zYRQECD11SLPzbAvE0EEdAQk92CiczbRAwBDUFaE7JmZ+fkwOXlZeW5rU+Tk3mbiCKgISrx/E7TOaBZMkCACAIaohLP7+yLPQMQRUBDVOr5nUdHR51qaMzbRBMENDTRaZiEb4f0q6urrk1OkgGoRUBDrQyGcDBvE40Q0NDUZPM7mbeJpghoaGot7YdwpJgpsNUfsptohICGRrrM79QM6XeHt2ltq1VAs6auPbcADRDQ0NhEy13T3ERjBDQ0lmL/Tq3lfdfi7szbRCsENLTVuMakwas6vE1reY2bnBo8GUiLVghoaGXE/Tu3bi4p0BgBDa0NML/zFoZqoAsCGlpz8zub1NKqwxs0GDZtcm4EaImAhtZ6LtFdG9CYt4muCGjoJNES3SE0N9EJAQ2dNJzf2WWmAEM10BkBDX3U1aRaBzSW2EYfBDR0NsAQDpbYRi8ENPRSN4Tj/Py88v3bh6Ea6IuAhl5aDOFoYiNADwQ09NJgCMd+n1kVuhNDNZACAQ291azC0XQgLc1N9EZAQ2+xVTj29+b07dPpvKd2hhQIaEjFW8PaX9AxtOOT3ienrfJQMAIakggNtNXbft39++rq6mfPn7IBCpK5J0A6lhxYHdy2+vTp0xvtZ7PkwZPDP2CoBlK6I0BCZ2dn5xLJZh7YPnz48IEAidDkRFJtalzUzpAaNTQk17CWRu0MyVFDQ3Ja8/qjwX2onSE5AhqSs70ANKMZnD1g8z+ZhI4hENAwiKOjo+daC/MtArnRjOeJAAOgDw2DOj8/f6K1tZX921a5ZcwZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYvDvn5+f3r66unvsOfvny5fTRo0fvBMCiaFxYaVxY+Y7dvXt3/eDBg61k6I79R1/8Bw1eK8/xizt37uhrf3AhwEBiF1X98rzT8ncqiXz69Okk8DxbfZ614Kuzs7Nz/VV5Dm0fPnz4QDJ1z/1+pj/nnuNW0P7U339IA1owq8vLy9Xh7UdHR6e7Qvnx48djmdj+65la6JwZfZ3vUl9M9Pme6PPd9zzXZOfE3qN+gSr959PDY3qh/VV/SQJWNnTC/SfgcPPBF+572jlO6bn74Vk7M7uH3rleqUv9nfvnb7V0rZSw06EXuneHN6uhfLFDz/8cGL/1oL7RfKw0ff129S1T6va6/n54DvW9Ly3Ebry7n9GU7DArq/Bd1G11/aHvrZX0lOptY6xRVps2Z+nu9f/uHv3RH95v9z65t7I/Fgg+UuQBQvc+nm89h2zWpU1S6WHkmsdY3IX2JXvmN7+VjJ3HdCsphIqUGplb1Tmx95XJchC5KIa7GNr8dihpiZ9Z3v0PD8NHbNkgGTu3v7/6At+pUHNmp23roZ6uxWIjcxPpT9bweTsoqpdH699/VzWHaIXn1ddugia1s4+f/78u36hH8s0/sig+8Oa/ce+Y3qess1s7rsR0GIFSlwtTe+zkR6sX0jGVVn6OdIZ3Iuek7+0EHT+Eujf1t5Hv5BP9GLzUtKofDdawNA+pqfSQ4r+lchFdVdLO5GWIrWzza525pIz9viVTMAF1kkDmiUA9XWEDhfRLL93eMPQtbQJovxWfzZaYH8O9Q30ZOepkmGN9Ry9+qlScBfVt74EVZdamtW6NFBVvmP6ePuZTQvmlRTKhqMMddE+rJ1FkiuT0WD87NGjR+u7hwfm2pem7+mzoAh2UQ0catWXtlfrumX/SxprauGr69pZrPmeg3u+G63zz9XGbplxXxoyYYFGawGWUbvVBG5TS3NNqCpweL8JtXK/t4IbDmtnkeZ7FrwBLVagJFFf2lzol+Zf/ZClK71AWDMv2gd3dHRkX96NJOD6+3xNy60W3q1kwr5I+lp95a9RX1qbDm7Xj7YW+FwHfjeko5KM3QsdiBSopLU0PUkv9fGeeJ7jbWigp/7NG19/mBb0P8aee6qvsddwgtjA2h39wtl7SvK+XP+Hr3/0rXbqn0gm7IKp52bj+5wb1tJCSZStFNLB3YZeVK2raCvtBftODwO/u0BsJUPuoh8OaLECJW78Vt8OfmuP6+P7AsK2ZsyLFUgLgjc+CJuloK/rtIT0Mhqxz3nluf2+9o3Z57/2/ZErV098xyybOMfyoe/J+h1bz6bQ78ufeq5OAodvBH694B1L5uraSsErmdaGjqUHC4ih9nhdobNjgdHd92c6q2GR7KKqn/PGd0zLjneaXqxcCYNob6hJhmxKDPzRgOb6yba+Y67a3znNrwHRmgSV53HXTQqdXZEChX2lKexUY7YwvfeB2x/7Mu5uMYXK9wc2d1ewLzhUpdTpYPfq7uAKQaPAZatDiKdvTR/jRl+Hq+b6mgRbade/YeOI/jl8ffp8zz9/nz6/fffv92/TfwdyZMOZlQ2h9H7ng/PWwr6mK/1S3/r89RazUbytHaJk1sO34frjzz23dddKE8FXzWonW2kQHdkZG7Uu3dSuBa6n9oWOlsOJzDJ/MI93lYWLDRXdW7nxVoLWg7s4lZ5DlsXxS/7485k2rFU26nPf6zvzJ2rjRSotoaWkrsqeJuDVkvRTsfWV1DLALrpWod9KlbAP+hz/lLSlze0dEuX5X1c57ivT/FCn2duC3fGmpovDrJ1J+IfkjQKG9UuEw4TSV07s+AonnOviZu/bfS+jOiee0EfAtnMjQaZXyQBdxJteEJ1eEwL3Ls+QwZslQa3EGB1cMie8y8X1Ob05W1EuwCe+uaK2vnO6XxY7cplLW9psshlJFtuweu1lq21YF/qvjPvkkP62dmvtYxoV0OzFWn/8RxfWWHpG2Vdc8AbzORbv1mjFXFDrMBb0HJNjsP+lscuAfFMBubGx1WHt+vzvx57fJy7gKwCh7Na18p9fk8DYwt/lEj5cO8zmNV0SxLBmWvf2c7XLKf1W4Xmb9oqD30X13N9XJXn0MV+30YfbiiHt+Dr7ceuWjwo94X0/Yw+6dtl+3y2mRbaUGLkeWz+sNbsTtw/t4c/rmwtrmZeI1Y7G/yiP7TrPjTXbLM3m2zZFqP9W9aHs/IdswAUCmaRtfYvQrUdG+6hz1f5Vh2wfhN9TLvP7EaJ++g5WAVu/r+3ZXaLjTJgq1b0rxTJtGCbKAvNDozRcvCsbTkBogey8LMYb2zOtcBbYjF9SyYWe3Id8wlAdaRP698+xPIt6tvsPlmHefaTLa/9W24sYigVrMiwsb+YxcLPUePJa1ewTFyUWX+cAItJusX68bAWrdsS5IlkOuC2ZAbcmhnpL3W08Bzn4zR/JxSaBT9/lU4x1UTYktXRfrJ0IDVzkLfx7nUzsyNgBYrUK6WVkkDej/b/clO4Obw58sIuwvZ+7Dmj+/53eyCue6RIO59hWper/fuU0mGIhfVVQ5bIJYq0qdqZtNiCa1Y6+s43O3RWdtxmMNyLO6Kk2TISUlsk4vAMsr7+24+Ds2R7Kl3B3ys68PVKteCVpbQd7ZzK6C5FPoL34BMly18MacTMCc1Bfe65t11ZYaxRC6qlQa75yn26FySOewV0JR3crqrYW19x2qqrphQzVCNtRTCdRmEhnH82XcY0ZJY90Ko70y+1dq3MiOxBR5jtbTJt9zCTbHamW+D2Nh8xhyyiRaAz87OfFNqosOIbHCzZEJf52eb9D/l+Yx0QZjHeo4/9F2p+EtgFVsblznE56HnM9jtFZvLaUMjbIT9rauhr0BFpk918qXB9m6pdrqxrfVKv1JFmhUXocUyQ+PQtPP9t7FnNvhELqrBYURfMtrsxD4Py85qOX2lzeRes2F6vIa6oTmrJt+1jobafCYY0ILroTXIeFLtz0RNSv6dL1hHFsncrfxbycRcMznJMKIp2WwHu/jKBIZYgipn0QUeU45Lw3C6puQji2Ted/NfJxe7qEpB9PVOtbpHVvN2h1a3Yu2Fr/F6Af0s2ByCQZMhjrfn+QwVi92US1sLGE1RavGarlujuZWFqB2PTQNaJvA1bDa/5++27l5nrd2ezd9vq2k2X2q2Gp535R8zRxKa3r+NGUCyJ5bO65tGe5bNRx971Y+Nvu3PXz4cPRFS3fc/OMT37Q7x8r06Ody6HGhof5zd0EddcJ7bUCz7aECnYbV/v/03c7tUMPt3day4IGWNZlNWwdsKw1E5lBWfRYmSMW2ZwsE7az6ca02rJ/J7lxiArVVKr3iVIFDDNuYWGzcmWuqNZJqytuAfhSggdqAFkn7bgWTifWdWb9n22EoNQmgSQdTh1aI0Nd8KsCe2oCmhSZ0dfwsmFJowOK2y+T/mlra8cQd8KGLKgENNzRJCngLk41vkozksLuRrZDqu323TX0qbg39lfhfQ+e5eW4OpSUHbvVNxRZZHJLrS/UdmnznJOQnGtC0MD3+EtgTUTpcHTVbdS7+TVJ+STA95I3vSz7mqPdEX7A/9HzcOuf701NC+5/2fQ1uYYLfQv2mNuxggoxnqHb2rwAHogHNCnZgKMZF26WWbT9OCWySkiCY2Wt9q691dXi7W+wwq9pkTJPz6oLKIIHlQQbzOPdp/93Pvgxnbi0E5CHah6aF5tfAob+lJa1VhFZRTbJ8iau1eBcGZJpWuSJJKfrPcEu0hhYqTDbYVlqo2VJtIwm4hQHf+gaIjj2WyiYja83wO5mRKVaOcOWm8hxq3ULAMgQDmitM3oBmBVtaCI1mT71apr6ud65T+/B5Om3y0pXVbENLqpRqipUj3EYuvkOtWwhYhmBA08L0OFCYtm2ujmNueGu1B32+jef5bCzVsWS8SmspbOUI7Q/9t+/m0w2fyztfuG0LYe5ia9uNIZI4vGYJRhl+Zsc2tsBjqP+sVXbJXWUrz6HTIZovGrj+9u1J6d4PAS0BN1dxLQO7E9hbtG0LYe7sYp1iXcCBvUy5XqKPnodnsYCWZPxZaLu0/TXuU4qMpRptb0cbYpFg0bwqcPtWxnmM+xK+oj6WgUX6z1q1ELAs3oAW6z+TFp34kQ1vB1vjPpYcGGtwqL6G3rtNRcbsPWsSlN1neO45tH348OEDaUBfw1o8q1zICJPCQ/1nA+1WhZnwdpJZYQrcv9Xo7EjtbNCdZiw5EDi0cm15NKBV+MnGeqUcMoTl8NbQQoWpzdVxitrZTiQ5YF9Sq7kNukaTPvdzfZ5btZipN8xoK7J01OBC/WcywfSr3Fm50vImU3Gr8Vax+9jAd73foBcjLa+noYC2CvzNe2koVDsLrYA7AKsFrg5vdCuxDrprlfXh+VaIcIVuI4hy8zd9zdrZbbuWgrtIbmQi+nn9XDdMaYysuLnV5HSrKoT6SDbSQKx2FtqBKDX3IW89h9gPIXP6+Tzx3a5fGpqbiLoV0EKFSW2a1mpitbMxr7CR/RDYtSpjofFnkb5R4KtbAS0ymLFRc1MDhW9zWDNa7WyHXavK4waJ+hI3FyX1P2IaNwJapDA1GsxYt8b92P0f7C1ankiGneYmat0IaDXDNWoHM7qlmivf3/www+TjNKnllYWzVR5NxhhuSA0cSOg9RmuUbM/5KDjzmKopZXDPouhV2XBvF0HNCtMNqQhcL/a/rPYDkRDjzurQy2tDNpCiCWktlK+SjCo64AWaW6aTeTY12EaodqZBoxRlpqJsVpaqJZok3oz2KYNEm4hNE1I5U7fx0vK2rCuA1pkqkntcI3IFKf1WOv519H3YLW0re/Y1Nu04ZtQC6Gk4Ro1NUnbo+P87Ozsy+GPBro3gt6uZwqECpPeHh3Zb01Vrd15az/awbuRjNhmLKGaaJcNQFzNtPIcuh94/p8/ffp0Is2E+vae6mOspIZNvQrtNt70NehjfB94DAk9hjXvu8zCcHtO+BQ3O8D6nIdeKgd+XwNaZKqJ2cQewBXetRTAfTHWkohl5FoW3FVkWlkjNiwmFGQaup9i7azIY6ylwwYukeZmccM1QmvyYXhfm5z6ATwNHGfuHEYRaW6upTC20bN+p8aas4w9X2tooavJiBPJsWCuuelrIRS7mKP2Hdtu87YKhi1l/2ODP2Gf0QTuueZm5TvIUscYgy1TpF/8W/2wWi6LDGY7Uw9XGtELX41UP9etjOz/APGCi8hMlD5DAAAAAElFTkSuQmCC",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/0C04999FEA86BE2A4DE995CFFD612E90.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/128B6A88DDAA3F30635A0FBF23D0A7F0.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/4C5F8AE543C3CDBAA209FFE7C3DA49DE.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/94E3F119514875EB09B628FD8E402D40.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/9A1D722D2630DA0650BB2EAAB6A228B0.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202508/B4E664DFA33E43F725347E01502F3B98.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/26A68CDFCB810194CF2CF0727547209D.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/2A9289DF67C0BF538D7467503E431E80.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/618ED8AC3D69D28E4D609F732D7C4E8D.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/694CDD5419CB57075FA7B9CF74BB479A.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/9B2E0D451AA3A19809BAAF6B6F7F8C8C.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1542255672441536513/202511/B1C9F5295302681CCD2D74D9F718992A.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/38DE1987A78114075CE24731F4E8E818.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202508/65D8038E9520E550C9863F142C30F31F.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1889971857214570498/202509/75A28E2604C3F37E6DA7DC0823250674.jpg\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202511/50D7400EA3CCD6C548796F74A9BE77F8.png\")",
+        "reason": "non-image content-type: text/html"
+      },
+      {
+        "url": "https://www.deepal.com.cn/url(\"https:/files.deepal.com.cn/operate/official/1944952007325425666/202603/194820DA67DE50227B7320698EC89503.jpg\")",
+        "reason": "non-image content-type: text/html"
+      }
+    ]
+  }
+]

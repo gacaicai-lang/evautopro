@@ -1,28 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { cars as carsData } from '../../data/cars';
 
-// 50+ models snapshot（后期由 Decap CMS 接管）
-const cars = [
-  // P0 首批 8 个
-  { slug: 'changan-uni-t', brand: 'Changan', name: 'UNI-T', body: 'Coupe SUV', fuel: 'ICE', price_min: 13800, price_max: 17200, moq: 1, stock: 45, authorized: true },
-  { slug: 'jetour-t2', brand: 'Jetour', name: 'T2', body: '7-Seater SUV', fuel: 'PHEV', price_min: 22500, price_max: 28900, moq: 1, stock: 30, authorized: true },
-  { slug: 'geely-coolray', brand: 'Geely', name: 'Coolray', body: 'Compact SUV', fuel: 'ICE', price_min: 15200, price_max: 18800, moq: 1, stock: 28, authorized: true },
-  { slug: 'deepal-s07', brand: 'Deepal', name: 'S07', body: 'Mid SUV', fuel: 'EREV', price_min: 24800, price_max: 32500, moq: 1, stock: 18, authorized: true },
-  { slug: 'changan-cs55-plus', brand: 'Changan', name: 'CS55 Plus', body: 'SUV', fuel: 'ICE', price_min: 14500, price_max: 17900, moq: 1, stock: 50, authorized: true },
-  { slug: 'deepal-s09', brand: 'Deepal', name: 'S09', body: 'Large SUV', fuel: 'EREV', price_min: 36500, price_max: 45800, moq: 1, stock: 12, authorized: true },
-  { slug: 'geely-atlas', brand: 'Geely', name: 'Atlas', body: 'Mid SUV', fuel: 'ICE', price_min: 17800, price_max: 22500, moq: 1, stock: 22, authorized: true },
-  { slug: 'deepal-s05', brand: 'Deepal', name: 'S05', body: 'Compact SUV', fuel: 'BEV', price_min: 19200, price_max: 24500, moq: 1, stock: 15, authorized: true },
-  // P1 第二批
-  { slug: 'changan-uni-k', brand: 'Changan', name: 'UNI-K', body: 'Mid SUV', fuel: 'PHEV', price_min: 19500, price_max: 24800, moq: 1, stock: 20, authorized: true },
-  { slug: 'changan-uni-z', brand: 'Changan', name: 'UNI-Z', body: 'Coupe SUV', fuel: 'ICE', price_min: 14200, price_max: 17500, moq: 1, stock: 25, authorized: true },
-  { slug: 'changan-cs75-plus', brand: 'Changan', name: 'CS75 Plus', body: 'Mid SUV', fuel: 'ICE', price_min: 16800, price_max: 20500, moq: 1, stock: 35, authorized: true },
-  { slug: 'jetour-x70-plus', brand: 'Jetour', name: 'X70 Plus', body: '7-Seater SUV', fuel: 'ICE', price_min: 18500, price_max: 23200, moq: 1, stock: 18, authorized: true },
-  { slug: 'jetour-dasheng', brand: 'Jetour', name: 'Dasheng', body: 'SUV', fuel: 'PHEV', price_min: 21800, price_max: 27500, moq: 1, stock: 14, authorized: true },
-  { slug: 'geely-emgrand', brand: 'Geely', name: 'Emgrand', body: 'Sedan', fuel: 'ICE', price_min: 11500, price_max: 14200, moq: 1, stock: 40, authorized: true },
-  { slug: 'geely-monjaro', brand: 'Geely', name: 'Monjaro', body: 'Mid SUV', fuel: 'ICE', price_min: 22800, price_max: 28500, moq: 1, stock: 12, authorized: true },
-  { slug: 'volkswagen-id-3', brand: 'Volkswagen', name: 'ID.3', body: 'Hatchback', fuel: 'BEV', price_min: 24500, price_max: 28800, moq: 5, stock: 8, authorized: true },
-  { slug: 'volkswagen-id-7', brand: 'Volkswagen', name: 'ID.7', body: 'Sedan', fuel: 'BEV', price_min: 35200, price_max: 41500, moq: 5, stock: 6, authorized: true },
-];
+// 单一事实源：从 cars.ts 派生，只渲染有详情页的车型（避免死链）
+const cars = Object.values(carsData).map(c => ({
+  slug:        c.slug,
+  brand:       c.brand,
+  name:        c.model,
+  body:        c.body_type,
+  fuel:        c.fuel_type,
+  price_min:   c.pricing.fob_min,
+  price_max:   c.pricing.fob_max,
+  moq:         c.moq,
+  stock:       c.stock_units,
+  authorized:  true,
+  hero_image:  c.hero_image,
+}));
 
 // Filters
 const bodyTypes = [...new Set(cars.map(c => c.body))].sort();
@@ -85,7 +78,7 @@ const brands = [...new Set(cars.map(c => c.brand))].sort();
             {cars.map(c => (
               <a href={`/cars/${c.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
                 <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-                  <img src={['geely-atlas','geely-coolray','geely-emgrand','geely-monjaro','jetour-t2','jetour-dasheng','jetour-x70plus'].includes(c.slug) ? `/images/真图/laundered/evautopro-${c.slug}-01.webp` : `/images/car-${c.slug}.svg`} alt={`${c.brand} ${c.name}`} class="w-full h-full object-cover" loading="lazy" />
+                  <img src={c.hero_image} alt={`${c.brand} ${c.name}`} class="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div class="p-5">
                   <div class="flex items-center gap-2 mb-2">

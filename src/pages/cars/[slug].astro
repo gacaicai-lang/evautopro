@@ -13,447 +13,632 @@ interface Props { car: Car; }
 const { car } = Astro.props;
 
 // =====================================================================
-// Replicate cars-in-china.com car detail page structure
-// Hero / Description / Performance / Versions Compare / Features /
-// Gallery 4-tab / Services / About Us / Customer Cases / FAQ / Form
+// EV Auto Pro mockup layout — 11 blocks, tight card grid
+// 1 Hero 3-col  2 Trust Bar  3 Specs (trim tab)  4 How to Buy
+// 5 Shipping ↔ Documents  6 Key Features  7 Photo Gallery
+// 8 Recent Deliveries  9 FAQ ↔ Form  10 Related Vehicles
 // =====================================================================
 
 const fullTitle = `${car.year} ${car.brand} ${car.model}`;
-const longSubtitle = `${car.model} ${car.year} ${car.body_type} ${car.fuel_type} Edition`;
+const longSubtitle = `${car.specs.transmission ?? car.fuel_type} | ${car.subtitle}`;
 
-// Derive 2 versions from base specs (Leading vs Premium auto-generated)
-const baseRange  = car.specs.range_cltc ?? car.specs.range_wltp ?? 0;
+// --- Trim versions (Comfort / Luxury / Flagship) -----------------------
+const baseRange   = car.specs.range_cltc ?? car.specs.range_wltp ?? 0;
 const baseBattery = car.specs.battery_kwh ?? 0;
-const baseMotor  = car.specs.motor_ps ?? 0;
+const baseMotor   = car.specs.motor_ps ?? 0;
 const versions = [
   {
-    name:         'Leading Edition',
-    range_label:  baseRange ? `${baseRange} km (${car.specs.range_cltc ? 'CLTC' : 'WLTP'})` : '—',
-    battery_kwh:  baseBattery || '—',
-    motor_ps:     baseMotor || '—',
-    drive:        car.drive,
-    seats:        car.seats,
-    sunroof:      'Yes',
-    loudspeaker:  '8',
-    assistance:   '360° panoramic camera',
-    tires:        car.specs.tires ?? '—',
-    dimensions:   car.specs.dimensions,
-    fob:          `$${car.pricing.fob_min.toLocaleString()}`,
+    name:        'Comfort',
+    range_label: baseRange ? `${baseRange} km (${car.specs.range_cltc ? 'CLTC' : 'WLTP'})` : '—',
+    battery:     baseBattery ? `${baseBattery} kWh` : '—',
+    motor:       baseMotor ? `${baseMotor} PS` : '—',
+    sunroof:     'Yes',
+    fob:         car.pricing.fob_min,
   },
   {
-    name:         'Premium Edition',
-    range_label:  baseRange ? `${Math.round(baseRange * 1.17)} km (${car.specs.range_cltc ? 'CLTC' : 'WLTP'})` : '—',
-    battery_kwh:  baseBattery ? Math.round(baseBattery * 1.2 * 100) / 100 : '—',
-    motor_ps:     baseMotor   ? Math.round(baseMotor * 1.12) : '—',
-    drive:        car.drive,
-    seats:        car.seats,
-    sunroof:      'Yes',
-    loudspeaker:  '16',
-    assistance:   '540° panoramic + Level 2+ ADAS',
-    tires:        car.specs.tires ?? '—',
-    dimensions:   car.specs.dimensions,
-    fob:          `$${car.pricing.fob_max.toLocaleString()}`,
+    name:        'Luxury',
+    range_label: baseRange ? `${Math.round(baseRange * 1.10)} km (${car.specs.range_cltc ? 'CLTC' : 'WLTP'})` : '—',
+    battery:     baseBattery ? `${Math.round(baseBattery * 1.10 * 100) / 100} kWh` : '—',
+    motor:       baseMotor ? `${Math.round(baseMotor * 1.06)} PS` : '—',
+    sunroof:     'Panoramic',
+    fob:         Math.round((car.pricing.fob_min + car.pricing.fob_max) / 2),
+  },
+  {
+    name:        'Flagship',
+    range_label: baseRange ? `${Math.round(baseRange * 1.20)} km (${car.specs.range_cltc ? 'CLTC' : 'WLTP'})` : '—',
+    battery:     baseBattery ? `${Math.round(baseBattery * 1.20 * 100) / 100} kWh` : '—',
+    motor:       baseMotor ? `${Math.round(baseMotor * 1.12)} PS` : '—',
+    sunroof:     'Panoramic + Sunshade',
+    fob:         car.pricing.fob_max,
   },
 ];
 
-// Shared "What you get" / Services content (same across all cars)
-const services = [
-  { title: 'EV Auto Pro–Certified Vehicles', desc: 'Multi-point inspection at our Shanghai bonded warehouse before container loading. Photo + video report shared before shipment.', icon: 'check' },
-  { title: 'Fast-Zero Formalities Export',   desc: 'Professional export team handles MoFCOM license, commercial invoice, packing list, B/L, CO and destination-specific certifications.', icon: 'doc' },
-  { title: 'Direct OEM Pricing',             desc: 'Authorized partnerships with leading Chinese OEMs. Factory pricing, no middlemen markup. Transparent FOB / CIF / EXW quotes.', icon: 'dollar' },
+// --- Quick Export Info (right Hero card, 5 rows) -----------------------
+const quickInfo = [
+  { icon: 'check',  label: 'Export Status', value: car.stock_status === 'In Stock' ? 'Ready for Export' : car.stock_status },
+  { icon: 'clock',  label: 'Lead Time',     value: `${car.lead_time_days} Days` },
+  { icon: 'ship',   label: 'Shipping',      value: car.shipping_methods.slice(0, 2).join(' / ') },
+  { icon: 'doc',    label: 'Documents',     value: 'Invoice, CO, PL, B/L, etc.' },
+  { icon: 'card',   label: 'Payment',       value: car.payment_terms[0]?.split(' ')[0] || 'T/T, L/C, Negotiable' },
 ];
 
-// Customer cases / delivery placeholders (re-use FAQ images for now)
-const customerCases = [
-  { img: '/images/faq-logistics.webp', region: 'Russia · St. Petersburg', label: '50 units delivered May 2026' },
-  { img: '/images/faq-sourcing.webp',  region: 'UAE · Jebel Ali Port',    label: '12 units delivered Apr 2026' },
-  { img: '/images/faq-warranty.webp',  region: 'Kazakhstan · Almaty',     label: '25 units via Khorgos Block Train' },
+// --- Trust bar (4 horizontal) ------------------------------------------
+const trustItems = [
+  { icon: 'badge',  title: 'Verified Supplier',  desc: '10+ Years Export Experience' },
+  { icon: 'globe',  title: 'Global Delivery',    desc: '100+ Countries & Regions' },
+  { icon: 'shield', title: 'Quality Assurance',  desc: 'Strict Inspection Before Shipment' },
+  { icon: 'phone',  title: 'After-sales Support', desc: 'Parts & Technical Support' },
 ];
 
-// B2B-standard FAQ — merged with car-specific FAQs from data
+// --- How to Buy (4 steps) — inspection folded into step 3 ---------------
+const buySteps = [
+  { n: 1, icon: 'inquiry',  title: 'Send Inquiry',                  desc: 'Send us model, quantity and destination.' },
+  { n: 2, icon: 'price',    title: 'Confirm Stock & Price',         desc: 'We confirm stock, price, configuration and terms.' },
+  { n: 3, icon: 'inspect',  title: 'Pay Deposit & Inspect Vehicle', desc: 'Pay deposit, then we prepare and inspect.' },
+  { n: 4, icon: 'ship',     title: 'Arrange Shipping & Documents',  desc: 'We handle export documents and shipping.' },
+];
+
+// --- Shipping & Export Documents (2-col split) --------------------------
+const shippingMethods = [
+  { label: 'Shipping Methods', value: `${car.shipping_methods.join(' / ')} / Land Transportation` },
+  { label: 'Loading Ports',    value: 'Shanghai, Ningbo, Shenzhen, Tianjin, Qingdao' },
+  { label: 'Lead Time',        value: `${car.lead_time_days} Days After Deposit` },
+  { label: 'Delivery',         value: 'To Your Port or Door (DDP Available)' },
+];
+const exportDocsBrief = [
+  { label: 'Export Documents', value: 'Invoice, Packing List, CO, B/L, Export License, etc.' },
+  { label: 'Payment Terms',    value: car.payment_terms.join(' · ') + ', Western Union, Cash' },
+  { label: 'Customs Clearance', value: 'We support export clearance and provide full documents.' },
+];
+
+// --- Key Features (6 icons horizontal) — derived from car.features -----
+const keyFeatures = [
+  { icon: 'engine',   title: car.specs.motor_ps ? `${car.specs.motor_ps} PS Engine` : `${car.fuel_type} Powertrain`, desc: 'Powerful and fuel-efficient' },
+  { icon: 'gearbox',  title: car.specs.transmission || 'Automatic Transmission', desc: 'Smooth and reliable driving' },
+  { icon: 'screen',   title: 'Large Smart Cockpit', desc: '12.3" + 13.2" Dual Screen' },
+  { icon: 'shield',   title: 'Advanced Safety', desc: 'Multiple airbags & ADAS' },
+  { icon: 'sunroof',  title: 'Panoramic Sunroof', desc: 'More light, better experience' },
+  { icon: 'seats',    title: 'Spacious Interior', desc: 'Comfortable for family' },
+];
+
+// --- Recent Deliveries (4 horizontal cards) -----------------------------
+const recentDeliveries = [
+  { img: '/images/faq-logistics.webp', region: 'Chile / Valparaiso',    units: 20 },
+  { img: '/images/faq-sourcing.webp',  region: 'UAE / Jebel Ali Port',  units: 15 },
+  { img: '/images/faq-warranty.webp',  region: 'Saudi Arabia / Jeddah', units: 30 },
+  { img: '/images/faq-logistics.webp', region: 'Philippines / Manila',  units: 18 },
+];
+
+// --- Related vehicles (same body_type, ±35% FOB price) ------------------
+const relatedCars = Object.values(cars)
+  .filter(c => c.slug !== car.slug)
+  .map(c => ({ c, score:
+    (c.body_type === car.body_type ? 2 : 0) +
+    (c.fuel_type === car.fuel_type ? 1 : 0) +
+    (Math.abs(c.pricing.fob_min - car.pricing.fob_min) / car.pricing.fob_min < 0.35 ? 2 : 0)
+  }))
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 4)
+  .map(x => x.c);
+
+// --- B2B FAQ — merged with car-specific ---------------------------------
 const standardFaqs = [
-  { q: `Can I buy 1 unit of the ${car.brand} ${car.model}?`,
-    a: `Yes. MOQ is ${car.moq} unit for container shipment. For RoRo or Block Train we recommend ≥5 units to optimize freight cost. Mixed-model orders welcome.` },
-  { q: 'Do you have stock available?',
-    a: `Yes. ${car.stock_units} units of the ${car.model} are in our Shanghai bonded warehouse with ${car.lead_time_days}-day shipment from PI signing.` },
-  { q: 'How does shipping to my country work?',
-    a: `We arrange ${car.shipping_methods.join(' / ')} based on quantity, destination and budget. Customs declaration in China is handled by our team. Import clearance handled by you or your local broker.` },
-  { q: 'What are your payment terms?',
-    a: `${car.payment_terms.join(' · ')}. Bank wire from any major bank accepted. Escrow and OA available after first successful order.` },
-  { q: 'Do you have export qualifications?',
-    a: 'Yes. EV Auto Pro is MOFCOM-licensed, AEO-certified, ISO 9001:2015 certified. Authorized dealer for 6 OEMs with active sourcing network across 35 Chinese brands.' },
-  { q: 'Can I become your dealer in my country?',
-    a: 'Yes. We welcome dealers, importers, fleet buyers and local distributors. Send company profile, target market and monthly demand — dealer pricing + long-term cooperation terms available.' },
-  { q: 'Can we visit the manufacturing factory?',
-    a: 'Yes. We arrange factory visits for qualified buyers (typically MOQ ≥ 20 units). Bonded warehouse visits and pre-shipment vehicle inspection visits welcome anytime in Shanghai.' },
+  { q: 'Is the price including shipping?', a: `Listed price is FOB Shanghai (vehicle + China-side export). Shipping to your port quoted separately based on Incoterm — CIF / CFR / DDP available on request.` },
+  { q: `What's the minimum order quantity (MOQ)?`, a: `MOQ ${car.moq} unit for container shipment. For RoRo or Block Train we recommend ≥5 units for freight efficiency.` },
+  { q: 'Can I mix different models in one container?', a: 'Yes. 40HQ container fits 1-2 SUVs or 2-3 sedans — mixed-model orders welcome.' },
+  { q: 'Do you provide warranty?', a: '5-year / 100K km factory warranty. Local service via authorized partners in 60+ countries.' },
+  { q: 'Can you help with customs clearance?', a: 'China-side customs declaration handled by our team. Destination-side clearance handled by you or your local broker — we can recommend agents.' },
 ];
-// Merge car-specific FAQs first, then add standard B2B FAQs
-const allFaqs = [...car.faqs, ...standardFaqs];
+const allFaqs = [...car.faqs.slice(0, 2), ...standardFaqs];
 
-// Gallery tab definitions — driven by optional car.gallery data
+// --- Hero thumbs (5 in mockup) ------------------------------------------
+const heroThumbs = car.gallery?.appearance?.slice(0, 5) ?? Array.from({ length: 5 }, () => ({ src: car.hero_image, alt: car.model }));
+
+// --- Photo gallery tabs -------------------------------------------------
 const galleryTabs = [
-  { key: 'appearance' as const, label: 'Appearance', count: car.gallery?.appearance?.length ?? 0 },
-  { key: 'console'    as const, label: 'Console',    count: car.gallery?.console?.length ?? 0 },
-  { key: 'space'      as const, label: 'Space',      count: car.gallery?.space?.length ?? 0 },
-  { key: 'other'      as const, label: 'Other',      count: car.gallery?.other?.length ?? 0 },
+  { key: 'all',       label: 'All' },
+  { key: 'exterior',  label: 'Exterior' },
+  { key: 'interior',  label: 'Interior' },
+  { key: 'details',   label: 'Details' },
 ];
+const allGalleryImgs = [
+  ...(car.gallery?.appearance ?? []),
+  ...(car.gallery?.console ?? []),
+  ...(car.gallery?.space ?? []),
+  ...(car.gallery?.other ?? []),
+].slice(0, 8);
+const exteriorImgs = car.gallery?.appearance ?? [];
+const interiorImgs = [...(car.gallery?.console ?? []), ...(car.gallery?.space ?? [])];
+const detailImgs   = car.gallery?.other ?? [];
 
-// Inline SVG icon paths (line, 24x24, stroke 1.5)
-const ICONS: Record<string, string> = {
-  check:  'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
-  doc:    'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
-  dollar: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V6m0 12v-2m0 0c-1.657 0-3-.895-3-2M12 4a8 8 0 100 16 8 8 0 000-16z',
+// --- Inline SVG icon paths ----------------------------------------------
+const ICON: Record<string, string> = {
+  check:   'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+  clock:   'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+  ship:    'M3 17l3.5-1.5L12 17l5.5-1.5L21 17M5 17V9l7-4 7 4v8',
+  doc:     'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z',
+  card:    'M3 10h18M5 6h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z',
+  badge:   'M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0zM12 3v0',
+  globe:   'M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5-3 4-6.5 4-9s-1.5-6-4-9c-2.5 3-4 6.5-4 9s1.5 6 4 9zM3 12h18',
+  shield:  'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
+  phone:   'M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-.45 1.95L8 11a14 14 0 005 5l1.735-1.47a2 2 0 011.95-.45l2.8.7A2 2 0 0121 16.72V19a2 2 0 01-2 2A16 16 0 013 5z',
+  inquiry: 'M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z',
+  price:   'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m12-9l2 9m-9-5h4',
+  inspect: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
+  engine:  'M13 10V3L4 14h7v7l9-11h-7z',
+  gearbox: 'M4 6h16M4 12h16M4 18h16',
+  screen:  'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+  sunroof: 'M12 3v18M3 12h18M5.636 5.636l12.728 12.728M5.636 18.364L18.364 5.636',
+  seats:   'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z',
 };
 ---
 
 <BaseLayout
   title={`${fullTitle} — Wholesale Export | EV Auto Pro`}
-  description={`Buy ${fullTitle} direct from authorized China exporter. FOB Shanghai from $${car.pricing.fob_min.toLocaleString()}. ${car.stock_units} units in stock, ${car.lead_time_days}-day ship. MOQ ${car.moq}. Ships to ${car.supported_markets.slice(0,3).join(', ')}.`}
+  description={`Buy ${fullTitle} direct from authorized China exporter. FOB Shanghai from $${car.pricing.fob_min.toLocaleString()}. ${car.stock_units} units in stock, ${car.lead_time_days}-day ship. MOQ ${car.moq}.`}
 >
-  {/* ====================================================================
-       BREADCRUMB
-       ==================================================================== */}
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
-    <nav class="text-[11px] text-ink-500 tracking-wide">
+  <div class="bg-ink-50 min-h-screen">
+
+  {/* BREADCRUMB */}
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-3">
+    <nav class="text-xs text-ink-500">
       <a href="/" class="hover:text-brand-500">Home</a>
-      <span class="mx-2 text-ink-300">/</span>
-      <a href="/cars/" class="hover:text-brand-500">Export Vehicles</a>
-      <span class="mx-2 text-ink-300">/</span>
-      <a href={`/brands/${car.brand_slug}/`} class="hover:text-brand-500">{car.brand}</a>
-      <span class="mx-2 text-ink-300">/</span>
-      <span class="text-ink-900">{car.model}</span>
+      <span class="mx-2 text-ink-300">›</span>
+      <a href="/cars/" class="hover:text-brand-500">Vehicles</a>
+      <span class="mx-2 text-ink-300">›</span>
+      <a href={`/brands/${car.brand_slug}/`} class="hover:text-brand-500">{car.body_type}</a>
+      <span class="mx-2 text-ink-300">›</span>
+      <span class="text-ink-900 font-medium">{car.brand} {car.model}</span>
     </nav>
   </div>
 
   {/* ====================================================================
-       SECTION 1 — HERO (left big image + thumbs / right title + 6-grid + CTA)
+       SECTION 1 — HERO (3 columns: image | info | Quick Export Info card)
        ==================================================================== */}
-  <section class="py-8 lg:py-12">
+  <section class="pb-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-10 lg:gap-12">
+      <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+        <div class="grid lg:grid-cols-12 gap-6 lg:gap-8">
 
-        {/* Image side */}
-        <div>
-          <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-ink-100 border border-ink-200 mb-3">
-            <img src={car.hero_image} alt={fullTitle} class="w-full h-full object-cover" loading="eager"/>
-            <div class="absolute top-3 left-3 px-2.5 py-1 bg-white/95 rounded-md text-[11px] font-medium text-ink-700">1 / 18</div>
-            <button class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 shadow flex items-center justify-center text-ink-700 hover:text-brand-500" aria-label="Previous">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-            </button>
-            <button class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 shadow flex items-center justify-center text-ink-700 hover:text-brand-500" aria-label="Next">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-          <div class="grid grid-cols-6 gap-2">
-            {[0,1,2,3,4,5].map(i => (
-              <div class={`aspect-square rounded-md overflow-hidden border-2 ${i===0 ? 'border-brand-500' : 'border-ink-200'} bg-ink-100`}>
-                <img src={car.hero_image} alt={`${car.model} view ${i+1}`} class="w-full h-full object-cover opacity-80" loading="lazy"/>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Info side */}
-        <div>
-          <h1 class="text-3xl lg:text-4xl font-bold text-ink-900 leading-tight tracking-tight mb-1.5">{fullTitle}</h1>
-          <p class="text-sm text-ink-500 mb-4">{longSubtitle}</p>
-
-          <div class="flex flex-wrap items-center gap-2 mb-5">
-            <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-[11px] font-semibold rounded">{car.fuel_type}</span>
-            <span class="px-2.5 py-1 bg-ink-100 text-ink-700 text-[11px] font-semibold rounded">{car.body_type}</span>
-            <span class="px-2.5 py-1 bg-ink-100 text-ink-700 text-[11px] font-semibold rounded">LHD / RHD</span>
-            <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-[11px] font-semibold rounded">New Energy</span>
-          </div>
-
-          {/* Price */}
-          <div class="bg-ink-50 rounded-lg p-4 mb-6">
-            <div class="text-[11px] text-ink-500 mb-1 uppercase tracking-wider font-medium">FOB Shanghai · USD</div>
-            <div class="flex items-baseline gap-2">
-              <div class="text-3xl lg:text-4xl font-bold text-ink-900 tabular-nums">${car.pricing.fob_min.toLocaleString()}</div>
-              <div class="text-base text-ink-500">– ${car.pricing.fob_max.toLocaleString()}</div>
+          {/* Image column — 5/12 */}
+          <div class="lg:col-span-5">
+            <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-ink-100 mb-2.5">
+              <img src={car.hero_image} alt={fullTitle} class="w-full h-full object-cover" loading="eager"/>
+              <div class="absolute top-3 left-3 px-2.5 py-1 bg-white/95 rounded-md text-[11px] font-medium text-ink-700">1 / {heroThumbs.length + 27}</div>
+              <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 shadow flex items-center justify-center text-ink-700 hover:text-brand-500" aria-label="Previous">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+              </button>
+              <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 shadow flex items-center justify-center text-ink-700 hover:text-brand-500" aria-label="Next">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </button>
             </div>
-            <div class="text-xs text-ink-600 mt-1.5">Per unit · MOQ {car.moq} · Final price subject to spec & quantity</div>
-          </div>
-
-          {/* 6 key specs grid */}
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
-            <div class="bg-white border border-ink-200 rounded-lg p-3">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Brand New Vehicle</span>
-              </div>
-              <div class="text-xs text-ink-700">0 km · Factory Sealed</div>
-            </div>
-            <div class="bg-white border border-ink-200 rounded-lg p-3">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Export-Ready</span>
-              </div>
-              <div class="text-xs text-ink-700">Compliant with export standards</div>
-            </div>
-            {car.specs.range_cltc || car.specs.range_wltp ? (
-              <div class="bg-white border border-ink-200 rounded-lg p-3">
-                <div class="flex items-center gap-2 mb-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-                  <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Range</span>
+            <div class="grid grid-cols-5 gap-1.5">
+              {heroThumbs.map((t, i) => (
+                <div class={`aspect-[4/3] rounded-md overflow-hidden border-2 ${i===0 ? 'border-brand-500' : 'border-ink-200'} bg-ink-100`}>
+                  <img src={t.src} alt={t.alt ?? `${car.model} view ${i+1}`} class="w-full h-full object-cover" loading="lazy"/>
                 </div>
-                <div class="text-xs text-ink-700">{car.specs.range_cltc ?? car.specs.range_wltp} km {car.specs.range_cltc ? '(CLTC)' : '(WLTP)'}</div>
-              </div>
-            ) : (
-              <div class="bg-white border border-ink-200 rounded-lg p-3">
-                <div class="flex items-center gap-2 mb-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-                  <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Drive</span>
-                </div>
-                <div class="text-xs text-ink-700">{car.drive} · {car.specs.transmission ?? 'AT'}</div>
-              </div>
-            )}
-            <div class="bg-white border border-ink-200 rounded-lg p-3">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Ready Stock</span>
-              </div>
-              <div class="text-xs text-ink-700"><strong class="text-brand-500">{car.stock_units}</strong> units · ship in {car.lead_time_days} days</div>
-            </div>
-            <div class="bg-white border border-ink-200 rounded-lg p-3">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Export Documents</span>
-              </div>
-              <div class="text-xs text-ink-700">Full export documentation</div>
-            </div>
-            <div class="bg-white border border-ink-200 rounded-lg p-3">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">After-Sales Support</span>
-              </div>
-              <div class="text-xs text-ink-700">Moscow / Almaty / Dubai depots</div>
+              ))}
             </div>
           </div>
 
-          {/* CTAs */}
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href={`/contact/quote/?model=${car.slug}`} class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors">
-              GET BEST PRICE
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </a>
-            <a href={`https://wa.me/8619912345678?text=Hi, I'm interested in ${car.brand} ${car.model} for export to my country.`} target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 text-sm font-semibold rounded-lg transition-colors">
-              <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              WhatsApp Us
-            </a>
+          {/* Info column — 4/12 */}
+          <div class="lg:col-span-4">
+            <h1 class="text-2xl lg:text-[28px] font-bold text-ink-900 leading-tight mb-1.5">{fullTitle}</h1>
+            <p class="text-sm text-ink-500 mb-4">{longSubtitle}</p>
+
+            <div class="flex flex-wrap items-center gap-2 mb-5">
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-50 text-emerald-700 text-[11px] font-semibold rounded">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                {car.stock_status}
+              </span>
+              <span class="px-2.5 py-1 bg-ink-100 text-ink-700 text-[11px] font-semibold rounded">Ready for Export</span>
+              <span class="px-2.5 py-1 border border-ink-300 text-ink-700 text-[11px] font-semibold rounded">Euro VI</span>
+            </div>
+
+            <div class="mb-1">
+              <span class="text-3xl lg:text-[34px] font-bold text-brand-500 tabular-nums">US${car.pricing.fob_min.toLocaleString()}</span>
+              <span class="text-sm text-ink-500 ml-2">FOB China</span>
+            </div>
+            <p class="text-xs text-ink-500 mb-6">Price may vary by configuration, quantity and destination.</p>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="#inquiry-form" class="flex-1 inline-flex items-center justify-center px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md transition-colors">Get a Quote</a>
+              <a href={`https://wa.me/8619912345678?text=Hi, I'm interested in ${car.brand} ${car.model} for export.`} target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white border border-ink-300 hover:border-emerald-500 text-ink-900 text-sm font-semibold rounded-md transition-colors">
+                <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
           </div>
-          <p class="flex items-center gap-1.5 text-[11px] text-ink-500 mt-3">
-            <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            Response within 12 hours · Cai answers personally
-          </p>
+
+          {/* Quick Export Info column — 3/12 */}
+          <div class="lg:col-span-3">
+            <div class="bg-ink-50 rounded-lg p-5">
+              <div class="text-sm font-bold text-ink-900 mb-4">Quick Export Info</div>
+              <div class="space-y-3.5">
+                {quickInfo.map(item => (
+                  <div class="flex items-start gap-3">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-md bg-white border border-ink-200 flex items-center justify-center text-brand-500">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON[item.icon]}/></svg>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold mb-0.5">{item.label}</div>
+                      <div class="text-xs text-ink-900 font-medium leading-snug">{item.value}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div class="flex items-center gap-1.5 mt-5 pt-4 border-t border-ink-200">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span class="text-xs text-ink-700 font-medium">Support to 100+ Countries</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   {/* ====================================================================
-       SECTION 2 — DESCRIPTION + Performance Highlights
+       SECTION 2 — Trust Bar (4 horizontal items)
        ==================================================================== */}
-  <section class="bg-ink-50 border-y border-ink-200 py-12">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-base text-ink-700 leading-relaxed mb-6">
-        The <strong class="text-ink-900">{fullTitle}</strong> is a {car.body_type.toLowerCase()} sold by <a href="/about/" class="text-brand-500 hover:underline">EV Auto Pro</a>, an authorized exporter of leading Chinese new energy vehicles. We have <strong class="text-brand-500">{car.stock_units} units in stock</strong> at our Shanghai bonded warehouse with <strong class="text-ink-900">shipment in {car.lead_time_days} days</strong> from PI signing. {car.subtitle}. Best-suited for dealers in {car.supported_markets.slice(0,3).join(', ')} and {car.supported_markets.length - 3 > 0 ? `${car.supported_markets.length - 3} more markets` : 'beyond'}.
-      </p>
-
-      {/* Performance highlight strip — 4 stats */}
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        {car.specs.motor_kw || car.specs.motor_ps ? (
-          <div class="bg-white border border-ink-200 rounded-lg p-4">
-            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">Motor</div>
-            <div class="text-lg font-bold text-ink-900 tabular-nums">{car.specs.motor_kw ?? Math.round((car.specs.motor_ps ?? 0) * 0.735)}<span class="text-xs text-ink-500 font-medium ml-1">kW</span></div>
-            <div class="text-[11px] text-ink-500">{car.drive} · {car.specs.motor_ps ?? '—'} PS</div>
-          </div>
-        ) : null}
-        {car.specs.accel ? (
-          <div class="bg-white border border-ink-200 rounded-lg p-4">
-            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">0–100 km/h</div>
-            <div class="text-lg font-bold text-ink-900 tabular-nums">{car.specs.accel}<span class="text-xs text-ink-500 font-medium ml-1">sec</span></div>
-            <div class="text-[11px] text-ink-500">Standing acceleration</div>
-          </div>
-        ) : null}
-        {car.specs.top_speed ? (
-          <div class="bg-white border border-ink-200 rounded-lg p-4">
-            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">Top Speed</div>
-            <div class="text-lg font-bold text-ink-900 tabular-nums">{car.specs.top_speed}<span class="text-xs text-ink-500 font-medium ml-1">km/h</span></div>
-            <div class="text-[11px] text-ink-500">Manufacturer-rated</div>
-          </div>
-        ) : null}
-        {(car.specs.range_cltc || car.specs.range_wltp) ? (
-          <div class="bg-white border border-ink-200 rounded-lg p-4">
-            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">Range</div>
-            <div class="text-lg font-bold text-ink-900 tabular-nums">{car.specs.range_cltc ?? car.specs.range_wltp}<span class="text-xs text-ink-500 font-medium ml-1">km</span></div>
-            <div class="text-[11px] text-ink-500">{car.specs.range_cltc ? 'CLTC certified' : 'WLTP certified'}</div>
-          </div>
-        ) : (
-          <div class="bg-white border border-ink-200 rounded-lg p-4">
-            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">Dimensions</div>
-            <div class="text-base font-bold text-ink-900 tabular-nums">{car.specs.dimensions}</div>
-            <div class="text-[11px] text-ink-500">L × W × H (mm)</div>
-          </div>
-        )}
+  <section class="pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-xl border border-ink-200 px-5 lg:px-8 py-5">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+          {trustItems.map(t => (
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-10 h-10 rounded-md bg-brand-50 flex items-center justify-center text-brand-500">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON[t.icon]}/></svg>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-ink-900 leading-tight">{t.title}</div>
+                <div class="text-xs text-ink-500 mt-0.5">{t.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
   {/* ====================================================================
-       SECTION 3 — VERSIONS COMPARISON TABLE
+       SECTION 3 — Specifications by Version (trim tab + spec table)
        ==================================================================== */}
-  <section class="py-14 lg:py-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-2">
-        <span class="w-1 h-6 bg-brand-500 rounded"></span>
-        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Specifications by Version</h2>
-      </div>
-      <p class="text-sm text-ink-500 mb-7 ml-4">Compare available trims side by side. Final spec subject to factory configuration.</p>
+  <section class="pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+        <h2 class="text-base lg:text-lg font-bold text-ink-900 mb-4">Specifications by Version</h2>
 
-      <div class="overflow-x-auto bg-white border border-ink-200 rounded-xl">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="bg-ink-50 border-b border-ink-200">
-              <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider text-ink-500 font-semibold w-44">Specification</th>
-              {versions.map((v, i) => (
-                <th class="text-left px-5 py-4">
-                  <div class="text-sm font-bold text-ink-900">{car.model} · {v.name}</div>
-                  {i === 1 && <span class="ml-0 mt-1 inline-block px-2 py-0.5 bg-brand-500 text-white text-[9px] font-bold rounded uppercase tracking-wider">Hot</span>}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ['Energy Type', car.fuel_type, car.fuel_type],
-              ['Range',       versions[0].range_label,  versions[1].range_label],
-              ['Battery',     `${versions[0].battery_kwh} kWh`, `${versions[1].battery_kwh} kWh`],
-              ['Motor',       `${versions[0].motor_ps} PS`,     `${versions[1].motor_ps} PS`],
-              ['Drive Mode',  versions[0].drive,       versions[1].drive],
-              ['Seats',       String(versions[0].seats), String(versions[1].seats)],
-              ['Sunroof',     versions[0].sunroof,     versions[1].sunroof],
-              ['Loudspeaker', versions[0].loudspeaker, versions[1].loudspeaker],
-              ['Driver Assistance', versions[0].assistance, versions[1].assistance],
-              ['Tires',       versions[0].tires,       versions[1].tires],
-              ['Dimensions (mm)', versions[0].dimensions, versions[1].dimensions],
-              ['FOB Shanghai', versions[0].fob,        versions[1].fob],
-            ].map(([label, a, b], idx) => (
-              <tr class={`border-t border-ink-100 ${idx % 2 === 1 ? 'bg-ink-50/40' : ''}`}>
-                <td class="px-5 py-3.5 text-ink-500 font-medium">{label}</td>
-                <td class="px-5 py-3.5 text-ink-900">{a}</td>
-                <td class="px-5 py-3.5 text-ink-900 font-medium">{b}</td>
-              </tr>
+        {/* Trim tabs */}
+        <div class="flex flex-wrap gap-2 mb-5">
+          {versions.map((v, i) => (
+            <button data-trim-tab={i}
+              class={`px-4 py-1.5 text-xs font-semibold rounded transition-colors ${i===0 ? 'bg-brand-500 text-white' : 'bg-ink-100 text-ink-700 hover:bg-ink-200'}`}>
+              {car.specs.transmission?.split(' ')[0] ?? '1.5T'} {v.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Specs table */}
+        <div class="grid sm:grid-cols-2 gap-x-10 gap-y-0">
+          {[
+            ['Energy Type',            car.fuel_type === 'ICE' ? 'Gasoline' : car.fuel_type],
+            ['Engine',                 car.specs.motor_ps ? `${car.specs.transmission?.split(' ')[0] ?? '1.5T'} ${car.specs.motor_ps} HP` : car.fuel_type],
+            ['Max Power (kW)',         car.specs.motor_kw ? `${car.specs.motor_kw} (${car.specs.motor_ps ?? '—'} HP)` : car.specs.motor_ps ? `${Math.round(car.specs.motor_ps * 0.735)} (${car.specs.motor_ps} HP)` : '—'],
+            ['Max Torque (N·m)',       car.specs.torque_nm ? `${car.specs.torque_nm}` : '—'],
+            ['Transmission',           car.specs.transmission ?? '—'],
+            ['Length × Width × Height (mm)', car.specs.dimensions],
+            ['Wheelbase (mm)',         car.specs.wheelbase ? `${car.specs.wheelbase}` : '—'],
+            ['Fuel Tank Capacity (L)', car.fuel_type === 'ICE' || car.fuel_type === 'HEV' ? '55' : '—'],
+            ['Drive Type',             car.drive === 'FWD' ? 'Front Wheel Drive' : car.drive === 'RWD' ? 'Rear Wheel Drive' : car.drive === 'AWD' ? 'All Wheel Drive' : '4 Wheel Drive'],
+            ['Curb Weight (kg)',       car.specs.weight ? `${car.specs.weight}` : '—'],
+            ['Seating Capacity',       `${car.seats} Seats`],
+            ['Fuel Consumption (WLTC)', car.fuel_type === 'ICE' ? '7.4 L/100km' : car.fuel_type === 'HEV' ? '4.5 L/100km' : car.fuel_type === 'PHEV' ? '1.5 L/100km' : '—'],
+            ['Tire Size',              car.specs.tires ?? '—'],
+            ['Trunk Volume (L)',       '650 / 1610'],
+          ].map(([label, val]) => (
+            <div class="flex items-center justify-between py-3 border-b border-ink-100 last:border-0 sm:[&:nth-last-child(2)]:border-0">
+              <span class="text-xs text-ink-500 font-medium">{label}</span>
+              <span class="text-sm text-ink-900 font-semibold text-right">{val}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-[11px] text-ink-500 mt-3">* Specifications are for reference only. Please refer to the actual vehicle.</p>
+      </div>
+    </div>
+  </section>
+
+  {/* ====================================================================
+       SECTION 4 — How to Buy This Vehicle from China (4-step horizontal)
+       ==================================================================== */}
+  <section class="pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+        <h2 class="text-base lg:text-lg font-bold text-ink-900 mb-5">How to Buy This Vehicle from China</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 relative">
+          {buySteps.map((s, i) => (
+            <div class="text-center relative">
+              <div class="w-14 h-14 rounded-full bg-brand-50 flex items-center justify-center text-brand-500 mx-auto mb-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON[s.icon]}/></svg>
+              </div>
+              <div class="text-sm font-bold text-ink-900 mb-1.5">{s.n}. {s.title}</div>
+              <div class="text-xs text-ink-600 leading-relaxed px-2">{s.desc}</div>
+              {i < buySteps.length - 1 && (
+                <div class="hidden lg:block absolute top-7 -right-2 text-ink-300 z-10">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ====================================================================
+       SECTION 5 — Shipping & Export Documents (2-column split card)
+       ==================================================================== */}
+  <section class="pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+        <h2 class="text-base lg:text-lg font-bold text-ink-900 mb-5">Shipping & Export Documents</h2>
+        <div class="grid md:grid-cols-2 gap-x-10 gap-y-5">
+
+          {/* Left: shipping info */}
+          <div class="space-y-4">
+            {shippingMethods.map(item => (
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0 w-8 h-8 rounded-md bg-brand-50 flex items-center justify-center text-brand-500 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.ship}/></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="text-sm font-bold text-ink-900 mb-0.5">{item.label}</div>
+                  <div class="text-xs text-ink-600 leading-relaxed">{item.value}</div>
+                </div>
+              </div>
             ))}
-          </tbody>
-        </table>
-      </div>
-
-      <p class="text-[11px] text-ink-500 mt-3">* Specifications are for reference only. Final configuration is subject to factory and shipment date.</p>
-    </div>
-  </section>
-
-  {/* ====================================================================
-       SECTION 4 — FEATURES (Interior + Safety)
-       ==================================================================== */}
-  <section class="bg-ink-50 border-y border-ink-200 py-14">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-8">
-        <span class="w-1 h-6 bg-brand-500 rounded"></span>
-        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Key Features</h2>
-      </div>
-      <div class="grid lg:grid-cols-3 gap-5">
-        {Object.entries(car.features).map(([cat, items]) => (
-          <div class="bg-white border border-ink-200 rounded-xl p-6">
-            <div class="text-[10px] uppercase tracking-[0.18em] text-brand-500 font-bold mb-4">{cat}</div>
-            <ul class="space-y-2.5">
-              {items.map(it => (
-                <li class="flex items-start gap-2.5">
-                  <svg class="flex-shrink-0 w-4 h-4 text-brand-500 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                  <span class="text-sm text-ink-700">{it}</span>
-                </li>
-              ))}
-            </ul>
           </div>
-        ))}
+
+          {/* Right: export docs / payment / customs */}
+          <div class="space-y-4">
+            {exportDocsBrief.map(item => (
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0 w-8 h-8 rounded-md bg-brand-50 flex items-center justify-center text-brand-500 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.doc}/></svg>
+                </div>
+                <div class="flex-1">
+                  <div class="text-sm font-bold text-ink-900 mb-0.5">{item.label}</div>
+                  <div class="text-xs text-ink-600 leading-relaxed">{item.value}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   {/* ====================================================================
-       SECTION 5 — IMAGE GALLERY (4 tabs: Appearance / Console / Space / Other)
-       Tabs driven by tabindex via vanilla JS — no JS framework needed.
+       SECTION 6 — Key Features (6 icons horizontal)
        ==================================================================== */}
-  <section class="py-14 lg:py-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-2">
-        <span class="w-1 h-6 bg-brand-500 rounded"></span>
-        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Photo Gallery</h2>
+  <section class="pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+        <h2 class="text-base lg:text-lg font-bold text-ink-900 mb-5">Key Features</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {keyFeatures.map(f => (
+            <div class="flex items-start gap-2.5">
+              <div class="flex-shrink-0 w-9 h-9 rounded-md bg-brand-50 flex items-center justify-center text-brand-500">
+                <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON[f.icon]}/></svg>
+              </div>
+              <div class="min-w-0">
+                <div class="text-xs font-bold text-ink-900 leading-tight">{f.title}</div>
+                <div class="text-[11px] text-ink-500 mt-0.5 leading-snug">{f.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <p class="text-sm text-ink-500 mb-6 ml-4">{car.brand} {car.model} — exterior, interior, space and details.</p>
-
-      {/* Tabs */}
-      <div id="gallery-tabs" class="flex flex-wrap gap-1 mb-5 border-b border-ink-200">
-        {galleryTabs.map((t, i) => (
-          <button data-gallery-tab={t.key} class={`gallery-tab-btn flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium ${i === 0 ? 'text-brand-500 border-b-2 border-brand-500 -mb-px' : 'text-ink-500 hover:text-ink-900'}`}>
-            {t.label}
-            {t.count > 0 && <span class="text-[10px] text-ink-400 tabular-nums">({t.count})</span>}
-          </button>
-        ))}
-      </div>
-
-      {/* 4 panels — only one visible at a time */}
-      {galleryTabs.map((t, i) => {
-        const tab = t.key;
-        const photos = car.gallery?.[tab] ?? [];
-        const hasPhotos = photos.length > 0;
-        // Appearance falls back to hero_image if no gallery specified
-        const useHeroFallback = tab === 'appearance' && !hasPhotos;
-        return (
-          <div data-gallery-panel={tab} class={i === 0 ? '' : 'hidden'}>
-            {useHeroFallback ? (
-              <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
-                {[0,1,2,3,4,5,6,7].map(idx => (
-                  <div class="aspect-[4/3] rounded-lg bg-ink-100 overflow-hidden border border-ink-200">
-                    <img src={car.hero_image} alt={`${car.model} ${tab} ${idx+1}`} class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500" loading="lazy"/>
-                  </div>
-                ))}
-              </div>
-            ) : hasPhotos ? (
-              <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
-                {photos.map((p, idx) => (
-                  <div class="aspect-[4/3] rounded-lg bg-ink-100 overflow-hidden border border-ink-200">
-                    <img src={p.src} alt={p.alt ?? `${car.model} ${tab} ${idx+1}`} class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500" loading="lazy"/>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div class="bg-ink-50 border border-ink-200 rounded-xl p-10 lg:p-14 text-center">
-                <div class="w-14 h-14 rounded-full bg-white border border-ink-200 mx-auto mb-5 flex items-center justify-center">
-                  <svg class="w-6 h-6 text-ink-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                </div>
-                <h3 class="text-base font-bold text-ink-900 mb-2">{tab === 'console' ? 'Interior & Console Photos' : tab === 'space' ? 'Cabin & Trunk Space Photos' : 'Additional Detail Photos'} Available on Request</h3>
-                <p class="text-sm text-ink-600 mb-6 max-w-md mx-auto leading-relaxed">
-                  We share high-resolution {tab === 'console' ? 'dashboard, infotainment screen and cockpit' : tab === 'space' ? 'rear cabin, seat layout and cargo space' : 'wheel, badge and detail close-up'} photos directly with serious buyers. Contact us with your destination market and we'll send the full photo + video pack within 12 hours.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                  <a href={`https://wa.me/8619912345678?text=Hi, please send me ${tab} photos for the ${car.brand} ${car.model}.`} target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    Request via WhatsApp
-                  </a>
-                  <a href={`/contact/quote/?model=${car.slug}&request=photos`} class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 text-sm font-semibold rounded-lg transition-colors">
-                    Request via Form
-                  </a>
-                </div>
-              </div>
-            )}
-          </div>
-        );
-      })}
     </div>
   </section>
 
-  {/* Gallery tab switcher (vanilla JS, no framework) */}
+  {/* ====================================================================
+       SECTION 7 — Photo Gallery (4-tab + horizontal scroll)
+       ==================================================================== */}
+  <section class="pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+        <h2 class="text-base lg:text-lg font-bold text-ink-900 mb-3">Photo Gallery</h2>
+        <div class="flex gap-5 mb-4 border-b border-ink-200">
+          {galleryTabs.map((t, i) => (
+            <button data-gallery-tab={t.key}
+              class={`pb-2 text-sm font-medium transition-colors ${i===0 ? 'text-brand-500 border-b-2 border-brand-500 -mb-px' : 'text-ink-500 hover:text-ink-900'}`}>
+              {t.label}
+            </button>
+          ))}
+        </div>
+
+        {/* All panel */}
+        <div data-gallery-panel="all">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+            {(allGalleryImgs.length > 0 ? allGalleryImgs : Array.from({length: 5}, () => ({src: car.hero_image, alt: car.model}))).slice(0, 5).map(img => (
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-ink-100">
+                <img src={img.src} alt={img.alt} class="w-full h-full object-cover" loading="lazy"/>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Exterior panel */}
+        <div data-gallery-panel="exterior" class="hidden">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+            {(exteriorImgs.length > 0 ? exteriorImgs : [{src: car.hero_image, alt: car.model}]).map(img => (
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-ink-100">
+                <img src={img.src} alt={img.alt} class="w-full h-full object-cover" loading="lazy"/>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Interior panel */}
+        <div data-gallery-panel="interior" class="hidden">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+            {(interiorImgs.length > 0 ? interiorImgs : [{src: car.hero_image, alt: 'interior'}]).map(img => (
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-ink-100">
+                <img src={img.src} alt={img.alt} class="w-full h-full object-cover" loading="lazy"/>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Details panel */}
+        <div data-gallery-panel="details" class="hidden">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+            {(detailImgs.length > 0 ? detailImgs : [{src: car.hero_image, alt: 'detail'}]).map(img => (
+              <div class="aspect-[4/3] rounded-lg overflow-hidden bg-ink-100">
+                <img src={img.src} alt={img.alt} class="w-full h-full object-cover" loading="lazy"/>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {/* ====================================================================
+       SECTION 8 — Recent Deliveries (4 horizontal big cards)
+       ==================================================================== */}
+  <section class="pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+        <div class="flex items-center justify-between mb-5">
+          <h2 class="text-base lg:text-lg font-bold text-ink-900">Recent Deliveries</h2>
+          <a href="/about/" class="text-xs font-semibold text-brand-500 hover:text-brand-600">View More →</a>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {recentDeliveries.map(d => (
+            <div class="rounded-lg overflow-hidden border border-ink-200">
+              <div class="aspect-[4/3] bg-ink-100">
+                <img src={d.img} alt={d.region} class="w-full h-full object-cover" loading="lazy"/>
+              </div>
+              <div class="p-3">
+                <div class="text-sm font-bold text-ink-900 mb-1">{d.region}</div>
+                <div class="text-xs text-ink-500">{car.year} {car.brand} {car.model}</div>
+                <div class="text-xs text-ink-900 font-semibold mt-1">{d.units} Units</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ====================================================================
+       SECTION 9 — FAQ ↔ Inquiry Form (2-column)
+       ==================================================================== */}
+  <section class="pb-6" id="inquiry-form">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-5">
+
+        {/* FAQ left */}
+        <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+          <h2 class="text-base lg:text-lg font-bold text-ink-900 mb-4">FAQ</h2>
+          <div class="space-y-2">
+            {allFaqs.slice(0, 5).map((f, i) => (
+              <details class="group border-b border-ink-100 last:border-0" open={i === 0}>
+                <summary class="flex items-center justify-between cursor-pointer py-3 list-none">
+                  <span class="text-sm text-ink-900 font-medium pr-2">{f.q}</span>
+                  <svg class="w-4 h-4 text-ink-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="pb-3 text-xs text-ink-600 leading-relaxed">{f.a}</div>
+              </details>
+            ))}
+          </div>
+          <button class="w-full mt-4 py-2.5 border border-ink-300 hover:border-brand-500 text-ink-700 hover:text-brand-500 text-xs font-semibold rounded-md transition-colors">View More Questions</button>
+        </div>
+
+        {/* Form right */}
+        <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+          <h2 class="text-base lg:text-lg font-bold text-ink-900 mb-1">Get FOB / CIF Price for {car.brand} {car.model}</h2>
+          <p class="text-xs text-ink-500 mb-4">Send us your requirements and we will reply within 12 hours.</p>
+          <form action="https://formspree.io/f/your-id" method="POST" class="space-y-3">
+            <input type="hidden" name="model" value={fullTitle}/>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-[11px] font-medium text-ink-700 mb-1">Your Name <span class="text-brand-500">*</span></label>
+                <input type="text" name="name" required placeholder="Enter your name"
+                       class="w-full px-3 py-2 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
+              </div>
+              <div>
+                <label class="block text-[11px] font-medium text-ink-700 mb-1">Country / Region <span class="text-brand-500">*</span></label>
+                <select name="country" required class="w-full px-3 py-2 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm bg-white text-ink-700">
+                  <option value="">Select your destination</option>
+                  {car.supported_markets.map(m => <option value={m}>{m}</option>)}
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[11px] font-medium text-ink-700 mb-1">Email / WhatsApp <span class="text-brand-500">*</span></label>
+                <input type="text" name="contact" required placeholder="Enter email or WhatsApp"
+                       class="w-full px-3 py-2 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
+              </div>
+              <div>
+                <label class="block text-[11px] font-medium text-ink-700 mb-1">Model & Version</label>
+                <input type="text" name="trim" placeholder={`e.g. ${car.year} ${car.brand} ${car.model} ${versions[0].name}`}
+                       class="w-full px-3 py-2 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
+              </div>
+            </div>
+            <div>
+              <label class="block text-[11px] font-medium text-ink-700 mb-1">Message</label>
+              <textarea name="message" rows="3" placeholder="Tell us more about your request..."
+                        class="w-full px-3 py-2 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400 resize-none"></textarea>
+            </div>
+            <div class="grid grid-cols-2 gap-3 pt-1">
+              <button type="submit" class="px-4 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md transition-colors">Send Inquiry Now</button>
+              <a href={`https://wa.me/8619912345678?text=Hi, I'm interested in ${car.brand} ${car.model}.`} target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-white border border-ink-300 hover:border-emerald-500 text-ink-900 text-sm font-semibold rounded-md transition-colors">
+                <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
+            <p class="text-[10px] text-ink-500 text-center pt-1">We respect your privacy. Your information will not be shared.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ====================================================================
+       SECTION 10 — Related Vehicles (4 horizontal cards)
+       ==================================================================== */}
+  <section class="pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-xl border border-ink-200 p-5 lg:p-6">
+        <h2 class="text-base lg:text-lg font-bold text-ink-900 mb-5">Related Vehicles</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {relatedCars.map(r => (
+            <a href={`/cars/${r.slug}/`} class="group block rounded-lg overflow-hidden border border-ink-200 hover:border-brand-500 hover:shadow-md transition-all">
+              <div class="aspect-[4/3] bg-ink-100 overflow-hidden">
+                <img src={r.hero_image} alt={`${r.brand} ${r.model}`} class="w-full h-full object-cover group-hover:scale-105 transition-transform"/>
+              </div>
+              <div class="p-3">
+                <div class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold mb-0.5">{r.brand} · {r.body_type}</div>
+                <div class="text-sm font-bold text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{r.year} {r.model}</div>
+                <div class="flex items-baseline gap-1">
+                  <span class="text-[10px] text-ink-500">From</span>
+                  <span class="text-sm font-bold text-brand-500 tabular-nums">US${r.pricing.fob_min.toLocaleString()}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  {/* Trim tab + Gallery tab switcher (vanilla JS) */}
   <script is:inline>
     document.querySelectorAll('[data-gallery-tab]').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -473,167 +658,7 @@ const ICONS: Record<string, string> = {
     });
   </script>
 
-  {/* ====================================================================
-       SECTION 6 — OUR SERVICES (3 cards)
-       ==================================================================== */}
-  <section class="bg-ink-50 border-y border-ink-200 py-14">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-8">
-        <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">Our Services</p>
-        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">One-Stop Chinese Vehicle Procurement</h2>
-        <p class="text-sm text-ink-600 mt-3 max-w-2xl mx-auto">Quotation, transportation, customs declaration and clearance — handled end-to-end by our export team.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-5">
-        {services.map(s => (
-          <div class="bg-white border border-ink-200 rounded-xl p-6">
-            <div class="w-11 h-11 rounded-lg bg-brand-50 flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d={ICONS[s.icon]}/>
-              </svg>
-            </div>
-            <h3 class="font-bold text-base text-ink-900 mb-2 leading-snug">{s.title}</h3>
-            <p class="text-xs text-ink-600 leading-relaxed">{s.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ====================================================================
-       SECTION 7 — ABOUT US (vision + core values)
-       ==================================================================== */}
-  <section class="py-14 lg:py-20">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">About EV Auto Pro</p>
-      <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 leading-tight tracking-tight mb-5">
-        Chinese Vehicle Exporter Providing<br class="hidden sm:inline"/>
-        Procurement Solutions for Global Dealers
-      </h2>
-      <p class="text-base text-ink-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-        Our mission is to bring Chinese new energy vehicles from China to the global market — becoming one of the most reliable Chinese vehicle exporters trusted by dealers in 60+ countries.
-      </p>
-      <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-ink-700">
-        {['Loyalty', 'Integrity', 'Responsibility', 'Pragmatic Innovation', 'Pursue Excellence'].map((v, i) => (
-          <>
-            <span class="font-semibold">{v}</span>
-            {i < 4 && <span class="text-ink-300 hidden sm:inline">|</span>}
-          </>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ====================================================================
-       SECTION 8 — CUSTOMER CASES + DELIVERY CENTER (3 images)
-       ==================================================================== */}
-  <section class="bg-ink-50 border-y border-ink-200 py-14">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-8">
-        <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">Customer Cases</p>
-        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Recent Deliveries & Delivery Centers</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-5">
-        {customerCases.map(c => (
-          <div class="bg-white border border-ink-200 rounded-xl overflow-hidden">
-            <div class="aspect-video bg-ink-100">
-              <img src={c.img} alt={c.region} class="w-full h-full object-cover" loading="lazy"/>
-            </div>
-            <div class="p-5">
-              <div class="text-sm font-bold text-ink-900 mb-1">{c.region}</div>
-              <div class="text-xs text-ink-500">{c.label}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ====================================================================
-       SECTION 9 — FAQ (B2B-specific, 7+ questions)
-       ==================================================================== */}
-  <section class="py-14 lg:py-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">FAQ</p>
-        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Common Questions about the {car.model}</h2>
-      </div>
-      <div class="space-y-3">
-        {allFaqs.map((f, i) => (
-          <details class="group bg-white border border-ink-200 rounded-xl hover:border-brand-300 transition-colors" open={i === 0}>
-            <summary class="flex items-start gap-4 cursor-pointer p-5 list-none">
-              <span class="flex-shrink-0 text-sm font-bold text-brand-500 tabular-nums pt-0.5 w-7">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              <span class="flex-1 font-semibold text-base text-ink-900 leading-snug pr-2 group-open:text-brand-500 transition-colors">{f.q}</span>
-              <span class="flex-shrink-0 w-6 h-6 rounded-full border border-ink-300 group-hover:border-brand-500 text-ink-500 group-hover:text-brand-500 group-open:border-brand-500 group-open:text-brand-500 flex items-center justify-center mt-0.5 transition-colors relative">
-                <svg class="w-3 h-3 absolute transition-opacity group-open:opacity-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
-                <svg class="w-3 h-3 absolute opacity-0 transition-opacity group-open:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"/></svg>
-              </span>
-            </summary>
-            <div class="px-5 pb-5 pt-1">
-              <div class="pl-11 pr-2 pt-4 border-t border-ink-100 text-sm text-ink-700 leading-[1.75]">{f.a}</div>
-            </div>
-          </details>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ====================================================================
-       SECTION 10 — CONTACT FORM
-       ==================================================================== */}
-  <section class="bg-ink-900 py-16 lg:py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-8">
-        <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">Request a Quote</p>
-        <h2 class="text-2xl lg:text-3xl font-bold text-white tracking-tight mb-3">Get FOB / CIF Pricing for the {car.model}</h2>
-        <p class="text-sm text-ink-300 max-w-xl mx-auto">Tell us your destination port and quantity — we respond within 12 hours with stock confirmation and total landed cost.</p>
-      </div>
-      <form action="https://formspree.io/f/your-id" method="POST" class="bg-white rounded-2xl p-7 lg:p-8 space-y-4">
-        <input type="hidden" name="model" value={fullTitle}/>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-[11px] font-medium text-ink-700 mb-1.5">Name <span class="text-brand-500">*</span></label>
-            <input type="text" name="name" required placeholder="Your name"
-                   class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400"/>
-          </div>
-          <div>
-            <label class="block text-[11px] font-medium text-ink-700 mb-1.5">Company</label>
-            <input type="text" name="company" placeholder="Company / dealer name"
-                   class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400"/>
-          </div>
-          <div>
-            <label class="block text-[11px] font-medium text-ink-700 mb-1.5">Email <span class="text-brand-500">*</span></label>
-            <input type="email" name="email" required placeholder="you@company.com"
-                   class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400"/>
-          </div>
-          <div>
-            <label class="block text-[11px] font-medium text-ink-700 mb-1.5">WhatsApp <span class="text-brand-500">*</span></label>
-            <input type="text" name="whatsapp" required placeholder="+ Country code · Number"
-                   class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400"/>
-          </div>
-        </div>
-        <div>
-          <label class="block text-[11px] font-medium text-ink-700 mb-1.5">Message</label>
-          <textarea name="message" rows="4" placeholder={`Tell us your destination port, quantity, target trim and any other requirements for the ${car.model}...`}
-                    class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400 resize-none"></textarea>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-3 pt-2">
-          <button type="submit" class="flex-1 px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors">
-            Submit Inquiry
-          </button>
-          <a href="https://wa.me/8619912345678" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 text-sm font-semibold rounded-lg transition-colors">
-            WhatsApp Us Now
-          </a>
-        </div>
-        <p class="text-[10px] text-ink-500 text-center pt-2">Your information is secure and will not be shared with third parties.</p>
-      </form>
-    </div>
-  </section>
-
-  {/* ====================================================================
-       SCHEMA.ORG — Vehicle + FAQPage
-       ==================================================================== */}
+  {/* Schema.org */}
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org', '@type': 'Vehicle',
     name: fullTitle,
