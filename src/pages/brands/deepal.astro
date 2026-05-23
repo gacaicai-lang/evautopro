@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// Single brand master template — Changan
+// Single brand master template — Deepal
 // Reusable for 5 other authorized brands (Deepal/Qiyuan/Geely/VW/Jetour)
 // Structure synthesized from cars-in-china/byd + ihka about + Mercedes whitespace aesthetic
 
@@ -9,32 +9,32 @@ const brand = {
   name: 'Deepal',
   cn: '深蓝',
   slug: 'deepal',
-  tagline: 'Direct from China\'s Largest State-Owned Auto Brand',
-  hero_image: '/images/about-team.svg', // 真图后替换
+  tagline: 'Premium NEV Sub-Brand of Changan Auto',
+  hero_image: '/images/about-team.svg',
   logo: '/images/brand-deepal.svg',
   authorized_since: 2023,
   founded: 2022,
   annual_production: '350K units',
-  export_countries: '60+',
+  export_countries: '40+',
   in_stock: '60+ units',
 };
 
 const heroBadges = [
-  'Authorized Dealer Since 2018',
-  '8 Models Available',
-  'In-Stock Same-Day Ship',
+  'Authorized Dealer Since 2023',
+  '5 NEV Models Available',
+  'EREV + BEV Specialist',
 ];
 
 const stats = [
-  { num: '1862', label: 'Brand Founded', sub: 'Chongqing, China' },
-  { num: '2.5M', label: 'Annual Production', sub: 'units / year' },
-  { num: '60+', label: 'Export Countries', sub: 'Global Network' },
-  { num: '80+', label: 'In Bonded Stock', sub: 'Ready to Ship' },
+  { num: '2022', label: 'Brand Founded', sub: 'Chongqing, China' },
+  { num: '350K', label: 'Annual Production', sub: 'units / year' },
+  { num: '40+', label: 'Export Countries', sub: 'Growing Network' },
+  { num: '60+', label: 'In Bonded Stock', sub: 'Ready to Ship' },
 ];
 
-const brandStory = `Changan Auto (长安汽车), founded in 1862 in Chongqing, is the oldest and one of the Big Four state-owned auto manufacturers in China. With 2.5+ million vehicles produced annually, Changan has expanded its export footprint to 60+ countries across Russia, Middle East, Central Asia, LATAM, and Africa.
+const brandStory = `Deepal Auto (深蓝汽车), launched in 2022, is the premium NEV sub-brand of Changan Auto group. Deepal focuses exclusively on next-gen new energy powertrains — Extended-Range Electric Vehicles (EREV), Battery EVs (BEV), and intelligent cabin tech. The S07 and S09 lineup compete head-to-head with Li Auto and AITO in China's premium EREV segment.
 
-EV Auto Pro is an authorized Changan exporter since 2018. We hold direct dealer MoUs covering Changan's full passenger vehicle lineup — from UNI series sport coupé SUVs to CS family SUVs to Eado sedans. Every unit traceable to factory invoice. Zero grey market.`;
+EV Auto Pro is an authorized Deepal exporter since 2023, leveraging our 2018 Changan parent-group MoU. We supply S05 (BEV), S07 (EREV mid-SUV), S09 (EREV flagship) for global dealers seeking premium Chinese NEV at competitive FOB pricing. Every unit traceable to factory invoice.`;
 
 const models = [
   { slug: 'deepal-s07', name: 'S07', body: 'Mid SUV', fuel: 'EREV', price_min: 24800, stock: 18, ready: true },
@@ -45,17 +45,17 @@ const models = [
 ];
 
 const subBrands = [
-  { slug: 'changan', name: 'Changan', cn: '长安', desc: 'Parent brand · State-owned auto group since 1862', models: 8 },
+  { slug: 'deepal', name: 'Deepal', cn: '深蓝', desc: 'Parent brand · State-owned auto group since 1862', models: 8 },
   { slug: 'qiyuan', name: 'Qiyuan', cn: '启源', desc: 'Sibling brand · Entry-level NEV affordable family series', models: 3 },
 ];
 
 const advantages = [
-  { icon: '🏛', title: 'State-Owned Backing', desc: '163-year heritage. China central government holds majority stake. Highest financial stability among Chinese OEMs.' },
-  { icon: '⚙', title: 'Self-Developed Powertrain', desc: 'Changan\'s "Blue Whale" engines (1.4T/1.5T/2.0T) — China\'s benchmark turbocharged powerplants.' },
-  { icon: '🚗', title: 'UNI Sport DNA', desc: 'UNI series wins multiple "Most Innovative Design" awards — sport coupé SUVs at compact-SUV pricing.' },
-  { icon: '🔋', title: 'NEV Pivot Done', desc: 'Deepal + Qiyuan sub-brands cover BEV/PHEV/EREV. 2025 NEV market share top 5 in China.' },
-  { icon: '🌍', title: 'Russia & CIS Top Choice', desc: 'Changan is the #1 Chinese ICE brand by sales volume in Russia/CIS region 2025.' },
-  { icon: '✅', title: 'Direct OEM Pricing', desc: 'EV Auto Pro is authorized exporter — factory MSRP, no dealer markup. Verify with factory on request.' },
+  { icon: '🔋', title: 'EREV Specialist', desc: 'S07 / S09 use Extended-Range tech — drive 200km on battery + 1000km gas-extender. Best for markets with limited charging.' },
+  { icon: '🏭', title: 'Changan Group R&D', desc: '163-year Changan heritage + state-owned R&D backing. NEV platform shared with parent group at scale.' },
+  { icon: '🧠', title: 'Snapdragon 8295 Cabin', desc: 'Industry-leading Qualcomm Snapdragon 8295 chip. 15.6" infotainment + voice control + OTA.' },
+  { icon: '⚡', title: 'CATL Battery', desc: 'LFP batteries from CATL — same chemistry powering Tesla / BMW. Thermal stable 60°C ambient.' },
+  { icon: '🇷🇺', title: 'Strong CIS / Russia Growth', desc: 'Deepal S07 launched in Russia Q1 2025 — fastest-growing Chinese EREV brand in CIS.' },
+  { icon: '✅', title: 'Authorized via Changan MoU', desc: 'EV Auto Pro authorized exporter via 2018 Changan parent-group MoU. Direct factory pricing, no markup.' },
 ];
 
 const markets = [
@@ -66,18 +66,18 @@ const markets = [
 ];
 
 const cases = [
-  { headline: '50 Units Changan UNI-T → St. Petersburg', client: 'Moscow Trade Group', stars: 5, quote: 'EAC compliant. 18-day block train delivery. Repeat monthly.' },
-  { headline: '30 Units CS75 Plus → Almaty', client: 'Kazakhstan Wholesale', stars: 5, quote: 'Khorgos rail freight. Fast, hassle-free.' },
-  { headline: '12 Units UNI-K iDD PHEV → Dubai', client: 'Gulf Auto Dist.', stars: 5, quote: 'GCC compliance complete. PHEV demand growing fast.' },
+  { headline: '30 Units Deepal S07 EREV → Jebel Ali, UAE', client: 'Gulf Auto Distributor', stars: 5, quote: 'GCC complete. S07 EREV solves desert charging anxiety — drove 800km on Riyadh-Dubai highway.' },
+  { headline: '18 Units Deepal S05 BEV → St. Petersburg', client: 'Moscow Trade Group', stars: 5, quote: 'EAC certified. Compact urban BEV with strong winter range performance.' },
+  { headline: '12 Units Deepal S09 Flagship → Almaty', client: 'Kazakhstan Premium Dealer', stars: 5, quote: 'EREV flagship competes with Li Auto L9 at lower FOB. Premium buyers very satisfied.' },
 ];
 
 const brandFaqs = [
-  { q: 'Is EV Auto Pro really an authorized Changan exporter?', a: 'Yes. We hold a signed dealer MoU with Changan Automobile since 2018. We can share the MoU scan on request. Factory invoice provided for every unit — no grey market.' },
-  { q: 'Which Changan models are best for export to Russia / CIS?', a: 'UNI-T (compact coupé SUV) and CS75 Plus (mid SUV) are top sellers in Russia/CIS. UNI-K iDD (PHEV) growing fast in Central Asia. Cold-weather configuration available.' },
-  { q: 'Does Changan support right-hand drive (RHD)?', a: 'Yes for CS75 Plus and select UNI models. Factory RHD batch MOQ: 20 units. Lead time 45-60 days from order.' },
-  { q: 'What is the warranty for Changan exported vehicles?', a: '5-year / 100,000 km vehicle warranty. 8-year / 160,000 km on Deepal/Qiyuan EV batteries. Local warranty fulfillment via Changan authorized partners in major markets.' },
-  { q: 'Can I order custom configuration (paint / interior / wheels)?', a: 'Yes. Custom paint codes (10+ colors), wheel sizes (16-20"), interior trim (cloth/leather), audio upgrade. MOQ varies by spec.' },
-  { q: 'How fast can Changan models ship?', a: 'In-stock units: 3-15 days from PI signing. Custom factory orders: 30-45 days. We maintain 80+ Changan units in Shanghai bonded warehouse.' },
+  { q: 'Is EV Auto Pro really an authorized Deepal exporter?', a: 'Yes. We hold a signed dealer MoU with Changan Auto Group (Deepal\'s parent) since 2018, with Deepal-specific authorization added 2023. We share the MoU scan on request. Factory invoice provided.' },
+  { q: 'What is EREV and why is Deepal S07 / S09 popular?', a: 'EREV (Extended-Range EV) drives 200km on battery, with a small gas engine acting as battery charger for long trips (total 1000km+ range). Perfect for markets with limited fast-charging infrastructure — Middle East, Africa, Russia interior.' },
+  { q: 'Does Deepal support right-hand drive (RHD)?', a: 'Not yet — Deepal is China-focused at launch. Factory RHD development underway for select markets (UK / SA) in 2026. Contact us for timeline.' },
+  { q: 'What is the warranty for Deepal exported vehicles?', a: '5-year / 100,000 km vehicle warranty. 8-year / 160,000 km on battery + electric drivetrain. CATL battery cells carry CATL\'s own warranty in parallel.' },
+  { q: 'Can I order custom configuration (paint / interior)?', a: 'Yes. Custom paint codes, interior trim (vegan leather / PU / fabric), Snapdragon 8295 infotainment language pre-load. MOQ varies by spec.' },
+  { q: 'How fast can Deepal models ship?', a: 'In-stock units: 3-15 days from PI signing. Custom factory orders: 30-45 days. We maintain 60+ Deepal units in Shanghai bonded warehouse.' },
 ];
 ---
 
@@ -148,8 +148,8 @@ const brandFaqs = [
         </div>
         <div class="space-y-6 text-base lg:text-lg text-ink-700 leading-relaxed">
           {brandStory.split('\n\n').map(para => <p>{para}</p>)}
-          <a href="https://www.changan.com.cn" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:text-brand-600 mt-4">
-            Visit Changan official site ↗
+          <a href="https://www.deepal.com.cn" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:text-brand-600 mt-4">
+            Visit Deepal official site ↗
           </a>
         </div>
       </div>
@@ -162,9 +162,9 @@ const brandFaqs = [
       <div class="grid sm:grid-cols-[80px_1fr] gap-6 items-start">
         <div class="w-20 h-20 rounded-2xl bg-brand-500 flex items-center justify-center text-4xl">★</div>
         <div>
-          <h3 class="text-2xl font-bold text-ink-900 mb-2">EV Auto Pro is an authorized Changan exporter</h3>
+          <h3 class="text-2xl font-bold text-ink-900 mb-2">EV Auto Pro is an authorized Deepal exporter</h3>
           <p class="text-base text-ink-700 leading-relaxed">
-            We hold a signed dealer MoU with Changan Automobile since <strong>{brand.authorized_since}</strong>. Every unit shipped is sourced directly from the factory — no grey market, no rebadged units. Factory invoice provided for every export order on request. Customs and EAC/GCC/INMETRO documentation handled in-house.
+            We hold a signed dealer MoU with Deepal Automobile since <strong>{brand.authorized_since}</strong>. Every unit shipped is sourced directly from the factory — no grey market, no rebadged units. Factory invoice provided for every export order on request. Customs and EAC/GCC/INMETRO documentation handled in-house.
           </p>
         </div>
       </div>
@@ -177,9 +177,9 @@ const brandFaqs = [
       <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4">
         <div>
           <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Available Models</p>
-          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">{models.length} Changan models for export</h2>
+          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">{models.length} Deepal models for export</h2>
         </div>
-        <a href="/cars/?brand=changan" class="text-sm font-semibold text-brand-500 hover:text-brand-600">All Changan models →</a>
+        <a href="/cars/?brand=deepal" class="text-sm font-semibold text-brand-500 hover:text-brand-600">All Deepal models →</a>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -212,12 +212,12 @@ const brandFaqs = [
     </div>
   </section>
 
-  {/* ============ 6. SUB-BRAND FAMILY (Changan 旗下子品牌) ============ */}
+  {/* ============ 6. SUB-BRAND FAMILY (Deepal 旗下子品牌) ============ */}
   <section class="py-24 lg:py-32 bg-ink-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Changan Family</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Sub-brands under Changan group</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Deepal Family</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Sub-brands under Deepal group</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {subBrands.map(b => (
@@ -229,7 +229,7 @@ const brandFaqs = [
               <h3 class="text-xl font-bold text-ink-900 group-hover:text-brand-500 transition-colors">{b.name}</h3>
               <p class="text-sm text-brand-500 font-semibold mb-2">{b.cn}</p>
               <p class="text-sm text-ink-600 leading-relaxed mb-3">{b.desc}</p>
-              <div class="text-xs text-ink-500">{b.models} models · authorized via Changan MoU</div>
+              <div class="text-xs text-ink-500">{b.models} models · authorized via Deepal MoU</div>
             </div>
           </a>
         ))}
@@ -241,8 +241,8 @@ const brandFaqs = [
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Why Choose Changan</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">6 reasons dealers pick Changan via EV Auto Pro</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Why Choose Deepal</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">6 reasons dealers pick Deepal via EV Auto Pro</h2>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {advantages.map(a => (
@@ -260,8 +260,8 @@ const brandFaqs = [
   <section class="py-24 lg:py-32 bg-ink-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-16">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Where Changan Wins</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Top markets for Changan export</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Where Deepal Wins</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Top markets for Deepal export</h2>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
         {markets.map(m => (
@@ -284,8 +284,8 @@ const brandFaqs = [
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Recent Changan Shipments</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Your Changan has arrived</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Recent Deepal Shipments</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Your Deepal has arrived</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
         {cases.map((c, i) => (
@@ -311,8 +311,8 @@ const brandFaqs = [
   <section class="py-24 lg:py-32 bg-ink-50">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Changan FAQ</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Common Changan questions</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Deepal FAQ</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Common Deepal questions</h2>
       </div>
       <div class="space-y-3">
         {brandFaqs.map(f => (
@@ -336,7 +336,7 @@ const brandFaqs = [
       <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover" />
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Import Changan from China</h2>
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Import Deepal from China</h2>
       <p class="text-lg text-ink-300 mb-10 max-w-2xl mx-auto">
         {models.length} models in stock · FOB from ${Math.min(...models.map(m => m.price_min)).toLocaleString()} · 24h quote · 60+ countries shipped
       </p>
@@ -344,7 +344,7 @@ const brandFaqs = [
         <a href="/contact/quote/?brand=deepal" class="inline-flex items-center px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
           Request a Quote
         </a>
-        <a href="https://wa.me/8613800000000?text=Changan%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
+        <a href="https://wa.me/8613800000000?text=Deepal%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
           💬 WhatsApp Cai
         </a>
         <a href="/contact/catalogue/?brand=deepal" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">

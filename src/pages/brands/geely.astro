@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// Single brand master template — Changan
+// Single brand master template — Geely
 // Reusable for 5 other authorized brands (Deepal/Qiyuan/Geely/VW/Jetour)
 // Structure synthesized from cars-in-china/byd + ihka about + Mercedes whitespace aesthetic
 
@@ -9,8 +9,8 @@ const brand = {
   name: 'Geely',
   cn: '吉利',
   slug: 'geely',
-  tagline: 'Direct from China\'s Largest State-Owned Auto Brand',
-  hero_image: '/images/about-team.svg', // 真图后替换
+  tagline: 'China\'s Largest Privately Held Auto Group',
+  hero_image: '/images/about-team.svg',
   logo: '/images/brand-geely.svg',
   authorized_since: 2016,
   founded: 1986,
@@ -20,21 +20,21 @@ const brand = {
 };
 
 const heroBadges = [
-  'Authorized Dealer Since 2018',
-  '8 Models Available',
+  'Authorized Dealer Since 2016',
+  '7 Models Available',
   'In-Stock Same-Day Ship',
 ];
 
 const stats = [
-  { num: '1862', label: 'Brand Founded', sub: 'Chongqing, China' },
-  { num: '2.5M', label: 'Annual Production', sub: 'units / year' },
+  { num: '1986', label: 'Brand Founded', sub: 'Hangzhou, China' },
+  { num: '1.7M', label: 'Annual Production', sub: 'units / year' },
   { num: '60+', label: 'Export Countries', sub: 'Global Network' },
-  { num: '80+', label: 'In Bonded Stock', sub: 'Ready to Ship' },
+  { num: '70+', label: 'In Bonded Stock', sub: 'Ready to Ship' },
 ];
 
-const brandStory = `Changan Auto (长安汽车), founded in 1862 in Chongqing, is the oldest and one of the Big Four state-owned auto manufacturers in China. With 2.5+ million vehicles produced annually, Changan has expanded its export footprint to 60+ countries across Russia, Middle East, Central Asia, LATAM, and Africa.
+const brandStory = `Geely Auto (吉利汽车), founded in 1986 in Hangzhou, is China's largest privately held auto group. Geely Holding Group owns Volvo Cars (Sweden), Lotus (UK), Polestar (EV), Proton (Malaysia), and Lynk & Co — making it the most internationally-integrated Chinese auto manufacturer.
 
-EV Auto Pro is an authorized Changan exporter since 2018. We hold direct dealer MoUs covering Changan's full passenger vehicle lineup — from UNI series sport coupé SUVs to CS family SUVs to Eado sedans. Every unit traceable to factory invoice. Zero grey market.`;
+EV Auto Pro is an authorized Geely exporter since 2016. We hold dealer MoUs covering Geely's global lineup — Coolray (compact SUV), Atlas (mid SUV), Monjaro (premium SUV), Emgrand (sedan), and the new Geometry EV series. Every unit traceable to factory invoice. Zero grey market.`;
 
 const models = [
   { slug: 'geely-coolray', name: 'Coolray', body: 'Compact SUV', fuel: 'ICE', price_min: 15200, stock: 28, ready: true },
@@ -52,11 +52,11 @@ const subBrands = [
 ];
 
 const advantages = [
-  { icon: '🏛', title: 'State-Owned Backing', desc: '163-year heritage. China central government holds majority stake. Highest financial stability among Chinese OEMs.' },
-  { icon: '⚙', title: 'Self-Developed Powertrain', desc: 'Changan\'s "Blue Whale" engines (1.4T/1.5T/2.0T) — China\'s benchmark turbocharged powerplants.' },
-  { icon: '🚗', title: 'UNI Sport DNA', desc: 'UNI series wins multiple "Most Innovative Design" awards — sport coupé SUVs at compact-SUV pricing.' },
-  { icon: '🔋', title: 'NEV Pivot Done', desc: 'Deepal + Qiyuan sub-brands cover BEV/PHEV/EREV. 2025 NEV market share top 5 in China.' },
-  { icon: '🌍', title: 'Russia & CIS Top Choice', desc: 'Changan is the #1 Chinese ICE brand by sales volume in Russia/CIS region 2025.' },
+  { icon: '🌍', title: 'Global Integrated R&D', desc: 'Geely Holding owns Volvo / Lotus / Polestar / Proton — sharing tech platform with European premium brands.' },
+  { icon: '🇸🇪', title: 'Volvo Safety DNA', desc: 'Coolray / Atlas built on CMA platform jointly developed with Volvo — European safety standards at China prices.' },
+  { icon: '🚗', title: 'Best-Selling Compact SUV', desc: 'Geely Coolray (Binyue) is #1 best-selling Chinese compact SUV abroad — proven export success.' },
+  { icon: '🔋', title: 'Premium NEV Sub-brand Family', desc: 'Zeekr (luxury EV) + Lynk & Co (lifestyle performance) + Geometry (BEV) — full premium NEV coverage.' },
+  { icon: '🌐', title: 'Strong UAE / GCC Presence', desc: 'Geely is top-3 Chinese brand in UAE / Saudi / Egypt by registered dealer network 2025.' },
   { icon: '✅', title: 'Direct OEM Pricing', desc: 'EV Auto Pro is authorized exporter — factory MSRP, no dealer markup. Verify with factory on request.' },
 ];
 
@@ -68,18 +68,18 @@ const markets = [
 ];
 
 const cases = [
-  { headline: '50 Units Changan UNI-T → St. Petersburg', client: 'Moscow Trade Group', stars: 5, quote: 'EAC compliant. 18-day block train delivery. Repeat monthly.' },
-  { headline: '30 Units CS75 Plus → Almaty', client: 'Kazakhstan Wholesale', stars: 5, quote: 'Khorgos rail freight. Fast, hassle-free.' },
-  { headline: '12 Units UNI-K iDD PHEV → Dubai', client: 'Gulf Auto Dist.', stars: 5, quote: 'GCC compliance complete. PHEV demand growing fast.' },
+  { headline: '40 Units Geely Coolray → Almaty', client: 'Central Asia Wholesale', stars: 5, quote: 'Khorgos rail freight saved 15 days. Volvo platform safety reassures our Russian buyers.' },
+  { headline: '25 Units Atlas → Riyadh', client: 'Saudi Auto Distributor', stars: 5, quote: 'GCC + SASO complete. ICE 2.0T spec popular for desert highway driving.' },
+  { headline: '18 Units Monjaro → Moscow', client: 'Moscow Premium Dealer', stars: 5, quote: 'Premium mid-SUV alternative to Touareg / Q7 at half the price. Strong sales.' },
 ];
 
 const brandFaqs = [
-  { q: 'Is EV Auto Pro really an authorized Changan exporter?', a: 'Yes. We hold a signed dealer MoU with Changan Automobile since 2018. We can share the MoU scan on request. Factory invoice provided for every unit — no grey market.' },
-  { q: 'Which Changan models are best for export to Russia / CIS?', a: 'UNI-T (compact coupé SUV) and CS75 Plus (mid SUV) are top sellers in Russia/CIS. UNI-K iDD (PHEV) growing fast in Central Asia. Cold-weather configuration available.' },
-  { q: 'Does Changan support right-hand drive (RHD)?', a: 'Yes for CS75 Plus and select UNI models. Factory RHD batch MOQ: 20 units. Lead time 45-60 days from order.' },
-  { q: 'What is the warranty for Changan exported vehicles?', a: '5-year / 100,000 km vehicle warranty. 8-year / 160,000 km on Deepal/Qiyuan EV batteries. Local warranty fulfillment via Changan authorized partners in major markets.' },
-  { q: 'Can I order custom configuration (paint / interior / wheels)?', a: 'Yes. Custom paint codes (10+ colors), wheel sizes (16-20"), interior trim (cloth/leather), audio upgrade. MOQ varies by spec.' },
-  { q: 'How fast can Changan models ship?', a: 'In-stock units: 3-15 days from PI signing. Custom factory orders: 30-45 days. We maintain 80+ Changan units in Shanghai bonded warehouse.' },
+  { q: 'Is EV Auto Pro really an authorized Geely exporter?', a: 'Yes. We hold a signed dealer MoU with Geely Automobile since 2016. We can share the MoU scan on request. Factory invoice provided for every unit — no grey market.' },
+  { q: 'Which Geely models are best for export to Russia / CIS?', a: 'Coolray (compact SUV) and Atlas (mid SUV) are top sellers in Russia/CIS — built on Volvo-shared CMA platform. Monjaro (premium mid SUV) growing in Moscow/Almaty.' },
+  { q: 'Does Geely support right-hand drive (RHD)?', a: 'Yes for Coolray and Atlas. Factory RHD batch MOQ: 20 units. Lead time 45-60 days from order. Suitable for UK / SA / PK / ID markets.' },
+  { q: 'What is the warranty for Geely exported vehicles?', a: '5-year / 100,000 km vehicle warranty (CMA platform models). 8-year / 160,000 km on Geometry EV batteries. Local warranty via Geely authorized partners in major markets.' },
+  { q: 'Can I order custom configuration (paint / interior / wheels)?', a: 'Yes. Custom paint codes (10+ colors including Volvo-shared Crystal White / Onyx Black), wheel sizes (16-20"), interior trim. MOQ varies by spec.' },
+  { q: 'How fast can Geely models ship?', a: 'In-stock units: 3-15 days from PI signing. Custom factory orders: 30-45 days. We maintain 70+ Geely units in Shanghai bonded warehouse.' },
 ];
 ---
 
@@ -150,8 +150,8 @@ const brandFaqs = [
         </div>
         <div class="space-y-6 text-base lg:text-lg text-ink-700 leading-relaxed">
           {brandStory.split('\n\n').map(para => <p>{para}</p>)}
-          <a href="https://www.changan.com.cn" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:text-brand-600 mt-4">
-            Visit Changan official site ↗
+          <a href="https://www.geely.com.cn" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:text-brand-600 mt-4">
+            Visit Geely official site ↗
           </a>
         </div>
       </div>
@@ -164,9 +164,9 @@ const brandFaqs = [
       <div class="grid sm:grid-cols-[80px_1fr] gap-6 items-start">
         <div class="w-20 h-20 rounded-2xl bg-brand-500 flex items-center justify-center text-4xl">★</div>
         <div>
-          <h3 class="text-2xl font-bold text-ink-900 mb-2">EV Auto Pro is an authorized Changan exporter</h3>
+          <h3 class="text-2xl font-bold text-ink-900 mb-2">EV Auto Pro is an authorized Geely exporter</h3>
           <p class="text-base text-ink-700 leading-relaxed">
-            We hold a signed dealer MoU with Changan Automobile since <strong>{brand.authorized_since}</strong>. Every unit shipped is sourced directly from the factory — no grey market, no rebadged units. Factory invoice provided for every export order on request. Customs and EAC/GCC/INMETRO documentation handled in-house.
+            We hold a signed dealer MoU with Geely Automobile since <strong>{brand.authorized_since}</strong>. Every unit shipped is sourced directly from the factory — no grey market, no rebadged units. Factory invoice provided for every export order on request. Customs and EAC/GCC/INMETRO documentation handled in-house.
           </p>
         </div>
       </div>
@@ -179,9 +179,9 @@ const brandFaqs = [
       <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4">
         <div>
           <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Available Models</p>
-          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">{models.length} Changan models for export</h2>
+          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">{models.length} Geely models for export</h2>
         </div>
-        <a href="/cars/?brand=changan" class="text-sm font-semibold text-brand-500 hover:text-brand-600">All Changan models →</a>
+        <a href="/cars/?brand=geely" class="text-sm font-semibold text-brand-500 hover:text-brand-600">All Geely models →</a>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -214,12 +214,12 @@ const brandFaqs = [
     </div>
   </section>
 
-  {/* ============ 6. SUB-BRAND FAMILY (Changan 旗下子品牌) ============ */}
+  {/* ============ 6. SUB-BRAND FAMILY (Geely 旗下子品牌) ============ */}
   <section class="py-24 lg:py-32 bg-ink-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Changan Family</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Sub-brands under Changan group</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Geely Family</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Sub-brands under Geely group</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {subBrands.map(b => (
@@ -231,7 +231,7 @@ const brandFaqs = [
               <h3 class="text-xl font-bold text-ink-900 group-hover:text-brand-500 transition-colors">{b.name}</h3>
               <p class="text-sm text-brand-500 font-semibold mb-2">{b.cn}</p>
               <p class="text-sm text-ink-600 leading-relaxed mb-3">{b.desc}</p>
-              <div class="text-xs text-ink-500">{b.models} models · authorized via Changan MoU</div>
+              <div class="text-xs text-ink-500">{b.models} models · authorized via Geely MoU</div>
             </div>
           </a>
         ))}
@@ -243,8 +243,8 @@ const brandFaqs = [
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Why Choose Changan</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">6 reasons dealers pick Changan via EV Auto Pro</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Why Choose Geely</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">6 reasons dealers pick Geely via EV Auto Pro</h2>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {advantages.map(a => (
@@ -262,8 +262,8 @@ const brandFaqs = [
   <section class="py-24 lg:py-32 bg-ink-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-16">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Where Changan Wins</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Top markets for Changan export</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Where Geely Wins</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Top markets for Geely export</h2>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
         {markets.map(m => (
@@ -286,8 +286,8 @@ const brandFaqs = [
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Recent Changan Shipments</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Your Changan has arrived</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Recent Geely Shipments</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Your Geely has arrived</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
         {cases.map((c, i) => (
@@ -313,8 +313,8 @@ const brandFaqs = [
   <section class="py-24 lg:py-32 bg-ink-50">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Changan FAQ</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Common Changan questions</h2>
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Geely FAQ</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Common Geely questions</h2>
       </div>
       <div class="space-y-3">
         {brandFaqs.map(f => (
@@ -338,7 +338,7 @@ const brandFaqs = [
       <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover" />
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Import Changan from China</h2>
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Import Geely from China</h2>
       <p class="text-lg text-ink-300 mb-10 max-w-2xl mx-auto">
         {models.length} models in stock · FOB from ${Math.min(...models.map(m => m.price_min)).toLocaleString()} · 24h quote · 60+ countries shipped
       </p>
@@ -346,7 +346,7 @@ const brandFaqs = [
         <a href="/contact/quote/?brand=geely" class="inline-flex items-center px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
           Request a Quote
         </a>
-        <a href="https://wa.me/8613800000000?text=Changan%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
+        <a href="https://wa.me/8613800000000?text=Geely%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
           💬 WhatsApp Cai
         </a>
         <a href="/contact/catalogue/?brand=geely" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
