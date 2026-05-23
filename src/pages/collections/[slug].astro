@@ -1,0 +1,236 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { cars } from '../../data/cars';
+
+const collections = {
+  'chinese-electric-suv': {
+    title: 'Chinese Electric SUVs',
+    h1: 'Chinese Electric SUVs for Export',
+    subtitle: 'BEV / EREV / PHEV SUV models from China — wholesale FOB',
+    description: 'Best Chinese electric SUVs available for export. BEV (battery electric), EREV (extended-range), and PHEV (plug-in hybrid) models from Deepal, Geely, Jetour, Volkswagen China.',
+    intro: 'Chinese auto OEMs lead global NEV SUV production. From entry-level Deepal S05 BEV to flagship S09 EREV, we offer authorized direct supply. CATL LFP batteries, MEB / native EV platforms, 5-year/8-year battery warranty.',
+    icon: '⚡',
+    matchFn: (c: typeof cars[string]) => (c.fuel_type === 'BEV' || c.fuel_type === 'PHEV' || c.fuel_type === 'EREV') && c.body_type.includes('SUV'),
+    seoTitle: 'Chinese Electric SUV Export | BEV / EREV / PHEV from China',
+    bestFor: ['Russia (Deepal S07 EREV cold weather)', 'UAE (Deepal S05/S09 desert)', 'Brazil (Geely EV growing market)', 'Mexico (urban BEV growth)'],
+    faqs: [
+      { q: 'What is the cheapest Chinese electric SUV for export?', a: 'Deepal S05 BEV starts FOB $19,200. Qiyuan Q05 PHEV from $14,500 (PHEV SUV). For BEV pure-electric, Deepal S05 is the entry point.' },
+      { q: 'Best Chinese electric SUV for cold weather?', a: 'Deepal S07 EREV — drives 200km on battery, gas engine extends to 1000+ km. Solves cold-weather charging anxiety. Top choice for Russia/CIS.' },
+      { q: 'Charging compatibility?', a: 'Chinese EVs support GB/T (China standard). CCS2 (Europe), Type 1 (US/Japan), CHAdeMO adapters available. Some markets prefer EREV/PHEV for charging-limited regions.' },
+    ],
+  },
+  'chinese-plug-in-hybrid-cars': {
+    title: 'Chinese PHEV / Hybrid Cars',
+    h1: 'Chinese PHEV & Hybrid Cars for Export',
+    subtitle: 'Plug-in hybrid vehicles — pure electric + extended range',
+    description: 'Best Chinese PHEV (Plug-in Hybrid) and HEV (Hybrid) vehicles available for export. Best of both worlds — pure electric urban driving + gas engine for highway.',
+    intro: 'PHEV solves the EV charging anxiety problem. Chinese PHEV technology leads globally — Jetour T2 PHEV, Deepal EREV (technically extended-range), Changan UNI-K iDD. 100-200 km pure electric + 800-1200 km total range.',
+    icon: '🔋',
+    matchFn: (c: typeof cars[string]) => c.fuel_type === 'PHEV' || c.fuel_type === 'EREV' || c.fuel_type === 'HEV',
+    seoTitle: 'Chinese PHEV Hybrid Cars Export | EREV + Plug-in Hybrid',
+    bestFor: ['Middle East (desert highways)', 'Russia (cold-weather range)', 'Central Asia (vast distances)', 'Africa (limited charging infrastructure)'],
+    faqs: [
+      { q: 'PHEV vs BEV — which to import?', a: 'PHEV: best for markets with limited charging (Africa, rural Russia/Central Asia, GCC desert). BEV: best for urban dense markets (UAE cities, Mexico City, São Paulo).' },
+      { q: 'What is EREV (Extended-Range EV)?', a: 'EREV drives 100-200km purely on battery, with a small gas engine acting only as battery charger (no direct mechanical drive). Total range 1000+ km. Examples: Deepal S07, Deepal S09.' },
+      { q: 'Best Chinese PHEV SUV?', a: 'Jetour T2 (7-seater PHEV, $22,500 FOB) — fastest-growing PHEV SUV in Central Asia. Adventure off-road styling + plug-in flexibility.' },
+    ],
+  },
+  'chinese-pickup-trucks': {
+    title: 'Chinese Pickup Trucks',
+    h1: 'Chinese Pickup Trucks for Export',
+    subtitle: 'Diesel / Gas / EV pickups for fleet, agriculture, and commercial use',
+    description: 'Chinese pickup trucks for export — proven workhorses from GreatWall (Wingle/Poer/Cannon), JAC, Changan Kaicene. Diesel + gas + new EV variants.',
+    intro: 'Chinese pickup market is dominated by Great Wall (Wingle 7, Poer, Cannon series), JAC (T8/T9), and Changan Kaicene. Note: We currently focus on passenger NEVs — pickup truck orders handled case-by-case via Chery Group / Changan sourcing.',
+    icon: '🛻',
+    matchFn: (c: typeof cars[string]) => c.body_type.toLowerCase().includes('pickup'),
+    seoTitle: 'Chinese Pickup Trucks Export | Great Wall / JAC / Changan Kaicene',
+    bestFor: ['Central Asia (agriculture)', 'Africa (rugged terrain)', 'LATAM (commercial fleet)', 'Middle East (oil field fleet)'],
+    faqs: [
+      { q: 'Do you supply Chinese pickup trucks?', a: 'Pickup trucks are not our primary focus (we specialize in passenger NEVs). However, we source pickup trucks (Great Wall, JAC, Changan Kaicene) via case-by-case orders for established dealers.' },
+      { q: 'Best Chinese pickup for export?', a: 'Great Wall Wingle 7 (most exported pickup), Great Wall Poer (premium), Changan Kaicene Hunter (PHEV pickup). Contact us for specific market recommendation.' },
+      { q: 'Pickup MOQ + lead time?', a: 'MOQ 5 units (lower than passenger vehicles due to less stock). Lead time 30-60 days from order via sourcing network.' },
+    ],
+  },
+  'right-hand-drive-chinese-cars': {
+    title: 'Right-Hand Drive Chinese Cars',
+    h1: 'Right-Hand Drive (RHD) Chinese Cars for Export',
+    subtitle: 'Factory RHD for UK / South Africa / Pakistan / Indonesia / Kenya / SE Asia',
+    description: 'Authorized factory RHD Chinese cars for right-hand-drive markets. UK / South Africa / Pakistan / Indonesia / Australia / New Zealand / Kenya / Tanzania / Caribbean / SE Asia.',
+    intro: 'Several Chinese models offer factory RHD configuration. We coordinate factory RHD batch orders (MOQ 20 units) with 45-60 day lead time. Select Geely Coolray / Atlas, Changan CS75 Plus, Jetour T2 / X70 Plus support factory RHD.',
+    icon: '↔️',
+    matchFn: (c: typeof cars[string]) => ['changan-cs55-plus', 'geely-coolray', 'geely-atlas', 'jetour-t2'].includes(c.slug),
+    seoTitle: 'Right-Hand Drive Chinese Cars Export | RHD UK / SA / PK / ID',
+    bestFor: ['UK + dependencies', 'South Africa', 'Pakistan', 'Indonesia / Thailand / Malaysia', 'Kenya / Tanzania / Uganda', 'Caribbean states'],
+    faqs: [
+      { q: 'Which Chinese models support factory RHD?', a: 'Geely Coolray / Atlas (CMA platform RHD), Changan CS75 Plus, Jetour T2 / X70 Plus. Factory RHD batch MOQ 20 units, 45-60 day lead time.' },
+      { q: 'Do you do aftermarket RHD conversion?', a: 'No. Aftermarket conversion is not safe for export markets (insurance / type approval issues). We only offer factory RHD batches.' },
+      { q: 'RHD vs LHD price difference?', a: 'Factory RHD typically +$500-1,500 per unit vs LHD due to lower production volume. We absorb part of cost for ≥30 unit orders.' },
+      { q: 'Best RHD market for Chinese cars?', a: 'South Africa, Pakistan, Indonesia growing fast. UK is challenging (premium brand competition). Caribbean + East Africa growing volumes.' },
+    ],
+  },
+  'chinese-cars-under-15000-usd': {
+    title: 'Chinese Cars Under $15,000 FOB',
+    h1: 'Affordable Chinese Cars Under $15,000 FOB',
+    subtitle: 'Entry-priced China-made vehicles for emerging markets',
+    description: 'Best affordable Chinese cars FOB Shanghai under $15,000. Entry sedans, compact SUVs, and entry-level NEVs for emerging-market dealers.',
+    intro: 'Price-sensitive markets need entry-priced vehicles. We supply affordable Chinese models under $15,000 FOB — Qiyuan PHEV from $12,800, Geely Emgrand sedan from $11,500, Changan UNI-T sport SUV from $13,800.',
+    icon: '💰',
+    matchFn: (c: typeof cars[string]) => c.pricing.fob_min < 15000,
+    seoTitle: 'Cheap Chinese Cars Under $15K FOB | Affordable China Export',
+    bestFor: ['Egypt (entry sedan)', 'Uzbekistan (compact SUV)', 'Brazil (affordable EV)', 'Africa (low-cost mobility)'],
+    faqs: [
+      { q: 'Cheapest Chinese car FOB?', a: 'Geely Emgrand compact sedan from $11,500 FOB. Qiyuan A05 PHEV $12,800. Changan UNI-T sport SUV $13,800. All authorized brands, no grey market.' },
+      { q: 'Are sub-$15K models still good quality?', a: 'Yes. Chinese cost competitiveness comes from supply chain scale, not quality cuts. CATL batteries / Volvo CMA platforms even on affordable models.' },
+      { q: 'MOQ for sub-$15K orders?', a: 'MOQ 1 unit. Higher volumes available — entry-priced models often shipped in 30-50 unit batches by emerging-market dealers.' },
+      { q: 'Best affordable model for first-time importer?', a: 'Changan CS55 Plus ($14,500) — best-seller in 60+ countries, easiest market acceptance. Or Geely Emgrand sedan ($11,500) for sedan markets.' },
+    ],
+  },
+};
+
+export function getStaticPaths() {
+  return Object.entries(collections).map(([slug, col]) => ({
+    params: { slug },
+    props: { collection: col, slug },
+  }));
+}
+
+const { collection, slug } = Astro.props;
+const matchingCars = Object.values(cars).filter(collection.matchFn);
+
+const realImageSlugs = ['geely-atlas', 'geely-coolray', 'geely-emgrand', 'geely-monjaro', 'jetour-t2', 'jetour-dasheng', 'jetour-x70plus'];
+---
+
+<BaseLayout
+  title={collection.seoTitle}
+  description={collection.description}
+>
+  {/* Hero */}
+  <section class="relative bg-ink-900 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover opacity-25" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <nav class="text-xs text-ink-400 mb-6">
+        <a href="/" class="hover:text-brand-500">Home</a> ·
+        <a href="/cars/" class="hover:text-brand-500">Cars</a> ·
+        <span class="text-white">{collection.title}</span>
+      </nav>
+      <div class="text-6xl mb-6">{collection.icon}</div>
+      <h1 class="text-4xl lg:text-6xl font-bold text-white leading-tight mb-4">{collection.h1}</h1>
+      <p class="text-xl text-brand-500 font-semibold mb-3">{collection.subtitle}</p>
+      <p class="text-base text-ink-300 max-w-3xl">{collection.description}</p>
+    </div>
+  </section>
+
+  {/* Intro */}
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-lg text-ink-700 leading-relaxed">{collection.intro}</p>
+    </div>
+  </section>
+
+  {/* Matching Models */}
+  <section class="py-12 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">{matchingCars.length} Matching Models</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Available Now</h2>
+      </div>
+      {matchingCars.length === 0 ? (
+        <div class="text-center py-12">
+          <p class="text-base text-ink-600 mb-6">No models currently match this collection. We can source via authorized partner network.</p>
+          <a href="/contact/quote/" class="btn-primary">Inquire Sourcing</a>
+        </div>
+      ) : (
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {matchingCars.map(c => {
+            const img = realImageSlugs.includes(c.slug) ? `/images/真图/laundered/evautopro-${c.slug}-01.webp` : `/images/car-${c.slug}.svg`;
+            return (
+              <a href={`/cars/${c.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
+                <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+                  <img src={img} alt={c.model} class="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div class="p-5">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="px-2 py-0.5 bg-ink-100 text-ink-600 text-xs rounded">{c.body_type}</span>
+                    <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{c.fuel_type}</span>
+                  </div>
+                  <div class="text-xs text-ink-500 mb-1">{c.brand}</div>
+                  <h3 class="text-base font-semibold text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{c.model}</h3>
+                  <div class="flex items-end justify-between pt-3 border-t border-ink-100">
+                    <div>
+                      <div class="text-xs text-ink-500">From FOB</div>
+                      <div class="text-lg font-bold text-ink-900">${c.pricing.fob_min.toLocaleString()}</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-xs text-ink-500">Stock</div>
+                      <div class="text-sm font-semibold text-ink-900">{c.stock_units}</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  </section>
+
+  {/* Best For Markets */}
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Best Markets</p>
+        <h2 class="text-2xl lg:text-3xl font-bold text-ink-900">Where {collection.title.toLowerCase()} sell best</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        {collection.bestFor.map(b => (
+          <div class="flex items-start gap-3 bg-white border border-ink-200 rounded-xl p-5">
+            <span class="text-brand-500 text-xl">✓</span>
+            <span class="text-sm text-ink-700">{b}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* FAQ */}
+  <section class="py-20 bg-ink-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">FAQ</p>
+        <h2 class="text-3xl font-bold text-ink-900">Common questions</h2>
+      </div>
+      <div class="space-y-3">
+        {collection.faqs.map(f => (
+          <details class="group bg-white border border-ink-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer p-5 list-none">
+              <span class="font-semibold text-base text-ink-900 flex-1 group-open:text-brand-500 transition-colors">{f.q}</span>
+              <svg class="flex-shrink-0 w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="px-5 pb-5 pt-1 text-sm text-ink-700 leading-relaxed border-t border-ink-100">
+              <div class="pt-4">{f.a}</div>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section class="py-20 bg-brand-500">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-3">Ready to import?</h2>
+      <p class="text-base text-white/90 mb-8">FOB + CIF quote within 24h. MOQ 1.</p>
+      <a href={`/contact/quote/?collection=${slug}`} class="inline-flex items-center px-8 py-3 bg-white text-brand-500 hover:bg-ink-100 font-semibold rounded-lg transition-colors">
+        Request a Quote
+      </a>
+    </div>
+  </section>
+
+  {/* FAQPage Schema */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: collection.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  })} />
+</BaseLayout>

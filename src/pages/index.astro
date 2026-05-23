@@ -36,11 +36,11 @@ const featuredCars = [
 ];
 
 const useCases = [
-  { slug: 'electric-suv', label: 'Electric SUV', desc: 'BEV SUVs for fleet & dealer orders', tag: '12 models' },
-  { slug: 'phev-hybrid', label: 'PHEV / Hybrid', desc: 'Plug-in hybrids for long-range markets', tag: '8 models' },
-  { slug: 'pickup', label: 'Pickup Trucks', desc: 'Rugged builds for Central Asia farms', tag: '5 models' },
-  { slug: 'rhd', label: 'Right-Hand Drive', desc: 'UK / SA / PK / ID dealers', tag: '6 models' },
-  { slug: 'under-15k', label: 'Under $15,000', desc: 'Entry-price models for emerging markets', tag: '10 models' },
+  { slug: 'chinese-electric-suv', label: 'Electric SUV', desc: 'BEV SUVs for fleet & dealer orders', tag: '12 models' },
+  { slug: 'chinese-plug-in-hybrid-cars', label: 'PHEV / Hybrid', desc: 'Plug-in hybrids for long-range markets', tag: '8 models' },
+  { slug: 'chinese-pickup-trucks', label: 'Pickup Trucks', desc: 'Rugged builds for Central Asia farms', tag: 'On request' },
+  { slug: 'right-hand-drive-chinese-cars', label: 'Right-Hand Drive', desc: 'UK / SA / PK / ID dealers', tag: '6 models' },
+  { slug: 'chinese-cars-under-15000-usd', label: 'Under $15,000', desc: 'Entry-price models for emerging markets', tag: '10 models' },
 ];
 
 const trustBadges = [
@@ -251,7 +251,7 @@ const faqs = [
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
         {useCases.map(u => (
-          <a href={`/cars/${u.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-5 transition-all">
+          <a href={`/collections/${u.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-5 transition-all">
             <div class="text-xs font-semibold text-brand-500 mb-2">{u.tag}</div>
             <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 mb-2">{u.label}</h3>
             <p class="text-xs text-ink-500 leading-relaxed">{u.desc}</p>
