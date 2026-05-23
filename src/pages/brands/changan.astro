@@ -14,10 +14,11 @@ import { cars as carsData } from '../../data/cars';
 
 const allCars = Object.values(carsData);
 
-// Changan parent group includes: Changan main, Deepal, Qiyuan, Avatr
-const familyBrands = ['Changan', 'Deepal', 'Qiyuan', 'Avatr'];
+// Changan brand page = Changan-main models ONLY (UNI / CS series).
+// Sub-brands (Deepal / Qiyuan / Avatr) have their own pages — linked via
+// the Sister Brands selector below, not mixed into the model grid.
 const liveModels = allCars
-  .filter(c => familyBrands.includes(c.brand))
+  .filter(c => c.brand === 'Changan')
   .map(c => ({
     slug: c.slug,
     brand: c.brand,
@@ -30,15 +31,16 @@ const liveModels = allCars
     live: true,
   }));
 
-// Placeholder mockup cards (no detail pages yet — show as "Coming Soon")
+// Coming-soon Changan-only models (no detail page yet — disabled card)
 const comingSoon = [
-  { brand: 'Changan',  name: 'UNI-K',     body: 'Flagship SUV', fuel: 'PHEV',     status: 'On Order' },
-  { brand: 'Changan',  name: 'Hunter',    body: 'Pickup',       fuel: 'Diesel',   status: 'Ready Stock' },
-  { brand: 'Changan',  name: 'Lumin',     body: 'Hatchback',    fuel: 'EV',       status: 'Ready Stock' },
-  { brand: 'Avatr',    name: 'Avatr 11',  body: 'Mid SUV',      fuel: 'EV',       status: 'Limited Stock' },
-  { brand: 'Qiyuan',   name: 'Qiyuan A07',body: 'Sedan',        fuel: 'EV',       status: 'On Order' },
+  { brand: 'Changan', name: 'UNI-K',     body: 'Flagship SUV', fuel: 'PHEV',   status: 'On Order' },
+  { brand: 'Changan', name: 'UNI-Z',     body: 'Coupé SUV',    fuel: 'ICE',    status: 'Ready Stock' },
+  { brand: 'Changan', name: 'CS75 Plus', body: 'Mid SUV',      fuel: 'ICE',    status: 'Ready Stock' },
+  { brand: 'Changan', name: 'CS35 Plus', body: 'Entry SUV',    fuel: 'ICE',    status: 'On Order' },
+  { brand: 'Changan', name: 'Hunter',    body: 'Pickup',       fuel: 'Diesel', status: 'Ready Stock' },
+  { brand: 'Changan', name: 'Lumin',     body: 'Hatchback',    fuel: 'EV',     status: 'Ready Stock' },
 ];
-const allModels = [...liveModels.slice(0, 4), ...comingSoon, ...liveModels.slice(4)].slice(0, 8);
+const allModels = [...liveModels, ...comingSoon].slice(0, 8);
 
 const heroTrust = [
   { num: `${liveModels.length + comingSoon.length}+`, label: 'Available Models' },
@@ -54,12 +56,13 @@ const infoBar = [
   { icon: 'buyers',  label: 'Buyer Type',     value: 'Dealers / Importers / Fleets / Rental Companies' },
 ];
 
+// Series within Changan main brand + cross-links to sister sub-brands
 const series = [
-  { slug: 'uni',    label: 'UNI Series' },
-  { slug: 'cs',     label: 'CS Series' },
-  { slug: 'deepal', label: 'Deepal' },
-  { slug: 'qiyuan', label: 'Qiyuan' },
-  { slug: 'avatr',  label: 'Avatr' },
+  { slug: 'uni',    label: 'UNI Series',  href: '/cars/?series=uni',    isSubBrand: false },
+  { slug: 'cs',     label: 'CS Series',   href: '/cars/?series=cs',     isSubBrand: false },
+  { slug: 'deepal', label: 'Deepal',      href: '/brands/deepal/',      isSubBrand: true },
+  { slug: 'qiyuan', label: 'Qiyuan',      href: '/brands/qiyuan/',      isSubBrand: true },
+  { slug: 'avatr',  label: 'Avatr',       href: '/brands/avatr/',       isSubBrand: true },
 ];
 
 const vehicleTypes = [
@@ -311,12 +314,14 @@ const statusColor = (s: string) =>
           </h2>
           <div class="grid grid-cols-3 md:grid-cols-5 gap-3">
             {series.map(s => (
-              <a href={`/cars/?series=${s.slug}`} class="aspect-square rounded-lg border border-ink-200 hover:border-brand-500 flex flex-col items-center justify-center gap-1.5 text-ink-700 hover:text-brand-500 transition-colors">
+              <a href={s.href} class={`aspect-square rounded-lg border ${s.isSubBrand ? 'border-brand-200 bg-brand-50/30 hover:border-brand-500' : 'border-ink-200 hover:border-brand-500'} flex flex-col items-center justify-center gap-1 text-ink-700 hover:text-brand-500 transition-colors p-1.5`}>
                 <div class="text-base font-bold tracking-wider">{s.label.split(' ')[0]}</div>
-                <div class="text-[10px] text-ink-500 uppercase tracking-wider">{s.label.split(' ').slice(1).join(' ') || 'Series'}</div>
+                <div class="text-[10px] text-ink-500 uppercase tracking-wider">{s.label.split(' ').slice(1).join(' ') || (s.isSubBrand ? 'Sub-brand' : 'Series')}</div>
+                {s.isSubBrand && <div class="text-[9px] text-brand-500 font-semibold">→ Visit page</div>}
               </a>
             ))}
           </div>
+          <p class="text-[11px] text-ink-500 mt-3">Deepal · Qiyuan · Avatr are independent sub-brands under the Changan Group — each has its own dedicated brand page.</p>
         </div>
 
         {/* Vehicle Type */}
