@@ -87,14 +87,14 @@ const collections = {
   },
 };
 
+// Get all collection slugs for static paths (Astro getStaticPaths runs in isolated scope, so we pass slug only)
 export function getStaticPaths() {
-  return Object.entries(collections).map(([slug, col]) => ({
-    params: { slug },
-    props: { collection: col, slug },
-  }));
+  const slugs = ['chinese-electric-suv', 'chinese-plug-in-hybrid-cars', 'chinese-pickup-trucks', 'right-hand-drive-chinese-cars', 'chinese-cars-under-15000-usd'];
+  return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
 
-const { collection, slug } = Astro.props;
+const { slug } = Astro.props;
+const collection = collections[slug as keyof typeof collections];
 const matchingCars = Object.values(cars).filter(collection.matchFn);
 
 const realImageSlugs = ['geely-atlas', 'geely-coolray', 'geely-emgrand', 'geely-monjaro', 'jetour-t2', 'jetour-dasheng', 'jetour-x70plus'];
