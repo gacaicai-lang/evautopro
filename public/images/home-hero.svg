@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="35%" stop-color="#fb923c"/>
+      <stop offset="70%" stop-color="#9a3412"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="car-gray" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="car-white" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sunset sky -->
+  <rect width="1920" height="600" fill="url(#sky)"/>
+
+  <!-- Sun -->
+  <circle cx="960" cy="360" r="80" fill="#fef3c7" opacity="0.95"/>
+  <circle cx="960" cy="360" r="120" fill="#fef3c7" opacity="0.3"/>
+
+  <!-- Sea -->
+  <rect y="600" width="1920" height="100" fill="url(#sea)"/>
+
+  <!-- Port cranes (silhouettes) -->
+  <g fill="#27272a" opacity="0.85">
+    <!-- Left crane -->
+    <rect x="120" y="280" width="6" height="320"/>
+    <rect x="120" y="280" width="200" height="6"/>
+    <rect x="316" y="280" width="6" height="80"/>
+    <!-- Center crane -->
+    <rect x="400" y="220" width="6" height="380"/>
+    <rect x="400" y="220" width="260" height="6"/>
+    <rect x="656" y="220" width="6" height="100"/>
+    <!-- Right crane -->
+    <rect x="1500" y="260" width="6" height="340"/>
+    <rect x="1300" y="260" width="206" height="6"/>
+    <rect x="1300" y="260" width="6" height="80"/>
+  </g>
+
+  <!-- RoRo ship hull (large white silhouette) -->
+  <g>
+    <path d="M 700,500 L 1620,500 L 1640,540 L 1640,650 L 680,650 L 660,540 Z" fill="#f1f5f9"/>
+    <!-- Ship superstructure -->
+    <rect x="900" y="380" width="600" height="120" fill="#e2e8f0"/>
+    <rect x="950" y="360" width="500" height="20" fill="#cbd5e1"/>
+    <!-- Windows row -->
+    <g fill="#475569">
+      <rect x="930" y="410" width="20" height="15"/>
+      <rect x="970" y="410" width="20" height="15"/>
+      <rect x="1010" y="410" width="20" height="15"/>
+      <rect x="1050" y="410" width="20" height="15"/>
+      <rect x="1090" y="410" width="20" height="15"/>
+      <rect x="1130" y="410" width="20" height="15"/>
+      <rect x="1170" y="410" width="20" height="15"/>
+      <rect x="1210" y="410" width="20" height="15"/>
+      <rect x="1250" y="410" width="20" height="15"/>
+      <rect x="1290" y="410" width="20" height="15"/>
+      <rect x="1330" y="410" width="20" height="15"/>
+      <rect x="1370" y="410" width="20" height="15"/>
+      <rect x="1410" y="410" width="20" height="15"/>
+      <rect x="1450" y="410" width="20" height="15"/>
+    </g>
+    <!-- Ship side mid -->
+    <rect x="700" y="480" width="920" height="6" fill="#cbd5e1"/>
+    <!-- Bow detail -->
+    <path d="M 1620,500 L 1720,560 L 1640,560 Z" fill="#e2e8f0"/>
+  </g>
+
+  <!-- Quay surface -->
+  <rect y="700" width="1920" height="380" fill="#3f3f46"/>
+  <line x1="0" y1="710" x2="1920" y2="710" stroke="#52525b" stroke-width="2"/>
+  <line x1="0" y1="940" x2="1920" y2="940" stroke="#52525b" stroke-width="2" stroke-dasharray="40,30"/>
+
+  <!-- Row of cars (front line) -->
+  <g>
+    <!-- Each car: rounded body + windows + wheels -->
+    <g transform="translate(50,820)">
+      <rect width="180" height="110" rx="22" fill="url(#car-white)"/>
+      <rect x="20" y="20" width="140" height="50" rx="10" fill="#1f2937"/>
+      <circle cx="38" cy="115" r="22" fill="#0f172a"/>
+      <circle cx="142" cy="115" r="22" fill="#0f172a"/>
+    </g>
+    <g transform="translate(260,830)">
+      <rect width="180" height="105" rx="22" fill="#ef4444"/>
+      <rect x="20" y="18" width="140" height="48" rx="10" fill="#1f2937"/>
+      <circle cx="38" cy="110" r="22" fill="#0f172a"/>
+      <circle cx="142" cy="110" r="22" fill="#0f172a"/>
+    </g>
+    <g transform="translate(470,825)">
+      <rect width="180" height="108" rx="22" fill="url(#car-gray)"/>
+      <rect x="20" y="20" width="140" height="50" rx="10" fill="#1f2937"/>
+      <circle cx="38" cy="113" r="22" fill="#0f172a"/>
+      <circle cx="142" cy="113" r="22" fill="#0f172a"/>
+    </g>
+    <g transform="translate(680,832)">
+      <rect width="180" height="103" rx="22" fill="#1e293b"/>
+      <rect x="20" y="18" width="140" height="46" rx="10" fill="#475569"/>
+      <circle cx="38" cy="108" r="22" fill="#0f172a"/>
+      <circle cx="142" cy="108" r="22" fill="#0f172a"/>
+    </g>
+    <g transform="translate(890,824)">
+      <rect width="180" height="110" rx="22" fill="url(#car-white)"/>
+      <rect x="20" y="20" width="140" height="50" rx="10" fill="#1f2937"/>
+      <circle cx="38" cy="115" r="22" fill="#0f172a"/>
+      <circle cx="142" cy="115" r="22" fill="#0f172a"/>
+    </g>
+    <g transform="translate(1100,828)">
+      <rect width="180" height="107" rx="22" fill="#7c2d12"/>
+      <rect x="20" y="19" width="140" height="49" rx="10" fill="#1f2937"/>
+      <circle cx="38" cy="112" r="22" fill="#0f172a"/>
+      <circle cx="142" cy="112" r="22" fill="#0f172a"/>
+    </g>
+    <g transform="translate(1310,820)">
+      <rect width="180" height="110" rx="22" fill="url(#car-gray)"/>
+      <rect x="20" y="20" width="140" height="50" rx="10" fill="#1f2937"/>
+      <circle cx="38" cy="115" r="22" fill="#0f172a"/>
+      <circle cx="142" cy="115" r="22" fill="#0f172a"/>
+    </g>
+    <g transform="translate(1520,830)">
+      <rect width="180" height="105" rx="22" fill="#0ea5e9"/>
+      <rect x="20" y="18" width="140" height="48" rx="10" fill="#1f2937"/>
+      <circle cx="38" cy="110" r="22" fill="#0f172a"/>
+      <circle cx="142" cy="110" r="22" fill="#0f172a"/>
+    </g>
+    <g transform="translate(1730,825)">
+      <rect width="180" height="108" rx="22" fill="url(#car-white)"/>
+      <rect x="20" y="20" width="140" height="50" rx="10" fill="#1f2937"/>
+      <circle cx="38" cy="113" r="22" fill="#0f172a"/>
+      <circle cx="142" cy="113" r="22" fill="#0f172a"/>
+    </g>
+  </g>
+
+  <!-- Second row partial -->
+  <g opacity="0.6">
+    <rect x="140" y="745" width="170" height="58" rx="14" fill="#cbd5e1"/>
+    <rect x="340" y="745" width="170" height="58" rx="14" fill="#94a3b8"/>
+    <rect x="540" y="745" width="170" height="58" rx="14" fill="#64748b"/>
+    <rect x="740" y="745" width="170" height="58" rx="14" fill="#cbd5e1"/>
+    <rect x="940" y="745" width="170" height="58" rx="14" fill="#dc2626"/>
+    <rect x="1140" y="745" width="170" height="58" rx="14" fill="#94a3b8"/>
+    <rect x="1340" y="745" width="170" height="58" rx="14" fill="#1e293b"/>
+    <rect x="1540" y="745" width="170" height="58" rx="14" fill="#cbd5e1"/>
+    <rect x="1740" y="745" width="170" height="58" rx="14" fill="#94a3b8"/>
+  </g>
+
+  <!-- Birds (small detail) -->
+  <g fill="none" stroke="#1c1917" stroke-width="2.5" opacity="0.7">
+    <path d="M 1700,180 q 8,-10 16,0 q 8,-10 16,0"/>
+    <path d="M 1760,220 q 6,-8 12,0 q 6,-8 12,0"/>
+    <path d="M 1820,170 q 5,-6 10,0 q 5,-6 10,0"/>
+  </g>
+</svg>
