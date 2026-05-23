@@ -215,13 +215,12 @@ const statusColor = (s: string) =>
               </div>
             </div>
 
-            {/* Right: 3 real-photo cars floating on the shared background */}
-            <div class="grid grid-cols-3 gap-2 lg:gap-3 self-end">
-              {liveModels.slice(0, 3).map((m, i) => (
-                <div class={`aspect-[4/3] overflow-hidden ${i === 1 ? 'lg:scale-110 lg:-mt-4 z-10' : 'lg:mt-4'}`}>
-                  <img src={m.hero_image} alt={`${m.brand} ${m.name}`} class="w-full h-full object-contain drop-shadow-xl"/>
-                </div>
-              ))}
+            {/* Right: single large hero showcase image */}
+            <div class="relative self-end lg:-mb-4 -mr-2 lg:-mr-6">
+              <img
+                src={liveModels[0]?.hero_image || '/images/brand-changan.svg'}
+                alt="Changan Vehicles Export Showcase"
+                class="w-full max-h-[360px] object-contain object-bottom drop-shadow-2xl"/>
             </div>
 
           </div>
