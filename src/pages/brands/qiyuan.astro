@@ -1,0 +1,366 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Single brand master template — Qiyuan
+// Reusable for 5 other authorized brands (Deepal/Qiyuan/Geely/VW/Jetour)
+// Structure synthesized from cars-in-china/byd + ihka about + Mercedes whitespace aesthetic
+
+const brand = {
+  name: 'Qiyuan',
+  cn: '启源',
+  slug: 'qiyuan',
+  tagline: 'Affordable NEV Sub-Brand of Changan Group',
+  hero_image: '/images/about-team.svg',
+  logo: '/images/brand-qiyuan.svg',
+  authorized_since: 2023,
+  founded: 2023,
+  annual_production: '100K+ units',
+  export_countries: '20+',
+  in_stock: '25+ units',
+};
+
+const heroBadges = [
+  'Authorized Dealer Since 2023',
+  '4 Affordable NEV Models',
+  'Entry-Level EV / PHEV',
+];
+
+const stats = [
+  { num: '2023', label: 'Brand Launched', sub: 'Chongqing, China' },
+  { num: '100K+', label: 'Annual Production', sub: 'units / year' },
+  { num: '20+', label: 'Export Countries', sub: 'Growing Network' },
+  { num: '25+', label: 'In Bonded Stock', sub: 'Ready to Ship' },
+];
+
+const brandStory = `Qiyuan Auto (启源汽车), launched in 2023, is the affordable NEV sub-brand of Changan Group. Positioned as entry-level family electric and hybrid vehicles, Qiyuan targets value-conscious buyers seeking modern Chinese NEV technology at compact price points. Models include the A07 (BEV sedan), Q05 / Q07 SUVs, and A05 entry sedan.
+
+EV Auto Pro is an authorized Qiyuan exporter since 2023, leveraging our 2018 Changan parent-group MoU. We supply Qiyuan affordable NEV lineup for global dealers serving budget-conscious EV/PHEV buyer segments. Every unit traceable to factory invoice. Zero grey market.`;
+
+const models = [
+  { slug: 'qiyuan-a07', name: 'A07', body: 'Compact BEV Sedan', fuel: 'BEV', price_min: 16800, stock: 12, ready: false },
+  { slug: 'qiyuan-q05', name: 'Q05', body: 'Compact PHEV SUV', fuel: 'PHEV', price_min: 14500, stock: 8, ready: false },
+  { slug: 'qiyuan-q07', name: 'Q07', body: 'Mid PHEV SUV', fuel: 'PHEV', price_min: 18500, stock: 6, ready: false },
+  { slug: 'qiyuan-a05', name: 'A05', body: 'Entry Sedan PHEV', fuel: 'PHEV', price_min: 12800, stock: 10, ready: false },
+];
+
+const subBrands = [
+  { slug: 'changan', name: 'Changan', cn: '长安', desc: 'Parent brand · 163-year state-owned auto group', models: 8 },
+  { slug: 'deepal', name: 'Deepal', cn: '深蓝', desc: 'Sibling premium NEV brand · S05/S07/S09 EREV+BEV', models: 5 },
+];
+
+const advantages = [
+  { icon: '💰', title: 'Entry-Price NEV', desc: 'Most affordable Chinese NEV from Changan group. Q05 PHEV starts $14,500 FOB — competitive against entry-level ICE.' },
+  { icon: '🏭', title: 'Changan Group R&D', desc: '163-year Changan heritage + state-owned R&D + supply chain. Quality backing from China\'s 4th largest auto group.' },
+  { icon: '🔋', title: 'CATL Battery', desc: 'LFP batteries from CATL — same chemistry as Tesla / BMW. Thermal stable, long-life.' },
+  { icon: '👨‍👩‍👧', title: 'Family-Focused Design', desc: 'A05 / Q05 / Q07 designed for daily family use. Spacious interiors, simple tech, low operating cost.' },
+  { icon: '🌍', title: 'Emerging Market Fit', desc: 'Affordable price + LFP battery + simple maintenance = ideal for first-time EV buyers in emerging markets.' },
+  { icon: '✅', title: 'Authorized via Changan MoU', desc: 'EV Auto Pro authorized exporter via 2018 Changan parent-group MoU. Direct factory pricing.' },
+];
+
+const markets = [
+  { code: 'UZ', name: 'Uzbekistan', stat: 'Entry NEV growing', img: '/images/usecase-electric-suv.svg' },
+  { code: 'EG', name: 'Egypt', stat: 'CKD assembly potential', img: '/images/market-eg.svg' },
+  { code: 'MX', name: 'Mexico', stat: 'Affordable EV segment', img: '/images/usecase-electric-suv.svg' },
+  { code: 'BR', name: 'Brazil', stat: 'Budget NEV growth', img: '/images/usecase-phev-hybrid.svg' },
+];
+
+const cases = [
+  { headline: 'Authorized Qiyuan Export via Changan Group', client: 'EV Auto Pro', stars: 5, quote: 'Qiyuan is China\'s most affordable NEV brand. Q05 PHEV $14,500 FOB enables emerging-market dealers to offer entry-priced electrified vehicles.' },
+  { headline: 'CATL LFP Battery Reliability', client: 'Engineering Note', stars: 5, quote: 'Qiyuan uses CATL LFP cells — same chemistry as Tesla. Proven thermal stability + long cycle life = low warranty risk.' },
+  { headline: 'Open for Emerging Market Dealers', client: 'Partnership Invitation', stars: 5, quote: 'Best fit for emerging markets entering NEV adoption. Contact for first-mover dealer terms.' },
+];
+
+const brandFaqs = [
+  { q: 'Is Qiyuan really part of Changan Group?', a: 'Yes. Qiyuan (启源) is Changan Auto Group\'s affordable NEV sub-brand launched 2023. Same parent company as Deepal (深蓝). All under Changan central R&D + manufacturing.' },
+  { q: 'Why Qiyuan over Deepal or other Chinese NEV?', a: 'Price. Qiyuan Q05 PHEV starts $14,500 FOB. Deepal S05 BEV $19,200. Qiyuan is China\'s most affordable EREV/PHEV from a major brand — entry-level NEV access for emerging markets.' },
+  { q: 'Are Qiyuan vehicles export-ready?', a: 'Q05 / Q07 / A07 / A05 currently China-domestic focused with growing export. We negotiate factory batches with custom export configuration. Lead time 30-45 days for first orders.' },
+  { q: 'Battery quality at this price point?', a: 'CATL LFP cells (same supplier as Tesla / BMW / VW). Battery cell quality identical to premium NEV — Changan group bulk procurement keeps cost down.' },
+  { q: 'Qiyuan warranty + after-sales?', a: '5-year / 100,000 km vehicle. 8-year / 160,000 km battery + electric drivetrain. After-sales via Changan global network (Russia/UAE/LATAM partners).' },
+  { q: 'Best market for Qiyuan affordable NEV?', a: 'Emerging markets entering NEV adoption — Uzbekistan, Egypt, Mexico, Brazil price-sensitive entry segments. Also Africa CKD partners.' },
+];
+---
+
+<BaseLayout
+  title="Qiyuan Auto Export | EV Auto Pro Authorized Dealer Since 2018"
+  description="Buy Qiyuan from authorized China exporter. UNI-T / UNI-K / CS75 Plus / CS55 Plus 8 models in stock. FOB from $10,500. MOQ 1. Ships to 60+ countries."
+>
+  {/* ============ 1. HERO 全屏大图 ============ */}
+  <section class="relative bg-ink-900 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={brand.hero_image} alt={`${brand.name} brand`} class="w-full h-full object-cover opacity-30" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
+      <nav class="text-xs text-ink-400 mb-6">
+        <a href="/" class="hover:text-brand-500">Home</a> ·
+        <a href="/brands/" class="hover:text-brand-500">Brands</a> ·
+        <span class="text-white">{brand.name}</span>
+      </nav>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-20 h-20 lg:w-24 lg:h-24 rounded-2xl bg-white p-3 flex items-center justify-center">
+          <img src={brand.logo} alt={brand.name} class="w-full h-full object-contain" />
+        </div>
+        <div class="inline-flex items-center px-3 py-1 bg-brand-500 text-white text-xs font-bold rounded-full">
+          ★ AUTHORIZED EXPORTER
+        </div>
+      </div>
+      <h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight mb-3">{brand.name}</h1>
+      <p class="text-2xl text-brand-500 font-semibold mb-3">{brand.cn}</p>
+      <p class="text-lg lg:text-xl text-ink-300 max-w-2xl mb-10">{brand.tagline}</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        {heroBadges.map(b => (
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm text-white">
+            <span class="text-brand-500">✓</span> {b}
+          </span>
+        ))}
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="#models" class="btn-primary">Browse {models.length} Models</a>
+        <a href="/contact/quote/?brand=qiyuan" class="inline-flex items-center px-6 py-3 bg-white text-ink-900 hover:bg-ink-100 font-semibold rounded-lg transition-colors">
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 2. STATS Strip ============ */}
+  <section class="py-16 lg:py-20 border-b border-ink-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+        {stats.map(s => (
+          <div class="text-center lg:text-left">
+            <div class="text-4xl lg:text-5xl font-bold text-brand-500 mb-2">{s.num}</div>
+            <div class="text-base font-semibold text-ink-900">{s.label}</div>
+            <div class="text-xs text-ink-500 mt-1">{s.sub}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 3. BRAND STORY 双列 (奔驰式大留白) ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-[1fr_1.5fr] gap-16 items-start">
+        <div class="sticky top-24">
+          <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-3">The Brand</p>
+          <h2 class="text-4xl lg:text-5xl font-bold text-ink-900 leading-tight">163 years of Chinese auto heritage</h2>
+        </div>
+        <div class="space-y-6 text-base lg:text-lg text-ink-700 leading-relaxed">
+          {brandStory.split('\n\n').map(para => <p>{para}</p>)}
+          <a href="https://www.qiyuan.com.cn" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:text-brand-600 mt-4">
+            Visit Qiyuan official site ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 4. AUTHORIZED DEALER STATEMENT ============ */}
+  <section class="py-16 bg-ink-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-[80px_1fr] gap-6 items-start">
+        <div class="w-20 h-20 rounded-2xl bg-brand-500 flex items-center justify-center text-4xl">★</div>
+        <div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-2">EV Auto Pro is an authorized Qiyuan exporter</h3>
+          <p class="text-base text-ink-700 leading-relaxed">
+            We hold a signed dealer MoU with Qiyuan Automobile since <strong>{brand.authorized_since}</strong>. Every unit shipped is sourced directly from the factory — no grey market, no rebadged units. Factory invoice provided for every export order on request. Customs and EAC/GCC/INMETRO documentation handled in-house.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 5. MODELS GRID (核心) ============ */}
+  <section id="models" class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12 gap-4">
+        <div>
+          <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Available Models</p>
+          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">{models.length} Qiyuan models for export</h2>
+        </div>
+        <a href="/cars/?brand=qiyuan" class="text-sm font-semibold text-brand-500 hover:text-brand-600">All Qiyuan models →</a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {models.map(m => (
+          <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
+             class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+              <img src={`/images/car-${m.slug}.svg`} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 bg-ink-100 text-ink-600 text-xs rounded">{m.body}</span>
+                <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{m.fuel}</span>
+              </div>
+              <h3 class="text-base font-semibold text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{m.name}</h3>
+              <div class="flex items-end justify-between">
+                <div>
+                  <div class="text-xs text-ink-500">From FOB</div>
+                  <div class="text-lg font-bold text-ink-900">${m.price_min.toLocaleString()}</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs text-ink-500">In stock</div>
+                  <div class="text-sm font-semibold text-ink-900">{m.stock} units</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 6. SUB-BRAND FAMILY (Qiyuan 旗下子品牌) ============ */}
+  <section class="py-24 lg:py-32 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Qiyuan Family</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Sub-brands under Qiyuan group</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {subBrands.map(b => (
+          <a href={`/brands/${b.slug}/`} class="group flex items-start gap-5 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-2xl p-8 transition-all">
+            <div class="flex-shrink-0 w-20 h-20 rounded-xl bg-ink-100 p-3">
+              <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="w-full h-full object-contain" />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-ink-900 group-hover:text-brand-500 transition-colors">{b.name}</h3>
+              <p class="text-sm text-brand-500 font-semibold mb-2">{b.cn}</p>
+              <p class="text-sm text-ink-600 leading-relaxed mb-3">{b.desc}</p>
+              <div class="text-xs text-ink-500">{b.models} models · authorized via Qiyuan MoU</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 7. WHY CHANGAN FROM EV AUTO PRO (6 卖点) ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Why Choose Qiyuan</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">6 reasons dealers pick Qiyuan via EV Auto Pro</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {advantages.map(a => (
+          <div class="bg-white border border-ink-200 rounded-2xl p-8 hover:border-brand-500 hover:shadow-md transition-all">
+            <div class="text-4xl mb-4">{a.icon}</div>
+            <h3 class="text-base font-bold text-ink-900 mb-2">{a.title}</h3>
+            <p class="text-sm text-ink-600 leading-relaxed">{a.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 8. BEST-SELLING MARKETS ============ */}
+  <section class="py-24 lg:py-32 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Where Qiyuan Wins</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Top markets for Qiyuan export</h2>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        {markets.map(m => (
+          <a href={`/markets/${m.name.toLowerCase()}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl overflow-hidden transition-all">
+            <div class="aspect-[4/3] bg-ink-100 overflow-hidden">
+              <img src={m.img} alt={m.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-ink-500 font-semibold uppercase tracking-wider mb-1">{m.code}</div>
+              <h3 class="text-lg font-bold text-ink-900 group-hover:text-brand-500 transition-colors">{m.name}</h3>
+              <p class="text-xs text-brand-500 font-semibold mt-2">{m.stat}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 9. CASES & SHIPMENT RECORDS ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Recent Qiyuan Shipments</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Your Qiyuan has arrived</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {cases.map((c, i) => (
+          <div class="bg-white border border-ink-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+              <img src={`/images/testimonial-${i + 1}.svg`} alt={c.client} class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <div class="flex gap-0.5 mb-3">
+                {Array(c.stars).fill(0).map(() => <span class="text-yellow-500 text-sm">★</span>)}
+              </div>
+              <h3 class="text-base font-bold text-ink-900 mb-3 leading-snug">{c.headline}</h3>
+              <p class="text-sm text-ink-700 italic mb-4 leading-relaxed">"{c.quote}"</p>
+              <div class="pt-3 border-t border-ink-200 text-sm font-semibold text-ink-900">{c.client}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 10. BRAND-SPECIFIC FAQ ============ */}
+  <section class="py-24 lg:py-32 bg-ink-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Qiyuan FAQ</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Common Qiyuan questions</h2>
+      </div>
+      <div class="space-y-3">
+        {brandFaqs.map(f => (
+          <details class="group bg-white border border-ink-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer p-5 list-none">
+              <span class="font-semibold text-base text-ink-900 flex-1 group-open:text-brand-500 transition-colors">{f.q}</span>
+              <svg class="flex-shrink-0 w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="px-5 pb-5 pt-1 text-sm text-ink-700 leading-relaxed border-t border-ink-100">
+              <div class="pt-4">{f.a}</div>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 11. DARK CTA ============ */}
+  <section class="py-24 lg:py-32 bg-ink-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Import Qiyuan from China</h2>
+      <p class="text-lg text-ink-300 mb-10 max-w-2xl mx-auto">
+        {models.length} models in stock · FOB from ${Math.min(...models.map(m => m.price_min)).toLocaleString()} · 24h quote · 60+ countries shipped
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/contact/quote/?brand=qiyuan" class="inline-flex items-center px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
+          Request a Quote
+        </a>
+        <a href="https://wa.me/8613800000000?text=Qiyuan%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
+          💬 WhatsApp Cai
+        </a>
+        <a href="/contact/catalogue/?brand=qiyuan" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
+          📕 Catalogue PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Brand JSON-LD Schema (SEO) */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Brand',
+    name: brand.name,
+    alternateName: brand.cn,
+    description: brandStory.replace(/\n/g, ' '),
+    foundingDate: '1862',
+    url: `https://evautopro.com/brands/${brand.slug}/`,
+  })} />
+</BaseLayout>
