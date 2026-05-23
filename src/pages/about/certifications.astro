@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const certifications = [
+  {
+    code: 'MOFCOM',
+    full: 'Ministry of Commerce Export License',
+    cn: '商务部对外贸易经营资格',
+    importance: 'Foundation',
+    detail: 'Issued by China Ministry of Commerce, granting legal authorization to engage in international trade. Mandatory for any company doing official China-to-international export.',
+    valid: 'Active since 2010',
+  },
+  {
+    code: 'AEO',
+    full: 'Authorized Economic Operator (Customs)',
+    cn: '海关高级认证企业',
+    importance: 'Premium',
+    detail: 'Highest tier of China Customs trust certification. AEO companies receive priority customs clearance, lower inspection rates, and mutual recognition with 40+ countries via WCO framework.',
+    valid: 'Active since 2018',
+  },
+  {
+    code: 'ISO 9001:2015',
+    full: 'Quality Management System',
+    cn: '质量管理体系认证',
+    importance: 'Quality',
+    detail: 'International standard for quality management systems. Audited annually. Ensures consistent quality processes across all our trade operations.',
+    valid: 'Active since 2020',
+  },
+  {
+    code: 'EAC',
+    full: 'Eurasian Conformity (TR CU)',
+    cn: '欧亚经济联盟符合性认证',
+    importance: 'Russia / CIS',
+    detail: 'Mandatory for vehicle import to Russia, Belarus, Kazakhstan, Kyrgyzstan, Armenia. We hold direct relationships with 3 EAC certification bodies in Moscow.',
+    valid: 'Per-shipment certification, ongoing',
+  },
+  {
+    code: 'GCC',
+    full: 'Gulf Standardization Organization',
+    cn: '海湾标准化组织认证',
+    importance: 'Gulf 6 states',
+    detail: 'Mandatory for vehicle import to UAE, Saudi Arabia, Kuwait, Bahrain, Oman, Qatar. Single certificate covers all 6 GCC states.',
+    valid: 'Per-shipment certification, ongoing',
+  },
+  {
+    code: 'INMETRO',
+    full: 'Instituto Nacional de Metrologia',
+    cn: '巴西国家计量标准化质量院',
+    importance: 'Brazil',
+    detail: 'Mandatory for vehicle import to Brazil. Long process (15-25 days). Valid for all 26 Brazilian states + federal district.',
+    valid: 'Per-shipment certification, ongoing',
+  },
+  {
+    code: 'SASO + SABER',
+    full: 'Saudi Standards Organization + Electronic Clearance',
+    cn: '沙特标准组织 + 电子清关',
+    importance: 'Saudi Arabia',
+    detail: 'Saudi-specific mandatory cert. SABER electronic clearance required for all imports. We handle both via Saudi-based compliance partner.',
+    valid: 'Per-shipment certification, ongoing',
+  },
+  {
+    code: 'NOM',
+    full: 'Norma Oficial Mexicana',
+    cn: '墨西哥官方标准',
+    importance: 'Mexico',
+    detail: 'Mexican Official Standards covering vehicle safety, emissions, labeling. NOM-194 / NOM-197 / NOM-206 for vehicle imports.',
+    valid: 'Per-shipment certification, ongoing',
+  },
+];
+
+const importanceColors = {
+  'Foundation': 'bg-brand-500 text-white',
+  'Premium': 'bg-purple-500 text-white',
+  'Quality': 'bg-blue-500 text-white',
+  'Russia / CIS': 'bg-red-500 text-white',
+  'Gulf 6 states': 'bg-amber-500 text-white',
+  'Brazil': 'bg-green-500 text-white',
+  'Saudi Arabia': 'bg-emerald-500 text-white',
+  'Mexico': 'bg-teal-500 text-white',
+};
+---
+
+<BaseLayout
+  title="Certifications | EV Auto Pro — MoFCOM / AEO / ISO 9001 / EAC / GCC / INMETRO / NOM"
+  description="Full certification stack for China NEV export. MoFCOM export license, AEO customs certification, ISO 9001, EAC (Russia), GCC (Gulf), INMETRO (Brazil), NOM (Mexico)."
+>
+  <section class="relative h-64 lg:h-80 overflow-hidden">
+    <div class="absolute inset-0 bg-ink-900">
+      <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover opacity-40" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-12">
+      <div>
+        <p class="text-sm font-semibold text-brand-500 uppercase tracking-wider mb-2">About</p>
+        <h1 class="text-5xl lg:text-6xl font-bold text-white">Certifications</h1>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <nav class="text-xs text-ink-500">
+      <a href="/" class="hover:text-brand-500">Home</a> ·
+      <a href="/about/" class="hover:text-brand-500">About</a> ·
+      <span class="text-ink-900">Certifications</span>
+    </nav>
+  </div>
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-5">
+        Certified for global export · No compromise
+      </h2>
+      <p class="text-base text-ink-600 leading-relaxed">
+        Full certification stack covering China export licensing, customs, quality management, and destination-country compliance for our 8 target markets.<br/>
+        <strong class="text-ink-900">All certificate scans available on request.</strong>
+      </p>
+    </div>
+  </section>
+
+  <section class="pb-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-5">
+        {certifications.map(c => (
+          <div class="bg-white border border-ink-200 rounded-2xl p-8 hover:border-brand-500 hover:shadow-md transition-all">
+            <div class="grid sm:grid-cols-[200px_1fr] gap-6 items-start">
+              <div>
+                <div class="text-2xl font-bold text-ink-900 mb-1">{c.code}</div>
+                <div class="text-xs text-ink-500 mb-3">{c.cn}</div>
+                <span class:list={['inline-flex items-center px-2 py-1 text-[10px] font-bold rounded-full uppercase tracking-wider', importanceColors[c.importance] || 'bg-ink-500 text-white']}>
+                  {c.importance}
+                </span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg text-ink-900 mb-2">{c.full}</h3>
+                <p class="text-sm text-ink-600 leading-relaxed mb-3">{c.detail}</p>
+                <div class="text-xs text-brand-500 font-semibold">{c.valid}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-ink-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-ink-900 mb-3">Need to verify a certificate?</h2>
+      <p class="text-base text-ink-600 mb-6">Send us a request — we share scan + reference number within 24 hours.</p>
+      <a href="/contact/" class="btn-primary">Request Certificate Scan</a>
+    </div>
+  </section>
+</BaseLayout>
