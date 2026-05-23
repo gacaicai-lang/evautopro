@@ -50,6 +50,14 @@ export type Car = {
   certifications: string[];
   payment_terms: string[];
   faqs: { q: string; a: string }[];
+  // Optional photo gallery — by tab category. When omitted, page falls back
+  // to hero_image for Appearance tab and "available on inquiry" for others.
+  gallery?: {
+    appearance?: { src: string; alt?: string }[];
+    console?:    { src: string; alt?: string }[];
+    space?:      { src: string; alt?: string }[];
+    other?:      { src: string; alt?: string }[];
+  };
 };
 
 export const cars: Record<string, Car> = {
