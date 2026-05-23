@@ -213,67 +213,29 @@ const popular = [
   description="Find answers about Chinese EV export, vehicle inventory, brands, pricing, shipping, documents, payment, warranty and dealer cooperation."
 >
   {/* ====================================================================
-       SECTION 1 — HERO (left text + right info card, mirrors Home hero)
+       SECTION 1 — HERO (full-bleed car background + left text overlay)
        ==================================================================== */}
-  <section class="relative bg-gradient-to-br from-ink-50 via-white to-ink-50 py-16 lg:py-24 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-        {/* Left text */}
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-full mb-6 tracking-wide">
-            BUYER FAQ
-          </div>
-          <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-ink-900 leading-[1.1] tracking-tight mb-5">
-            Frequently Asked Questions for <span class="text-brand-500">Chinese EV Export</span>
-          </h1>
-          <p class="text-base lg:text-lg text-ink-600 mb-8 leading-relaxed max-w-xl">
-            Find clear answers about vehicle inventory, brands, pricing, shipping, documents, payment, warranty and dealer cooperation before importing Chinese new energy vehicles.
-          </p>
-          <CTAGroup buttons={[
-            { label: 'Get A Quote', href: '/contact/quote/', variant: 'primary' },
-            { label: 'View Available Vehicles', href: '/cars/', variant: 'secondary' },
-          ]} />
+  <section class="relative bg-ink-900 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/faq-hero.webp" alt="" class="w-full h-full object-cover" loading="eager" />
+      {/* Dark overlay — left strong → right soft, so text reads cleanly while car stays visible */}
+      <div class="absolute inset-0 bg-gradient-to-r from-ink-900/90 via-ink-900/65 to-ink-900/20"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-500 text-white text-xs font-semibold rounded-full mb-6 tracking-[0.12em]">
+          BUYER FAQ
         </div>
-
-        {/* Right info card */}
-        <div class="relative">
-          <div class="bg-ink-50 border border-ink-200 rounded-2xl p-7 lg:p-9">
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-500 mb-5">Export Coverage</p>
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-start gap-3">
-                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px] mt-0.5">✓</span>
-                <span class="text-sm text-ink-800">Multiple EV brands · BYD, Geely, Zeekr, Li Auto, Chery, MG, Leapmotor & more</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px] mt-0.5">✓</span>
-                <span class="text-sm text-ink-800">Ready stock vehicles · 3-15 day ship-out window</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px] mt-0.5">✓</span>
-                <span class="text-sm text-ink-800">Export documents · invoice, packing list, contract, certificates</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px] mt-0.5">✓</span>
-                <span class="text-sm text-ink-800">Global shipping support · RoRo / container / multimodal</span>
-              </li>
-            </ul>
-            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-ink-200">
-              <div>
-                <div class="text-xl lg:text-2xl font-bold text-ink-900 tabular-nums">35+</div>
-                <div class="text-[11px] text-ink-500 mt-0.5">OEM Brands</div>
-              </div>
-              <div>
-                <div class="text-xl lg:text-2xl font-bold text-ink-900 tabular-nums">60+</div>
-                <div class="text-[11px] text-ink-500 mt-0.5">Export Markets</div>
-              </div>
-              <div>
-                <div class="text-xl lg:text-2xl font-bold text-ink-900 tabular-nums">5000+</div>
-                <div class="text-[11px] text-ink-500 mt-0.5">Vehicles Exported</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1 class="text-4xl lg:text-5xl xl:text-[3.5rem] font-bold text-white leading-[1.1] tracking-tight mb-5">
+          Frequently Asked Questions for <span class="text-brand-500">Chinese EV Export</span>
+        </h1>
+        <p class="text-base lg:text-lg text-ink-200 mb-8 leading-relaxed max-w-xl">
+          Find clear answers about vehicle inventory, brands, pricing, shipping, documents, payment, warranty and dealer cooperation before importing Chinese new energy vehicles.
+        </p>
+        <CTAGroup buttons={[
+          { label: 'Get A Quote', href: '/contact/quote/', variant: 'primary' },
+          { label: 'View Available Vehicles', href: '/cars/', variant: 'ghost' },
+        ]} />
       </div>
     </div>
   </section>
