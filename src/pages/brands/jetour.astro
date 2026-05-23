@@ -188,7 +188,7 @@ const brandFaqs = [
           <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
              class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
             <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src={`/images/car-${m.slug}.svg`} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+              <img src={['jetour-t2','jetour-dasheng','jetour-x70plus'].includes(m.slug) || m.slug === 'jetour-x70-plus' ? `/images/真图/laundered/evautopro-${m.slug.replace('x70-plus','x70plus')}-01.webp` : `/images/car-${m.slug}.svg`} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
