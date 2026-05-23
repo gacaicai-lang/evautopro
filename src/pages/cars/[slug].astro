@@ -1,61 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { cars, type Car } from '../../data/cars';
 
-// 单车型详情母版 demo — UNI-T（基于 master-03-car-detail.md）
-// 后期由 Decap CMS 接管，每个车型 markdown frontmatter 渲染同款模板
-const car = {
-  brand: 'Changan',
-  brand_cn: '长安',
-  brand_slug: 'changan',
-  model: 'UNI-T',
-  year: 2026,
-  subtitle: 'Sport Coupe SUV',
-  body_type: 'Coupe SUV',
-  fuel_type: 'ICE',
-  drive: 'FWD',
-  seats: 5,
-  pricing: {
-    fob_min: 13800, fob_max: 17200,
-    exw_min: 13200, exw_max: 16500,
-    cif: [
-      { country: 'Russia (St. Petersburg)', min: 16500, max: 20300 },
-      { country: 'UAE (Jebel Ali)', min: 15200, max: 18800 },
-      { country: 'Kazakhstan (Aktau, Block Train)', min: 15800, max: 19400 },
-    ],
-  },
-  specs: {
-    motor_ps: 188,
-    torque_nm: 300,
-    top_speed: 205,
-    accel: 7.5,
-    dimensions: '4515×1870×1565',
-    wheelbase: 2710,
-    weight: 1455,
-    tires: '225/55 R19',
-    transmission: '7-Speed DCT',
-  },
-  features: {
-    exterior: ['Matrix LED Headlights', 'Panoramic Sunroof', '19" Alloy Wheels'],
-    interior: ['10.25" Touchscreen', 'Wireless Charging', 'Heated/Ventilated Seats'],
-    safety: ['Lane Keep Assist', '360° Camera', 'ACC', '6 Airbags'],
-  },
-  stock_status: 'In Stock',
-  stock_units: 45,
-  lead_time_days: 15,
-  moq: 1,
-  supported_markets: ['Russia', 'Kazakhstan', 'UAE', 'Saudi Arabia', 'Mexico', 'Egypt'],
-  shipping_methods: ['RoRo', 'Container', 'Block Train', 'Truck'],
-  certifications: ['GCC', 'EAC'],
-  payment_terms: ['T/T 30+70', 'L/C at sight'],
-  faqs: [
-    { q: 'How can I purchase the Changan UNI-T for export?', a: 'Send us your target market and quantity via the quote form. We respond within 24 hours with FOB Shanghai and CIF prices, MOQ details, and lead time.' },
-    { q: 'What is the minimum order quantity for the UNI-T?', a: 'MOQ is 1 unit for container shipment. For RoRo shipments to Russia or UAE, we recommend ≥5 units to optimize freight cost.' },
-    { q: 'Do you have Changan UNI-T in stock?', a: 'Yes, we currently have 45 units in stock at our Shanghai bonded warehouse. Pre-order slots for the 2026 facelift open in Q2 2026.' },
-    { q: 'How is the UNI-T shipped to Kazakhstan?', a: 'We ship via Block Train through Khorgos border, delivered to Aktau or Almaty terminal in 18-22 days. Container ratesheet on request.' },
-    { q: 'What payment methods do you accept?', a: 'T/T 30% deposit + 70% before shipment is our standard. L/C at sight from major banks accepted. OA after first successful order.' },
-  ],
-};
+export function getStaticPaths() {
+  return Object.values(cars).map(car => ({
+    params: { slug: car.slug },
+    props: { car },
+  }));
+}
 
+interface Props { car: Car; }
+const { car } = Astro.props;
 const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export from China`;
 ---
 
@@ -77,25 +32,23 @@ const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export fr
     </div>
   </section>
 
-  {/* H2.1 Hero + Quick specs */}
+  {/* Hero + Quick Specs */}
   <section class="py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-10">
-        {/* Gallery */}
         <div>
           <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-ink-200 mb-3">
-            <img src="/images/car-hero-changan-uni-t.svg" alt="2026 Changan UNI-T hero" class="w-full h-full object-cover" />
+            <img src={car.hero_image} alt={`${car.year} ${car.brand} ${car.model}`} class="w-full h-full object-cover" />
           </div>
           <div class="grid grid-cols-4 gap-2">
             {[1,2,3,4].map(i => (
               <div class="aspect-square bg-ink-100 rounded-lg overflow-hidden">
-                <img src="/images/car-changan-uni-t.svg" alt={`view ${i}`} class="w-full h-full object-cover" loading="lazy" />
+                <img src={car.hero_image} alt={`view ${i}`} class="w-full h-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Quick info */}
         <div>
           <div class="flex items-center gap-2 mb-4">
             <span class="px-2 py-0.5 bg-ink-100 text-ink-700 text-xs rounded">{car.body_type}</span>
@@ -117,53 +70,55 @@ const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export fr
             <div><dt class="text-ink-500 text-xs">Stock</dt><dd class="font-semibold text-ink-900">{car.stock_units} units</dd></div>
             <div><dt class="text-ink-500 text-xs">Lead time</dt><dd class="font-semibold text-ink-900">{car.lead_time_days} days</dd></div>
             <div><dt class="text-ink-500 text-xs">MOQ</dt><dd class="font-semibold text-ink-900">{car.moq} unit</dd></div>
-            <div><dt class="text-ink-500 text-xs">HS Code</dt><dd class="font-semibold text-ink-900">8703.23</dd></div>
+            <div><dt class="text-ink-500 text-xs">Fuel</dt><dd class="font-semibold text-ink-900">{car.fuel_type}</dd></div>
           </dl>
 
           <div class="flex flex-wrap gap-2">
-            <a href="/contact/quote/?model=changan-uni-t" class="btn-primary">Get Best Price</a>
-            <a href="https://wa.me/?text=Hi, I'm interested in Changan UNI-T for export" class="btn-secondary">WhatsApp Now</a>
+            <a href={`/contact/quote/?model=${car.slug}`} class="btn-primary">Get Best Price</a>
+            <a href={`https://wa.me/8613800000000?text=Hi, I'm interested in ${car.brand} ${car.model} for export`} class="btn-secondary">WhatsApp Now</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  {/* H2.2 Description */}
+  {/* Description */}
   <section class="py-12 bg-ink-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-ink">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold text-ink-900 mb-4">About the {car.year} {car.brand} {car.model}</h2>
       <p class="text-base text-ink-700 leading-relaxed mb-4">
-        EV Auto Pro is an <a href={`/brands/${car.brand_slug}/`} class="text-brand-500 underline">authorized {car.brand} exporter</a>. We currently have <strong>{car.stock_units} units in stock</strong> at our Shanghai bonded warehouse with delivery within <strong>{car.lead_time_days} days</strong> via RoRo, container, or block train.
+        EV Auto Pro is an <a href={`/brands/${car.brand_slug}/`} class="text-brand-500 underline">authorized {car.brand} exporter</a>. We currently have <strong>{car.stock_units} units in stock</strong> at our Shanghai bonded warehouse with delivery within <strong>{car.lead_time_days} days</strong> via {car.shipping_methods.join(', ')}.
       </p>
       <p class="text-base text-ink-700 leading-relaxed">
-        The {car.model} is Changan's flagship sport coupe SUV — 188 PS turbocharged engine, 7-DCT, matrix LED headlights, panoramic sunroof, and a 10.25" infotainment touchscreen with wireless CarPlay. Best-suited for dealer markets in Russia, UAE, Saudi Arabia, Kazakhstan, and Egypt.
+        {car.subtitle}. Best-suited for dealer markets in {car.supported_markets.join(', ')}.
       </p>
     </div>
   </section>
 
-  {/* H2.3 Specifications */}
+  {/* Specifications */}
   <section class="py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold text-ink-900 mb-6">Key Specifications</h2>
       <div class="grid sm:grid-cols-2 gap-x-12 gap-y-3 text-sm">
         <dl class="contents">
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">Engine</dt><dd class="font-semibold text-ink-900">1.5T DCT</dd>
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">Max Power</dt><dd class="font-semibold text-ink-900">{car.specs.motor_ps} PS</dd>
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">Max Torque</dt><dd class="font-semibold text-ink-900">{car.specs.torque_nm} Nm</dd>
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">Top Speed</dt><dd class="font-semibold text-ink-900">{car.specs.top_speed} km/h</dd>
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">0–100 km/h</dt><dd class="font-semibold text-ink-900">{car.specs.accel} sec</dd>
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">Transmission</dt><dd class="font-semibold text-ink-900">{car.specs.transmission}</dd>
+          {car.specs.motor_ps && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Max Power</dt><dd class="font-semibold text-ink-900">{car.specs.motor_ps} PS</dd></>}
+          {car.specs.torque_nm && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Max Torque</dt><dd class="font-semibold text-ink-900">{car.specs.torque_nm} Nm</dd></>}
+          {car.specs.battery_kwh && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Battery</dt><dd class="font-semibold text-ink-900">{car.specs.battery_kwh} kWh</dd></>}
+          {car.specs.range_wltp && <><dt class="text-ink-500 col-span-2 sm:col-span-1">WLTP Range</dt><dd class="font-semibold text-ink-900">{car.specs.range_wltp} km</dd></>}
+          {car.specs.range_cltc && <><dt class="text-ink-500 col-span-2 sm:col-span-1">CLTC Range</dt><dd class="font-semibold text-ink-900">{car.specs.range_cltc} km</dd></>}
+          {car.specs.top_speed && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Top Speed</dt><dd class="font-semibold text-ink-900">{car.specs.top_speed} km/h</dd></>}
+          {car.specs.accel && <><dt class="text-ink-500 col-span-2 sm:col-span-1">0–100 km/h</dt><dd class="font-semibold text-ink-900">{car.specs.accel} sec</dd></>}
+          {car.specs.transmission && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Transmission</dt><dd class="font-semibold text-ink-900">{car.specs.transmission}</dd></>}
           <dt class="text-ink-500 col-span-2 sm:col-span-1">Dimensions (L×W×H)</dt><dd class="font-semibold text-ink-900">{car.specs.dimensions} mm</dd>
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">Wheelbase</dt><dd class="font-semibold text-ink-900">{car.specs.wheelbase} mm</dd>
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">Curb Weight</dt><dd class="font-semibold text-ink-900">{car.specs.weight} kg</dd>
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">Tires</dt><dd class="font-semibold text-ink-900">{car.specs.tires}</dd>
+          {car.specs.wheelbase && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Wheelbase</dt><dd class="font-semibold text-ink-900">{car.specs.wheelbase} mm</dd></>}
+          {car.specs.weight && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Curb Weight</dt><dd class="font-semibold text-ink-900">{car.specs.weight} kg</dd></>}
+          {car.specs.tires && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Tires</dt><dd class="font-semibold text-ink-900">{car.specs.tires}</dd></>}
         </dl>
       </div>
     </div>
   </section>
 
-  {/* H2.4 Features */}
+  {/* Features */}
   <section class="py-12 bg-ink-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold text-ink-900 mb-6">Features & Configuration</h2>
@@ -185,7 +140,7 @@ const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export fr
     </div>
   </section>
 
-  {/* H2.5 Pricing & Trade Terms */}
+  {/* Pricing & Trade Terms */}
   <section class="py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold text-ink-900 mb-6">Pricing & Trade Terms</h2>
@@ -219,20 +174,20 @@ const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export fr
     </div>
   </section>
 
-  {/* H2.7 Export Services */}
+  {/* Export Services */}
   <section class="py-12 bg-ink-900">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold text-white mb-6">Export Services Included</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🔍</div><h3 class="font-semibold text-white text-sm mb-1">Third-Party Inspection</h3><p class="text-xs text-ink-400">Multi-point QC before container loading</p></div>
         <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">📋</div><h3 class="font-semibold text-white text-sm mb-1">Export License</h3><p class="text-xs text-ink-400">MoFCOM full document package</p></div>
-        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🚢</div><h3 class="font-semibold text-white text-sm mb-1">Door-to-Port Logistics</h3><p class="text-xs text-ink-400">RoRo / Container / Block Train</p></div>
+        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🚢</div><h3 class="font-semibold text-white text-sm mb-1">Door-to-Port Logistics</h3><p class="text-xs text-ink-400">{car.shipping_methods.join(' / ')}</p></div>
         <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🛠</div><h3 class="font-semibold text-white text-sm mb-1">After-Sales Parts</h3><p class="text-xs text-ink-400">Moscow / Almaty / Dubai depots</p></div>
       </div>
     </div>
   </section>
 
-  {/* H2.8 FAQ */}
+  {/* FAQ */}
   <section class="py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold text-ink-900 mb-6">Frequently Asked Questions</h2>
@@ -250,50 +205,35 @@ const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export fr
     </div>
   </section>
 
-  {/* H2.10 Bottom Quote CTA */}
+  {/* Bottom Brand-Red CTA */}
   <section class="py-16 bg-brand-500">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold text-white mb-3">Ready to import the {car.model}?</h2>
       <p class="text-base text-white/90 mb-6">Get FOB + CIF quote within 24 hours. {car.stock_units} units in stock now.</p>
-      <a href="/contact/quote/?model=changan-uni-t" class="inline-flex items-center px-8 py-3 bg-white hover:bg-ink-100 text-brand-500 font-semibold rounded-lg transition-colors">
+      <a href={`/contact/quote/?model=${car.slug}`} class="inline-flex items-center px-8 py-3 bg-white hover:bg-ink-100 text-brand-500 font-semibold rounded-lg transition-colors">
         Request a Quote
       </a>
     </div>
   </section>
 
-  {/* JSON-LD Vehicle Schema */}
+  {/* Vehicle Schema */}
   <script type="application/ld+json" set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Vehicle',
+    '@context': 'https://schema.org', '@type': 'Vehicle',
     name: fullTitle,
     brand: { '@type': 'Brand', name: car.brand },
-    model: car.model,
-    modelDate: car.year,
-    bodyType: car.body_type,
-    fuelType: car.fuel_type,
-    driveWheelConfiguration: car.drive,
-    seatingCapacity: car.seats,
-    vehicleEngine: {
-      '@type': 'EngineSpecification',
-      enginePower: { '@type': 'QuantitativeValue', value: car.specs.motor_ps, unitText: 'PS' },
-    },
+    model: car.model, modelDate: car.year,
+    bodyType: car.body_type, fuelType: car.fuel_type,
+    driveWheelConfiguration: car.drive, seatingCapacity: car.seats,
     offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'USD',
-      lowPrice: car.pricing.fob_min,
-      highPrice: car.pricing.fob_max,
+      '@type': 'AggregateOffer', priceCurrency: 'USD',
+      lowPrice: car.pricing.fob_min, highPrice: car.pricing.fob_max,
       availability: 'https://schema.org/InStock',
       seller: { '@type': 'Organization', name: 'EV Auto Pro', url: 'https://evautopro.com' },
     },
   })} />
 
-  {/* FAQPage Schema */}
   <script type="application/ld+json" set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: car.faqs.map(f => ({
-      '@type': 'Question', name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: car.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   })} />
 </BaseLayout>
