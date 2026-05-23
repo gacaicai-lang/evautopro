@@ -58,18 +58,26 @@ def _output_name(src: Path, slug: str, idx: int) -> str:
 def launder_image(src: Path, dst: Path, seed: str | None = None) -> Path:
     rng = random.Random(seed or f"{src}-{dst}")
     img = Image.open(src).convert("RGB")
+    is_ai_generated = "ai_generated" in src.parts
 
     # Pass 1a: aggressive edge crop — guaranteed to nuke top-left logos,
     # bottom-edge media-watermarks ("懂车帝", "汽车之家", OEM免责条款 etc).
     # crops 18-24% per side instead of the prior 7-16% which sometimes left
     # corner watermarks visible (esp. for media-sourced raws).
     w, h = img.size
-    crop_l = rng.randint(int(w * 0.18), int(w * 0.24))
-    crop_r = rng.randint(int(w * 0.17), int(w * 0.23))
-    crop_t = rng.randint(int(h * 0.15), int(h * 0.22))
-    crop_b = rng.randint(int(h * 0.15), int(h * 0.22))
+    if is_ai_generated:
+        # AI studio renders are already clean and centered; preserve hero framing.
+        crop_l = rng.randint(int(w * 0.005), int(w * 0.018))
+        crop_r = rng.randint(int(w * 0.005), int(w * 0.018))
+        crop_t = rng.randint(int(h * 0.004), int(h * 0.014))
+        crop_b = rng.randint(int(h * 0.004), int(h * 0.014))
+    else:
+        crop_l = rng.randint(int(w * 0.18), int(w * 0.24))
+        crop_r = rng.randint(int(w * 0.17), int(w * 0.23))
+        crop_t = rng.randint(int(h * 0.15), int(h * 0.22))
+        crop_b = rng.randint(int(h * 0.15), int(h * 0.22))
     img = img.crop((crop_l, crop_t, w - crop_r, h - crop_b))
-    if rng.random() < 0.3:
+    if not is_ai_generated and rng.random() < 0.3:
         img = ImageOps.mirror(img)
 
     for enhancer, lo, hi in [
@@ -128,6 +136,9 @@ def launder_image(src: Path, dst: Path, seed: str | None = None) -> Path:
     target_w = 1280
     img = img.resize((target_w, int(img.height * target_w / img.width)), Image.Resampling.LANCZOS)
 
+    if is_ai_generated:
+        _remove_ai_wheel_badges(img, src.stem.lower())
+
     # Pass 3: JPEG encode/decode before final stripped WebP.
     buf = io.BytesIO()
     img.save(buf, "JPEG", quality=88, optimize=True)
@@ -135,8 +146,55 @@ def launder_image(src: Path, dst: Path, seed: str | None = None) -> Path:
     img = Image.open(buf).convert("RGB")
 
     dst.parent.mkdir(parents=True, exist_ok=True)
-    img.save(dst, "WEBP", quality=82, method=6, exif=b"", icc_profile=None)
+    _save_webp_target(img, dst)
     return dst
+
+
+def _remove_ai_wheel_badges(img: Image.Image, stem: str) -> None:
+    """Cover tiny synthetic wheel-center marks while keeping natural wheel caps."""
+    draw = ImageDraw.Draw(img)
+    w, h = img.size
+    if "02" in stem:
+        candidates = [(0.235, 0.725, 0.020), (0.765, 0.725, 0.020)]
+    else:
+        candidates = [(0.585, 0.735, 0.020), (0.825, 0.725, 0.018)]
+
+    arr = np.asarray(img)
+    for x_ratio, y_ratio, r_ratio in candidates:
+        x = int(w * x_ratio)
+        y = int(h * y_ratio)
+        r = max(12, int(w * r_ratio))
+        x1, y1 = max(0, x - r), max(0, y - r)
+        x2, y2 = min(w, x + r), min(h, y + r)
+        patch = arr[y1:y2, x1:x2]
+        if patch.size == 0:
+            continue
+        luminance = patch[..., :3].mean(axis=2).mean()
+        if luminance > 145:
+            continue
+        draw.ellipse((x - r, y - r, x + r, y + r), fill=(28, 29, 30), outline=(95, 98, 102), width=max(2, r // 8))
+        inner = max(4, r // 3)
+        draw.ellipse((x - inner, y - inner, x + inner, y + inner), fill=(55, 57, 60))
+
+
+def _save_webp_target(img: Image.Image, dst: Path) -> None:
+    min_bytes = 80 * 1024
+    max_bytes = 180 * 1024
+    best: bytes | None = None
+
+    for quality in [82, 86, 90, 94, 96, 78, 75, 72, 69]:
+        buf = io.BytesIO()
+        img.save(buf, "WEBP", quality=quality, method=6, exif=b"", icc_profile=None)
+        data = buf.getvalue()
+        if min_bytes <= len(data) <= max_bytes:
+            dst.write_bytes(data)
+            return
+        if len(data) <= max_bytes:
+            best = data
+        elif best is None:
+            best = data
+
+    dst.write_bytes(best or b"")
 
 
 def main() -> None:
