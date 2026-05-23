@@ -1,0 +1,55 @@
+---
+// Unified Stat Grid — 4-column responsive stats
+// Usage:
+//   <StatGrid stats={[{num: '15+', label: 'Years', sub: 'Export'}]} />
+
+interface Stat {
+  num: string;
+  label: string;
+  sub?: string;
+}
+
+interface Props {
+  stats: Stat[];
+  variant?: 'default' | 'border-left' | 'cards';
+  invert?: boolean;
+}
+
+const { stats, variant = 'default', invert = false } = Astro.props;
+
+const numColor = invert ? 'text-white' : 'text-brand-500';
+const labelColor = invert ? 'text-white' : 'text-ink-900';
+const subColor = invert ? 'text-ink-400' : 'text-ink-500';
+---
+
+{variant === 'cards' ? (
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+    {stats.map(s => (
+      <div class:list={['rounded-xl p-6 text-center', invert ? 'bg-ink-800' : 'bg-white border border-ink-200']}>
+        <div class:list={['text-3xl lg:text-4xl font-bold mb-2', numColor]}>{s.num}</div>
+        <div class:list={['text-sm font-semibold', labelColor]}>{s.label}</div>
+        {s.sub && <div class:list={['text-xs mt-1', subColor]}>{s.sub}</div>}
+      </div>
+    ))}
+  </div>
+) : variant === 'border-left' ? (
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
+    {stats.map(s => (
+      <div class="border-l-2 border-brand-500 pl-4">
+        <div class:list={['text-3xl lg:text-4xl font-bold', labelColor]}>{s.num}</div>
+        <div class:list={['text-sm font-semibold mt-2', invert ? 'text-ink-300' : 'text-ink-700']}>{s.label}</div>
+        {s.sub && <div class:list={['text-xs mt-1', subColor]}>{s.sub}</div>}
+      </div>
+    ))}
+  </div>
+) : (
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+    {stats.map(s => (
+      <div>
+        <div class:list={['text-4xl lg:text-5xl font-bold mb-2', numColor]}>{s.num}</div>
+        <div class:list={['text-base font-semibold', labelColor]}>{s.label}</div>
+        {s.sub && <div class:list={['text-xs mt-1', subColor]}>{s.sub}</div>}
+      </div>
+    ))}
+  </div>
+)}

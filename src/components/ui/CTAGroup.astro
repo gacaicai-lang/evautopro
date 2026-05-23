@@ -1,0 +1,32 @@
+---
+// Unified CTA button group — primary + secondary patterns
+interface CTAButton {
+  label: string;
+  href: string;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'white';
+  icon?: string;
+}
+
+interface Props {
+  buttons: CTAButton[];
+  align?: 'left' | 'center';
+}
+
+const { buttons, align = 'left' } = Astro.props;
+
+const variantClass = {
+  primary: 'bg-brand-500 hover:bg-brand-600 text-white',
+  secondary: 'bg-white hover:bg-ink-100 text-ink-900 border border-ink-300',
+  ghost: 'border-2 border-white text-white hover:bg-white hover:text-ink-900',
+  white: 'bg-white hover:bg-ink-100 text-brand-500',
+};
+---
+
+<div class:list={['flex flex-wrap gap-3', align === 'center' && 'justify-center']}>
+  {buttons.map(b => (
+    <a href={b.href} class:list={['inline-flex items-center px-6 py-3 font-semibold rounded-lg transition-colors', variantClass[b.variant || 'primary']]}>
+      {b.icon && <span class="mr-2">{b.icon}</span>}
+      {b.label}
+    </a>
+  ))}
+</div>

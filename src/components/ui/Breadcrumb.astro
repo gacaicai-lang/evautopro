@@ -1,0 +1,23 @@
+---
+interface Crumb { label: string; href?: string }
+interface Props {
+  items: Crumb[];
+  invert?: boolean;
+}
+const { items, invert = false } = Astro.props;
+const linkColor = invert ? 'text-ink-400 hover:text-brand-500' : 'text-ink-500 hover:text-brand-500';
+const currentColor = invert ? 'text-white' : 'text-ink-900';
+---
+
+<nav class="text-xs">
+  {items.map((c, i) => (
+    <>
+      {c.href ? (
+        <a href={c.href} class:list={[linkColor]}>{c.label}</a>
+      ) : (
+        <span class:list={[currentColor, 'font-medium']}>{c.label}</span>
+      )}
+      {i < items.length - 1 && <span class="mx-2 text-ink-400">·</span>}
+    </>
+  ))}
+</nav>

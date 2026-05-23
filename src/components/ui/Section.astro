@@ -1,0 +1,78 @@
+---
+// Unified Section wrapper — same padding / max-width / divider for all sections
+// Usage:
+//   <Section eyebrow="About" title="..." subtitle="..." bg="white">
+//     <slot />
+//   </Section>
+
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  bg?: 'white' | 'gray' | 'dark' | 'brand';
+  align?: 'left' | 'center';
+  padding?: 'sm' | 'md' | 'lg';
+  maxWidth?: 'narrow' | 'normal' | 'wide';
+  id?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  subtitle,
+  bg = 'white',
+  align = 'left',
+  padding = 'lg',
+  maxWidth = 'wide',
+  id,
+} = Astro.props;
+
+const bgClasses = {
+  white: 'bg-white text-ink-900',
+  gray: 'bg-ink-50 text-ink-900',
+  dark: 'bg-ink-900 text-white',
+  brand: 'bg-brand-500 text-white',
+};
+
+const paddingClasses = {
+  sm: 'py-16 lg:py-20',
+  md: 'py-20 lg:py-28',
+  lg: 'py-24 lg:py-32',
+};
+
+const maxWidthClasses = {
+  narrow: 'max-w-3xl',
+  normal: 'max-w-5xl',
+  wide: 'max-w-7xl',
+};
+
+const alignClasses = {
+  left: '',
+  center: 'text-center',
+};
+
+const eyebrowColor = bg === 'dark' || bg === 'brand' ? 'text-brand-500' : 'text-brand-500';
+const titleColor = bg === 'dark' || bg === 'brand' ? 'text-white' : 'text-ink-900';
+const subtitleColor = bg === 'dark' ? 'text-ink-300' : bg === 'brand' ? 'text-white/90' : 'text-ink-600';
+
+const hasHeader = eyebrow || title || subtitle;
+---
+
+<section id={id} class:list={[bgClasses[bg], paddingClasses[padding]]}>
+  <div class:list={[maxWidthClasses[maxWidth], 'mx-auto px-4 sm:px-6 lg:px-8']}>
+    {hasHeader && (
+      <div class:list={['mb-12 lg:mb-16', alignClasses[align], align === 'center' && 'max-w-3xl mx-auto']}>
+        {eyebrow && (
+          <p class:list={['text-xs font-semibold uppercase tracking-[0.15em] mb-3', eyebrowColor]}>{eyebrow}</p>
+        )}
+        {title && (
+          <h2 class:list={['text-3xl lg:text-5xl font-bold leading-[1.1] tracking-tight', titleColor, subtitle && 'mb-5']}>{title}</h2>
+        )}
+        {subtitle && (
+          <p class:list={['text-base lg:text-lg leading-relaxed', subtitleColor]}>{subtitle}</p>
+        )}
+      </div>
+    )}
+    <slot />
+  </div>
+</section>

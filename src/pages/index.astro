@@ -1,7 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/ui/Section.astro';
+import StatGrid from '../components/ui/StatGrid.astro';
+import CardGrid from '../components/ui/CardGrid.astro';
+import Card from '../components/ui/Card.astro';
+import FAQAccordion from '../components/ui/FAQAccordion.astro';
+import CTAGroup from '../components/ui/CTAGroup.astro';
 
-/* ========== Data: extend later via Decap CMS or split into /data/home.json ========== */
 const topCards = [
   { slug: 'brands', icon: '🏷', title: 'All Car Brands', sub: '35 brands · 6 authorized', href: '/brands/' },
   { slug: 'cars', icon: '🚗', title: 'Hot Selling Models', sub: '50+ models in stock', href: '/cars/' },
@@ -10,62 +15,46 @@ const topCards = [
 ];
 
 const featuredBrands = [
-  { slug: 'changan', name: 'Changan', cn: '长安', models: '8 models' },
-  { slug: 'deepal', name: 'Deepal', cn: '深蓝', models: '5 models' },
-  { slug: 'jetour', name: 'Jetour', cn: '捷途', models: '6 models' },
-  { slug: 'geely', name: 'Geely', cn: '吉利', models: '7 models' },
-  { slug: 'volkswagen', name: 'VW', cn: '大众', models: '4 models' },
-  { slug: 'byd', name: 'BYD', cn: '比亚迪', models: '12 models' },
-  { slug: 'chery', name: 'Chery', cn: '奇瑞', models: '8 models' },
-  { slug: 'zeekr', name: 'Zeekr', cn: '极氪', models: '3 models' },
-  { slug: 'xiaomi', name: 'Xiaomi', cn: '小米', models: '2 models' },
-  { slug: 'voyah', name: 'Voyah', cn: '岚图', models: '3 models' },
-  { slug: 'leapmotor', name: 'Leapmotor', cn: '零跑', models: '4 models' },
-  { slug: 'haval', name: 'Haval', cn: '哈弗', models: '5 models' },
+  { slug: 'changan', name: 'Changan', cn: '长安' },
+  { slug: 'deepal', name: 'Deepal', cn: '深蓝' },
+  { slug: 'jetour', name: 'Jetour', cn: '捷途' },
+  { slug: 'geely', name: 'Geely', cn: '吉利' },
+  { slug: 'volkswagen', name: 'VW', cn: '大众' },
+  { slug: 'byd', name: 'BYD', cn: '比亚迪' },
 ];
 
 const featuredCars = [
-  { slug: 'changan-uni-t', brand: 'Changan', name: 'UNI-T', body: 'Coupe SUV', fuel: 'ICE', price: '13,800', moq: 1 },
-  { slug: 'jetour-t2', brand: 'Jetour', name: 'T2', body: '7-Seater SUV', fuel: 'PHEV', price: '22,500', moq: 1 },
-  { slug: 'geely-coolray', brand: 'Geely', name: 'Coolray', body: 'Compact SUV', fuel: 'ICE', price: '15,200', moq: 1 },
-  { slug: 'deepal-s07', brand: 'Deepal', name: 'S07', body: 'Mid SUV', fuel: 'EREV', price: '24,800', moq: 1 },
-  { slug: 'changan-cs55-plus', brand: 'Changan', name: 'CS55 Plus', body: 'SUV', fuel: 'ICE', price: '14,500', moq: 1 },
-  { slug: 'deepal-s09', brand: 'Deepal', name: 'S09', body: 'Large SUV', fuel: 'EREV', price: '36,500', moq: 1 },
-  { slug: 'geely-atlas', brand: 'Geely', name: 'Atlas', body: 'Mid SUV', fuel: 'ICE', price: '17,800', moq: 1 },
-  { slug: 'deepal-s05', brand: 'Deepal', name: 'S05', body: 'Compact SUV', fuel: 'BEV', price: '19,200', moq: 1 },
+  { slug: 'changan-uni-t', brand: 'Changan', name: 'UNI-T', body: 'Coupe SUV', fuel: 'ICE', price: '13,800' },
+  { slug: 'jetour-t2', brand: 'Jetour', name: 'T2', body: '7-Seater SUV', fuel: 'PHEV', price: '22,500' },
+  { slug: 'geely-coolray', brand: 'Geely', name: 'Coolray', body: 'Compact SUV', fuel: 'ICE', price: '15,200' },
+  { slug: 'deepal-s07', brand: 'Deepal', name: 'S07', body: 'EREV SUV', fuel: 'EREV', price: '24,800' },
 ];
 
 const useCases = [
-  { slug: 'chinese-electric-suv', label: 'Electric SUV', desc: 'BEV SUVs for fleet & dealer orders', tag: '12 models' },
-  { slug: 'chinese-plug-in-hybrid-cars', label: 'PHEV / Hybrid', desc: 'Plug-in hybrids for long-range markets', tag: '8 models' },
-  { slug: 'chinese-pickup-trucks', label: 'Pickup Trucks', desc: 'Rugged builds for Central Asia farms', tag: 'On request' },
-  { slug: 'right-hand-drive-chinese-cars', label: 'Right-Hand Drive', desc: 'UK / SA / PK / ID dealers', tag: '6 models' },
-  { slug: 'chinese-cars-under-15000-usd', label: 'Under $15,000', desc: 'Entry-price models for emerging markets', tag: '10 models' },
-];
-
-const trustBadges = [
-  { icon: '✓', title: 'Authorized Dealer', desc: 'Direct MoU with Changan, Deepal, Geely, Jetour, VW China, BYD' },
-  { icon: '⚡', title: 'In-Stock Same-Day Ship', desc: '45-200 units in Shanghai bonded warehouse, 3-15 day lead time' },
-  { icon: '🚢', title: 'Door-to-Door Logistics', desc: 'RoRo, Container, Block Train, Truck — we handle every leg' },
+  { slug: 'chinese-electric-suv', label: 'Electric SUV', desc: 'BEV SUVs for fleet & dealer orders' },
+  { slug: 'chinese-plug-in-hybrid-cars', label: 'PHEV / Hybrid', desc: 'Plug-in hybrids for long-range markets' },
+  { slug: 'chinese-pickup-trucks', label: 'Pickup Trucks', desc: 'Rugged builds for Central Asia farms' },
+  { slug: 'right-hand-drive-chinese-cars', label: 'Right-Hand Drive', desc: 'UK / SA / PK / ID dealers' },
+  { slug: 'chinese-cars-under-15000-usd', label: 'Under $15,000', desc: 'Entry-price for emerging markets' },
 ];
 
 const advantages = [
-  { icon: '🏭', title: '15+ Years Export Experience', desc: 'Founder Cai led $50M+ B2B trade since 2010' },
-  { icon: '🤝', title: 'Founder-Led Negotiation', desc: 'No layered middlemen — direct quote within 24h' },
-  { icon: '🇷🇺', title: 'Russian & CIS Specialization', desc: 'Native Russian-speaking ops + EAC certification' },
-  { icon: '📋', title: 'Full Export Compliance', desc: 'MoFCOM license, AEO, GCC, EAC, INMETRO, GSO' },
-  { icon: '💰', title: 'Transparent Pricing', desc: 'No hidden fees — FOB / CIF / EXW clearly broken down' },
-  { icon: '🛠', title: 'After-Sales Parts Network', desc: 'Spare parts depots in Moscow, Almaty, Dubai' },
+  { icon: '🏭', title: '15+ Years Export', desc: 'Cai led $50M+ B2B trade since 2010' },
+  { icon: '🤝', title: 'Founder-Led', desc: 'No layered middlemen — direct quote 24h' },
+  { icon: '🇷🇺', title: 'Russia & CIS Specialist', desc: 'Native Russian ops + EAC certification' },
+  { icon: '📋', title: 'Full Export Compliance', desc: 'MoFCOM / AEO / GCC / EAC / INMETRO / GSO' },
+  { icon: '💰', title: 'Transparent Pricing', desc: 'FOB / CIF / EXW broken down line-by-line' },
+  { icon: '🛠', title: 'Parts Network', desc: 'Moscow / Almaty / Dubai depots' },
 ];
 
 const markets = [
   { code: 'RU', name: 'Russia', tagline: 'Block train + RoRo to St. Petersburg, EAC compliant' },
   { code: 'AE', name: 'UAE', tagline: 'Jebel Ali RoRo, GCC + ESMA certified' },
-  { code: 'KZ', name: 'Kazakhstan', tagline: 'Direct rail via Khorgos to Almaty, EAC' },
-  { code: 'UZ', name: 'Uzbekistan', tagline: 'Block train to Tashkent, gov fleet contracts' },
+  { code: 'KZ', name: 'Kazakhstan', tagline: 'Direct rail via Khorgos to Almaty' },
+  { code: 'UZ', name: 'Uzbekistan', tagline: 'Block train to Tashkent' },
   { code: 'SA', name: 'Saudi Arabia', tagline: 'SASO/GSO compliant, Jeddah RoRo' },
   { code: 'EG', name: 'Egypt', tagline: 'CKD program for Cairo assembly partners' },
-  { code: 'BR', name: 'Brazil', tagline: 'INMETRO certified, Santos container shipment' },
+  { code: 'BR', name: 'Brazil', tagline: 'INMETRO certified, Santos container' },
   { code: 'MX', name: 'Mexico', tagline: 'NOM-certified, Manzanillo RoRo' },
 ];
 
@@ -74,31 +63,21 @@ const liveShipments = [
   { ago: '8h ago', text: '50 units Changan UNI-T → St. Petersburg, Russia' },
   { ago: '1d ago', text: '12 units Deepal S07 → Jebel Ali, UAE' },
   { ago: '2d ago', text: '25 units Geely Coolray → Almaty, Kazakhstan' },
-  { ago: '3d ago', text: '8 units Deepal S09 → Riyadh, Saudi Arabia' },
 ];
 
 const testimonials = [
-  { name: 'Andrey K.', role: 'Dealer Principal', country: 'Moscow, Russia', quote: 'They delivered 50 Jetour T2 in 18 days via block train. EAC paperwork was zero hassle.' },
-  { name: 'Mohammed A.', role: 'Fleet Manager', country: 'Dubai, UAE', quote: 'Most professional China exporter we have worked with. Pricing transparent, GCC compliance complete.' },
-  { name: 'Daniyar T.', role: 'Wholesale Buyer', country: 'Almaty, Kazakhstan', quote: 'Khorgos route saved us 15 days vs Vladivostok. Will scale up monthly orders.' },
-  { name: 'Carlos M.', role: 'Distributor', country: 'São Paulo, Brazil', quote: 'INMETRO docs handled end-to-end. First container arrived on time, no surprises at customs.' },
+  { name: 'Andrey K.', role: 'Dealer Principal · Moscow, Russia', quote: 'They delivered 50 Jetour T2 in 18 days via block train. EAC paperwork zero hassle.' },
+  { name: 'Mohammed A.', role: 'Fleet Manager · Dubai, UAE', quote: 'Most professional China exporter we worked with. Pricing transparent, GCC complete.' },
+  { name: 'Daniyar T.', role: 'Wholesale Buyer · Almaty, Kazakhstan', quote: 'Khorgos route saved 15 days vs Vladivostok. Will scale up monthly orders.' },
+  { name: 'Carlos M.', role: 'Distributor · São Paulo, Brazil', quote: 'INMETRO docs handled end-to-end. First container arrived on time, no surprises.' },
 ];
 
-const certifications = [
-  { name: 'MOFCOM', label: '商务部出口许可' },
-  { name: 'AEO', label: '海关 AEO 认证' },
-  { name: 'ISO 9001', label: '质量管理' },
-  { name: 'GCC', label: '海湾标准' },
-  { name: 'EAC', label: '欧亚经济联盟' },
-  { name: 'INMETRO', label: '巴西标准' },
-  { name: 'GSO', label: '沙特标准' },
-  { name: 'SASO', label: '沙特质量' },
-];
+const certifications = ['MOFCOM', 'AEO', 'ISO 9001', 'GCC', 'EAC', 'INMETRO', 'GSO', 'SASO'];
 
 const recentBlogs = [
-  { slug: 'top-chinese-evs-for-russia-2026', title: 'Top 10 Chinese EVs for Russia in 2026', date: '2026-05-15', cat: 'Market Guide', read: '8 min' },
-  { slug: 'how-to-import-chinese-cars-to-uae', title: 'How to Import Chinese Cars to UAE: 5-Step Guide', date: '2026-05-08', cat: 'Export Process', read: '12 min' },
-  { slug: 'phev-vs-bev-which-for-central-asia', title: 'PHEV vs BEV: Which Chinese EV for Central Asia?', date: '2026-05-01', cat: 'Buyer Guide', read: '10 min' },
+  { slug: 'top-7-chinese-suv-for-russia-2026', title: 'Top 7 Chinese Off-Road SUVs for Russia in 2026', date: '2026-05-10', cat: 'Buyer Guide', read: '10 min' },
+  { slug: '2026-china-nev-export-rules-guide', title: "China's New NEV Export Policy 2026: Complete Guide", date: '2026-05-15', cat: 'Industry News', read: '8 min' },
+  { slug: 'changan-uni-t-vs-jetour-t2-comparison', title: 'Changan UNI-T vs Jetour T2: Which Coupé SUV?', date: '2026-05-12', cat: 'Product News', read: '6 min' },
 ];
 
 const faqs = [
@@ -106,54 +85,48 @@ const faqs = [
   { q: 'How long does delivery take?', a: 'Stock units ship within 3-15 days. New-build orders take 30-60 days depending on factory schedule.' },
   { q: 'What payment terms do you accept?', a: 'T/T 30% deposit + 70% before shipment is standard. L/C at sight from major banks accepted. OA after first order.' },
   { q: 'Do you provide right-hand drive (RHD) versions?', a: 'Yes, for select models (Geely Coolray, Changan CS75 Plus, Jetour T2). We coordinate factory RHD batches.' },
-  { q: 'Can you ship to my country?', a: 'We currently serve 60+ countries. Active routes: Russia, CIS, Middle East, LATAM, Africa, SE Asia. Contact us for specific lane.' },
+  { q: 'Can you ship to my country?', a: 'We currently serve 60+ countries. Active routes: Russia, CIS, Middle East, LATAM, Africa, SE Asia.' },
   { q: 'Do you offer after-sales parts?', a: 'Yes. We maintain parts depots in Moscow, Almaty, Dubai. Other regions ship from Shanghai within 7-14 days.' },
 ];
 ---
 
 <BaseLayout
   title="China NEV Export | Wholesale Electric Cars from Authorized Exporter"
-  description="Authorized exporter of Chinese new energy vehicles — Changan, Deepal, Jetour, Geely, VW, BYD. FOB from $13,800. Ships to Russia, UAE, Kazakhstan, Brazil. MOQ 1."
+  description="Authorized exporter of Chinese NEVs — Changan, Deepal, Jetour, Geely, VW, BYD. FOB from $13,800. Ships to Russia, UAE, Kazakhstan, Brazil. MOQ 1."
 >
-  {/* ============ 1. HERO + Stats Strip ============ */}
-  <section class="relative bg-gradient-to-br from-ink-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+  {/* ============ HERO ============ */}
+  <section class="relative bg-gradient-to-br from-ink-50 via-white to-ink-50 py-20 lg:py-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-full mb-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-full mb-6">
             <span class="w-2 h-2 bg-brand-500 rounded-full animate-pulse"></span>
             45 units in stock at Shanghai warehouse
           </div>
-          <h1 class="text-4xl lg:text-5xl font-bold text-ink-900 leading-tight mb-6">
-            Your Trusted China NEV Exporter <br/>
-            <span class="text-brand-500">for Global B2B Buyers</span>
+          <h1 class="text-5xl lg:text-7xl font-bold text-ink-900 leading-[1.05] tracking-tight mb-6">
+            Your Trusted China NEV Exporter <span class="text-brand-500">for Global B2B Buyers</span>
           </h1>
-          <p class="text-lg text-ink-600 mb-8 max-w-xl">
-            Direct supply of Changan, Deepal, Jetour, Geely, VW, BYD. FOB from $13,800 · MOQ 1 unit · 15-day lead time · RoRo / Container / Block Train.
+          <p class="text-lg lg:text-xl text-ink-600 mb-10 max-w-xl leading-relaxed">
+            Direct supply of Changan, Deepal, Jetour, Geely, VW, BYD. FOB from $13,800 · MOQ 1 unit · 15-day lead time.
           </p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/contact/quote/" class="inline-flex items-center px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
-              Request a Quote
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-            <a href="/cars/" class="inline-flex items-center px-6 py-3 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 font-semibold rounded-lg transition-colors">
-              Browse 50+ Models
-            </a>
-          </div>
-          <div class="mt-10 pt-8 border-t border-ink-200 grid grid-cols-2 sm:grid-cols-4 gap-6">
-            <div><div class="text-2xl font-bold text-ink-900">15+</div><div class="text-xs text-ink-500 mt-1">Years in Export</div></div>
-            <div><div class="text-2xl font-bold text-ink-900">60+</div><div class="text-xs text-ink-500 mt-1">Countries Served</div></div>
-            <div><div class="text-2xl font-bold text-ink-900">6</div><div class="text-xs text-ink-500 mt-1">Authorized Brands</div></div>
-            <div><div class="text-2xl font-bold text-ink-900">50+</div><div class="text-xs text-ink-500 mt-1">Models Available</div></div>
+          <CTAGroup buttons={[
+            { label: 'Request a Quote →', href: '/contact/quote/', variant: 'primary' },
+            { label: 'Browse 50+ Models', href: '/cars/', variant: 'secondary' },
+          ]} />
+          <div class="mt-12 pt-10 border-t border-ink-200">
+            <StatGrid stats={[
+              { num: '15+', label: 'Years in Export' },
+              { num: '60+', label: 'Countries Served' },
+              { num: '6', label: 'Authorized Brands' },
+              { num: '50+', label: 'Models Available' },
+            ]} />
           </div>
         </div>
         <div class="relative">
           <div class="aspect-[4/3] rounded-2xl bg-ink-100 border border-ink-200 overflow-hidden">
             <img src="/images/hero-port-loading.svg" alt="China NEV port loading bay" class="w-full h-full object-cover" />
           </div>
-          <div class="absolute -bottom-4 -left-4 bg-white border border-ink-200 rounded-xl shadow-lg p-4 max-w-[200px]">
+          <div class="absolute -bottom-4 -left-4 bg-white border border-ink-200 rounded-xl shadow-lg p-4 max-w-[220px]">
             <div class="text-xs text-ink-500 mb-1">Latest shipment</div>
             <div class="text-sm font-semibold text-ink-900">50 units Jetour T2</div>
             <div class="text-xs text-ink-500 mt-1">→ Tashkent, Uzbekistan</div>
@@ -163,365 +136,236 @@ const faqs = [
     </div>
   </section>
 
-  {/* ============ 2. TOP CARDS (ihka 同款 4 入口) ============ */}
-  <section class="py-10 bg-white border-b border-ink-100">
+  {/* ============ TOP CARDS (4 entry points) ============ */}
+  <section class="py-10 bg-white border-y border-ink-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <CardGrid cols={4} gap="md">
         {topCards.map(c => (
-          <a href={c.href} class="group flex items-center gap-4 p-5 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl transition-all">
-            <div class="w-12 h-12 rounded-lg bg-ink-100 group-hover:bg-brand-50 flex items-center justify-center text-2xl">
-              {c.icon}
-            </div>
-            <div>
-              <div class="font-semibold text-sm text-ink-900 group-hover:text-brand-500">{c.title}</div>
-              <div class="text-xs text-ink-500 mt-0.5">{c.sub}</div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 3. Featured Brands 12 个 ============ */}
-  <section class="py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-10">
-        <div>
-          <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Authorized & Sourced Brands</p>
-          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Direct supply from 35 Chinese OEMs</h2>
-        </div>
-        <a href="/brands/" class="hidden sm:inline-flex text-sm font-semibold text-brand-500 hover:text-brand-600">View all 35 brands →</a>
-      </div>
-      <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-        {featuredBrands.map(b => (
-          <a href={`/brands/${b.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-4 text-center transition-all">
-            <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="h-12 mx-auto mb-3 object-contain" />
-            <div class="text-xs text-ink-500 mt-1">{b.cn}</div>
-            <div class="text-xs text-ink-400 mt-2">{b.models}</div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 4. HOT SELLING MODELS 8 个 ============ */}
-  <section class="py-16 lg:py-20 bg-ink-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-10">
-        <div>
-          <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Hot Selling Models</p>
-          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Top picks for export</h2>
-        </div>
-        <a href="/cars/" class="hidden sm:inline-flex text-sm font-semibold text-brand-500 hover:text-brand-600">See all 50+ models →</a>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {featuredCars.map(c => (
-          <a href={`/cars/${c.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
-            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src={['geely-atlas','geely-coolray','geely-emgrand','geely-monjaro','jetour-t2','jetour-dasheng','jetour-x70plus'].includes(c.slug) ? `/images/真图/laundered/evautopro-${c.slug}-01.webp` : `/images/car-${c.slug}.svg`} alt={`${c.brand} ${c.name}`} class="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div class="p-5">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 bg-ink-100 text-ink-600 text-xs rounded">{c.body}</span>
-                <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{c.fuel}</span>
-              </div>
-              <div class="text-xs text-ink-500 mb-1">{c.brand}</div>
-              <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{c.name}</h3>
-              <div class="flex items-end justify-between">
-                <div>
-                  <div class="text-xs text-ink-500">From</div>
-                  <div class="text-lg font-bold text-ink-900">${c.price}</div>
-                  <div class="text-xs text-ink-400">FOB Shanghai</div>
-                </div>
-                <div class="text-xs text-ink-500">MOQ {c.moq}</div>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 5. 5 USE-CASE Landing Pages ============ */}
-  <section class="py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Shop by Use Case</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Find the right car for your market</h2>
-      </div>
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
-        {useCases.map(u => (
-          <a href={`/collections/${u.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-5 transition-all">
-            <div class="text-xs font-semibold text-brand-500 mb-2">{u.tag}</div>
-            <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 mb-2">{u.label}</h3>
-            <p class="text-xs text-ink-500 leading-relaxed">{u.desc}</p>
-            <div class="mt-3 text-xs font-semibold text-brand-500 group-hover:translate-x-1 transition-transform">View models →</div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 6. TRUST BADGES 3 ============ */}
-  <section class="py-16 lg:py-20 bg-ink-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8">
-        {trustBadges.map(t => (
-          <div class="flex gap-4">
-            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-brand-500 flex items-center justify-center text-white text-2xl font-bold">
-              {t.icon}
-            </div>
-            <div>
-              <h3 class="font-semibold text-lg text-white mb-1">{t.title}</h3>
-              <p class="text-sm text-ink-400">{t.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 7. ABOUT + Stats ============ */}
-  <section class="py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-ink-200">
-          <img src="/images/about-team.svg" alt="EV Auto Pro team" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div>
-          <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">About EV Auto Pro</p>
-          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900 mb-6">15 years in China export. NEV-focused since 2022.</h2>
-          <p class="text-base text-ink-600 mb-4 leading-relaxed">
-            Founded by Cai, a 15-year veteran of Chinese export trade. EV Auto Pro pivoted to new energy vehicles in 2022 to serve the surge in global demand for affordable Chinese EVs, PHEVs, and hybrids.
-          </p>
-          <p class="text-base text-ink-600 mb-6 leading-relaxed">
-            Today we hold direct MoUs with Changan, Deepal, Geely, Jetour, Volkswagen (China), and BYD. We ship to 60+ countries with native Russian, Arabic, and Spanish-speaking ops teams.
-          </p>
-          <a href="/about/" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:text-brand-600">
-            Learn more about us →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 8. OUR ADVANTAGE 6 卖点 ============ */}
-  <section class="py-16 lg:py-20 bg-ink-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Our Advantage</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Why dealers choose EV Auto Pro</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {advantages.map(a => (
-          <div class="bg-white border border-ink-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-            <div class="text-3xl mb-3">{a.icon}</div>
-            <h3 class="font-semibold text-base text-ink-900 mb-2">{a.title}</h3>
-            <p class="text-sm text-ink-600 leading-relaxed">{a.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 9. Compare & Customize Tool ============ */}
-  <section class="py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-ink-900 to-ink-800 rounded-2xl p-8 lg:p-12 grid lg:grid-cols-2 gap-8 items-center">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-500/20 text-brand-500 text-xs font-semibold rounded-full mb-4">
-            ⚡ Coming Soon
-          </div>
-          <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Compare & Customize
-          </h2>
-          <p class="text-lg text-ink-300 mb-6">
-            Select 2-3 models side-by-side. Compare specs, prices, and lead times. Customize trim/color and get instant FOB quote.
-          </p>
-          <div class="flex gap-3">
-            <a href="/contact/quote/" class="inline-flex items-center px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
-              Request Tool Preview
-            </a>
-          </div>
-        </div>
-        <div class="aspect-[4/3] rounded-xl overflow-hidden border border-ink-600">
-          <img src="/images/tool-compare-mockup.svg" alt="Compare & Customize tool preview" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 10. Real-time Shipments Feed ============ */}
-  <section class="py-12 bg-ink-50 border-y border-ink-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="inline-flex w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-        <p class="text-xs font-semibold text-ink-700 uppercase tracking-wider">Live Shipment Feed</p>
-      </div>
-      <div class="space-y-2">
-        {liveShipments.map(s => (
-          <div class="flex items-center gap-4 px-4 py-3 bg-white border border-ink-200 rounded-lg hover:border-brand-500 transition-colors">
-            <span class="text-xs font-mono text-ink-400 w-20 flex-shrink-0">{s.ago}</span>
-            <span class="text-sm text-ink-900 flex-1">{s.text}</span>
-            <a href="/case-studies/" class="text-xs font-semibold text-brand-500 hover:text-brand-600 flex-shrink-0">Details →</a>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 11. Markets 8 国 ============ */}
-  <section class="py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Key Markets</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Built for emerging markets</h2>
-        <p class="text-base text-ink-600 mt-3 max-w-2xl mx-auto">
-          Logistics, certifications, and after-sales tailored to each destination.
-        </p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {markets.map(m => (
-          <a href={`/markets/${m.name.toLowerCase().replace(/\s+/g, '-')}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 rounded-xl p-5 transition-all">
-            <div class="w-10 h-10 rounded-lg bg-ink-100 group-hover:bg-brand-50 flex items-center justify-center mb-3 text-ink-700 group-hover:text-brand-500 font-bold text-sm transition-colors">
-              {m.code}
-            </div>
-            <h3 class="font-semibold text-base text-ink-900 mb-2">{m.name}</h3>
-            <p class="text-xs text-ink-600 leading-relaxed">{m.tagline}</p>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ============ 12. Client Testimonials 4 ============ */}
-  <section class="py-16 lg:py-20 bg-ink-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Client Voices</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Trusted by dealers in 60+ countries</h2>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {testimonials.map((t, i) => (
-          <div class="bg-white border border-ink-200 rounded-xl p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <img src={`/images/testimonial-${i+1}.svg`} alt={t.name} class="w-12 h-12 rounded-full object-cover" loading="lazy" />
+          <Card href={c.href} padding="md">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-lg bg-ink-100 group-hover:bg-brand-50 flex items-center justify-center text-2xl transition-colors">{c.icon}</div>
               <div>
-                <div class="font-semibold text-sm text-ink-900">{t.name}</div>
-                <div class="text-xs text-ink-500">{t.role}</div>
-                <div class="text-xs text-ink-400 mt-0.5">{t.country}</div>
+                <div class="font-semibold text-sm text-ink-900 group-hover:text-brand-500">{c.title}</div>
+                <div class="text-xs text-ink-500 mt-0.5">{c.sub}</div>
               </div>
             </div>
-            <p class="text-sm text-ink-700 leading-relaxed italic">"{t.quote}"</p>
-          </div>
+          </Card>
         ))}
-      </div>
+      </CardGrid>
     </div>
   </section>
 
-  {/* ============ 13. Certifications Logo Wall ============ */}
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <p class="text-xs font-semibold text-ink-500 uppercase tracking-wider mb-2">Trust & Compliance</p>
-        <h2 class="text-2xl font-bold text-ink-900">Certified for global export</h2>
-      </div>
-      <div class="grid grid-cols-4 lg:grid-cols-8 gap-4">
-        {certifications.map(c => (
-          <div class="bg-white border border-ink-200 hover:border-brand-500 rounded-lg overflow-hidden transition-colors">
-            <img src={`/images/cert-${c.name.toLowerCase().replace(/\s+/g, '')}.svg`} alt={c.label} class="w-full h-full object-contain" loading="lazy" />
-          </div>
-        ))}
-      </div>
+  {/* ============ BRANDS ============ */}
+  <Section eyebrow="Authorized & Sourced Brands" title="Direct supply from 35 Chinese OEMs">
+    <CardGrid cols={6} gap="sm">
+      {featuredBrands.map(b => (
+        <Card href={`/brands/${b.slug}/`} padding="sm" class="text-center">
+          <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="h-12 mx-auto mb-3 object-contain" />
+          <div class="font-semibold text-sm text-ink-900">{b.name}</div>
+          <div class="text-xs text-ink-500 mt-1">{b.cn}</div>
+        </Card>
+      ))}
+    </CardGrid>
+    <div class="text-center mt-10">
+      <a href="/brands/" class="text-sm font-semibold text-brand-500 hover:text-brand-600">View all 35 brands →</a>
     </div>
-  </section>
+  </Section>
 
-  {/* ============ 14. Latest Blog 3 ============ */}
-  <section class="py-16 lg:py-20 bg-ink-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-10">
-        <div>
-          <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Latest from Blog</p>
-          <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Export insights & buyer guides</h2>
+  {/* ============ HOT MODELS ============ */}
+  <Section eyebrow="Hot Selling Models" title="Top picks for export" bg="gray">
+    <CardGrid cols={4} gap="md">
+      {featuredCars.map(c => {
+        const img = ['geely-coolray','jetour-t2'].includes(c.slug) ? `/images/真图/laundered/evautopro-${c.slug}-01.webp` : `/images/car-${c.slug}.svg`;
+        return (
+          <Card href={`/cars/${c.slug}/`} padding="sm">
+            <div class="aspect-[16/10] bg-ink-100 rounded-lg overflow-hidden mb-4 -m-1">
+              <img src={img} alt={`${c.brand} ${c.name}`} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2 py-0.5 bg-ink-100 text-ink-600 text-xs rounded">{c.body}</span>
+              <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{c.fuel}</span>
+            </div>
+            <div class="text-xs text-ink-500 mb-1">{c.brand}</div>
+            <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{c.name}</h3>
+            <div class="pt-3 border-t border-ink-100">
+              <div class="text-xs text-ink-500">From FOB Shanghai</div>
+              <div class="text-lg font-bold text-ink-900">${c.price}</div>
+            </div>
+          </Card>
+        );
+      })}
+    </CardGrid>
+    <div class="text-center mt-10">
+      <a href="/cars/" class="text-sm font-semibold text-brand-500 hover:text-brand-600">See all 50+ models →</a>
+    </div>
+  </Section>
+
+  {/* ============ USE CASES ============ */}
+  <Section eyebrow="Shop by Use Case" title="Find the right car for your market" align="center">
+    <CardGrid cols={5} gap="md">
+      {useCases.map(u => (
+        <Card href={`/collections/${u.slug}/`} padding="md">
+          <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 mb-2">{u.label}</h3>
+          <p class="text-xs text-ink-500 leading-relaxed mb-3">{u.desc}</p>
+          <div class="text-xs font-semibold text-brand-500">View models →</div>
+        </Card>
+      ))}
+    </CardGrid>
+  </Section>
+
+  {/* ============ TRUST PILLARS DARK ============ */}
+  <Section bg="dark" eyebrow="3 Pillars of Trust" title="Why dealers choose us" align="center">
+    <CardGrid cols={3} gap="lg">
+      <Card variant="dark" hover={false} padding="lg">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-brand-500 flex items-center justify-center text-2xl">✓</div>
+          <div>
+            <h3 class="font-semibold text-lg text-white mb-1">Authorized Dealer</h3>
+            <p class="text-sm text-ink-400">Direct MoU with 6 OEMs · No grey market</p>
+          </div>
         </div>
-        <a href="/news/" class="hidden sm:inline-flex text-sm font-semibold text-brand-500 hover:text-brand-600">All articles →</a>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        {recentBlogs.map(b => (
-          <a href={`/news/${b.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl overflow-hidden transition-all">
-            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src={`/images/blog-${b.slug}.svg`} alt={b.title} class="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div class="p-5">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{b.cat}</span>
-                <span class="text-xs text-ink-500">{b.read}</span>
-              </div>
-              <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{b.title}</h3>
-              <div class="text-xs text-ink-500">{b.date}</div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
+      </Card>
+      <Card variant="dark" hover={false} padding="lg">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-brand-500 flex items-center justify-center text-2xl">⚡</div>
+          <div>
+            <h3 class="font-semibold text-lg text-white mb-1">In-Stock Same-Day Ship</h3>
+            <p class="text-sm text-ink-400">200+ units bonded warehouse · 3-15 day lead</p>
+          </div>
+        </div>
+      </Card>
+      <Card variant="dark" hover={false} padding="lg">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-brand-500 flex items-center justify-center text-2xl">🚢</div>
+          <div>
+            <h3 class="font-semibold text-lg text-white mb-1">Door-to-Door Logistics</h3>
+            <p class="text-sm text-ink-400">RoRo / Container / Block Train · 4 modes</p>
+          </div>
+        </div>
+      </Card>
+    </CardGrid>
+  </Section>
 
-  {/* ============ 15. FAQ 6 ============ */}
-  <section class="py-16 lg:py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">FAQs</p>
-        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Common questions</h2>
-      </div>
-      <div class="space-y-4">
-        {faqs.map(f => (
-          <details class="group bg-white border border-ink-200 rounded-xl p-5 hover:border-brand-500 transition-colors">
-            <summary class="flex items-center justify-between cursor-pointer font-semibold text-base text-ink-900">
-              <span>{f.q}</span>
-              <svg class="w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </summary>
-            <p class="mt-3 text-sm text-ink-600 leading-relaxed">{f.a}</p>
-          </details>
-        ))}
-      </div>
-    </div>
-  </section>
+  {/* ============ OUR ADVANTAGE ============ */}
+  <Section eyebrow="Our Advantage" title="Why dealers pick EV Auto Pro" align="center">
+    <CardGrid cols={3} gap="md">
+      {advantages.map(a => (
+        <Card padding="lg">
+          <div class="text-3xl mb-3">{a.icon}</div>
+          <h3 class="font-semibold text-base text-ink-900 mb-2">{a.title}</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">{a.desc}</p>
+        </Card>
+      ))}
+    </CardGrid>
+  </Section>
 
-  {/* ============ 16. Catalogue PDF Download ============ */}
-  <section class="py-16 bg-gradient-to-br from-brand-50 to-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  {/* ============ LIVE SHIPMENTS ============ */}
+  <Section bg="gray" eyebrow="Live Shipment Feed" title="Recent activity" padding="md">
+    <div class="space-y-2 max-w-3xl mx-auto">
+      {liveShipments.map(s => (
+        <div class="flex items-center gap-4 px-5 py-4 bg-white border border-ink-200 rounded-lg hover:border-brand-500 transition-colors">
+          <span class="text-xs font-mono text-ink-400 w-20 flex-shrink-0">{s.ago}</span>
+          <span class="text-sm text-ink-900 flex-1">{s.text}</span>
+          <a href="/case-studies/" class="text-xs font-semibold text-brand-500 hover:text-brand-600 flex-shrink-0 hidden sm:block">Details →</a>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  {/* ============ MARKETS ============ */}
+  <Section eyebrow="Key Markets" title="Built for emerging markets" subtitle="Logistics, certifications, and after-sales tailored to each destination." align="center">
+    <CardGrid cols={4} gap="md">
+      {markets.map(m => (
+        <Card href={`/markets/${m.name.toLowerCase().replace(/\s+/g, '-')}/`} padding="md">
+          <div class="w-10 h-10 rounded-lg bg-ink-100 group-hover:bg-brand-50 flex items-center justify-center mb-3 text-sm font-bold text-ink-700 group-hover:text-brand-500 transition-colors">
+            {m.code}
+          </div>
+          <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 mb-2 transition-colors">{m.name}</h3>
+          <p class="text-xs text-ink-600 leading-relaxed">{m.tagline}</p>
+        </Card>
+      ))}
+    </CardGrid>
+  </Section>
+
+  {/* ============ TESTIMONIALS ============ */}
+  <Section bg="gray" eyebrow="Client Voices" title="Trusted by dealers in 60+ countries" align="center">
+    <CardGrid cols={4} gap="md">
+      {testimonials.map((t, i) => (
+        <Card padding="md">
+          <div class="flex items-center gap-3 mb-4">
+            <img src={`/images/testimonial-${i + 1}.svg`} alt={t.name} class="w-12 h-12 rounded-full object-cover" loading="lazy" />
+            <div>
+              <div class="font-semibold text-sm text-ink-900">{t.name}</div>
+              <div class="text-xs text-ink-500">{t.role}</div>
+            </div>
+          </div>
+          <p class="text-sm text-ink-700 leading-relaxed italic">"{t.quote}"</p>
+        </Card>
+      ))}
+    </CardGrid>
+  </Section>
+
+  {/* ============ CERTIFICATIONS ============ */}
+  <Section eyebrow="Trust & Compliance" title="Certified for global export" align="center" padding="md">
+    <div class="grid grid-cols-4 lg:grid-cols-8 gap-4">
+      {certifications.map(c => (
+        <div class="bg-white border border-ink-200 rounded-lg p-4 text-center hover:border-brand-500 transition-colors">
+          <div class="font-bold text-sm text-ink-900">{c}</div>
+          <div class="text-[10px] text-ink-500 mt-1">CERTIFIED</div>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  {/* ============ BLOG ============ */}
+  <Section bg="gray" eyebrow="Latest from Blog" title="Export insights & buyer guides">
+    <CardGrid cols={3} gap="md">
+      {recentBlogs.map(b => (
+        <Card href={`/news/${b.slug}/`} padding="sm">
+          <div class="aspect-[16/10] bg-ink-100 rounded-lg overflow-hidden mb-4 -m-1 flex items-center justify-center text-ink-400 text-xs">
+            blog-{b.slug}
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{b.cat}</span>
+            <span class="text-xs text-ink-500">{b.read}</span>
+          </div>
+          <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 transition-colors mb-2 leading-snug">{b.title}</h3>
+          <div class="text-xs text-ink-500">{b.date}</div>
+        </Card>
+      ))}
+    </CardGrid>
+    <div class="text-center mt-10">
+      <a href="/news/" class="text-sm font-semibold text-brand-500 hover:text-brand-600">All articles →</a>
+    </div>
+  </Section>
+
+  {/* ============ FAQ ============ */}
+  <Section eyebrow="FAQs" title="Common questions" align="center" maxWidth="normal">
+    <FAQAccordion faqs={faqs} />
+    <div class="text-center mt-10">
+      <a href="/faq/" class="text-sm font-semibold text-brand-500 hover:text-brand-600">See all 40 FAQs →</a>
+    </div>
+  </Section>
+
+  {/* ============ CATALOGUE PDF ============ */}
+  <Section padding="md" align="center" maxWidth="normal">
+    <div class="bg-gradient-to-br from-brand-50 to-white border border-brand-100 rounded-2xl p-10">
       <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 mb-3">Get our 50-page model catalogue</h2>
-      <p class="text-base text-ink-600 mb-6">Full specs, FOB prices, and lead times for all 50+ models. PDF emailed instantly.</p>
+      <p class="text-base text-ink-600 mb-6">Full specs, FOB prices, lead times for all 50+ models. PDF emailed instantly.</p>
       <form class="max-w-md mx-auto flex gap-2">
         <input type="email" placeholder="Your business email" required
                class="flex-1 px-4 py-3 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm" />
-        <button type="submit" class="px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
-          Send PDF
-        </button>
+        <button type="submit" class="btn-primary">Send PDF</button>
       </form>
       <p class="text-xs text-ink-500 mt-3">No spam · Unsubscribe anytime</p>
     </div>
-  </section>
+  </Section>
 
-  {/* ============ 17. Final Dark CTA ============ */}
-  <section class="py-16 lg:py-20 bg-ink-900">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
-        Ready to import Chinese EVs?
-      </h2>
-      <p class="text-lg text-ink-300 mb-8">
-        Tell us your target market and quantity. We'll send FOB + CIF pricing within 24 hours.
-      </p>
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="/contact/quote/" class="inline-flex items-center px-8 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
-          Request a Quote
-        </a>
-        <a href="https://wa.me/" class="inline-flex items-center px-8 py-3 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
-          WhatsApp Now
-        </a>
-      </div>
-    </div>
-  </section>
+  {/* ============ FINAL DARK CTA ============ */}
+  <Section bg="dark" title="Ready to import Chinese EVs?" subtitle="Tell us your target market and quantity. We'll send FOB + CIF pricing within 24 hours." align="center" maxWidth="normal">
+    <CTAGroup align="center" buttons={[
+      { label: 'Request a Quote', href: '/contact/quote/', variant: 'primary' },
+      { label: '💬 WhatsApp Now', href: 'https://wa.me/8613800000000', variant: 'white' },
+    ]} />
+  </Section>
 </BaseLayout>
