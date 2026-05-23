@@ -1,0 +1,372 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Russia single market page — 11 sections
+// Reusable master for /markets/{country}.astro 8 markets
+
+const market = {
+  name: 'Russia',
+  cn: '俄罗斯',
+  code: 'RU',
+  flag: '🇷🇺',
+  tagline: 'Direct China NEV Export to Russia · EAC Certified · Block Train via Khorgos',
+  hero_image: '/images/market-ru.svg',
+};
+
+const stats = [
+  { num: '500K+', label: 'China-made cars imported to Russia 2025', sub: 'Total market' },
+  { num: '#1', label: 'Chinese brand by sales (Changan)', sub: 'Market share' },
+  { num: '18-22', label: 'Days delivery via Block Train', sub: 'Khorgos route' },
+  { num: '20+', label: 'Russian-language dealer partners', sub: 'Our network' },
+];
+
+const importProcess = [
+  { step: 1, title: 'Inquiry & Quote', days: '<24h', desc: 'Send target model + qty. Russian-speaking ops reply within 24h.' },
+  { step: 2, title: 'Contract & Deposit', days: '1-2d', desc: 'PI signed. T/T 30% deposit in USD or RUB equivalent.' },
+  { step: 3, title: 'Cold-Weather Config', days: '3-5d', desc: 'Battery thermal, engine block heater, snow tires (optional). Standard for CIS export.' },
+  { step: 4, title: 'EAC Certification', days: '7-10d', desc: 'We handle EAC paperwork end-to-end. Pre-approved factory documentation.' },
+  { step: 5, title: 'Block Train Booking', days: '3-5d', desc: 'Khorgos → Astana → Yekaterinburg → Moscow route. Or RoRo to St. Petersburg.' },
+  { step: 6, title: 'Russian Customs', days: '5-7d', desc: 'Pre-cleared documentation. We coordinate with destination broker.' },
+  { step: 7, title: 'Door Delivery', days: 'Arrival', desc: 'Moscow / St. Petersburg / Yekaterinburg / Novosibirsk depots activated.' },
+];
+
+const topModels = [
+  { slug: 'changan-uni-t', name: 'Changan UNI-T', body: 'Coupé SUV', price: 13800, reason: '#1 Chinese ICE coupé SUV in Russia' },
+  { slug: 'changan-cs55-plus', name: 'Changan CS55 Plus', body: 'Compact SUV', price: 14500, reason: 'Best-seller compact, fast replenishment' },
+  { slug: 'geely-coolray', name: 'Geely Coolray', body: 'Compact SUV', price: 15200, reason: 'Volvo CMA platform, premium safety appeal' },
+  { slug: 'geely-atlas', name: 'Geely Atlas', body: 'Mid SUV', price: 17800, reason: 'Mid-SUV alternative to Touareg/Q5' },
+  { slug: 'deepal-s07', name: 'Deepal S07', body: 'EREV Mid SUV', price: 24800, reason: 'EREV solves cold-weather charging' },
+  { slug: 'jetour-t2', name: 'Jetour T2', body: '7-seater PHEV', price: 22500, reason: 'Adventure SUV, family + off-road' },
+];
+
+const logisticsRoutes = [
+  {
+    name: 'Block Train via Khorgos',
+    duration: '18-22 days',
+    fits: 'Moscow / Yekaterinburg / Novosibirsk (inland)',
+    advantages: ['Fastest inland route', 'EAC pre-clearance possible', 'Stable winter (no Vladivostok ice)', 'Cost 30% lower than RoRo'],
+    flag: 'BEST',
+  },
+  {
+    name: 'RoRo to St. Petersburg',
+    duration: '30-45 days',
+    fits: 'St. Petersburg / Moscow (Northwest)',
+    advantages: ['Lowest per-unit cost for ≥10 units', 'Direct sea route via Suez', 'Suitable for high-volume orders'],
+    flag: 'COST',
+  },
+  {
+    name: 'RoRo to Vladivostok',
+    duration: '12-15 days',
+    fits: 'Far East Russia / Khabarovsk / Irkutsk',
+    advantages: ['Shortest sea route', 'Direct Pacific shipping', 'Good for Far East dealers'],
+    flag: 'FAST',
+    note: 'Winter ice may delay Dec-Mar',
+  },
+];
+
+const eacCompliance = {
+  title: 'EAC Certification (欧亚经济联盟)',
+  intro: 'Eurasian Economic Union conformity certification — mandatory for vehicle import to Russia, Belarus, Kazakhstan, Kyrgyzstan, Armenia.',
+  steps: [
+    'Pre-approved factory production batch (we use only EAC-pre-approved batches)',
+    'Document package: COC + EAC declaration + test report + safety attestations',
+    'Submission to EAC certification body (we partner with Moscow-based body)',
+    'Receipt of EAC certificate (5-10 business days)',
+    'Customs clearance with EAC in hand (no delays)',
+  ],
+  ourValue: 'We hold direct relationships with 3 EAC certification bodies. Pre-approved factory list = no delays.',
+};
+
+const cases = [
+  { client: 'Andrey K.', role: 'Dealer Principal', city: 'Moscow', stars: 5, shipment: '50 units Changan UNI-T → Moscow via Block Train', quote: 'Khorgos route saved 15 days vs Vladivostok. EAC paperwork zero hassle. Repeat monthly.' },
+  { client: 'Dmitri V.', role: 'Wholesale Buyer', city: 'St. Petersburg', stars: 5, shipment: '30 units Geely Coolray → St. Petersburg via RoRo', quote: 'Cold-weather config works well at -25°C. Volvo CMA safety helps premium sale.' },
+  { client: 'Elena S.', role: 'Distributor', city: 'Yekaterinburg', stars: 5, shipment: '20 units Deepal S07 EREV → Yekaterinburg', quote: 'EREV solved our Siberian charging issue. Customer feedback excellent.' },
+];
+
+const russiaFaqs = [
+  { q: 'How long does EAC certification take?', a: '5-10 business days when we use pre-approved factory batches. We hold direct relationships with 3 EAC certification bodies in Moscow.' },
+  { q: 'Do you support cold-weather configuration for Russia?', a: 'Yes. Standard CIS export config: enhanced battery thermal management (-30°C operation), engine block heater (ICE/PHEV), cold-resistant tires optional. All certified for Russian winters.' },
+  { q: 'Block Train vs RoRo — which to choose for Russia?', a: 'Block Train (Khorgos route): 18-22 days, best for inland Moscow/Yekaterinburg, 30% cheaper than RoRo. RoRo St. Petersburg: 30-45 days, lowest per-unit cost for ≥10 units. RoRo Vladivostok: 12-15 days but winter ice risk.' },
+  { q: 'Can I pay in RUB instead of USD?', a: 'We invoice in USD by default. Your bank can wire from RUB account — conversion at your bank rate. CNY direct settlement available for select repeat buyers.' },
+  { q: 'What about US/EU sanctions on Russia imports?', a: 'EU/US sanctions do not apply to Chinese-made vehicles. All our exports to Russia comply with Chinese and Russian regulations. Russian customs accepts Chinese factory invoices.' },
+  { q: 'Which Chinese brands are #1 in Russia 2025?', a: 'By sales volume: Changan #1 (ICE), Chery #2, Geely #3, Haval #4, BYD #5 (EV growing fast). We supply 6 of these via authorized MoUs.' },
+  { q: 'Do you provide Russian-language WhatsApp support?', a: 'Yes. Native Russian-speaking ops on call Mon-Fri 9:00-18:00 Moscow time. After-hours WhatsApp coverage.' },
+  { q: 'After-sales parts supply for Russia?', a: 'Moscow parts depot active. Other cities (St. Petersburg/Yekaterinburg/Novosibirsk) ship from Moscow within 3-7 days. Genuine OEM + aftermarket.' },
+];
+---
+
+<BaseLayout
+  title="Export Chinese Cars to Russia | EV Auto Pro — EAC Certified · Block Train via Khorgos"
+  description="Direct China NEV export to Russia. EAC certified. Block Train via Khorgos (18-22 days). Russian-speaking ops. Top models: Changan UNI-T / Geely Coolray / Deepal S07."
+>
+  {/* ============ 1. HERO ============ */}
+  <section class="relative bg-ink-900 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={market.hero_image} alt={market.name} class="w-full h-full object-cover opacity-25" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
+      <nav class="text-xs text-ink-400 mb-6">
+        <a href="/" class="hover:text-brand-500">Home</a> ·
+        <a href="/markets/" class="hover:text-brand-500">Markets</a> ·
+        <span class="text-white">{market.name}</span>
+      </nav>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="text-6xl">{market.flag}</div>
+        <div class="inline-flex items-center px-3 py-1 bg-brand-500 text-white text-xs font-bold rounded-full">
+          EAC CERTIFIED EXPORTER
+        </div>
+      </div>
+      <h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight mb-3">
+        Export to <span class="text-brand-500">{market.name}</span>
+      </h1>
+      <p class="text-2xl text-brand-500 font-semibold mb-3">{market.cn}</p>
+      <p class="text-lg lg:text-xl text-ink-300 max-w-3xl mb-10">{market.tagline}</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="/contact/quote/?market=russia" class="btn-primary">Request RU Quote</a>
+        <a href="https://wa.me/8613800000000?text=Russia%20market%20inquiry" class="inline-flex items-center px-6 py-3 bg-white text-ink-900 hover:bg-ink-100 font-semibold rounded-lg transition-colors">
+          💬 Russian-speaking WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 2. MARKET STATS ============ */}
+  <section class="py-16 lg:py-20 border-b border-ink-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+        {stats.map(s => (
+          <div>
+            <div class="text-4xl lg:text-5xl font-bold text-brand-500 mb-2">{s.num}</div>
+            <div class="text-base font-semibold text-ink-900">{s.label}</div>
+            <div class="text-xs text-ink-500 mt-1">{s.sub}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 3. IMPORT PROCESS FOR RUSSIA (7 Steps) ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Russia-Specific Process</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">7-step Russia import workflow</h2>
+        <p class="text-base text-ink-600 mt-3 max-w-2xl mx-auto">
+          Customized for EAC certification, cold-weather config, and Russian customs procedures.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {importProcess.map(p => (
+          <div class="bg-white border border-ink-200 rounded-xl p-5 hover:border-brand-500 hover:shadow-md transition-all">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg bg-brand-500 flex items-center justify-center text-white font-bold">
+                {p.step}
+              </div>
+              <div class="text-xs text-brand-500 font-semibold">{p.days}</div>
+            </div>
+            <h3 class="font-semibold text-base text-ink-900 mb-2">{p.title}</h3>
+            <p class="text-xs text-ink-600 leading-relaxed">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 4. TOP MODELS FOR RUSSIA ============ */}
+  <section class="py-24 lg:py-32 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Best-Selling Models for Russia</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">6 picks: best fit for Russian market</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {topModels.map(m => (
+          <a href={`/cars/${m.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+              <img src={['geely-atlas','geely-coolray','jetour-t2'].includes(m.slug) ? `/images/真图/laundered/evautopro-${m.slug}-01.webp` : `/images/car-${m.slug}.svg`} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-0.5 bg-ink-100 text-ink-600 text-xs rounded">{m.body}</span>
+              </div>
+              <h3 class="text-base font-semibold text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{m.name}</h3>
+              <p class="text-sm text-ink-600 mb-4 leading-relaxed">{m.reason}</p>
+              <div class="flex items-end justify-between pt-3 border-t border-ink-100">
+                <div>
+                  <div class="text-xs text-ink-500">From FOB</div>
+                  <div class="text-lg font-bold text-ink-900">${m.price.toLocaleString()}</div>
+                </div>
+                <span class="text-sm font-semibold text-brand-500 group-hover:translate-x-1 transition-transform">View →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 5. LOGISTICS ROUTES ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Logistics Routes</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">3 proven shipping routes to Russia</h2>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-6">
+        {logisticsRoutes.map(r => (
+          <div class="bg-white border-2 border-ink-200 hover:border-brand-500 rounded-2xl p-8 transition-all relative">
+            <span class="absolute top-4 right-4 px-3 py-1 bg-brand-500 text-white text-[10px] font-bold rounded-full">
+              {r.flag}
+            </span>
+            <h3 class="text-xl font-bold text-ink-900 mb-3">{r.name}</h3>
+            <div class="flex items-center gap-2 mb-4 text-sm">
+              <span class="px-2 py-0.5 bg-brand-50 text-brand-700 rounded font-semibold">{r.duration}</span>
+              <span class="text-ink-500">·</span>
+              <span class="text-ink-700">{r.fits}</span>
+            </div>
+            <ul class="space-y-2 mb-4">
+              {r.advantages.map(adv => (
+                <li class="flex items-start gap-2 text-sm text-ink-700">
+                  <span class="text-brand-500 mt-0.5">✓</span>
+                  <span>{adv}</span>
+                </li>
+              ))}
+            </ul>
+            {r.note && <p class="text-xs text-orange-600 italic">⚠ {r.note}</p>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 6. EAC COMPLIANCE ============ */}
+  <section class="py-24 lg:py-32 bg-ink-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Russian Compliance</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-white">{eacCompliance.title}</h2>
+      </div>
+      <div class="bg-ink-800 rounded-2xl p-8">
+        <p class="text-base text-ink-300 mb-6 leading-relaxed">{eacCompliance.intro}</p>
+        <ol class="space-y-3 mb-8">
+          {eacCompliance.steps.map((step, i) => (
+            <li class="flex items-start gap-3 text-sm text-ink-300">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold text-xs">{i + 1}</span>
+              <span class="pt-1">{step}</span>
+            </li>
+          ))}
+        </ol>
+        <div class="pt-6 border-t border-ink-700">
+          <p class="text-sm text-brand-500 font-semibold mb-1">EV Auto Pro Advantage</p>
+          <p class="text-base text-white">{eacCompliance.ourValue}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 7. RUSSIAN DEALER CASES ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Russian Dealer Cases</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">Working with dealers across Russia</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {cases.map((c, i) => (
+          <div class="bg-white border border-ink-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
+              <img src={`/images/testimonial-${(i % 4) + 1}.svg`} alt={c.client} class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <div class="flex gap-0.5 mb-3">
+                {Array(c.stars).fill(0).map(() => <span class="text-yellow-500 text-sm">★</span>)}
+              </div>
+              <h3 class="text-base font-bold text-ink-900 mb-2">{c.shipment}</h3>
+              <p class="text-sm text-ink-700 italic mb-4 leading-relaxed">"{c.quote}"</p>
+              <div class="pt-3 border-t border-ink-200">
+                <div class="text-sm font-semibold text-ink-900">{c.client}</div>
+                <div class="text-xs text-ink-500">{c.role} · {c.city}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 8. COLD WEATHER CONFIG BOX ============ */}
+  <section class="py-16 bg-ink-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-[100px_1fr] gap-6 items-start bg-white border-2 border-brand-500 rounded-2xl p-8">
+        <div class="text-7xl text-center">❄️</div>
+        <div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-3">Cold-Weather Configuration (Standard for CIS Export)</h3>
+          <div class="grid sm:grid-cols-2 gap-4 text-sm text-ink-700">
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2"><span class="text-brand-500">✓</span>Battery thermal management to -30°C</li>
+              <li class="flex items-start gap-2"><span class="text-brand-500">✓</span>Engine block heater (ICE/PHEV models)</li>
+              <li class="flex items-start gap-2"><span class="text-brand-500">✓</span>Cold-cranking battery upgrade</li>
+            </ul>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2"><span class="text-brand-500">✓</span>Snow tires + spare (optional)</li>
+              <li class="flex items-start gap-2"><span class="text-brand-500">✓</span>Heated steering wheel + seats</li>
+              <li class="flex items-start gap-2"><span class="text-brand-500">✓</span>Russian-language infotainment pre-load</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 9. RUSSIA-SPECIFIC FAQ ============ */}
+  <section class="py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-2">Russia FAQ</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-ink-900">8 questions specific to Russia market</h2>
+      </div>
+      <div class="space-y-3">
+        {russiaFaqs.map(f => (
+          <details class="group bg-white border border-ink-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors">
+            <summary class="flex items-start justify-between gap-4 cursor-pointer p-5 list-none">
+              <span class="font-semibold text-base text-ink-900 flex-1 group-open:text-brand-500 transition-colors">{f.q}</span>
+              <svg class="flex-shrink-0 w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="px-5 pb-5 pt-1 text-sm text-ink-700 leading-relaxed border-t border-ink-100">
+              <div class="pt-4">{f.a}</div>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ============ 10. CTA ============ */}
+  <section class="py-24 lg:py-32 bg-brand-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Export to Russia today</h2>
+      <p class="text-lg text-white/90 mb-10 max-w-2xl mx-auto">
+        EAC certified. Block Train via Khorgos. Russian-speaking ops. 24h quote.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/contact/quote/?market=russia" class="inline-flex items-center px-8 py-4 bg-white text-brand-500 hover:bg-ink-100 font-semibold rounded-lg transition-colors">
+          Request Russia Quote
+        </a>
+        <a href="https://wa.me/8613800000000?text=Russia%20market%20Russian-language%20inquiry" class="inline-flex items-center px-8 py-4 bg-ink-900 text-white hover:bg-ink-800 font-semibold rounded-lg transition-colors">
+          💬 WhatsApp на русском
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Schema */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'China NEV Export to Russia',
+    provider: { '@type': 'Organization', name: 'EV Auto Pro', url: 'https://evautopro.com' },
+    areaServed: { '@type': 'Country', name: 'Russia' },
+    serviceType: 'Vehicle Export & Import Service',
+    description: market.tagline,
+  })} />
+</BaseLayout>
