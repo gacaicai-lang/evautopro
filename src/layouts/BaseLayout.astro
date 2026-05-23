@@ -49,10 +49,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
 
-    <!-- Inter font (matches design tokens) -->
+    <!-- Inter (body) + Instrument Serif (display italic — editorial automotive accent) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 
     <slot name="head" />
   </head>

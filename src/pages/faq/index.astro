@@ -1,23 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// Section icons (emoji)
-const ICONS = {
-  car: '🚗',
-  ship: '🚢',
-  dollar: '💰',
-  shield: '🛡',
-  wrench: '🔧',
-  tools: '🛠',
-};
-
+// === Categories (data unchanged) ===
 const categories = [
   {
     id: 'sourcing',
-    icon: ICONS.car,
-    label: 'Product Sourcing & Inventory',
+    label: 'Sourcing & Inventory',
+    intro: 'Where the cars come from, what we keep in stock, and how each unit is verified before shipping.',
     questions: [
-      { q: 'What is the source of EV Auto Pro\'s vehicles?', a: 'We source directly from 6 authorized OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour) under signed dealer MoUs, plus active sourcing from 35 additional Chinese brands. Every unit traceable to factory invoice — no grey market.' },
+      { q: "What is the source of EV Auto Pro's vehicles?", a: 'We source directly from 6 authorized OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour) under signed dealer MoUs, plus active sourcing from 35 additional Chinese brands. Every unit traceable to factory invoice — no grey market.' },
       { q: 'Are all vehicles stored in China?', a: 'Yes. We maintain 200+ units in our Shanghai bonded warehouse for immediate shipment. Custom orders are produced at factory then transferred to our warehouse before export.' },
       { q: 'Do you sell new vehicles or only used cars?', a: 'We specialize in brand-new vehicles (latest model year 2026). Certified used cars launching Q3 2026 — currently we focus on new EV / PHEV / EREV / ICE.' },
       { q: 'What vehicle types do you specialize in?', a: 'Coupe SUVs, family SUVs, sedans, MPVs, and pickup trucks across BEV / PHEV / EREV / Hybrid / ICE drivetrains. Plus right-hand drive (RHD) variants for UK / SA / PK / ID markets.' },
@@ -29,8 +20,8 @@ const categories = [
   },
   {
     id: 'logistics',
-    icon: ICONS.ship,
-    label: 'Logistics & Customs Clearance',
+    label: 'Logistics & Customs',
+    intro: 'Routes, lead times, documents, and the practical mechanics of moving cars to your port.',
     questions: [
       { q: 'Which regions does EV Auto Pro serve?', a: 'Active in 60+ countries. Primary markets: Russia & CIS, Middle East (UAE/SA/Egypt), Central Asia (Kazakhstan/Uzbekistan), LATAM (Brazil/Mexico), Africa, SE Asia.' },
       { q: 'Do you handle export documentation and compliance?', a: 'Yes — full document package including MoFCOM export license, commercial invoice, packing list, B/L, certificate of origin, vehicle export certificate, and destination-specific certs (EAC / GCC / INMETRO / SASO / NOM).' },
@@ -44,8 +35,8 @@ const categories = [
   },
   {
     id: 'payment',
-    icon: ICONS.dollar,
     label: 'Payment & Transactions',
+    intro: 'T/T, L/C, Incoterms, and what currencies clear through our bank.',
     questions: [
       { q: 'Is buying from EV Auto Pro secure for international purchases?', a: 'Yes. We are MOFCOM-licensed, AEO-certified, ISO 9001 certified. Standard payment terms: T/T 30% deposit + 70% before shipment. L/C at sight accepted from major banks. Every transaction backed by signed PI + B/L.' },
       { q: 'What payment methods are accepted?', a: 'T/T bank wire (standard), L/C at sight (major banks), Western Union for small orders, OA (open account) after first successful order with credit verification. We do NOT accept crypto or third-party escrow.' },
@@ -57,8 +48,8 @@ const categories = [
   },
   {
     id: 'quality',
-    icon: ICONS.shield,
-    label: 'Compliance & Quality Assurance',
+    label: 'Compliance & Quality',
+    intro: 'Certifications, climate fit, charging compatibility — built for global markets.',
     questions: [
       { q: 'Which Chinese EVs meet EU standards?', a: 'Geely (Coolray, Atlas), VW China (ID.3, ID.7), and select BYD models meet EU WVTA homologation. For Russia / CIS, EAC certification applies. We handle homologation paperwork for each destination.' },
       { q: 'How do Chinese NEV batteries perform in high-temperature regions (Middle East / Africa)?', a: 'CATL / BYD blade batteries are LFP chemistry — thermally stable up to 60°C ambient. We recommend BEV with LFP for desert markets. PHEV / EREV models suit areas with limited charging infrastructure.' },
@@ -70,8 +61,8 @@ const categories = [
   },
   {
     id: 'oem',
-    icon: ICONS.wrench,
     label: 'OEM & Customization',
+    intro: 'Private label, paint codes, RHD, CKD kits, and fleet-specific configurations.',
     questions: [
       { q: 'Do you support OEM badging / private label?', a: 'Yes. We support OEM badging for orders ≥50 units (single model). Brand removal / dealer logo / custom paint codes available with 30-45 day production lead time.' },
       { q: 'Can you customize trim / color / interior configuration?', a: 'Yes. Factory custom orders: paint codes (10+ colors), wheel size (16-20"), interior trim (cloth/leather/PU), audio upgrade. MOQ varies by spec — typically ≥10 units per config.' },
@@ -83,8 +74,8 @@ const categories = [
   },
   {
     id: 'warranty',
-    icon: ICONS.tools,
     label: 'Warranty & After-Sales',
+    intro: '5-year coverage, depots in Moscow / Almaty / Dubai, and end-to-end claim support.',
     questions: [
       { q: 'What is the manufacturer warranty on exported vehicles?', a: 'Standard 5-year / 100,000 km vehicle warranty (varies by brand). 8-year / 160,000 km battery warranty on BEV / PHEV. We provide warranty card + service manual in destination language.' },
       { q: 'Where can my customer claim warranty service?', a: 'Authorized dealers in your market (we share network list) or our after-sales depots in Moscow, Almaty, Dubai. For markets without local dealer, we coordinate factory technical support remotely + parts express ship.' },
@@ -96,88 +87,100 @@ const categories = [
   },
 ];
 
-// Generate FAQPage JSON-LD for SEO
+// Numbering: global 01-40 across all categories
 const allFaqs = categories.flatMap(c => c.questions);
-
-// Calculate global question index (01, 02, ... 30)
 let globalIdx = 0;
-const categoriesWithIdx = categories.map(c => ({
+const cats = categories.map(c => ({
   ...c,
   questions: c.questions.map(q => ({ ...q, idx: ++globalIdx })),
 }));
 ---
 
 <BaseLayout
-  title="FAQ | EV Auto Pro — China NEV Export Common Questions"
-  description="40 common questions about buying Chinese new energy vehicles from EV Auto Pro. Sourcing, logistics, payment, compliance answered."
+  title="FAQ — EV Auto Pro"
+  description="Forty common questions about sourcing and exporting Chinese new energy vehicles. Cai answers personally within 24h."
 >
-  {/* ============ Hero: cinematic SUV + 海岸玻璃别墅 ============ */}
-  <section class="relative overflow-hidden bg-ink-100">
+  {/* =================================================================
+     Editorial automotive aesthetic — Instrument Serif italic display
+     paired with Inter body. Monochrome ink + restrained brand-red accent.
+     Generous whitespace (8pt grid, 24-96px rhythm).
+     ================================================================= */}
+
+  {/* ============ Hero ============ */}
+  <section class="relative overflow-hidden bg-ink-50">
     <div class="absolute inset-0">
       <img src="/images/faq-hero.webp" alt="" class="w-full h-full object-cover" />
-      {/* 左侧白色渐变蒙层 — 让 hero 文字可读 */}
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/0"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 via-35% to-transparent"></div>
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <div class="max-w-xl">
-        <h1 class="text-4xl lg:text-6xl font-bold text-ink-900 leading-[1.05] tracking-tight mb-4">
-          Frequently Asked<br/>Questions
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-36">
+      <div class="max-w-md">
+        <p class="text-[11px] font-medium uppercase tracking-[0.22em] text-brand-500 mb-5">
+          EV Auto Pro · Help Centre
+        </p>
+        <h1 class="font-serif italic text-4xl lg:text-[3.25rem] leading-[1.05] text-ink-900 mb-6">
+          Frequently<br/>Asked Questions
         </h1>
-        <div class="w-16 h-1 bg-brand-500 mb-6"></div>
-        <p class="text-base lg:text-lg text-ink-700 leading-relaxed">
-          Everything you need to know about sourcing and<br class="hidden sm:inline"/>
-          exporting Chinese new energy vehicles.
+        <div class="w-10 h-px bg-ink-300 mb-6"></div>
+        <p class="text-[15px] text-ink-600 leading-relaxed">
+          Forty answers on sourcing, logistics, payment and compliance — written by the team that handles every shipment.
         </p>
       </div>
     </div>
   </section>
 
-  {/* Breadcrumb */}
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-    <nav class="text-xs text-ink-500">
-      <a href="/" class="hover:text-brand-500">Home</a>
-      <span class="mx-2">&gt;</span>
-      <span class="text-ink-900">FAQ</span>
+  {/* ============ Breadcrumb ============ */}
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-8 pb-2">
+    <nav class="text-[11px] uppercase tracking-[0.18em] text-ink-400">
+      <a href="/" class="hover:text-brand-500 transition-colors">Home</a>
+      <span class="mx-3">/</span>
+      <span class="text-ink-700">FAQ</span>
     </nav>
   </div>
 
-  {/* ============ Main: 双列 (问题列表 + sticky 联系卡) ============ */}
-  <section class="pb-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-10">
+  {/* ============ Main: 12-col grid, generous gap ============ */}
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-12 gap-y-16 lg:gap-x-20">
 
-        {/* Left: questions列表（按 category 分章） */}
-        <div class="lg:col-span-8 space-y-14">
-          {categoriesWithIdx.map(cat => (
-            <div id={cat.id} class="scroll-mt-24">
-              {/* Category header */}
-              <div class="flex items-center gap-4 mb-6 pb-5 border-b-2 border-ink-100">
-                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-brand-500 flex items-center justify-center">
-                  <span class="text-3xl leading-none">{cat.icon}</span>
-                </div>
-                <div>
-                  <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-1">
-                    {cat.questions.length} questions
-                  </p>
-                  <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 tracking-tight">{cat.label}</h2>
-                </div>
-              </div>
+        {/* ====== Left: 7/12 — Categories ====== */}
+        <div class="col-span-12 lg:col-span-7 space-y-24 lg:space-y-28">
+          {cats.map((cat, catIdx) => (
+            <div id={cat.id} class="scroll-mt-28">
+              {/* Category header — minimal, no boxes */}
+              <header class="mb-10">
+                <p class="text-[11px] font-medium uppercase tracking-[0.22em] text-brand-500 mb-4">
+                  {String(catIdx + 1).padStart(2, '0')} · {cat.questions.length} Questions
+                </p>
+                <h2 class="font-serif italic text-3xl lg:text-4xl leading-[1.1] text-ink-900 mb-4">
+                  {cat.label}
+                </h2>
+                <p class="text-sm text-ink-500 leading-relaxed max-w-md">
+                  {cat.intro}
+                </p>
+              </header>
 
-              {/* Questions accordion (数字编号 + 折叠) */}
-              <div class="space-y-3">
+              {/* Questions — hairline divider, editorial */}
+              <div class="border-t border-ink-200">
                 {cat.questions.map((faq, i) => (
-                  <details class="group bg-white border border-ink-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors" open={cat.id === 'sourcing' && i === 0}>
-                    <summary class="flex items-start gap-4 cursor-pointer p-5 list-none">
-                      <span class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-50 text-brand-500 font-bold text-sm flex items-center justify-center group-open:bg-brand-500 group-open:text-white transition-colors">
+                  <details
+                    class="group border-b border-ink-200"
+                    open={catIdx === 0 && i === 0}
+                  >
+                    <summary class="flex items-start gap-6 cursor-pointer py-6 list-none">
+                      <span class="flex-shrink-0 text-xs font-medium text-ink-400 tabular-nums pt-1 w-6">
                         {String(faq.idx).padStart(2, '0')}
                       </span>
-                      <span class="font-semibold text-base text-ink-900 flex-1 pt-1 group-open:text-brand-500 transition-colors">{faq.q}</span>
-                      <svg class="flex-shrink-0 w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                      </svg>
+                      <span class="flex-1 text-[15px] font-medium text-ink-900 leading-snug pr-4 group-open:text-brand-500 transition-colors">
+                        {faq.q}
+                      </span>
+                      <span class="flex-shrink-0 text-ink-400 group-open:text-brand-500 group-open:rotate-45 transition-all duration-200 mt-0.5">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4" />
+                        </svg>
+                      </span>
                     </summary>
-                    <div class="px-5 pb-5 pt-1 text-sm text-ink-700 leading-relaxed">
-                      <div class="pl-[52px] border-t border-ink-100 pt-4">{faq.a}</div>
+                    <div class="pl-12 pr-4 pb-7 pt-1 text-[14px] text-ink-600 leading-[1.75] max-w-2xl">
+                      {faq.a}
                     </div>
                   </details>
                 ))}
@@ -186,146 +189,103 @@ const categoriesWithIdx = categories.map(c => ({
           ))}
         </div>
 
-        {/* Right: sticky 联系卡 */}
-        <aside class="lg:col-span-4">
-          <div class="sticky top-24 space-y-5">
-            {/* 联系卡主体 */}
-            <div class="bg-white border border-ink-200 rounded-2xl p-7 shadow-sm">
-              <div class="flex justify-center mb-5">
-                <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center">
-                  <svg class="w-8 h-8 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414-1.414 1 1 0 01-1.414 1.414z" />
-                  </svg>
-                </div>
-              </div>
-              <h3 class="text-xl font-bold text-ink-900 text-center leading-tight mb-2">
-                Still have questions?<br/>Talk to our export team.
+        {/* ====== Right: sticky aside, 4/12 with offset ====== */}
+        <aside class="col-span-12 lg:col-span-4 lg:col-start-9">
+          <div class="lg:sticky lg:top-28 space-y-6">
+
+            {/* === Contact card === */}
+            <div class="bg-ink-50 rounded-2xl p-8">
+              <p class="text-[11px] font-medium uppercase tracking-[0.22em] text-brand-500 mb-4">
+                Talk to us
+              </p>
+              <h3 class="font-serif italic text-2xl leading-[1.15] text-ink-900 mb-3">
+                Still curious?
               </h3>
-              <p class="text-sm text-ink-600 text-center mb-6 leading-relaxed">
-                Cai personally reviews every inquiry.<br/>Reply within 24h.
+              <p class="text-[13px] text-ink-600 leading-relaxed mb-7">
+                Cai personally reviews every inquiry. Reply within 24h, in English, Chinese or Russian.
               </p>
 
-              {/* CTA buttons */}
-              <a href="/contact/quote/" class="flex items-center justify-center gap-2 w-full px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors mb-3">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              <a href="/contact/quote/" class="flex items-center justify-between w-full px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors mb-3 group">
+                <span>Request a Quote</span>
+                <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-                Get a Quote
               </a>
-              <a href="https://wa.me/8619912345678" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full px-5 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              <a href="https://wa.me/8619912345678" target="_blank" rel="noopener" class="flex items-center justify-between w-full px-5 py-3 bg-white border border-ink-200 hover:border-ink-400 text-ink-900 text-sm font-semibold rounded-lg transition-colors group">
+                <span class="flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                  </svg>
+                  WhatsApp
+                </span>
+                <svg class="w-4 h-4 text-ink-400 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-                WhatsApp Us
               </a>
 
-              {/* Divider */}
-              <div class="border-t border-ink-100 my-6"></div>
-
-              {/* Contact info */}
-              <ul class="space-y-4 text-sm">
-                <li class="flex items-start gap-3">
-                  <svg class="flex-shrink-0 w-5 h-5 text-brand-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <div>
-                    <div class="text-ink-500 text-xs mb-0.5">Email</div>
-                    <a href="mailto:cai@evautopro.com" class="text-ink-900 font-medium hover:text-brand-500">cai@evautopro.com</a>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg class="flex-shrink-0 w-5 h-5 text-brand-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <div>
-                    <div class="text-ink-500 text-xs mb-0.5">Phone / WhatsApp</div>
-                    <a href="tel:+8619912345678" class="text-ink-900 font-medium hover:text-brand-500">+86 199 1234 5678</a>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg class="flex-shrink-0 w-5 h-5 text-brand-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <div class="text-ink-500 text-xs mb-0.5">Working Hours</div>
-                    <div class="text-ink-900 font-medium">Mon-Sat 9:00-18:00 (UTC+8)</div>
-                  </div>
-                </li>
-              </ul>
+              <div class="border-t border-ink-200 mt-7 pt-6 space-y-4">
+                <div>
+                  <p class="text-[10px] uppercase tracking-[0.18em] text-ink-400 mb-1">Email</p>
+                  <a href="mailto:cai@evautopro.com" class="text-sm text-ink-900 hover:text-brand-500 transition-colors">cai@evautopro.com</a>
+                </div>
+                <div>
+                  <p class="text-[10px] uppercase tracking-[0.18em] text-ink-400 mb-1">Phone</p>
+                  <a href="tel:+8619912345678" class="text-sm text-ink-900 hover:text-brand-500 transition-colors tabular-nums">+86 199 1234 5678</a>
+                </div>
+                <div>
+                  <p class="text-[10px] uppercase tracking-[0.18em] text-ink-400 mb-1">Hours</p>
+                  <p class="text-sm text-ink-900 tabular-nums">Mon–Sat 09:00–18:00 (UTC+8)</p>
+                </div>
+              </div>
             </div>
 
-            {/* Category quick jump */}
-            <div class="bg-ink-50 border border-ink-200 rounded-2xl p-5">
-              <p class="text-xs font-semibold text-ink-500 uppercase tracking-wider mb-3">Jump to section</p>
-              <ul class="space-y-2">
-                {categoriesWithIdx.map(c => (
+            {/* === Section index (minimal, no emoji) === */}
+            <nav class="pl-8 pr-2">
+              <p class="text-[10px] uppercase tracking-[0.22em] text-ink-400 mb-4">On this page</p>
+              <ol class="space-y-3">
+                {cats.map((c, i) => (
                   <li>
-                    <a href={`#${c.id}`} class="flex items-center justify-between text-sm text-ink-700 hover:text-brand-500 group">
-                      <span class="flex items-center gap-2">
-                        <span class="text-base">{c.icon}</span>
-                        <span class="group-hover:underline">{c.label}</span>
-                      </span>
-                      <span class="text-xs text-ink-400">{c.questions.length}</span>
+                    <a href={`#${c.id}`} class="flex items-baseline gap-3 text-sm text-ink-600 hover:text-brand-500 transition-colors group">
+                      <span class="text-[11px] text-ink-400 font-medium tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+                      <span class="flex-1 group-hover:underline decoration-1 underline-offset-4">{c.label}</span>
+                      <span class="text-[11px] text-ink-400 tabular-nums">{c.questions.length}</span>
                     </a>
                   </li>
                 ))}
-              </ul>
-            </div>
+              </ol>
+            </nav>
           </div>
         </aside>
       </div>
     </div>
   </section>
 
-  {/* ============ Bottom: 4 Trust Badge ============ */}
-  <section class="bg-ink-50 border-t border-ink-200 py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-14 h-14 rounded-full bg-white border-2 border-brand-50 flex items-center justify-center">
-            <svg class="w-7 h-7 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-sm font-bold text-ink-900 mb-1">Quality Inspection</h4>
-            <p class="text-xs text-ink-600 leading-relaxed">360° multi-point check on every unit before shipping.</p>
-          </div>
+  {/* ============ Trust strip (minimal, no boxes) ============ */}
+  <section class="border-t border-ink-200 py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <p class="text-[11px] uppercase tracking-[0.22em] text-ink-400 mb-10 text-center">
+        Why exporters trust EV Auto Pro
+      </p>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 max-w-5xl mx-auto">
+        <div class="text-center">
+          <p class="font-serif italic text-3xl lg:text-4xl text-brand-500 mb-2 tabular-nums">15+</p>
+          <p class="text-[11px] uppercase tracking-[0.16em] text-ink-900 font-medium mb-1">Years of Export</p>
+          <p class="text-xs text-ink-500 leading-relaxed">Serving 60+ countries since 2010, Russia-CIS specialist.</p>
         </div>
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-14 h-14 rounded-full bg-white border-2 border-brand-50 flex items-center justify-center">
-            <svg class="w-7 h-7 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-sm font-bold text-ink-900 mb-1">15 Years Export</h4>
-            <p class="text-xs text-ink-600 leading-relaxed">Serving 60+ countries with Russia-CIS specialization.</p>
-          </div>
+        <div class="text-center">
+          <p class="font-serif italic text-3xl lg:text-4xl text-brand-500 mb-2 tabular-nums">200+</p>
+          <p class="text-[11px] uppercase tracking-[0.16em] text-ink-900 font-medium mb-1">Units in Stock</p>
+          <p class="text-xs text-ink-500 leading-relaxed">Shanghai bonded warehouse, 3-15 day ship-out window.</p>
         </div>
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-14 h-14 rounded-full bg-white border-2 border-brand-50 flex items-center justify-center">
-            <svg class="w-7 h-7 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-sm font-bold text-ink-900 mb-1">Logistics Support</h4>
-            <p class="text-xs text-ink-600 leading-relaxed">RoRo / Container / Block Train · door-to-port.</p>
-          </div>
+        <div class="text-center">
+          <p class="font-serif italic text-3xl lg:text-4xl text-brand-500 mb-2 tabular-nums">5-yr</p>
+          <p class="text-[11px] uppercase tracking-[0.16em] text-ink-900 font-medium mb-1">Warranty Coverage</p>
+          <p class="text-xs text-ink-500 leading-relaxed">Parts depots in Moscow, Almaty and Dubai.</p>
         </div>
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0 w-14 h-14 rounded-full bg-white border-2 border-brand-50 flex items-center justify-center">
-            <svg class="w-7 h-7 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <div>
-            <h4 class="text-sm font-bold text-ink-900 mb-1">After-Sales Service</h4>
-            <p class="text-xs text-ink-600 leading-relaxed">5-yr warranty · parts depots Moscow / Almaty / Dubai.</p>
-          </div>
+        <div class="text-center">
+          <p class="font-serif italic text-3xl lg:text-4xl text-brand-500 mb-2 tabular-nums">24h</p>
+          <p class="text-[11px] uppercase tracking-[0.16em] text-ink-900 font-medium mb-1">Reply Promise</p>
+          <p class="text-xs text-ink-500 leading-relaxed">Cai personally answers every inquiry in EN / 中 / RU.</p>
         </div>
       </div>
     </div>
