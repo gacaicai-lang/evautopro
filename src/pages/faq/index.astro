@@ -1,303 +1,511 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import Card from '../../components/ui/Card.astro';
+import CardGrid from '../../components/ui/CardGrid.astro';
+import CTAGroup from '../../components/ui/CTAGroup.astro';
 
-// === Categories (data unchanged) ===
-const categories = [
+// =====================================================================
+// FAQ DATA — keep all content here so editing is easy.
+// 9 categories, 40 questions, buyer-decision flow (no "Sourcing").
+// =====================================================================
+
+const faqCategories = [
   {
-    id: 'sourcing',
-    label: 'Sourcing & Inventory',
-    intro: 'Where the cars come from, what we keep in stock, and how each unit is verified before shipping.',
-    questions: [
-      { q: "What is the source of EV Auto Pro's vehicles?", a: 'We source directly from 6 authorized OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour) under signed dealer MoUs, plus active sourcing from 35 additional Chinese brands. Every unit traceable to factory invoice — no grey market.' },
-      { q: 'Are all vehicles stored in China?', a: 'Yes. We maintain 200+ units in our Shanghai bonded warehouse for immediate shipment. Custom orders are produced at factory then transferred to our warehouse before export.' },
-      { q: 'Do you sell new vehicles or only used cars?', a: 'We specialize in brand-new vehicles (latest model year 2026). Certified used cars launching Q3 2026 — currently we focus on new EV / PHEV / EREV / ICE.' },
-      { q: 'What vehicle types do you specialize in?', a: 'Coupe SUVs, family SUVs, sedans, MPVs, and pickup trucks across BEV / PHEV / EREV / Hybrid / ICE drivetrains. Plus right-hand drive (RHD) variants for UK / SA / PK / ID markets.' },
-      { q: 'Can I inspect vehicles in person before purchase?', a: 'Yes. You can visit our Shanghai warehouse or arrange a factory tour. We also provide free photo/video inspection reports for remote buyers (3-5 days turnaround).' },
-      { q: 'What if my desired vehicle is unavailable?', a: 'We can place a custom factory order (30-60 days lead time) or recommend equivalent models from our 35-brand sourcing network. Send us your spec — we respond within 24h.' },
-      { q: 'How is vehicle condition verified before shipment?', a: 'Multi-point inspection at our bonded warehouse covering exterior, interior, electrical, drivetrain, battery (for EV/PHEV), and software systems. Full photo + video report shared before container loading.' },
-      { q: 'Are vehicles inspected before shipping?', a: 'Every single unit. We follow a 360° pre-shipment inspection protocol — same standard for retail and bulk dealer orders.' },
-    ],
+    id: 'vehicles-inventory',
+    label: 'Vehicles & Inventory',
+    desc: 'Stock, vehicle condition, and order flexibility.',
+    icon: 'car',
   },
   {
-    id: 'logistics',
-    label: 'Logistics & Customs',
-    intro: 'Routes, lead times, documents, and the practical mechanics of moving cars to your port.',
-    questions: [
-      { q: 'Which regions does EV Auto Pro serve?', a: 'Active in 60+ countries. Primary markets: Russia & CIS, Middle East (UAE/SA/Egypt), Central Asia (Kazakhstan/Uzbekistan), LATAM (Brazil/Mexico), Africa, SE Asia.' },
-      { q: 'Do you handle export documentation and compliance?', a: 'Yes — full document package including MoFCOM export license, commercial invoice, packing list, B/L, certificate of origin, vehicle export certificate, and destination-specific certs (EAC / GCC / INMETRO / SASO / NOM).' },
-      { q: 'How soon can my vehicle ship?', a: 'In-stock units: 3-15 days from PI signing. Custom factory orders: 30-60 days. Lead time depends on shipping route and destination port readiness.' },
-      { q: 'What shipment details are required?', a: 'Destination port, target arrival date, preferred shipping method (RoRo / Container / Block Train / Truck), consignee company details, and import license (if required by destination country).' },
-      { q: 'What export documents are provided?', a: 'Commercial Invoice, Packing List, Bill of Lading (B/L), Certificate of Origin (CO), Vehicle Export Certificate, Insurance Policy, and destination-specific certification (EAC for Russia/CIS, GCC for ME, INMETRO for Brazil, etc).' },
-      { q: 'What are typical shipping times?', a: 'Russia (St. Petersburg via RoRo): 30-45 days · UAE (Jebel Ali RoRo): 18-25 days · Kazakhstan (Block Train via Khorgos): 18-22 days · Brazil (Santos container): 35-50 days · Africa (varies by port): 25-45 days.' },
-      { q: 'What fees apply at destination?', a: 'Import duty (varies by country, 10-40%), VAT, port handling, customs broker fees, last-mile delivery. We can include a CIF + duty estimate in your quote — transparent line-item breakdown.' },
-      { q: 'When to choose RoRo vs Container shipping?', a: 'RoRo: lower cost, fastest, recommended for ≥10 units. Container (40HC): better for ≤8 units, more protection, supports CKD/SKD parts. Block Train: best for Central Asia (Khorgos route).' },
-    ],
+    id: 'brands-models',
+    label: 'Brands & Models',
+    desc: 'Available Chinese NEV brands and how to pick the right model.',
+    icon: 'tag',
   },
   {
-    id: 'payment',
-    label: 'Payment & Transactions',
-    intro: 'T/T, L/C, Incoterms, and what currencies clear through our bank.',
-    questions: [
-      { q: 'Is buying from EV Auto Pro secure for international purchases?', a: 'Yes. We are MOFCOM-licensed, AEO-certified, ISO 9001 certified. Standard payment terms: T/T 30% deposit + 70% before shipment. L/C at sight accepted from major banks. Every transaction backed by signed PI + B/L.' },
-      { q: 'What payment methods are accepted?', a: 'T/T bank wire (standard), L/C at sight (major banks), Western Union for small orders, OA (open account) after first successful order with credit verification. We do NOT accept crypto or third-party escrow.' },
-      { q: 'Are shipping costs included in quotes?', a: 'We provide FOB (Free On Board, before sea freight), CIF (Cost+Insurance+Freight to destination port), and EXW (Ex Works factory) options. You choose which Incoterm fits your import setup.' },
-      { q: 'What is the difference between CIF and FOB?', a: 'FOB = price to load on ship at Shanghai port (you handle ocean freight). CIF = price including freight + insurance to your destination port (we handle shipping). EXW = factory pickup price (you arrange all logistics). CIF is simplest for first-time importers.' },
-      { q: 'Can I pay in my local currency?', a: 'We invoice in USD by default. Bank wire from RUB / AED / KZT / BRL / etc converts at your bank rate. CNY direct settlement available for select markets — contact us.' },
-      { q: 'How is payment confirmation communicated?', a: 'Email + WhatsApp confirmation within 2 business hours of receipt. Bank slip + SWIFT code shared for your record. Production / shipment milestone unlocked automatically upon confirmation.' },
-    ],
+    id: 'price-quotation',
+    label: 'Price & Quotation',
+    desc: 'How quotes work, what is included, and dealer pricing.',
+    icon: 'dollar',
   },
   {
-    id: 'quality',
-    label: 'Compliance & Quality',
-    intro: 'Certifications, climate fit, charging compatibility — built for global markets.',
-    questions: [
-      { q: 'Which Chinese EVs meet EU standards?', a: 'Geely (Coolray, Atlas), VW China (ID.3, ID.7), and select BYD models meet EU WVTA homologation. For Russia / CIS, EAC certification applies. We handle homologation paperwork for each destination.' },
-      { q: 'How do Chinese NEV batteries perform in high-temperature regions (Middle East / Africa)?', a: 'CATL / BYD blade batteries are LFP chemistry — thermally stable up to 60°C ambient. We recommend BEV with LFP for desert markets. PHEV / EREV models suit areas with limited charging infrastructure.' },
-      { q: 'Can Chinese cars handle extreme cold weather (Russia / Kazakhstan)?', a: 'Yes. Our cars sold to Russia/CIS undergo cold-weather configuration: upgraded battery thermal management, cold-resistant tires, engine block heaters (for ICE/PHEV). Tested down to -30°C.' },
-      { q: 'How to evaluate charging feasibility for Chinese NEVs in Africa?', a: 'Most Chinese NEVs support GB/T (China standard). For destinations without GB/T infrastructure, we supply CCS2 (Europe), Type 1 (US/Japan), or CHAdeMO adapter cables. PHEV alternative reduces charging dependence.' },
-      { q: 'Are these cars compliant with Russian EAC certification?', a: 'Yes. All vehicles exported to Russia / CIS undergo EAC certification through our in-house compliance team. Documentation handled end-to-end — no delays at Russian customs.' },
-      { q: 'What is CISPR / EMC certification and does it apply to Chinese cars?', a: 'CISPR 25 covers electromagnetic compatibility for in-vehicle electronics. All our exported vehicles pre-comply with CISPR 25 Class 3+ for global markets. Required for GCC and select EU destinations.' },
-    ],
+    id: 'order-payment',
+    label: 'Order & Payment',
+    desc: 'Order flow, deposits, payment methods and order changes.',
+    icon: 'cart',
   },
   {
-    id: 'oem',
-    label: 'OEM & Customization',
-    intro: 'Private label, paint codes, RHD, CKD kits, and fleet-specific configurations.',
-    questions: [
-      { q: 'Do you support OEM badging / private label?', a: 'Yes. We support OEM badging for orders ≥50 units (single model). Brand removal / dealer logo / custom paint codes available with 30-45 day production lead time.' },
-      { q: 'Can you customize trim / color / interior configuration?', a: 'Yes. Factory custom orders: paint codes (10+ colors), wheel size (16-20"), interior trim (cloth/leather/PU), audio upgrade. MOQ varies by spec — typically ≥10 units per config.' },
-      { q: 'Right-Hand Drive (RHD) conversion available?', a: 'Select models support factory RHD: Geely Coolray / Atlas, Changan CS75 Plus, Jetour T2. We do NOT offer aftermarket RHD conversion (not safe for export markets). MOQ for RHD batch: 20 units.' },
-      { q: 'Can you supply CKD / SKD kits for local assembly?', a: 'Yes. CKD (Complete Knock Down) kits available for Egypt, Pakistan, Algeria markets where local assembly = lower import duty. MOQ 30 units. Factory provides assembly manual + tooling list.' },
-      { q: 'Do you offer fleet-specific configurations (taxi / police / military)?', a: 'Yes for commercial fleets: taxi-grade interior (PU seats, partition glass), additional ports for fleet telematics, dual-battery for police use. Government / military orders require additional licensing — case-by-case.' },
-      { q: 'Can I order pre-loaded language/region software?', a: 'Yes. Infotainment language pre-load: Russian, Arabic, Spanish, Portuguese, French. Navigation maps: Russia/CIS, GCC, LATAM. Specify at PI stage — pre-installed at factory.' },
-    ],
+    id: 'shipping-delivery',
+    label: 'Shipping & Delivery',
+    desc: 'RoRo / container / multimodal routes, lead times and forwarders.',
+    icon: 'ship',
   },
   {
-    id: 'warranty',
-    label: 'Warranty & After-Sales',
-    intro: '5-year coverage, depots in Moscow / Almaty / Dubai, and end-to-end claim support.',
-    questions: [
-      { q: 'What is the manufacturer warranty on exported vehicles?', a: 'Standard 5-year / 100,000 km vehicle warranty (varies by brand). 8-year / 160,000 km battery warranty on BEV / PHEV. We provide warranty card + service manual in destination language.' },
-      { q: 'Where can my customer claim warranty service?', a: 'Authorized dealers in your market (we share network list) or our after-sales depots in Moscow, Almaty, Dubai. For markets without local dealer, we coordinate factory technical support remotely + parts express ship.' },
-      { q: 'Do you cover transit damage / port damage?', a: 'Yes. Marine cargo insurance is included in CIF quotes (or available as optional add-on for FOB). Coverage: ALL RISKS including transit damage, port handling, weather. Claim process: photo evidence + B/L → 14-day resolution.' },
-      { q: 'Do you provide spare parts supply?', a: 'Yes. We maintain parts depots in Moscow / Almaty / Dubai. Other markets: parts ship from Shanghai within 7-14 days. Genuine OEM + quality aftermarket parts. Bulk distributor pricing available.' },
-      { q: 'What if a vehicle has a defect after delivery?', a: 'Report within 7 days of arrival with photo/video evidence. Minor defects (interior trim, lights): replacement parts shipped within 14 days at our cost. Major defects (drivetrain, frame): factory inspection + remedy or replacement unit.' },
-      { q: 'Do you offer technical training for our service team?', a: 'Yes for distributor partners. Factory training (3-5 days, in China) covers diagnostic tools, common repairs, software updates. Remote training via video also available.' },
-    ],
+    id: 'documents-customs',
+    label: 'Documents & Customs',
+    desc: 'Export paperwork, certificates and clearance support.',
+    icon: 'doc',
+  },
+  {
+    id: 'quality-inspection',
+    label: 'Quality & Inspection',
+    desc: 'Pre-shipment checks, third-party inspection and quality control.',
+    icon: 'check',
+  },
+  {
+    id: 'warranty-aftersales',
+    label: 'Warranty & After-sales',
+    desc: 'Brand warranty, spare parts supply and post-delivery support.',
+    icon: 'wrench',
+  },
+  {
+    id: 'dealer-cooperation',
+    label: 'Dealer Cooperation',
+    desc: 'Becoming a partner, long-term supply and fleet/bulk orders.',
+    icon: 'handshake',
   },
 ];
 
-// Numbering: global 01-40 across all categories
-const allFaqs = categories.flatMap(c => c.questions);
+const faqs = [
+  // ---------- Vehicles & Inventory (5) ----------
+  { id: 'all-new', cat: 'vehicles-inventory', q: 'Are all vehicles brand new?',
+    a: 'Yes. We mainly export brand-new Chinese new energy vehicles, including official export versions and selected domestic models suitable for overseas markets. Vehicle condition, mileage, configuration and documents will be confirmed before quotation.' },
+  { id: 'ready-stock', cat: 'vehicles-inventory', q: 'Do you have ready stock vehicles?',
+    a: 'Yes. We maintain access to ready stock vehicles from multiple Chinese EV brands and dealer networks. Stock availability changes quickly, so please send your target model, quantity, color and destination country for confirmation.' },
+  { id: 'single-unit', cat: 'vehicles-inventory', q: 'Can I order only one vehicle?',
+    a: 'Yes. We can support single-unit orders for selected models and countries. For dealers and importers, mixed-model orders and container or Ro-Ro shipments are also available.' },
+  { id: 'mix-models', cat: 'vehicles-inventory', q: 'Can I mix different models in one order?',
+    a: 'Yes. You can mix different brands, models, colors and configurations in one shipment, depending on stock availability and shipping method.' },
+  { id: 'ev-and-hybrid', cat: 'vehicles-inventory', q: 'Do you export both EV and hybrid vehicles?',
+    a: 'Yes. We export pure electric vehicles, plug-in hybrid vehicles, range-extended EVs and selected fuel vehicles according to buyer demand and market regulations.' },
+
+  // ---------- Brands & Models (5) ----------
+  { id: 'which-brands', cat: 'brands-models', q: 'Which Chinese EV brands do you export?',
+    a: 'We work with popular Chinese NEV brands such as BYD, Geely, Zeekr, Li Auto, Chery, MG, Leapmotor, XPeng, Neta and other export-ready brands. Available brands depend on stock, market policy and export documents.' },
+  { id: 'supply-byd', cat: 'brands-models', q: 'Can you supply BYD vehicles?',
+    a: 'Yes. BYD is one of the most requested brands for export. Please send the exact model, version, color and destination country so we can check current availability and export conditions.' },
+  { id: 'choose-models', cat: 'brands-models', q: 'Can you help me choose models for my market?',
+    a: 'Yes. Based on your country, budget, customer profile, road conditions and charging environment, we can recommend suitable models for retail, fleet, taxi, rental or dealership sales.' },
+  { id: 'color-config', cat: 'brands-models', q: 'Can I request a specific color or configuration?',
+    a: 'Yes. We can check specific colors, trims and configurations. If the exact version is not available, we will suggest similar alternatives.' },
+  { id: 'lhd-rhd', cat: 'brands-models', q: 'Do you support left-hand drive and right-hand drive vehicles?',
+    a: 'Most Chinese EVs are left-hand drive. Some right-hand drive models may be available depending on brand and market. Please confirm your destination country before ordering.' },
+
+  // ---------- Price & Quotation (5) ----------
+  { id: 'get-quote', cat: 'price-quotation', q: 'How do I get a quotation?',
+    a: 'Send us the vehicle model, version, quantity, destination country and preferred shipping method. We will check stock and provide a quotation with vehicle price, export fees and estimated shipping cost when available.' },
+  { id: 'price-include', cat: 'price-quotation', q: 'What does your price include?',
+    a: 'The price can be quoted as EXW, FOB, CIF or other terms depending on your request. We will clearly list what is included, such as vehicle cost, inland transport, export handling, documents and shipping.' },
+  { id: 'fixed-price', cat: 'price-quotation', q: 'Are your prices fixed?',
+    a: 'Vehicle prices may change due to stock, exchange rate, manufacturer policy and market demand. Final price is confirmed before payment.' },
+  { id: 'dealer-pricing', cat: 'price-quotation', q: 'Can you offer dealer pricing?',
+    a: 'Yes. For repeat buyers, bulk orders and local distributors, we can offer dealer-level pricing and long-term cooperation terms.' },
+  { id: 'price-differ', cat: 'price-quotation', q: 'Why are prices different between suppliers?',
+    a: 'Prices vary depending on vehicle source, configuration, stock status, export documents, logistics cost and service responsibility. We focus on transparent pricing and safe export delivery.' },
+
+  // ---------- Order & Payment (5) ----------
+  { id: 'order-process', cat: 'order-payment', q: 'What is the order process?',
+    a: 'The usual process is model confirmation, stock checking, quotation, proforma invoice, deposit payment, vehicle preparation, inspection, export documents, shipping and final delivery support.' },
+  { id: 'payment-methods', cat: 'order-payment', q: 'What payment methods do you accept?',
+    a: 'We usually accept bank transfer and other agreed international payment methods. Payment terms depend on order size, buyer type and cooperation history.' },
+  { id: 'safe-pay', cat: 'order-payment', q: 'Is it safe to pay your company?',
+    a: 'We provide company documents, proforma invoice, contract and payment instructions before payment. Buyers can also verify company information and order details before proceeding.' },
+  { id: 'deposit', cat: 'order-payment', q: 'Do I need to pay a deposit?',
+    a: 'Most orders require a deposit to lock the vehicle and start preparation. The balance is usually paid before shipment or according to agreed terms.' },
+  { id: 'cancel-order', cat: 'order-payment', q: 'Can I cancel or change an order?',
+    a: 'Order changes depend on vehicle preparation status and supplier policy. If the vehicle has already been reserved or processed, cancellation may involve cost.' },
+
+  // ---------- Shipping & Delivery (5) ----------
+  { id: 'shipping-methods', cat: 'shipping-delivery', q: 'Which shipping methods do you support?',
+    a: 'We support container shipping, Ro-Ro shipping, land transport and multimodal shipping depending on destination country, vehicle quantity and cost efficiency.' },
+  { id: 'delivery-time', cat: 'shipping-delivery', q: 'How long does delivery take?',
+    a: 'Delivery time depends on stock availability, export document preparation, shipping schedule and destination port. We will provide an estimated timeline before order confirmation.' },
+  { id: 'export-my-country', cat: 'shipping-delivery', q: 'Can you export to my country?',
+    a: 'We export to many markets including the Middle East, Central Asia, Africa, Latin America, Southeast Asia and selected European markets. Please send your destination country and port for confirmation.' },
+  { id: 'ship-to-port', cat: 'shipping-delivery', q: 'Can you arrange shipping to my port?',
+    a: 'Yes. We can help arrange shipping to major destination ports and provide shipping cost estimates based on the vehicle quantity and shipping method.' },
+  { id: 'own-forwarder', cat: 'shipping-delivery', q: 'Can I use my own freight forwarder?',
+    a: 'Yes. You can use your own forwarder if preferred. We can coordinate vehicle handover, export documents and loading support in China.' },
+
+  // ---------- Documents & Customs (4) ----------
+  { id: 'export-docs', cat: 'documents-customs', q: 'What documents do you provide for export?',
+    a: 'Common documents include commercial invoice, packing list, sales contract, export declaration documents, vehicle certificate and other documents required by the destination market.' },
+  { id: 'customs-clearance', cat: 'documents-customs', q: 'Can you help with customs clearance?',
+    a: 'We can support export customs clearance in China. Import customs clearance in the destination country is usually handled by the buyer or local customs broker.' },
+  { id: 'vehicle-certs', cat: 'documents-customs', q: 'Do the vehicles come with certificates?',
+    a: 'Available certificates depend on the vehicle brand, model and destination country. We will confirm document availability before quotation.' },
+  { id: 'registration-docs', cat: 'documents-customs', q: 'Can you provide documents for registration in my country?',
+    a: 'We can provide available export and vehicle documents from China. Registration requirements vary by country, so buyers should confirm local import and registration rules before ordering.' },
+
+  // ---------- Quality & Inspection (3) ----------
+  { id: 'pre-ship-inspect', cat: 'quality-inspection', q: 'Do you inspect vehicles before shipment?',
+    a: 'Yes. We can check vehicle condition, appearance, mileage, configuration, battery status and basic functions before shipment. Photos and videos can be provided.' },
+  { id: 'third-party-inspect', cat: 'quality-inspection', q: 'Can I arrange third-party inspection?',
+    a: 'Yes. Buyers may arrange third-party inspection before shipment. We can coordinate inspection time and vehicle location.' },
+  { id: 'ensure-quality', cat: 'quality-inspection', q: 'How do you ensure vehicle quality?',
+    a: 'We source vehicles from reliable channels, confirm vehicle information before order, inspect before shipment and provide transparent photos, videos and documents.' },
+
+  // ---------- Warranty & After-sales (3) ----------
+  { id: 'warranty', cat: 'warranty-aftersales', q: 'Do the vehicles have warranty?',
+    a: 'Warranty policy depends on brand, model and destination country. Some manufacturer warranties may be limited outside China. We will explain the available warranty situation before order confirmation.' },
+  { id: 'spare-parts', cat: 'warranty-aftersales', q: 'Can you supply spare parts?',
+    a: 'Yes. We can help supply common spare parts and maintenance parts for exported vehicles, especially for repeat buyers and dealers.' },
+  { id: 'aftersales-support', cat: 'warranty-aftersales', q: 'Do you provide after-sales support?',
+    a: 'We provide remote support for vehicle information, parts sourcing and basic after-sales coordination. Local repair and maintenance should be handled by qualified service providers in the destination market.' },
+
+  // ---------- Dealer Cooperation (5) ----------
+  { id: 'become-dealer', cat: 'dealer-cooperation', q: 'Can I become your local dealer or partner?',
+    a: 'Yes. We welcome cooperation with overseas dealers, importers, fleet buyers and local distributors. Please share your company profile, target market and monthly demand.' },
+  { id: 'long-term-supply', cat: 'dealer-cooperation', q: 'Can you support long-term supply?',
+    a: 'Yes. For qualified partners, we can support regular stock updates, model recommendations, dealer pricing and repeated shipment arrangements.' },
+  { id: 'marketing-materials', cat: 'dealer-cooperation', q: 'Can you provide marketing materials?',
+    a: 'We can provide available vehicle photos, specifications and basic promotional materials to support local sales, depending on brand and model.' },
+  { id: 'fleet-bulk', cat: 'dealer-cooperation', q: 'Do you support fleet or bulk orders?',
+    a: 'Yes. We can support fleet orders for taxi, rental, corporate use, government projects and dealer bulk purchasing.' },
+  { id: 'why-us', cat: 'dealer-cooperation', q: 'Why should overseas dealers work with you?',
+    a: 'We combine multi-brand vehicle access, export experience, document support, shipping coordination and long-term after-sales parts support to help dealers import Chinese EVs more safely and efficiently.' },
+];
+
+// Attach category count + global numbering (01-40)
 let globalIdx = 0;
-const cats = categories.map(c => ({
+const numberedFaqs = faqs.map(f => ({ ...f, num: ++globalIdx }));
+
+const categoriesWithCount = faqCategories.map(c => ({
   ...c,
-  questions: c.questions.map(q => ({ ...q, idx: ++globalIdx })),
+  count: numberedFaqs.filter(f => f.cat === c.id).length,
 }));
+
+// Group faqs by category for rendering
+const grouped = categoriesWithCount.map(c => ({
+  ...c,
+  items: numberedFaqs.filter(f => f.cat === c.id),
+}));
+
+// Inline SVG icon paths (line, 24x24, stroke 1.5) — kept compact
+const ICONS: Record<string, string> = {
+  car:       'M5 17h14M5 17l-1-4 1-3h14l1 3-1 4M5 17v2a1 1 0 001 1h1a1 1 0 001-1v-2M16 17v2a1 1 0 001 1h1a1 1 0 001-1v-2M7 13h10',
+  tag:       'M7 7h.01M7 3h5l9 9-9 9-9-9V7a4 4 0 014-4z',
+  dollar:    'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V6m0 12v-2m0 0c-1.657 0-3-.895-3-2M12 4a8 8 0 100 16 8 8 0 000-16z',
+  cart:      'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293A1 1 0 005.414 17H17m0 0a2 2 0 100 4 2 2 0 000-4zm-10 2a2 2 0 11-4 0 2 2 0 014 0z',
+  ship:      'M3 17l3-3 3 3M12 7l3 3-3 3M21 17l-3-3-3 3M3 21h18M5 17V9l7-4 7 4v8',
+  doc:       'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+  check:     'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+  wrench:    'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065zM15 12a3 3 0 11-6 0 3 3 0 016 0z',
+  handshake: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z',
+};
+
+// 4 popular dealer questions (Section 5)
+const popular = [
+  { ref: 'ready-stock',       q: 'Do you have ready stock vehicles?',
+    a: 'Yes — we keep access to ready stock from multiple brands. Send target model and country to confirm availability.' },
+  { ref: 'mix-models',        q: 'Can I mix different models in one shipment?',
+    a: 'Yes. Mix brands, models, colors and configurations in one container or RoRo shipment based on stock.' },
+  { ref: 'export-docs',       q: 'What documents are provided for export?',
+    a: 'Commercial invoice, packing list, sales contract, export declaration, vehicle certificate and destination-specific paperwork.' },
+  { ref: 'export-my-country', q: 'Can you export to my country?',
+    a: 'We export to 60+ countries across MEA, CIS, LATAM, SE Asia and select EU. Send your destination port to confirm.' },
+];
 ---
 
 <BaseLayout
-  title="FAQ — EV Auto Pro"
-  description="Forty common questions about sourcing and exporting Chinese new energy vehicles. Cai answers personally within 24h."
+  title="FAQ | Chinese EV Export Questions | EV Auto Pro"
+  description="Find answers about Chinese EV export, vehicle inventory, brands, pricing, shipping, documents, payment, warranty and dealer cooperation."
 >
-  {/* =================================================================
-     Editorial automotive aesthetic — Instrument Serif italic display
-     paired with Inter body. Monochrome ink + restrained brand-red accent.
-     Generous whitespace (8pt grid, 24-96px rhythm).
-     ================================================================= */}
+  {/* ====================================================================
+       SECTION 1 — HERO (left text + right info card, mirrors Home hero)
+       ==================================================================== */}
+  <section class="relative bg-gradient-to-br from-ink-50 via-white to-ink-50 py-16 lg:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-  {/* ============ Hero ============ */}
-  <section class="relative overflow-hidden bg-ink-50">
-    <div class="absolute inset-0">
-      <img src="/images/faq-hero.webp" alt="" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 via-35% to-transparent"></div>
-    </div>
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-36">
-      <div class="max-w-md">
-        <p class="text-[11px] font-medium uppercase tracking-[0.22em] text-brand-500 mb-5">
-          EV Auto Pro · Help Centre
-        </p>
-        <h1 class="font-serif italic text-4xl lg:text-[3.25rem] leading-[1.05] text-ink-900 mb-6">
-          Frequently<br/>Asked Questions
-        </h1>
-        <div class="w-10 h-px bg-ink-300 mb-6"></div>
-        <p class="text-[15px] text-ink-600 leading-relaxed">
-          Forty answers on sourcing, logistics, payment and compliance — written by the team that handles every shipment.
-        </p>
+        {/* Left text */}
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-full mb-6 tracking-wide">
+            BUYER FAQ
+          </div>
+          <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-ink-900 leading-[1.1] tracking-tight mb-5">
+            Frequently Asked Questions for <span class="text-brand-500">Chinese EV Export</span>
+          </h1>
+          <p class="text-base lg:text-lg text-ink-600 mb-8 leading-relaxed max-w-xl">
+            Find clear answers about vehicle inventory, brands, pricing, shipping, documents, payment, warranty and dealer cooperation before importing Chinese new energy vehicles.
+          </p>
+          <CTAGroup buttons={[
+            { label: 'Get A Quote', href: '/contact/quote/', variant: 'primary' },
+            { label: 'View Available Vehicles', href: '/cars/', variant: 'secondary' },
+          ]} />
+        </div>
+
+        {/* Right info card */}
+        <div class="relative">
+          <div class="bg-ink-50 border border-ink-200 rounded-2xl p-7 lg:p-9">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-500 mb-5">Export Coverage</p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px] mt-0.5">✓</span>
+                <span class="text-sm text-ink-800">Multiple EV brands · BYD, Geely, Zeekr, Li Auto, Chery, MG, Leapmotor & more</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px] mt-0.5">✓</span>
+                <span class="text-sm text-ink-800">Ready stock vehicles · 3-15 day ship-out window</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px] mt-0.5">✓</span>
+                <span class="text-sm text-ink-800">Export documents · invoice, packing list, contract, certificates</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px] mt-0.5">✓</span>
+                <span class="text-sm text-ink-800">Global shipping support · RoRo / container / multimodal</span>
+              </li>
+            </ul>
+            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-ink-200">
+              <div>
+                <div class="text-xl lg:text-2xl font-bold text-ink-900 tabular-nums">35+</div>
+                <div class="text-[11px] text-ink-500 mt-0.5">OEM Brands</div>
+              </div>
+              <div>
+                <div class="text-xl lg:text-2xl font-bold text-ink-900 tabular-nums">60+</div>
+                <div class="text-[11px] text-ink-500 mt-0.5">Export Markets</div>
+              </div>
+              <div>
+                <div class="text-xl lg:text-2xl font-bold text-ink-900 tabular-nums">5000+</div>
+                <div class="text-[11px] text-ink-500 mt-0.5">Vehicles Exported</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  {/* ============ Breadcrumb ============ */}
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-8 pb-2">
-    <nav class="text-[11px] uppercase tracking-[0.18em] text-ink-400">
-      <a href="/" class="hover:text-brand-500 transition-colors">Home</a>
-      <span class="mx-3">/</span>
-      <span class="text-ink-700">FAQ</span>
-    </nav>
-  </div>
-
-  {/* ============ Main: 12-col grid, generous gap ============ */}
-  <section class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="grid grid-cols-12 gap-y-16 lg:gap-x-20">
-
-        {/* ====== Left: 7/12 — Categories ====== */}
-        <div class="col-span-12 lg:col-span-7 space-y-24 lg:space-y-28">
-          {cats.map((cat, catIdx) => (
-            <div id={cat.id} class="scroll-mt-28">
-              {/* Category header — minimal, no boxes */}
-              <header class="mb-10">
-                <p class="text-[11px] font-medium uppercase tracking-[0.22em] text-brand-500 mb-4">
-                  {String(catIdx + 1).padStart(2, '0')} · {cat.questions.length} Questions
-                </p>
-                <h2 class="font-serif italic text-3xl lg:text-4xl leading-[1.1] text-ink-900 mb-4">
-                  {cat.label}
-                </h2>
-                <p class="text-sm text-ink-500 leading-relaxed max-w-md">
-                  {cat.intro}
-                </p>
-              </header>
-
-              {/* Questions — hairline divider, editorial */}
-              <div class="border-t border-ink-200">
-                {cat.questions.map((faq, i) => (
-                  <details
-                    class="group border-b border-ink-200"
-                    open={catIdx === 0 && i === 0}
-                  >
-                    <summary class="flex items-start gap-6 cursor-pointer py-6 list-none">
-                      <span class="flex-shrink-0 text-xs font-medium text-ink-400 tabular-nums pt-1 w-6">
-                        {String(faq.idx).padStart(2, '0')}
-                      </span>
-                      <span class="flex-1 text-[15px] font-medium text-ink-900 leading-snug pr-4 group-open:text-brand-500 transition-colors">
-                        {faq.q}
-                      </span>
-                      <span class="flex-shrink-0 text-ink-400 group-open:text-brand-500 group-open:rotate-45 transition-all duration-200 mt-0.5">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4" />
-                        </svg>
-                      </span>
-                    </summary>
-                    <div class="pl-12 pr-4 pb-7 pt-1 text-[14px] text-ink-600 leading-[1.75] max-w-2xl">
-                      {faq.a}
-                    </div>
-                  </details>
-                ))}
-              </div>
+  {/* ====================================================================
+       SECTION 2 — QUICK FAQ CATEGORIES (9-card 3x3 grid)
+       ==================================================================== */}
+  <Section eyebrow="Help Centre" title="Browse Questions by Topic" subtitle="Start with the questions most importers and dealers ask before placing an order." align="center">
+    <CardGrid cols={3} gap="md">
+      {categoriesWithCount.map(c => (
+        <a href={`#${c.id}`} class="group block bg-white border border-ink-200 hover:border-brand-500 rounded-xl p-6 transition-all hover:shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-ink-100 group-hover:bg-brand-50 flex items-center justify-center transition-colors">
+              <svg class="w-5 h-5 text-ink-700 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d={ICONS[c.icon]} />
+              </svg>
             </div>
-          ))}
-        </div>
-
-        {/* ====== Right: sticky aside, 4/12 with offset ====== */}
-        <aside class="col-span-12 lg:col-span-4 lg:col-start-9">
-          <div class="lg:sticky lg:top-28 space-y-6">
-
-            {/* === Contact card === */}
-            <div class="bg-ink-50 rounded-2xl p-8">
-              <p class="text-[11px] font-medium uppercase tracking-[0.22em] text-brand-500 mb-4">
-                Talk to us
-              </p>
-              <h3 class="font-serif italic text-2xl leading-[1.15] text-ink-900 mb-3">
-                Still curious?
-              </h3>
-              <p class="text-[13px] text-ink-600 leading-relaxed mb-7">
-                Cai personally reviews every inquiry. Reply within 24h, in English, Chinese or Russian.
-              </p>
-
-              <a href="/contact/quote/" class="flex items-center justify-between w-full px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors mb-3 group">
-                <span>Request a Quote</span>
-                <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a href="https://wa.me/8619912345678" target="_blank" rel="noopener" class="flex items-center justify-between w-full px-5 py-3 bg-white border border-ink-200 hover:border-ink-400 text-ink-900 text-sm font-semibold rounded-lg transition-colors group">
-                <span class="flex items-center gap-2.5">
-                  <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                  </svg>
-                  WhatsApp
-                </span>
-                <svg class="w-4 h-4 text-ink-400 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-
-              <div class="border-t border-ink-200 mt-7 pt-6 space-y-4">
-                <div>
-                  <p class="text-[10px] uppercase tracking-[0.18em] text-ink-400 mb-1">Email</p>
-                  <a href="mailto:cai@evautopro.com" class="text-sm text-ink-900 hover:text-brand-500 transition-colors">cai@evautopro.com</a>
-                </div>
-                <div>
-                  <p class="text-[10px] uppercase tracking-[0.18em] text-ink-400 mb-1">Phone</p>
-                  <a href="tel:+8619912345678" class="text-sm text-ink-900 hover:text-brand-500 transition-colors tabular-nums">+86 199 1234 5678</a>
-                </div>
-                <div>
-                  <p class="text-[10px] uppercase tracking-[0.18em] text-ink-400 mb-1">Hours</p>
-                  <p class="text-sm text-ink-900 tabular-nums">Mon–Sat 09:00–18:00 (UTC+8)</p>
-                </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 transition-colors leading-tight">{c.label}</h3>
+                <span class="flex-shrink-0 text-[11px] text-ink-500 font-medium tabular-nums">{c.count} Qs</span>
               </div>
+              <p class="text-xs text-ink-600 leading-relaxed">{c.desc}</p>
             </div>
+          </div>
+        </a>
+      ))}
+    </CardGrid>
+  </Section>
 
-            {/* === Section index (minimal, no emoji) === */}
-            <nav class="pl-8 pr-2">
-              <p class="text-[10px] uppercase tracking-[0.22em] text-ink-400 mb-4">On this page</p>
-              <ol class="space-y-3">
-                {cats.map((c, i) => (
-                  <li>
-                    <a href={`#${c.id}`} class="flex items-baseline gap-3 text-sm text-ink-600 hover:text-brand-500 transition-colors group">
-                      <span class="text-[11px] text-ink-400 font-medium tabular-nums">{String(i + 1).padStart(2, '0')}</span>
-                      <span class="flex-1 group-hover:underline decoration-1 underline-offset-4">{c.label}</span>
-                      <span class="text-[11px] text-ink-400 tabular-nums">{c.questions.length}</span>
+  {/* ====================================================================
+       SECTION 3 — MAIN FAQ AREA (sticky nav + accordion + consultant card)
+       ==================================================================== */}
+  <section class="bg-ink-50 border-y border-ink-200 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12">
+
+        {/* LEFT — sticky category nav (desktop) / horizontal tabs (mobile) */}
+        <aside class="lg:col-span-3">
+          {/* Mobile tabs (horizontal scrollable) */}
+          <nav class="lg:hidden -mx-4 px-4 mb-8 overflow-x-auto">
+            <ul class="flex gap-2 whitespace-nowrap pb-2">
+              <li><a href="#all" class="inline-block px-4 py-2 bg-ink-900 text-white text-sm font-semibold rounded-full">All Questions</a></li>
+              {categoriesWithCount.map(c => (
+                <li><a href={`#${c.id}`} class="inline-block px-4 py-2 bg-white border border-ink-200 text-ink-700 hover:border-brand-500 hover:text-brand-500 text-sm font-medium rounded-full transition-colors">{c.label}</a></li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Desktop sticky vertical nav */}
+          <div class="hidden lg:block sticky top-24">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-500 mb-4 px-4">Categories</p>
+            <nav class="bg-white border border-ink-200 rounded-xl overflow-hidden">
+              <ul>
+                <li>
+                  <a href="#all" data-faq-link data-target="all"
+                     class="faq-nav-link flex items-center justify-between gap-2 px-4 py-3 border-l-2 border-brand-500 bg-brand-50 text-ink-900 font-semibold text-sm">
+                    <span>All Questions</span>
+                    <span class="text-[11px] text-ink-500 font-medium tabular-nums">40</span>
+                  </a>
+                </li>
+                {categoriesWithCount.map(c => (
+                  <li class="border-t border-ink-100">
+                    <a href={`#${c.id}`} data-faq-link data-target={c.id}
+                       class="faq-nav-link flex items-center justify-between gap-2 px-4 py-3 border-l-2 border-transparent text-ink-700 hover:bg-ink-50 hover:text-ink-900 text-sm transition-colors">
+                      <span>{c.label}</span>
+                      <span class="text-[11px] text-ink-500 font-medium tabular-nums">{c.count}</span>
                     </a>
                   </li>
                 ))}
-              </ol>
+              </ul>
             </nav>
+
+            {/* ============ EXPORT CONSULTANT CARD (Section 4 inline) ============ */}
+            <div class="mt-6 bg-white border border-ink-200 rounded-xl p-6">
+              <div class="inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-50 text-brand-700 text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full mb-4">
+                Export Support
+              </div>
+              <h3 class="text-lg font-bold text-ink-900 leading-snug mb-2">
+                Need help choosing the right EV?
+              </h3>
+              <p class="text-xs text-ink-600 leading-relaxed mb-5">
+                Tell us your target market, preferred brands, quantity and budget. Our export team will help you check stock, confirm configurations and prepare a quotation.
+              </p>
+              <div class="space-y-2 mb-5">
+                <a href="https://wa.me/8619912345678" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors">
+                  WhatsApp Us
+                </a>
+                <a href="/contact/quote/" class="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 text-sm font-semibold rounded-lg transition-colors">
+                  Get A Quote
+                </a>
+                <a href="mailto:cai@evautopro.com" class="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 text-sm font-semibold rounded-lg transition-colors">
+                  Email Us
+                </a>
+              </div>
+              <ul class="space-y-2.5 pt-5 border-t border-ink-100 text-xs">
+                <li class="flex items-start gap-2">
+                  <span class="text-ink-400 flex-shrink-0">·</span>
+                  <span class="text-ink-600"><span class="text-ink-900 font-medium">Response time:</span> Within 12 hours</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-ink-400 flex-shrink-0">·</span>
+                  <span class="text-ink-600"><span class="text-ink-900 font-medium">Support:</span> Stock · price · documents · shipping</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-ink-400 flex-shrink-0">·</span>
+                  <span class="text-ink-600"><span class="text-ink-900 font-medium">Buyer type:</span> Dealer · importer · fleet buyer</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </aside>
+
+        {/* RIGHT — accordion area */}
+        <div class="lg:col-span-9" id="all">
+          <div class="space-y-14">
+            {grouped.map(cat => (
+              <div id={cat.id} class="scroll-mt-24">
+                <div class="flex items-center gap-3 mb-6 pb-4 border-b border-ink-200">
+                  <div class="flex-shrink-0 w-9 h-9 rounded-lg bg-white border border-ink-200 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d={ICONS[cat.icon]} />
+                    </svg>
+                  </div>
+                  <h2 class="text-xl lg:text-2xl font-bold text-ink-900 tracking-tight">{cat.label}</h2>
+                  <span class="ml-auto text-xs text-ink-500 font-medium tabular-nums">{cat.count} questions</span>
+                </div>
+                <div class="space-y-3">
+                  {cat.items.map((faq, i) => (
+                    <details
+                      id={faq.id}
+                      class="group bg-white border border-ink-200 rounded-xl hover:border-brand-300 transition-colors scroll-mt-24"
+                      open={faq.num === 1 && i === 0 && cat.id === 'vehicles-inventory'}
+                    >
+                      <summary class="flex items-start gap-4 cursor-pointer p-5 list-none">
+                        <span class="flex-shrink-0 text-sm font-bold text-brand-500 tabular-nums pt-0.5 w-7">
+                          {String(faq.num).padStart(2, '0')}
+                        </span>
+                        <span class="flex-1 font-semibold text-base text-ink-900 leading-snug pr-2 group-open:text-brand-500 transition-colors">
+                          {faq.q}
+                        </span>
+                        <span class="flex-shrink-0 w-6 h-6 rounded-full border border-ink-300 group-hover:border-brand-500 text-ink-500 group-hover:text-brand-500 group-open:border-brand-500 group-open:text-brand-500 flex items-center justify-center mt-0.5 transition-colors relative">
+                          <svg class="w-3 h-3 absolute transition-opacity group-open:opacity-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                          <svg class="w-3 h-3 absolute opacity-0 transition-opacity group-open:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"/></svg>
+                        </span>
+                      </summary>
+                      <div class="px-5 pb-5 pt-1">
+                        <div class="pl-11 pr-2 pt-4 border-t border-ink-100 text-sm text-ink-700 leading-[1.75]">
+                          {faq.a}
+                        </div>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  {/* ============ Trust strip (minimal, no boxes) ============ */}
-  <section class="border-t border-ink-200 py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <p class="text-[11px] uppercase tracking-[0.22em] text-ink-400 mb-10 text-center">
-        Why exporters trust EV Auto Pro
-      </p>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 max-w-5xl mx-auto">
-        <div class="text-center">
-          <p class="font-serif italic text-3xl lg:text-4xl text-brand-500 mb-2 tabular-nums">15+</p>
-          <p class="text-[11px] uppercase tracking-[0.16em] text-ink-900 font-medium mb-1">Years of Export</p>
-          <p class="text-xs text-ink-500 leading-relaxed">Serving 60+ countries since 2010, Russia-CIS specialist.</p>
-        </div>
-        <div class="text-center">
-          <p class="font-serif italic text-3xl lg:text-4xl text-brand-500 mb-2 tabular-nums">200+</p>
-          <p class="text-[11px] uppercase tracking-[0.16em] text-ink-900 font-medium mb-1">Units in Stock</p>
-          <p class="text-xs text-ink-500 leading-relaxed">Shanghai bonded warehouse, 3-15 day ship-out window.</p>
-        </div>
-        <div class="text-center">
-          <p class="font-serif italic text-3xl lg:text-4xl text-brand-500 mb-2 tabular-nums">5-yr</p>
-          <p class="text-[11px] uppercase tracking-[0.16em] text-ink-900 font-medium mb-1">Warranty Coverage</p>
-          <p class="text-xs text-ink-500 leading-relaxed">Parts depots in Moscow, Almaty and Dubai.</p>
-        </div>
-        <div class="text-center">
-          <p class="font-serif italic text-3xl lg:text-4xl text-brand-500 mb-2 tabular-nums">24h</p>
-          <p class="text-[11px] uppercase tracking-[0.16em] text-ink-900 font-medium mb-1">Reply Promise</p>
-          <p class="text-xs text-ink-500 leading-relaxed">Cai personally answers every inquiry in EN / 中 / RU.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  {/* ====================================================================
+       SECTION 5 — POPULAR QUESTIONS for buyers (gray bg, 4 cards)
+       ==================================================================== */}
+  <Section bg="gray" eyebrow="Buyer Spotlight" title="Most Asked by Overseas Dealers" subtitle="The four questions every importer asks us first.">
+    <CardGrid cols={4} gap="md">
+      {popular.map((p, i) => (
+        <a href={`#${p.ref}`} class="group block bg-white border border-ink-200 hover:border-brand-500 rounded-xl p-6 transition-all hover:shadow-sm h-full">
+          <div class="text-xs font-bold text-brand-500 tabular-nums mb-3">Q{String(i + 1).padStart(2, '0')}</div>
+          <h3 class="font-semibold text-base text-ink-900 group-hover:text-brand-500 transition-colors leading-snug mb-3">{p.q}</h3>
+          <p class="text-xs text-ink-600 leading-relaxed mb-5">{p.a}</p>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-500 group-hover:translate-x-0.5 transition-transform">
+            Read Answer
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      ))}
+    </CardGrid>
+  </Section>
 
-  {/* FAQPage Schema (SEO) */}
+  {/* ====================================================================
+       SECTION 6 — DARK CTA (matches Home final CTA)
+       ==================================================================== */}
+  <Section bg="dark" title="Ready to Import Chinese EVs?" subtitle="Send us your target model, quantity and destination country. We will check stock, quote price and suggest the best shipping solution." align="center" maxWidth="normal">
+    <CTAGroup align="center" buttons={[
+      { label: 'Get A Quote', href: '/contact/quote/', variant: 'primary' },
+      { label: 'WhatsApp Us', href: 'https://wa.me/8619912345678', variant: 'white' },
+    ]} />
+  </Section>
+
+  {/* ====================================================================
+       FAQPage JSON-LD (first 10 questions per spec, expand to all 40)
+       ==================================================================== */}
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: allFaqs.map(f => ({
-      '@type': 'Question', name: f.q,
+    mainEntity: numberedFaqs.map(f => ({
+      '@type': 'Question',
+      name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
     })),
   })} />
+
+  {/* Sticky-nav active-state highlighter — vanilla JS, no library */}
+  <script is:inline>
+    (function() {
+      const links = document.querySelectorAll('[data-faq-link]');
+      if (!links.length) return;
+      const setActive = (target) => {
+        links.forEach(l => {
+          const isActive = l.getAttribute('data-target') === target;
+          l.classList.toggle('border-brand-500', isActive);
+          l.classList.toggle('bg-brand-50', isActive);
+          l.classList.toggle('text-ink-900', isActive);
+          l.classList.toggle('font-semibold', isActive);
+          l.classList.toggle('border-transparent', !isActive);
+          l.classList.toggle('text-ink-700', !isActive);
+        });
+      };
+      // Track scroll to highlight current section
+      const sections = ['all', ...Array.from(document.querySelectorAll('[id^="vehicles-"],[id^="brands-"],[id^="price-"],[id^="order-"],[id^="shipping-"],[id^="documents-"],[id^="quality-"],[id^="warranty-"],[id^="dealer-"]')).map(el => el.id).filter(id => id.includes('-') && !id.includes('cat-'))];
+      const groupIds = ['vehicles-inventory','brands-models','price-quotation','order-payment','shipping-delivery','documents-customs','quality-inspection','warranty-aftersales','dealer-cooperation'];
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY + 140;
+        let current = 'all';
+        for (const id of groupIds) {
+          const el = document.getElementById(id);
+          if (el && el.offsetTop <= y) current = id;
+        }
+        setActive(current);
+      }, { passive: true });
+    })();
+  </script>
 </BaseLayout>
