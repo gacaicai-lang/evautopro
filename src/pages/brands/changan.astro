@@ -2,400 +2,331 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { cars as carsData } from '../../data/cars';
 
-// ===========================================================================
-// Brand category page — Changan (premium cinematic, Rivian / Hyundai Worldwide
-// / BYD Global feel). dark navy + white + red accent / large spacing /
-// image-heavy / strong visual hierarchy.
-// 9 sections: Top trust / Hero / About / Brand Ecosystem / Vehicle Grid /
-// Why / Global Map / Real Deliveries / FAQ + Inquiry
-// ===========================================================================
+type IconKey = 'car' | 'price' | 'ship' | 'doc' | 'check' | 'shield' | 'support' | 'arrow' | 'factory' | 'route' | 'globe';
 
 const allCars = Object.values(carsData);
-const liveModels = allCars
-  .filter(c => c.brand === 'Changan')
-  .map(c => ({
-    slug: c.slug, brand: c.brand, name: c.model, body: c.body_type, fuel: c.fuel_type,
-    hero_image: c.hero_image, stock_units: c.stock_units, stock_status: c.stock_status, live: true,
-  }));
-const comingSoon = [
-  { brand: 'Changan', name: 'UNI-K',     body: 'Coupé SUV',  fuel: 'Gasoline', status: 'Ready Stock' },
-  { brand: 'Changan', name: 'CS75 PLUS', body: 'Mid SUV',    fuel: 'Gasoline', status: 'Ready Stock' },
-  { brand: 'Changan', name: 'Hunter',    body: 'Pickup',     fuel: 'Diesel',   status: 'Ready Stock' },
-  { brand: 'Changan', name: 'Lumin',     body: 'Hatchback',  fuel: 'EV',       status: 'Ready Stock' },
-];
-const allModels = [...liveModels, ...comingSoon].slice(0, 8);
+const changanCars = allCars.filter((car) => car.brand === 'Changan');
+const carBySlug = Object.fromEntries(changanCars.map((car) => [car.slug, car]));
 
-const topTrust = ['15+ Years Export Experience', '50+ Countries', '1000+ Dealers Trust Us'];
-const heroTrust = [
-  { label: '20+ Available Models', icon: 'car' },
-  { label: 'FOB / CIF Support',    icon: 'price' },
-  { label: 'RoRo / Container',     icon: 'ship' },
-  { label: 'Export Documents',     icon: 'doc' },
-];
+const ICON: Record<IconKey, string> = {
+  car: 'M3 13h18l-2 6H5l-2-6Zm4-5h10l2 5H5l2-5Zm2 11v2m6-2v2M8 8V5h8v3',
+  price: 'M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6',
+  ship: 'M3 17l3.5-1.5L12 17l5.5-1.5L21 17M5 17V9l7-4 7 4v8',
+  doc: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm0 0v6h6M8 13h8M8 17h5',
+  check: 'M20 6 9 17l-5-5',
+  shield: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z',
+  support: 'M4 14v-2a8 8 0 0 1 16 0v2M18 19c0 1.1-.9 2-2 2h-2M6 14a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1v-5h-1Zm12 0h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1v-5Z',
+  arrow: 'M5 12h14m-6-6 6 6-6 6',
+  factory: 'M3 21V9l6 4V9l6 4V5h6v16H3Zm4-4h2m4 0h2m4 0h2',
+  route: 'M6 19a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm12-8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8.5 14.5l7-5',
+  globe: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0c2.5-3 4-6.5 4-9s-1.5-6-4-9c-2.5 3-4 6.5-4 9s1.5 6 4 9ZM3 12h18',
+};
 
-const aboutStats = [
-  { num: '160+',  label: 'Years Heritage' },
-  { num: 'Top 4', label: 'Chinese Auto Group' },
-  { num: '35M+',  label: 'Vehicles Produced' },
-  { num: '50+',   label: 'Countries Worldwide' },
-];
+const icon = (name: IconKey, className = 'h-5 w-5') =>
+  `<svg class="${className}" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="${ICON[name]}"/></svg>`;
 
-const subBrands = [
-  { slug: 'deepal',  name: 'DEEPAL',  tagline: 'Technology Meets The Future',           cta: 'Explore Deepal',      href: '/brands/deepal/',  tone: 'from-sky-700/90 via-blue-900/85 to-slate-900/95' },
-  { slug: 'qiyuan',  name: 'QIYUAN',  tagline: 'New Energy For Better Life',            cta: 'Explore Qiyuan',      href: '/brands/qiyuan/',  tone: 'from-emerald-700/90 via-teal-900/85 to-slate-900/95' },
-  { slug: 'avatr',   name: 'AVATR',   tagline: 'Premium Intelligent Electric Vehicles', cta: 'Explore AVATR',       href: '/brands/avatr/',   tone: 'from-violet-700/90 via-purple-900/85 to-slate-900/95' },
-  { slug: 'changan', name: 'CHANGAN', tagline: 'Traditional Fuel & Quality SUVs',       cta: 'View Changan Models', href: '#models',          tone: 'from-rose-700/90 via-red-900/85 to-slate-900/95' },
+const primaryButton = 'inline-flex min-h-[50px] items-center justify-center gap-2 rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-700/25 transition hover:bg-brand-600';
+const darkButton = 'inline-flex min-h-[50px] items-center justify-center gap-2 rounded-md border border-white/18 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/18';
+const lightButton = 'inline-flex min-h-[50px] items-center justify-center gap-2 rounded-md border border-ink-200 bg-white px-6 py-3 text-sm font-semibold text-ink-900 transition hover:border-brand-500 hover:text-brand-500';
+
+const heroCar = '/images/真图/changan-uni-t/prepped/hero-02.png';
+const heroMetrics = [
+  { value: '20+', label: 'Changan Models' },
+  { value: '95', label: 'Units in Live Data' },
+  { value: '12-25d', label: 'Typical Lead Time' },
+  { value: 'FOB / CIF', label: 'Quote Support' },
 ];
 
-const whyChoose = [
-  { icon: 'check',  title: 'Reliable Vehicle Supply', desc: 'Stable inventory across the full Changan family.' },
-  { icon: 'price',  title: 'Competitive Pricing',     desc: 'Factory-direct rates with flexible terms.' },
-  { icon: 'shield', title: 'Quality Assurance',       desc: 'Pre-shipment inspection on every unit.' },
-  { icon: 'ship',   title: 'Safe Delivery',           desc: 'Professional RoRo, container and land options.' },
-  { icon: 'doc',    title: 'Export Support',          desc: 'Complete documents and clearance handled.' },
-  { icon: 'wrench', title: 'After-sales Support',     desc: 'Spare parts network in 50+ countries.' },
+const programPillars = [
+  {
+    icon: 'car' as IconKey,
+    title: 'Model Strategy',
+    copy: 'Build a launch mix around SUVs first, then expand into UNI styling and Changan Group NEV brands.',
+    image: carBySlug['changan-cs55-plus']?.hero_image ?? '/images/car-changan-cs55-plus.svg',
+  },
+  {
+    icon: 'price' as IconKey,
+    title: 'Commercial Clarity',
+    copy: 'Quote by real stock, trim, color, production year and destination port instead of generic price sheets.',
+    image: '/images/faq-payment.webp',
+  },
+  {
+    icon: 'shield' as IconKey,
+    title: 'Vehicle Proof',
+    copy: 'VIN photos, inspection notes and loading updates help buyers approve the order faster.',
+    image: '/images/faq-quality.webp',
+  },
+  {
+    icon: 'ship' as IconKey,
+    title: 'Export Execution',
+    copy: 'RoRo, container, rail or truck routes are matched to batch size, port and document requirements.',
+    image: '/images/faq-logistics.webp',
+  },
 ];
 
-const regions = [
-  { name: 'Middle East',    img: '/images/market-ae.svg', x: 56, y: 44 },
-  { name: 'Central Asia',   img: '/images/market-kz.svg', x: 60, y: 28 },
-  { name: 'Africa',         img: '/images/market-eg.svg', x: 50, y: 58 },
-  { name: 'Latin America',  img: '/images/market-mx.svg', x: 24, y: 60 },
-  { name: 'Southeast Asia', img: '/images/market-uz.svg', x: 72, y: 52 },
+const brandFamilies = [
+  {
+    name: 'Changan SUV Core',
+    line: 'CS55 Plus / CS75 Plus',
+    image: carBySlug['changan-cs55-plus']?.hero_image ?? '/images/car-changan-cs55-plus.svg',
+    summary: 'The safest entry point for first-order dealers who need practical pricing and fast rotation.',
+    proof: ['Compact and mid SUV demand', 'Gasoline preference markets', 'Clear trim and color checks'],
+  },
+  {
+    name: 'UNI Design Series',
+    line: 'UNI-T / UNI-K / UNI-Z',
+    image: heroCar,
+    summary: 'A sharper showroom story for buyers who need visual presence, younger traffic and higher perceived value.',
+    proof: ['Sport SUV positioning', 'Stronger first impression', 'Good bridge into NEV options'],
+  },
+  {
+    name: 'Group NEV Upgrade',
+    line: 'Deepal / Qiyuan / Avatr',
+    image: '/images/真图/laundered/evautopro-deepal-s07-01.webp',
+    summary: 'Use the Changan Group ecosystem when your market is ready for EREV, BEV or premium smart EV demand.',
+    proof: ['EREV for charging anxiety', 'Family NEV options', 'Premium intelligent EV path'],
+  },
 ];
 
-const deliveries = [
-  { img: '/images/faq-logistics.webp', alt: 'Port — multi-unit yard loading' },
-  { img: '/images/faq-sourcing.webp',  alt: 'RoRo vessel boarding' },
-  { img: '/images/faq-warranty.webp',  alt: 'Container loading' },
-  { img: '/images/faq-payment.webp',   alt: 'Vehicle inspection — PDI' },
-  { img: '/images/faq-quality.webp',   alt: 'Dealer reception — handover' },
-  { img: '/images/faq-logistics.webp', alt: 'Block train — Khorgos route' },
+const launchPacks = [
+  {
+    name: 'Starter Dealer Batch',
+    mix: '3-10 SUVs',
+    image: '/images/faq-sourcing.webp',
+    models: 'CS55 Plus + UNI-T + CS75 Plus',
+    reason: 'Keeps first-order risk controlled while covering compact, sport and family SUV buyers.',
+  },
+  {
+    name: 'Volume SUV Batch',
+    mix: '10-30 units',
+    image: carBySlug['changan-cs55-plus']?.hero_image ?? '/images/car-changan-cs55-plus.svg',
+    models: 'CS55 Plus-led mix',
+    reason: 'Built around price clarity, quick retail explanation and repeatable stock replenishment.',
+  },
+  {
+    name: 'ICE + NEV Upgrade',
+    mix: 'Mixed brand order',
+    image: '/images/真图/laundered/evautopro-deepal-s07-01.webp',
+    models: 'Changan + Deepal / Qiyuan',
+    reason: 'Adds smart NEV models without abandoning the Changan brand ecosystem.',
+  },
+];
+
+const featuredModels = [
+  ...changanCars.map((car) => ({
+    name: car.model,
+    image: car.hero_image,
+    body: car.body_type,
+    fuel: car.fuel_type,
+    stock: `${car.stock_units} units`,
+    lead: `${car.lead_time_days} days`,
+    fob: `$${car.pricing.fob_min.toLocaleString()}-${car.pricing.fob_max.toLocaleString()}`,
+    note: car.slug === 'changan-cs55-plus' ? 'Fast-turning compact SUV anchor' : 'Sport-style SUV for younger retail buyers',
+    href: `/cars/${car.slug}/`,
+  })),
+  {
+    name: 'CS75 Plus',
+    image: '/images/car-changan-cs75-plus.svg',
+    body: 'Mid SUV',
+    fuel: 'ICE',
+    stock: 'By request',
+    lead: '15-25 days',
+    fob: 'Quote by trim',
+    note: 'Family SUV for higher-ticket showroom demand',
+    href: '/contact/quote/?model=changan-cs75-plus',
+  },
+  {
+    name: 'UNI-K',
+    image: '/images/car-changan-uni-k.svg',
+    body: 'Large SUV',
+    fuel: 'ICE',
+    stock: 'By request',
+    lead: '20-30 days',
+    fob: 'Quote by trim',
+    note: 'Premium SUV option for dealer image upgrade',
+    href: '/contact/quote/?model=changan-uni-k',
+  },
+  {
+    name: 'UNI-Z',
+    image: '/images/car-changan-uni-z.svg',
+    body: 'NEV SUV',
+    fuel: 'PHEV',
+    stock: 'By request',
+    lead: '25-35 days',
+    fob: 'Quote by trim',
+    note: 'Bridge model from ICE to NEV',
+    href: '/contact/quote/?model=changan-uni-z',
+  },
+].slice(0, 5);
+
+const exportProof = [
+  { title: 'Stock Yard', label: 'Actual availability check', image: '/images/faq-sourcing.webp' },
+  { title: 'Inspection', label: 'Vehicle photos and PDI notes', image: '/images/faq-quality.webp' },
+  { title: 'Loading Plan', label: 'RoRo, container, rail or truck', image: '/images/faq-logistics.webp' },
+  { title: 'Document Set', label: 'Invoice, BL, COO and export papers', image: '/images/faq-payment.webp' },
+];
+
+const marketRoutes = [
+  { region: 'Middle East', route: 'Jebel Ali / Jeddah / Dammam', image: '/images/market-ae.svg', fit: 'SUV demand, hot climate and practical gasoline models.' },
+  { region: 'Central Asia', route: 'Khorgos rail / truck / container', image: '/images/market-kz.svg', fit: 'Strong SUV appetite with EAC and cold-weather checks.' },
+  { region: 'Africa', route: 'Port Said / Mombasa / Durban', image: '/images/market-eg.svg', fit: 'Price-sensitive SUV and sedan orders with document support.' },
+  { region: 'Latin America', route: 'Santos / Manzanillo / regional ports', image: '/images/market-mx.svg', fit: 'Growing Chinese SUV acceptance and certification review.' },
+];
+
+const quoteSteps = [
+  { step: '01', title: 'Market and model', text: 'Send country, port, preferred model, fuel type and quantity.' },
+  { step: '02', title: 'Stock and trim', text: 'We check real availability, color, trim, production year and lead time.' },
+  { step: '03', title: 'FOB / CIF quote', text: 'You receive pricing, route assumptions, payment terms and document notes.' },
+  { step: '04', title: 'Inspect and ship', text: 'VIN proof, loading updates and export documents move the order forward.' },
 ];
 
 const faqs = [
-  { q: 'Which Changan models can you export?', a: `We currently export ${liveModels.length} Changan-main models. Sub-brand cars (Deepal / Qiyuan / Avatr) ship through the Changan Group network — send your target model for the latest availability and lead time.` },
-  { q: 'Do you have Changan ready stock?', a: 'Yes — selected models held in our Shanghai bonded warehouse. Lead time from PI to shipment 12–25 days. Stock list updated weekly.' },
-  { q: 'Can I get FOB or CIF price?', a: 'Yes. Send target model + destination port + quantity via the form. We respond within 12 hours with FOB Shanghai + CIF quote, payment terms and lead time.' },
-  { q: 'What documents are provided for export?', a: 'Commercial Invoice, Packing List, Bill of Lading, Certificate of Origin (CCPIT), MoFCOM Export License, CIQ Inspection Certificate, destination-specific Certificate of Conformity (GCC / EAC / SASO etc) and All-risk marine insurance for CIF orders.' },
-  { q: 'Can I mix brands in one shipment?', a: '40HQ container fits 1–2 SUVs or 2–3 sedans. Mixed-brand orders welcome to optimise freight cost.' },
+  {
+    q: 'Which Changan models can you export?',
+    a: 'We can quote Changan SUVs, sedans, NEVs and pickup models. Current live examples include UNI-T and CS55 Plus, while CS75 Plus, UNI-K and UNI-Z are sourced by trim and market.',
+  },
+  {
+    q: 'Is Changan suitable for a first import order?',
+    a: 'Yes when your buyers need practical SUV pricing, recognizable Chinese brand strength and manageable after-sales conversations. We usually recommend a 3-10 unit SUV launch mix.',
+  },
+  {
+    q: 'Can you quote FOB and CIF?',
+    a: 'Yes. Send model, trim, quantity and destination port. We confirm stock and route assumptions before sending FOB China port or CIF destination port pricing.',
+  },
+  {
+    q: 'Can I mix Changan with Deepal or Qiyuan?',
+    a: 'Yes. Mixed-brand orders are useful when dealers want ICE SUVs plus NEV options in the same shipment plan.',
+  },
 ];
-
-const ICON = {
-  car:    'M3 13l2-6h14l2 6M5 13h14v5H5zM7 18v2M17 18v2',
-  price:  'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m12-9l2 9m-9-5h4',
-  ship:   'M3 17l3.5-1.5L12 17l5.5-1.5L21 17M5 17V9l7-4 7 4v8',
-  doc:    'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z',
-  check:  'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
-  shield: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
-  wrench: 'M11 17a6 6 0 008-8l-3 3-3-3 3-3a6 6 0 00-8 8L3 21l3 3 5-5z',
-  globe:  'M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5-3 4-6.5 4-9s-1.5-6-4-9c-2.5 3-4 6.5-4 9s1.5 6 4 9zM3 12h18',
-  arrow:  'M5 12h14m-7-7l7 7-7 7',
-};
-
-const statusColor = (s: string) =>
-  s.includes('In Stock') || s.includes('Ready') ? 'bg-emerald-50 text-emerald-700'
-  : s.includes('On Order') ? 'bg-amber-50 text-amber-700'
-  : s.includes('Limited') ? 'bg-red-50 text-red-700'
-  : 'bg-ink-100 text-ink-700';
 ---
 
 <BaseLayout
-  title="Changan Vehicles Export from China — UNI / CS / Deepal / Avatr | EV Auto Pro"
-  description="Export-ready Changan SUVs, sedans, NEVs and pickup models for overseas dealers, importers and fleet buyers. FOB / CIF pricing, RoRo / container shipping, full export documents."
+  title="Changan Vehicles Export from China | EV Auto Pro"
+  description="Premium Changan export page for overseas dealers and importers. Source Changan SUVs, sedans, NEVs and pickup models with stock checks, FOB/CIF pricing, inspection, documents and shipping support."
 >
-  {/* ============ TOP TRUST BAR ============ */}
-  <div class="bg-slate-900 text-white text-[11px]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
-      <div class="flex flex-wrap items-center gap-5">
-        {topTrust.map(t => (
-          <div class="flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
-            <span class="text-white/85">{t}</span>
+  <!-- 01 Hero -->
+  <section class="relative isolate overflow-hidden bg-[#07111f] text-white">
+    <div class="absolute inset-0 -z-30 bg-[radial-gradient(circle_at_78%_22%,rgba(229,62,47,.24),transparent_32%),linear-gradient(120deg,#07111f_0%,#0d1f38_45%,#05070d_100%)]"></div>
+    <div class="absolute right-[-9%] top-[10%] -z-20 h-[580px] w-[760px] rounded-full border border-white/8"></div>
+    <div class="absolute right-[8%] top-[24%] -z-20 h-[360px] w-[520px] rounded-full border border-white/6"></div>
+
+    <div class="mx-auto grid min-h-[780px] max-w-7xl grid-cols-1 items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[0.82fr,1.18fr] lg:px-8">
+      <div class="relative z-10">
+        <nav class="mb-10 text-xs text-white/50">
+          <a href="/" class="hover:text-white">Home</a>
+          <span class="mx-2 text-white/25">/</span>
+          <a href="/brands/" class="hover:text-white">Brands</a>
+          <span class="mx-2 text-white/25">/</span>
+          <span class="font-semibold text-white">Changan</span>
+        </nav>
+
+        <div class="mb-7 flex items-center gap-4">
+          <div class="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-3">
+            <img src="/images/brand-changan.svg" alt="Changan" class="h-full w-full object-contain" />
           </div>
-        ))}
-      </div>
-      <div class="text-white/60">English ▾</div>
-    </div>
-  </div>
-
-  {/* ============================================================
-       1. HERO — cinematic, 760px+, dark navy + sunset, large cars
-       ============================================================ */}
-  <section class="relative overflow-hidden bg-slate-950 min-h-[720px] lg:min-h-[760px] flex items-stretch">
-    {/* Cinematic sky + city silhouette layered background.
-        TODO: swap to user-provided sunset cityscape <img> when delivered. */}
-    <div class="absolute inset-0">
-      <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
-      <div class="absolute inset-x-0 top-0 h-3/5 bg-gradient-to-b from-orange-700/25 via-rose-800/15 to-transparent"></div>
-      <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-amber-500/10 via-transparent to-transparent"></div>
-      {/* Soft horizon glow */}
-      <div class="absolute left-1/2 top-[40%] -translate-x-1/2 w-[1200px] h-[400px] bg-gradient-radial from-orange-500/20 via-rose-700/10 to-transparent blur-3xl opacity-60"></div>
-      {/* Futuristic curved roofline silhouette */}
-      <svg class="absolute inset-x-0 bottom-0 w-full h-2/5 text-slate-900/85" viewBox="0 0 1440 480" preserveAspectRatio="xMidYEnd slice" fill="currentColor">
-        <path d="M0,480 L0,260 C200,200 460,170 720,200 C980,230 1200,250 1440,210 L1440,480 Z"/>
-        <path d="M0,480 L0,360 C260,340 540,335 800,345 C1060,355 1280,360 1440,345 L1440,480 Z" opacity="0.7"/>
-        <path d="M0,480 L0,420 C300,410 600,408 900,415 C1200,422 1340,425 1440,418 L1440,480 Z" opacity="0.5"/>
-      </svg>
-    </div>
-
-    <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-14 pb-10 lg:pb-14 flex flex-col">
-      {/* Breadcrumb */}
-      <nav class="text-xs text-white/60 mb-8">
-        <a href="/" class="hover:text-white">Home</a>
-        <span class="mx-2 text-white/30">›</span>
-        <a href="/brands/" class="hover:text-white">Brands</a>
-        <span class="mx-2 text-white/30">›</span>
-        <span class="text-white font-medium">Changan</span>
-      </nav>
-
-      <div class="grid lg:grid-cols-[minmax(0,540px),1fr] gap-8 lg:gap-10 items-center flex-1">
-        {/* LEFT — cinematic copy */}
-        <div>
-          <div class="text-brand-500 text-sm font-bold tracking-[0.32em] mb-4">CHANGAN</div>
-          <h1 class="text-[42px] lg:text-[64px] xl:text-[72px] font-bold text-white leading-[1.02] tracking-tight mb-5">
-            Smart Mobility<br/>
-            <span class="text-white/95">For A Better Life</span>
-          </h1>
-          <p class="text-base lg:text-lg text-white/75 mb-8 max-w-lg leading-relaxed font-light">Export-ready Changan SUVs, sedans, NEVs and pickup models for overseas dealers, importers and fleet buyers.</p>
-
-          <div class="flex flex-wrap gap-3 mb-9">
-            <a href="#inquiry-form" class="inline-flex items-center px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md shadow-lg shadow-brand-900/40 transition-all">Get Changan Price</a>
-            <a href="#models" class="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 text-white text-sm font-semibold rounded-md transition-all">View All Models</a>
-            <a href="https://wa.me/8619912345678?text=Hi, I'm interested in Changan vehicles for export." target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 text-white text-sm font-semibold rounded-md transition-all">
-              <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              WhatsApp Us
-            </a>
-          </div>
-
-          {/* Bottom icons */}
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-white">
-            {heroTrust.map(t => (
-              <div class="flex items-center gap-2.5">
-                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center text-brand-400">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON[t.icon]}/></svg>
-                </div>
-                <div class="text-xs font-semibold leading-snug text-white/90">{t.label}</div>
-              </div>
-            ))}
+          <div>
+            <div class="text-xs font-bold uppercase tracking-[0.26em] text-brand-500">Changan export program</div>
+            <div class="mt-1 text-sm text-white/58">For dealers, importers and fleet buyers</div>
           </div>
         </div>
 
-        {/* RIGHT — brand mark top-right + 3 large vehicles dominating the space */}
-        <div class="relative h-full min-h-[400px] lg:min-h-[520px]">
-          <div class="absolute top-0 right-0 z-20 flex items-center gap-3">
-            <img src="/images/brand-changan.svg" alt="Changan" class="h-9 w-9"/>
-            <div>
-              <div class="text-lg font-bold text-white tracking-[0.24em]">CHANGAN</div>
-              <div class="text-[11px] text-white/60 -mt-0.5 tracking-wider">Forward With You</div>
-            </div>
-          </div>
-          <div class="absolute inset-x-0 bottom-0 grid grid-cols-3 gap-0 items-end">
-            {liveModels.slice(0, 3).map((m, i) => (
-              <div class={`${i === 1 ? 'scale-[1.18] z-10 -mb-2' : 'scale-95 mb-4 opacity-90'}`}>
-                <img src={m.hero_image} alt={`${m.brand} ${m.name}`} class="w-full object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.55)]" loading="eager"/>
-              </div>
-            ))}
-          </div>
+        <h1 class="max-w-2xl text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-[76px]">
+          Smart Mobility<br />For A Better Life
+        </h1>
+        <p class="mt-7 max-w-xl text-base leading-8 text-white/72 lg:text-lg">
+          A premium export program for Changan SUVs, sedans, NEVs and pickup models from China, built around real stock, practical pricing and controlled shipping execution.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#inquiry-form" class={primaryButton}>Get Changan Price</a>
+          <a href="#models" class={darkButton}>View models</a>
+          <a href="https://wa.me/8619912345678?text=Hi, I want Changan export pricing." target="_blank" rel="noopener" class={darkButton}>WhatsApp us</a>
         </div>
+      </div>
+
+      <div class="relative min-h-[560px]">
+        <div class="absolute right-0 top-0 z-20 hidden rounded-full border border-white/12 bg-white/8 px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-white/74 backdrop-blur md:block">
+          Stock and sourcing available
+        </div>
+        <img
+          src={heroCar}
+          alt="Changan UNI-T export vehicle"
+          class="absolute bottom-10 right-[-8%] z-10 w-[116%] max-w-none object-contain drop-shadow-[0_45px_70px_rgba(0,0,0,.65)] lg:bottom-2 lg:w-[122%]"
+          loading="eager"
+        />
+        <div class="absolute bottom-0 left-0 right-0 z-0 h-40 rounded-[50%] bg-black/45 blur-2xl"></div>
       </div>
     </div>
-  </section>
 
-  {/* ============================================================
-       2. ABOUT CHANGAN — text-left + one large industrial image
-       ============================================================ */}
-  <section class="bg-white py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-        <div>
-          <div class="text-brand-500 text-xs font-bold tracking-[0.28em] mb-4">ABOUT CHANGAN</div>
-          <h2 class="text-3xl lg:text-[44px] font-bold text-ink-900 leading-[1.1] mb-6">A Leading Global<br/>Automotive Brand</h2>
-          <p class="text-base lg:text-lg text-ink-600 leading-relaxed mb-8 max-w-lg font-light">With over 160 years of industrial heritage, Changan Automobile is one of the top 4 automotive groups in China. We are committed to innovation, quality and global partnership — providing reliable vehicles and excellent service to customers worldwide.</p>
-
-          {/* Stats row */}
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8 pt-2">
-            {aboutStats.map(s => (
-              <div>
-                <div class="text-3xl lg:text-4xl font-bold text-ink-900 leading-tight tracking-tight">{s.num}</div>
-                <div class="text-[11px] text-ink-500 mt-2 font-semibold uppercase tracking-wider">{s.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <a href="/about/" class="inline-flex items-center gap-2 px-5 py-3 border border-ink-300 hover:border-brand-500 hover:text-brand-500 text-ink-700 text-sm font-semibold rounded-md transition-colors">
-            Learn More About Changan
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.arrow}/></svg>
-          </a>
-        </div>
-
-        {/* RIGHT — single large industrial image (factory / R&D centre placeholder) */}
-        <div class="relative aspect-[5/4] lg:aspect-[6/5] rounded-2xl overflow-hidden bg-slate-800 shadow-2xl">
-          <div class="absolute inset-0 bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900"></div>
-          <img src="/images/trust-warehouse.svg" alt="Smart Manufacturing — Changan production line" class="absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent"></div>
-          {/* Label */}
-          <div class="absolute bottom-6 left-6 right-6 text-white">
-            <div class="text-brand-400 text-[10px] font-bold tracking-[0.24em] mb-2">SMART MANUFACTURING</div>
-            <div class="text-xl lg:text-2xl font-bold leading-tight">Global R&D · Production · Quality Network</div>
-            <div class="text-xs text-white/70 mt-1 font-light">Changan operates 12 manufacturing bases and 8 R&D centres worldwide.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* ============================================================
-       3. BRAND ECOSYSTEM — 4 independent sub-brand cards
-       ============================================================ */}
-  <section class="bg-slate-950 py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10 lg:mb-14">
-        <div class="text-brand-500 text-xs font-bold tracking-[0.28em] mb-3">BRAND ECOSYSTEM</div>
-        <h2 class="text-3xl lg:text-[40px] font-bold text-white leading-tight">Explore More Brands from Changan Group</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        {subBrands.map(b => (
-          <a href={b.href} class="group relative overflow-hidden rounded-2xl bg-slate-800 aspect-[4/5] flex flex-col justify-between p-6 lg:p-7 text-white hover:-translate-y-1 transition-transform duration-300 shadow-xl">
-            {/* Background car silhouette */}
-            <div class="absolute inset-x-0 bottom-0 h-3/5 opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500">
-              <img src={liveModels[0]?.hero_image} alt="" class="w-full h-full object-contain object-bottom"/>
-            </div>
-            {/* Tone overlay (each brand its own colour palette) */}
-            <div class={`absolute inset-0 bg-gradient-to-b ${b.tone} pointer-events-none`}></div>
-
-            <div class="relative z-10">
-              <div class="text-xl lg:text-2xl font-bold tracking-[0.18em] mb-2">{b.name}</div>
-              <div class="text-sm text-white/85 leading-snug font-light max-w-[80%]">{b.tagline}</div>
-            </div>
-            <div class="relative z-10 inline-flex items-center gap-2 self-start px-4 py-2 bg-white/15 group-hover:bg-white/25 backdrop-blur border border-white/20 rounded-md text-xs font-semibold transition-all">
-              {b.cta}
-              <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.arrow}/></svg>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* ============================================================
-       4. VEHICLE GRID — premium 4-col, large cards, minimal text
-       ============================================================ */}
-  <section class="bg-white py-16 lg:py-24" id="models">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-10">
-        <div>
-          <div class="text-brand-500 text-xs font-bold tracking-[0.28em] mb-3">VEHICLE LINEUP</div>
-          <h2 class="text-3xl lg:text-[40px] font-bold text-ink-900 leading-tight">Changan Models for Export</h2>
-        </div>
-        <a href="/cars/" class="hidden lg:inline-flex items-center gap-2 text-sm font-semibold text-brand-500 hover:text-brand-600">
-          View All Models
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.arrow}/></svg>
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {allModels.map(m => (
-          <div class="group rounded-2xl overflow-hidden bg-white border border-ink-100 hover:border-brand-200 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-            <div class="aspect-[4/3] bg-gradient-to-br from-ink-50 to-ink-100 overflow-hidden relative">
-              {m.live ? (
-                <img src={m.hero_image} alt={`${m.brand} ${m.name}`} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy"/>
-              ) : (
-                <div class="w-full h-full flex items-center justify-center text-ink-300">
-                  <svg class="w-14 h-14" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.car}/></svg>
-                </div>
-              )}
-              <span class={`absolute top-3 left-3 px-2.5 py-1 text-[10px] font-bold rounded ${statusColor(m.live ? (m.stock_status || 'Ready Stock') : m.status)}`}>
-                {m.live ? (m.stock_status || 'Ready Stock') : m.status}
-              </span>
-            </div>
-            <div class="p-5">
-              <div class="text-lg font-bold text-ink-900 leading-tight mb-1">{m.name}</div>
-              <div class="text-xs text-ink-500 mb-4 flex items-center gap-1.5">
-                <span>{m.body}</span>
-                <span class="text-ink-300">·</span>
-                <span>{m.fuel}</span>
-              </div>
-              {m.live ? (
-                <a href={`/cars/${m.slug}/`} class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500 hover:text-brand-600 group">
-                  View Details
-                  <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.arrow}/></svg>
-                </a>
-              ) : (
-                <span class="text-sm font-semibold text-ink-400">Coming Soon</span>
-              )}
-            </div>
+    <div class="relative z-20 border-y border-white/10 bg-black/22 backdrop-blur">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-px px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
+        {heroMetrics.map((item) => (
+          <div class="py-5">
+            <div class="text-2xl font-bold tracking-tight text-white">{item.value}</div>
+            <div class="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/48">{item.label}</div>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  {/* ============================================================
-       5. WHY US — minimal premium 6 cards
-       ============================================================ */}
-  <section class="bg-ink-50 py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <div class="text-brand-500 text-xs font-bold tracking-[0.28em] mb-3">WHY US</div>
-        <h2 class="text-3xl lg:text-[40px] font-bold text-ink-900 leading-tight">Why Global Partners Choose EV Auto Pro</h2>
+  <!-- 02 Program overview -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 grid gap-8 lg:grid-cols-[0.72fr,1.28fr] lg:items-end">
+        <div>
+          <p class="eyebrow">Export program</p>
+          <h2 class="h-section">A Changan page should help buyers decide, not browse endlessly.</h2>
+        </div>
+        <p class="max-w-3xl text-base leading-8 text-ink-600">
+          Overseas buyers are usually comparing risk: market fit, stock certainty, price range, route, documents and after-sales expectations. This program turns the brand into a workable order path.
+        </p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8">
-        {whyChoose.map(w => (
-          <div class="text-center">
-            <div class="w-12 h-12 mx-auto rounded-lg bg-white border border-ink-200 flex items-center justify-center text-brand-500 mb-4 shadow-sm">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON[w.icon]}/></svg>
+
+      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        {programPillars.map((item) => (
+          <article class="group overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <div class="relative aspect-[4/3] overflow-hidden bg-ink-100">
+              <img src={item.image} alt={item.title} class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-brand-500 shadow" set:html={icon(item.icon, 'h-5 w-5')}></div>
             </div>
-            <div class="text-sm font-bold text-ink-900 mb-2 leading-tight">{w.title}</div>
-            <div class="text-xs text-ink-500 leading-snug px-1 font-light">{w.desc}</div>
-          </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold tracking-tight text-ink-900">{item.title}</h3>
+              <p class="mt-3 text-sm leading-7 text-ink-600">{item.copy}</p>
+            </div>
+          </article>
         ))}
       </div>
     </div>
   </section>
 
-  {/* ============================================================
-       6. GLOBAL EXPORT MAP — world map + region pins
-       ============================================================ */}
-  <section class="bg-white py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-[minmax(0,320px),1fr] gap-10 lg:gap-14 items-center">
-        <div>
-          <div class="text-brand-500 text-xs font-bold tracking-[0.28em] mb-3">GLOBAL REACH</div>
-          <h2 class="text-3xl lg:text-[40px] font-bold text-ink-900 leading-[1.1] mb-5">Exporting Changan to<br/>50+ Countries Worldwide</h2>
-          <p class="text-sm lg:text-base text-ink-600 leading-relaxed mb-6 font-light">Rich export experience across Asia, Middle East, Africa, Latin America and Central Asia. Established routes via RoRo, container and Block Train.</p>
-          <a href="/markets/" class="inline-flex items-center gap-2 px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md shadow-md transition-all">
-            View All Markets
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.arrow}/></svg>
-          </a>
+  <!-- 03 Brand authority -->
+  <section class="bg-ink-50 py-20 lg:py-28">
+    <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.08fr,0.92fr] lg:px-8">
+      <div class="relative min-h-[560px] overflow-hidden rounded-2xl bg-slate-950 shadow-2xl shadow-ink-900/10">
+        <img src="/images/trust-warehouse.svg" alt="Changan export preparation and manufacturing support" class="absolute inset-0 h-full w-full object-cover opacity-70" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/45 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+          <div class="text-xs font-bold uppercase tracking-[0.24em] text-brand-500">Manufacturing scale matters</div>
+          <h3 class="mt-4 max-w-2xl text-3xl font-bold leading-tight lg:text-4xl">A major Chinese automotive group with export-ready supply paths.</h3>
         </div>
+      </div>
 
-        {/* Dot-grid world map with region image pins */}
-        <div class="relative aspect-[16/8] bg-slate-50 rounded-2xl overflow-hidden border border-ink-100">
-          <svg class="absolute inset-0 w-full h-full text-ink-300" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
-            {[...Array(40)].map((_, row) => [...Array(80)].map((_, col) => {
-              const x = col * 15 + 7;
-              const y = row * 15 + 7;
-              const land = (
-                (y > 80 && y < 280 && ((x > 100 && x < 380) || (x > 420 && x < 760))) ||
-                (y > 130 && y < 410 && x > 500 && x < 720) ||
-                (y > 280 && y < 480 && x > 200 && x < 380) ||
-                (y > 340 && y < 480 && x > 780 && x < 1020)
-              );
-              return land ? <circle cx={x} cy={y} r="1.8" fill="currentColor"/> : null;
-            }))}
-          </svg>
-          {regions.map(r => (
-            <div class="absolute" style={`left: ${r.x}%; top: ${r.y}%;`}>
-              <div class="relative -translate-x-1/2 -translate-y-full">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-1 w-24">
-                  <div class="aspect-video bg-ink-100">
-                    <img src={r.img} alt={r.name} class="w-full h-full object-cover" loading="lazy" onerror="this.style.opacity='0.25'"/>
-                  </div>
-                  <div class="text-[11px] font-bold text-ink-900 text-center py-1.5">{r.name}</div>
-                </div>
-                <div class="absolute left-1/2 -translate-x-1/2 -bottom-1 w-3.5 h-3.5 rounded-full bg-brand-500 ring-2 ring-white"></div>
-              </div>
+      <div class="flex flex-col justify-center">
+        <p class="eyebrow">About Changan</p>
+        <h2 class="h-section">Big enough for trust, practical enough for dealer turnover.</h2>
+        <p class="mt-6 text-base leading-8 text-ink-600">
+          Changan gives buyers a useful middle ground: recognized Chinese OEM scale, strong SUV coverage and a wider group ecosystem for NEV upgrades. For B2B importers, the real value is repeatable sourcing and fewer surprises after the quote.
+        </p>
+        <div class="mt-9 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-ink-200 bg-ink-200">
+          {[
+            ['160+', 'Years industrial heritage'],
+            ['Top 4', 'Chinese automotive group'],
+            ['35M+', 'Vehicles produced'],
+            ['50+', 'Countries and regions'],
+          ].map(([value, label]) => (
+            <div class="bg-white p-6">
+              <div class="text-3xl font-bold tracking-tight text-ink-900">{value}</div>
+              <div class="mt-2 text-xs font-semibold uppercase leading-5 tracking-wide text-ink-500">{label}</div>
             </div>
           ))}
         </div>
@@ -403,121 +334,369 @@ const statusColor = (s: string) =>
     </div>
   </section>
 
-  {/* ============================================================
-       7. REAL DELIVERY GALLERY — daily-export proof
-       ============================================================ */}
-  <section class="bg-slate-950 py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-10">
-        <div>
-          <div class="text-brand-500 text-xs font-bold tracking-[0.28em] mb-3">REAL OPERATIONS</div>
-          <h2 class="text-3xl lg:text-[40px] font-bold text-white leading-tight">Real Deliveries. Real Partners.</h2>
-        </div>
-        <div class="hidden lg:flex items-center gap-3 px-5 py-2.5 bg-white/5 backdrop-blur border border-white/10 rounded-md text-white">
-          <div class="text-[10px] text-white/60 uppercase tracking-wider">Trusted by</div>
-          <div class="text-sm font-bold">1000+ Dealers · 50+ Countries</div>
-        </div>
+  <!-- 04 Lineup architecture -->
+  <section class="bg-slate-950 py-20 text-white lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 max-w-4xl">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-brand-500">Lineup architecture</p>
+        <h2 class="text-3xl font-bold leading-tight tracking-tight text-white lg:text-5xl">Build the showroom by buyer job, not by model count.</h2>
       </div>
-      <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-        {deliveries.slice(0, 3).map(d => (
-          <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-800 group">
-            <img src={d.img} alt={d.alt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent"></div>
-            <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-semibold">{d.alt}</div>
-          </div>
+
+      <div class="grid gap-5 lg:grid-cols-3">
+        {brandFamilies.map((family) => (
+          <article class="group relative min-h-[560px] overflow-hidden rounded-2xl border border-white/10 bg-white/7 shadow-xl shadow-black/10 transition hover:-translate-y-1">
+            <img src={family.image} alt={family.name} class="absolute inset-0 h-full w-full object-cover opacity-48 transition duration-500 group-hover:scale-105 group-hover:opacity-62" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/78 to-slate-950/8"></div>
+            <div class="relative flex h-full min-h-[560px] flex-col justify-end p-7">
+              <div class="text-xs font-bold uppercase tracking-[0.2em] text-brand-100">{family.line}</div>
+              <h3 class="mt-3 text-3xl font-bold tracking-tight text-white">{family.name}</h3>
+              <p class="mt-4 text-sm leading-7 text-white/66">{family.summary}</p>
+              <div class="mt-6 space-y-2">
+                {family.proof.map((point) => (
+                  <div class="flex items-center gap-3 text-sm font-semibold text-white">
+                    <span class="flex h-5 w-5 items-center justify-center rounded-full bg-white/12 text-brand-100" set:html={icon('check', 'h-3.5 w-3.5')}></span>
+                    {point}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
         ))}
-        {deliveries.slice(3).map(d => (
-          <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-800 group">
-            <img src={d.img} alt={d.alt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 to-transparent"></div>
-            <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-semibold">{d.alt}</div>
-          </div>
-        ))}
-      </div>
-      <div class="mt-8 text-center">
-        <a href="/about/" class="inline-flex items-center gap-2 text-sm font-semibold text-white/85 hover:text-white">
-          View Customer Stories
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.arrow}/></svg>
-        </a>
       </div>
     </div>
   </section>
 
-  {/* ============================================================
-       8. FAQ + INQUIRY
-       ============================================================ */}
-  <section class="bg-white py-16 lg:py-24" id="inquiry-form">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
-
-        {/* FAQ */}
+  <!-- 05 Launch mix -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 grid gap-8 lg:grid-cols-[0.82fr,1.18fr] lg:items-end">
         <div>
-          <div class="text-brand-500 text-xs font-bold tracking-[0.28em] mb-3">FAQ</div>
-          <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 leading-tight mb-8">Common Questions about Changan Export</h2>
-          <div class="space-y-2">
-            {faqs.map((f, i) => (
-              <details class="group border-b border-ink-200 last:border-0" open={i === 0}>
-                <summary class="flex items-center justify-between cursor-pointer py-4 list-none">
-                  <span class="text-base text-ink-900 font-semibold pr-4">{f.q}</span>
-                  <svg class="w-4 h-4 text-ink-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                </summary>
-                <div class="pb-4 text-sm text-ink-600 leading-relaxed font-light">{f.a}</div>
-              </details>
-            ))}
+          <p class="eyebrow">Dealer launch mix</p>
+          <h2 class="h-section">Package the brand around the first order.</h2>
+        </div>
+        <p class="text-base leading-8 text-ink-600">
+          The strongest Changan page should help an importer imagine the first purchase order, not just admire individual cars.
+        </p>
+      </div>
+
+      <div class="grid gap-5 lg:grid-cols-3">
+        {launchPacks.map((pack) => (
+          <article class="overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-sm">
+            <div class="relative aspect-[16/10] overflow-hidden bg-ink-100">
+              <img src={pack.image} alt={pack.name} class="h-full w-full object-cover" loading="lazy" />
+              <div class="absolute left-4 top-4 rounded-full bg-white/92 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-brand-600">{pack.mix}</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold tracking-tight text-ink-900">{pack.name}</h3>
+              <div class="mt-4 rounded-lg bg-ink-50 p-4 text-sm font-semibold leading-6 text-ink-800">{pack.models}</div>
+              <p class="mt-4 text-sm leading-7 text-ink-600">{pack.reason}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Models -->
+  <section id="models" class="bg-ink-50 py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+        <div>
+          <p class="eyebrow">Export models</p>
+          <h2 class="h-section">Quote models with a clear role in the order.</h2>
+        </div>
+        <a href="/cars/" class={lightButton}>View all inventory</a>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-[1.16fr,0.84fr]">
+        <a href={featuredModels[0].href} class="group relative min-h-[640px] overflow-hidden rounded-2xl bg-ink-950 text-white shadow-2xl shadow-ink-900/15">
+          <img src={featuredModels[0].image} alt={`Changan ${featuredModels[0].name}`} class="absolute inset-0 h-full w-full object-cover opacity-76 transition duration-500 group-hover:scale-105" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/56 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8">
+            <div class="text-xs font-bold uppercase tracking-[0.22em] text-brand-100">Featured ready stock</div>
+            <h3 class="mt-3 text-5xl font-bold tracking-tight">{featuredModels[0].name}</h3>
+            <p class="mt-4 max-w-xl text-base leading-8 text-white/68">{featuredModels[0].note}</p>
+            <div class="mt-7 grid max-w-xl grid-cols-3 gap-px overflow-hidden rounded-xl bg-white/12 text-sm">
+              <div class="bg-white/10 p-4 backdrop-blur">
+                <div class="text-white/42">FOB</div>
+                <div class="mt-1 font-bold">{featuredModels[0].fob}</div>
+              </div>
+              <div class="bg-white/10 p-4 backdrop-blur">
+                <div class="text-white/42">Stock</div>
+                <div class="mt-1 font-bold">{featuredModels[0].stock}</div>
+              </div>
+              <div class="bg-white/10 p-4 backdrop-blur">
+                <div class="text-white/42">Lead</div>
+                <div class="mt-1 font-bold">{featuredModels[0].lead}</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <div class="grid gap-4">
+          {featuredModels.slice(1).map((model) => (
+            <a href={model.href} class="group grid overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:grid-cols-[160px,1fr]">
+              <div class="min-h-[168px] bg-ink-100">
+                <img src={model.image} alt={`Changan ${model.name}`} class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <div class="text-xs font-bold uppercase tracking-[0.16em] text-brand-500">{model.body} / {model.fuel}</div>
+                <h3 class="mt-2 text-2xl font-bold tracking-tight text-ink-900">{model.name}</h3>
+                <p class="mt-2 text-sm leading-6 text-ink-600">{model.note}</p>
+                <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-ink-100 pt-4 text-xs font-semibold text-ink-500">
+                  <span>{model.stock}</span>
+                  <span>{model.lead}</span>
+                  <span class="text-brand-500">{model.fob}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 Proof -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 max-w-3xl">
+        <p class="eyebrow">Export proof</p>
+        <h2 class="h-section">The order is only real when proof, route and documents are clear.</h2>
+      </div>
+      <div class="grid gap-5 lg:grid-cols-4">
+        {exportProof.map((item, index) => (
+          <article class:list={[
+            'group relative overflow-hidden rounded-2xl bg-ink-950 text-white shadow-xl shadow-ink-900/10',
+            index === 0 ? 'lg:col-span-2 lg:row-span-2 min-h-[520px]' : 'min-h-[250px]',
+          ]}>
+            <img src={item.image} alt={item.title} class="absolute inset-0 h-full w-full object-cover opacity-72 transition duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/42 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-100">{item.label}</div>
+              <h3 class="mt-2 text-2xl font-bold tracking-tight">{item.title}</h3>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 Global routes — Exporting to 50+ Countries Worldwide -->
+  <section class="bg-slate-950 py-20 text-white lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 text-center">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-brand-500">Global routes</p>
+        <h2 class="text-3xl font-bold leading-tight tracking-tight text-white lg:text-5xl">Exporting Changan to<br class="hidden lg:inline"/> 50+ Countries Worldwide</h2>
+        <p class="mt-5 mx-auto max-w-2xl text-base leading-8 text-white/62">Active dealer and importer routes — different regions, different documents, different model fit. Highlighted below are our top-selling markets.</p>
+      </div>
+
+      {/* World map with hot-market pins */}
+      <div class="relative mx-auto max-w-5xl aspect-[2/1] rounded-2xl overflow-hidden bg-slate-900 ring-1 ring-white/10">
+        {/* Simplified continent silhouettes (Mercator-ish), public domain shape */}
+        <svg viewBox="0 0 1000 500" class="absolute inset-0 w-full h-full text-white/12" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          {/* North America */}
+          <path fill="currentColor" d="M75 70 L200 60 L240 100 L255 180 L210 240 L160 240 L130 200 L100 170 L80 130 Z"/>
+          {/* Central America + Caribbean */}
+          <path fill="currentColor" d="M210 240 L240 245 L245 270 L225 280 L210 270 Z"/>
+          {/* South America */}
+          <path fill="currentColor" d="M255 290 L315 280 L340 330 L335 410 L295 460 L260 440 L245 380 L250 330 Z"/>
+          {/* Europe */}
+          <path fill="currentColor" d="M460 100 L560 90 L575 130 L555 160 L500 165 L470 145 Z"/>
+          {/* Africa */}
+          <path fill="currentColor" d="M490 180 L580 175 L600 230 L590 320 L545 400 L500 395 L475 320 L480 240 Z"/>
+          {/* Middle East / Arabia */}
+          <path fill="currentColor" d="M580 175 L640 175 L660 215 L640 250 L600 240 L590 200 Z"/>
+          {/* Russia / Asia */}
+          <path fill="currentColor" d="M560 50 L900 60 L920 130 L880 170 L780 175 L660 165 L600 140 L575 110 Z"/>
+          {/* India */}
+          <path fill="currentColor" d="M700 200 L755 200 L760 260 L730 290 L710 270 Z"/>
+          {/* Southeast Asia */}
+          <path fill="currentColor" d="M780 220 L850 215 L865 260 L840 285 L810 270 Z"/>
+          {/* Australia */}
+          <path fill="currentColor" d="M820 360 L915 350 L935 405 L890 430 L830 415 Z"/>
+        </svg>
+
+        {/* Subtle latitude lines for cartographic feel */}
+        <svg viewBox="0 0 1000 500" class="absolute inset-0 w-full h-full text-white/5" preserveAspectRatio="none" aria-hidden="true">
+          {[125, 250, 375].map(y => <line x1="0" x2="1000" y1={y} y2={y} stroke="currentColor" stroke-width="1" stroke-dasharray="4 8"/>)}
+          {[200, 400, 600, 800].map(x => <line x1={x} x2={x} y1="0" y2="500" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8"/>)}
+        </svg>
+
+        {/* Hot-market pins (top-selling Changan export markets) */}
+        {[
+          { country: 'Russia',       sub: 'Moscow / SPB',       units: '#1 ICE SUV', x: 60,   y: 26 },
+          { country: 'Kazakhstan',   sub: 'Almaty / Aktau',     units: 'Block train', x: 65,  y: 31 },
+          { country: 'Uzbekistan',   sub: 'Tashkent',           units: 'Land route',  x: 64,  y: 35 },
+          { country: 'UAE',          sub: 'Jebel Ali / Dubai',  units: 'RoRo hub',    x: 62,  y: 44 },
+          { country: 'Saudi Arabia', sub: 'Jeddah / Dammam',    units: 'GCC certified', x: 59, y: 46 },
+          { country: 'Egypt',        sub: 'Port Said / CKD',    units: 'Africa gate', x: 53.5, y: 41 },
+          { country: 'Mexico',       sub: 'Manzanillo / Veracruz', units: 'LATAM hub', x: 22, y: 50 },
+          { country: 'Brazil',       sub: 'Santos',             units: 'Growing',     x: 31, y: 67 },
+        ].map((pin) => (
+          <div class="absolute" style={`left: ${pin.x}%; top: ${pin.y}%;`}>
+            {/* Pulse ring */}
+            <div class="absolute -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-brand-500 ring-2 ring-brand-500/40 animate-ping opacity-75"></div>
+            <div class="relative -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-brand-500 ring-2 ring-white/80"></div>
+            {/* Label card */}
+            <div class="absolute left-3 -top-1 whitespace-nowrap rounded-md bg-white/95 px-2 py-1 text-[10px] shadow-md backdrop-blur">
+              <div class="font-bold text-ink-900 leading-tight">{pin.country}</div>
+              <div class="text-[9px] text-ink-500 leading-tight">{pin.sub}</div>
+              <div class="text-[9px] text-brand-500 font-semibold leading-tight">{pin.units}</div>
+            </div>
+          </div>
+        ))}
+
+        {/* Bottom legend */}
+        <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[10px] text-white/50">
+          <div class="flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-500 ring-1 ring-white/60"></span>
+            <span>Active dealer / importer markets</span>
+          </div>
+          <div>8 highlighted · 50+ total countries</div>
+        </div>
+      </div>
+
+      {/* CTA strip */}
+      <div class="mt-10 flex flex-col items-center gap-4 text-center">
+        <p class="text-sm text-white/65 max-w-xl">Don't see your country? Send your destination port — we quote 50+ markets, including new dealer territories.</p>
+        <a href="/markets/" class={darkButton} set:html={`View All Markets ${icon('arrow', 'h-4 w-4')}`}/>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 Process -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+        <div>
+          <p class="eyebrow">Quote workflow</p>
+          <h2 class="h-section">A clean path from model interest to shipment.</h2>
+        </div>
+        <a href="#inquiry-form" class={lightButton}>Start a Changan quote</a>
+      </div>
+      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {quoteSteps.map((item) => (
+          <article class="relative rounded-xl border border-ink-200 bg-white p-6 shadow-sm">
+            <div class="text-xs font-bold tracking-[0.28em] text-brand-500">{item.step}</div>
+            <h3 class="mt-7 text-2xl font-bold tracking-tight text-ink-900">{item.title}</h3>
+            <p class="mt-4 text-sm leading-7 text-ink-600">{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 FAQ + Inquiry -->
+  <section id="inquiry-form" class="bg-ink-50 py-20 lg:py-28">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.84fr,1fr] lg:px-8">
+      <div>
+        <p class="eyebrow">Changan FAQ</p>
+        <h2 class="h-section">Questions buyers ask before requesting Changan prices.</h2>
+        <div class="mt-8 divide-y divide-ink-200 rounded-2xl border border-ink-200 bg-white">
+          {faqs.map((item, index) => (
+            <details class="group p-6" open={index === 0}>
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left font-bold text-ink-900">
+                {item.q}
+                <span class="text-brand-500 transition group-open:rotate-90" set:html={icon('arrow', 'h-4 w-4')}></span>
+              </summary>
+              <p class="mt-4 max-w-3xl text-sm leading-7 text-ink-600">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-ink-200 bg-white p-6 shadow-xl shadow-ink-900/5 lg:p-8">
+        <div class="mb-6 rounded-xl bg-slate-950 p-6 text-white">
+          <div class="flex items-center gap-4">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-brand-500 text-white" set:html={icon('support', 'h-6 w-6')}></div>
+            <div>
+              <h3 class="text-2xl font-bold tracking-tight">Get Changan FOB / CIF Price</h3>
+              <p class="mt-1 text-sm leading-6 text-white/62">Send model, quantity and destination port. We will check stock and route.</p>
+            </div>
           </div>
         </div>
 
-        {/* Form */}
-        <div class="bg-slate-50 rounded-2xl p-6 lg:p-8 border border-ink-100">
-          <div class="text-brand-500 text-xs font-bold tracking-[0.28em] mb-3">INQUIRY</div>
-          <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 leading-tight mb-2">Get Changan FOB / CIF Price</h2>
-          <p class="text-xs text-ink-500 mb-6 font-light">Send us your target model, quantity and destination port. We will check stock and quote you within 12 hours.</p>
-          <form action="https://formspree.io/f/your-id" method="POST" class="space-y-4">
-            <input type="hidden" name="brand" value="Changan"/>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-[11px] font-semibold text-ink-700 mb-1.5 uppercase tracking-wider">Your Name <span class="text-brand-500">*</span></label>
-                <input type="text" name="name" required placeholder="Enter your name" class="w-full px-4 py-3 bg-white border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
-              </div>
-              <div>
-                <label class="block text-[11px] font-semibold text-ink-700 mb-1.5 uppercase tracking-wider">WhatsApp / Email <span class="text-brand-500">*</span></label>
-                <input type="text" name="contact" required placeholder="Enter WhatsApp or Email" class="w-full px-4 py-3 bg-white border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
-              </div>
-              <div>
-                <label class="block text-[11px] font-semibold text-ink-700 mb-1.5 uppercase tracking-wider">Country <span class="text-brand-500">*</span></label>
-                <select name="country" required class="w-full px-4 py-3 bg-white border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm text-ink-700">
-                  <option value="">Select your country</option>
-                  <option>Russia</option><option>UAE</option><option>Saudi Arabia</option>
-                  <option>Kazakhstan</option><option>Egypt</option><option>Mexico</option><option>Brazil</option><option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-[11px] font-semibold text-ink-700 mb-1.5 uppercase tracking-wider">Target Model <span class="text-brand-500">*</span></label>
-                <input type="text" name="model" required placeholder="e.g. Changan UNI-K" class="w-full px-4 py-3 bg-white border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
-              </div>
-              <div>
-                <label class="block text-[11px] font-semibold text-ink-700 mb-1.5 uppercase tracking-wider">Quantity <span class="text-brand-500">*</span></label>
-                <input type="number" name="qty" min="1" required placeholder="e.g. 10 Units" class="w-full px-4 py-3 bg-white border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
-              </div>
-              <div>
-                <label class="block text-[11px] font-semibold text-ink-700 mb-1.5 uppercase tracking-wider">Destination Port <span class="text-brand-500">*</span></label>
-                <input type="text" name="port" required placeholder="e.g. Jebel Ali Port, Dubai" class="w-full px-4 py-3 bg-white border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
-              </div>
+        <form id="changan-inquiry-form" class="space-y-4">
+          <input type="hidden" name="source_page" value="brands/changan" />
+          <input type="text" name="honeypot" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="mb-1.5 block text-xs font-bold text-ink-700">Your name *</label>
+              <input name="name" required class="w-full rounded-lg border border-ink-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand-500" placeholder="Your name" />
             </div>
             <div>
-              <label class="block text-[11px] font-semibold text-ink-700 mb-1.5 uppercase tracking-wider">Message</label>
-              <textarea name="message" rows="3" placeholder="Tell us more about your request..." class="w-full px-4 py-3 bg-white border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400 resize-none"></textarea>
+              <label class="mb-1.5 block text-xs font-bold text-ink-700">Email *</label>
+              <input type="email" name="email" required class="w-full rounded-lg border border-ink-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand-500" placeholder="name@company.com" />
             </div>
-            <div class="grid grid-cols-2 gap-3 pt-2">
-              <button type="submit" class="px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md shadow-md transition-all">Send Inquiry</button>
-              <a href="https://wa.me/8619912345678?text=Hi, I'm interested in Changan vehicles." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white border border-ink-300 hover:border-emerald-500 text-ink-900 text-sm font-semibold rounded-md transition-colors">
-                <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                WhatsApp Us
-              </a>
+            <div>
+              <label class="mb-1.5 block text-xs font-bold text-ink-700">WhatsApp</label>
+              <input name="whatsapp" class="w-full rounded-lg border border-ink-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand-500" placeholder="+86..." />
             </div>
-          </form>
-        </div>
+            <div>
+              <label class="mb-1.5 block text-xs font-bold text-ink-700">Target market *</label>
+              <input name="target_market" required class="w-full rounded-lg border border-ink-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand-500" placeholder="Country / region" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="mb-1.5 block text-xs font-bold text-ink-700">Model and quantity *</label>
+              <input name="model_interested" required class="w-full rounded-lg border border-ink-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand-500" placeholder="e.g. 5 units CS55 Plus + 2 units UNI-T" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="mb-1.5 block text-xs font-bold text-ink-700">Destination port and requirements</label>
+              <textarea name="message" rows="4" class="w-full resize-none rounded-lg border border-ink-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand-500" placeholder="Destination port, shipping term, color, trim, timeline..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class={`${primaryButton} w-full`}>Send Changan inquiry</button>
+          <div id="changan-inquiry-status" class="hidden text-center text-sm"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 CTA -->
+  <section class="bg-slate-950 px-4 py-10 text-white sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-white/10 bg-white/7 p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+      <div>
+        <div class="text-xs font-bold uppercase tracking-[0.22em] text-brand-500">Still comparing Changan?</div>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight">Send your market and we will build a launch mix.</h2>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="https://wa.me/8619912345678?text=Hi, I need a Changan launch mix." target="_blank" rel="noopener" class={darkButton}>Chat on WhatsApp</a>
+        <a href="/contact/quote/?brand=changan" class={primaryButton}>Request a quote</a>
+        <a href="/cars/" class={darkButton}>View inventory</a>
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const form = document.getElementById('changan-inquiry-form') as HTMLFormElement | null;
+  const status = document.getElementById('changan-inquiry-status') as HTMLDivElement | null;
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!status) return;
+
+    status.classList.remove('hidden', 'text-green-600', 'text-red-600', 'text-ink-500');
+    status.classList.add('text-ink-500');
+    status.textContent = 'Sending...';
+
+    try {
+      const response = await fetch('/api/inquiry', { method: 'POST', body: new FormData(form) });
+      const data = await response.json();
+
+      status.classList.remove('text-ink-500');
+      if (response.ok) {
+        status.classList.add('text-green-600');
+        status.textContent = data.message ?? 'Thank you. Our team will reply within 24 hours.';
+        form.reset();
+      } else {
+        status.classList.add('text-red-600');
+        status.textContent = data.error ?? 'Something went wrong. Please try again.';
+      }
+    } catch {
+      status.classList.remove('text-ink-500');
+      status.classList.add('text-red-600');
+      status.textContent = 'Network error. Please try again or contact us directly.';
+    }
+  });
+</script>
