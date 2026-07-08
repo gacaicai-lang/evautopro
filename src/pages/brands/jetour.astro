@@ -10,7 +10,7 @@ const brand = {
   cn: '捷途',
   slug: 'jetour',
   tagline: 'Adventure SUV Specialist of Chery Group',
-  hero_image: '/images/about-team.svg',
+  hero_image: '/images/faq-sourcing.webp',
   logo: '/images/brand-jetour.svg',
   authorized_since: 2021,
   founded: 2018,
@@ -60,10 +60,10 @@ const advantages = [
 ];
 
 const markets = [
-  { code: 'RU', name: 'Russia', stat: '#1 Chinese ICE brand', img: '/images/market-ru.svg' },
-  { code: 'KZ', name: 'Kazakhstan', stat: '12,000+ units / year', img: '/images/market-kz.svg' },
-  { code: 'AE', name: 'UAE', stat: 'Top 5 imported Chinese', img: '/images/market-ae.svg' },
-  { code: 'EG', name: 'Egypt', stat: 'CKD assembly partner', img: '/images/market-eg.svg' },
+  { code: 'RU', name: 'Russia', stat: '#1 Chinese ICE brand', img: '/images/vehicles/evautopro-jetour-t2-01.webp' },
+  { code: 'KZ', name: 'Kazakhstan', stat: '12,000+ units / year', img: '/images/vehicles/evautopro-jetour-x70plus-01.webp' },
+  { code: 'AE', name: 'UAE', stat: 'Top 5 imported Chinese', img: '/images/vehicles/evautopro-geely-coolray-01.webp' },
+  { code: 'EG', name: 'Egypt', stat: 'CKD assembly partner', img: '/images/vehicles/evautopro-changan-cs55-plus-01.webp' },
 ];
 
 const cases = [
@@ -188,7 +188,7 @@ const brandFaqs = [
           <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
              class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
             <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src={['jetour-t2','jetour-dasheng','jetour-x70plus'].includes(m.slug) || m.slug === 'jetour-x70-plus' ? `/images/vehicles/evautopro-${m.slug.replace('x70-plus','x70plus')}-01.webp` : `/images/car-${m.slug}.svg`} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+              <img src={['jetour-t2','jetour-dasheng','jetour-x70plus'].includes(m.slug) || m.slug === 'jetour-x70-plus' ? `/images/vehicles/evautopro-${m.slug.replace('x70-plus','x70plus')}-01.webp` : '/images/vehicles/evautopro-jetour-t2-other-01.webp'} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
@@ -334,7 +334,7 @@ const brandFaqs = [
   {/* ============ 11. DARK CTA ============ */}
   <section class="py-24 lg:py-32 bg-ink-900 relative overflow-hidden">
     <div class="absolute inset-0 opacity-10">
-      <img src="/images/hero-port-loading.svg" alt="" class="w-full h-full object-cover" />
+      <img src="/images/faq-logistics.webp" alt="" class="w-full h-full object-cover" />
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">Import Jetour from China</h2>
@@ -345,7 +345,7 @@ const brandFaqs = [
         <a href="/contact/quote/?brand=jetour" class="inline-flex items-center px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">
           Request a Quote
         </a>
-        <a href="https://wa.me/8613800000000?text=Jetour%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
+        <a href="https://wa.me/8615964467914?text=Jetour%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
           💬 WhatsApp Cai
         </a>
         <a href="/contact/quote/?brand=jetour" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">

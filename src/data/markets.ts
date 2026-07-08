@@ -29,7 +29,7 @@ export const markets: Record<string, Market> = {
   russia: {
     name: 'Russia', cn: '俄罗斯', code: 'RU', slug: 'russia', flag: '🇷🇺',
     tagline: 'EAC Certified · Block Train via Khorgos · Russian-speaking ops',
-    hero_image: '/images/market-ru.svg',
+    hero_image: '/images/vehicles/evautopro-jetour-t2-01.webp',
     hasExistingClients: true,
     stats: [
       { num: '500K+', label: 'China cars imported 2025', sub: 'Total market' },
@@ -86,7 +86,7 @@ export const markets: Record<string, Market> = {
   uae: {
     name: 'UAE', cn: '阿联酋', code: 'AE', slug: 'uae', flag: '🇦🇪',
     tagline: 'GCC + ESMA Certified · Jebel Ali RoRo · Premium Chinese Brands Hub',
-    hero_image: '/images/market-ae.svg',
+    hero_image: '/images/vehicles/evautopro-geely-coolray-01.webp',
     hasExistingClients: false,
     stats: [
       { num: '180K+', label: 'China cars imported 2025', sub: 'Total UAE market' },
@@ -146,7 +146,7 @@ export const markets: Record<string, Market> = {
   kazakhstan: {
     name: 'Kazakhstan', cn: '哈萨克斯坦', code: 'KZ', slug: 'kazakhstan', flag: '🇰🇿',
     tagline: 'EAC Certified · Direct Khorgos Border · CIS Trade Specialist',
-    hero_image: '/images/market-kz.svg',
+    hero_image: '/images/vehicles/evautopro-jetour-x70plus-01.webp',
     hasExistingClients: false,
     stats: [
       { num: '120K+', label: 'China cars imported 2025', sub: 'Total KZ market' },
@@ -203,7 +203,7 @@ export const markets: Record<string, Market> = {
   uzbekistan: {
     name: 'Uzbekistan', cn: '乌兹别克斯坦', code: 'UZ', slug: 'uzbekistan', flag: '🇺🇿',
     tagline: 'Block Train to Tashkent · Fast-Growing Central Asia Market',
-    hero_image: '/images/usecase-electric-suv.svg',
+    hero_image: '/images/vehicles/evautopro-deepal-s05-01.webp',
     hasExistingClients: false,
     stats: [
       { num: '60K+', label: 'China cars imported 2025', sub: 'Fast-growing market' },
@@ -259,7 +259,7 @@ export const markets: Record<string, Market> = {
   'saudi-arabia': {
     name: 'Saudi Arabia', cn: '沙特阿拉伯', code: 'SA', slug: 'saudi-arabia', flag: '🇸🇦',
     tagline: 'GCC + SASO Certified · Jeddah RoRo · Largest Gulf Market',
-    hero_image: '/images/usecase-pickup.svg',
+    hero_image: '/images/faq-sourcing.webp',
     hasExistingClients: false,
     stats: [
       { num: '300K+', label: 'China cars imported 2025', sub: 'Largest Gulf market' },
@@ -319,7 +319,7 @@ export const markets: Record<string, Market> = {
   egypt: {
     name: 'Egypt', cn: '埃及', code: 'EG', slug: 'egypt', flag: '🇪🇬',
     tagline: 'Port Said + CKD Assembly Hub · Africa Gateway',
-    hero_image: '/images/market-eg.svg',
+    hero_image: '/images/vehicles/evautopro-changan-cs55-plus-01.webp',
     hasExistingClients: false,
     stats: [
       { num: '80K+', label: 'China cars imported 2025', sub: 'Egypt market' },
@@ -376,7 +376,7 @@ export const markets: Record<string, Market> = {
   brazil: {
     name: 'Brazil', cn: '巴西', code: 'BR', slug: 'brazil', flag: '🇧🇷',
     tagline: 'INMETRO Certified · Santos Port · Largest LATAM Market',
-    hero_image: '/images/usecase-phev-hybrid.svg',
+    hero_image: '/images/vehicles/evautopro-jetour-t2-02.webp',
     hasExistingClients: false,
     stats: [
       { num: '40K+', label: 'China cars imported 2025', sub: 'Growing fast' },
@@ -433,7 +433,7 @@ export const markets: Record<string, Market> = {
   mexico: {
     name: 'Mexico', cn: '墨西哥', code: 'MX', slug: 'mexico', flag: '🇲🇽',
     tagline: 'NOM Certified · Manzanillo RoRo · USMCA Trade Zone',
-    hero_image: '/images/usecase-electric-suv.svg',
+    hero_image: '/images/vehicles/evautopro-deepal-s05-01.webp',
     hasExistingClients: false,
     stats: [
       { num: '55K+', label: 'China cars imported 2025', sub: 'Mexico market' },
