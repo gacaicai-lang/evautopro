@@ -79,7 +79,7 @@ const sortedBrands = [...brands].sort((a, b) => (b.authorized ? 1 : 0) - (a.auth
       <!-- Brand grid -->
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {sortedBrands.map(b => (
-          <a href={`/brands/${b.slug}/`}
+          <a href={b.authorized ? `/brands/${b.slug}/` : `/contact/quote/?brand=${encodeURIComponent(b.name)}`}
              class="group relative block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-5 text-center transition-all">
             {b.authorized && (
               <span class="absolute top-2 right-2 px-2 py-0.5 bg-brand-500 text-white text-[10px] font-bold rounded-full">

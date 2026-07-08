@@ -115,7 +115,7 @@ const realImageSlugs = ['geely-atlas', 'geely-coolray', 'geely-emgrand', 'geely-
           const carData = cars[m.slug];
           if (!carData) return null;
           const img = realImageSlugs.includes(m.slug)
-            ? `/images/真图/laundered/evautopro-${m.slug}-01.webp`
+            ? `/images/vehicles/evautopro-${m.slug}-01.webp`
             : `/images/car-${m.slug}.svg`;
           return (
             <a href={`/cars/${m.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">

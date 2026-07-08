@@ -93,7 +93,7 @@ If you're entering Chinese vehicle import — now is the time. Contact EV Auto P
     categoryLabel: 'New Product News',
     title: 'Changan UNI-T vs Jetour T2: Which Coupé SUV for Export?',
     excerpt: 'Both models target the global compact-mid SUV segment but with distinct positioning. Detailed export buyer comparison.',
-    hero: '/images/真图/laundered/evautopro-jetour-t2-01.webp',
+    hero: '/images/vehicles/evautopro-jetour-t2-01.webp',
     date: '2026-05-12',
     readMin: 6,
     body: `## Quick Verdict
@@ -165,7 +165,7 @@ EV Auto Pro is authorized exporter for both Changan and Jetour. We can supply mi
     categoryLabel: 'Buyer Guide',
     title: 'Top 7 Chinese Off-Road SUVs for Russia in 2026',
     excerpt: 'These models offer robust performance for diverse terrains and comfortable interiors. Ideal for Russian dealer inventory 2026.',
-    hero: '/images/真图/laundered/evautopro-geely-atlas-01.webp',
+    hero: '/images/vehicles/evautopro-geely-atlas-01.webp',
     date: '2026-05-10',
     readMin: 10,
     body: `## Why Russia Loves Chinese SUVs in 2026
@@ -259,7 +259,7 @@ EV Auto Pro is authorized exporter for all 6 brands listed (Changan / Geely / De
     slug: 'geely-coolray-export-deep-dive', category: 'guide', categoryLabel: 'Buyer Guide',
     title: 'Geely Coolray Export Deep Dive: UAE, KZ, BR Markets',
     excerpt: 'Complete buyer guide for Geely Coolray RHD and LHD variants across UAE, Kazakhstan, and Brazil markets.',
-    hero: '/images/真图/laundered/evautopro-geely-coolray-01.webp', date: '2026-05-08', readMin: 7,
+    hero: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-05-08', readMin: 7,
     body: `## Geely Coolray Overview
 
 Geely Coolray (also known as Binyue 缤越 domestically) is built on the CMA platform jointly developed with Volvo Cars. 1.5T turbo + 7-speed DCT. FOB Shanghai $15,200.
@@ -332,7 +332,7 @@ EV Auto Pro holds Changan dealer MoU since 2018. Factory invoice for every unit.
     slug: 'jetour-t2-vs-geely-coolray-africa', category: 'product', categoryLabel: 'New Product News',
     title: 'Jetour T2 vs Geely Coolray: Which Small SUV Fits Africa Better?',
     excerpt: 'Africa SUV buyers face a choice — Jetour T2 7-seater PHEV adventure or Geely Coolray compact CMA platform. Detailed comparison.',
-    hero: '/images/真图/laundered/evautopro-jetour-t2-01.webp', date: '2026-05-12', readMin: 5,
+    hero: '/images/vehicles/evautopro-jetour-t2-01.webp', date: '2026-05-12', readMin: 5,
     body: `## Africa SUV Market Context
 
 Africa's SUV market grows 8-12% annually. Two segments dominate Chinese exports:
@@ -468,7 +468,7 @@ UNI-T leads volume. UNI-Z gains traction in younger urban segments (Saudi / UAE 
     slug: 'how-to-choose-jetour-lineup', category: 'guide', categoryLabel: 'Buyer Guide',
     title: "How to Choose a Jetour Car: Complete Guide to Jetour's Vehicle Lineup",
     excerpt: "Jetour focuses exclusively on SUVs and adventure-styled family vehicles. Complete guide to choosing between T2, X70 Plus, Dasheng.",
-    hero: '/images/真图/laundered/evautopro-jetour-dasheng-01.webp', date: '2026-05-08', readMin: 7,
+    hero: '/images/vehicles/evautopro-jetour-dasheng-01.webp', date: '2026-05-08', readMin: 7,
     body: `## Jetour Brand Position
 
 Chery Group's SUV specialist sub-brand. Launched 2018. Focus 100% on SUVs and 7-seater adventure vehicles. No sedans.
@@ -701,7 +701,7 @@ We have not yet established Ghana dealer network. **Open to first-mover Ghana pa
     slug: 'mg-zs-vs-geely-coolray-africa', category: 'product', categoryLabel: 'New Product News',
     title: 'MG ZS vs Geely Coolray: Which Small SUV Fits Africa Better?',
     excerpt: 'Two top compact SUV options from China for African markets — MG ZS vs Geely Coolray. Detailed comparison.',
-    hero: '/images/真图/laundered/evautopro-geely-coolray-01.webp', date: '2026-05-12', readMin: 5,
+    hero: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-05-12', readMin: 5,
     body: `## Two China Compact SUV Heavyweights
 
 MG ZS (SAIC Motor) and Geely Coolray (Geely Holding) are top-selling Chinese compact SUVs globally. Both target affordable family + young buyer segments.

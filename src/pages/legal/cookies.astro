@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const updated = 'July 8, 2026';
+---
+
+<BaseLayout
+  title="Cookie Policy"
+  description="How evautopro.com uses cookies and similar technologies."
+>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+    <h1 class="text-3xl lg:text-4xl font-bold text-ink-900 tracking-tight mb-2">Cookie Policy</h1>
+    <p class="text-sm text-ink-500 mb-10">Last updated: {updated}</p>
+
+    <div class="space-y-8 text-sm leading-relaxed text-ink-700">
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">1. What Cookies Are</h2>
+        <p>
+          Cookies are small text files stored on your device by your browser. They help websites
+          function and can be used to measure how a site is used.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">2. Cookies We Use</h2>
+        <p class="mb-2">
+          evautopro.com is a static informational website and sets no cookies of its own for tracking
+          or advertising. Cookies you may encounter come from:
+        </p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>
+            <strong>Hosting and security</strong> — our hosting and content delivery provider
+            (Cloudflare) may set technical cookies needed for security and performance.
+          </li>
+          <li>
+            <strong>Embedded services</strong> — fonts are loaded from Google Fonts, and links to
+            WhatsApp open the WhatsApp service, each governed by that provider's own policies.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">3. Managing Cookies</h2>
+        <p>
+          You can delete or block cookies in your browser settings at any time. Blocking technical
+          cookies may affect how some parts of the site work.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">4. Contact</h2>
+        <p>
+          Questions about this policy:
+          <a href="mailto:cai@evautopro.com" class="text-brand-500 hover:underline">cai@evautopro.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

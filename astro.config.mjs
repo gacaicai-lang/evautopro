@@ -9,19 +9,8 @@ export default defineConfig({
   site: 'https://evautopro.com',
   trailingSlash: 'always',
   build: { format: 'directory' },
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'ru', 'ar', 'es'],
-    routing: { prefixDefaultLocale: false },
-    fallback: { ru: 'en', ar: 'en', es: 'en' },
-  },
   integrations: [
     tailwind({ applyBaseStyles: false }),
-    sitemap({
-      i18n: {
-        defaultLocale: 'en',
-        locales: { en: 'en-US', ru: 'ru-RU', ar: 'ar-AE', es: 'es-MX' },
-      },
-    }),
+    sitemap(),
   ],
 });

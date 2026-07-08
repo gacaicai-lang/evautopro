@@ -19,18 +19,19 @@ const heroStats = [
   { num: '24/7',  label: 'Export Support',   icon: 'headset' },
 ];
 
-// 10 partner brand logos (BYD/Geely/AITO/Zeekr/XPeng/NIO/Li Auto/Chery/Deepal/Leapmotor)
+// 10 partner brand logos — dedicated page for the brands that have one,
+// the full brand directory for the rest
 const partnerBrands = [
-  { slug: 'byd',       name: 'BYD',       href: '/brands/byd/' },
+  { slug: 'byd',       name: 'BYD',       href: '/brands/' },
   { slug: 'geely',     name: 'Geely',     href: '/brands/geely/' },
-  { slug: 'aito',      name: 'AITO',      href: '/brands/aito/' },
-  { slug: 'zeekr',     name: 'Zeekr',     href: '/brands/zeekr/' },
-  { slug: 'xpeng',     name: 'XPeng',     href: '/brands/xpeng/' },
-  { slug: 'nio',       name: 'NIO',       href: '/brands/nio/' },
-  { slug: 'li-auto',   name: 'Li Auto',   href: '/brands/li-auto/' },
-  { slug: 'chery',     name: 'Chery',     href: '/brands/chery/' },
+  { slug: 'aito',      name: 'AITO',      href: '/brands/' },
+  { slug: 'zeekr',     name: 'Zeekr',     href: '/brands/' },
+  { slug: 'xpeng',     name: 'XPeng',     href: '/brands/' },
+  { slug: 'nio',       name: 'NIO',       href: '/brands/' },
+  { slug: 'li-auto',   name: 'Li Auto',   href: '/brands/' },
+  { slug: 'chery',     name: 'Chery',     href: '/brands/' },
   { slug: 'deepal',    name: 'Deepal',    href: '/brands/deepal/' },
-  { slug: 'leapmotor', name: 'Leapmotor', href: '/brands/leapmotor/' },
+  { slug: 'leapmotor', name: 'Leapmotor', href: '/brands/' },
 ];
 
 // 6 featured vehicles — pulled from cars.ts to guarantee detail pages exist
@@ -55,16 +56,17 @@ const featuredVehicles = Object.values(carsData)
     hero_image: c.hero_image,
   }));
 
-// Vehicle types for "By Vehicle Type" column
+// Vehicle types for "By Vehicle Type" column — collection page where one
+// exists, otherwise the filtered inventory
 const vehicleTypes = [
-  { slug: 'chinese-electric-suv',        label: 'SUV',        icon: 'suv' },
-  { slug: 'chinese-sedan-export',        label: 'Sedan',      icon: 'sedan' },
-  { slug: 'chinese-mpv-export',          label: 'MPV',        icon: 'mpv' },
-  { slug: 'chinese-hatchback-export',    label: 'Hatchback',  icon: 'sedan' },
-  { slug: 'chinese-plug-in-hybrid-cars', label: 'PHEV',       icon: 'sedan' },
-  { slug: 'chinese-electric-suv',        label: 'EV',         icon: 'suv' },
-  { slug: 'chinese-commercial-vehicle',  label: 'Commercial', icon: 'truck' },
-  { slug: 'chinese-pickup-trucks',       label: 'Pickup',     icon: 'pickup' },
+  { href: '/collections/chinese-electric-suv/',        label: 'SUV',        icon: 'suv' },
+  { href: '/cars/?body=Sedan',                         label: 'Sedan',      icon: 'sedan' },
+  { href: '/cars/?body=MPV',                           label: 'MPV',        icon: 'mpv' },
+  { href: '/cars/?body=Hatchback',                     label: 'Hatchback',  icon: 'sedan' },
+  { href: '/collections/chinese-plug-in-hybrid-cars/', label: 'PHEV',       icon: 'sedan' },
+  { href: '/cars/?fuel=BEV',                           label: 'EV',         icon: 'suv' },
+  { href: '/cars/',                                    label: 'Commercial', icon: 'truck' },
+  { href: '/collections/chinese-pickup-trucks/',       label: 'Pickup',     icon: 'pickup' },
 ];
 
 const marketRegions = [
@@ -292,7 +294,7 @@ const ICONS: Record<string, string> = {
           <p class="text-xs text-ink-500 mb-5">From city EVs to commercial fleets.</p>
           <div class="grid grid-cols-4 gap-3 mb-5">
             {vehicleTypes.map(t => (
-              <a href={`/collections/${t.slug}/`} class="group flex flex-col items-center gap-1.5 py-2">
+              <a href={t.href} class="group flex flex-col items-center gap-1.5 py-2">
                 <div class="w-10 h-10 rounded-full bg-ink-50 group-hover:bg-brand-50 flex items-center justify-center transition-colors">
                   <svg class="w-4 h-4 text-ink-700 group-hover:text-brand-500" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d={ICONS[t.icon]}/>
@@ -302,7 +304,7 @@ const ICONS: Record<string, string> = {
               </a>
             ))}
           </div>
-          <a href="/collections/" class="text-xs font-semibold text-brand-500 hover:text-brand-600">View All Types →</a>
+          <a href="/cars/" class="text-xs font-semibold text-brand-500 hover:text-brand-600">View All Vehicles →</a>
         </div>
 
         {/* By Market */}
@@ -461,7 +463,8 @@ const ICONS: Record<string, string> = {
           <p class="text-xs text-ink-600 leading-relaxed mb-6">
             Tell us your requirements and we'll provide you with stock list, best prices and full export support.
           </p>
-          <form action="https://formspree.io/f/your-id" method="POST" class="space-y-3.5">
+          <form id="home-inquiry-form" class="space-y-3.5" novalidate>
+            <input type="text" name="honeypot" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true"/>
             <div class="grid sm:grid-cols-2 gap-3.5">
               <div>
                 <label class="block text-[11px] font-medium text-ink-700 mb-1.5">Your Name <span class="text-brand-500">*</span></label>
@@ -501,12 +504,40 @@ const ICONS: Record<string, string> = {
               <button type="submit" class="flex-1 px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors">
                 Send Inquiry Now
               </button>
-              <a href="https://wa.me/8619912345678" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 text-sm font-semibold rounded-lg transition-colors">
+              <a href="https://wa.me/8613800000000" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-6 py-3 bg-white border border-ink-300 hover:border-ink-500 text-ink-900 text-sm font-semibold rounded-lg transition-colors">
                 <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                 WhatsApp Us
               </a>
             </div>
+            <p id="home-inquiry-status" class="hidden text-sm pt-1" role="status"></p>
           </form>
+          <script>
+            const homeForm = document.getElementById('home-inquiry-form') as HTMLFormElement | null;
+            const homeStatus = document.getElementById('home-inquiry-status');
+            homeForm?.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              if (!homeStatus) return;
+              if (!homeForm.reportValidity()) return;
+              homeStatus.classList.remove('hidden', 'text-green-600', 'text-red-600');
+              homeStatus.classList.add('text-ink-500');
+              homeStatus.textContent = 'Sending…';
+              try {
+                const res = await fetch('/api/inquiry', { method: 'POST', body: new FormData(homeForm) });
+                const json = await res.json();
+                if (res.ok) {
+                  homeStatus.classList.add('text-green-600');
+                  homeStatus.textContent = '✓ ' + (json.message ?? 'Thank you! Our team will reply within 24 hours.');
+                  homeForm.reset();
+                } else {
+                  homeStatus.classList.add('text-red-600');
+                  homeStatus.textContent = '⚠ ' + (json.error ?? 'Something went wrong. Please try again.');
+                }
+              } catch {
+                homeStatus.classList.add('text-red-600');
+                homeStatus.textContent = '⚠ Network error. Please email us directly at cai@evautopro.com';
+              }
+            });
+          </script>
         </div>
       </div>
     </div>
