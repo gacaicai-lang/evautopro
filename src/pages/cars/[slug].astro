@@ -28,8 +28,25 @@ const buildDate = new Date().toISOString().slice(0, 10);
 
 // Container capacity from real vehicle length: 40HQ interior floor ≈ 12,032 mm,
 // ~150 mm handling gap per unit, floor loading (no racking).
+const CONTAINER_MM = 12032;
 const vehicleLength = parseInt(car.specs.dimensions.split('×')[0], 10);
-const unitsPerContainer = Math.max(1, Math.floor(12032 / (vehicleLength + 150)));
+const unitsPerContainer = Math.max(1, Math.floor(CONTAINER_MM / (vehicleLength + 150)));
+
+// Loading diagram geometry (side view, drawn to scale in a 640×150 viewBox)
+const DIAG = (() => {
+  const x0 = 36, innerW = 560, boxTop = 34, boxH = 78;
+  const pxPerMm = innerW / CONTAINER_MM;
+  const carW = vehicleLength * pxPerMm;
+  const gapW = 150 * pxPerMm;
+  const carH = 44;
+  const cars = Array.from({ length: unitsPerContainer }, (_, i) => ({
+    x: x0 + 6 + i * (carW + gapW),
+    y: boxTop + boxH - carH - 4,
+    w: carW,
+    h: carH,
+  }));
+  return { x0, innerW, boxTop, boxH, carW, cars, carH };
+})();
 
 // RHD availability — stated in the per-car FAQs where confirmed
 const RHD: Record<string, string> = {
@@ -372,10 +389,10 @@ const waLink = (text: string) => `https://wa.me/8615964467914?text=${encodeURICo
                 WhatsApp Us
               </a>
             </div>
-            <a href={brochureUrl} download class="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-brand-500 hover:text-brand-600">
+            <button type="button" data-brochure-open class="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-brand-500 hover:text-brand-600 cursor-pointer">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.download}/></svg>
               Download {car.model} brochure (PDF, specs + export pricing)
-            </a>
+            </button>
             <p class="text-[11px] text-ink-500 mt-2">✓ Reply within 24 hours &nbsp;·&nbsp; ✓ Video walkaround of your actual units before shipment</p>
           </div>
 
@@ -675,6 +692,60 @@ const waLink = (text: string) => `https://wa.me/8615964467914?text=${encodeURICo
             ))}
           </div>
         </div>
+
+        {/* Container loading diagram — drawn to scale from real vehicle length */}
+        <div class="mt-6 pt-5 border-t border-ink-100">
+          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+            <h3 class="text-sm font-bold text-ink-900">40HQ Container Loading — {car.brand} {car.model}</h3>
+            <span class="text-[11px] text-ink-500">Drawn to scale · vehicle {(vehicleLength / 1000).toFixed(2)} m · container interior 12.03 m</span>
+          </div>
+          <svg viewBox="0 0 640 150" class="w-full max-w-3xl" role="img" aria-label={`${unitsPerContainer} ${car.model} units floor-loaded in a 40HQ container, drawn to scale`}>
+            {/* dimension arrow: container interior */}
+            <line x1={DIAG.x0} y1="20" x2={DIAG.x0 + DIAG.innerW} y2="20" stroke="#a1a1aa" stroke-width="1"/>
+            <line x1={DIAG.x0} y1="14" x2={DIAG.x0} y2="26" stroke="#a1a1aa" stroke-width="1"/>
+            <line x1={DIAG.x0 + DIAG.innerW} y1="14" x2={DIAG.x0 + DIAG.innerW} y2="26" stroke="#a1a1aa" stroke-width="1"/>
+            <text x={DIAG.x0 + DIAG.innerW / 2} y="16" text-anchor="middle" font-size="10" fill="#71717a" font-family="sans-serif">12.03 m usable interior</text>
+
+            {/* container body */}
+            <rect x={DIAG.x0} y={DIAG.boxTop} width={DIAG.innerW} height={DIAG.boxH} fill="#fafafa" stroke="#18181b" stroke-width="2"/>
+            {Array.from({ length: 13 }, (_, i) => (
+              <line x1={DIAG.x0 + (i + 1) * (DIAG.innerW / 14)} y1={DIAG.boxTop} x2={DIAG.x0 + (i + 1) * (DIAG.innerW / 14)} y2={DIAG.boxTop + 6} stroke="#e4e4e7" stroke-width="1"/>
+            ))}
+            {/* container door (right end) */}
+            <rect x={DIAG.x0 + DIAG.innerW} y={DIAG.boxTop} width="7" height={DIAG.boxH} fill="#18181b"/>
+
+            {/* vehicles, to scale */}
+            {DIAG.cars.map(c => (
+              <g>
+                <path d={`M ${c.x + c.w * 0.02} ${c.y + c.h * 0.62}
+                          Q ${c.x} ${c.y + c.h * 0.45} ${c.x + c.w * 0.08} ${c.y + c.h * 0.42}
+                          L ${c.x + c.w * 0.22} ${c.y + c.h * 0.38}
+                          Q ${c.x + c.w * 0.32} ${c.y + c.h * 0.05} ${c.x + c.w * 0.48} ${c.y + c.h * 0.04}
+                          L ${c.x + c.w * 0.72} ${c.y + c.h * 0.06}
+                          Q ${c.x + c.w * 0.86} ${c.y + c.h * 0.12} ${c.x + c.w * 0.92} ${c.y + c.h * 0.40}
+                          Q ${c.x + c.w} ${c.y + c.h * 0.46} ${c.x + c.w * 0.99} ${c.y + c.h * 0.62}
+                          L ${c.x + c.w * 0.97} ${c.y + c.h * 0.78}
+                          L ${c.x + c.w * 0.03} ${c.y + c.h * 0.78}
+                          Z`}
+                      fill="#e53e2f" opacity="0.85"/>
+                <circle cx={c.x + c.w * 0.22} cy={c.y + c.h * 0.82} r={c.h * 0.16} fill="#18181b"/>
+                <circle cx={c.x + c.w * 0.78} cy={c.y + c.h * 0.82} r={c.h * 0.16} fill="#18181b"/>
+                <circle cx={c.x + c.w * 0.22} cy={c.y + c.h * 0.82} r={c.h * 0.07} fill="#a1a1aa"/>
+                <circle cx={c.x + c.w * 0.78} cy={c.y + c.h * 0.82} r={c.h * 0.07} fill="#a1a1aa"/>
+              </g>
+            ))}
+
+            {/* dimension: one vehicle */}
+            <line x1={DIAG.cars[0].x} y1="136" x2={DIAG.cars[0].x + DIAG.carW} y2="136" stroke="#e53e2f" stroke-width="1"/>
+            <line x1={DIAG.cars[0].x} y1="130" x2={DIAG.cars[0].x} y2="142" stroke="#e53e2f" stroke-width="1"/>
+            <line x1={DIAG.cars[0].x + DIAG.carW} y1="130" x2={DIAG.cars[0].x + DIAG.carW} y2="142" stroke="#e53e2f" stroke-width="1"/>
+            <text x={DIAG.cars[0].x + DIAG.carW / 2} y="132" text-anchor="middle" font-size="10" fill="#e53e2f" font-weight="bold" font-family="sans-serif">{(vehicleLength / 1000).toFixed(2)} m</text>
+          </svg>
+          <p class="text-[11px] text-ink-500 mt-2">
+            <strong class="text-ink-700">{unitsPerContainer} units</strong> floor-loaded per 40HQ with lashing and protection —
+            for 5+ units RoRo is usually the more economical option. Mixed-model containers welcome.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -870,6 +941,66 @@ const waLink = (text: string) => `https://wa.me/8615964467914?text=${encodeURICo
 
   </div>
 
+  {/* Brochure lead-capture modal */}
+  <div id="brochure-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div data-brochure-close class="absolute inset-0 bg-ink-900/60"></div>
+    <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 lg:p-7">
+      <button type="button" data-brochure-close aria-label="Close" class="absolute top-4 right-4 text-ink-400 hover:text-ink-900">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div id="brochure-step-form">
+        <div class="flex items-center gap-3 mb-1">
+          <div class="w-10 h-10 rounded-md bg-brand-50 flex items-center justify-center text-brand-500 flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.download}/></svg>
+          </div>
+          <h3 class="text-base font-bold text-ink-900">Get the {car.model} brochure</h3>
+        </div>
+        <p class="text-xs text-ink-500 mb-5">Specs, equipment and FOB / CIF export pricing in one PDF. Tell us where to follow up and it's yours.</p>
+        <form id="brochure-form" class="space-y-3" novalidate>
+          <input type="text" name="honeypot" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true"/>
+          <input type="hidden" name="model_interested" value={fullTitle}/>
+          <input type="hidden" name="source" value="brochure_download"/>
+          <div>
+            <label class="block text-[11px] font-medium text-ink-700 mb-1">Your Name <span class="text-brand-500">*</span></label>
+            <input type="text" name="name" required placeholder="Enter your name"
+                   class="w-full px-3 py-2 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
+          </div>
+          <div>
+            <label class="block text-[11px] font-medium text-ink-700 mb-1">Email / WhatsApp <span class="text-brand-500">*</span></label>
+            <input type="text" name="contact" required placeholder="Enter email or WhatsApp"
+                   class="w-full px-3 py-2 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm placeholder:text-ink-400"/>
+          </div>
+          <div>
+            <label class="block text-[11px] font-medium text-ink-700 mb-1">Destination Country <span class="text-brand-500">*</span></label>
+            <select name="country" required class="w-full px-3 py-2 border border-ink-200 focus:border-brand-500 focus:outline-none rounded-md text-sm bg-white text-ink-700">
+              <option value="">Select destination</option>
+              {car.supported_markets.map(m => <option value={m}>{m}</option>)}
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full px-4 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md transition-colors">
+            Get Brochure
+          </button>
+          <p id="brochure-status" class="hidden text-xs text-center" role="status"></p>
+          <p class="text-[10px] text-ink-500 text-center">We respect your privacy. Your information will not be shared.</p>
+        </form>
+      </div>
+
+      <div id="brochure-step-done" class="hidden text-center py-4">
+        <div class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 mx-auto mb-3">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-base font-bold text-ink-900 mb-1.5">Your brochure is ready</h3>
+        <p class="text-xs text-ink-500 mb-5">Our team will follow up with current stock and a quote for your market.</p>
+        <a href={brochureUrl} download class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={ICON.download}/></svg>
+          Download {car.model} Brochure (PDF)
+        </a>
+      </div>
+    </div>
+  </div>
+
   {/* Sticky mobile CTA bar */}
   <div class="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white border-t border-ink-200 px-4 py-2.5 flex items-center gap-3 shadow-[0_-4px_12px_rgba(0,0,0,0.06)]">
     <div class="flex-shrink-0">
@@ -883,6 +1014,45 @@ const waLink = (text: string) => `https://wa.me/8615964467914?text=${encodeURICo
   </div>
 
   <script>
+    // Brochure lead-capture modal — the PDF unlocks only after the form
+    // submits. If the inquiry API is unreachable the download still unlocks
+    // (never dead-end a buyer), but the happy path records the lead first.
+    const modal = document.getElementById('brochure-modal');
+    const stepForm = document.getElementById('brochure-step-form');
+    const stepDone = document.getElementById('brochure-step-done');
+    const brochureForm = document.getElementById('brochure-form') as HTMLFormElement | null;
+    const brochureStatus = document.getElementById('brochure-status');
+
+    document.querySelectorAll('[data-brochure-open]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        modal?.classList.remove('hidden');
+        stepForm?.classList.remove('hidden');
+        stepDone?.classList.add('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    const closeModal = () => {
+      modal?.classList.add('hidden');
+      document.body.style.overflow = '';
+    };
+    document.querySelectorAll('[data-brochure-close]').forEach(el => el.addEventListener('click', closeModal));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    brochureForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!brochureForm.reportValidity()) return;
+      if (brochureStatus) {
+        brochureStatus.classList.remove('hidden', 'text-red-600');
+        brochureStatus.classList.add('text-ink-500');
+        brochureStatus.textContent = 'Sending…';
+      }
+      try {
+        await fetch('/api/inquiry', { method: 'POST', body: new FormData(brochureForm) });
+      } catch { /* still unlock — never dead-end a buyer */ }
+      stepForm?.classList.add('hidden');
+      stepDone?.classList.remove('hidden');
+    });
+
     // Hero thumbnail switcher
     const mainImg = document.getElementById('hero-main-img') as HTMLImageElement | null;
     const thumbs = document.querySelectorAll<HTMLButtonElement>('.hero-thumb');
