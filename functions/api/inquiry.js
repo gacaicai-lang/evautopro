@@ -24,8 +24,12 @@ export async function onRequestPost(context) {
   if (data.honeypot) {
     return new Response(JSON.stringify({ ok: true }), { status: 200 });
   }
-  if (!data.email || !data.email.includes('@')) {
-    return new Response(JSON.stringify({ error: 'Valid email required' }), {
+  // Homepage form collects a single "contact" field (WhatsApp or email);
+  // quote/contact forms send a dedicated email field.
+  const hasEmail = data.email && data.email.includes('@');
+  const hasContact = data.contact && String(data.contact).trim().length >= 5;
+  if (!hasEmail && !hasContact) {
+    return new Response(JSON.stringify({ error: 'Valid email or WhatsApp contact required' }), {
       status: 400, headers: { 'content-type': 'application/json' },
     });
   }

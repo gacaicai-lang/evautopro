@@ -11,13 +11,6 @@ const items = [
   { label: 'News', href: `${prefix}/news/` },
   { label: 'Contact', href: `${prefix}/contact/` },
 ];
-
-const langs = [
-  { code: 'en', label: 'EN' },
-  { code: 'ru', label: 'РУ' },
-  { code: 'ar', label: 'AR' },
-  { code: 'es', label: 'ES' },
-];
 ---
 
 <header class="sticky top-0 z-50 bg-white border-b border-ink-200">
@@ -45,21 +38,6 @@ const langs = [
 
       <!-- Right cluster -->
       <div class="flex items-center gap-3">
-        <!-- Language switcher -->
-        <div class="hidden md:flex items-center gap-1 text-xs">
-          {langs.map(l => (
-            <a
-              href={l.code === 'en' ? '/' : `/${l.code}/`}
-              class:list={[
-                'px-2 py-1 rounded',
-                l.code === lang ? 'bg-ink-900 text-white' : 'text-ink-500 hover:text-ink-900',
-              ]}
-            >
-              {l.label}
-            </a>
-          ))}
-        </div>
-
         <!-- CTA -->
         <a
           href={`${prefix}/contact/quote/`}

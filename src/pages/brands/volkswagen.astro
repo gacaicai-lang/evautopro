@@ -37,10 +37,10 @@ const brandStory = `Volkswagen China (大众汽车), via two state-owned joint v
 EV Auto Pro is an authorized Volkswagen China exporter since 2020. We supply ID series EVs and select Tiguan / Lamando / Magotan ICE models for international dealers seeking German-engineered Chinese-built vehicles at competitive FOB pricing. Every unit traceable to factory invoice.`;
 
 const models = [
-  { slug: 'volkswagen-id-3', name: 'ID.3', body: 'Compact BEV Hatch', fuel: 'BEV', price_min: 24500, stock: 8, ready: true },
+  { slug: 'volkswagen-id-3', name: 'ID.3', body: 'Compact BEV Hatch', fuel: 'BEV', price_min: 24500, stock: 8, ready: false },
   { slug: 'volkswagen-id-4-x', name: 'ID.4 X', body: 'Compact BEV SUV', fuel: 'BEV', price_min: 28800, stock: 6, ready: false },
   { slug: 'volkswagen-id-6-x', name: 'ID.6 X', body: '6-Seater BEV SUV', fuel: 'BEV', price_min: 38500, stock: 4, ready: false },
-  { slug: 'volkswagen-id-7', name: 'ID.7', body: 'Premium BEV Sedan', fuel: 'BEV', price_min: 35200, stock: 6, ready: true },
+  { slug: 'volkswagen-id-7', name: 'ID.7', body: 'Premium BEV Sedan', fuel: 'BEV', price_min: 35200, stock: 6, ready: false },
   { slug: 'volkswagen-tiguan-l', name: 'Tiguan L', body: 'Mid SUV', fuel: 'ICE', price_min: 22500, stock: 5, ready: false },
   { slug: 'volkswagen-lamando', name: 'Lamando', body: 'Compact Sedan', fuel: 'ICE', price_min: 18800, stock: 3, ready: false },
   { slug: 'volkswagen-magotan', name: 'Magotan', body: 'Mid Sedan', fuel: 'ICE', price_min: 24500, stock: 4, ready: false },
@@ -223,7 +223,7 @@ const brandFaqs = [
       </div>
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {subBrands.map(b => (
-          <a href={`/brands/${b.slug}/`} class="group flex items-start gap-5 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-2xl p-8 transition-all">
+          <a href={`/contact/quote/?brand=${encodeURIComponent(b.name)}`} class="group flex items-start gap-5 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-2xl p-8 transition-all">
             <div class="flex-shrink-0 w-20 h-20 rounded-xl bg-ink-100 p-3">
               <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="w-full h-full object-contain" />
             </div>
@@ -349,7 +349,7 @@ const brandFaqs = [
         <a href="https://wa.me/8613800000000?text=Volkswagen%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
           💬 WhatsApp Cai
         </a>
-        <a href="/contact/catalogue/?brand=volkswagen" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
+        <a href="/contact/quote/?brand=volkswagen" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
           📕 Catalogue PDF
         </a>
       </div>

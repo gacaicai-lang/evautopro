@@ -38,8 +38,8 @@ EV Auto Pro is an authorized Jetour exporter since 2021. We hold direct dealer M
 
 const models = [
   { slug: 'jetour-t2', name: 'T2', body: '7-Seater Adventure SUV', fuel: 'PHEV', price_min: 22500, stock: 30, ready: true },
-  { slug: 'jetour-x70-plus', name: 'X70 Plus', body: '7-Seater SUV', fuel: 'ICE', price_min: 18500, stock: 18, ready: true },
-  { slug: 'jetour-dasheng', name: 'Dasheng', body: 'Premium SUV', fuel: 'PHEV', price_min: 21800, stock: 14, ready: true },
+  { slug: 'jetour-x70-plus', name: 'X70 Plus', body: '7-Seater SUV', fuel: 'ICE', price_min: 18500, stock: 18, ready: false },
+  { slug: 'jetour-dasheng', name: 'Dasheng', body: 'Premium SUV', fuel: 'PHEV', price_min: 21800, stock: 14, ready: false },
   { slug: 'jetour-x90', name: 'X90', body: '7-Seater MPV', fuel: 'ICE', price_min: 19800, stock: 16, ready: false },
   { slug: 'jetour-x95', name: 'X95', body: 'Flagship SUV', fuel: 'ICE', price_min: 24500, stock: 10, ready: false },
   { slug: 'jetour-shanhai-t1', name: 'ShanHai T1', body: 'Off-road SUV', fuel: 'PHEV', price_min: 25800, stock: 12, ready: false },
@@ -188,7 +188,7 @@ const brandFaqs = [
           <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
              class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
             <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src={['jetour-t2','jetour-dasheng','jetour-x70plus'].includes(m.slug) || m.slug === 'jetour-x70-plus' ? `/images/真图/laundered/evautopro-${m.slug.replace('x70-plus','x70plus')}-01.webp` : `/images/car-${m.slug}.svg`} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+              <img src={['jetour-t2','jetour-dasheng','jetour-x70plus'].includes(m.slug) || m.slug === 'jetour-x70-plus' ? `/images/vehicles/evautopro-${m.slug.replace('x70-plus','x70plus')}-01.webp` : `/images/car-${m.slug}.svg`} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
@@ -222,7 +222,7 @@ const brandFaqs = [
       </div>
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {subBrands.map(b => (
-          <a href={`/brands/${b.slug}/`} class="group flex items-start gap-5 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-2xl p-8 transition-all">
+          <a href={`/contact/quote/?brand=${encodeURIComponent(b.name)}`} class="group flex items-start gap-5 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-2xl p-8 transition-all">
             <div class="flex-shrink-0 w-20 h-20 rounded-xl bg-ink-100 p-3">
               <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="w-full h-full object-contain" />
             </div>
@@ -348,7 +348,7 @@ const brandFaqs = [
         <a href="https://wa.me/8613800000000?text=Jetour%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
           💬 WhatsApp Cai
         </a>
-        <a href="/contact/catalogue/?brand=jetour" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
+        <a href="/contact/quote/?brand=jetour" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
           📕 Catalogue PDF
         </a>
       </div>

@@ -220,7 +220,7 @@ const brandFaqs = [
       </div>
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {subBrands.map(b => (
-          <a href={`/brands/${b.slug}/`} class="group flex items-start gap-5 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-2xl p-8 transition-all">
+          <a href={`/contact/quote/?brand=${encodeURIComponent(b.name)}`} class="group flex items-start gap-5 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-2xl p-8 transition-all">
             <div class="flex-shrink-0 w-20 h-20 rounded-xl bg-ink-100 p-3">
               <img src={`/images/brand-${b.slug}.svg`} alt={b.name} class="w-full h-full object-contain" />
             </div>
@@ -346,7 +346,7 @@ const brandFaqs = [
         <a href="https://wa.me/8613800000000?text=Qiyuan%20inquiry" class="inline-flex items-center px-8 py-4 bg-white hover:bg-ink-100 text-ink-900 font-semibold rounded-lg transition-colors">
           💬 WhatsApp Cai
         </a>
-        <a href="/contact/catalogue/?brand=qiyuan" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
+        <a href="/contact/quote/?brand=qiyuan" class="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-ink-900 font-semibold rounded-lg transition-colors">
           📕 Catalogue PDF
         </a>
       </div>

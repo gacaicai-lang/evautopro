@@ -104,7 +104,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </form>
 
       <p class="text-xs text-ink-500 mt-4 text-center">
-        Or contact us directly: <a href="mailto:cai@evautopro.com" class="text-brand-500">cai@evautopro.com</a> · WhatsApp <a href="https://wa.me/" class="text-brand-500">+86 XXX</a>
+        Or contact us directly: <a href="mailto:cai@evautopro.com" class="text-brand-500">cai@evautopro.com</a>
       </p>
     </div>
   </section>
@@ -113,6 +113,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <script>
   const form = document.getElementById('quote-form') as HTMLFormElement | null;
   const status = document.getElementById('quote-status') as HTMLDivElement | null;
+
+  // Prefill model/brand of interest when arriving from a brand card or model CTA
+  const params = new URLSearchParams(window.location.search);
+  const interested = params.get('model') ?? params.get('brand');
+  const modelInput = form?.elements.namedItem('model_interested') as HTMLInputElement | null;
+  if (interested && modelInput && !modelInput.value) modelInput.value = interested;
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();

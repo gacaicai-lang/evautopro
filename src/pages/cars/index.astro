@@ -49,16 +49,18 @@ const brands = [...new Set(cars.map(c => c.brand))].sort();
           <div>
             <h3 class="font-semibold text-sm text-ink-900 mb-3 uppercase tracking-wider">Body Type</h3>
             <ul class="space-y-1">
+              <li><a href="/cars/" class="car-filter text-sm text-ink-600 hover:text-brand-500" data-filter="body" data-value="">All</a></li>
               {bodyTypes.map(b => (
-                <li><a href={`/cars/?body=${b}`} class="text-sm text-ink-600 hover:text-brand-500">{b}</a></li>
+                <li><a href={`/cars/?body=${encodeURIComponent(b)}`} class="car-filter text-sm text-ink-600 hover:text-brand-500" data-filter="body" data-value={b}>{b}</a></li>
               ))}
             </ul>
           </div>
           <div>
             <h3 class="font-semibold text-sm text-ink-900 mb-3 uppercase tracking-wider">Fuel Type</h3>
             <ul class="space-y-1">
+              <li><a href="/cars/" class="car-filter text-sm text-ink-600 hover:text-brand-500" data-filter="fuel" data-value="">All</a></li>
               {fuelTypes.map(f => (
-                <li><a href={`/cars/?fuel=${f}`} class="text-sm text-ink-600 hover:text-brand-500">{f}</a></li>
+                <li><a href={`/cars/?fuel=${encodeURIComponent(f)}`} class="car-filter text-sm text-ink-600 hover:text-brand-500" data-filter="fuel" data-value={f}>{f}</a></li>
               ))}
             </ul>
           </div>
@@ -76,7 +78,7 @@ const brands = [...new Set(cars.map(c => c.brand))].sort();
         <div>
           <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {cars.map(c => (
-              <a href={`/cars/${c.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
+              <a href={`/cars/${c.slug}/`} data-body={c.body} data-fuel={c.fuel} class="car-card group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
                 <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
                   <img src={c.hero_image} alt={`${c.brand} ${c.name}`} class="w-full h-full object-cover" loading="lazy" />
                 </div>
@@ -108,4 +110,26 @@ const brands = [...new Set(cars.map(c => c.brand))].sort();
       </div>
     </div>
   </section>
+
+  <script>
+    // Filter cards from ?body= / ?fuel= without a full page model — cards carry
+    // data-body / data-fuel, sidebar links navigate then this re-applies on load.
+    const params = new URLSearchParams(window.location.search);
+    const active = {
+      body: params.get('body') ?? '',
+      fuel: params.get('fuel') ?? '',
+    };
+    document.querySelectorAll<HTMLElement>('.car-card').forEach(card => {
+      const show =
+        (!active.body || card.dataset.body === active.body) &&
+        (!active.fuel || card.dataset.fuel === active.fuel);
+      card.style.display = show ? '' : 'none';
+    });
+    document.querySelectorAll<HTMLElement>('.car-filter').forEach(link => {
+      const kind = link.dataset.filter as 'body' | 'fuel';
+      if (link.dataset.value === active[kind]) {
+        link.classList.add('text-brand-500', 'font-semibold');
+      }
+    });
+  </script>
 </BaseLayout>

@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const updated = 'July 8, 2026';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="How EV Auto Pro collects, uses and protects your personal information."
+>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+    <h1 class="text-3xl lg:text-4xl font-bold text-ink-900 tracking-tight mb-2">Privacy Policy</h1>
+    <p class="text-sm text-ink-500 mb-10">Last updated: {updated}</p>
+
+    <div class="space-y-8 text-sm leading-relaxed text-ink-700">
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">1. Who We Are</h2>
+        <p>
+          EV Auto Pro is operated by Shandong Wencai Import &amp; Export Co., Ltd. (山东稳彩进出口有限公司),
+          a vehicle export company registered in the People's Republic of China. This policy explains how we
+          handle personal information collected through evautopro.com.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">2. Information We Collect</h2>
+        <p class="mb-2">When you submit an inquiry or quote request, we collect the information you provide:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Name and company name</li>
+          <li>Email address and WhatsApp / phone number</li>
+          <li>Country or region and target market</li>
+          <li>Vehicle models, quantities and other requirements you describe</li>
+        </ul>
+        <p class="mt-2">
+          We also receive standard technical data with each form submission, such as your IP address,
+          approximate country and browser type, which we use for spam prevention.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">3. How We Use Your Information</h2>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>To respond to your inquiry and prepare quotations</li>
+          <li>To communicate with you about orders, shipping and documentation</li>
+          <li>To maintain internal records of business inquiries</li>
+        </ul>
+        <p class="mt-2">We do not sell your personal information to third parties.</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">4. Where Your Data Is Processed</h2>
+        <p>
+          Inquiry data is delivered to our team through our website hosting provider and business
+          communication tools, and may be processed on servers located outside your country, including
+          in China. We keep inquiry records only as long as needed for business communication and
+          legal record-keeping.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">5. Your Rights</h2>
+        <p>
+          You may request a copy of the personal information we hold about you, ask us to correct it,
+          or ask us to delete it. Contact us at
+          <a href="mailto:cai@evautopro.com" class="text-brand-500 hover:underline">cai@evautopro.com</a>
+          and we will respond within a reasonable time.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">6. Cookies</h2>
+        <p>
+          See our <a href="/legal/cookies/" class="text-brand-500 hover:underline">Cookie Policy</a> for
+          details on the cookies used by this site.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-ink-900 mb-2">7. Changes to This Policy</h2>
+        <p>
+          We may update this policy from time to time. The latest version will always be available on
+          this page with the date of the last revision.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -21,6 +21,23 @@ const lang = Astro.currentLocale ?? 'en';
 const dir = lang === 'ar' ? 'rtl' : 'ltr';
 const fullTitle = title.includes('EV Auto Pro') ? title : `${title} | EV Auto Pro`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+
+const orgSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'EV Auto Pro',
+  legalName: 'Shandong Wencai Import & Export Co., Ltd.',
+  url: 'https://evautopro.com/',
+  logo: new URL('/favicon.svg', Astro.site).href,
+  email: 'cai@evautopro.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Guangzhou',
+    addressRegion: 'Guangdong',
+    addressCountry: 'CN',
+  },
+  areaServed: ['Russia', 'Central Asia', 'Middle East', 'Latin America', 'Africa', 'Southeast Asia'],
+});
 ---
 
 <!doctype html>
@@ -54,6 +71,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json" set:html={orgSchema} />
 
     <slot name="head" />
   </head>
