@@ -20,7 +20,7 @@ export const news: Record<string, NewsArticle> = {
     categoryLabel: 'Industry News',
     title: "China's New NEV Export Policy 2026: A Complete Guide by EV Auto Pro",
     excerpt: "Starting 2026, China's auto export sector pivots to quality with stricter standards for sustainable growth.",
-    hero: '/images/hero-port-loading.svg',
+    hero: '/images/faq-logistics.webp',
     date: '2026-05-15',
     readMin: 8,
     body: `## Why Did China Update Its NEV Export Policy?
@@ -293,7 +293,7 @@ FOB Shanghai $15,200 (LHD). RHD +$800. CIF varies by destination.`,
     slug: 'how-to-choose-changan-suv', category: 'guide', categoryLabel: 'Buyer Guide',
     title: "How to Choose a Changan SUV: Complete Guide to Changan's NEV Lineup",
     excerpt: 'Complete guide to choosing the right Changan SUV for your market — UNI series vs CS family, ICE vs PHEV vs EREV.',
-    hero: '/images/car-changan-cs55-plus.svg', date: '2026-05-21', readMin: 8,
+    hero: '/images/vehicles/evautopro-changan-cs55-plus-01.webp', date: '2026-05-21', readMin: 8,
     body: `## Changan SUV Lineup Overview
 
 Changan operates 2 main SUV series:
@@ -374,7 +374,7 @@ Both available via EV Auto Pro authorized export.`,
     slug: 'deepal-s07-alternatives', category: 'product', categoryLabel: 'New Product News',
     title: 'Affordable Deepal S07 Alternatives: Value EREV SUVs from China',
     excerpt: 'Looking for Deepal S07 EREV at lower price? Compare with Geely Coolray Hybrid, Changan UNI-K iDD, and other value alternatives.',
-    hero: '/images/car-deepal-s07.svg', date: '2026-05-11', readMin: 6,
+    hero: '/images/vehicles/evautopro-deepal-s07-01.webp', date: '2026-05-11', readMin: 6,
     body: `## Deepal S07 Baseline
 
 FOB $24,800. EREV (200km WLTP electric + 1000+ km gas-extender). Snapdragon 8295 cabin. CATL battery.
@@ -418,7 +418,7 @@ Need EREV (long range, limited charging)?
     slug: 'changan-uni-t-vs-uni-z-comparison', category: 'product', categoryLabel: 'New Product News',
     title: 'Changan UNI-T vs UNI-Z: Comparison, Buying Guide & Alternatives',
     excerpt: 'Both UNI-T and UNI-Z are Changan sport coupé SUVs. Detailed differences, market fit, and pricing.',
-    hero: '/images/car-changan-uni-t.svg', date: '2026-05-09', readMin: 5,
+    hero: '/images/vehicles/evautopro-changan-uni-t-01.webp', date: '2026-05-09', readMin: 5,
     body: `## Changan UNI Series Overview
 
 Both UNI-T and UNI-Z are sport coupé SUVs in Changan's UNI lineup. Similar styling, different positioning.
@@ -510,7 +510,7 @@ For off-road niche: **ShanHai T1** ($25,800). Boxy retro styling popular in 2026
     slug: 'can-you-drive-phev-without-charging', category: 'guide', categoryLabel: 'Buyer Guide',
     title: 'Can You Drive a Plug-In Hybrid Without Charging? An Essential Guide',
     excerpt: 'PHEV / EREV explained for markets with limited charging infrastructure. Practical guide for African, Central Asian, and Latin American dealers.',
-    hero: '/images/usecase-phev-hybrid.svg', date: '2026-04-30', readMin: 6,
+    hero: '/images/vehicles/evautopro-jetour-t2-02.webp', date: '2026-04-30', readMin: 6,
     body: `## Short Answer: Yes, but...
 
 PHEV (Plug-in Hybrid) and EREV (Extended-Range EV) **can run on gas alone if you never charge**. But you lose the fuel efficiency benefit.
@@ -562,7 +562,7 @@ EREV has a gas engine but it's only a battery charger (not direct drive):
     slug: 'guide-to-sourcing-chinese-auto-parts', category: 'guide', categoryLabel: 'Buyer Guide',
     title: "A Guide to Sourcing China's Dustproof Auto Parts for African Roads",
     excerpt: 'African road conditions demand robust auto parts. Guide to sourcing dustproof, vibration-resistant Chinese OEM and aftermarket parts.',
-    hero: '/images/car-changan-cs55-plus.svg', date: '2026-04-28', readMin: 6,
+    hero: '/images/vehicles/evautopro-changan-cs55-plus-01.webp', date: '2026-04-28', readMin: 6,
     body: `## African Road Reality
 
 Dusty unpaved roads + extreme heat + rough vibration take a toll on auto parts. Sourcing the right parts matters more than vehicle choice.
@@ -610,7 +610,7 @@ For Egypt / Algeria / South Africa with CKD assembly programs, we supply parts k
     slug: 'china-vs-japan-vs-usa-models', category: 'industry', categoryLabel: 'Industry News',
     title: 'Toyota, Honda, Mercedes: China vs. USA Model Differences & Import Guide',
     excerpt: 'Chinese-built Toyota / Honda / Mercedes models differ from US/Japan versions. Import guide for international dealers.',
-    hero: '/images/car-volkswagen-id-7.svg', date: '2026-01-31', readMin: 5,
+    hero: '/images/faq-sourcing.webp', date: '2026-01-31', readMin: 5,
     body: `## Chinese-Built International Brand Models
 
 Toyota, Honda, Mercedes, BMW, VW all manufacture in China via JVs. These China-built versions differ from USA/Japan/Europe spec.
@@ -656,7 +656,7 @@ We focus on **Chinese domestic brands** primarily (Changan, Geely, Jetour, Deepa
     slug: 'import-chinese-cars-to-ghana', category: 'guide', categoryLabel: 'Buyer Guide',
     title: 'How to Import Cars from China to Ghana: Process, Costs & Model Guide',
     excerpt: 'Complete guide to importing Chinese cars to Ghana — customs, duties, port logistics, and recommended models for Ghana market.',
-    hero: '/images/market-eg.svg', date: '2026-01-08', readMin: 8,
+    hero: '/images/vehicles/evautopro-changan-cs55-plus-01.webp', date: '2026-01-08', readMin: 8,
     body: `## Ghana Auto Import Overview
 
 Ghana imports 30,000+ used cars annually but new Chinese vehicle market is growing 15%+ per year. Tema and Takoradi ports handle vehicle imports.
