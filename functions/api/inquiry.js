@@ -44,6 +44,17 @@ export async function onRequestPost(context) {
     referer: request.headers.get('referer') || '',
   };
 
+  // ---- 0. KV backup (INQUIRIES binding) — every lead is stored even when
+  //         no notification channel is configured yet ----
+  if (env.INQUIRIES) {
+    try {
+      const key = `inquiry:${enriched.ts}:${crypto.randomUUID().slice(0, 8)}`;
+      await env.INQUIRIES.put(key, JSON.stringify(enriched));
+    } catch (e) {
+      console.error('KV backup failed:', e);
+    }
+  }
+
   // ---- 1. 推飞书机器人（cc-notify 等价） ----
   if (env.FEISHU_WEBHOOK) {
     try {
