@@ -1,13 +1,14 @@
-# Cloudflare Pages deployment — replaces deploy.yml (GitHub Pages) once the
-# migration is done. Until then this only runs manually.
-#
-# Activation checklist (migration day):
-#   1. Repo secrets: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID
-#   2. CF Pages project "evautopro" exists (created via API/wrangler)
-#   3. Change `on:` below to `push: { branches: [main] }` and delete deploy.yml
+# Cloudflare Pages deployment — the real production deploy target.
+# evautopro.com's DNS points at the "evautopro" CF Pages project (direct-upload,
+# no git integration), activated 2026-07-09. deploy.yml (GitHub Pages) is now
+# dead weight — GitHub Pages is not what the domain serves — kept disabled
+# (workflow_dispatch only) rather than deleted, in case of rollback need.
 name: Deploy to Cloudflare Pages
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:

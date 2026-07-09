@@ -1,9 +1,11 @@
+# Disabled 2026-07-09: evautopro.com no longer points at GitHub Pages —
+# the domain now serves from the "evautopro" Cloudflare Pages project
+# (see deploy-cloudflare.yml). Kept as workflow_dispatch only in case of
+# rollback need; do not re-enable the push trigger without re-pointing DNS.
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 permissions:
   pages: write
