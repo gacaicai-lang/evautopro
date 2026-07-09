@@ -24,11 +24,13 @@ export async function onRequestPost(context) {
   if (data.honeypot) {
     return new Response(JSON.stringify({ ok: true }), { status: 200 });
   }
-  // Homepage form collects a single "contact" field (WhatsApp or email);
-  // quote/contact forms send a dedicated email field.
+  // Forms send a country-qualified `whatsapp` field, a dedicated `email`
+  // field, and/or a legacy combined `contact` field. Accept the lead if any
+  // one reachable channel is present.
   const hasEmail = data.email && data.email.includes('@');
+  const hasWhatsapp = data.whatsapp && String(data.whatsapp).replace(/[^\d]/g, '').length >= 6;
   const hasContact = data.contact && String(data.contact).trim().length >= 5;
-  if (!hasEmail && !hasContact) {
+  if (!hasEmail && !hasWhatsapp && !hasContact) {
     return new Response(JSON.stringify({ error: 'Valid email or WhatsApp contact required' }), {
       status: 400, headers: { 'content-type': 'application/json' },
     });
