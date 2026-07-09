@@ -51,8 +51,11 @@ const principles = [
   <section class="py-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-[280px_1fr] gap-12 items-start">
-        <div class="aspect-square rounded-2xl overflow-hidden border border-ink-200">
-          <img src="/images/testimonial-1.svg" alt="Cai - Founder & Trade Director" class="w-full h-full object-cover" />
+        {/* No verified photo of the founder yet — an honest initial badge,
+            not a stock/placeholder image dressed up as a real photo. Swap
+            for a real photo (with consent) as soon as one is supplied. */}
+        <div class="aspect-square rounded-2xl overflow-hidden border border-ink-200 bg-ink-900 flex items-center justify-center">
+          <span class="text-6xl font-bold text-white/90">C</span>
         </div>
         <div>
           <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-3">Founder & Trade Director</p>
