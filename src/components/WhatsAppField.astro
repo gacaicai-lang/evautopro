@@ -1,0 +1,117 @@
+---
+// WhatsAppField — a WhatsApp input that forces country identification.
+// Renders a country-code <select> (flag + dial code) next to a number input,
+// and keeps a hidden input[name="whatsapp"] synced to "+<dial> <number>" so
+// every form's existing `new FormData(form)` submit picks up one clean,
+// country-qualified WhatsApp value. The number input carries no name (so it
+// isn't double-submitted) but still participates in constraint validation.
+//
+// Wiring is data-attribute based so a page can have several instances; a
+// single shared script (bottom of file) wires every [data-wa] group.
+interface Props {
+  required?: boolean;
+  label?: string;
+  labelClass?: string;
+  wrapClass?: string;   // classes on the outer flex row
+  fieldClass?: string;  // classes applied to both the select and the number input
+}
+const {
+  required = false,
+  label,
+  labelClass = 'block text-base text-ink-900 mb-2',
+  wrapClass = '',
+  fieldClass = 'px-3 py-3 border border-ink-300 rounded-md focus:border-brand-500 focus:outline-none text-base',
+} = Astro.props;
+
+// Primary export markets first, then a broad global set. `value` is the dial
+// code; RU/KZ share +7, which is correct — the dial code is what we store.
+const countries = [
+  { flag: '🇷🇺', name: 'Russia', dial: '+7' },
+  { flag: '🇰🇿', name: 'Kazakhstan', dial: '+7' },
+  { flag: '🇺🇿', name: 'Uzbekistan', dial: '+998' },
+  { flag: '🇦🇪', name: 'UAE', dial: '+971' },
+  { flag: '🇸🇦', name: 'Saudi Arabia', dial: '+966' },
+  { flag: '🇪🇬', name: 'Egypt', dial: '+20' },
+  { flag: '🇧🇷', name: 'Brazil', dial: '+55' },
+  { flag: '🇲🇽', name: 'Mexico', dial: '+52' },
+  { flag: '🇳🇬', name: 'Nigeria', dial: '+234' },
+  { flag: '🇰🇪', name: 'Kenya', dial: '+254' },
+  { flag: '🇬🇭', name: 'Ghana', dial: '+233' },
+  { flag: '🇿🇦', name: 'South Africa', dial: '+27' },
+  { flag: '🇰🇬', name: 'Kyrgyzstan', dial: '+996' },
+  { flag: '🇹🇯', name: 'Tajikistan', dial: '+992' },
+  { flag: '🇦🇿', name: 'Azerbaijan', dial: '+994' },
+  { flag: '🇬🇪', name: 'Georgia', dial: '+995' },
+  { flag: '🇦🇲', name: 'Armenia', dial: '+374' },
+  { flag: '🇧🇾', name: 'Belarus', dial: '+375' },
+  { flag: '🇶🇦', name: 'Qatar', dial: '+974' },
+  { flag: '🇰🇼', name: 'Kuwait', dial: '+965' },
+  { flag: '🇴🇲', name: 'Oman', dial: '+968' },
+  { flag: '🇧🇭', name: 'Bahrain', dial: '+973' },
+  { flag: '🇯🇴', name: 'Jordan', dial: '+962' },
+  { flag: '🇮🇶', name: 'Iraq', dial: '+964' },
+  { flag: '🇩🇿', name: 'Algeria', dial: '+213' },
+  { flag: '🇲🇦', name: 'Morocco', dial: '+212' },
+  { flag: '🇱🇾', name: 'Libya', dial: '+218' },
+  { flag: '🇸🇩', name: 'Sudan', dial: '+249' },
+  { flag: '🇪🇹', name: 'Ethiopia', dial: '+251' },
+  { flag: '🇹🇿', name: 'Tanzania', dial: '+255' },
+  { flag: '🇺🇬', name: 'Uganda', dial: '+256' },
+  { flag: '🇿🇲', name: 'Zambia', dial: '+260' },
+  { flag: '🇿🇼', name: 'Zimbabwe', dial: '+263' },
+  { flag: '🇦🇴', name: 'Angola', dial: '+244' },
+  { flag: '🇨🇮', name: "Côte d'Ivoire", dial: '+225' },
+  { flag: '🇸🇳', name: 'Senegal', dial: '+221' },
+  { flag: '🇨🇱', name: 'Chile', dial: '+56' },
+  { flag: '🇵🇪', name: 'Peru', dial: '+51' },
+  { flag: '🇨🇴', name: 'Colombia', dial: '+57' },
+  { flag: '🇦🇷', name: 'Argentina', dial: '+54' },
+  { flag: '🇧🇴', name: 'Bolivia', dial: '+591' },
+  { flag: '🇩🇴', name: 'Dominican Republic', dial: '+1' },
+  { flag: '🇵🇰', name: 'Pakistan', dial: '+92' },
+  { flag: '🇧🇩', name: 'Bangladesh', dial: '+880' },
+  { flag: '🇮🇩', name: 'Indonesia', dial: '+62' },
+  { flag: '🇵🇭', name: 'Philippines', dial: '+63' },
+  { flag: '🇻🇳', name: 'Vietnam', dial: '+84' },
+  { flag: '🇹🇭', name: 'Thailand', dial: '+66' },
+  { flag: '🇲🇾', name: 'Malaysia', dial: '+60' },
+  { flag: '🇹🇷', name: 'Turkey', dial: '+90' },
+  { flag: '🇬🇧', name: 'United Kingdom', dial: '+44' },
+  { flag: '🇩🇪', name: 'Germany', dial: '+49' },
+  { flag: '🇺🇸', name: 'United States', dial: '+1' },
+  { flag: '🇨🇳', name: 'China', dial: '+86' },
+];
+---
+
+{label && <label class={labelClass}>{label}{required && <span class="text-brand-500"> *</span>}</label>}
+
+<div class:list={['flex gap-2', wrapClass]} data-wa>
+  <select data-wa-dial required={required} aria-label="Country code"
+          class:list={['shrink-0 max-w-[7.5rem] bg-white', fieldClass]}>
+    <option value="" disabled selected>Code</option>
+    {countries.map(c => (
+      <option value={c.dial}>{c.flag} {c.name} ({c.dial})</option>
+    ))}
+  </select>
+  <input type="tel" data-wa-number inputmode="tel" required={required}
+         placeholder="WhatsApp number" aria-label="WhatsApp number"
+         class:list={['flex-1 min-w-0', fieldClass]} />
+  <input type="hidden" name="whatsapp" data-wa-value />
+</div>
+
+<script>
+  // Wire every WhatsApp field on the page. Keeps the hidden name="whatsapp"
+  // value in sync as "+<dial> <number>" so form submit handlers need no change.
+  document.querySelectorAll<HTMLElement>('[data-wa]').forEach(group => {
+    const dial = group.querySelector<HTMLSelectElement>('[data-wa-dial]');
+    const number = group.querySelector<HTMLInputElement>('[data-wa-number]');
+    const hidden = group.querySelector<HTMLInputElement>('[data-wa-value]');
+    if (!dial || !number || !hidden) return;
+    const sync = () => {
+      const n = number.value.replace(/[^\d]/g, '');
+      hidden.value = dial.value && n ? `${dial.value} ${n}` : '';
+    };
+    dial.addEventListener('change', sync);
+    number.addEventListener('input', sync);
+  });
+</script>

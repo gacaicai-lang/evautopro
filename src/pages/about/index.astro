@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import WhatsAppField from '../../components/WhatsAppField.astro';
 
 // 1:1 ihkaauto.com/about visual layout (keeping evautopro brand-red palette)
 // 9 section structure matching ihka's actual visual hierarchy
@@ -292,7 +293,8 @@ const teamFunctions = [
         <form id="about-quote" class="space-y-3" novalidate>
           <input type="text" name="honeypot" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" />
           <input type="text" name="name" required placeholder="Name *" class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm" />
-          <input type="text" name="whatsapp" required placeholder="Country / WhatsApp *" class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm" />
+          <WhatsAppField required
+            fieldClass="px-4 py-2 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm bg-white" />
           <input type="email" name="email" required placeholder="Email *" class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm" />
           <textarea name="message" rows="2" placeholder="Model / Quantity / Market" class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none text-sm"></textarea>
           <button type="submit" class="w-full px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors">Submit</button>
