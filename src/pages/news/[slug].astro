@@ -13,8 +13,81 @@ const relatedArticles = (article.related || [])
   .map(s => news[s as keyof typeof news])
   .filter(Boolean);
 
-// Render markdown body (simple line-by-line, not full markdown lib)
-const bodyLines = article.body.split('\n');
+// ---------------------------------------------------------------------------
+// Minimal block-level markdown parser for article.body. Grew from a
+// line-by-line pass that only handled headings/bullets/bold — pipe-table
+// lines rendered as raw monospace text and [links](url) never became <a>
+// tags. Both are now real blocks; still not a full markdown lib (no nested
+// lists, no code fences) because nothing in this site's articles needs them.
+// ---------------------------------------------------------------------------
+type InlinePart = { type: 'text' | 'strong' | 'a'; content: string; href?: string };
+type Block =
+  | { type: 'h2' | 'h3' | 'p' | 'bold'; text: string }
+  | { type: 'ul'; items: string[] }
+  | { type: 'table'; headers: string[]; rows: string[][] }
+  | { type: 'image'; alt: string; src: string };
+
+function parseInline(text: string): InlinePart[] {
+  return text
+    .split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g)
+    .filter(part => part !== '')
+    .map(part => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return { type: 'strong', content: part.slice(2, -2) };
+      }
+      const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (link) return { type: 'a', content: link[1], href: link[2] };
+      return { type: 'text', content: part };
+    });
+}
+
+function tableCells(line: string): string[] {
+  return line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(c => c.trim());
+}
+
+function parseBody(body: string): Block[] {
+  const lines = body.split('\n');
+  const blocks: Block[] = [];
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+
+    if (line.trim() === '') { i++; continue; }
+    if (line.startsWith('## ')) { blocks.push({ type: 'h2', text: line.slice(3) }); i++; continue; }
+    if (line.startsWith('### ')) { blocks.push({ type: 'h3', text: line.slice(4) }); i++; continue; }
+
+    const img = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (img) { blocks.push({ type: 'image', alt: img[1], src: img[2] }); i++; continue; }
+
+    if (line.trim().startsWith('|')) {
+      const tableLines: string[] = [];
+      while (i < lines.length && lines[i].trim().startsWith('|')) { tableLines.push(lines[i]); i++; }
+      const headers = tableCells(tableLines[0]);
+      const isSeparator = /^[-:\s|]+$/.test(tableLines[1] ?? '');
+      const rows = (isSeparator ? tableLines.slice(2) : tableLines.slice(1)).map(tableCells);
+      blocks.push({ type: 'table', headers, rows });
+      continue;
+    }
+
+    if (line.startsWith('- ')) {
+      const items: string[] = [];
+      while (i < lines.length && lines[i].startsWith('- ')) { items.push(lines[i].slice(2)); i++; }
+      blocks.push({ type: 'ul', items });
+      continue;
+    }
+
+    if (line.startsWith('**') && line.endsWith('**') && line.length > 3) {
+      blocks.push({ type: 'bold', text: line.slice(2, -2) });
+      i++; continue;
+    }
+
+    blocks.push({ type: 'p', text: line });
+    i++;
+  }
+  return blocks;
+}
+
+const bodyBlocks = parseBody(article.body);
 ---
 
 <BaseLayout
@@ -51,16 +124,49 @@ const bodyLines = article.body.split('\n');
       <p class="text-lg text-ink-600 leading-relaxed mb-10 italic">{article.excerpt}</p>
 
       <div class="prose-content space-y-5 text-base text-ink-700 leading-relaxed">
-        {bodyLines.map(line => {
-          if (line.startsWith('## ')) return <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 mt-12 mb-4">{line.slice(3)}</h2>;
-          if (line.startsWith('### ')) return <h3 class="text-xl font-bold text-ink-900 mt-8 mb-3">{line.slice(4)}</h3>;
-          if (line.startsWith('- ')) return <li class="ml-6 text-base text-ink-700 list-disc">{line.slice(2)}</li>;
-          if (line.startsWith('| ')) return <div class="font-mono text-sm text-ink-700">{line}</div>;
-          if (line.startsWith('**') && line.endsWith('**')) return <p class="font-bold text-ink-900">{line.slice(2, -2)}</p>;
-          if (line.trim() === '') return null;
-          // Inline **bold** processing
-          const parts = line.split(/(\*\*[^*]+\*\*)/g);
-          return <p>{parts.map(p => p.startsWith('**') && p.endsWith('**') ? <strong>{p.slice(2, -2)}</strong> : p)}</p>;
+        {bodyBlocks.map(block => {
+          const inline = (parts: InlinePart[]) => parts.map(part =>
+            part.type === 'strong' ? <strong>{part.content}</strong>
+            : part.type === 'a' ? <a href={part.href} class="text-brand-500 hover:underline font-medium">{part.content}</a>
+            : part.content
+          );
+
+          if (block.type === 'h2') return <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 mt-12 mb-4">{block.text}</h2>;
+          if (block.type === 'h3') return <h3 class="text-xl font-bold text-ink-900 mt-8 mb-3">{block.text}</h3>;
+          if (block.type === 'bold') return <p class="font-bold text-ink-900">{block.text}</p>;
+          if (block.type === 'image') return (
+            <img src={block.src} alt={block.alt} class="w-full rounded-xl border border-ink-200 my-2" loading="lazy" />
+          );
+          if (block.type === 'ul') return (
+            <ul class="space-y-2 my-2">
+              {block.items.map(item => (
+                <li class="ml-6 text-base text-ink-700 list-disc">{inline(parseInline(item))}</li>
+              ))}
+            </ul>
+          );
+          if (block.type === 'table') return (
+            <div class="overflow-x-auto my-4 -mx-4 sm:mx-0">
+              <table class="w-full min-w-[560px] sm:min-w-0 text-sm border-collapse">
+                <thead>
+                  <tr class="border-b-2 border-ink-200">
+                    {block.headers.map(h => (
+                      <th class="text-left py-2.5 px-3 text-xs font-bold text-ink-500 uppercase tracking-wider">{inline(parseInline(h))}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map(row => (
+                    <tr class="border-b border-ink-100">
+                      {row.map(cell => (
+                        <td class="py-2.5 px-3 text-ink-700">{inline(parseInline(cell))}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+          return <p>{inline(parseInline(block.text))}</p>;
         })}
       </div>
     </div>

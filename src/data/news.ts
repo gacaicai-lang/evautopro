@@ -555,7 +555,7 @@ EREV has a gas engine but it's only a battery charger (not direct drive):
     faqs: [
       { q: 'PHEV without charging vs ICE — fuel use?', a: 'Without charging, PHEV uses 5-15% MORE fuel than equivalent ICE due to battery weight. With charging, PHEV uses 50-70% less fuel. Charging makes huge difference.' },
       { q: 'EREV battery degradation if always gas?', a: 'EREV battery cycles less when constantly gas-charged vs frequently DC-fast-charged. Actually longer battery life.' },
-    ], related: ['top-7-chinese-suv-for-russia-2026', 'deepal-s07-alternatives'],
+    ], related: ['bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'deepal-s07-alternatives'],
   },
 
   'guide-to-sourcing-chinese-auto-parts': {
@@ -738,6 +738,85 @@ We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partn
       { q: 'Better resale value?', a: 'Coolray edges out due to Volvo platform reputation. ZS similar to other budget compact SUVs.' },
       { q: 'Parts availability in Africa?', a: 'Both decent. MG slightly broader (longer presence in market). Geely growing fast.' },
     ], related: ['geely-coolray-export-deep-dive', 'jetour-t2-vs-geely-coolray-africa'],
+  },
+
+  'bev-vs-phev-vs-erev-vs-hybrid-which-to-import': {
+    slug: 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import',
+    category: 'guide', categoryLabel: 'Buyer Guide',
+    title: 'BEV vs PHEV vs EREV vs Hybrid: Which Should You Import for Your Market? (2026 Dealer Guide)',
+    excerpt: 'The right powertrain to stock depends on charging infrastructure and climate at your destination, not on which one is "best." Here is the decision framework, real spec comparison, and region-by-region fit.',
+    hero: '/images/faq-hero.webp',
+    date: '2026-07-09 09:00:00', readMin: 11,
+    body: `The right EV powertrain to import is not "the best one" — it is whichever one matches the charging infrastructure and climate at your destination. A BEV that sells well in the UAE's growing charging network can sit unsold in a market with patchy grid coverage, while an EREV that looks like a compromise on paper solves the exact anxiety that stops a hesitant buyer from signing. This guide breaks down all five powertrain types EV Auto Pro ships, when each one wins, and which of our in-stock models fit which market.
+
+## The Five Powertrain Types, Defined
+
+**BEV (Battery Electric Vehicle)** — no combustion engine at all, runs entirely on battery power, plugs in to recharge. Best fit: markets with reliable home or public charging and moderate climate. Zero tailpipe emissions, lowest running cost per km, but range and charging speed depend entirely on grid access.
+
+**PHEV (Plug-in Hybrid Electric Vehicle)** — a combustion engine paired with a mid-sized battery (typically 15-35 kWh) that plugs in and covers daily driving on electricity alone, with the engine taking over for longer trips. Best fit: markets where charging exists but isn't universal — buyers get electric commuting most days with zero range anxiety on a road trip.
+
+**EREV (Extended-Range Electric Vehicle)** — drives like a BEV day-to-day (100% electric drive, no mechanical connection from engine to wheels), but carries a small combustion engine that only generates electricity to extend range once the battery runs low. Best fit: cold climates and markets with limited charging — buyers get a genuinely electric driving experience with none of the range anxiety.
+
+**HEV (Hybrid Electric Vehicle)** — a small battery (under 2 kWh) that recharges only through braking and the engine, never plugs in. Best fit: markets with no charging infrastructure at all, where the buyer wants better fuel economy than a pure ICE vehicle with zero behavior change required.
+
+**ICE (Internal Combustion Engine)** — standard gasoline power, no electrification. Best fit: markets where fuel is cheap, charging is absent, and buyers prioritize lowest purchase price and universal parts/service availability.
+
+## Which Powertrain Fits Which Market
+
+| Powertrain | Best-Fit Market Conditions | Charging Dependency | Typical Buyer |
+| --- | --- | --- | --- |
+| BEV | Reliable home/public charging, moderate climate | High | Urban, environmentally motivated, lowest running cost priority |
+| PHEV | Some charging access, mixed city/highway driving | Medium | Wants electric daily driving without range anxiety on trips |
+| EREV | Cold climate, patchy or growing charging network | Low | Wants EV driving feel, cannot risk running out of charge |
+| HEV | Little to no charging infrastructure | None | Wants better fuel economy, zero change in driving habits |
+| ICE | Charging absent, fuel affordable, price-sensitive buyers | None | Lowest upfront cost, universal parts and service |
+
+## Region-by-Region Fit
+
+**Russia and Central Asia (cold climate, uneven charging build-out).** Battery range drops meaningfully in sub-zero temperatures, and public charging is concentrated in major cities. This is exactly why EREV performs well here — [Deepal S07](/cars/deepal-s07/) and [Deepal S09](/cars/deepal-s09/) give buyers real electric-driving character with a combustion engine as a safety net, so a cold snap or a trip outside city limits never strands the car. Straight ICE models remain the volume play for budget-conscious buyers — [Changan CS55 Plus](/cars/changan-cs55-plus/) is our fastest-moving model in the region for exactly that reason.
+
+**Middle East and Gulf (hot climate, fast-growing but uneven charging network).** The Gulf's charging network is expanding quickly in the UAE and Saudi Arabia but is still inconsistent outside major cities, and extreme heat affects battery thermal management. EREV again solves the anxiety without asking the buyer to gamble on infrastructure that's still being built — the same logic that makes it a top seller for us in Russia applies here. PHEV models like the [Jetour T2](/cars/jetour-t2/) also perform well for buyers who want electric commuting with combustion-engine road-trip range.
+
+**Africa (charging infrastructure still early-stage across most markets).** Outside a handful of major cities, public charging is minimal. HEV and ICE dominate for good reason — buyers need a vehicle that works identically to what they already know, with better fuel economy as the only change. This is where models like [Geely Coolray](/cars/geely-coolray/) do the heaviest volume.
+
+**Latin America (mixed — strong in a few urban centers, thin elsewhere).** Similar logic to Africa outside major metro areas, with pockets (particularly Brazil's larger cities) where PHEV and BEV are becoming viable. Match the powertrain to the specific city or region you're importing into rather than treating the whole country as one market.
+
+## What's Actually in Stock
+
+| Model | Powertrain | Battery | Electric Range | FOB (USD) | In Stock |
+| --- | --- | --- | --- | --- | --- |
+| [Deepal S05](/cars/deepal-s05/) | BEV | 56.1 kWh | 510 km CLTC | $19,200 - $24,500 | 15 units |
+| [Jetour T2](/cars/jetour-t2/) | PHEV | 34.5 kWh | 137 km WLTP + ~1,000 km combined | $22,500 - $28,900 | 30 units |
+| [Deepal S07](/cars/deepal-s07/) | EREV | 31.7 kWh | 200 km CLTC + 1,000 km+ combined | $24,800 - $32,500 | 18 units |
+| [Deepal S09](/cars/deepal-s09/) | EREV | 42 kWh | 215 km CLTC + 1,000 km+ combined | $36,500 - $45,800 | 12 units |
+| [Changan UNI-T](/cars/changan-uni-t/) | ICE | — | — | $13,800 - $17,200 | 45 units |
+| [Changan CS55 Plus](/cars/changan-cs55-plus/) | ICE | — | — | $14,500 - $17,900 | 50 units |
+| [Geely Coolray](/cars/geely-coolray/) | ICE | — | — | $15,200 - $18,800 | 28 units |
+| [Geely Atlas](/cars/geely-atlas/) | ICE | — | — | $17,800 - $22,500 | 22 units |
+
+We do not currently hold HEV models in ready stock. If a market you're stocking needs a self-charging hybrid, [send us your target model and destination](/contact/quote/) and we'll source it — we work with 15+ OEM brands beyond our ready-stock lineup.
+
+## Does Powertrain Type Affect Import Duty?
+
+Often, yes — and the rules change faster than most buyer guides acknowledge. Kazakhstan is a concrete, current example: EVs still clear at 0% import duty under Kazakhstan's WTO commitments, but the country's duty-and-VAT-free EV quota was exhausted in October 2025, and VAT on vehicle imports rose to 16% from January 2026. A PHEV or EREV may be classified differently from a pure BEV in the same market, which changes the total landed cost math significantly.
+
+**Don't assume your market's rules from a general guide — including this one.** Duty and VAT treatment by powertrain type varies by country and changes on government timelines outside anyone's control. Confirm current rates for your specific destination before finalizing an order; we track this for our active markets and will flag anything relevant when you request a quote.
+
+## How to Decide
+
+1. **Start with charging infrastructure at your specific destination city**, not the country average — a capital city and a secondary market in the same country can have completely different answers.
+2. **Factor in climate** — cold climates lose meaningful BEV range in winter; extreme heat affects battery thermal management. Both push toward EREV or PHEV over pure BEV unless charging is genuinely reliable.
+3. **Match to your buyer's actual driving pattern** — short urban commutes favor BEV/PHEV; long-distance or unpredictable routes favor EREV/HEV/ICE.
+4. **Check current duty and VAT treatment** for your destination before pricing — see the section above.
+5. **Consider mixing powertrains in one order.** A 40HQ container fits multiple models — many of our dealers stock an ICE volume model alongside one EREV or PHEV model to test electrified demand without betting the whole order on it.`,
+    faqs: [
+      { q: 'Which powertrain is best for cold-climate markets with limited charging infrastructure?', a: 'EREV. It drives like a full electric vehicle day-to-day but carries a small combustion engine purely to generate power once the battery runs low, so cold-weather range loss or a gap in the charging network never strands the buyer. Deepal S07 and Deepal S09 are our top-performing models for exactly this reason in Russia and Central Asia.' },
+      { q: 'Does powertrain type affect import duty or VAT in CIS/Gulf markets?', a: 'Often, yes, and the rules change over time. Kazakhstan is a current example: EVs clear at 0% duty under WTO terms, but the duty-and-VAT-free quota was exhausted in October 2025 and VAT rose to 16% from January 2026. Confirm current treatment for your specific destination before finalizing an order — do not rely on a general guide for this.' },
+      { q: 'Can I stock a mixed container of BEV and PHEV models?', a: 'Yes. A 40HQ container fits multiple models, and many dealers order one electrified model alongside a proven ICE volume seller to test demand without committing the whole order to a single powertrain.' },
+      { q: 'What is the real-world range difference between EREV and PHEV?', a: 'PHEVs typically carry a smaller battery (15-35 kWh) with 30-50 km of pure electric range before the engine mechanically takes over. EREVs carry a similar-or-larger battery but the engine never mechanically drives the wheels — it only generates electricity — which usually gives a longer pure-electric range (150-215 km CLTC on our current models) with the combustion engine purely as a range extender rather than the primary driver.' },
+      { q: 'Which EV Auto Pro models are ready stock in each powertrain category?', a: 'BEV: Deepal S05. PHEV: Jetour T2. EREV: Deepal S07 and Deepal S09. ICE: Changan UNI-T, Changan CS55 Plus, Geely Coolray, Geely Atlas. We do not currently hold HEV in ready stock but can source on request.' },
+    ],
+    related: ['can-you-drive-phev-without-charging', 'deepal-s07-alternatives', 'changan-uni-t-vs-jetour-t2-comparison'],
   },
 
 };
