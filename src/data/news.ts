@@ -771,6 +771,8 @@ We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partn
 | HEV | Little to no charging infrastructure | None | Wants better fuel economy, zero change in driving habits |
 | ICE | Charging absent, fuel affordable, price-sensitive buyers | None | Lowest upfront cost, universal parts and service |
 
+![Battery-electric and hybrid Chinese SUVs lined up at an export yard, one charging](/images/news/powertrain-1.svg)
+
 ## Region-by-Region Fit
 
 **Russia and Central Asia (cold climate, uneven charging build-out).** Battery range drops meaningfully in sub-zero temperatures, and public charging is concentrated in major cities. This is exactly why EREV performs well here — [Deepal S07](/cars/deepal-s07/) and [Deepal S09](/cars/deepal-s09/) give buyers real electric-driving character with a combustion engine as a safety net, so a cold snap or a trip outside city limits never strands the car. Straight ICE models remain the volume play for budget-conscious buyers — [Changan CS55 Plus](/cars/changan-cs55-plus/) is our fastest-moving model in the region for exactly that reason.
@@ -780,6 +782,8 @@ We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partn
 **Africa (charging infrastructure still early-stage across most markets).** Outside a handful of major cities, public charging is minimal. HEV and ICE dominate for good reason — buyers need a vehicle that works identically to what they already know, with better fuel economy as the only change. This is where models like [Geely Coolray](/cars/geely-coolray/) do the heaviest volume.
 
 **Latin America (mixed — strong in a few urban centers, thin elsewhere).** Similar logic to Africa outside major metro areas, with pockets (particularly Brazil's larger cities) where PHEV and BEV are becoming viable. Match the powertrain to the specific city or region you're importing into rather than treating the whole country as one market.
+
+![Extended-range electric SUV driving on a snowy northern highway](/images/news/powertrain-2.svg)
 
 ## What's Actually in Stock
 
@@ -838,6 +842,8 @@ Kazakhstan spent two years as one of the most attractive EV import markets in th
 
 That last point is the trap most guides skip.
 
+![Passenger cars secured on an export block train bound for Central Asia](/images/news/kazakhstan-1.svg)
+
 ## The "Kazakhstan-Only" Rule on 0%-Tariff Cars
 
 A vehicle brought in at the 0% WTO tariff **cannot be re-exported to other EAEU countries** (Russia, Belarus, Armenia, Kyrgyzstan), and this clause is strictly enforced. If your plan was to clear cars cheaply in Kazakhstan and move them to Russia, that backdoor is closed. Import for the Kazakhstan market, not as a transit hack.
@@ -878,6 +884,8 @@ A combustion equivalent like the [Changan CS55 Plus](/cars/changan-cs55-plus/) (
 6. **Delivery** to your city.
 
 We handle the China-side export and documentation; a local broker or your own team handles Kazakhstan clearance, and we can recommend partners.
+
+![Imported vehicles at a customs clearance yard in Kazakhstan](/images/news/kazakhstan-2.svg)
 
 ## Documents You Need
 
@@ -928,6 +936,8 @@ Russia has been raising the recycling fee in steps since 2024, and the 2026 refo
 
 The stated goal is to make local assembly more attractive than direct import — so the reform is designed to raise the cost of bringing finished cars in.
 
+![Roll-on roll-off car carrier vessel loaded with vehicles at port](/images/news/russia-1.svg)
+
 ## Why the 160 HP Line Matters for Chinese SUVs
 
 Most popular Chinese SUVs produce well over 160 hp. That puts them above the preferential band, where the recycling fee is highest. Here is where our current lineup actually sits (metric PS is close to hp — 160 hp ≈ 162 PS):
@@ -944,6 +954,8 @@ Most popular Chinese SUVs produce well over 160 hp. That puts them above the pre
 | [Deepal S09](/cars/deepal-s09/) | 462 PS | Yes |
 
 The honest takeaway: the current export-favourite SUVs all sit above the preferential line. That is not unique to any one brand — it reflects how modern turbocharged and electrified Chinese SUVs are specced. It means the recycling fee is a real cost line for all of them, and it should be modelled per unit before you commit to a container.
+
+![Row of new Chinese SUVs in a dealer inventory yard in winter](/images/news/russia-2.svg)
 
 ## What This Means for Your Landed Cost
 

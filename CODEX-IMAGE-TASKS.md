@@ -81,3 +81,29 @@ For any file you save with a **new extension** (e.g. `.webp` replacing a
 `src/pages/...` and `src/data/...` and redeploy. Same-name replacements of the
 existing `.webp` gallery files need no code change — they go live on the next
 deploy automatically.
+
+---
+
+## D. News article inline images — generate per the image SOP
+
+6 inline slots across 3 articles. Placeholders live in `public/images/news/`.
+Follow the article-image SOP: generate a photoreal image from the Midjourney
+prompt below, then save it as the **same base filename** but `.webp`
+(~1600px, <250KB) at `public/images/news/`, and tell me so I flip the one
+`src` in `src/data/news.ts` (or keep the `.svg` name and I leave it).
+
+**Hard rules for every one:** photoreal, no text/watermark of any kind, no
+readable license plates, no OEM brand logos/badges, no Chinese characters.
+Add `--ar 16:9 --v 6` (or your generator's 16:9 photoreal equivalent).
+A real licensed photo of the same scene is always preferred over a generated
+one — generate only if no real photo is available.
+
+| File | Article | Midjourney prompt | alt (≤15 words) |
+|---|---|---|---|
+| `powertrain-1.webp` | BEV vs PHEV pillar | `a row of modern SUVs of mixed powertrains parked in a clean export staging yard, one connected to a charging cable, bright overcast daylight, wide establishing shot, photorealistic` | Mixed-powertrain SUVs lined up at an export yard, one charging |
+| `powertrain-2.webp` | BEV vs PHEV pillar | `a modern electric SUV driving on a snow-lined mountain highway, overcast winter light, motion, cinematic, photorealistic` | Electric SUV driving a snowy northern highway |
+| `kazakhstan-1.webp` | Kazakhstan guide | `passenger cars secured on open double-deck rail car-carrier wagons at a border rail terminal, dry steppe landscape, clear daylight, photorealistic` | Cars secured on an export block train to Central Asia |
+| `kazakhstan-2.webp` | Kazakhstan guide | `imported passenger cars parked in rows at a customs inspection yard, a customs officer with a clipboard, warehouse and fencing behind, daylight, photorealistic` | Imported vehicles at a Kazakhstan customs clearance yard |
+| `russia-1.webp` | Russia guide | `a large roll-on roll-off car-carrier ship docked at a port with its stern ramp down, cars queued on the quay to board, overcast, wide shot, photorealistic` | Car-carrier vessel loading vehicles at port |
+| `russia-2.webp` | Russia guide | `rows of new compact and mid-size SUVs parked in a dealer inventory lot in winter, light snow on the ground, overcast daylight, photorealistic` | New SUVs in a winter dealer inventory yard |
+
