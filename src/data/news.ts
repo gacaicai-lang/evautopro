@@ -819,6 +819,159 @@ Often, yes — and the rules change faster than most buyer guides acknowledge. K
     related: ['can-you-drive-phev-without-charging', 'deepal-s07-alternatives', 'changan-uni-t-vs-jetour-t2-comparison'],
   },
 
+  'import-cars-from-china-to-kazakhstan-2026': {
+    slug: 'import-cars-from-china-to-kazakhstan-2026',
+    category: 'guide', categoryLabel: 'Market Guide',
+    title: 'How to Import Cars from China to Kazakhstan (2026): Duty, VAT, Recycling Fee & Process',
+    excerpt: 'The rules changed hard in 2025–26: the EV duty-free quota is gone and VAT rose to 16%. Here is the current landed-cost math, document list, and step-by-step process for dealers importing from China.',
+    hero: '/images/vehicles/evautopro-geely-coolray-01.webp',
+    date: '2026-07-09 11:00:00', readMin: 10,
+    body: `Importing a car from China to Kazakhstan in 2026 means budgeting for four things: the customs duty (0% on electric vehicles under WTO terms, 15% on combustion cars for companies), 16% VAT from January 2026, the recycling fee (утильсбор), and — for combustion engines — excise. The single biggest change dealers miss is that Kazakhstan's duty-and-VAT-free EV quota was exhausted in October 2025, so an electric car no longer clears free. This guide breaks down the real landed cost, the documents you need, and the route from a Chinese port to Almaty.
+
+## What Changed in 2025–26
+
+Kazakhstan spent two years as one of the most attractive EV import markets in the region — a quota let the first 15,000 electric vehicles in at 0% duty and 0% VAT. That window is now closed:
+
+- **The 15,000-unit EV quota was exhausted around 15 October 2025.** After it, VAT applies to electric vehicle imports.
+- **VAT rose to 16% from 1 January 2026** across vehicle categories (it was 12%).
+- **The 0% customs tariff on EVs still applies** under Kazakhstan's WTO commitments — but only if the vehicle stays in Kazakhstan.
+
+That last point is the trap most guides skip.
+
+## The "Kazakhstan-Only" Rule on 0%-Tariff Cars
+
+A vehicle brought in at the 0% WTO tariff **cannot be re-exported to other EAEU countries** (Russia, Belarus, Armenia, Kyrgyzstan), and this clause is strictly enforced. If your plan was to clear cars cheaply in Kazakhstan and move them to Russia, that backdoor is closed. Import for the Kazakhstan market, not as a transit hack.
+
+## The Four Cost Components
+
+| Cost | Electric vehicle (BEV) | Combustion car (company import) |
+| --- | --- | --- |
+| Customs duty | 0% (WTO, stays in KZ) | 15% ad valorem |
+| VAT (from Jan 2026) | 16% | 16% |
+| Recycling fee (утильсбор) | 50 MRP × EV coefficient | 50 MRP × coefficient (by engine volume & age) |
+| Excise | Exempt | By engine displacement (cm³) |
+
+**MRP** is Kazakhstan's Monthly Calculation Index, reset annually — confirm the current-year value before you price, because the recycling fee moves with it. Individuals importing for personal use pay a combined customs payment (СТП) calculated per cm³ of engine volume instead of the company duty structure.
+
+## Worked Example — Landed Cost of a BEV
+
+Take a [Deepal S05](/cars/deepal-s05/) (battery-electric compact SUV) at an FOB China price around $19,200:
+
+| Line item | Approx. (USD) |
+| --- | --- |
+| FOB China | 19,200 |
+| Ocean/rail freight + insurance to KZ | ~2,000 |
+| Customs duty (0%, BEV under WTO) | 0 |
+| VAT 16% (on CIF + duty) | ~3,390 |
+| Recycling fee (EV coefficient) | confirm current MRP |
+| **Indicative landed, before recycling fee** | **~24,600** |
+
+A combustion equivalent like the [Changan CS55 Plus](/cars/changan-cs55-plus/) (~$14,500 FOB) carries the 15% duty and engine-based excise on top, so run the math per powertrain — the cheaper FOB doesn't always win once duty and excise are added. Not sure which powertrain fits Kazakhstan's climate and charging reality? See our guide on [which powertrain to import for your market](/news/bev-vs-phev-vs-erev-vs-hybrid-which-to-import/).
+
+## Step-by-Step Process
+
+1. **Confirm the model and powertrain** for the Kazakhstan market, and get a firm FOB/CIF quote.
+2. **Sign the contract and pay the deposit** (T/T 30% is standard; L/C at sight accepted).
+3. **Pre-shipment inspection** — every unit is inspected, photographed and documented before loading.
+4. **Ship via the Khorgos land border or block train** to Almaty / Aktau — the block-train route is usually the most economical for Central Asia and avoids sea freight entirely.
+5. **Customs clearance in Kazakhstan** — declare, pay duty (0% BEV / 15% ICE), 16% VAT, recycling fee and any excise; register the vehicle.
+6. **Delivery** to your city.
+
+We handle the China-side export and documentation; a local broker or your own team handles Kazakhstan clearance, and we can recommend partners.
+
+## Documents You Need
+
+- Commercial Invoice and Packing List
+- Bill of Lading / rail waybill (CMR for truck)
+- Certificate of Origin
+- Export declaration (China side)
+- Certificate of Conformity / EAC where required
+- Vehicle passport / SBKTS for registration in Kazakhstan
+
+## Common Traps
+
+- **Assuming EVs still clear free.** The quota is gone; budget 16% VAT.
+- **Planning to re-export to Russia.** The 0%-tariff Kazakhstan-only clause blocks it.
+- **Forgetting the recycling fee.** It's tied to the current MRP and engine/age coefficient — confirm it before quoting a retail price.
+- **Using an old customs calculator.** Rates changed in October 2025 and January 2026; verify against current figures for your exact model and date.
+
+## Confirm Before You Order
+
+Duty, VAT and the recycling fee in Kazakhstan changed twice in the last year and can change again on government timelines. Treat this guide as orientation, not a final quote — confirm current rates for your specific model and import date before finalizing. We track the numbers for our active [Kazakhstan buyers](/markets/kazakhstan/) and will flag anything relevant with your quote.`,
+    faqs: [
+      { q: 'Do electric cars still clear duty-free in Kazakhstan in 2026?', a: 'The 0% customs tariff still applies to EVs under Kazakhstan\'s WTO commitments if the vehicle stays in the country, but the duty-and-VAT-free quota was exhausted around 15 October 2025, and VAT rose to 16% from 1 January 2026. So an EV is no longer fully free — budget the 16% VAT plus the recycling fee.' },
+      { q: 'Can I import a car cheaply into Kazakhstan and move it to Russia?', a: 'No. A vehicle cleared at the 0% WTO tariff carries a "Kazakhstan-only" clause and cannot be re-exported to other EAEU countries (Russia, Belarus, Armenia, Kyrgyzstan). It is strictly enforced. Import for the Kazakhstan market, not as transit.' },
+      { q: 'What is the recycling fee (утильсбор) and how is it calculated?', a: 'It is calculated as 50 MRP multiplied by a coefficient that depends on engine volume and vehicle age, with a separate coefficient for electric vehicles. MRP (the Monthly Calculation Index) resets each year, so confirm the current value before pricing.' },
+      { q: 'What is the cheapest way to ship a car from China to Kazakhstan?', a: 'For Central Asia the block train via the Khorgos border to Almaty or Aktau is usually the most economical option and avoids sea freight. Truck and container are also available. We quote the current lane rate with your order.' },
+      { q: 'Which Chinese models are best for Kazakhstan?', a: 'It depends on climate and charging access — EREV and ICE models handle cold winters and thin charging networks well, while BEVs suit the major cities. Ask us for a stock list matched to your region and we\'ll include landed-cost math.' },
+    ],
+    related: ['bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'geely-coolray-export-deep-dive', 'guide-to-sourcing-chinese-auto-parts'],
+  },
+
+  'import-cars-from-china-to-russia-2026-recycling-fee': {
+    slug: 'import-cars-from-china-to-russia-2026-recycling-fee',
+    category: 'guide', categoryLabel: 'Market Guide',
+    title: 'Importing Cars from China to Russia in 2026: The Recycling Fee Reform and the 160 HP Line',
+    excerpt: 'Russia now ties the recycling fee (утильсбор) to engine power, with the preferential rate kept only up to 160 hp. Here is what that means for landed cost, and where the popular Chinese SUVs actually sit.',
+    hero: '/images/vehicles/evautopro-changan-uni-t-01.webp',
+    date: '2026-07-08 10:00:00', readMin: 9,
+    body: `Russia's recycling fee (утильсбор) is now the single number that decides whether a Chinese car pencils out for import. From December 2025 the fee is tied to engine power on a progressive scale, and the preferential rate is kept only for cars up to 160 horsepower. Above that line the fee climbs steeply — on top of the 15% import tariff and VAT. For dealers importing from China, the model you choose, and specifically its power output, now drives the landed cost more than the FOB price does.
+
+## What Changed
+
+Russia has been raising the recycling fee in steps since 2024, and the 2026 reform sharpened it:
+
+- **The fee is now tied to engine power (hp), on a progressive scale** (from December 2025), not just engine volume.
+- **The preferential rate is retained only for cars up to 160 hp.** Above that, the fee rises sharply.
+- **Annual indexation of 10–20%** continues on top, by vehicle category.
+- This sits **on top of the 15% import tariff** and VAT.
+
+The stated goal is to make local assembly more attractive than direct import — so the reform is designed to raise the cost of bringing finished cars in.
+
+## Why the 160 HP Line Matters for Chinese SUVs
+
+Most popular Chinese SUVs produce well over 160 hp. That puts them above the preferential band, where the recycling fee is highest. Here is where our current lineup actually sits (metric PS is close to hp — 160 hp ≈ 162 PS):
+
+| Model | Power | Above the 160 hp band? |
+| --- | --- | --- |
+| [Geely Coolray](/cars/geely-coolray/) | 177 PS | Yes (just over) |
+| [Changan UNI-T](/cars/changan-uni-t/) | 188 PS | Yes |
+| [Changan CS55 Plus](/cars/changan-cs55-plus/) | 188 PS | Yes |
+| [Geely Atlas](/cars/geely-atlas/) | 218 PS | Yes |
+| [Deepal S05](/cars/deepal-s05/) | 218 PS | Yes |
+| [Deepal S07](/cars/deepal-s07/) | 252 PS | Yes |
+| [Jetour T2](/cars/jetour-t2/) | 462 PS | Yes |
+| [Deepal S09](/cars/deepal-s09/) | 462 PS | Yes |
+
+The honest takeaway: the current export-favourite SUVs all sit above the preferential line. That is not unique to any one brand — it reflects how modern turbocharged and electrified Chinese SUVs are specced. It means the recycling fee is a real cost line for all of them, and it should be modelled per unit before you commit to a container.
+
+## What This Means for Your Landed Cost
+
+Three practical consequences:
+
+1. **Budget the fee explicitly, per model.** Because it scales with power, a 462 PS flagship carries a very different fee from a 177 PS compact — the gap can outweigh differences in FOB price.
+2. **Compare on landed cost, not FOB.** A cheaper sticker price above 160 hp can land higher than a slightly pricier lower-power car. Run the full math.
+3. **The fee hits every importer equally.** Chinese brands still hold the majority of Russia's market. The reform raises everyone's cost, so your competitiveness is relative — the dealers who model the fee accurately and price for it keep their margin; the ones who don't get squeezed.
+
+## Should You Still Import to Russia?
+
+Yes — with eyes open. Chinese vehicles continue to dominate Russian sales, and demand is real. The change is not a ban; it is a cost increase aimed at favouring local assembly. What it rewards is precision: pick models deliberately, model the recycling fee for each one before ordering, and price your retail to absorb it. Guessing is what loses money now.
+
+Not sure which models and powertrains fit Russia's cold climate and this cost structure? See our guide on [which powertrain to import for your market](/news/bev-vs-phev-vs-erev-vs-hybrid-which-to-import/), or send your target city and volume for a landed-cost breakdown.
+
+## Confirm Before You Order
+
+Russia's recycling fee has changed several times and is indexed annually — the exact figure for a given model and date moves. Treat this as orientation, not a final quote. We track current rates for our active [Russia buyers](/markets/russia/) and include the fee in the landed-cost math with every quote.`,
+    faqs: [
+      { q: 'How is Russia\'s recycling fee calculated in 2026?', a: 'Since December 2025 it is tied to engine power on a progressive scale, with the preferential (lower) rate kept only for cars up to 160 hp. Above 160 hp the fee rises sharply. It is indexed 10–20% annually and sits on top of the 15% import tariff and VAT.' },
+      { q: 'Do most Chinese SUVs fall under the 160 hp preferential band?', a: 'No. Most modern Chinese SUVs — including the popular export models — produce well over 160 hp (typically 177–260 PS, and much higher for PHEV/EREV flagships), which places them above the preferential band where the fee is highest. Budget the fee explicitly per model.' },
+      { q: 'Is it still worth importing Chinese cars to Russia in 2026?', a: 'Yes, with careful cost modelling. Chinese brands still hold the majority of Russian car sales and demand is strong. The recycling fee reform raises cost for everyone importing finished cars, so competitiveness is relative — model the fee per unit and price retail to absorb it.' },
+      { q: 'Does the recycling fee apply to electric vehicles too?', a: 'Yes, the recycling fee applies across categories, with the scale tied to the vehicle. Confirm the current coefficient for the specific model and date before pricing, as rates are indexed and have changed repeatedly.' },
+      { q: 'Can EV Auto Pro include the recycling fee in a quote?', a: 'We track current Russia rates and include the recycling fee in the landed-cost math with every quote. Send your target model, city and volume and we\'ll break it down.' },
+    ],
+    related: ['bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'top-7-chinese-suv-for-russia-2026', 'import-cars-from-china-to-kazakhstan-2026'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);
