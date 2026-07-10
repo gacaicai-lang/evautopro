@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="500" fill="#e4e4e7"/>
+  <g fill="none" stroke="#a1a1aa" stroke-width="3">
+    <rect x="358" y="198" width="84" height="64" rx="8"/>
+    <circle cx="400" cy="232" r="18"/>
+    <path d="M370 198 l10 -14 h40 l10 14"/>
+  </g>
+  <text x="400" y="292" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="19" font-weight="700" fill="#52525b" text-anchor="middle">Vehicles loaded at port</text>
+  <text x="400" y="316" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#a1a1aa" text-anchor="middle">Real photo to be added</text>
+</svg>
