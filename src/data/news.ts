@@ -771,7 +771,7 @@ We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partn
 | HEV | Little to no charging infrastructure | None | Wants better fuel economy, zero change in driving habits |
 | ICE | Charging absent, fuel affordable, price-sensitive buyers | None | Lowest upfront cost, universal parts and service |
 
-![Battery-electric and hybrid Chinese SUVs lined up at an export yard, one charging](/images/news/powertrain-1.svg)
+![Matrix chart: powertrain fit by market — EREV and ICE strong in cold CIS, PHEV and EREV strong in the Gulf, HEV and ICE strong in Africa](/images/news/powertrain-matrix.svg)
 
 ## Region-by-Region Fit
 
@@ -799,6 +799,8 @@ We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partn
 | [Geely Atlas](/cars/geely-atlas/) | ICE | — | — | $17,800 - $22,500 | 22 units |
 
 We do not currently hold HEV models in ready stock. If a market you're stocking needs a self-charging hybrid, [send us your target model and destination](/contact/quote/) and we'll source it — we work with 15+ OEM brands beyond our ready-stock lineup.
+
+![Battery-electric and hybrid Chinese SUVs lined up at an export yard, one charging](/images/news/powertrain-1.svg)
 
 ## Does Powertrain Type Affect Import Duty?
 
@@ -898,6 +900,8 @@ We handle the China-side export and documentation; a local broker or your own te
 - Certificate of Conformity / EAC where required
 - Vehicle passport / SBKTS for registration in Kazakhstan
 
+![Container gantry cranes at the Khorgos dry port on the China–Kazakhstan border](/images/news/kazakhstan-3.svg)
+
 ## Common Traps
 
 - **Assuming EVs still clear free.** The quota is gone; budget 16% VAT.
@@ -970,6 +974,8 @@ Three practical consequences:
 ## Should You Still Import to Russia?
 
 Yes — with eyes open. Chinese vehicles continue to dominate Russian sales, and demand is real. The change is not a ban; it is a cost increase aimed at favouring local assembly. What it rewards is precision: pick models deliberately, model the recycling fee for each one before ordering, and price your retail to absorb it. Guessing is what loses money now.
+
+![Rows of new Chinese SUVs in a snow-dusted dealer inventory yard](/images/news/russia-2.svg)
 
 Not sure which models and powertrains fit Russia's cold climate and this cost structure? See our guide on [which powertrain to import for your market](/news/bev-vs-phev-vs-erev-vs-hybrid-which-to-import/), or send your target city and volume for a landed-cost breakdown.
 

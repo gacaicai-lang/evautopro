@@ -112,7 +112,61 @@ def kazakhstan_cost():
     print("kazakhstan-cost.svg")
 
 
+# ---------------------------------------------------------------------------
+# 3. Powertrain pillar — market × powertrain fit matrix
+# ---------------------------------------------------------------------------
+def powertrain_matrix():
+    cols = ["BEV", "PHEV", "EREV", "HEV", "ICE"]
+    rows = [  # (region, [fit per col: 2=strong, 1=situational, 0=weak])
+        ("Russia & CIS (cold)",   [0, 1, 2, 1, 2]),
+        ("Middle East & Gulf",    [1, 2, 2, 1, 1]),
+        ("Africa (most markets)", [0, 0, 1, 2, 2]),
+        ("Latin America",         [1, 2, 1, 1, 2]),
+    ]
+    W, H = 820, 470
+    x0 = 236                      # label margin
+    col_w = (W - x0 - 40) / len(cols)
+    y0, row_h = 128, 60
+
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" font-family="{FONT}">']
+    s.append(f'<rect width="{W}" height="{H}" fill="white"/>')
+    s.append(f'<text x="32" y="42" font-size="21" font-weight="700" fill="{INK9}">Which powertrain fits which market</text>')
+    s.append(f'<text x="32" y="66" font-size="13.5" fill="{INK5}">Fit driven by charging infrastructure and climate at destination — not by which technology is &#8220;best&#8221;.</text>')
+    # column headers
+    for j, c in enumerate(cols):
+        cx = x0 + col_w * (j + 0.5)
+        s.append(f'<text x="{cx:.0f}" y="{y0-22}" font-size="14" font-weight="700" fill="{INK9}" text-anchor="middle">{c}</text>')
+    # rows
+    for i, (region, fits) in enumerate(rows):
+        cy = y0 + i * row_h + row_h / 2
+        if i % 2 == 0:
+            s.append(f'<rect x="24" y="{y0 + i*row_h:.0f}" width="{W-48}" height="{row_h}" rx="8" fill="{INK05}"/>')
+        s.append(f'<text x="{x0-16}" y="{cy+5:.0f}" font-size="13.5" fill="{INK6}" text-anchor="end">{esc(region)}</text>')
+        for j, fit in enumerate(fits):
+            cx = x0 + col_w * (j + 0.5)
+            if fit == 2:
+                s.append(f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="13" fill="{RED}"/>')
+                s.append(f'<path d="M{cx-5.5:.0f} {cy:.0f} l4 4 l7 -8" stroke="white" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>')
+            elif fit == 1:
+                s.append(f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="10" fill="none" stroke="{INK5}" stroke-width="2.5"/>')
+            else:
+                s.append(f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="4" fill="{INK3}"/>')
+    # legend
+    ly = y0 + len(rows) * row_h + 38
+    s.append(f'<circle cx="44" cy="{ly}" r="10" fill="{RED}"/><path d="M39.5 {ly} l3 3 l5.5 -6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>')
+    s.append(f'<text x="62" y="{ly+4}" font-size="12.5" fill="{INK6}">Strong fit</text>')
+    s.append(f'<circle cx="168" cy="{ly}" r="8" fill="none" stroke="{INK5}" stroke-width="2.2"/>')
+    s.append(f'<text x="186" y="{ly+4}" font-size="12.5" fill="{INK6}">Situational — depends on city / charging access</text>')
+    s.append(f'<circle cx="520" cy="{ly}" r="4" fill="{INK3}"/>')
+    s.append(f'<text x="534" y="{ly+4}" font-size="12.5" fill="{INK6}">Weak fit today</text>')
+    s.append(f'<text x="32" y="{H-16}" font-size="11.5" fill="{INK5}">General guidance — match to your specific city before ordering. Source: EV Auto Pro export experience, 60+ markets.</text>')
+    s.append('</svg>')
+    (OUT / "powertrain-matrix.svg").write_text("\n".join(s))
+    print("powertrain-matrix.svg")
+
+
 if __name__ == "__main__":
     russia_160hp()
     kazakhstan_cost()
+    powertrain_matrix()
     print("Done ->", OUT)

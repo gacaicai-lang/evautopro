@@ -89,11 +89,11 @@ deploy automatically.
 Two kinds of image live in the articles:
 
 **Already done — data infographics (code-generated, do NOT touch):**
-`public/images/news/russia-160hp.svg` and `kazakhstan-cost.svg` are final,
-brand-accurate SVG charts built from real catalog data by
-`scripts/make-infographics.py`. Leave them as-is.
+`public/images/news/russia-160hp.svg`, `kazakhstan-cost.svg` and
+`powertrain-matrix.svg` are final, brand-accurate SVG charts built from real
+catalog data by `scripts/make-infographics.py`. Leave them as-is.
 
-**For you to make — scene photos (5 slots):**
+**For you to make — scene photos (7 slots):**
 Just generate a natural, photoreal image of the scene described below and save
 it as the same base filename with a `.webp` extension in `public/images/news/`
 (~1600px long edge, <250KB). No Midjourney prompt syntax needed — a plain,
@@ -107,8 +107,7 @@ All the global rules in "Conventions" apply (no text, no plates, no logos).
 | `powertrain-2.webp` | Powertrain pillar | A modern electric SUV driving on a snow-lined mountain highway in overcast winter light. | Electric SUV driving a snowy northern highway |
 | `kazakhstan-1.webp` | Kazakhstan guide | Passenger cars secured on open rail car-carrier wagons at a border rail terminal, dry steppe landscape, clear daylight. | Cars secured on an export block train to Central Asia |
 | `kazakhstan-2.webp` | Kazakhstan guide | Imported passenger cars parked in rows at a customs inspection yard, a customs officer with a clipboard, warehouse and fencing behind, daylight. | Imported vehicles at a Kazakhstan customs clearance yard |
+| `kazakhstan-3.webp` | Kazakhstan guide | Container gantry cranes and stacked containers at a large dry port on the China–Kazakhstan border (Khorgos-style), rail tracks in the foreground, clear daylight, wide shot. | Container gantry cranes at the Khorgos dry port |
 | `russia-1.webp` | Russia guide | A large roll-on/roll-off car-carrier ship docked at a port with its stern ramp down, cars queued on the quay to board, overcast. | Car-carrier vessel loading vehicles at port |
-
-(The old `russia-2` scene slot was replaced by the `russia-160hp` infographic,
-so it's no longer needed.)
+| `russia-2.webp` | Russia guide | Rows of new compact and mid-size SUVs parked in a dealer inventory lot in winter, light snow on the ground, overcast daylight. | New SUVs in a snow-dusted dealer inventory yard |
 
