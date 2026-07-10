@@ -872,6 +872,8 @@ Take a [Deepal S05](/cars/deepal-s05/) (battery-electric compact SUV) at an FOB 
 | Recycling fee (EV coefficient) | confirm current MRP |
 | **Indicative landed, before recycling fee** | **~24,600** |
 
+![Chart: landed-cost breakdown of a battery-electric Deepal S05 to Kazakhstan — FOB, freight and 16% VAT totalling about $24,590 before the recycling fee](/images/news/kazakhstan-cost.svg)
+
 A combustion equivalent like the [Changan CS55 Plus](/cars/changan-cs55-plus/) (~$14,500 FOB) carries the 15% duty and engine-based excise on top, so run the math per powertrain — the cheaper FOB doesn't always win once duty and excise are added. Not sure which powertrain fits Kazakhstan's climate and charging reality? See our guide on [which powertrain to import for your market](/news/bev-vs-phev-vs-erev-vs-hybrid-which-to-import/).
 
 ## Step-by-Step Process
@@ -955,7 +957,7 @@ Most popular Chinese SUVs produce well over 160 hp. That puts them above the pre
 
 The honest takeaway: the current export-favourite SUVs all sit above the preferential line. That is not unique to any one brand — it reflects how modern turbocharged and electrified Chinese SUVs are specced. It means the recycling fee is a real cost line for all of them, and it should be modelled per unit before you commit to a container.
 
-![Row of new Chinese SUVs in a dealer inventory yard in winter](/images/news/russia-2.svg)
+![Chart: Chinese SUV engine power in PS versus Russia's 160 hp recycling-fee preferential line — every current model sits above it](/images/news/russia-160hp.svg)
 
 ## What This Means for Your Landed Cost
 
