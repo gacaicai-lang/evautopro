@@ -911,7 +911,9 @@ We handle the China-side export and documentation; a local broker or your own te
 
 ## Confirm Before You Order
 
-Duty, VAT and the recycling fee in Kazakhstan changed twice in the last year and can change again on government timelines. Treat this guide as orientation, not a final quote — confirm current rates for your specific model and import date before finalizing. We track the numbers for our active [Kazakhstan buyers](/markets/kazakhstan/) and will flag anything relevant with your quote.`,
+Duty, VAT and the recycling fee in Kazakhstan changed twice in the last year and can change again on government timelines. Treat this guide as orientation, not a final quote — confirm current rates for your specific model and import date before finalizing. We track the numbers for our active [Kazakhstan buyers](/markets/kazakhstan/) and will flag anything relevant with your quote.
+
+**Sources & further reading:** [U.S. International Trade Administration — Kazakhstan Import Tariffs](https://www.trade.gov/country-commercial-guides/kazakhstan-import-tariffs) · [PwC Tax Summaries — Kazakhstan, Other Taxes](https://taxsummaries.pwc.com/kazakhstan/corporate/other-taxes). Always confirm current figures with Kazakhstan customs (КГД) or a licensed broker before ordering.`,
     faqs: [
       { q: 'Do electric cars still clear duty-free in Kazakhstan in 2026?', a: 'The 0% customs tariff still applies to EVs under Kazakhstan\'s WTO commitments if the vehicle stays in the country, but the duty-and-VAT-free quota was exhausted around 15 October 2025, and VAT rose to 16% from 1 January 2026. So an EV is no longer fully free — budget the 16% VAT plus the recycling fee.' },
       { q: 'Can I import a car cheaply into Kazakhstan and move it to Russia?', a: 'No. A vehicle cleared at the 0% WTO tariff carries a "Kazakhstan-only" clause and cannot be re-exported to other EAEU countries (Russia, Belarus, Armenia, Kyrgyzstan). It is strictly enforced. Import for the Kazakhstan market, not as transit.' },
@@ -981,7 +983,9 @@ Not sure which models and powertrains fit Russia's cold climate and this cost st
 
 ## Confirm Before You Order
 
-Russia's recycling fee has changed several times and is indexed annually — the exact figure for a given model and date moves. Treat this as orientation, not a final quote. We track current rates for our active [Russia buyers](/markets/russia/) and include the fee in the landed-cost math with every quote.`,
+Russia's recycling fee has changed several times and is indexed annually — the exact figure for a given model and date moves. Treat this as orientation, not a final quote. We track current rates for our active [Russia buyers](/markets/russia/) and include the fee in the landed-cost math with every quote.
+
+**Sources & further reading:** [The Moscow Times — importers rush to beat the recycling-fee hike](https://www.themoscowtimes.com/2025/11/17/thousands-of-car-carriers-backed-up-at-russias-borders-as-importers-rush-to-beat-fee-hike-a91137) · [Interfax — recycling fee to rise for cars over 160 hp](https://interfax.com/newsroom/top-stories/112438/). Confirm the exact current coefficient for your model and date before pricing.`,
     faqs: [
       { q: 'How is Russia\'s recycling fee calculated in 2026?', a: 'Since December 2025 it is tied to engine power on a progressive scale, with the preferential (lower) rate kept only for cars up to 160 hp. Above 160 hp the fee rises sharply. It is indexed 10–20% annually and sits on top of the 15% import tariff and VAT.' },
       { q: 'Do most Chinese SUVs fall under the 160 hp preferential band?', a: 'No. Most modern Chinese SUVs — including the popular export models — produce well over 160 hp (typically 177–260 PS, and much higher for PHEV/EREV flagships), which places them above the preferential band where the fee is highest. Budget the fee explicitly per model.' },

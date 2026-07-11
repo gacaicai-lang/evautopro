@@ -121,15 +121,29 @@ const bodyBlocks = parseBody(article.body);
   {/* Body */}
   <section class="py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-lg text-ink-600 leading-relaxed mb-10 italic">{article.excerpt}</p>
+      <p class="text-lg text-ink-600 leading-relaxed mb-8 italic">{article.excerpt}</p>
+
+      {/* Author byline — E-E-A-T signal */}
+      <a href="/about/founder/" class="flex items-center gap-3 mb-10 pb-8 border-b border-ink-200 group no-underline">
+        <div class="w-11 h-11 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">C</div>
+        <div class="text-sm leading-tight">
+          <div class="text-ink-900"><span class="text-ink-500">By</span> <span class="font-bold group-hover:text-brand-500 transition-colors">Cai</span> · Founder &amp; Trade Director, EV Auto Pro</div>
+          <div class="text-ink-500 mt-0.5">15 years cross-border trade · 6 authorized OEM partnerships · reviewed for {article.date.slice(0, 4)}</div>
+        </div>
+      </a>
 
       <div class="prose-content space-y-5 text-base text-ink-700 leading-relaxed">
         {bodyBlocks.map(block => {
-          const inline = (parts: InlinePart[]) => parts.map(part =>
-            part.type === 'strong' ? <strong>{part.content}</strong>
-            : part.type === 'a' ? <a href={part.href} class="text-brand-500 hover:underline font-medium">{part.content}</a>
-            : part.content
-          );
+          const inline = (parts: InlinePart[]) => parts.map(part => {
+            if (part.type === 'strong') return <strong>{part.content}</strong>;
+            if (part.type === 'a') {
+              const external = /^https?:\/\//.test(part.href ?? '');
+              return external
+                ? <a href={part.href} target="_blank" rel="noopener nofollow" class="text-brand-500 hover:underline font-medium">{part.content}</a>
+                : <a href={part.href} class="text-brand-500 hover:underline font-medium">{part.content}</a>;
+            }
+            return part.content;
+          });
 
           if (block.type === 'h2') return <h2 class="text-2xl lg:text-3xl font-bold text-ink-900 mt-12 mb-4">{block.text}</h2>;
           if (block.type === 'h3') return <h3 class="text-xl font-bold text-ink-900 mt-8 mb-3">{block.text}</h3>;
@@ -236,9 +250,21 @@ const bodyBlocks = parseBody(article.body);
     '@context': 'https://schema.org', '@type': 'NewsArticle',
     headline: article.title,
     datePublished: article.date,
+    dateModified: article.date,
     description: article.excerpt,
-    author: { '@type': 'Organization', name: 'EV Auto Pro' },
-    publisher: { '@type': 'Organization', name: 'EV Auto Pro', url: 'https://evautopro.com' },
+    image: new URL(article.hero, 'https://evautopro.com').href,
+    author: {
+      '@type': 'Person',
+      name: 'Cai',
+      jobTitle: 'Founder & Trade Director',
+      worksFor: { '@type': 'Organization', name: 'EV Auto Pro' },
+      url: 'https://evautopro.com/about/founder/',
+      description: '15 years cross-border trade experience; 6 authorized Chinese OEM dealer partnerships.',
+    },
+    publisher: {
+      '@type': 'Organization', name: 'EV Auto Pro', url: 'https://evautopro.com',
+      logo: { '@type': 'ImageObject', url: 'https://evautopro.com/og-default.jpg' },
+    },
   })} />
 
   {article.faqs && article.faqs.length > 0 && (
