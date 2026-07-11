@@ -996,6 +996,81 @@ Russia's recycling fee has changed several times and is indexed annually — the
     related: ['bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'top-7-chinese-suv-for-russia-2026', 'import-cars-from-china-to-kazakhstan-2026'],
   },
 
+  'how-to-verify-a-chinese-car-exporter-before-you-pay': {
+    slug: 'how-to-verify-a-chinese-car-exporter-before-you-pay',
+    category: 'guide', categoryLabel: 'Buyer Guide',
+    title: 'How to Verify a Chinese Car Exporter Before You Pay (2026 Dealer Checklist)',
+    excerpt: 'Before you wire a deposit to a Chinese car supplier, run these seven checks. They separate a MOFCOM-authorized exporter from a grey-market reseller — and protect your money.',
+    hero: '/images/news/russia-1.webp',
+    date: '2026-07-07 10:00:00', readMin: 9,
+    body: `Before wiring a deposit to any Chinese car exporter, verify seven things: their MOFCOM export licence, an OEM authorization or dealer channel, the company registration behind the bank account, a pre-shipment inspection commitment, the full export document set, realistic payment terms, and traceable references. The single biggest loss in this trade is a deposit sent to a company that turns out to be a grey-market reseller — or not a company at all. This checklist is how a professional importer avoids that.
+
+## The Fastest Signal: Authorized Exporter Status
+
+China requires anyone exporting passenger vehicles to hold **MOFCOM authorized exporter registration**. A legitimate exporter can show you that registration number, and you can verify it through the Chinese embassy or consulate in your country. Grey-market resellers — who buy from domestic dealers and ship without authorization — cannot. Ask for it first; if the answer is vague, stop there.
+
+## The 7-Point Verification Checklist
+
+| # | Check | What to ask for | Red flag |
+| --- | --- | --- | --- |
+| 1 | Export licence | MOFCOM authorized exporter certificate + number | "We don't need one" / can't produce it |
+| 2 | OEM channel | Dealer authorization or a named OEM supply relationship | Claims to sell every brand with no proof of any |
+| 3 | Company identity | Business licence; the name must match the bank account | Bank account is a personal name, not the company |
+| 4 | Inspection | Written commitment to pre-shipment photo & video PDI | Refuses inspection or "trust us" only |
+| 5 | Documents | Sample Invoice, Packing List, B/L, CO, CoC | Can't show a real document set |
+| 6 | Payment terms | T/T 30% deposit + 70% before shipment, or L/C | Demands 100% up front to a personal account |
+| 7 | References | Contactable dealers in your region + delivery proof | No references, no verifiable track record |
+
+## Match the Bank Account to the Company
+
+This is where money is lost. A legitimate exporter invoices from a registered company and receives payment to a **company bank account in that same name**. If the proforma invoice says one company but the bank details are a personal account or an unrelated third party, treat it as a stop sign — no matter how good the price. Insist the beneficiary name on the wire matches the business licence.
+
+## Payment Terms That Protect You
+
+Standard, safe terms in this trade:
+
+- **T/T 30% deposit + 70% before shipment** — you pay the balance once the vehicle is prepared and (ideally) after you've seen the pre-shipment inspection report.
+- **L/C at sight** from a major bank — the bank releases funds only against correct shipping documents.
+
+A supplier demanding **100% payment up front**, especially to a personal account, is asking you to carry all the risk. Real exporters don't need that; they have the working capital and the track record.
+
+## Insist on Pre-Shipment Inspection
+
+A serious exporter inspects every unit before loading and sends you a **photo and video report of your actual cars** — not stock images. This is your proof the vehicle exists, matches the order, and is undamaged before your balance payment leaves your account. If a supplier resists inspection or only offers brochure photos, that tells you what you need to know. You can also commission an independent third-party inspection (SGS or similar) at your cost.
+
+## The Documents a Real Exporter Provides
+
+Ask to see a **sample set** up front — a legitimate exporter has these ready:
+
+- Commercial Invoice and Packing List
+- Bill of Lading (or rail waybill / CMR)
+- Certificate of Origin
+- Certificate of Conformity (and market certifications: EAC / GCC / etc.)
+- Export declaration
+
+If they can't produce a specimen of these, they haven't shipped legally before.
+
+## Key Takeaways
+
+- **Ask for the MOFCOM export licence number first** — it's the quickest way to separate a real exporter from a reseller.
+- **The bank account name must match the invoicing company.** Personal-account payment is the top scam signal.
+- **Never pay 100% up front.** T/T 30/70 or L/C at sight are the safe standards.
+- **Demand a photo & video inspection of your actual units** before the balance payment.
+- **No verifiable references or documents = walk away**, regardless of price.
+
+## How EV Auto Pro Checks Out
+
+We hold **MOFCOM authorized exporter status and AEO customs certification since 2018**, with direct dealer relationships across 6 OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour). Every order runs the [EV Auto Pro Export PDI](/services/inspection/) with a photo and video report before loading, on standard T/T 30/70 or L/C terms, with the full document set provided. If you're evaluating suppliers, [send us your requirement](/contact/quote/) and ask us to prove any item on the checklist above — that's the test a real exporter should pass.`,
+    faqs: [
+      { q: 'How do I verify a Chinese car exporter is legitimate?', a: 'Ask for their MOFCOM authorized exporter certificate and number (verifiable via the Chinese embassy/consulate), confirm the invoicing company matches the bank account name, require a pre-shipment photo & video inspection, and check contactable references with delivery proof. A legitimate exporter passes all of these; a grey-market reseller usually cannot show the export licence.' },
+      { q: 'What is the safest way to pay a Chinese car supplier?', a: 'T/T 30% deposit + 70% before shipment (ideally after you receive the pre-shipment inspection report), or an L/C at sight from a major bank. Never pay 100% up front, and never wire to a personal bank account that does not match the invoicing company name.' },
+      { q: 'What is the biggest red flag when buying cars from China?', a: 'A mismatch between the invoicing company and the bank account — especially a personal account — is the top scam signal. Others: a supplier who cannot produce a MOFCOM export licence, refuses inspection, demands 100% up front, or has no verifiable references.' },
+      { q: 'Should I pay for a third-party inspection?', a: 'A serious exporter already includes a pre-shipment photo & video inspection of your actual units at no charge. For extra assurance, especially on a first order or a large one, an independent third-party inspection (SGS or similar) at your cost is a reasonable safeguard.' },
+      { q: 'What documents should a Chinese car exporter provide?', a: 'Commercial Invoice, Packing List, Bill of Lading (or rail waybill/CMR), Certificate of Origin, Certificate of Conformity, and the relevant market certifications (EAC, GCC, etc.). Ask for a sample set up front — a legitimate exporter has these ready.' },
+    ],
+    related: ['2026-china-nev-export-rules-guide', 'import-cars-from-china-to-kazakhstan-2026', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);
