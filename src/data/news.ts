@@ -783,7 +783,7 @@ We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partn
 
 **Latin America (mixed — strong in a few urban centers, thin elsewhere).** Similar logic to Africa outside major metro areas, with pockets (particularly Brazil's larger cities) where PHEV and BEV are becoming viable. Match the powertrain to the specific city or region you're importing into rather than treating the whole country as one market.
 
-![Extended-range electric SUV driving on a snowy northern highway](/images/news/powertrain-2.svg)
+![Extended-range electric SUV driving on a snowy northern highway](/images/news/powertrain-2.webp)
 
 ## What's Actually in Stock
 
@@ -800,7 +800,7 @@ We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partn
 
 We do not currently hold HEV models in ready stock. If a market you're stocking needs a self-charging hybrid, [send us your target model and destination](/contact/quote/) and we'll source it — we work with 15+ OEM brands beyond our ready-stock lineup.
 
-![Battery-electric and hybrid Chinese SUVs lined up at an export yard, one charging](/images/news/powertrain-1.svg)
+![Battery-electric and hybrid Chinese SUVs lined up at an export yard, one charging](/images/news/powertrain-1.webp)
 
 ## Does Powertrain Type Affect Import Duty?
 
@@ -844,7 +844,7 @@ Kazakhstan spent two years as one of the most attractive EV import markets in th
 
 That last point is the trap most guides skip.
 
-![Passenger cars secured on an export block train bound for Central Asia](/images/news/kazakhstan-1.svg)
+![Passenger cars secured on an export block train bound for Central Asia](/images/news/kazakhstan-1.webp)
 
 ## The "Kazakhstan-Only" Rule on 0%-Tariff Cars
 
@@ -889,7 +889,7 @@ A combustion equivalent like the [Changan CS55 Plus](/cars/changan-cs55-plus/) (
 
 We handle the China-side export and documentation; a local broker or your own team handles Kazakhstan clearance, and we can recommend partners.
 
-![Imported vehicles at a customs clearance yard in Kazakhstan](/images/news/kazakhstan-2.svg)
+![Imported vehicles at a customs clearance yard in Kazakhstan](/images/news/kazakhstan-2.webp)
 
 ## Documents You Need
 
@@ -900,7 +900,7 @@ We handle the China-side export and documentation; a local broker or your own te
 - Certificate of Conformity / EAC where required
 - Vehicle passport / SBKTS for registration in Kazakhstan
 
-![Container gantry cranes at the Khorgos dry port on the China–Kazakhstan border](/images/news/kazakhstan-3.svg)
+![Container gantry cranes at the Khorgos dry port on the China–Kazakhstan border](/images/news/kazakhstan-3.webp)
 
 ## Common Traps
 
@@ -942,7 +942,7 @@ Russia has been raising the recycling fee in steps since 2024, and the 2026 refo
 
 The stated goal is to make local assembly more attractive than direct import — so the reform is designed to raise the cost of bringing finished cars in.
 
-![Roll-on roll-off car carrier vessel loaded with vehicles at port](/images/news/russia-1.svg)
+![Roll-on roll-off car carrier vessel loaded with vehicles at port](/images/news/russia-1.webp)
 
 ## Why the 160 HP Line Matters for Chinese SUVs
 
@@ -975,7 +975,7 @@ Three practical consequences:
 
 Yes — with eyes open. Chinese vehicles continue to dominate Russian sales, and demand is real. The change is not a ban; it is a cost increase aimed at favouring local assembly. What it rewards is precision: pick models deliberately, model the recycling fee for each one before ordering, and price your retail to absorb it. Guessing is what loses money now.
 
-![Rows of new Chinese SUVs in a snow-dusted dealer inventory yard](/images/news/russia-2.svg)
+![Rows of new Chinese SUVs in a snow-dusted dealer inventory yard](/images/news/russia-2.webp)
 
 Not sure which models and powertrains fit Russia's cold climate and this cost structure? See our guide on [which powertrain to import for your market](/news/bev-vs-phev-vs-erev-vs-hybrid-which-to-import/), or send your target city and volume for a landed-cost breakdown.
 
