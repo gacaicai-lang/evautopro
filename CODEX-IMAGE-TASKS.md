@@ -28,20 +28,21 @@
 | B2. About 6 张 | `public/images/about/{loading-1,2,3,team,office,warehouse}.webp` | 已交付且 src 已指向 .webp ✓ |
 | D. 文章场景 7 张 | `public/images/news/{kazakhstan-1..3,russia-1..2,powertrain-1..2}.webp` | 抽查 kazakhstan-3（霍尔果斯式陆港）、russia-1（RoRo 装船）：质量好、无文字 ✓ |
 
-### ⚠ NEEDED（Codex 待处理 — 唯一遗留）
+### 🟡 DELIVERED（Codex 已处理，待 Claude 独立抽查）
 
-Jetour T2 有 **4 张外观图仍带烙印广告字**（"向往 就前往 / 13.99万" + 车身模糊涂抹），
-在车详情页 gallery 直接可见，损害可信度：
+2026-07-12：复核确认 Jetour T2 的 7 张外观/细节图均存在广告字、价格、
+"旅行者 2025款" 或大面积模糊涂抹，已全部同名替换。新图均为 1600×900 WebP、
+单张 <250KB、无透明通道、无文字/徽标/车牌/水印，且无重复构图。
 
-| 文件（public/images/vehicles/） | 问题 | 要求 |
+| 文件（public/images/vehicles/） | 新内容 | 状态 |
 |---|---|---|
-| `evautopro-jetour-t2-appearance-01.webp` | 山景广告图，带大字广告语+指导价 | 换干净外观实拍，同名替换 |
-| `evautopro-jetour-t2-appearance-04.webp` | 同上（近似重复图） | 同上 |
-| `evautopro-jetour-t2-other-02.webp` | 同上 | 同上 |
-| `evautopro-jetour-t2-other-03.webp` | 同上 | 同上 |
-
-另请顺手复核：`appearance-03`、`appearance-05`、`other-01` 三张正面图前脸下方似有
-"旅行者 2025款" 小字 —— 若是烙印文字而非实车牌饰，也一并替换。
+| `evautopro-jetour-t2-appearance-01.webp` | 山路前 3/4 外观 | DELIVERED |
+| `evautopro-jetour-t2-appearance-03.webp` | 建筑背景整车侧面 | DELIVERED |
+| `evautopro-jetour-t2-appearance-04.webp` | 森林碎石路后 3/4 外观 | DELIVERED |
+| `evautopro-jetour-t2-appearance-05.webp` | 中性影棚前 3/4 外观 | DELIVERED |
+| `evautopro-jetour-t2-other-01.webp` | 前灯与格栅细节 | DELIVERED |
+| `evautopro-jetour-t2-other-02.webp` | 尾灯与备胎罩细节 | DELIVERED |
+| `evautopro-jetour-t2-other-03.webp` | 轮毂、轮拱与侧踏板细节 | DELIVERED |
 
 ### 🚫 不要动
 
