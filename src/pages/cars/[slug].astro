@@ -257,8 +257,17 @@ const productSchema = JSON.stringify({
     highPrice: car.pricing.fob_max,
     offerCount: car.stock_units,
     availability: car.stock_status === 'In Stock' ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
-    seller: { '@type': 'Organization', name: 'EV Auto Pro' },
+    seller: { '@type': 'Organization', '@id': 'https://evautopro.com/#organization', name: 'EV Auto Pro' },
   },
+});
+const breadcrumbSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://evautopro.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Cars', item: 'https://evautopro.com/cars/' },
+    { '@type': 'ListItem', position: 3, name: fullTitle, item: new URL(`/cars/${car.slug}/`, Astro.site).href },
+  ],
 });
 const faqSchema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -303,6 +312,7 @@ const waLink = (text: string) => `https://wa.me/8615964467914?text=${encodeURICo
 >
   <script slot="head" type="application/ld+json" set:html={productSchema} />
   <script slot="head" type="application/ld+json" set:html={faqSchema} />
+  <script slot="head" type="application/ld+json" set:html={breadcrumbSchema} />
 
   <div class="bg-ink-50 min-h-screen pb-20 lg:pb-0">
 

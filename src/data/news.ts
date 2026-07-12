@@ -1,6 +1,6 @@
 export type NewsArticle = {
   slug: string;
-  category: 'industry' | 'product' | 'guide' | 'company';
+  category: 'industry' | 'product' | 'guide' | 'market' | 'company';
   categoryLabel: string;
   title: string;
   excerpt: string;
@@ -18,7 +18,7 @@ export const news: Record<string, NewsArticle> = {
   '2026-china-nev-export-rules-guide': {
     slug: '2026-china-nev-export-rules-guide',
     category: 'industry',
-    categoryLabel: 'Industry News',
+    categoryLabel: 'Industry & Policy',
     title: "China's New NEV Export Policy 2026: A Complete Guide by EV Auto Pro",
     excerpt: "Starting 2026, China's auto export sector pivots to quality with stricter standards for sustainable growth.",
     hero: '/images/faq-logistics.webp',
@@ -91,7 +91,7 @@ If you're entering Chinese vehicle import — now is the time. Contact EV Auto P
   'changan-uni-t-vs-jetour-t2-comparison': {
     slug: 'changan-uni-t-vs-jetour-t2-comparison',
     category: 'product',
-    categoryLabel: 'New Product News',
+    categoryLabel: 'Model Comparison',
     title: 'Changan UNI-T vs Jetour T2: Which Coupé SUV for Export?',
     excerpt: 'Both models target the global compact-mid SUV segment but with distinct positioning. Detailed export buyer comparison.',
     hero: '/images/vehicles/evautopro-jetour-t2-01.webp',
@@ -162,8 +162,8 @@ EV Auto Pro is authorized exporter for both Changan and Jetour. We can supply mi
 
   'top-7-chinese-suv-for-russia-2026': {
     slug: 'top-7-chinese-suv-for-russia-2026',
-    category: 'guide',
-    categoryLabel: 'Buyer Guide',
+    category: 'market',
+    categoryLabel: 'Market & Import',
     title: 'Top 7 Chinese Off-Road SUVs for Russia in 2026',
     excerpt: 'These models offer robust performance for diverse terrains and comfortable interiors. Ideal for Russian dealer inventory 2026.',
     hero: '/images/vehicles/evautopro-geely-atlas-01.webp',
@@ -257,7 +257,7 @@ EV Auto Pro is authorized exporter for all 6 brands listed (Changan / Geely / De
 
 
   'geely-coolray-export-deep-dive': {
-    slug: 'geely-coolray-export-deep-dive', category: 'guide', categoryLabel: 'Buyer Guide',
+    slug: 'geely-coolray-export-deep-dive', category: 'market', categoryLabel: 'Market & Import',
     title: 'Geely Coolray Export Deep Dive: UAE, KZ, BR Markets',
     excerpt: 'Complete buyer guide for Geely Coolray RHD and LHD variants across UAE, Kazakhstan, and Brazil markets.',
     hero: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-05-08', readMin: 7,
@@ -330,7 +330,7 @@ EV Auto Pro holds Changan dealer MoU since 2018. Factory invoice for every unit.
   },
 
   'jetour-t2-vs-geely-coolray-africa': {
-    slug: 'jetour-t2-vs-geely-coolray-africa', category: 'product', categoryLabel: 'New Product News',
+    slug: 'jetour-t2-vs-geely-coolray-africa', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Jetour T2 vs Geely Coolray: Which Small SUV Fits Africa Better?',
     excerpt: 'Africa SUV buyers face a choice — Jetour T2 7-seater PHEV adventure or Geely Coolray compact CMA platform. Detailed comparison.',
     hero: '/images/vehicles/evautopro-jetour-t2-01.webp', date: '2026-05-12', readMin: 5,
@@ -372,7 +372,7 @@ Both available via EV Auto Pro authorized export.`,
   },
 
   'deepal-s07-alternatives': {
-    slug: 'deepal-s07-alternatives', category: 'product', categoryLabel: 'New Product News',
+    slug: 'deepal-s07-alternatives', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Affordable Deepal S07 Alternatives: Value EREV SUVs from China',
     excerpt: 'Looking for Deepal S07 EREV at lower price? Compare with Geely Coolray Hybrid, Changan UNI-K iDD, and other value alternatives.',
     hero: '/images/vehicles/evautopro-deepal-s07-01.webp', date: '2026-05-11', readMin: 6,
@@ -416,7 +416,7 @@ Need EREV (long range, limited charging)?
   },
 
   'changan-uni-t-vs-uni-z-comparison': {
-    slug: 'changan-uni-t-vs-uni-z-comparison', category: 'product', categoryLabel: 'New Product News',
+    slug: 'changan-uni-t-vs-uni-z-comparison', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Changan UNI-T vs UNI-Z: Comparison, Buying Guide & Alternatives',
     excerpt: 'Both UNI-T and UNI-Z are Changan sport coupé SUVs. Detailed differences, market fit, and pricing.',
     hero: '/images/vehicles/evautopro-changan-uni-t-01.webp', date: '2026-05-09', readMin: 5,
@@ -608,7 +608,7 @@ For Egypt / Algeria / South Africa with CKD assembly programs, we supply parts k
   },
 
   'china-vs-japan-vs-usa-models': {
-    slug: 'china-vs-japan-vs-usa-models', category: 'industry', categoryLabel: 'Industry News',
+    slug: 'china-vs-japan-vs-usa-models', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Toyota, Honda, Mercedes: China vs. USA Model Differences & Import Guide',
     excerpt: 'Chinese-built Toyota / Honda / Mercedes models differ from US/Japan versions. Import guide for international dealers.',
     hero: '/images/faq-sourcing.webp', date: '2026-01-31', readMin: 5,
@@ -654,7 +654,7 @@ We focus on **Chinese domestic brands** primarily (Changan, Geely, Jetour, Deepa
   },
 
   'import-chinese-cars-to-ghana': {
-    slug: 'import-chinese-cars-to-ghana', category: 'guide', categoryLabel: 'Buyer Guide',
+    slug: 'import-chinese-cars-to-ghana', category: 'market', categoryLabel: 'Market & Import',
     title: 'How to Import Cars from China to Ghana: Process, Costs & Model Guide',
     excerpt: 'Complete guide to importing Chinese cars to Ghana — customs, duties, port logistics, and recommended models for Ghana market.',
     hero: '/images/vehicles/evautopro-changan-cs55-plus-01.webp', date: '2026-01-08', readMin: 8,
@@ -699,7 +699,7 @@ We have not yet established Ghana dealer network. **Open to first-mover Ghana pa
   },
 
   'mg-zs-vs-geely-coolray-africa': {
-    slug: 'mg-zs-vs-geely-coolray-africa', category: 'product', categoryLabel: 'New Product News',
+    slug: 'mg-zs-vs-geely-coolray-africa', category: 'product', categoryLabel: 'Model Comparison',
     title: 'MG ZS vs Geely Coolray: Which Small SUV Fits Africa Better?',
     excerpt: 'Two top compact SUV options from China for African markets — MG ZS vs Geely Coolray. Detailed comparison.',
     hero: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-05-12', readMin: 5,
@@ -841,7 +841,7 @@ Guessing wrong on powertrain is expensive — a container of the wrong technolog
 
   'import-cars-from-china-to-kazakhstan-2026': {
     slug: 'import-cars-from-china-to-kazakhstan-2026',
-    category: 'guide', categoryLabel: 'Market Guide',
+    category: 'market', categoryLabel: 'Market & Import',
     title: 'How to Import Cars from China to Kazakhstan (2026): Duty, VAT, Recycling Fee & Process',
     excerpt: 'The rules changed hard in 2025–26: the EV duty-free quota is gone and VAT rose to 16%. Here is the current landed-cost math, document list, and step-by-step process for dealers importing from China.',
     expertInsight: 'Importing a car from China to Kazakhstan in 2026 costs duty (0% on EVs under WTO terms, 15% on combustion cars), 16% VAT from January 2026, and a power/age-based recycling fee — the EV duty-free quota that made this route especially cheap was exhausted in October 2025. Vehicles cleared at the 0% EV tariff cannot legally be re-exported to Russia or other EAEU states.',
@@ -951,7 +951,7 @@ Kazakhstan's rules have already changed twice in the last year — the quota clo
 
   'import-cars-from-china-to-russia-2026-recycling-fee': {
     slug: 'import-cars-from-china-to-russia-2026-recycling-fee',
-    category: 'guide', categoryLabel: 'Market Guide',
+    category: 'market', categoryLabel: 'Market & Import',
     title: 'Importing Cars from China to Russia in 2026: The Recycling Fee Reform and the 160 HP Line',
     excerpt: 'Russia now ties the recycling fee (утильсбор) to engine power, with the preferential rate kept only up to 160 hp. Here is what that means for landed cost, and where the popular Chinese SUVs actually sit.',
     expertInsight: 'Since December 2025, Russia\'s vehicle recycling fee scales with engine power, and the preferential rate applies only up to 160 hp — above that line the fee rises sharply on top of the existing 15% import tariff and VAT. Nearly every popular Chinese export SUV (177–462 PS) sits above that line, so the fee must be modelled per model, not assumed from FOB price alone.',
@@ -1116,7 +1116,7 @@ Don't take our word for it — ask us to prove every item above before you commi
 
   'chinese-car-dealers-uae-vs-direct-import-2026': {
     slug: 'chinese-car-dealers-uae-vs-direct-import-2026',
-    category: 'guide', categoryLabel: 'Buyer Guide',
+    category: 'market', categoryLabel: 'Market & Import',
     title: 'Chinese Car Dealers in the UAE vs Direct Import from China: A 2026 Buyer\'s Guide',
     excerpt: 'The UAE now has official distributors for every major Chinese brand — and a thriving direct-import channel through Jebel Ali. Which one you should use depends entirely on who you are: retail buyer, fleet operator, or trader.',
     expertInsight: 'UAE buyers who contact me usually start by asking for a price — but the first question should be channel. A retail buyer in Dubai is almost always better served by the official distributor (warranty, service, finance); a fleet operator, wholesale trader or re-exporter is usually better served importing directly from China, where the same vehicle typically lands 15–25% cheaper through Jebel Ali. This guide maps both channels honestly.',

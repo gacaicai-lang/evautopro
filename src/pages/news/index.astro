@@ -1,64 +1,39 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import WhatsAppField from '../../components/WhatsAppField.astro';
+import { news } from '../../data/news';
 
-// 1:1 ihkaauto.com/news layout
+// Data-driven listing: every article in news.ts appears here automatically,
+// so no article can become orphaned. Categories are real content types
+// (guides / market / comparisons / industry), not just "news".
 
-const featuredArticle = {
-  slug: '2026-china-nev-export-rules-guide',
-  category: 'Industry News',
-  title: "China's New NEV Export Policy 2026: A Complete Guide by EV Auto Pro",
-  excerpt: 'Starting 2026, China\'s auto export sector pivots to quality with stricter standards for sustainable growth.',
-  hero: '/images/faq-logistics.webp',
-  date: '2026-05-15',
-};
+const all = Object.values(news)
+  .map(a => ({ ...a, dateOnly: a.date.slice(0, 10) }))
+  .sort((x, y) => (x.date < y.date ? 1 : -1));
 
-const carouselItems = [
-  { slug: 'changan-uni-t-vs-jetour-t2-comparison', title: 'Changan UNI-T vs Jetour T2: Which Coupe SUV for Export?', excerpt: 'Both models offer comparable dimensions and powertrains, presenting...', img: '/images/vehicles/evautopro-changan-uni-t-01.webp' },
-  { slug: 'top-7-chinese-suv-for-russia-2026', title: 'Top 7 Chinese Off-Road SUVs for Russia in 2026', excerpt: 'These models offer robust performance for diverse terrains and comfortable interiors. Ideal...', img: '/images/vehicles/evautopro-deepal-s05-01.webp' },
-  { slug: 'geely-coolray-export-deep-dive', title: 'Geely Coolray Export Deep Dive: UAE, KZ, BR Markets', excerpt: 'Complete buyer guide for Geely Coolray RHD and LHD variants...', img: '/images/vehicles/evautopro-geely-coolray-01.webp' },
-];
+const featuredArticle = all[0];
+const carouselItems = all.slice(1, 4);
+const articles = all;
+const sidebarArticles = all.filter(a => a.category === 'guide' || a.category === 'market').slice(0, 6);
 
 const tabs = [
-  { key: 'latest', label: 'Latest News' },
-  { key: 'product', label: 'New Product News' },
-  { key: 'industry', label: 'Industry News' },
-  { key: 'company', label: 'Company Information' },
-];
-
-const articles = [
-  { slug: 'chinese-car-dealers-uae-vs-direct-import-2026', cat: 'industry', title: "Chinese Car Dealers in the UAE vs Direct Import from China: A 2026 Buyer's Guide", img: '/images/vehicles/evautopro-jetour-t2-01.webp', date: '2026-07-10' },
-  { slug: 'how-to-verify-a-chinese-car-exporter-before-you-pay', cat: 'industry', title: 'How to Verify a Chinese Car Exporter Before You Pay (2026 Dealer Checklist)', img: '/images/news/russia-1.webp', date: '2026-07-07' },
-  { slug: 'import-cars-from-china-to-kazakhstan-2026', cat: 'industry', title: 'How to Import Cars from China to Kazakhstan (2026): Duty, VAT, Recycling Fee & Process', img: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-07-09' },
-  { slug: 'import-cars-from-china-to-russia-2026-recycling-fee', cat: 'industry', title: 'Importing Cars from China to Russia in 2026: The Recycling Fee Reform and the 160 HP Line', img: '/images/vehicles/evautopro-changan-uni-t-01.webp', date: '2026-07-08' },
-  { slug: 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', cat: 'industry', title: 'BEV vs PHEV vs EREV vs Hybrid: Which Should You Import for Your Market? (2026 Dealer Guide)', img: '/images/faq-hero.webp', date: '2026-07-09' },
-  { slug: 'how-to-choose-changan-suv', cat: 'product', title: "How to Choose a Changan SUV: Complete Guide to Changan's NEV Lineup", img: '/images/vehicles/evautopro-changan-cs55-plus-01.webp', date: '2026-05-21' },
-  { slug: 'jetour-t2-vs-geely-coolray-africa', cat: 'product', title: 'Jetour T2 vs Geely Coolray: Which Small SUV Fits Africa Better?', img: '/images/vehicles/evautopro-jetour-t2-01.webp', date: '2026-05-12' },
-  { slug: 'deepal-s07-alternatives', cat: 'product', title: 'Affordable Deepal S07 Alternatives: Value EREV SUVs from China', img: '/images/vehicles/evautopro-deepal-s07-01.webp', date: '2026-05-11' },
-  { slug: 'changan-uni-t-vs-uni-z-comparison', cat: 'product', title: 'Changan UNI-T vs UNI-Z: Comparison, Buying Guide & Alternatives', img: '/images/vehicles/evautopro-changan-uni-t-01.webp', date: '2026-05-09' },
-  { slug: 'how-to-choose-jetour-lineup', cat: 'product', title: "How to Choose a Jetour Car: Complete Guide to Jetour's Vehicle Lineup", img: '/images/vehicles/evautopro-jetour-t2-01.webp', date: '2026-05-08' },
-  { slug: 'can-you-drive-phev-without-charging', cat: 'industry', title: 'Can You Drive a Plug-In Hybrid Without Charging? An Essential Guide', img: '/images/vehicles/evautopro-jetour-t2-02.webp', date: '2026-04-30' },
-  { slug: 'mg-zs-vs-geely-coolray-africa', cat: 'product', title: 'MG ZS vs Geely Coolray: Which Small SUV Fits Africa Better?', img: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-05-12' },
-];
-
-const sidebarArticles = [
-  { slug: 'import-cars-from-china-to-kazakhstan-2026', tag: 'article', title: 'How to Import Cars from China to Kazakhstan (2026): Duty, VAT...', img: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-07-09' },
-  { slug: 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', tag: 'article', title: 'BEV vs PHEV vs EREV vs Hybrid: Which Should You Import...', img: '/images/faq-hero.webp', date: '2026-07-09' },
-  { slug: 'can-you-drive-phev-without-charging', tag: 'article', title: 'Can You Drive a Plug-In Hybrid Without Charging? An Essential...', img: '/images/vehicles/evautopro-jetour-t2-02.webp', date: '2026-04-30' },
-  { slug: 'guide-to-sourcing-chinese-auto-parts', tag: 'article', title: "A Guide to Sourcing China's Dustproof Auto Parts for African Roads", img: '/images/vehicles/evautopro-changan-cs55-plus-01.webp', date: '2026-04-28' },
-  { slug: 'china-vs-japan-vs-usa-models', tag: 'article', title: 'Toyota, Honda, Mercedes: China vs. USA Model Differences & Import Guide', img: '/images/faq-sourcing.webp', date: '2026-01-31' },
-  { slug: 'import-chinese-cars-to-ghana', tag: 'article', title: 'How to Import Cars from China to Ghana: Process, Costs & Model Guide', img: '/images/vehicles/evautopro-changan-cs55-plus-01.webp', date: '2026-01-08' },
+  { key: 'all', label: 'All Articles' },
+  { key: 'guide', label: 'Buyer Guides' },
+  { key: 'market', label: 'Market & Import' },
+  { key: 'product', label: 'Model Comparisons' },
+  { key: 'industry', label: 'Industry & Policy' },
 ];
 ---
 
 <BaseLayout
-  title="EV Auto Pro News | China NEV Export Insights, Buyer Guides, Industry Updates"
-  description="Latest China new energy vehicle export news, model comparisons, buyer guides, and industry analysis from EV Auto Pro."
+  title="News & Insights | China NEV Export Guides, Model Comparisons, Market Analysis"
+  description="Buyer guides, country import guides, model comparisons and industry analysis for dealers importing new energy vehicles from China. By EV Auto Pro."
 >
-  {/* ============ 1. Selected News (Featured + Carousel) ============ */}
+  {/* ============ 1. Featured + Carousel ============ */}
   <section class="py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold text-ink-900 mb-8">Selected News</h1>
+      <h1 class="text-3xl font-bold text-ink-900 mb-2">News & Insights</h1>
+      <p class="text-sm text-ink-500 mb-8">Buyer guides, import cost breakdowns, model comparisons and market analysis — written from real export orders, not press releases.</p>
 
       {/* Featured big article */}
       <a href={`/news/${featuredArticle.slug}/`} class="block relative rounded-2xl overflow-hidden mb-8 group">
@@ -67,34 +42,34 @@ const sidebarArticles = [
           <div class="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/40 to-transparent"></div>
         </div>
         <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-10 text-white">
+          <span class="inline-block px-3 py-1 bg-brand-500 text-white text-xs font-semibold rounded-full mb-3">{featuredArticle.categoryLabel}</span>
           <h2 class="text-2xl lg:text-3xl font-bold mb-3 max-w-3xl">{featuredArticle.title}</h2>
-          <p class="text-sm lg:text-base text-white/90 mb-5 max-w-2xl">{featuredArticle.excerpt}</p>
-          <span class="inline-flex items-center px-5 py-2 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-full transition-colors">
+          <p class="text-sm lg:text-base text-white/90 mb-5 max-w-2xl hidden sm:block">{featuredArticle.excerpt}</p>
+          <span class="inline-flex items-center px-5 py-2 bg-white text-ink-900 hover:bg-ink-100 text-sm font-semibold rounded-full transition-colors">
             Read now
           </span>
         </div>
       </a>
 
-      {/* Carousel of 3 (no JS scroll, native) */}
-      <div class="relative">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {carouselItems.map(c => (
-            <a href={`/news/${c.slug}/`} class="group flex gap-3 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-3 transition-all">
-              <div class="flex-shrink-0 w-28 aspect-square bg-ink-100 rounded overflow-hidden">
-                <img src={c.img} alt={c.title} class="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div class="flex-1 min-w-0">
-                <h3 class="text-sm font-semibold text-ink-900 group-hover:text-brand-500 line-clamp-2 mb-1">{c.title}</h3>
-                <p class="text-xs text-ink-500 line-clamp-2">{c.excerpt}</p>
-              </div>
-            </a>
-          ))}
-        </div>
+      {/* Next 3 most recent */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {carouselItems.map(c => (
+          <a href={`/news/${c.slug}/`} class="group flex gap-3 bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-3 transition-all">
+            <div class="flex-shrink-0 w-28 aspect-square bg-ink-100 rounded overflow-hidden">
+              <img src={c.hero} alt={c.title} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-[10px] text-brand-500 uppercase font-semibold mb-1">{c.categoryLabel}</div>
+              <h3 class="text-sm font-semibold text-ink-900 group-hover:text-brand-500 line-clamp-2 mb-1">{c.title}</h3>
+              <p class="text-xs text-ink-500 line-clamp-2">{c.excerpt}</p>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-  {/* ============ 2. Main Articles Section ============ */}
+  {/* ============ 2. All Articles (real category filter) ============ */}
   <section class="py-12 bg-ink-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Tabs */}
@@ -109,58 +84,46 @@ const sidebarArticles = [
       <div class="grid lg:grid-cols-[1fr_320px] gap-8">
         {/* Left: article grid */}
         <div>
-          <div class="grid sm:grid-cols-2 gap-6">
+          <div class="grid sm:grid-cols-2 gap-6" id="article-grid">
             {articles.map(a => (
-              <a href={`/news/${a.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl overflow-hidden transition-all">
+              <a href={`/news/${a.slug}/`} data-cat={a.category} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl overflow-hidden transition-all">
                 <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-                  <img src={a.img} alt={a.title} class="w-full h-full object-cover" loading="lazy" />
+                  <img src={a.hero} alt={a.title} class="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div class="p-5">
+                  <div class="text-[10px] text-brand-500 uppercase font-semibold mb-2">{a.categoryLabel}</div>
                   <h3 class="text-base font-semibold text-ink-900 group-hover:text-brand-500 transition-colors mb-2 leading-snug">{a.title}</h3>
-                  <div class="text-xs text-ink-500">{a.date}</div>
+                  <div class="text-xs text-ink-500">{a.dateOnly} · {a.readMin} min read</div>
                 </div>
               </a>
             ))}
           </div>
-
-          {/* Pagination */}
-          <div class="flex items-center justify-center gap-2 mt-10">
-            <button class="w-8 h-8 flex items-center justify-center text-ink-500 hover:text-brand-500 border border-ink-200 rounded">‹</button>
-            <button class="w-8 h-8 flex items-center justify-center bg-brand-500 text-white rounded">1</button>
-            <button class="w-8 h-8 flex items-center justify-center text-ink-700 hover:text-brand-500 border border-ink-200 rounded">2</button>
-            <button class="w-8 h-8 flex items-center justify-center text-ink-700 hover:text-brand-500 border border-ink-200 rounded">3</button>
-            <span class="text-ink-500">...</span>
-            <button class="w-8 h-8 flex items-center justify-center text-ink-700 hover:text-brand-500 border border-ink-200 rounded">21</button>
-            <button class="w-8 h-8 flex items-center justify-center text-ink-500 hover:text-brand-500 border border-ink-200 rounded">›</button>
-          </div>
+          <p id="empty-note" class="hidden text-sm text-ink-500 text-center py-10">No articles in this category yet.</p>
         </div>
 
         {/* Right: Sidebar */}
         <aside>
-          <h3 class="text-base font-bold text-ink-900 mb-5">Guide to Imported Cars from China</h3>
+          <h3 class="text-base font-bold text-ink-900 mb-5">Guide to Importing Cars from China</h3>
           <div class="space-y-4">
             {sidebarArticles.map(a => (
               <a href={`/news/${a.slug}/`} class="group flex gap-3">
                 <div class="flex-shrink-0 w-20 aspect-square bg-ink-100 rounded overflow-hidden">
-                  <img src={a.img} alt={a.title} class="w-full h-full object-cover" loading="lazy" />
+                  <img src={a.hero} alt={a.title} class="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div class="flex-1 min-w-0">
-                  <div class="text-[10px] text-ink-500 uppercase font-semibold mb-1">{a.tag}</div>
+                  <div class="text-[10px] text-ink-500 uppercase font-semibold mb-1">{a.categoryLabel}</div>
                   <h4 class="text-sm font-semibold text-ink-900 group-hover:text-brand-500 line-clamp-3 leading-tight mb-1">{a.title}</h4>
-                  <div class="text-xs text-ink-500">{a.date}</div>
+                  <div class="text-xs text-ink-500">{a.dateOnly}</div>
                 </div>
               </a>
             ))}
           </div>
-          <a href="/news/?category=guide" class="block mt-6 text-center text-sm font-semibold text-ink-700 hover:text-brand-500 border border-ink-200 hover:border-brand-500 py-2 rounded transition-colors">
-            See more
-          </a>
         </aside>
       </div>
     </div>
   </section>
 
-  {/* ============ 3. Bottom Banner (双车图 + Get a Quote) ============ */}
+  {/* ============ 3. Bottom Banner (Get a Quote) ============ */}
   <section class="py-16 bg-ink-900 relative overflow-hidden">
     <div class="absolute inset-0 opacity-30">
       <img src="/images/faq-logistics.webp" alt="" class="w-full h-full object-cover" />
@@ -201,8 +164,10 @@ const sidebarArticles = [
 </BaseLayout>
 
 <script>
-  // Tab filter (v0 visual only — all tabs show same articles; real filter wired when articles tagged in CMS)
+  // Real category filter — shows/hides cards by data-cat
   const tabs = document.querySelectorAll<HTMLButtonElement>('[data-tab]');
+  const cards = document.querySelectorAll<HTMLAnchorElement>('#article-grid [data-cat]');
+  const emptyNote = document.getElementById('empty-note');
   tabs.forEach(t => {
     t.addEventListener('click', () => {
       tabs.forEach(x => {
@@ -211,6 +176,15 @@ const sidebarArticles = [
       });
       t.classList.remove('bg-white', 'border', 'border-ink-200', 'text-ink-700', 'hover:border-brand-500');
       t.classList.add('bg-brand-500', 'text-white');
+
+      const key = t.dataset.tab;
+      let visible = 0;
+      cards.forEach(c => {
+        const show = key === 'all' || c.dataset.cat === key;
+        c.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      emptyNote?.classList.toggle('hidden', visible > 0);
     });
   });
 

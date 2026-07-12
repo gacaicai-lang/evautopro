@@ -318,26 +318,40 @@ const allImageUrls = [
     </div>
   </section>
 
-  {/* Article Schema */}
+  {/* Article Schema — NewsArticle only for genuine news; guides/comparisons are Article */}
   <script type="application/ld+json" set:html={JSON.stringify({
-    '@context': 'https://schema.org', '@type': 'NewsArticle',
+    '@context': 'https://schema.org',
+    '@type': article.category === 'industry' ? 'NewsArticle' : 'Article',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': new URL(`/news/${article.slug}/`, 'https://evautopro.com').href },
     headline: article.title,
     datePublished: article.date,
     dateModified: article.date,
     description: article.excerpt,
+    articleSection: article.categoryLabel,
     image: allImageUrls,
     author: {
       '@type': 'Person',
       name: 'Cai',
       jobTitle: 'Founder & Trade Director',
-      worksFor: { '@type': 'Organization', name: 'EV Auto Pro' },
+      worksFor: { '@id': 'https://evautopro.com/#organization' },
       url: 'https://evautopro.com/about/founder/',
       description: '15 years cross-border trade experience; 6 authorized Chinese OEM dealer partnerships.',
     },
     publisher: {
-      '@type': 'Organization', name: 'EV Auto Pro', url: 'https://evautopro.com',
+      '@type': 'Organization', '@id': 'https://evautopro.com/#organization',
+      name: 'EV Auto Pro', url: 'https://evautopro.com',
       logo: { '@type': 'ImageObject', url: 'https://evautopro.com/og-default.jpg' },
     },
+  })} />
+
+  {/* Breadcrumb Schema */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://evautopro.com/' },
+      { '@type': 'ListItem', position: 2, name: 'News & Insights', item: 'https://evautopro.com/news/' },
+      { '@type': 'ListItem', position: 3, name: article.title, item: new URL(`/news/${article.slug}/`, 'https://evautopro.com').href },
+    ],
   })} />
 
   {article.faqs && article.faqs.length > 0 && (
