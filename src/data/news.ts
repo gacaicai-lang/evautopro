@@ -1779,6 +1779,48 @@ Read the [China auto-parts sourcing guide](/news/guide-to-sourcing-chinese-auto-
     ], related: ['guide-to-sourcing-chinese-auto-parts', 'how-to-verify-a-chinese-car-exporter-before-you-pay', 'roro-vs-container-shipping-cars-from-china'],
   },
 
+  'how-to-pay-chinese-car-exporter-tt-lc-guide': {
+    slug: 'how-to-pay-chinese-car-exporter-tt-lc-guide', category: 'guide', categoryLabel: 'Buyer Guide',
+    title: 'How to Pay a Chinese Car Supplier: T/T vs L/C',
+    excerpt: 'Learn how to pay a Chinese car supplier using T/T 30/70 or L/C at sight, verify bank details, avoid soft clauses and reject unsafe payment channels.',
+    expertInsight: 'T/T 30/70 is practical when the 70% balance is tied to VIN-level inspection and shipping readiness; L/C at sight shifts release to compliant documents but adds bank cost and documentary risk. In either method, the beneficiary must match the company on the contract and invoice.',
+    hero: '/images/services/financing.webp', date: '2026-07-15 14:00:00', readMin: 8,
+    body: `The safest common ways to pay a Chinese car supplier are T/T 30% deposit and 70% before shipment, or an irrevocable L/C at sight from acceptable banks. Neither method replaces exporter verification: the contract company, invoice issuer and bank beneficiary must match.
+
+## Payment Comparison
+
+| Method | Best for | Main risk | Control |
+| --- | --- | --- | --- |
+| T/T 30/70 | Established supplier, small/mid orders | Deposit exposure | Inspection before balance |
+| L/C at sight | Larger documentary shipments | Discrepant/soft documents | Bank-reviewed terms |
+| Escrow | Platform-supported transaction | Fake/unlicensed intermediary | Verify regulated provider |
+| Personal account/Western Union/crypto | None for B2B cars | Weak recovery/identity | Refuse |
+
+![Trade-finance documents and payment planning](/images/services/financing.webp)
+
+## Make T/T 30/70 Safer
+
+Before 30%, verify registration/export authority and beneficiary. The contract should name models, quantity, Incoterm, delivery window and refund/default terms. Before 70%, receive VIN list, photos/video of actual units, inspection report and agreed shipping-readiness evidence. Payment does not itself transfer title; define that separately.
+
+## Avoid L/C Soft Clauses
+
+L/C at sight pays against documents, not vehicle quality. Agree realistic presentation dates, ports, partial shipment, document wording and discrepancy handling. Reject clauses controlled only by the applicant or impossible certificates. Have both banks review the draft before issuance.
+
+RMB settlement may be available through participating banks, but currency choice should follow the supplier invoice, importer rules and hedging needs. Do not convert through an unrelated personal account.
+
+Link the payment to a real product such as [Geely Coolray](/cars/geely-coolray/) and require its exact trim/VIN in the commercial file. First complete the [exporter verification checklist](/news/how-to-verify-a-chinese-car-exporter-before-you-pay/).
+
+**Never accept:** beneficiary mismatch, last-minute bank-detail change without independent callback, 100% to a personal account, Western Union or cryptocurrency for a normal B2B vehicle order.
+
+WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20send%20your%20T%2FT%20and%20L%2FC%20payment%20terms) or [cai@evautopro.com](mailto:cai@evautopro.com).`,
+    faqs: [
+      { q: 'Is T/T 30/70 safe for buying cars from China?', a: 'It is common, but only after verifying the exporter and matching company bank account. Tie the 70% balance to VIN-level inspection and shipping readiness.' },
+      { q: 'Is L/C safer than T/T?', a: 'It reduces payment risk when documents comply, but banks do not inspect vehicle quality. Poor wording and document discrepancies can still delay or trigger payment.' },
+      { q: 'Can I pay a Chinese supplier in RMB?', a: 'Possibly through participating banks, subject to importer and supplier banking rules. Keep the currency and beneficiary consistent with the contract and invoice.' },
+      { q: 'What payment methods should I refuse?', a: 'Personal accounts, Western Union, cryptocurrency and unexplained third-party beneficiaries are inappropriate for a normal B2B vehicle shipment.' },
+    ], related: ['how-to-verify-a-chinese-car-exporter-before-you-pay', 'chinese-car-dealers-uae-vs-direct-import-2026', 'roro-vs-container-shipping-cars-from-china'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);

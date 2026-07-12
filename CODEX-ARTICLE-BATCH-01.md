@@ -167,7 +167,7 @@
 | 5 | import-cars-from-china-to-georgia-2026-reexport-hub | PUBLISHED | 2026-07-14 | see git history | Official 180-day refund/RHD rules; audit clean |
 | 6 | roro-vs-container-shipping-cars-from-china | PUBLISHED | 2026-07-14 | see git history | Dimension caveat; audit pending commit |
 | 7 | chinese-car-spare-parts-warranty-export-guide | PUBLISHED | 2026-07-15 | see git history | Three-tier warranty framework |
-| 8 | how-to-pay-chinese-car-exporter-tt-lc-guide | TODO | | | |
+| 8 | how-to-pay-chinese-car-exporter-tt-lc-guide | PUBLISHED | 2026-07-15 | see git history | No invented bank fees |
 | 9 | deepal-s05-vs-s07-vs-s09-which-to-import | TODO | | | |
 | 10 | geely-coolray-vs-changan-cs55-plus-export | TODO | | | |
 
