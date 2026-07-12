@@ -814,7 +814,13 @@ Often, yes — and the rules change faster than most buyer guides acknowledge. K
 2. **Factor in climate** — cold climates lose meaningful BEV range in winter; extreme heat affects battery thermal management. Both push toward EREV or PHEV over pure BEV unless charging is genuinely reliable.
 3. **Match to your buyer's actual driving pattern** — short urban commutes favor BEV/PHEV; long-distance or unpredictable routes favor EREV/HEV/ICE.
 4. **Check current duty and VAT treatment** for your destination before pricing — see the section above.
-5. **Consider mixing powertrains in one order.** A 40HQ container fits multiple models — many of our dealers stock an ICE volume model alongside one EREV or PHEV model to test electrified demand without betting the whole order on it.`,
+5. **Consider mixing powertrains in one order.** A 40HQ container fits multiple models — many of our dealers stock an ICE volume model alongside one EREV or PHEV model to test electrified demand without betting the whole order on it.
+
+## Get a Powertrain Recommendation for Your Market
+
+Guessing wrong on powertrain is expensive — a container of the wrong technology sits unsold while a competitor with the right one turns their stock in weeks. You don't have to guess. Tell us your destination city, climate and buyer profile, and we'll recommend which of our in-stock BEV, PHEV, EREV or ICE models fits — with a landed-cost quote attached.
+
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20powertrain%20recommendations%20for%20my%20market) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'Which powertrain is best for cold-climate markets with limited charging infrastructure?', a: 'EREV. It drives like a full electric vehicle day-to-day but carries a small combustion engine purely to generate power once the battery runs low, so cold-weather range loss or a gap in the charging network never strands the buyer. Deepal S07 and Deepal S09 are our top-performing models for exactly this reason in Russia and Central Asia.' },
       { q: 'Does powertrain type affect import duty or VAT in CIS/Gulf markets?', a: 'Often, yes, and the rules change over time. Kazakhstan is a current example: EVs clear at 0% duty under WTO terms, but the duty-and-VAT-free quota was exhausted in October 2025 and VAT rose to 16% from January 2026. Confirm current treatment for your specific destination before finalizing an order — do not rely on a general guide for this.' },
@@ -913,7 +919,13 @@ We handle the China-side export and documentation; a local broker or your own te
 
 Duty, VAT and the recycling fee in Kazakhstan changed twice in the last year and can change again on government timelines. Treat this guide as orientation, not a final quote — confirm current rates for your specific model and import date before finalizing. We track the numbers for our active [Kazakhstan buyers](/markets/kazakhstan/) and will flag anything relevant with your quote.
 
-**Sources & further reading:** [U.S. International Trade Administration — Kazakhstan Import Tariffs](https://www.trade.gov/country-commercial-guides/kazakhstan-import-tariffs) · [PwC Tax Summaries — Kazakhstan, Other Taxes](https://taxsummaries.pwc.com/kazakhstan/corporate/other-taxes). Always confirm current figures with Kazakhstan customs (КГД) or a licensed broker before ordering.`,
+**Sources & further reading:** [U.S. International Trade Administration — Kazakhstan Import Tariffs](https://www.trade.gov/country-commercial-guides/kazakhstan-import-tariffs) · [PwC Tax Summaries — Kazakhstan, Other Taxes](https://taxsummaries.pwc.com/kazakhstan/corporate/other-taxes). Always confirm current figures with Kazakhstan customs (КГД) or a licensed broker before ordering.
+
+## Lock In Today's Numbers Before They Move Again
+
+Kazakhstan's rules have already changed twice in the last year — the quota closed, then VAT rose. Waiting rarely makes the math better. If Almaty or Aktau is your market, send us your target model and quantity and we'll return a full landed-cost quote — FOB, freight, duty and current VAT — so you're pricing against real numbers, not last year's.
+
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20a%20Kazakhstan%20landed-cost%20quote) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'Do electric cars still clear duty-free in Kazakhstan in 2026?', a: 'The 0% customs tariff still applies to EVs under Kazakhstan\'s WTO commitments if the vehicle stays in the country, but the duty-and-VAT-free quota was exhausted around 15 October 2025, and VAT rose to 16% from 1 January 2026. So an EV is no longer fully free — budget the 16% VAT plus the recycling fee.' },
       { q: 'Can I import a car cheaply into Kazakhstan and move it to Russia?', a: 'No. A vehicle cleared at the 0% WTO tariff carries a "Kazakhstan-only" clause and cannot be re-exported to other EAEU countries (Russia, Belarus, Armenia, Kyrgyzstan). It is strictly enforced. Import for the Kazakhstan market, not as transit.' },
@@ -985,7 +997,13 @@ Not sure which models and powertrains fit Russia's cold climate and this cost st
 
 Russia's recycling fee has changed several times and is indexed annually — the exact figure for a given model and date moves. Treat this as orientation, not a final quote. We track current rates for our active [Russia buyers](/markets/russia/) and include the fee in the landed-cost math with every quote.
 
-**Sources & further reading:** [The Moscow Times — importers rush to beat the recycling-fee hike](https://www.themoscowtimes.com/2025/11/17/thousands-of-car-carriers-backed-up-at-russias-borders-as-importers-rush-to-beat-fee-hike-a91137) · [Interfax — recycling fee to rise for cars over 160 hp](https://interfax.com/newsroom/top-stories/112438/). Confirm the exact current coefficient for your model and date before pricing.`,
+**Sources & further reading:** [The Moscow Times — importers rush to beat the recycling-fee hike](https://www.themoscowtimes.com/2025/11/17/thousands-of-car-carriers-backed-up-at-russias-borders-as-importers-rush-to-beat-fee-hike-a91137) · [Interfax — recycling fee to rise for cars over 160 hp](https://interfax.com/newsroom/top-stories/112438/). Confirm the exact current coefficient for your model and date before pricing.
+
+## Model Your Exact Fee Before You Order
+
+The queues at Russia's borders in late 2025 were dealers who waited too long to model this fee — don't repeat that scramble. Send us your target model and volume and we'll return the full landed cost, recycling fee included, calculated against current rates rather than a guess.
+
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20a%20Russia%20landed-cost%20quote%20including%20recycling%20fee) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'How is Russia\'s recycling fee calculated in 2026?', a: 'Since December 2025 it is tied to engine power on a progressive scale, with the preferential (lower) rate kept only for cars up to 160 hp. Above 160 hp the fee rises sharply. It is indexed 10–20% annually and sits on top of the 15% import tariff and VAT.' },
       { q: 'Do most Chinese SUVs fall under the 160 hp preferential band?', a: 'No. Most modern Chinese SUVs — including the popular export models — produce well over 160 hp (typically 177–260 PS, and much higher for PHEV/EREV flagships), which places them above the preferential band where the fee is highest. Budget the fee explicitly per model.' },
@@ -1060,7 +1078,13 @@ If they can't produce a specimen of these, they haven't shipped legally before.
 
 ## How EV Auto Pro Checks Out
 
-We hold **MOFCOM authorized exporter status and AEO customs certification since 2018**, with direct dealer relationships across 6 OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour). Every order runs the [EV Auto Pro Export PDI](/services/inspection/) with a photo and video report before loading, on standard T/T 30/70 or L/C terms, with the full document set provided. If you're evaluating suppliers, [send us your requirement](/contact/quote/) and ask us to prove any item on the checklist above — that's the test a real exporter should pass.`,
+We hold **MOFCOM authorized exporter status and AEO customs certification since 2018**, with direct dealer relationships across 6 OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour). Every order runs the [EV Auto Pro Export PDI](/services/inspection/) with a photo and video report before loading, on standard T/T 30/70 or L/C terms, with the full document set provided.
+
+## Put Us Through the Checklist
+
+Don't take our word for it — ask us to prove every item above before you commit a deposit anywhere. Send us your target model and destination; we'll send our MOFCOM licence number, a sample document set, and a reference you can call.
+
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20to%20verify%20your%20export%20credentials%20before%20ordering) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'How do I verify a Chinese car exporter is legitimate?', a: 'Ask for their MOFCOM authorized exporter certificate and number (verifiable via the Chinese embassy/consulate), confirm the invoicing company matches the bank account name, require a pre-shipment photo & video inspection, and check contactable references with delivery proof. A legitimate exporter passes all of these; a grey-market reseller usually cannot show the export licence.' },
       { q: 'What is the safest way to pay a Chinese car supplier?', a: 'T/T 30% deposit + 70% before shipment (ideally after you receive the pre-shipment inspection report), or an L/C at sight from a major bank. Never pay 100% up front, and never wire to a personal bank account that does not match the invoicing company name.' },
