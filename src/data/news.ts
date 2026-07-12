@@ -15,6 +15,123 @@ export type NewsArticle = {
 
 export const news: Record<string, NewsArticle> = {
 
+  'import-cars-from-china-to-saudi-arabia-2026': {
+    slug: 'import-cars-from-china-to-saudi-arabia-2026',
+    category: 'market', categoryLabel: 'Market & Import',
+    title: 'Import Cars from China to Saudi Arabia (2026 Guide)',
+    excerpt: 'Import cars from China to Saudi Arabia with the correct SABER vehicle certificate, Saudi conformity checks, landed-tax budget, port plan and documents.',
+    expertInsight: 'To import cars from China to Saudi Arabia in 2026, conformity must be cleared before shipping: register the vehicle through the SABER vehicle-import service, appoint an accepted inspection body and obtain the shipment certificate. For Gulf heat and uneven charging outside major cities, PHEV or EREV stock is usually easier to place than a pure BEV, but certification must be confirmed VIN by VIN before payment.',
+    hero: '/images/vehicles/evautopro-deepal-s07-01.webp',
+    date: '2026-07-12 09:00:00', readMin: 10,
+    body: `To import cars from China to Saudi Arabia in 2026, confirm Saudi conformity before the vehicle leaves China. The importer applies through the SABER vehicle-import service, selects an accepted inspection body in the shipping country and obtains a vehicle shipment conformity certificate. Customs, VAT, port handling and certification then sit on top of the CIF price; the exact tax classification and certificate cost must be confirmed for the VIN and importer before a purchase contract is finalized.
+
+## What Must Be Checked Before You Buy?
+
+Saudi Arabia does not treat vehicle compliance as a document to solve after arrival. SASO advises importers of new and used vehicles to verify compliance **before shipping**. The practical sequence is:
+
+1. Confirm that the exact model, model year and specification can meet Saudi technical and energy-efficiency requirements.
+2. Register the vehicle-import request through the SABER vehicle service.
+3. Upload the vehicle and shipment information, pay the platform and assessment charges shown for the application, and select an SASO-accepted inspection body in China.
+4. Complete the required document review and physical inspection.
+5. Obtain the shipment conformity certificate before loading.
+6. Submit the customs declaration and supporting documents through the Saudi clearance process.
+
+SASO also provides a separate electric-vehicle conformity certificate for imported EVs exceeding 25 km/h. A generic GCC specification claim is not a substitute for checking the exact Saudi requirement. Ask the exporter to identify the conformity route for the actual VINs, not merely send a brochure labelled “GCC spec.”
+
+**Certification cost:** there is no responsible single flat number to quote. The payable amount depends on the vehicle category, assessment body, inspection location, shipment size and whether additional testing is needed. Obtain a written SABER/inspection quotation before signing the proforma invoice.
+
+## Which Vehicles Are Not Safe to Ship First and Fix Later?
+
+ZATCA's current vehicle-import controls are clear about several risk categories. Light vehicles generally must be within the permitted five-model-year window. The vehicle must satisfy the energy-efficiency requirement, its VIN must be intact, and stolen, flooded, burned, overturned, structurally damaged, former police/taxi and armored vehicles are restricted or prohibited. Saudi rules also prohibit vehicles whose steering has been converted from right to left.
+
+For a Chinese exporter this means the commercial invoice, VIN list and model-year declaration must match the inspected units. A low FOB price is irrelevant if the vehicle cannot obtain the Saudi shipment certificate or energy-efficiency notice.
+
+## What Taxes and Charges Should an Importer Budget?
+
+The safest budget is a landed-cost worksheet rather than a single percentage copied from an old guide.
+
+| Cost line | Basis | What to confirm before payment |
+| --- | --- | --- |
+| Vehicle price | FOB or CIF contract value | Exact trim, VIN and Incoterm |
+| Customs duty | Saudi tariff classification and customs value | Current ZATCA rate for the HS code |
+| VAT | Applied under Saudi VAT rules | Current rate and taxable base with broker |
+| SABER/SASO compliance | Application, assessment and inspection | Written quote for the shipment |
+| Freight and insurance | China port to Jeddah or Dammam | Sailing, RoRo/container and coverage |
+| Port and clearance | Terminal, broker, storage and delivery | Free days and demurrage exposure |
+
+Saudi Arabia's standard VAT rate is 15%, but duty treatment and the VAT base must be confirmed with ZATCA or a licensed Saudi customs broker for the specific shipment. Do not use an informal landed-price calculator as the final customs quotation.
+
+## Dammam or Jeddah: Which Port Fits the Buyer?
+
+**King Abdulaziz Port in Dammam** is the natural gateway for Riyadh, the Eastern Province and buyers distributing toward other Gulf markets. It reduces inland distance for Dammam, Khobar and many Riyadh-bound loads.
+
+**Jeddah Islamic Port** fits western Saudi demand, including Jeddah, Makkah and Madinah, and may offer the better sailing depending on the China origin port. The cheapest ocean quote is not automatically the cheapest delivered route: compare ocean freight, sailing frequency, terminal charges and final trucking together.
+
+| Buyer destination | Usually compare first | Decision factor |
+| --- | --- | --- |
+| Riyadh / Eastern Province | Dammam | Shorter inland leg and Gulf-side access |
+| Jeddah / western region | Jeddah Islamic Port | Shorter final delivery |
+| Mixed national dealer stock | Both ports | Sailing schedule plus total delivered cost |
+
+## Which Powertrain Fits Saudi Heat and Driving Patterns?
+
+Saudi buyers should separate two questions: can the vehicle be certified, and will the powertrain suit the customer's daily use? Extreme heat raises battery-cooling loads, while public charging is strongest in major cities and less predictable on long intercity routes.
+
+The [Deepal S07](/cars/deepal-s07/) is an EREV: the wheels retain electric-drive characteristics while a gasoline range extender removes dependence on public charging. The [Deepal S09](/cars/deepal-s09/) applies the same logic to a larger six-seat flagship. The [Jetour T2](/cars/jetour-t2/) is a seven-seat PHEV aimed at buyers wanting four-wheel-drive utility and both charging and fuel flexibility.
+
+![Deepal S07 exterior photographed from the front three-quarter angle](/images/vehicles/evautopro-deepal-s07-appearance-01.webp)
+
+| Buyer use | Better starting point | Not ideal when |
+| --- | --- | --- |
+| Urban commuting with home charging | BEV or PHEV | Building has no reliable charger |
+| Riyadh/Jeddah plus long intercity trips | EREV or PHEV | Buyer wants the lowest mechanical complexity |
+| Large family / premium fleet | Deepal S09 EREV | Six-seat size and price exceed the segment |
+| Adventure and mixed-road use | Jetour T2 PHEV | Buyer wants a compact city SUV |
+
+![Jetour T2 exterior showing its upright SUV body](/images/vehicles/evautopro-jetour-t2-appearance-02.webp)
+
+**Best for:** Saudi dealers and fleet buyers who can confirm certification before deposit, order left-hand-drive units and maintain a local clearance and after-sales plan.
+
+**Not ideal for:** a buyer trying to ship an unverified domestic-market trim first and arrange compliance after arrival. It is also not ideal to recommend a pure BEV solely because its China price is attractive when the end user lacks dependable home or workplace charging.
+
+## What Documents Are Normally Needed?
+
+Prepare the document set before loading, then have the Saudi broker confirm whether the importer or vehicle category requires anything additional:
+
+- Commercial Invoice and Packing List with VINs
+- Bill of Lading and insurance certificate where applicable
+- Certificate of Origin
+- China export declaration
+- SABER vehicle shipment conformity certificate
+- Vehicle technical data and energy-efficiency evidence
+- GCC/Saudi conformity evidence required for the model
+- Importer's Saudi commercial and customs records
+
+The VIN, model year, trim and powertrain description must be consistent across the invoice, conformity application and shipping documents. A mismatch can delay clearance even when the physical car is acceptable.
+
+## A Practical Import Timeline
+
+Start with compliance, not freight. Model verification and the SABER/inspection process happen before loading; production or stock preparation, PDI and export documents follow. Ocean transit and Saudi customs timing then depend on the sailing, port and document accuracy. Build contingency into the sales promise instead of advertising a fixed delivery date before the certificate is issued.
+
+EV Auto Pro can prepare China-side export documents, VIN-level inspection photos and a shipment proposal for Dammam or Jeddah. The Saudi importer or its licensed broker remains responsible for final local declarations and should verify current charges directly with ZATCA.
+
+## Confirm the Saudi Route Before Paying a Deposit
+
+Send the target model, quantity, destination city and preferred port. We will return a China-side vehicle quotation, available specification and document checklist so your Saudi conformity body and broker can validate the route before the cars ship.
+
+**Official references:** [SASO Certificates of Conformity](https://saso.gov.sa/en/sectors/certificates/compliance_certificate/pages/default.aspx) · [SASO vehicle import service announcement](https://saso.gov.sa/ar/mediacenter/news/Pages/saso-news-1473.aspx) · [ZATCA Vehicle Import Controls](https://zatca.gov.sa/en/RulesRegulations/Taxes/Pages/customs-individual/import-vehicles.aspx).
+
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20Saudi%20Arabia%20vehicle%20import%20quote%20with%20SABER%20requirements) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+    faqs: [
+      { q: 'Do cars imported into Saudi Arabia need SABER certification?', a: 'The importer should use the SABER vehicle-import service before shipping, select an accepted inspection body and obtain the vehicle shipment conformity certificate. Electric vehicles also fall under SASO electric-vehicle conformity requirements. Confirm the route for the exact model and VIN before loading.' },
+      { q: 'How much does Saudi vehicle conformity certification cost?', a: 'There is no dependable universal flat fee. Cost varies by vehicle category, assessment body, inspection location, shipment size and any additional testing. Request the live amount shown by SABER and a written inspection-body quotation before signing the vehicle order.' },
+      { q: 'Should Chinese cars ship to Dammam or Jeddah?', a: 'Dammam usually fits the Eastern Province and many Riyadh-bound shipments; Jeddah fits western Saudi destinations. Compare the complete delivered cost, sailing schedule, terminal charges and inland trucking rather than ocean freight alone.' },
+      { q: 'Are right-hand-drive cars allowed for Saudi registration?', a: 'Saudi Arabia is a left-hand-drive market, and ZATCA prohibits importing vehicles whose steering has been converted from right to left. Order a factory left-hand-drive specification and confirm Saudi conformity before shipment.' },
+      { q: 'Which Chinese powertrain is practical for Saudi Arabia?', a: 'BEVs can suit buyers with dependable home or workplace charging in major cities. For long intercity driving and uneven charging access, EREV or PHEV models such as Deepal S07/S09 or Jetour T2 provide fuel backup, subject to VIN-level Saudi certification.' },
+    ],
+    related: ['chinese-car-dealers-uae-vs-direct-import-2026', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'how-to-verify-a-chinese-car-exporter-before-you-pay'],
+  },
+
   '2026-china-nev-export-rules-guide': {
     slug: '2026-china-nev-export-rules-guide',
     category: 'industry',
