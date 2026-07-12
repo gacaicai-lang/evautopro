@@ -1101,7 +1101,7 @@ We hold **MOFCOM authorized exporter status and AEO customs certification since 
 
 ## Put Us Through the Checklist
 
-Don't take our word for it — ask us to prove every item above before you commit a deposit anywhere. Send us your target model and destination; we'll send our MOFCOM licence number, a sample document set, and a reference you can call.
+Don't take our word for it — ask us to prove every item above before you commit a deposit anywhere. Pick a target model from our [in-stock vehicle lineup](/cars/) and tell us your destination; we'll send our MOFCOM licence number, a sample document set, and a reference you can call.
 
 **Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20to%20verify%20your%20export%20credentials%20before%20ordering) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
     faqs: [
