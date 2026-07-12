@@ -1520,6 +1520,99 @@ Send the target quantity, Addis Ababa delivery point and charging plan. We will 
     ], related: ['import-chinese-cars-to-ghana', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'how-to-verify-a-chinese-car-exporter-before-you-pay'],
   },
 
+  'import-cars-from-china-to-chile-2026': {
+    slug: 'import-cars-from-china-to-chile-2026', category: 'market', categoryLabel: 'Market & Import',
+    title: 'Import Cars from China to Chile (2026 Guide)',
+    excerpt: 'Import cars from China to Chile using FTA proof of origin, 3CV homologation, a 19% IVA budget and a San Antonio or Valparaíso delivery plan.',
+    expertInsight: 'Chile is one of Latin America’s most open vehicle markets, but “China FTA” does not automatically mean a zero-duty car: the exact HS line must have reached zero and the shipment must satisfy origin and direct-transport rules. Budget 19% IVA and complete 3CV homologation before treating the vehicle as retail-ready.',
+    hero: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-07-13 14:00:00', readMin: 8,
+    body: `To import cars from China to Chile in 2026, verify the passenger-vehicle tariff line under the Chile–China FTA, obtain valid Chinese proof of origin, budget Chile's 19% IVA and complete vehicle homologation through 3CV. Chile is left-hand drive and has no large domestic passenger-car assembly barrier, but a low customs tariff does not remove certification, port, registration and after-sales costs.
+
+## Does the Chile–China FTA Make the Car Duty-Free?
+
+The FTA can provide preferential treatment to qualifying Chinese-origin goods, but the importer must verify the current schedule for the exact HS code. Customs decisions show that preference can be denied when the certificate of origin is invalid or when direct-shipment evidence through a non-party is insufficient.
+
+Before loading, confirm:
+
+- the exact 8703 tariff subheading and 2026 preferential rate;
+- that the vehicle satisfies the FTA origin rule;
+- a correctly completed certificate of origin tied to the Chinese invoice;
+- direct transport or acceptable transshipment evidence;
+- consistent exporter, consignee, VIN and invoice details.
+
+If any condition fails, Chile can apply the general tariff instead. “Made in China” printed on a brochure is not proof of preferential origin.
+
+## What Does the Landed-Cost Sheet Include?
+
+| Cost | Working treatment |
+| --- | --- |
+| FOB/CIF vehicle price | Contract and customs value |
+| Import duty | FTA preferential rate only with valid origin claim |
+| IVA | 19% on the applicable import tax base |
+| Homologation | 3CV testing/document process for the model |
+| Port | Terminal, broker, storage and delivery |
+| Registration | Local documents, plates and any applicable annual charges |
+
+Ask a Chilean customs broker to issue the calculation against the HS code and certificate before deposit. This is especially important for triangular invoicing or Hong Kong transshipment.
+
+## What Is 3CV Homologation?
+
+Chile's Centro de Control y Certificación Vehicular evaluates vehicle compliance for commercialization and registration. A dealer should determine whether the model already has a Chilean homologation, whether an existing homologation can cover the exact variant, or whether a new application and tests are required.
+
+Prepare technical specifications, VIN/model identification, emissions or electric-powertrain data, safety systems and manufacturer documentation. Do not order a batch assuming a visually similar trim is covered by another variant's approval.
+
+## San Antonio or Valparaíso?
+
+Both central-Chile ports serve the Santiago market. Compare the carrier's actual service, RoRo/container availability, terminal free time and inland trucking rather than choosing by map alone.
+
+| Port decision | Question |
+| --- | --- |
+| Sailing | Which port has the confirmed China service/date? |
+| Terminal | What handling and storage apply to vehicles? |
+| Inland | What is the delivered cost to the Santiago yard? |
+| Risk | Who pays delay, inspection and demurrage? |
+
+## Which Chinese Models Fit Chile?
+
+The [Geely Coolray](/cars/geely-coolray/) is a compact ICE SUV with a $15,200–$18,800 FOB range in the current catalog and established Latin American brand recognition. The [Deepal S05](/cars/deepal-s05/) is a pure BEV alternative for urban buyers with dependable charging. Evaluate each as a separate homologation and tax case.
+
+![Geely Coolray compact SUV exterior](/images/vehicles/evautopro-geely-coolray-appearance-01.webp)
+
+![Deepal S05 battery-electric SUV exterior](/images/vehicles/evautopro-deepal-s05-appearance-03.webp)
+
+**Best for:** importers with a Chilean homologation partner, valid FTA origin documents and dealer-level parts/service planning.
+
+**Not ideal for:** a one-off China-market trim with no confirmed 3CV path, or a buyer relying on “zero duty” without checking the tariff line and origin certificate.
+
+## Chile Versus Brazil as an Entry Market
+
+Chile generally offers a more open import structure, while Brazil has been increasing EV import tariffs and emphasizes local industrial policy. That can make Chile a simpler first market operationally, but it is also highly competitive: low import barriers attract many brands. The advantage must come from model choice, supply reliability and after-sales—not tariff alone.
+
+## Documents to Prepare
+
+- Commercial Invoice and Packing List with VINs
+- Bill of Lading and transshipment evidence
+- Chile–China FTA certificate/proof of origin
+- China export declaration
+- 3CV homologation/technical documentation
+- Insurance and customs valuation support
+- Chilean registration documents
+
+## Request a Chile Import File
+
+Send the model, quantity and target port. We will provide the China-side quote, VIN/specification file and origin documents for your Chilean broker and 3CV partner to validate.
+
+**Official references:** [Chile Customs](https://www.aduana.cl/) · [Chile Customs decision on China FTA origin evidence](https://www.aduana.cl/fallo-de-segunda-instancia-n-17-de-06-01-2010/aduana/2010-03-12/105416.html) · [3CV](https://www.mtt.gob.cl/3cv).
+
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20Chile%20vehicle%20import%20quote) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+    faqs: [
+      { q: 'Are Chinese cars duty-free in Chile?', a: 'A qualifying vehicle may receive the Chile–China FTA preferential rate, but the importer must verify the exact 2026 HS schedule and provide valid proof of origin and transport evidence. Preference is not automatic.' },
+      { q: 'What VAT applies to imported cars in Chile?', a: 'Chile’s IVA is 19%. Ask the broker to calculate it on the legally applicable import base together with any customs duty and charges for the exact shipment.' },
+      { q: 'Do Chinese cars need 3CV homologation?', a: 'A vehicle offered and registered in Chile needs the applicable 3CV compliance/homologation route. Confirm that the exact model, powertrain and variant are covered before ordering a batch.' },
+      { q: 'Should cars ship to San Antonio or Valparaíso?', a: 'Choose from the actual carrier service and total delivered cost to the buyer, including terminal handling, storage and Santiago trucking. Either can be practical for central Chile.' },
+    ], related: ['bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'how-to-verify-a-chinese-car-exporter-before-you-pay', 'geely-coolray-export-deep-dive'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);
