@@ -1863,6 +1863,50 @@ For markets with uneven charging, see the [powertrain import guide](/news/bev-vs
     ], related: ['deepal-s07-alternatives', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'roro-vs-container-shipping-cars-from-china'],
   },
 
+  'geely-coolray-vs-changan-cs55-plus-export': {
+    slug: 'geely-coolray-vs-changan-cs55-plus-export', category: 'product', categoryLabel: 'Model Comparison',
+    title: 'Geely Coolray vs Changan CS55 Plus for Export',
+    excerpt: 'Compare Geely Coolray vs Changan CS55 Plus for export by FOB price, dimensions, power, right-hand-drive batch terms and dealer positioning.',
+    expertInsight: 'Coolray is the smaller, lighter and sportier compact option; CS55 Plus provides more cabin/body size and torque at a slightly lower starting FOB price. Both have factory RHD batches at MOQ 20 and 45–60 day lead time, so RHD buyers should choose by segment—not assume one is more available.',
+    hero: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-07-16 14:00:00', readMin: 8,
+    body: `Geely Coolray vs Changan CS55 Plus is a choice between a smaller sporty compact SUV and a larger value-oriented compact SUV. Both are front-wheel-drive 1.5T/7DCT products in the current catalog and both support factory right-hand-drive batches with MOQ 20 and 45–60 day lead time.
+
+| Spec | [Geely Coolray](/cars/geely-coolray/) | [Changan CS55 Plus](/cars/changan-cs55-plus/) |
+| --- | --- | --- |
+| Dimensions mm | 4330×1800×1609 | 4515×1865×1680 |
+| Wheelbase | 2600 mm | 2656 mm |
+| Power/torque | 177 PS / 255 Nm | 188 PS / 300 Nm |
+| Transmission | 7-speed DCT | 7-speed DCT |
+| FOB | $15,200–18,800 | $14,500–17,900 |
+| Factory RHD | MOQ 20, 45–60 days | MOQ 20, 45–60 days |
+
+![Geely Coolray exterior](/images/vehicles/evautopro-geely-coolray-appearance-03.webp)
+
+**Coolray best for:** buyers prioritizing compact dimensions, lighter weight and Geely recognition. **Not ideal for:** customers who equate physical size with value.
+
+![Changan CS55 Plus exterior](/images/vehicles/evautopro-changan-cs55-plus-appearance-03.webp)
+
+**CS55 Plus best for:** family/value positioning, more torque and a lower catalog entry price. **Not ideal for:** dealers wanting the smallest urban footprint.
+
+## RHD Ordering
+
+Factory RHD is a batch product, not an immediate one-unit conversion. Confirm destination certification, steering specification, trim/colors and the 20-unit batch before deposit. Never convert steering after production for markets that restrict converted vehicles.
+
+## Margin Logic
+
+Do not invent a retail margin. Start from FOB range, then add freight, duty, VAT, certification, local warranty/parts and finance. CS55 Plus starts lower; Coolray may support a different retail position through brand demand. The destination's real retail and landed costs decide.
+
+For African positioning, read [MG ZS vs Geely Coolray](/news/mg-zs-vs-geely-coolray-africa/) and the [Coolray export deep dive](/news/geely-coolray-export-deep-dive/).
+
+WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20compare%20Coolray%20and%20CS55%20Plus%20RHD%20batch%20pricing).`,
+    faqs: [
+      { q: 'Which is larger, Coolray or CS55 Plus?', a: 'CS55 Plus is 185 mm longer, 65 mm wider and 71 mm taller, with a 56 mm longer wheelbase.' },
+      { q: 'Which has more power?', a: 'CS55 Plus has 188 PS and 300 Nm versus Coolray at 177 PS and 255 Nm in the current catalog.' },
+      { q: 'Are both available in right-hand drive?', a: 'Yes, as factory RHD batches with MOQ 20 and stated 45–60 day lead time. Confirm the exact destination specification before deposit.' },
+      { q: 'Which is cheaper FOB?', a: 'The catalog ranges overlap; CS55 Plus starts lower at $14,500, while Coolray starts at $15,200. Compare the exact trim and landed cost.' },
+    ], related: ['mg-zs-vs-geely-coolray-africa', 'geely-coolray-export-deep-dive', 'roro-vs-container-shipping-cars-from-china'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);
