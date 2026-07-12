@@ -1681,6 +1681,54 @@ Add both sets of handling, storage and border costs. Georgia wins when consolida
     ], related: ['import-cars-from-china-to-russia-2026-recycling-fee', 'import-cars-from-china-to-kazakhstan-2026', 'roro-vs-container-shipping-cars-from-china'],
   },
 
+  'roro-vs-container-shipping-cars-from-china': {
+    slug: 'roro-vs-container-shipping-cars-from-china', category: 'guide', categoryLabel: 'Buyer Guide',
+    title: 'RoRo vs Container Shipping Cars from China',
+    excerpt: 'Compare RoRo vs container shipping cars from China by unit economics, port access, cargo security, inland delivery, insurance and vehicle dimensions.',
+    expertInsight: 'RoRo usually wins for operable vehicles moving to a RoRo-enabled seaport; a 40HQ container wins when two to four compatible vehicles can be professionally loaded, the destination is inland, or enclosed custody matters. Vehicle length alone never guarantees the count—height, width, loading frame, weight distribution and carrier acceptance decide the final plan.',
+    hero: '/images/news/russia-1.webp', date: '2026-07-14 14:00:00', readMin: 8,
+    body: `RoRo shipping drives an operable car onto a vessel and prices it by vehicle dimensions or unit. Container shipping secures vehicles inside a 40HQ and spreads the box cost across the load. RoRo is usually simpler for one or many running vehicles to a supported port; container is often better for inland destinations, mixed models and buyers who want sealed custody.
+
+## Six-Way Comparison
+
+| Factor | RoRo | 40HQ container |
+| --- | --- | --- |
+| Pricing | Per vehicle/measurement | Per container plus loading |
+| Typical load | One unit upward | Usually 2–4 small/medium cars with engineered racks |
+| Port | Must support vehicle RoRo | Any suitable container terminal |
+| Vehicle condition | Must roll, steer and brake | Can handle non-running unit with equipment |
+| Personal cargo | Usually prohibited | Only declared/secured cargo accepted |
+| Custody | Vehicle accessible during handling | Sealed box after loading |
+
+![Vehicles being loaded onto a RoRo vessel](/images/news/russia-1.webp)
+
+## Why “Four Cars per 40HQ” Is Not a Promise
+
+The [Geely Coolray](/cars/geely-coolray/) is 4,380 mm long; the larger [Deepal S09](/cars/deepal-s09/) is 5,205 mm. A loading engineer considers length, width, height, axle weight, rack angle, battery rules and door clearance. Two large SUVs may be straightforward; three compact SUVs may be practical with a certified frame; four requires small compatible vehicles and a specialist design. Confirm the exact VIN/model mix with a loading diagram.
+
+![Container and rail cargo handling at an inland terminal](/images/news/kazakhstan-3.webp)
+
+## Risk and Insurance
+
+RoRo exposes the vehicle to more handoffs and normally forbids loose items. Container reduces casual access but adds lashing/rack risk: poor loading can damage roofs, suspension or bodywork. Insurance must state vehicle value, route, loading method and exclusions. Photograph every unit before loading and at handover.
+
+**Best for RoRo:** running stock, direct port markets, flexible unit count.
+
+**Best for container:** inland destinations, high-value/mixed cargo, ports without RoRo and loads where container sharing lowers unit cost.
+
+## Ask for Comparable Quotes
+
+Quote the same origin, destination, insurance and inland scope. Require RoRo port charges and container stuffing, rack, unloading and demurrage to be visible—not hidden outside the ocean rate.
+
+WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20please%20compare%20RoRo%20and%2040HQ%20for%20my%20models) or [cai@evautopro.com](mailto:cai@evautopro.com).`,
+    faqs: [
+      { q: 'Is RoRo cheaper than container shipping?', a: 'Often for one operable vehicle to a RoRo port. A 40HQ can become cheaper per unit when several compatible cars share the box, but include racks, loading, unloading and inland charges.' },
+      { q: 'How many cars fit in a 40HQ?', a: 'Common plans range from two to four, but no count is guaranteed from length alone. Model width/height, rack engineering, weight and carrier rules determine the approved load.' },
+      { q: 'Can goods be left inside a RoRo vehicle?', a: 'Carriers normally prohibit undeclared personal or commercial cargo. Container cargo must also be declared and secured. Follow the carrier’s written rules.' },
+      { q: 'Which method is safer?', a: 'Container limits access after sealing; RoRo avoids rack/loading-frame stresses. Safety depends on professional handling, lashing, inspection evidence and insurance.' },
+    ], related: ['import-cars-from-china-to-kazakhstan-2026', 'import-chinese-cars-to-ghana', 'import-cars-from-china-to-georgia-2026-reexport-hub'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);
