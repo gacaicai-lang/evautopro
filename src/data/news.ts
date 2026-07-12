@@ -1073,8 +1073,6 @@ A supplier demanding **100% payment up front**, especially to a personal account
 
 ## Insist on Pre-Shipment Inspection
 
-![Geely Atlas interior at pre-shipment inspection stage, real production unit](/images/vehicles/evautopro-geely-atlas-console-01.webp)
-
 A serious exporter inspects every unit before loading and sends you a **photo and video report of your actual cars** — not stock images. This is your proof the vehicle exists, matches the order, and is undamaged before your balance payment leaves your account. If a supplier resists inspection or only offers brochure photos, that tells you what you need to know. You can also commission an independent third-party inspection (SGS or similar) at your cost.
 
 ## The Documents a Real Exporter Provides
@@ -1098,8 +1096,6 @@ If they can't produce a specimen of these, they haven't shipped legally before.
 - **No verifiable references or documents = walk away**, regardless of price.
 
 ## How EV Auto Pro Checks Out
-
-![Geely Coolray at our Shanghai bonded warehouse, real production unit ready for export](/images/vehicles/evautopro-geely-coolray-appearance-02.webp)
 
 We hold **MOFCOM authorized exporter status and AEO customs certification since 2018**, with direct dealer relationships across 6 OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour). Every order runs the [EV Auto Pro Export PDI](/services/inspection/) with a photo and video report before loading, on standard T/T 30/70 or L/C terms, with the full document set provided.
 

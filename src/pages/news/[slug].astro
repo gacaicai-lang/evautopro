@@ -88,6 +88,16 @@ function parseBody(body: string): Block[] {
 }
 
 const bodyBlocks = parseBody(article.body);
+
+// Full image set for schema (hero + every inline image actually used in the
+// body, deduped) — NewsArticle.image should list all images on the page,
+// not just the hero.
+const allImageUrls = [
+  article.hero,
+  ...bodyBlocks.filter((b): b is Extract<Block, { type: 'image' }> => b.type === 'image').map(b => b.src),
+]
+  .filter((v, i, arr) => arr.indexOf(v) === i)
+  .map(src => new URL(src, 'https://evautopro.com').href);
 ---
 
 <BaseLayout
@@ -124,11 +134,16 @@ const bodyBlocks = parseBody(article.body);
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="text-lg text-ink-600 leading-relaxed mb-6 italic">{article.excerpt}</p>
 
-      {/* Expert Insight — keyword-loaded conclusion capsule, GEO/AIO-extractable */}
-      <div class="mb-8 pl-4 border-l-4 border-brand-500 bg-brand-50/40 py-3 pr-4 rounded-r-md">
-        <div class="text-[10px] font-bold text-brand-600 uppercase tracking-wider mb-1.5">Expert Insight</div>
-        <p class="text-sm text-ink-800 leading-relaxed">{article.expertInsight ?? article.excerpt}</p>
-      </div>
+      {/* Expert Insight — keyword-loaded conclusion capsule, GEO/AIO-extractable.
+           Only renders when an article has one deliberately written — no
+           fallback to excerpt, so older articles don't show a box that just
+           repeats the italic line above it. */}
+      {article.expertInsight && (
+        <div class="mb-8 pl-4 border-l-4 border-brand-500 bg-brand-50/40 py-3 pr-4 rounded-r-md">
+          <div class="text-[10px] font-bold text-brand-600 uppercase tracking-wider mb-1.5">Expert Insight</div>
+          <p class="text-sm text-ink-800 leading-relaxed">{article.expertInsight}</p>
+        </div>
+      )}
 
       {/* Author byline + trust module — E-E-A-T signal */}
       <div class="flex items-start gap-3 mb-10 pb-8 border-b border-ink-200">
@@ -310,7 +325,7 @@ const bodyBlocks = parseBody(article.body);
     datePublished: article.date,
     dateModified: article.date,
     description: article.excerpt,
-    image: new URL(article.hero, 'https://evautopro.com').href,
+    image: allImageUrls,
     author: {
       '@type': 'Person',
       name: 'Cai',
