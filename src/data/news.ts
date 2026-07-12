@@ -1821,6 +1821,48 @@ WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20send%20you
     ], related: ['how-to-verify-a-chinese-car-exporter-before-you-pay', 'chinese-car-dealers-uae-vs-direct-import-2026', 'roro-vs-container-shipping-cars-from-china'],
   },
 
+  'deepal-s05-vs-s07-vs-s09-which-to-import': {
+    slug: 'deepal-s05-vs-s07-vs-s09-which-to-import', category: 'product', categoryLabel: 'Model Comparison',
+    title: 'Deepal S05 vs S07 vs S09: Which Should You Import?',
+    excerpt: 'Compare Deepal S05 vs S07 vs S09 by BEV/EREV powertrain, size, FOB price, range, buyer segment and container-shipping practicality.',
+    expertInsight: 'The Deepal range splits at the powertrain: S05 is the lower-priced pure BEV for charging-ready cities; S07 is a mid-size EREV for broader infrastructure; S09 is a six-seat flagship EREV. Dealers should stock by charging reality and customer budget, not treat the three as simple size variants.',
+    hero: '/images/vehicles/evautopro-deepal-s07-01.webp', date: '2026-07-16 09:00:00', readMin: 8,
+    body: `Deepal S05 vs S07 vs S09 is primarily a powertrain and segment decision. The [S05](/cars/deepal-s05/) is a 4,620 mm pure BEV from $19,200 FOB; the [S07](/cars/deepal-s07/) is a 4,750 mm EREV from $24,800; the [S09](/cars/deepal-s09/) is a 5,205 mm six-seat flagship EREV from $36,500.
+
+| Spec | S05 | S07 | S09 |
+| --- | --- | --- | --- |
+| Powertrain | BEV | EREV | EREV |
+| Dimensions mm | 4620×1880×1605 | 4750×1930×1625 | 5205×1996×1800 |
+| Power | 218 PS | 252 PS | 462 PS |
+| Battery | 56.1 kWh | 31.7 kWh | 42 kWh |
+| Electric range | 510 km CLTC | 200 km CLTC | 215 km CLTC |
+| FOB range | $19,200–24,500 | $24,800–32,500 | $36,500–45,800 |
+
+![Deepal S05 exterior](/images/vehicles/evautopro-deepal-s05-appearance-02.webp)
+
+**S05 best for:** charging-ready urban markets and price-sensitive EV buyers. **Not ideal for:** markets banning neither fuel cars nor offering dependable charging, where EREV flexibility may sell more easily.
+
+![Deepal S07 exterior](/images/vehicles/evautopro-deepal-s07-appearance-02.webp)
+
+**S07 best for:** dealers needing a mid-size electric-driving SUV without dependence on public charging. **Not ideal for:** markets that legally admit only pure BEVs.
+
+![Deepal S09 exterior](/images/vehicles/evautopro-deepal-s09-appearance-02.webp)
+
+**S09 best for:** premium six-seat/family positioning. **Not ideal for:** entry-price inventory or container plans optimized around compact vehicles.
+
+## Container Planning
+
+S05 is easiest to combine because it is shortest/narrowest; S09 consumes much more length, width and weight. Do not infer an exact 40HQ count from length: request an engineered loading plan for the model mix.
+
+For markets with uneven charging, see the [powertrain import guide](/news/bev-vs-phev-vs-erev-vs-hybrid-which-to-import/). WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20compare%20Deepal%20S05%20S07%20and%20S09%20for%20my%20market).`,
+    faqs: [
+      { q: 'Is Deepal S05 BEV or EREV?', a: 'S05 is the pure BEV in this comparison, with a 56.1 kWh battery and 510 km CLTC catalog range.' },
+      { q: 'What is the difference between Deepal S07 and S09?', a: 'Both are EREVs, but S09 is a much larger six-seat flagship with 462 PS; S07 is a mid-size five-seat model with 252 PS.' },
+      { q: 'Which Deepal is cheapest to import?', a: 'S05 has the lowest catalog FOB range at $19,200–24,500, before freight, tax and certification.' },
+      { q: 'Which Deepal suits weak charging infrastructure?', a: 'S07 or S09 EREV provides fuel-backed range. Confirm local import rules because some EV-only incentives or bans distinguish BEV from EREV.' },
+    ], related: ['deepal-s07-alternatives', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'roro-vs-container-shipping-cars-from-china'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);

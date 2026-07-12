@@ -168,7 +168,7 @@
 | 6 | roro-vs-container-shipping-cars-from-china | PUBLISHED | 2026-07-14 | see git history | Dimension caveat; audit pending commit |
 | 7 | chinese-car-spare-parts-warranty-export-guide | PUBLISHED | 2026-07-15 | see git history | Three-tier warranty framework |
 | 8 | how-to-pay-chinese-car-exporter-tt-lc-guide | PUBLISHED | 2026-07-15 | see git history | No invented bank fees |
-| 9 | deepal-s05-vs-s07-vs-s09-which-to-import | TODO | | | |
+| 9 | deepal-s05-vs-s07-vs-s09-which-to-import | PUBLISHED | 2026-07-16 | see git history | cars.ts only |
 | 10 | geely-coolray-vs-changan-cs55-plus-export | TODO | | | |
 
 状态值：`TODO` → `RESEARCHING` → `PUBLISHED` →（Claude 填）`REVIEWED`
