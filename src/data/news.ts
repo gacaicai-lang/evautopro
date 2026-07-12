@@ -8,6 +8,7 @@ export type NewsArticle = {
   date: string;
   readMin: number;
   body: string;  // Markdown-style content
+  expertInsight?: string;  // 2-3 sentence keyword-loaded conclusion capsule (GEO/AIO callout box). Falls back to excerpt if unset.
   faqs?: { q: string; a: string }[];
   related?: string[];  // related article slugs
 };
@@ -745,6 +746,7 @@ We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partn
     category: 'guide', categoryLabel: 'Buyer Guide',
     title: 'BEV vs PHEV vs EREV vs Hybrid: Which Should You Import for Your Market? (2026 Dealer Guide)',
     excerpt: 'The right powertrain to stock depends on charging infrastructure and climate at your destination, not on which one is "best." Here is the decision framework, real spec comparison, and region-by-region fit.',
+    expertInsight: 'For most Chinese-EV import markets, EREV outperforms pure BEV where charging infrastructure is still developing — it delivers full electric-driving character with zero range-anxiety risk. BEV wins where charging is reliable and running cost matters most; ICE and HEV still lead in markets with little to no charging network. Match the powertrain to the destination city, not the country average.',
     hero: '/images/faq-hero.webp',
     date: '2026-07-09 09:00:00', readMin: 11,
     body: `The right EV powertrain to import is not "the best one" — it is whichever one matches the charging infrastructure and climate at your destination. A BEV that sells well in the UAE's growing charging network can sit unsold in a market with patchy grid coverage, while an EREV that looks like a compromise on paper solves the exact anxiety that stops a hesitant buyer from signing. This guide breaks down all five powertrain types EV Auto Pro ships, when each one wins, and which of our in-stock models fit which market.
@@ -836,6 +838,7 @@ Guessing wrong on powertrain is expensive — a container of the wrong technolog
     category: 'guide', categoryLabel: 'Market Guide',
     title: 'How to Import Cars from China to Kazakhstan (2026): Duty, VAT, Recycling Fee & Process',
     excerpt: 'The rules changed hard in 2025–26: the EV duty-free quota is gone and VAT rose to 16%. Here is the current landed-cost math, document list, and step-by-step process for dealers importing from China.',
+    expertInsight: 'Importing a car from China to Kazakhstan in 2026 costs duty (0% on EVs under WTO terms, 15% on combustion cars), 16% VAT from January 2026, and a power/age-based recycling fee — the EV duty-free quota that made this route especially cheap was exhausted in October 2025. Vehicles cleared at the 0% EV tariff cannot legally be re-exported to Russia or other EAEU states.',
     hero: '/images/vehicles/evautopro-geely-coolray-01.webp',
     date: '2026-07-09 11:00:00', readMin: 10,
     body: `Importing a car from China to Kazakhstan in 2026 means budgeting for four things: the customs duty (0% on electric vehicles under WTO terms, 15% on combustion cars for companies), 16% VAT from January 2026, the recycling fee (утильсбор), and — for combustion engines — excise. The single biggest change dealers miss is that Kazakhstan's duty-and-VAT-free EV quota was exhausted in October 2025, so an electric car no longer clears free. This guide breaks down the real landed cost, the documents you need, and the route from a Chinese port to Almaty.
@@ -941,6 +944,7 @@ Kazakhstan's rules have already changed twice in the last year — the quota clo
     category: 'guide', categoryLabel: 'Market Guide',
     title: 'Importing Cars from China to Russia in 2026: The Recycling Fee Reform and the 160 HP Line',
     excerpt: 'Russia now ties the recycling fee (утильсбор) to engine power, with the preferential rate kept only up to 160 hp. Here is what that means for landed cost, and where the popular Chinese SUVs actually sit.',
+    expertInsight: 'Since December 2025, Russia\'s vehicle recycling fee scales with engine power, and the preferential rate applies only up to 160 hp — above that line the fee rises sharply on top of the existing 15% import tariff and VAT. Nearly every popular Chinese export SUV (177–462 PS) sits above that line, so the fee must be modelled per model, not assumed from FOB price alone.',
     hero: '/images/vehicles/evautopro-changan-uni-t-01.webp',
     date: '2026-07-08 10:00:00', readMin: 9,
     body: `Russia's recycling fee (утильсбор) is now the single number that decides whether a Chinese car pencils out for import. From December 2025 the fee is tied to engine power on a progressive scale, and the preferential rate is kept only for cars up to 160 horsepower. Above that line the fee climbs steeply — on top of the 15% import tariff and VAT. For dealers importing from China, the model you choose, and specifically its power output, now drives the landed cost more than the FOB price does.
@@ -1019,6 +1023,7 @@ The queues at Russia's borders in late 2025 were dealers who waited too long to 
     category: 'guide', categoryLabel: 'Buyer Guide',
     title: 'How to Verify a Chinese Car Exporter Before You Pay (2026 Dealer Checklist)',
     excerpt: 'Before you wire a deposit to a Chinese car supplier, run these seven checks. They separate a MOFCOM-authorized exporter from a grey-market reseller — and protect your money.',
+    expertInsight: 'A legitimate Chinese car exporter can produce a MOFCOM authorized-exporter licence number, invoices from a company bank account matching that same registered name, and offers pre-shipment photo/video inspection as standard — a grey-market reseller usually fails at least one of these. The single biggest red flag is a mismatch between the invoicing company and the bank account receiving payment.',
     hero: '/images/news/russia-1.webp',
     date: '2026-07-07 10:00:00', readMin: 9,
     body: `Before wiring a deposit to any Chinese car exporter, verify seven things: their MOFCOM export licence, an OEM authorization or dealer channel, the company registration behind the bank account, a pre-shipment inspection commitment, the full export document set, realistic payment terms, and traceable references. The single biggest loss in this trade is a deposit sent to a company that turns out to be a grey-market reseller — or not a company at all. This checklist is how a professional importer avoids that.

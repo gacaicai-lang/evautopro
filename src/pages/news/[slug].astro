@@ -121,16 +121,29 @@ const bodyBlocks = parseBody(article.body);
   {/* Body */}
   <section class="py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-lg text-ink-600 leading-relaxed mb-8 italic">{article.excerpt}</p>
+      <p class="text-lg text-ink-600 leading-relaxed mb-6 italic">{article.excerpt}</p>
 
-      {/* Author byline — E-E-A-T signal */}
-      <a href="/about/founder/" class="flex items-center gap-3 mb-10 pb-8 border-b border-ink-200 group no-underline">
-        <div class="w-11 h-11 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">C</div>
+      {/* Expert Insight — keyword-loaded conclusion capsule, GEO/AIO-extractable */}
+      <div class="mb-8 pl-4 border-l-4 border-brand-500 bg-brand-50/40 py-3 pr-4 rounded-r-md">
+        <div class="text-[10px] font-bold text-brand-600 uppercase tracking-wider mb-1.5">Expert Insight</div>
+        <p class="text-sm text-ink-800 leading-relaxed">{article.expertInsight ?? article.excerpt}</p>
+      </div>
+
+      {/* Author byline + trust module — E-E-A-T signal */}
+      <div class="flex items-start gap-3 mb-10 pb-8 border-b border-ink-200">
+        <a href="/about/founder/" class="flex-shrink-0">
+          <div class="w-11 h-11 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold text-lg hover:opacity-90 transition-opacity">C</div>
+        </a>
         <div class="text-sm leading-tight">
-          <div class="text-ink-900"><span class="text-ink-500">By</span> <span class="font-bold group-hover:text-brand-500 transition-colors">Cai</span> · Founder &amp; Trade Director, EV Auto Pro</div>
-          <div class="text-ink-500 mt-0.5">15 years cross-border trade · 6 authorized OEM partnerships · reviewed for {article.date.slice(0, 4)}</div>
+          <div class="text-ink-900">
+            <span class="text-ink-500">By</span> <a href="/about/founder/" class="font-bold text-ink-900 hover:text-brand-500 transition-colors">Cai</a>
+            <span class="text-ink-500"> · Founder &amp; Trade Director, EV Auto Pro</span>
+          </div>
+          <div class="text-ink-500 mt-1 leading-relaxed">
+            15 years cross-border trade · <a href="/services/inspection/" class="text-ink-600 hover:text-brand-500 underline decoration-ink-300">MOFCOM authorized exporter &amp; AEO-certified since 2018</a> · 6 direct OEM dealer partnerships — not a trading-company reseller · reviewed for {article.date.slice(0, 4)}
+          </div>
         </div>
-      </a>
+      </div>
 
       <div class="prose-content space-y-5 text-base text-ink-700 leading-relaxed">
         {bodyBlocks.map(block => {
