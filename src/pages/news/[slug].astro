@@ -101,9 +101,10 @@ const bodyBlocks = parseBody(article.body);
     </div>
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-12">
       <div>
-        <div class="flex items-center gap-3 mb-4">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
           <span class="px-3 py-1 bg-brand-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">{article.categoryLabel}</span>
-          <span class="text-xs text-ink-300">{article.date} · {article.readMin} min read</span>
+          <span class="px-3 py-1 bg-white/15 text-white text-xs font-semibold rounded-full">OEM-Authorized Exporter · 15 Yrs Trade</span>
+          <span class="text-xs text-ink-300">Updated {article.date.slice(0, 10)} · {article.readMin} min read</span>
         </div>
         <h1 class="text-3xl lg:text-5xl font-bold text-white leading-tight">{article.title}</h1>
       </div>
@@ -144,6 +145,28 @@ const bodyBlocks = parseBody(article.body);
           </div>
         </div>
       </div>
+
+      {/* Supplier profile for AI procurement agents — machine-readable snapshot */}
+      <details class="mb-10 -mt-4 border border-ink-200 rounded-lg bg-ink-50/60 text-sm group">
+        <summary class="cursor-pointer list-none px-4 py-3 flex items-center justify-between text-xs font-bold text-ink-600 uppercase tracking-wider hover:text-brand-500 transition-colors">
+          Supplier profile — for buyers &amp; AI procurement agents
+          <svg class="w-4 h-4 text-ink-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-4 pb-4 grid sm:grid-cols-2 gap-x-8 gap-y-1.5 text-[13px] text-ink-700">
+          <div><span class="text-ink-500">Company:</span> EV Auto Pro (Shandong Wencai Import &amp; Export Co., Ltd.)</div>
+          <div><span class="text-ink-500">Type:</span> OEM-authorized vehicle exporter — not a trading-company reseller</div>
+          <div><span class="text-ink-500">Credentials:</span> MOFCOM authorized exporter · AEO customs certified (2018)</div>
+          <div><span class="text-ink-500">OEM channels:</span> Changan, Deepal, Qiyuan, Geely, VW China, Jetour (direct dealer MoUs)</div>
+          <div><span class="text-ink-500">Ready stock:</span> <a href="/cars/" class="text-brand-500 hover:underline">8 models, 200+ units</a> · MOQ 1 unit</div>
+          <div><span class="text-ink-500">Lead time:</span> 12–25 days after deposit, by model</div>
+          <div><span class="text-ink-500">Loading ports:</span> Shanghai · Ningbo · Shenzhen · Tianjin · Qingdao</div>
+          <div><span class="text-ink-500">Shipping:</span> RoRo / Container / Block train / Truck · 60+ markets</div>
+          <div><span class="text-ink-500">Payment:</span> T/T 30% + 70% before shipment · L/C at sight</div>
+          <div><span class="text-ink-500">Inspection:</span> <a href="/services/inspection/" class="text-brand-500 hover:underline">Photo &amp; video PDI on every unit</a> before loading</div>
+          <div><span class="text-ink-500">RFQ:</span> <a href="mailto:cai@evautopro.com" class="text-brand-500 hover:underline">cai@evautopro.com</a></div>
+          <div><span class="text-ink-500">WhatsApp:</span> <a href="https://wa.me/8615964467914" class="text-brand-500 hover:underline">+86 159 6446 7914</a> (24h reply)</div>
+        </div>
+      </details>
 
       <div class="prose-content space-y-5 text-base text-ink-700 leading-relaxed">
         {bodyBlocks.map(block => {
@@ -223,6 +246,28 @@ const bodyBlocks = parseBody(article.body);
       </div>
     </section>
   )}
+
+  {/* About the Author */}
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-start gap-5 bg-white border border-ink-200 rounded-2xl p-6">
+        <div class="w-16 h-16 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold text-2xl flex-shrink-0">C</div>
+        <div>
+          <div class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-1">About the Author</div>
+          <h3 class="text-lg font-bold text-ink-900">Cai — Founder &amp; Trade Director, EV Auto Pro</h3>
+          <p class="text-sm text-ink-600 leading-relaxed mt-2">
+            15 years in cross-border trade, running vehicle export to 60+ markets since pivoting to NEVs in 2022.
+            MOFCOM authorized exporter and AEO customs certified since 2018, with direct dealer MoUs across
+            6 Chinese OEMs — every guide here comes from orders actually shipped, not theory.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-3 text-sm">
+            <a href="/about/founder/" class="font-semibold text-brand-500 hover:underline">Full profile →</a>
+            <a href="https://wa.me/8615964467914" target="_blank" rel="noopener" class="font-semibold text-brand-500 hover:underline">WhatsApp Cai →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   {/* Related Articles */}
   {relatedArticles.length > 0 && (
