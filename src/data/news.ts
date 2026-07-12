@@ -1418,6 +1418,108 @@ Send us the model, quantity and destination city. We will provide the China-side
     related: ['import-cars-from-china-to-kazakhstan-2026', 'top-7-chinese-suv-for-russia-2026', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import'],
   },
 
+  'import-cars-from-china-to-ethiopia-2026-ev-only': {
+    slug: 'import-cars-from-china-to-ethiopia-2026-ev-only', category: 'market', categoryLabel: 'Market & Import',
+    title: 'Import Electric Cars from China to Ethiopia (2026)',
+    excerpt: 'Import electric cars from China to Ethiopia under the ICE-vehicle import ban, with EV tax verification, Djibouti logistics, charging and FX planning.',
+    expertInsight: 'Ethiopia’s 2024 ban on gasoline- and diesel-vehicle imports remains part of its 2026 green-mobility policy, so the viable passenger-car channel is pure BEV—not PHEV or EREV. The opportunity is real, but weak public charging and foreign-exchange controls make long-range stock, charging support and bank-approved payment planning more important than headline FOB price.',
+    hero: '/images/vehicles/evautopro-deepal-s05-01.webp', date: '2026-07-13 09:00:00', readMin: 9,
+    body: `To import electric cars from China to Ethiopia in 2026, choose a pure battery-electric vehicle and verify the current customs treatment, foreign-exchange approval and charging plan before payment. Ethiopia banned imports of gasoline and diesel vehicles in February 2024; the government's 2025–2035 climate framework continues to describe Ethiopia as the first country to take that step. A PHEV or EREV still contains a fuel-burning engine, so it should not be assumed eligible.
+
+## What Does the Fuel-Car Import Ban Cover?
+
+The policy's purpose is to reduce fuel imports and accelerate electric mobility. Official Ethiopian climate material confirms the 2024 ICE-import ban and a target of 500,000 EVs on the road by 2033. For a commercial importer, the conservative compliance rule is simple:
+
+- **Pure BEV:** the appropriate passenger-car product to evaluate.
+- **PHEV:** do not ship without written Ethiopian customs approval; it has a gasoline engine.
+- **EREV:** do not market as “electric-only” for import purposes; its range extender burns fuel.
+- **ICE gasoline/diesel:** prohibited under the policy unless a documented exception applies.
+
+The ban arrived quickly and caught some vehicles already in transit. That history makes written pre-clearance important: obtain the HS classification and admissibility decision before the vehicle leaves China.
+
+## Which Ready-Stock Vehicle Fits?
+
+The [Deepal S05](/cars/deepal-s05/) is the only pure BEV in EV Auto Pro's current eight-model ready-stock range. The S07 and S09 are EREVs, while Jetour T2 is a PHEV; none of those should be substituted into an Ethiopia EV-only quotation.
+
+| Model | Powertrain | Ethiopia starting position |
+| --- | --- | --- |
+| Deepal S05 | Pure BEV | Evaluate for import |
+| Deepal S07 | EREV with gasoline range extender | Do not recommend under EV-only policy |
+| Deepal S09 | EREV with gasoline range extender | Do not recommend under EV-only policy |
+| Jetour T2 | PHEV | Do not recommend under EV-only policy |
+
+![Deepal S05 pure battery-electric SUV exterior](/images/vehicles/evautopro-deepal-s05-appearance-01.webp)
+
+Our catalog lists the Deepal S05 at $19,200–$24,500 FOB. Other pure BEV models can be sourced to order through OEM channels, but availability, specifications and price must be quoted rather than implied as stock.
+
+## What Taxes Apply to EV Imports?
+
+Ethiopian tax policy has changed alongside the EV transition. Do not rely on a single percentage from a news article: the Customs Commission tariff, Ministry of Finance VAT/excise directives and any investment or fleet exemption must be checked for the importer and HS code at the order date.
+
+| Cost line | Confirm with |
+| --- | --- |
+| Customs duty | Ethiopian Customs Commission tariff/classification |
+| VAT and excise | Ministry of Finance directives and customs assessment |
+| Port/transit | Djibouti agent and Ethiopian corridor operator |
+| FX/bank cost | Importer's Ethiopian bank under current NBE directives |
+| Charger | Plug standard, installation and local electrical approval |
+
+The correct buyer promise is a documented landed-cost estimate, not “tax-free EV.” Where an exemption applies, retain the legal basis and approval in the shipment file.
+
+## Djibouti Port to Addis Ababa
+
+Landlocked Ethiopia relies heavily on the Djibouti corridor. Vehicles arrive by RoRo or container, clear/transit through Djibouti and move inland by rail or truck to Addis Ababa. The contract must state who handles Djibouti port charges, transit documents, Ethiopian customs and inland delivery.
+
+![Vehicles being loaded on a RoRo vessel at a port](/images/news/russia-1.webp)
+
+This is a generic RoRo loading image and is not represented as Djibouti. Compare RoRo for straightforward vehicle handling with container shipping where enclosed transport or mixed cargo is needed.
+
+## Charging Is the Main Commercial Constraint
+
+Ethiopia's electricity is predominantly renewable, which strengthens the economic logic for EVs. Access is not the same as charging availability, however. Official and government-linked assessments acknowledge that charging infrastructure was extremely limited when the ban began. A dealer needs an operating plan, not just cars:
+
+- prioritize buyers with home, depot or workplace charging;
+- include compatible AC charging equipment and installation guidance;
+- map realistic intercity charging before promising highway usability;
+- hold diagnostic tools and high-voltage service training;
+- explain that advertised test-cycle range is not guaranteed in every load, road and climate condition.
+
+**Best for:** Addis Ababa fleets, businesses and private buyers with dedicated overnight charging and predictable daily mileage.
+
+**Not ideal for:** users without secure electricity/parking, remote intercity operation with no verified charging, or importers expecting an EREV engine to solve charging gaps despite the ICE-import ban.
+
+## Foreign Exchange and Payment Planning
+
+The National Bank of Ethiopia controls foreign-exchange procedures and issued updated import/franco-valuta directives in May 2026. Before signing T/T terms, the importer should ask its bank which import registration, source-of-funds and document conditions apply. Do not send a deposit first and assume foreign currency for the balance will be available later.
+
+Use a company account matching the invoice, agree a documentary payment schedule and make the vehicle, VIN and shipment descriptions consistent. See our [exporter verification checklist](/news/how-to-verify-a-chinese-car-exporter-before-you-pay/) before any transfer.
+
+## Documents to Prepare
+
+- Import permit or bank/import registration required under current rules
+- Commercial Invoice and Packing List with VINs
+- Bill of Lading and Djibouti transit documents
+- Certificate of Origin and China export declaration
+- Vehicle conformity and technical file
+- Battery and charger documentation requested by authorities/carrier
+- Ethiopian customs and registration documents
+
+## Request a Pure-BEV Ethiopia Quote
+
+Send the target quantity, Addis Ababa delivery point and charging plan. We will quote the Deepal S05 or source alternative pure BEVs, then provide the China-side file for your customs broker and bank to verify before payment.
+
+**Official references:** [Ethiopia Ministry of Planning climate portal](https://climate.mopd.gov.et/about/) · [Ethiopian Customs Commission directives](https://www.ecc.gov.et/directives) · [National Bank foreign-exchange directives](https://nbe.gov.et/directives/foreign-exchange-management/) · [Ministry of Transport e-mobility strategy](https://www.motl.gov.et/news/-e-mobility-).
+
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20pure%20BEV%20quote%20for%20Ethiopia) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+    faqs: [
+      { q: 'Can Ethiopia import gasoline or diesel cars in 2026?', a: 'Ethiopia introduced a ban on gasoline- and diesel-vehicle imports in February 2024, and official 2026 climate policy continues the electric-mobility transition. Obtain written customs confirmation for any claimed exception before shipping.' },
+      { q: 'Can I import a PHEV or EREV as an electric car to Ethiopia?', a: 'Do not assume so. Both contain a fuel-burning engine. The conservative compliant recommendation is a pure BEV unless Ethiopian Customs gives written approval for the exact PHEV/EREV classification.' },
+      { q: 'Which EV does EV Auto Pro have ready for Ethiopia?', a: 'Deepal S05 is the only pure BEV in the current eight-model ready-stock range. Deepal S07/S09 are EREVs and Jetour T2 is PHEV, so they are not presented as Ethiopia EV-only options.' },
+      { q: 'How do electric cars ship from China to Ethiopia?', a: 'They normally move by RoRo or container to Djibouti, then under transit by rail or truck to Addis Ababa. Quote port, transit, Ethiopian customs and final delivery as separate cost lines.' },
+      { q: 'What is the biggest EV-import risk in Ethiopia?', a: 'Charging and foreign-exchange execution are bigger risks than model selection. Secure depot/home charging and confirm bank-approved import payment procedures before committing to the shipment.' },
+    ], related: ['import-chinese-cars-to-ghana', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'how-to-verify-a-chinese-car-exporter-before-you-pay'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);
