@@ -755,9 +755,15 @@ We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partn
 
 **BEV (Battery Electric Vehicle)** — no combustion engine at all, runs entirely on battery power, plugs in to recharge. Best fit: markets with reliable home or public charging and moderate climate. Zero tailpipe emissions, lowest running cost per km, but range and charging speed depend entirely on grid access.
 
+![Deepal S05 battery-electric SUV — 510 km CLTC range, real production unit](/images/vehicles/evautopro-deepal-s05-appearance-01.webp)
+
 **PHEV (Plug-in Hybrid Electric Vehicle)** — a combustion engine paired with a mid-sized battery (typically 15-35 kWh) that plugs in and covers daily driving on electricity alone, with the engine taking over for longer trips. Best fit: markets where charging exists but isn't universal — buyers get electric commuting most days with zero range anxiety on a road trip.
 
+![Jetour T2 PHEV — 7-seat adventure SUV, 34.5 kWh battery, real production unit](/images/vehicles/evautopro-jetour-t2-appearance-02.webp)
+
 **EREV (Extended-Range Electric Vehicle)** — drives like a BEV day-to-day (100% electric drive, no mechanical connection from engine to wheels), but carries a small combustion engine that only generates electricity to extend range once the battery runs low. Best fit: cold climates and markets with limited charging — buyers get a genuinely electric driving experience with none of the range anxiety.
+
+![Deepal S07 EREV — 200 km CLTC electric range plus 1,000 km+ combined, real production unit](/images/vehicles/evautopro-deepal-s07-appearance-01.webp)
 
 **HEV (Hybrid Electric Vehicle)** — a small battery (under 2 kWh) that recharges only through braking and the engine, never plugs in. Best fit: markets with no charging infrastructure at all, where the buyer wants better fuel economy than a pure ICE vehicle with zero behavior change required.
 
@@ -874,6 +880,8 @@ A vehicle brought in at the 0% WTO tariff **cannot be re-exported to other EAEU 
 
 Take a [Deepal S05](/cars/deepal-s05/) (battery-electric compact SUV) at an FOB China price around $19,200:
 
+![Deepal S05 interior — 14.6-inch floating touchscreen, real production unit](/images/vehicles/evautopro-deepal-s05-console-01.webp)
+
 | Line item | Approx. (USD) |
 | --- | --- |
 | FOB China | 19,200 |
@@ -886,6 +894,8 @@ Take a [Deepal S05](/cars/deepal-s05/) (battery-electric compact SUV) at an FOB 
 ![Chart: landed-cost breakdown of a battery-electric Deepal S05 to Kazakhstan — FOB, freight and 16% VAT totalling about $24,590 before the recycling fee](/images/news/kazakhstan-cost.svg)
 
 A combustion equivalent like the [Changan CS55 Plus](/cars/changan-cs55-plus/) (~$14,500 FOB) carries the 15% duty and engine-based excise on top, so run the math per powertrain — the cheaper FOB doesn't always win once duty and excise are added. Not sure which powertrain fits Kazakhstan's climate and charging reality? See our guide on [which powertrain to import for your market](/news/bev-vs-phev-vs-erev-vs-hybrid-which-to-import/).
+
+![Changan CS55 Plus — Changan's best-selling export SUV, real production unit](/images/vehicles/evautopro-changan-cs55-plus-appearance-01.webp)
 
 ## Step-by-Step Process
 
@@ -981,6 +991,10 @@ The honest takeaway: the current export-favourite SUVs all sit above the prefere
 
 ![Chart: Chinese SUV engine power in PS versus Russia's 160 hp recycling-fee preferential line — every current model sits above it](/images/news/russia-160hp.svg)
 
+![Changan CS55 Plus — Changan's fastest-moving volume SUV in Russia, real production unit](/images/vehicles/evautopro-changan-cs55-plus-appearance-02.webp)
+
+![Deepal S09 flagship EREV — 462 PS, real production unit](/images/vehicles/evautopro-deepal-s09-appearance-01.webp)
+
 ## What This Means for Your Landed Cost
 
 Three practical consequences:
@@ -1059,6 +1073,8 @@ A supplier demanding **100% payment up front**, especially to a personal account
 
 ## Insist on Pre-Shipment Inspection
 
+![Geely Atlas interior at pre-shipment inspection stage, real production unit](/images/vehicles/evautopro-geely-atlas-console-01.webp)
+
 A serious exporter inspects every unit before loading and sends you a **photo and video report of your actual cars** — not stock images. This is your proof the vehicle exists, matches the order, and is undamaged before your balance payment leaves your account. If a supplier resists inspection or only offers brochure photos, that tells you what you need to know. You can also commission an independent third-party inspection (SGS or similar) at your cost.
 
 ## The Documents a Real Exporter Provides
@@ -1082,6 +1098,8 @@ If they can't produce a specimen of these, they haven't shipped legally before.
 - **No verifiable references or documents = walk away**, regardless of price.
 
 ## How EV Auto Pro Checks Out
+
+![Geely Coolray at our Shanghai bonded warehouse, real production unit ready for export](/images/vehicles/evautopro-geely-coolray-appearance-02.webp)
 
 We hold **MOFCOM authorized exporter status and AEO customs certification since 2018**, with direct dealer relationships across 6 OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour). Every order runs the [EV Auto Pro Export PDI](/services/inspection/) with a photo and video report before loading, on standard T/T 30/70 or L/C terms, with the full document set provided.
 
@@ -1130,6 +1148,8 @@ These are the established official channels as of early 2026 — verified agains
 | Chery | AW Rostamani Group | Value-focused lineup |
 | Zeekr | AW Rostamani Group | Premium EV positioning |
 
+![Jetour T2 — the best-selling Chinese brand in the UAE in 2024, real production unit](/images/vehicles/evautopro-jetour-t2-appearance-03.webp)
+
 **Best for:** private buyers, small businesses buying 1–3 vehicles for own use, anyone who wants local warranty, service network, registration support and bank financing in one place.
 
 **Not ideal for:** wholesale buyers, fleet operators buying 5+ units, and re-export traders — the distributor margin that pays for showrooms and service networks is exactly the cost you're trying to avoid.
@@ -1151,6 +1171,8 @@ For dealers, fleets and traders, the direct channel is straightforward and matur
 
 Heat matters here: the Gulf's charging network is growing but uneven, which is why **EREV models** ([Deepal S07](/cars/deepal-s07/), [S09](/cars/deepal-s09/)) do so well — full electric driving character with no charging-network dependence. See our [powertrain-by-market guide](/news/bev-vs-phev-vs-erev-vs-hybrid-which-to-import/) for the full logic.
 
+![Deepal S07 EREV interior — Snapdragon 8295 cockpit, real production unit](/images/vehicles/evautopro-deepal-s07-console-02.webp)
+
 ## Local Dealer vs Direct Import: Decision Matrix
 
 | Criterion | Official UAE distributor | Direct import from China |
@@ -1166,6 +1188,8 @@ Heat matters here: the Gulf's charging network is growing but uneven, which is w
 ## Where EV Auto Pro Fits
 
 I run EV Auto Pro, so I'll be direct: **we are a China-side authorized exporter, not a UAE dealership.** We don't compete with The Elite Cars or Al-Futtaim for retail customers — and won't pretend to. Where we fit is the trade channel: dealers and fleet buyers importing 3+ units, re-exporters using Jebel Ali as a hub, and buyers who want factory trims or models the official networks don't stock. Every unit ships GCC-certified with our [photo & video pre-shipment inspection](/services/inspection/), on T/T 30/70 or L/C terms, 12–25 day dispatch from deposit.
+
+![Geely Coolray — top-3 Chinese compact SUV in the UAE, real production unit](/images/vehicles/evautopro-geely-coolray-appearance-03.webp)
 
 **Cai's field note:** the most common mistake I see from first-time UAE trade buyers is comparing our CIF price against the official showroom price and assuming the whole gap is profit. Budget the 5% duty, 5% VAT, port handling and registration first — the honest gap is still healthy, but it's 15–25%, not 40%. Buyers who model it correctly re-order; buyers who don't, don't last.
 
