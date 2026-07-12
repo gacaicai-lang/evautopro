@@ -1613,6 +1613,74 @@ Send the model, quantity and target port. We will provide the China-side quote, 
     ], related: ['bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'how-to-verify-a-chinese-car-exporter-before-you-pay', 'geely-coolray-export-deep-dive'],
   },
 
+  'import-cars-from-china-to-georgia-2026-reexport-hub': {
+    slug: 'import-cars-from-china-to-georgia-2026-reexport-hub', category: 'market', categoryLabel: 'Market & Import',
+    title: 'Import Cars from China to Georgia: 2026 Re-Export Guide',
+    excerpt: 'Import cars from China to Georgia through Poti or Batumi, calculate vehicle excise correctly and use the documented 180-day re-export refund route.',
+    expertInsight: 'Georgia’s re-export advantage is procedural, not “tax-free by default”: Revenue Service says import duty and excise paid on a passenger car can be refunded 100% if it is exported and leaves Georgia within 180 days after release into free circulation. Right-hand-drive or converted-steering cars face punitive excise treatment, so separate transit/re-export stock from vehicles intended for Georgian registration.',
+    hero: '/images/vehicles/evautopro-geely-atlas-01.webp', date: '2026-07-14 09:00:00', readMin: 8,
+    body: `To import cars from China to Georgia in 2026, decide before shipping whether the vehicle will be registered in Georgia or re-exported. Georgia Revenue Service calculates passenger-car import duty and excise from the vehicle's age and technical characteristics. If a car released into free circulation is exported and leaves Georgia within 180 days, the importer may obtain a 100% refund of the paid excise and import duty.
+
+## Why Georgia Works as a Re-Export Hub
+
+Poti and Batumi connect Black Sea shipping with road routes into Armenia, Azerbaijan and wider Caucasus/Central Asia trade. The commercial advantage is organized customs handling, storage and a formal re-export/refund mechanism—not an assumption that every arriving car pays zero tax.
+
+| Route | Best for | Main check |
+| --- | --- | --- |
+| China–Black Sea to Poti | Dealer batches and regional redistribution | Sailing/transshipment and terminal cost |
+| China–Batumi | Alternative Black Sea service | Carrier schedule and inland route |
+| China rail/Caspian corridor | Time-sensitive inland movement | Border handoffs and through documentation |
+
+![Container gantry and rail infrastructure on a Eurasian inland freight corridor](/images/news/kazakhstan-3.webp)
+
+This image is an inland freight-corridor scene and is not labelled as a Georgian port.
+
+## How Does the 180-Day Refund Work?
+
+Revenue Service states that a passenger car released into free circulation and then placed under export procedure and removed from Georgia within 180 calendar days can qualify for a 100% refund of paid excise and import duty. Preserve the import declaration, VIN, payment records, export declaration and proof of exit. Missing the time limit or failing to prove departure can destroy the economics.
+
+Use the official Auto/Moto Levy Calculator for the VIN characteristics and obtain broker confirmation. VAT, service fees, storage and transport may follow separate rules; the refund statement should not be paraphrased as “all costs refunded.”
+
+## Right-Hand Drive Is a Cost and Registration Issue
+
+Georgia's Tax Code applies multiplied excise rates to right-hand-drive and converted-steering vehicles. A car intended for Georgian registration should normally be factory left-hand drive. A right-hand-drive unit moving onward may still transit/re-export subject to customs rules, but do not promise Georgian registration or normal excise treatment.
+
+## Example Product Fit
+
+The [Geely Atlas](/cars/geely-atlas/) and [Geely Coolray](/cars/geely-coolray/) are factory-LHD SUVs in the current export catalog and provide different price/size positions.
+
+![Geely Atlas SUV exterior](/images/vehicles/evautopro-geely-atlas-appearance-01.webp)
+
+| Buyer | Better route | Not ideal for |
+| --- | --- | --- |
+| Georgian retail dealer | Import and local registration | RHD/converted vehicles |
+| Armenia/Azerbaijan trader | Time-controlled re-export | Stock without confirmed onward buyer |
+| Central Asia buyer | Compare Georgia hub vs direct rail | Extra handling that exceeds direct-route saving |
+
+## Documents
+
+- Invoice and Packing List with VINs
+- Bill of Lading/transit document
+- Certificate of Origin and China export declaration
+- Georgian import declaration and payment proof
+- Export declaration and proof of exit for refund
+- Destination-country conformity and customs file
+
+## Compare Georgia with Direct Shipping
+
+Add both sets of handling, storage and border costs. Georgia wins when consolidation, buyer access or onward routing offsets the extra customs stage; direct rail wins when the final buyer and destination are already known.
+
+**Official references:** [Georgia vehicle levy calculator and 180-day refund notice](https://www.rs.ge/CarClearance-en?cat=2&tab=1) · [Georgia HS/tax service](https://www.rs.ge/CommodityCodes-en) · [Georgia Tax Code](https://www.rs.ge/Media/Default/კანონმდებლობა/კანონები/tax%20code.pdf).
+
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20Georgia%20re-export%20vehicle%20quote) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+    faqs: [
+      { q: 'Why is Georgia used for car re-export?', a: 'Poti/Batumi access and a formal customs mechanism support regional redistribution. Revenue Service states that eligible duty and excise can be refunded when the car is exported and leaves within 180 days.' },
+      { q: 'Are imported cars tax-free in Georgia?', a: 'No. Import duty, excise and fees are calculated under Georgian rules. A qualifying 180-day re-export can refund paid import duty and excise, but other costs require separate treatment.' },
+      { q: 'Can right-hand-drive cars register in Georgia?', a: 'Right-hand-drive and converted-steering cars face multiplied excise treatment. Confirm registration eligibility separately; factory LHD is the safer choice for Georgian retail.' },
+      { q: 'Is Georgia cheaper than direct shipping to Central Asia?', a: 'Only when consolidation or onward-market access offsets the extra port, storage and customs stage. Compare both routes on total delivered cost and time.' },
+    ], related: ['import-cars-from-china-to-russia-2026-recycling-fee', 'import-cars-from-china-to-kazakhstan-2026', 'roro-vs-container-shipping-cars-from-china'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);

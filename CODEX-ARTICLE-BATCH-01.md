@@ -164,7 +164,7 @@
 | 2 | import-cars-from-china-to-uzbekistan-2026 | PUBLISHED | 2026-07-12 | see git history | Official tariff/conformity sources; audit clean |
 | 3 | import-cars-from-china-to-ethiopia-2026-ev-only | PUBLISHED | 2026-07-13 | see git history | BEV-only recommendation; official policy/FX sources; audit clean |
 | 4 | import-cars-from-china-to-chile-2026 | PUBLISHED | 2026-07-13 | see git history | FTA origin caveat and 3CV; audit clean |
-| 5 | import-cars-from-china-to-georgia-2026-reexport-hub | TODO | | | |
+| 5 | import-cars-from-china-to-georgia-2026-reexport-hub | PUBLISHED | 2026-07-14 | see git history | Official 180-day refund/RHD rules; audit clean |
 | 6 | roro-vs-container-shipping-cars-from-china | TODO | | | |
 | 7 | chinese-car-spare-parts-warranty-export-guide | TODO | | | |
 | 8 | how-to-pay-chinese-car-exporter-tt-lc-guide | TODO | | | |
