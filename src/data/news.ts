@@ -1729,6 +1729,56 @@ WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20please%20c
     ], related: ['import-cars-from-china-to-kazakhstan-2026', 'import-chinese-cars-to-ghana', 'import-cars-from-china-to-georgia-2026-reexport-hub'],
   },
 
+  'chinese-car-spare-parts-warranty-export-guide': {
+    slug: 'chinese-car-spare-parts-warranty-export-guide', category: 'guide', categoryLabel: 'Buyer Guide',
+    title: 'Chinese Car Spare Parts and Export Warranty Guide',
+    excerpt: 'Understand Chinese car spare-parts availability and export warranty: three coverage models, VIN lookup, first-order spares and buyer safeguards.',
+    expertInsight: 'A Chinese vehicle’s domestic warranty is not automatically valid overseas. Before buying, identify whether coverage comes from an official local OEM network, a written exporter parts arrangement, or no local warranty; then order a VIN-matched starter parts pack with the first shipment.',
+    hero: '/images/services/after-sales.webp', date: '2026-07-15 09:00:00', readMin: 8,
+    body: `Chinese car spare-parts availability is manageable when the importer plans by VIN before the first shipment; warranty is harder because three very different arrangements are often described with the same word. Get the provider, territory, term, exclusions, claim evidence and freight responsibility in writing.
+
+## Three Warranty Arrangements
+
+| Arrangement | Who handles claim | Strength | Limitation |
+| --- | --- | --- | --- |
+| Official local OEM warranty | Authorized local distributor | Local diagnosis/labor/parts | Only eligible local-spec vehicles |
+| Exporter parts support | China exporter coordinates approved parts | Works in open markets | Local labor and freight may be buyer cost |
+| Bare export/no local warranty | Importer | Lowest purchase price | Importer carries full risk |
+
+Never infer overseas coverage from a China-market warranty booklet. Ask whether the exact VIN appears in the destination network and obtain written claim steps.
+
+![Automotive spare parts prepared for after-sales support](/images/services/after-sales.webp)
+
+## Build a First-Order Parts Pack
+
+For each model, price filters, brake wear parts, wiper/lighting items, suspension consumables, sensors prone to impact, body clips and one set of diagnostic/service consumables. High-voltage parts require trained handling; do not stock battery modules casually.
+
+Use the VIN and electronic parts catalog. Model names can cover different engines, connectors and production revisions. Photograph labels and retain the original part number before ordering replacements.
+
+The [Changan CS55 Plus](/cars/changan-cs55-plus/) illustrates the process: the importer should tie every fast-moving item to the exact exported trim/VIN, not merely search “CS55 Plus part” on a marketplace.
+
+## Questions Before Payment
+
+- Who authorizes a claim and within what time?
+- Are diagnostic labor and local labor covered?
+- Who pays international freight and duty on replacement parts?
+- Are consumables, collision and misuse excluded?
+- How long are model-specific parts supplied?
+- Can the supplier provide a VIN-linked catalog and quote?
+
+**Best for:** dealers who hold service stock, train a workshop and sell a written local support policy.
+
+**Not ideal for:** buyers expecting an official distributor to repair an unauthorized parallel-import vehicle for free.
+
+Read the [China auto-parts sourcing guide](/news/guide-to-sourcing-chinese-auto-parts/) and verify the exporter before payment. WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20send%20a%20VIN-matched%20spare-parts%20and%20warranty%20plan) or [cai@evautopro.com](mailto:cai@evautopro.com).`,
+    faqs: [
+      { q: 'Do Chinese cars have an international warranty?', a: 'Not automatically. Confirm whether the VIN is covered by an official destination-country network or only by a written exporter parts arrangement.' },
+      { q: 'Are Chinese car parts difficult to obtain?', a: 'They are easier when ordered by VIN and OEM part number. Dealers should import a fast-moving starter pack with the vehicles instead of waiting for a breakdown.' },
+      { q: 'Who pays labor on an export warranty claim?', a: 'Only the written agreement answers this. Exporter support may supply a part while the importer pays local diagnosis, labor, freight or duty.' },
+      { q: 'What spare parts should accompany the first order?', a: 'Filters, brake wear parts, wipers/lighting, common suspension consumables, clips, selected sensors and model-specific service items, all VIN matched.' },
+    ], related: ['guide-to-sourcing-chinese-auto-parts', 'how-to-verify-a-chinese-car-exporter-before-you-pay', 'roro-vs-container-shipping-cars-from-china'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);
