@@ -1327,6 +1327,97 @@ If you're buying at trade volume — dealer stock, fleet, or re-export through J
     related: ['bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'how-to-verify-a-chinese-car-exporter-before-you-pay', 'import-cars-from-china-to-kazakhstan-2026'],
   },
 
+  'import-cars-from-china-to-uzbekistan-2026': {
+    slug: 'import-cars-from-china-to-uzbekistan-2026', category: 'market', categoryLabel: 'Market & Import',
+    title: 'Import Cars from China to Uzbekistan (2026 Guide)',
+    excerpt: 'Import cars from China to Uzbekistan with a current tariff check, vehicle conformity plan, recycling-fee budget and China-to-Tashkent rail route.',
+    expertInsight: 'Uzbekistan is not an EAEU member, so a vehicle does not inherit Kazakhstan or Russia customs treatment: tariff, VAT, recycling fee and conformity must be calculated under Uzbek rules. Since September 2025, new M/N-category vehicles use the general wheeled-vehicle safety regulation for environmental compliance, while pure EVs are not assessed for an emissions category.',
+    hero: '/images/vehicles/evautopro-deepal-s05-01.webp', date: '2026-07-12 14:00:00', readMin: 9,
+    body: `To import cars from China to Uzbekistan in 2026, calculate the shipment under Uzbekistan's own customs system, not EAEU rules copied from Kazakhstan. Confirm the HS code in the State Customs Committee's Integrated Tariff service, add VAT, customs processing and the applicable vehicle recycling fee, then verify conformity for the exact model before dispatch. Pure electric vehicles are not assessed for an emissions category, but they still require the relevant vehicle-safety conformity process.
+
+## Why Kazakhstan Rules Do Not Carry Into Uzbekistan
+
+Uzbekistan is not a member of the Eurasian Economic Union. Clearing a car in Kazakhstan does not automatically make it duty-paid or registrable in Uzbekistan, and the Kazakhstan-only restriction on EVs cleared under Kazakhstan's WTO tariff is another reason not to treat Almaty clearance as a shortcut.
+
+The practical route may still cross Kazakhstan, but that is **transit**, not Uzbek customs clearance. Keep the rail/road transit documents intact and clear the vehicle in Uzbekistan through the importer and its broker.
+
+## What Changed in Vehicle Conformity?
+
+Uzbekistan's Cabinet Resolution No. 597 of 19 September 2025 simplified environmental compliance for new category M and N vehicles. New imported vehicles are assessed under the General Technical Regulation on wheeled-vehicle safety. Combustion vehicles must still meet the Euro-4 requirement through an accredited conformity body; electric vehicles are not assessed against an emissions category.
+
+That does not mean an EV has no compliance work. The importer still needs the model/VIN documents, safety conformity, customs declaration and registration documents. Ask the accredited body to confirm whether one vehicle, a batch or a model approval is being assessed before shipment.
+
+## How Should You Calculate Import Charges?
+
+Do not publish or quote from an old “EV duty-free since 2019” blog without checking the live tariff. Uzbekistan's official Integrated Tariff service calculates treatment from HS code, origin, sending country and trading country. The Ministry of Investment also confirms that Uzbekistan levies a vehicle utilization/recycling fee under Cabinet decisions, with rates depending on vehicle category.
+
+| Cost line | How to verify |
+| --- | --- |
+| Import duty | Query the current HS code in the official Integrated Tariff service |
+| VAT | Confirm the current import VAT rate and taxable base with the broker |
+| Recycling/utilization fee | Apply the live category/rate under Cabinet rules |
+| Conformity | Quote from an accredited assessment body for the exact model |
+| Freight | Rail/truck quote to the Uzbek terminal plus border handling |
+| Registration | Local registration, inspection and plate charges |
+
+The landed-cost sheet should identify BEV, PHEV/EREV and ICE separately. A pure EV's emissions treatment is simpler, but that fact alone does not prove every customs charge is zero.
+
+## China to Tashkent: Which Route Works?
+
+A common Central Asia plan uses rail or truck from China through the Khorgos/Altynkol corridor in Kazakhstan, then onward under transit to Uzbekistan. Direct China–Central Asia services and multimodal routings vary by origin city, wagon availability and border congestion.
+
+![Freight train carrying vehicles and containers on a route bound for Central Asia](/images/news/kazakhstan-1.webp)
+
+The image above shows a Central Asia-bound rail movement; it is not presented as an Uzbek customs terminal. For Tashkent buyers, compare:
+
+| Route | Best for | Main risk |
+| --- | --- | --- |
+| Rail through Kazakhstan under transit | Container/batch dealer stock | Border transfer and document continuity |
+| Truck from western China | Smaller or urgent lots | Higher unit cost and seasonal border delay |
+| Mixed rail + road | Inland cities beyond rail terminal | More handoffs and damage-control points |
+
+Request a through quote that names the final Uzbek terminal and says who pays transit, transfer, storage and last-mile trucking.
+
+## Which Powertrain Fits the Uzbek Market?
+
+BYD's local production changes the competitive benchmark: an independent importer should not assume an imported China-market EV can win only on price. Localized models may have stronger parts, finance and registration support. Imported stock needs a clear reason to exist: unavailable trim, fleet specification, delivery window or a segment local production does not cover.
+
+The [Deepal S05](/cars/deepal-s05/) is the only pure BEV in our ready-stock eight-model range, with FOB pricing from $19,200 to $24,500. It is the cleanest starting point where a buyer specifically wants a pure electric compact SUV. The [Jetour T2](/cars/jetour-t2/) PHEV offers fuel backup for buyers traveling beyond dependable charging, but its customs and emissions treatment must be calculated separately from a BEV.
+
+![Deepal S05 battery-electric SUV exterior](/images/vehicles/evautopro-deepal-s05-appearance-02.webp)
+
+**Best for:** dealers with a named Uzbek importer, an accredited conformity partner and a model positioned beyond locally assembled competition.
+
+**Not ideal for:** speculative shipments based on an old blanket EV-tax exemption, or vehicles routed through Kazakhstan without a documented Uzbek transit and clearance plan.
+
+## Documents to Prepare
+
+- Commercial Invoice and Packing List with VINs
+- Rail waybill/CMR and transit documents
+- Certificate of Origin
+- China export declaration
+- Vehicle technical file and conformity evidence
+- Importer's contract and customs registration
+- Documents required for Uzbek vehicle registration
+
+Keep model, powertrain and VIN descriptions identical across all documents. If the vehicle crosses Kazakhstan in transit, the transport documents must show Uzbekistan as the destination rather than implying local Kazakhstan clearance.
+
+## Confirm the Live Tariff Before Ordering
+
+Send us the model, quantity and destination city. We will provide the China-side quotation and vehicle file; your Uzbek broker can then run the exact HS code through the live tariff system before the deposit becomes non-refundable.
+
+**Official references:** [Uzbekistan Integrated Tariff](https://tarif.customs.uz/en?lang=en_EN) · [Government conformity update](https://gov.uz/en/eco/news/view/87493) · [Ministry guidance on customs payments and utilization fee](https://gov.uz/en/miit/sections/view/12769).
+
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20an%20Uzbekistan%20vehicle%20import%20quote) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+    faqs: [
+      { q: 'Are electric cars duty-free in Uzbekistan in 2026?', a: 'Do not assume a blanket exemption from an older article. Run the exact BEV HS code, origin and transaction through Uzbekistan’s official Integrated Tariff service and confirm VAT and recycling fee with a licensed broker before ordering.' },
+      { q: 'Do electric cars need environmental certification in Uzbekistan?', a: 'Under the September 2025 reform, electric vehicles are not assessed for an emissions category. They still require the applicable wheeled-vehicle safety conformity, customs and registration documents.' },
+      { q: 'Can cars clear in Kazakhstan and then enter Uzbekistan duty-free?', a: 'No. Uzbekistan is not an EAEU member and applies its own customs rules. Kazakhstan may be a transit route, but the car must be declared and cleared under Uzbek law.' },
+      { q: 'What is the usual China-to-Tashkent shipping route?', a: 'Rail or road commonly moves through the Khorgos/Altynkol corridor in Kazakhstan under transit, then onward to Uzbekistan. Compare a through rate that includes border transfer, terminal and last-mile charges.' },
+    ],
+    related: ['import-cars-from-china-to-kazakhstan-2026', 'top-7-chinese-suv-for-russia-2026', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);

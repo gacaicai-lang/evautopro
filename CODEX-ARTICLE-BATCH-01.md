@@ -161,7 +161,7 @@
 | # | slug | 状态 | 发布日期 | commit | 备注 |
 |---|---|---|---|---|---|
 | 1 | import-cars-from-china-to-saudi-arabia-2026 | PUBLISHED | 2026-07-12 | see git history | SASO/SABER/ZATCA sources; audit clean |
-| 2 | import-cars-from-china-to-uzbekistan-2026 | TODO | | | |
+| 2 | import-cars-from-china-to-uzbekistan-2026 | PUBLISHED | 2026-07-12 | see git history | Official tariff/conformity sources; audit clean |
 | 3 | import-cars-from-china-to-ethiopia-2026-ev-only | TODO | | | |
 | 4 | import-cars-from-china-to-chile-2026 | TODO | | | |
 | 5 | import-cars-from-china-to-georgia-2026-reexport-hub | TODO | | | |
