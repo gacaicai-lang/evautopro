@@ -40,6 +40,8 @@ SASO also provides a separate electric-vehicle conformity certificate for import
 
 **Certification cost:** there is no responsible single flat number to quote. The payable amount depends on the vehicle category, assessment body, inspection location, shipment size and whether additional testing is needed. Obtain a written SABER/inspection quotation before signing the proforma invoice.
 
+![A vehicle undergoing a pre-shipment quality inspection](/images/services/inspection.webp)
+
 ## Which Vehicles Are Not Safe to Ship First and Fix Later?
 
 ZATCA's current vehicle-import controls are clear about several risk categories. Light vehicles generally must be within the permitted five-model-year window. The vehicle must satisfy the energy-efficiency requirement, its VIN must be intact, and stolen, flooded, burned, overturned, structurally damaged, former police/taxi and armored vehicles are restricted or prohibited. Saudi rules also prohibit vehicles whose steering has been converted from right to left.
@@ -73,6 +75,8 @@ Saudi Arabia's standard VAT rate is 15%, but duty treatment and the VAT base mus
 | Jeddah / western region | Jeddah Islamic Port | Shorter final delivery |
 | Mixed national dealer stock | Both ports | Sailing schedule plus total delivered cost |
 
+![Passenger vehicles boarding a RoRo vessel at a commercial port](/images/services/shipping.webp)
+
 ## Which Powertrain Fits Saudi Heat and Driving Patterns?
 
 Saudi buyers should separate two questions: can the vehicle be certified, and will the powertrain suit the customer's daily use? Extreme heat raises battery-cooling loads, while public charging is strongest in major cities and less predictable on long intercity routes.
@@ -80,6 +84,8 @@ Saudi buyers should separate two questions: can the vehicle be certified, and wi
 The [Deepal S07](/cars/deepal-s07/) is an EREV: the wheels retain electric-drive characteristics while a gasoline range extender removes dependence on public charging. The [Deepal S09](/cars/deepal-s09/) applies the same logic to a larger six-seat flagship. The [Jetour T2](/cars/jetour-t2/) is a seven-seat PHEV aimed at buyers wanting four-wheel-drive utility and both charging and fuel flexibility.
 
 ![Deepal S07 exterior photographed from the front three-quarter angle](/images/vehicles/evautopro-deepal-s07-appearance-01.webp)
+
+![Deepal S09 cockpit and front cabin](/images/vehicles/evautopro-deepal-s09-console-01.webp)
 
 | Buyer use | Better starting point | Not ideal when |
 | --- | --- | --- |
@@ -1347,6 +1353,8 @@ Uzbekistan's Cabinet Resolution No. 597 of 19 September 2025 simplified environm
 
 That does not mean an EV has no compliance work. The importer still needs the model/VIN documents, safety conformity, customs declaration and registration documents. Ask the accredited body to confirm whether one vehicle, a batch or a model approval is being assessed before shipment.
 
+![A vehicle inspector checking an SUV before export](/images/services/inspection.webp)
+
 ## How Should You Calculate Import Charges?
 
 Do not publish or quote from an old “EV duty-free since 2019” blog without checking the live tariff. Uzbekistan's official Integrated Tariff service calculates treatment from HS code, origin, sending country and trading country. The Ministry of Investment also confirms that Uzbekistan levies a vehicle utilization/recycling fee under Cabinet decisions, with rates depending on vehicle category.
@@ -1378,6 +1386,8 @@ The image above shows a Central Asia-bound rail movement; it is not presented as
 
 Request a through quote that names the final Uzbek terminal and says who pays transit, transfer, storage and last-mile trucking.
 
+![New SUVs transported on a multi-level car carrier](/images/about/loading-3.webp)
+
 ## Which Powertrain Fits the Uzbek Market?
 
 BYD's local production changes the competitive benchmark: an independent importer should not assume an imported China-market EV can win only on price. Localized models may have stronger parts, finance and registration support. Imported stock needs a clear reason to exist: unavailable trim, fleet specification, delivery window or a segment local production does not cover.
@@ -1385,6 +1395,8 @@ BYD's local production changes the competitive benchmark: an independent importe
 The [Deepal S05](/cars/deepal-s05/) is the only pure BEV in our ready-stock eight-model range, with FOB pricing from $19,200 to $24,500. It is the cleanest starting point where a buyer specifically wants a pure electric compact SUV. The [Jetour T2](/cars/jetour-t2/) PHEV offers fuel backup for buyers traveling beyond dependable charging, but its customs and emissions treatment must be calculated separately from a BEV.
 
 ![Deepal S05 battery-electric SUV exterior](/images/vehicles/evautopro-deepal-s05-appearance-02.webp)
+
+![Jetour T2 cockpit and dashboard](/images/vehicles/evautopro-jetour-t2-console-01.webp)
 
 **Best for:** dealers with a named Uzbek importer, an accredited conformity partner and a model positioned beyond locally assembled competition.
 
@@ -1437,6 +1449,8 @@ The policy's purpose is to reduce fuel imports and accelerate electric mobility.
 
 The ban arrived quickly and caught some vehicles already in transit. That history makes written pre-clearance important: obtain the HS classification and admissibility decision before the vehicle leaves China.
 
+![A vehicle undergoing a pre-shipment inspection](/images/services/inspection.webp)
+
 ## Which Ready-Stock Vehicle Fits?
 
 The [Deepal S05](/cars/deepal-s05/) is the only pure BEV in EV Auto Pro's current eight-model ready-stock range. The S07 and S09 are EREVs, while Jetour T2 is a PHEV; none of those should be substituted into an Ethiopia EV-only quotation.
@@ -1474,6 +1488,8 @@ Landlocked Ethiopia relies heavily on the Djibouti corridor. Vehicles arrive by 
 
 This is a generic RoRo loading image and is not represented as Djibouti. Compare RoRo for straightforward vehicle handling with container shipping where enclosed transport or mixed cargo is needed.
 
+![An SUV secured inside a shipping container](/images/about/loading-2.webp)
+
 ## Charging Is the Main Commercial Constraint
 
 Ethiopia's electricity is predominantly renewable, which strengthens the economic logic for EVs. Access is not the same as charging availability, however. Official and government-linked assessments acknowledge that charging infrastructure was extremely limited when the ban began. A dealer needs an operating plan, not just cars:
@@ -1483,6 +1499,8 @@ Ethiopia's electricity is predominantly renewable, which strengthens the economi
 - map realistic intercity charging before promising highway usability;
 - hold diagnostic tools and high-voltage service training;
 - explain that advertised test-cycle range is not guaranteed in every load, road and climate condition.
+
+![Deepal S05 cockpit and dashboard](/images/vehicles/evautopro-deepal-s05-console-01.webp)
 
 **Best for:** Addis Ababa fleets, businesses and private buyers with dedicated overnight charging and predictable daily mileage.
 
@@ -1542,6 +1560,8 @@ Before loading, confirm:
 
 If any condition fails, Chile can apply the general tariff instead. “Made in China” printed on a brochure is not proof of preferential origin.
 
+![Export professionals reviewing a vehicle shipment file](/images/services/export-process.webp)
+
 ## What Does the Landed-Cost Sheet Include?
 
 | Cost | Working treatment |
@@ -1561,6 +1581,8 @@ Chile's Centro de Control y Certificación Vehicular evaluates vehicle complianc
 
 Prepare technical specifications, VIN/model identification, emissions or electric-powertrain data, safety systems and manufacturer documentation. Do not order a batch assuming a visually similar trim is covered by another variant's approval.
 
+![A vehicle inspector checking an SUV in an inspection bay](/images/services/inspection.webp)
+
 ## San Antonio or Valparaíso?
 
 Both central-Chile ports serve the Santiago market. Compare the carrier's actual service, RoRo/container availability, terminal free time and inland trucking rather than choosing by map alone.
@@ -1571,6 +1593,8 @@ Both central-Chile ports serve the Santiago market. Compare the carrier's actual
 | Terminal | What handling and storage apply to vehicles? |
 | Inland | What is the delivered cost to the Santiago yard? |
 | Risk | Who pays delay, inspection and demurrage? |
+
+![Passenger vehicles boarding a RoRo vessel at a commercial port](/images/services/shipping.webp)
 
 ## Which Chinese Models Fit Chile?
 
@@ -1625,6 +1649,8 @@ Send the model, quantity and target port. We will provide the China-side quote, 
 
 Poti and Batumi connect Black Sea shipping with road routes into Armenia, Azerbaijan and wider Caucasus/Central Asia trade. The commercial advantage is organized customs handling, storage and a formal re-export/refund mechanism—not an assumption that every arriving car pays zero tax.
 
+![Passenger vehicles boarding a RoRo vessel at a commercial port](/images/services/shipping.webp)
+
 | Route | Best for | Main check |
 | --- | --- | --- |
 | China–Black Sea to Poti | Dealer batches and regional redistribution | Sailing/transshipment and terminal cost |
@@ -1641,6 +1667,8 @@ Revenue Service states that a passenger car released into free circulation and t
 
 Use the official Auto/Moto Levy Calculator for the VIN characteristics and obtain broker confirmation. VAT, service fees, storage and transport may follow separate rules; the refund statement should not be paraphrased as “all costs refunded.”
 
+![Export professionals reviewing a vehicle shipment file](/images/services/export-process.webp)
+
 ## Right-Hand Drive Is a Cost and Registration Issue
 
 Georgia's Tax Code applies multiplied excise rates to right-hand-drive and converted-steering vehicles. A car intended for Georgian registration should normally be factory left-hand drive. A right-hand-drive unit moving onward may still transit/re-export subject to customs rules, but do not promise Georgian registration or normal excise treatment.
@@ -1650,6 +1678,8 @@ Georgia's Tax Code applies multiplied excise rates to right-hand-drive and conve
 The [Geely Atlas](/cars/geely-atlas/) and [Geely Coolray](/cars/geely-coolray/) are factory-LHD SUVs in the current export catalog and provide different price/size positions.
 
 ![Geely Atlas SUV exterior](/images/vehicles/evautopro-geely-atlas-appearance-01.webp)
+
+![Geely Coolray cockpit and dashboard](/images/vehicles/evautopro-geely-coolray-console-01.webp)
 
 | Buyer | Better route | Not ideal for |
 | --- | --- | --- |
@@ -1706,11 +1736,15 @@ Add both sets of handling, storage and border costs. Georgia wins when consolida
 
 The [Geely Coolray](/cars/geely-coolray/) is 4,380 mm long; the larger [Deepal S09](/cars/deepal-s09/) is 5,205 mm. A loading engineer considers length, width, height, axle weight, rack angle, battery rules and door clearance. Two large SUVs may be straightforward; three compact SUVs may be practical with a certified frame; four requires small compatible vehicles and a specialist design. Confirm the exact VIN/model mix with a loading diagram.
 
+![An SUV secured inside a shipping container with wheel chocks and tie-downs](/images/about/loading-2.webp)
+
 ![Container and rail cargo handling at an inland terminal](/images/news/kazakhstan-3.webp)
 
 ## Risk and Insurance
 
 RoRo exposes the vehicle to more handoffs and normally forbids loose items. Container reduces casual access but adds lashing/rack risk: poor loading can damage roofs, suspension or bodywork. Insurance must state vehicle value, route, loading method and exclusions. Photograph every unit before loading and at handover.
+
+![A vehicle undergoing a pre-shipment condition inspection](/images/services/inspection.webp)
 
 **Best for RoRo:** running stock, direct port markets, flexible unit count.
 
@@ -1745,6 +1779,8 @@ WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20please%20c
 | Exporter parts support | China exporter coordinates approved parts | Works in open markets | Local labor and freight may be buyer cost |
 | Bare export/no local warranty | Importer | Lowest purchase price | Importer carries full risk |
 
+![A vehicle inspector documenting an SUV's condition](/images/services/inspection.webp)
+
 Never infer overseas coverage from a China-market warranty booklet. Ask whether the exact VIN appears in the destination network and obtain written claim steps.
 
 ![Automotive spare parts prepared for after-sales support](/images/services/after-sales.webp)
@@ -1755,7 +1791,11 @@ For each model, price filters, brake wear parts, wiper/lighting items, suspensio
 
 Use the VIN and electronic parts catalog. Model names can cover different engines, connectors and production revisions. Photograph labels and retain the original part number before ordering replacements.
 
+![Changan CS55 Plus cockpit and dashboard](/images/vehicles/evautopro-changan-cs55-plus-console-01.webp)
+
 The [Changan CS55 Plus](/cars/changan-cs55-plus/) illustrates the process: the importer should tie every fast-moving item to the exact exported trim/VIN, not merely search “CS55 Plus part” on a marketplace.
+
+![Changan CS55 Plus cabin and seating](/images/vehicles/evautopro-changan-cs55-plus-space-01.webp)
 
 ## Questions Before Payment
 
@@ -1787,6 +1827,8 @@ Read the [China auto-parts sourcing guide](/news/guide-to-sourcing-chinese-auto-
     hero: '/images/services/financing.webp', date: '2026-07-15 14:00:00', readMin: 8,
     body: `The safest common ways to pay a Chinese car supplier are T/T 30% deposit and 70% before shipment, or an irrevocable L/C at sight from acceptable banks. Neither method replaces exporter verification: the contract company, invoice issuer and bank beneficiary must match.
 
+![Export professionals reviewing a vehicle shipment file](/images/services/export-process.webp)
+
 ## Payment Comparison
 
 | Method | Best for | Main risk | Control |
@@ -1802,6 +1844,8 @@ Read the [China auto-parts sourcing guide](/news/guide-to-sourcing-chinese-auto-
 
 Before 30%, verify registration/export authority and beneficiary. The contract should name models, quantity, Incoterm, delivery window and refund/default terms. Before 70%, receive VIN list, photos/video of actual units, inspection report and agreed shipping-readiness evidence. Payment does not itself transfer title; define that separately.
 
+![A vehicle inspector checking an SUV before the balance payment](/images/services/inspection.webp)
+
 ## Avoid L/C Soft Clauses
 
 L/C at sight pays against documents, not vehicle quality. Agree realistic presentation dates, ports, partial shipment, document wording and discrepancy handling. Reject clauses controlled only by the applicant or impossible certificates. Have both banks review the draft before issuance.
@@ -1809,6 +1853,8 @@ L/C at sight pays against documents, not vehicle quality. Agree realistic presen
 RMB settlement may be available through participating banks, but currency choice should follow the supplier invoice, importer rules and hedging needs. Do not convert through an unrelated personal account.
 
 Link the payment to a real product such as [Geely Coolray](/cars/geely-coolray/) and require its exact trim/VIN in the commercial file. First complete the [exporter verification checklist](/news/how-to-verify-a-chinese-car-exporter-before-you-pay/).
+
+![Geely Coolray cockpit and dashboard](/images/vehicles/evautopro-geely-coolray-console-01.webp)
 
 **Never accept:** beneficiary mismatch, last-minute bank-detail change without independent callback, 100% to a personal account, Western Union or cryptocurrency for a normal B2B vehicle order.
 
@@ -1842,13 +1888,19 @@ WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20send%20you
 
 **S05 best for:** charging-ready urban markets and price-sensitive EV buyers. **Not ideal for:** markets banning neither fuel cars nor offering dependable charging, where EREV flexibility may sell more easily.
 
+![Deepal S05 cockpit and dashboard](/images/vehicles/evautopro-deepal-s05-console-01.webp)
+
 ![Deepal S07 exterior](/images/vehicles/evautopro-deepal-s07-appearance-02.webp)
 
 **S07 best for:** dealers needing a mid-size electric-driving SUV without dependence on public charging. **Not ideal for:** markets that legally admit only pure BEVs.
 
+![Deepal S07 cockpit and dashboard](/images/vehicles/evautopro-deepal-s07-console-01.webp)
+
 ![Deepal S09 exterior](/images/vehicles/evautopro-deepal-s09-appearance-02.webp)
 
 **S09 best for:** premium six-seat/family positioning. **Not ideal for:** entry-price inventory or container plans optimized around compact vehicles.
+
+![Deepal S09 cockpit and dashboard](/images/vehicles/evautopro-deepal-s09-console-01.webp)
 
 ## Container Planning
 
@@ -1884,9 +1936,13 @@ For markets with uneven charging, see the [powertrain import guide](/news/bev-vs
 
 **Coolray best for:** buyers prioritizing compact dimensions, lighter weight and Geely recognition. **Not ideal for:** customers who equate physical size with value.
 
+![Geely Coolray cockpit and dashboard](/images/vehicles/evautopro-geely-coolray-console-01.webp)
+
 ![Changan CS55 Plus exterior](/images/vehicles/evautopro-changan-cs55-plus-appearance-03.webp)
 
 **CS55 Plus best for:** family/value positioning, more torque and a lower catalog entry price. **Not ideal for:** dealers wanting the smallest urban footprint.
+
+![Changan CS55 Plus cockpit and dashboard](/images/vehicles/evautopro-changan-cs55-plus-console-01.webp)
 
 ## RHD Ordering
 
