@@ -445,8 +445,18 @@ export const cars: Record<string, Car> = {
         galleryItem('/images/vehicles/evautopro-jetour-dashing-appearance-01.webp', 'Jetour Dashing studio side profile'),
         galleryItem('/images/vehicles/evautopro-jetour-dashing-appearance-02.webp', 'Jetour Dashing front 3/4 with DASHING badge, mountain backdrop'),
       ],
+      console: [
+        galleryItem('/images/vehicles/evautopro-jetour-dashing-console-01.webp', 'Jetour Dashing infotainment touchscreen'),
+        galleryItem('/images/vehicles/evautopro-jetour-dashing-console-02.webp', 'Jetour Dashing steering wheel detail'),
+        galleryItem('/images/vehicles/evautopro-jetour-dashing-console-03.webp', 'Jetour Dashing center console and shifter'),
+      ],
       space: [
         galleryItem('/images/vehicles/evautopro-jetour-dashing-space-01.webp', 'Jetour Dashing open cargo area with camping gear'),
+      ],
+      other: [
+        galleryItem('/images/vehicles/evautopro-jetour-dashing-other-01.webp', 'Jetour Dashing side mirror detail'),
+        galleryItem('/images/vehicles/evautopro-jetour-dashing-other-02.webp', 'Jetour Dashing taillight detail'),
+        galleryItem('/images/vehicles/evautopro-jetour-dashing-other-03.webp', 'Jetour Dashing center console detail'),
       ],
     },
   },
@@ -481,12 +491,20 @@ export const cars: Record<string, Car> = {
     ],
     gallery: {
       appearance: [
-        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-appearance-01.webp', 'Jetour X70 Plus at dusk, snow-covered rural backdrop'),
-        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-appearance-02.webp', 'Jetour X70 Plus studio side profile'),
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-appearance-01.webp', 'Jetour X70 Plus studio side profile'),
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-appearance-02.webp', 'Jetour X70 Plus studio side profile, alternate angle'),
         galleryItem('/images/vehicles/evautopro-jetour-x70-plus-appearance-03.webp', 'Jetour X70 Plus studio front 3/4 with X70 PLUS badge'),
       ],
       console: [
-        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-console-01.webp', 'Jetour X70 Plus cockpit with dual digital screens'),
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-console-01.webp', 'Jetour X70 Plus cockpit with red leather interior'),
+      ],
+      space: [
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-space-01.webp', 'Jetour X70 Plus rear cabin with seats folded'),
+      ],
+      other: [
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-other-01.webp', 'Jetour X70 Plus exhaust and rear bumper detail'),
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-other-02.webp', 'Jetour X70 Plus wheel and body detail'),
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-other-03.webp', 'Jetour X70 Plus LED headlight and grille detail'),
       ],
     },
   },

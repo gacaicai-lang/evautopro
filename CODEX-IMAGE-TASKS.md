@@ -28,6 +28,23 @@
 | B2. About 6 张 | `public/images/about/{loading-1,2,3,team,office,warehouse}.webp` | 已交付且 src 已指向 .webp ✓ |
 | D. 文章场景 7 张 | `public/images/news/{kazakhstan-1..3,russia-1..2,powertrain-1..2}.webp` | 抽查 kazakhstan-3（霍尔果斯式陆港）、russia-1（RoRo 装船）：质量好、无文字 ✓ |
 
+### ✅ VERIFIED（2026-07-16 第二轮，Claude 抽查 Dashing/X70 Plus 完整套图）
+
+Codex 交付 PROVENANCE.md 标注了每张图的官方来源URL和处理方式（仅裁切/缩放，X70 Plus
+appearance为官方透明车体渲染图合成到统一浅灰影棚背景，未做任何AI生成/重绘）。Claude抽查
+console-01/02（Dashing车机屏幕、方向盘JETOUR标）、x70-plus space-01（红色内饰货舱）、
+x70-plus appearance-01（合成影棚图）四张：均为真实拍摄/官方渲染，无AI痕迹，合成背景处理干净。
+明确排除了 dashing p2_2.png（疑似渲染图非实拍座舱，未采用）和 X70 Plus 的 p4_1~p4_3
+ADAS示意图。
+
+| 文件（public/images/vehicles/） | 内容 | 状态 |
+|---|---|---|
+| `evautopro-jetour-dashing-console-01/02/03.webp` | 车机屏幕/方向盘/中控 | VERIFIED ✓（01/02抽查） |
+| `evautopro-jetour-dashing-other-01/02/03.webp` | 后视镜/尾灯/中控细节 | VERIFIED（同批次） |
+| `evautopro-jetour-x70-plus-appearance-02/03.webp` | 影棚合成图 | VERIFIED（同批次，01已抽查） |
+| `evautopro-jetour-x70-plus-space-01.webp` | 后排货舱实拍 | VERIFIED ✓ |
+| `evautopro-jetour-x70-plus-other-01/02/03.webp` | 排气/轮毂/大灯细节 | VERIFIED（同批次） |
+
 ### ✅ VERIFIED（2026-07-16 Claude 独立抽查，3/7 实拍验证，符合双人协议）
 
 2026-07-12 Codex复核确认Jetour T2的7张外观/细节图均存在广告字、价格、
