@@ -305,6 +305,85 @@ export const cars: Record<string, Car> = {
     gallery: launderedGallery('changan-cs55-plus', 'Changan CS55 Plus'),
   },
 
+  'jetour-dashing': {
+    brand: 'Jetour', brand_cn: '捷途', brand_slug: 'jetour',
+    model: 'Dashing', slug: 'jetour-dashing', year: 2026,
+    subtitle: 'Compact SUV · Vanguard Technology',
+    body_type: 'Compact SUV', fuel_type: 'ICE', drive: 'FWD', seats: 5,
+    hero_image: '/images/vehicles/evautopro-jetour-dashing-01.webp',
+    pricing: { fob_min: 13000, fob_max: 16800,
+      cif: [
+        { country: 'Saudi Arabia (Jeddah)', min: 14300, max: 18500 },
+        { country: 'UAE (Jebel Ali)', min: 14000, max: 18100 },
+        { country: 'Russia (St. Petersburg)', min: 15200, max: 19700 }] },
+    specs: { motor_ps: 197, motor_kw: 145, torque_nm: 290, top_speed: 200, dimensions: '4600×1900×1685', wheelbase: 2720, weight: 1530, tires: '235/55 R19', transmission: '7-Speed DCT' },
+    features: {
+      exterior: ['540° Panoramic Parking Display', 'LED Matrix Headlights', 'Panoramic Sunroof', '19"-20" Alloy Wheels'],
+      interior: ['15.6" Touchscreen (Snapdragon Cockpit Chip)', '8" Head-Up Display', 'Sony Surround Hi-Fi 8-Speaker System', '40W Wireless Fast Charging'],
+      safety: ['L2.5 Assisted Driving System', '540° Panoramic Parking + Transparent Chassis View', 'Automatic Emergency Braking (AEB)', 'Rear Cross Traffic Alert'],
+    },
+    stock_status: 'Made to Order', stock_units: 0, lead_time_days: 30, moq: 1,
+    supported_markets: ['Saudi Arabia', 'UAE', 'Russia'],
+    shipping_methods: ['RoRo', 'Container'],
+    certifications: ['GCC', 'EAC', 'SASO'], payment_terms: ['T/T 30+70', 'L/C at sight'],
+    faqs: [
+      { q: 'What is the Jetour Dashing positioned as?', a: 'A youth-focused compact SUV — Jetour\'s official "Vanguard Technology" line. 15.6" touchscreen, L2.5 assisted driving, and a dedicated Youth trim aimed at first-time SUV buyers.' },
+      { q: 'Engine options for the Dashing?', a: 'Entry 1.5T (115kW/156PS) with 6-speed manual or DCT, or flagship 1.6TGDI (145kW/197PS/290N·m) with 7-speed DCT. A plug-in i-DM hybrid variant also exists in China but is not yet in our export catalog — ask us if you need PHEV.' },
+      { q: 'Best export market for Dashing?', a: 'Jetour closed 2024 with 568,387 units sold globally, +80.3% YoY, and a 12% SUV market share in Saudi Arabia — Dashing\'s youth-trim positioning fits that Gulf growth directly.' },
+      { q: 'MOQ and lead time?', a: 'This is a newly catalogued model — made to order, MOQ 1 unit, ~30-day lead time from PI signing while we build first-batch stock. Contact us for current availability.' },
+      { q: 'Certifications available?', a: 'GCC and EAC compliance available; SASO certification path for Saudi Arabia on request.' },
+    ],
+    gallery: {
+      appearance: [
+        galleryItem('/images/vehicles/evautopro-jetour-dashing-appearance-01.webp', 'Jetour Dashing studio side profile'),
+        galleryItem('/images/vehicles/evautopro-jetour-dashing-appearance-02.webp', 'Jetour Dashing front 3/4 with DASHING badge, mountain backdrop'),
+      ],
+      space: [
+        galleryItem('/images/vehicles/evautopro-jetour-dashing-space-01.webp', 'Jetour Dashing open cargo area with camping gear'),
+      ],
+    },
+  },
+
+  'jetour-x70-plus': {
+    brand: 'Jetour', brand_cn: '捷途', brand_slug: 'jetour',
+    model: 'X70 Plus', slug: 'jetour-x70-plus', year: 2026,
+    subtitle: 'Big Family SUV · 7-Seater',
+    body_type: 'Mid-size SUV', fuel_type: 'ICE', drive: 'FWD', seats: 7,
+    hero_image: '/images/vehicles/evautopro-jetour-x70-plus-01.webp',
+    pricing: { fob_min: 11000, fob_max: 18300,
+      cif: [
+        { country: 'Russia (St. Petersburg)', min: 12900, max: 21400 },
+        { country: 'Egypt (Port Said)', min: 13300, max: 22100 },
+        { country: 'UAE (Jebel Ali)', min: 11900, max: 19800 }] },
+    specs: { motor_ps: 197, motor_kw: 145, torque_nm: 290, top_speed: 185, dimensions: '4749×1900×1720', wheelbase: 2720, weight: 1540, tires: '235/55 R19', transmission: '7-Speed DCT' },
+    features: {
+      exterior: ['LED Matrix Taillights (Meteor-style graphics)', 'Quad Exhaust Tips', '19"-20" Alloy Wheels', '62" Ultra-Wide Panoramic Sunroof'],
+      interior: ['Dual Digital Cockpit Screens (10.25"-12.3", trim-dependent)', '39 Storage Compartments', 'Suspended Floating Center Console', '50W Wireless Fast Charging'],
+      safety: ['L2.5 Assisted Driving', '360° Panoramic Camera', '75% High-Strength Steel Body Cage', '6 Airbags + Bosch 9.3 ESP'],
+    },
+    stock_status: 'Made to Order', stock_units: 0, lead_time_days: 30, moq: 1,
+    supported_markets: ['Russia', 'Egypt', 'UAE', 'Kazakhstan'],
+    shipping_methods: ['RoRo', 'Container', 'Block Train'],
+    certifications: ['GCC', 'EAC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
+    faqs: [
+      { q: 'How many seats does the X70 Plus have?', a: 'Configurable 5, 6, or 7-seat cabin layouts from the factory — tell us your target market\'s passenger-tax rules and we\'ll spec accordingly.' },
+      { q: 'Engine options?', a: 'Entry 1.5T (115kW/156PS, 6-speed manual or wet DCT) or flagship 1.6TGDI (145kW/197PS/290N·m, 7-speed DCT). WLTC combined fuel consumption ~7.6-7.8 L/100km.' },
+      { q: 'Best market for X70 Plus?', a: 'The X70 series (including X70 Plus) has sold 800,000+ units globally as of 2025 — strong demand in Russia and other family-SUV markets, plus government/fleet interest in North Africa.' },
+      { q: 'MOQ and lead time?', a: 'This is a newly catalogued model — made to order, MOQ 1 unit, ~30-day lead time from PI signing while we build first-batch stock. Contact us for current availability.' },
+      { q: 'Safety equipment?', a: '75% high-strength steel body cage, 6 airbags, Bosch 9.3 ESP, 360° panoramic camera, hill descent control. Independent crash-test ratings are not yet published for this model — ask us for the latest data.' },
+    ],
+    gallery: {
+      appearance: [
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-appearance-01.webp', 'Jetour X70 Plus at dusk, snow-covered rural backdrop'),
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-appearance-02.webp', 'Jetour X70 Plus studio side profile'),
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-appearance-03.webp', 'Jetour X70 Plus studio front 3/4 with X70 PLUS badge'),
+      ],
+      console: [
+        galleryItem('/images/vehicles/evautopro-jetour-x70-plus-console-01.webp', 'Jetour X70 Plus cockpit with dual digital screens'),
+      ],
+    },
+  },
+
   'geely-atlas': {
     brand: 'Geely', brand_cn: '吉利', brand_slug: 'geely',
     model: 'Atlas', slug: 'geely-atlas', year: 2026,

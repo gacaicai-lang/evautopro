@@ -38,8 +38,8 @@ EV Auto Pro is an authorized Jetour exporter since 2021. We hold direct dealer M
 
 const models = [
   { slug: 'jetour-t2', name: 'T2', body: '7-Seater Adventure SUV', fuel: 'PHEV', price_min: 22500, stock: 30, ready: true },
-  { slug: 'jetour-x70-plus', name: 'X70 Plus', body: '7-Seater SUV', fuel: 'ICE', price_min: 18500, stock: 18, ready: false },
-  { slug: 'jetour-dasheng', name: 'Dasheng', body: 'Premium SUV', fuel: 'PHEV', price_min: 21800, stock: 14, ready: false },
+  { slug: 'jetour-x70-plus', name: 'X70 Plus', body: 'Big Family SUV', fuel: 'ICE', price_min: 11000, stock: 0, ready: true },
+  { slug: 'jetour-dashing', name: 'Dashing', body: 'Compact SUV', fuel: 'ICE', price_min: 13000, stock: 0, ready: true },
   { slug: 'jetour-x90', name: 'X90', body: '7-Seater MPV', fuel: 'ICE', price_min: 19800, stock: 16, ready: false },
   { slug: 'jetour-x95', name: 'X95', body: 'Flagship SUV', fuel: 'ICE', price_min: 24500, stock: 10, ready: false },
   { slug: 'jetour-shanhai-t1', name: 'ShanHai T1', body: 'Off-road SUV', fuel: 'PHEV', price_min: 25800, stock: 12, ready: false },
@@ -61,7 +61,7 @@ const advantages = [
 
 const markets = [
   { code: 'RU', name: 'Russia', stat: '#1 Chinese ICE brand', img: '/images/vehicles/evautopro-jetour-t2-01.webp' },
-  { code: 'KZ', name: 'Kazakhstan', stat: '12,000+ units / year', img: '/images/vehicles/evautopro-jetour-x70plus-01.webp' },
+  { code: 'KZ', name: 'Kazakhstan', stat: '12,000+ units / year', img: '/images/vehicles/evautopro-jetour-x70-plus-01.webp' },
   { code: 'AE', name: 'UAE', stat: 'Top 5 imported Chinese', img: '/images/vehicles/evautopro-geely-coolray-01.webp' },
   { code: 'EG', name: 'Egypt', stat: 'CKD assembly partner', img: '/images/vehicles/evautopro-changan-cs55-plus-01.webp' },
 ];
@@ -188,7 +188,7 @@ const brandFaqs = [
           <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
              class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
             <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src={['jetour-t2','jetour-dasheng','jetour-x70plus'].includes(m.slug) || m.slug === 'jetour-x70-plus' ? `/images/vehicles/evautopro-${m.slug.replace('x70-plus','x70plus')}-01.webp` : '/images/vehicles/evautopro-jetour-t2-other-01.webp'} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+              <img src={['jetour-t2','jetour-dashing','jetour-x70-plus'].includes(m.slug) ? `/images/vehicles/evautopro-${m.slug}-01.webp` : '/images/vehicles/evautopro-jetour-t2-other-01.webp'} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
@@ -202,8 +202,8 @@ const brandFaqs = [
                   <div class="text-lg font-bold text-ink-900">${m.price_min.toLocaleString()}</div>
                 </div>
                 <div class="text-right">
-                  <div class="text-xs text-ink-500">In stock</div>
-                  <div class="text-sm font-semibold text-ink-900">{m.stock} units</div>
+                  <div class="text-xs text-ink-500">{m.stock > 0 ? 'In stock' : 'Availability'}</div>
+                  <div class="text-sm font-semibold text-ink-900">{m.stock > 0 ? `${m.stock} units` : 'Made to Order'}</div>
                 </div>
               </div>
             </div>
