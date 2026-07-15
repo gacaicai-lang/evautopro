@@ -22,7 +22,7 @@ const brand = {
 const heroBadges = [
   'Authorized Dealer Since 2021',
   '6 SUV Models Available',
-  '7-Seater Adventure DNA',
+  'PHEV + ICE Off-Road Lineup',
 ];
 
 const stats = [
@@ -32,17 +32,17 @@ const stats = [
   { num: '50+', label: 'In Bonded Stock', sub: 'Ready to Ship' },
 ];
 
-const brandStory = `Jetour Auto (捷途汽车), launched 2018 by Chery Group, is China's fastest-growing SUV specialist. Focused exclusively on SUV / Adventure / 7-seater family vehicles, Jetour combines Chery's mature powertrain engineering with adventure-themed styling. T2 (旅行者) and Dasheng (大圣) — both designed for off-road touring — are flagship export hits.
+const brandStory = `Jetour Auto (捷途汽车), launched 2018 by Chery Group, is China's fastest-growing SUV specialist. Focused exclusively on SUV / Adventure / off-road vehicles, Jetour combines Chery's mature powertrain engineering with adventure-themed styling. T2 (旅行者) is the flagship export hit, with T1 gaining fast in Russia/CIS and the new G700 flagship expanding into UAE, Qatar and Latin America.
 
-EV Auto Pro is an authorized Jetour exporter since 2021. We hold direct dealer MoUs covering Jetour's full SUV lineup — T2 PHEV, X70 Plus 7-seater, Dasheng PHEV, X90 MPV, X95 flagship, and ShanHai T1 hybrid off-roader. Every unit traceable to factory invoice. Zero grey market.`;
+EV Auto Pro is an authorized Jetour exporter since 2021. We hold direct dealer MoUs covering Jetour's real export lineup — T2 i-DM PHEV, T1 and T1 i-DM, X70 Plus, Dashing, and the new G700 luxury off-road PHEV flagship. Every unit traceable to factory invoice. Zero grey market.`;
 
 const models = [
-  { slug: 'jetour-t2', name: 'T2', body: '7-Seater Adventure SUV', fuel: 'PHEV', price_min: 22500, stock: 30, ready: true },
+  { slug: 'jetour-t2', name: 'T2 i-DM', body: 'Adventure SUV', fuel: 'PHEV', price_min: 22500, stock: 30, ready: true },
+  { slug: 'jetour-t1', name: 'T1', body: 'Compact SUV', fuel: 'ICE', price_min: 18700, stock: 0, ready: true },
+  { slug: 'jetour-t1-idm', name: 'T1 i-DM', body: 'Compact SUV', fuel: 'PHEV', price_min: 21700, stock: 0, ready: true },
   { slug: 'jetour-x70-plus', name: 'X70 Plus', body: 'Big Family SUV', fuel: 'ICE', price_min: 11000, stock: 0, ready: true },
   { slug: 'jetour-dashing', name: 'Dashing', body: 'Compact SUV', fuel: 'ICE', price_min: 13000, stock: 0, ready: true },
-  { slug: 'jetour-x90', name: 'X90', body: '7-Seater MPV', fuel: 'ICE', price_min: 19800, stock: 16, ready: false },
-  { slug: 'jetour-x95', name: 'X95', body: 'Flagship SUV', fuel: 'ICE', price_min: 24500, stock: 10, ready: false },
-  { slug: 'jetour-shanhai-t1', name: 'ShanHai T1', body: 'Off-road SUV', fuel: 'PHEV', price_min: 25800, stock: 12, ready: false },
+  { slug: 'jetour-g700', name: 'G700', body: 'Full-size Off-Road SUV', fuel: 'PHEV', price_min: 46300, stock: 0, ready: true },
 ];
 
 const subBrands = [
@@ -53,8 +53,8 @@ const subBrands = [
 const advantages = [
   { icon: '🏔', title: 'Adventure SUV DNA', desc: 'Every Jetour model designed for off-road / adventure / family travel. 7-seater layouts standard.' },
   { icon: '🏭', title: 'Chery Group Engineering', desc: 'Backed by China\'s #1 auto exporter Chery. Shared 1.5T/2.0T turbo engines, mature global supply chain.' },
-  { icon: '🌄', title: 'Best for Central Asia / GCC', desc: 'Jetour T2 + Dasheng dominate Kazakhstan / UAE / Saudi adventure SUV markets — desert and snow tested.' },
-  { icon: '⚡', title: 'PHEV Tech Leader', desc: 'Jetour T2 PHEV / Dasheng PHEV — 100km pure electric + 1000km combined. Tier-1 supplier batteries.' },
+  { icon: '🌄', title: 'Best for Central Asia / GCC', desc: 'Jetour T2 + Dashing dominate Kazakhstan / UAE / Saudi adventure SUV markets — desert and snow tested.' },
+  { icon: '⚡', title: 'PHEV Tech Leader', desc: 'Jetour T2 i-DM / G700 PHEV — up to 139km pure electric on T2 i-DM, 1000km combined on G700. LFP battery on both.' },
   { icon: '👨‍👩‍👧', title: '7-Seater Family Focus', desc: 'Roomy interior + flexible 2+3+2 seating. Best ROI for fleet operators / large family markets.' },
   { icon: '✅', title: 'Direct OEM Pricing', desc: 'EV Auto Pro is authorized exporter via Chery group MoU. Factory MSRP, no dealer markup.' },
 ];
@@ -67,14 +67,14 @@ const markets = [
 ];
 
 const cases = [
-  { headline: '50 Units Jetour T2 → Tashkent, Uzbekistan', client: 'Uzbek Auto Group', stars: 5, quote: 'T2 PHEV 7-seater perfect for Central Asia families. Block train via Khorgos in 18 days.' },
+  { headline: '50 Units Jetour T2 i-DM → Tashkent, Uzbekistan', client: 'Uzbek Auto Group', stars: 5, quote: 'T2 i-DM PHEV adventure SUV perfect for Central Asia families. Block train via Khorgos in 18 days.' },
   { headline: '30 Units X70 Plus → Riyadh, Saudi Arabia', client: 'Gulf Family Fleet', stars: 5, quote: 'GCC + SASO complete. 7-seater for large families — desert-tested suspension.' },
-  { headline: '20 Units Dasheng PHEV → Moscow', client: 'Moscow Adventure Dealer', stars: 5, quote: 'Premium PHEV SUV. Strong winter performance + adventure styling — perfect Russia fit.' },
+  { headline: '20 Units Dashing → Moscow', client: 'Moscow Adventure Dealer', stars: 5, quote: 'Compact SUV with strong winter performance — Vanguard Technology positioning fits younger CIS buyers.' },
 ];
 
 const brandFaqs = [
   { q: 'Is EV Auto Pro really an authorized Jetour exporter?', a: 'Yes. We hold a signed dealer MoU with Jetour (via parent Chery Group) since 2021. We share the MoU scan on request. Factory invoice provided for every unit.' },
-  { q: 'Which Jetour models are best for export to Central Asia / GCC?', a: 'Jetour T2 PHEV (旅行者) is #1 in Uzbekistan + Kazakhstan adventure SUV market. X70 Plus 7-seater dominates GCC family fleet. Dasheng PHEV growing in Russia premium segment.' },
+  { q: 'Which Jetour models are best for export to Central Asia / GCC?', a: 'Jetour T2 i-DM PHEV (旅行者) has the highest search demand of any Jetour model and leads in Uzbekistan + Kazakhstan. X70 Plus (5/6/7-seat configurable) dominates GCC family fleet. Dashing is growing fast in the Saudi youth segment.' },
   { q: 'Does Jetour support right-hand drive (RHD)?', a: 'Yes for T2, X70 Plus. Factory RHD batch MOQ: 20 units. Lead time 45-60 days. Suitable for UK / SA / PK / ID / KE markets.' },
   { q: 'What is the warranty for Jetour exported vehicles?', a: '5-year / 100,000 km vehicle warranty. 8-year / 160,000 km on PHEV battery + electric drivetrain. Local warranty via Jetour authorized partners.' },
   { q: 'Can I order custom configuration (paint / interior / off-road kit)?', a: 'Yes. Custom paint codes (10+ colors incl. desert tan / arctic white), interior trim (cloth/leather), off-road accessories (skid plate / roof rack). MOQ varies.' },
@@ -84,7 +84,7 @@ const brandFaqs = [
 
 <BaseLayout
   title="Jetour Export | EV Auto Pro Authorized Dealer Since 2021"
-  description="Buy Jetour from authorized China exporter. T2 / X70 Plus / Dasheng 6 SUV models. FOB from $18,500. MOQ 1. Ships to 60+ countries."
+  description="Buy Jetour from authorized China exporter. T2 i-DM / T1 / X70 Plus / Dashing / G700 — 6 real export models. FOB from $11,000. MOQ 1. Ships to 60+ countries."
 >
   {/* ============ 1. HERO 全屏大图 ============ */}
   <section class="relative bg-ink-900 overflow-hidden">
@@ -145,7 +145,7 @@ const brandFaqs = [
       <div class="grid lg:grid-cols-[1fr_1.5fr] gap-16 items-start">
         <div class="sticky top-24">
           <p class="text-xs font-semibold text-brand-500 uppercase tracking-wider mb-3">The Brand</p>
-          <h2 class="text-4xl lg:text-5xl font-bold text-ink-900 leading-tight">163 years of Chinese auto heritage</h2>
+          <h2 class="text-4xl lg:text-5xl font-bold text-ink-900 leading-tight">{brand.founded} — the story so far</h2>
         </div>
         <div class="space-y-6 text-base lg:text-lg text-ink-700 leading-relaxed">
           {brandStory.split('\n\n').map(para => <p>{para}</p>)}
@@ -188,7 +188,7 @@ const brandFaqs = [
           <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
              class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
             <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src={['jetour-t2','jetour-dashing','jetour-x70-plus'].includes(m.slug) ? `/images/vehicles/evautopro-${m.slug}-01.webp` : '/images/vehicles/evautopro-jetour-t2-other-01.webp'} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+              <img src={['jetour-t2','jetour-dashing','jetour-x70-plus','jetour-t1','jetour-t1-idm','jetour-g700'].includes(m.slug) ? `/images/vehicles/evautopro-${m.slug}-01.webp` : '/images/vehicles/evautopro-jetour-t2-other-01.webp'} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
