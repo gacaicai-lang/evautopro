@@ -21,7 +21,7 @@ const brand = {
 
 const heroBadges = [
   'Authorized Dealer Since 2021',
-  '6 SUV Models Available',
+  '9 SUV Models Available',
   'PHEV + ICE Off-Road Lineup',
 ];
 
@@ -41,6 +41,9 @@ const models = [
   { slug: 'jetour-t1', name: 'T1', body: 'Compact SUV', fuel: 'ICE', price_min: 18700, stock: 0, ready: true },
   { slug: 'jetour-t1-idm', name: 'T1 i-DM', body: 'Compact SUV', fuel: 'PHEV', price_min: 21700, stock: 0, ready: true },
   { slug: 'jetour-x70-plus', name: 'X70 Plus', body: 'Big Family SUV', fuel: 'ICE', price_min: 11000, stock: 0, ready: true },
+  { slug: 'jetour-x70', name: 'X70', body: 'Big Family SUV', fuel: 'ICE', price_min: 9700, stock: 0, ready: true },
+  { slug: 'jetour-x90-plus', name: 'X90 Plus', body: 'Full-size SUV', fuel: 'ICE', price_min: 12990, stock: 0, ready: true },
+  { slug: 'jetour-x50', name: 'X50', body: 'Compact SUV', fuel: 'ICE', price_min: 9000, stock: 0, ready: true },
   { slug: 'jetour-dashing', name: 'Dashing', body: 'Compact SUV', fuel: 'ICE', price_min: 13000, stock: 0, ready: true },
   { slug: 'jetour-g700', name: 'G700', body: 'Full-size Off-Road SUV', fuel: 'PHEV', price_min: 46300, stock: 0, ready: true },
 ];
@@ -84,7 +87,7 @@ const brandFaqs = [
 
 <BaseLayout
   title="Jetour Export | EV Auto Pro Authorized Dealer Since 2021"
-  description="Buy Jetour from authorized China exporter. T2 i-DM / T1 / X70 Plus / Dashing / G700 — 6 real export models. FOB from $11,000. MOQ 1. Ships to 60+ countries."
+  description="Buy Jetour from authorized China exporter. T2 i-DM / T1 / X70 Plus / X70 / X90 Plus / X50 / Dashing / G700 — 9 real export models. FOB from $9,000. MOQ 1. Ships to 60+ countries."
 >
   {/* ============ 1. HERO 全屏大图 ============ */}
   <section class="relative bg-ink-900 overflow-hidden">
@@ -188,7 +191,7 @@ const brandFaqs = [
           <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
              class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
             <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src={['jetour-t2','jetour-dashing','jetour-x70-plus','jetour-t1','jetour-t1-idm','jetour-g700'].includes(m.slug) ? `/images/vehicles/evautopro-${m.slug}-01.webp` : '/images/vehicles/evautopro-jetour-t2-other-01.webp'} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+              <img src={['jetour-t2','jetour-dashing','jetour-x70-plus','jetour-t1','jetour-t1-idm','jetour-g700','jetour-x70','jetour-x90-plus','jetour-x50'].includes(m.slug) ? `/images/vehicles/evautopro-${m.slug}-01.webp` : '/images/vehicles/evautopro-jetour-t2-other-01.webp'} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">

@@ -152,6 +152,115 @@ export const cars: Record<string, Car> = {
     gallery: launderedGallery('jetour-t2', 'Jetour T2'),
   },
 
+  'jetour-x70': {
+    brand: 'Jetour', brand_cn: '捷途', brand_slug: 'jetour',
+    model: 'X70', slug: 'jetour-x70', year: 2026,
+    subtitle: 'Big Family SUV · Entry-level 7-Seater',
+    body_type: 'Mid-size SUV', fuel_type: 'ICE', drive: 'FWD', seats: 7,
+    hero_image: '/images/vehicles/evautopro-jetour-x70-01.webp',
+    pricing: { fob_min: 9700, fob_max: 14200,
+      cif: [
+        { country: 'Russia (St. Petersburg)', min: 11400, max: 16700 },
+        { country: 'UAE (Jebel Ali)', min: 10500, max: 15300 }] },
+    specs: { motor_ps: 156, motor_kw: 115, torque_nm: 230, top_speed: 180, dimensions: '4743×1900×1720', wheelbase: 2720, transmission: '6MT or 6-Speed Wet DCT' },
+    features: {
+      exterior: ['20" Alloy Wheels', 'Ultra-wide Panoramic Sunroof', '36dB Cabin Noise Engineering ("as quiet as a library")', 'LED Headlights'],
+      interior: ['14.6" Touchscreen (2025 spec) w/ Wireless CarPlay/Android Auto', 'Full Digital Instrument Cluster', '5 or 5+2 (7-seat) Configurable Cabin', 'Multi-language Voice Control'],
+      safety: ['EPB Electronic Parking + Auto Hold', 'Multi-link Independent Rear Suspension w/ Stabilizer Bar', 'Long-Warranty Engine (factory term TBC)', 'Front Ventilated / Rear Disc Brakes'],
+    },
+    stock_status: 'Made to Order', stock_units: 0, lead_time_days: 30, moq: 1,
+    supported_markets: ['Russia', 'UAE', 'Kazakhstan'],
+    shipping_methods: ['RoRo', 'Container', 'Block Train'],
+    certifications: ['GCC', 'EAC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
+    faqs: [
+      { q: 'How is the X70 different from the X70 Plus?', a: 'The X70 is the entry-level model in the family — smaller (4743mm vs 4749mm is close, but specs differ) with a single 1.5T engine option and 156 PS, versus the X70 Plus\'s option of a more powerful 1.6TGDI. Both are configurable up to 7 seats.' },
+      { q: 'Transmission options?', a: '6-speed manual or 6-speed wet dual-clutch — a simpler, lower-cost drivetrain than the X70 Plus\'s 7-speed DCT, which keeps the FOB price down.' },
+      { q: 'Curb weight and tire specs?', a: 'Not published on the official spec sheet — we can confirm exact figures with the factory before your order ships.' },
+      { q: 'Best market fit?', a: 'Budget-conscious 7-seater buyers in Russia, UAE and Kazakhstan who want Jetour\'s family-SUV formula at the lowest entry price in the range.' },
+      { q: 'MOQ and lead time?', a: 'Newly catalogued for our export program — made to order, MOQ 1 unit, ~30-day lead time. Contact us for current factory allocation.' },
+    ],
+    gallery: {
+      appearance: [
+        galleryItem('/images/vehicles/evautopro-jetour-x70-appearance-01.webp', 'Jetour X70 studio side profile, white'),
+      ],
+      console: [
+        galleryItem('/images/vehicles/evautopro-jetour-x70-console-01.webp', 'Jetour X70 cockpit with touchscreen and shifter'),
+      ],
+    },
+  },
+
+  'jetour-x90-plus': {
+    brand: 'Jetour', brand_cn: '捷途', brand_slug: 'jetour',
+    model: 'X90 Plus', slug: 'jetour-x90-plus', year: 2026,
+    subtitle: 'Premium Flagship 7-Seater SUV',
+    body_type: 'Full-size SUV', fuel_type: 'ICE', drive: 'FWD', seats: 7,
+    hero_image: '/images/vehicles/evautopro-jetour-x90-plus-01.webp',
+    pricing: { fob_min: 12990, fob_max: 26500,
+      cif: [
+        { country: 'Russia (St. Petersburg)', min: 15200, max: 31000 },
+        { country: 'Saudi Arabia (Jeddah)', min: 14200, max: 28900 },
+        { country: 'Nigeria (Lagos)', min: 15600, max: 31800 }] },
+    specs: { motor_ps: 254, motor_kw: 187, torque_nm: 390, top_speed: 190, dimensions: '4858×1925×1780', wheelbase: 2850, weight: 1742, tires: '255/45 R20', transmission: '7-Speed Wet DCT' },
+    features: {
+      exterior: ['Hexagonal Chrome "Big Mouth" Grille w/ Embedded JETOUR Badge', 'Matrix LED Headlights', '236-LED Taillights + 20-Star Brake Light Pattern', '18"-19" Alloy Wheels, Panoramic Sunroof (high trim)'],
+      interior: ['12.8" Touchscreen + Full Digital Instrument (dual 12.3" screens on some trims)', 'Huawei HiCar + In-car WeChat Support', '6-Way Power Front Seats, Leather/Leatherette, Heated + Ventilated (high trim)', 'Wireless Phone Charging + Wi-Fi Hotspot'],
+      safety: ['L2 Assisted Driving (ACC + LKA + AEB)', '360° Panoramic Camera + Blind Spot Detection + Forward Collision Warning', '6-8 Airbags (confirm exact count by trim with factory)', 'Hill Descent/Hold Control + ESP + Tire Pressure Monitoring + ISOFIX'],
+    },
+    stock_status: 'Made to Order', stock_units: 0, lead_time_days: 30, moq: 1,
+    supported_markets: ['Russia', 'Saudi Arabia', 'UAE', 'Egypt', 'Nigeria', 'Kazakhstan'],
+    shipping_methods: ['RoRo', 'Container', 'Block Train'],
+    certifications: ['GCC', 'EAC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
+    faqs: [
+      { q: 'Is X90 Plus a genuine flagship, or a rebadge of X70 Plus?', a: 'Genuine separate flagship model — larger (4858mm vs 4749mm), more powerful engine options (up to 254 PS vs 197 PS), and a larger 2850mm wheelbase. Both share Jetour\'s family-SUV design language but are different platforms.' },
+      { q: 'Engine options?', a: 'Entry 1.6TGDI (145kW/197PS/290N·m) or flagship 2.0TGDI (187kW/254PS/390N·m), both with 7-speed wet DCT.' },
+      { q: 'Seating configuration?', a: '5, 6 or 7-seat factory configurations available — cargo volume ranges from 486L (5-seat, seats up) to 1052L (seats folded).' },
+      { q: 'Where is this sold today?', a: 'Wide regional footprint per official and regional-dealer sources: Saudi Arabia, UAE, Russia, Egypt, Nigeria, Qatar, Kazakhstan.' },
+      { q: 'FOB pricing accuracy?', a: 'No official factory FOB list price is published — the range shown reflects real trade-platform listings ($12,990-$26,500 depending on configuration and condition). Confirm current pricing with us before ordering.' },
+    ],
+    gallery: {
+      appearance: [
+        galleryItem('/images/vehicles/evautopro-jetour-x90-plus-appearance-01.webp', 'Jetour X90 Plus studio front 3/4, dark blue-grey'),
+      ],
+      console: [
+        galleryItem('/images/vehicles/evautopro-jetour-x90-plus-console-01.webp', 'Jetour X90 Plus cockpit with digital instrument cluster'),
+      ],
+    },
+  },
+
+  'jetour-x50': {
+    brand: 'Jetour', brand_cn: '捷途', brand_slug: 'jetour',
+    model: 'X50', slug: 'jetour-x50', year: 2026,
+    subtitle: 'Urban Compact SUV · Export-only Model',
+    body_type: 'Compact SUV', fuel_type: 'ICE', drive: 'FWD', seats: 5,
+    hero_image: '/images/vehicles/evautopro-jetour-x50-01.webp',
+    pricing: { fob_min: 9000, fob_max: 13500,
+      cif: [
+        { country: 'UAE (Jebel Ali)', min: 9800, max: 14700 },
+        { country: 'Kazakhstan (Almaty)', min: 10300, max: 15500 }] },
+    specs: { motor_ps: 156, motor_kw: 115, torque_nm: 230, dimensions: '4397×1841×1654', wheelbase: 2601, transmission: '6-Speed Wet DCT' },
+    features: {
+      exterior: ['"Baleen" Waterfall Chrome Grille', 'Eagle-eye LED Headlights', '18" Alloy Wheels', 'Urban Minimalist Body Lines'],
+      interior: ['10.25" HD Touchscreen', 'Apple CarPlay / Android Auto', 'Leatherette Seats w/ Contrast Stitching', 'Jetour Voice Assistant'],
+      safety: ['6 Airbags (Front + Side + Full-length Curtain)', '360° Panoramic Camera (4-camera) + Parking Radar', 'L1 Assist: Blind Spot Detection + Lane Change Assist + Rear Cross Traffic Alert + Door-open Warning', 'ABS+EBD+Brake Assist, ESP, Hill Hold, Tire Pressure Monitoring'],
+    },
+    stock_status: 'Made to Order', stock_units: 0, lead_time_days: 35, moq: 1,
+    supported_markets: ['UAE', 'Saudi Arabia', 'Kazakhstan'],
+    shipping_methods: ['RoRo', 'Container'],
+    certifications: ['GCC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
+    faqs: [
+      { q: 'Why isn\'t the X50 on Jetour\'s main global website?', a: 'It\'s a genuine Jetour model, but export-only and not sold in China — the vehicle is a rebadged Soueast DX5 (Soueast and Jetour are sibling brands under the Chery Holding group, and this platform-sharing arrangement began around 2022). It\'s maintained by regional distributors rather than the main jetourglobal.com team, which is why it doesn\'t appear on the primary site navigation.' },
+      { q: 'Is this really in real dealer showrooms?', a: 'Yes — confirmed on-lot in UAE, Saudi Arabia, Kazakhstan, Panama, Chile, the Philippines and Malaysia through regional dealer sites and dealership photos, not just marketing pages.' },
+      { q: 'Engine and drivetrain?', a: '1.5T turbo, 115kW/156PS, 230N·m — the same core powertrain family used in the Jetour X70, with a 6-speed wet dual-clutch transmission.' },
+      { q: 'Curb weight and top speed?', a: 'Not published by any source we could verify — ask us to confirm with the regional distributor before ordering.' },
+      { q: 'MOQ and lead time?', a: 'Newly catalogued for our export program — made to order, MOQ 1 unit, ~35-day lead time given this is a regionally-sourced model. Contact us for current allocation.' },
+    ],
+    gallery: {
+      appearance: [
+        galleryItem('/images/vehicles/evautopro-jetour-x50-appearance-01.webp', 'Jetour X50 official UAE marketing campaign shot'),
+      ],
+    },
+  },
+
   'jetour-g700': {
     brand: 'Jetour', brand_cn: '捷途', brand_slug: 'jetour',
     model: 'G700', slug: 'jetour-g700', year: 2026,
