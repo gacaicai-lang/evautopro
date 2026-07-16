@@ -139,7 +139,7 @@ export async function onRequestPost(context) {
         },
         body: JSON.stringify({
           from: 'EV Auto Pro <inquiry@evautopro.com>',
-          to: ['seajoy002@gmail.com'],
+          to: ['gacaicai@gmail.com'],
           subject: `🚗 新询盘 · ${data.name || ''} from ${enriched.country}`,
           html: Object.entries(data).map(([k, v]) => `<p><b>${k}</b>: ${v}</p>`).join(''),
         }),
