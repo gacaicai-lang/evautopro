@@ -127,7 +127,7 @@ Send the target model, quantity, destination city and preferred port. We will re
 
 **Official references:** [SASO Certificates of Conformity](https://saso.gov.sa/en/sectors/certificates/compliance_certificate/pages/default.aspx) · [SASO vehicle import service announcement](https://saso.gov.sa/ar/mediacenter/news/Pages/saso-news-1473.aspx) · [ZATCA Vehicle Import Controls](https://zatca.gov.sa/en/RulesRegulations/Taxes/Pages/customs-individual/import-vehicles.aspx).
 
-**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20Saudi%20Arabia%20vehicle%20import%20quote%20with%20SABER%20requirements) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20Saudi%20Arabia%20vehicle%20import%20quote%20with%20SABER%20requirements) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com).`,
     faqs: [
       { q: 'Do cars imported into Saudi Arabia need SABER certification?', a: 'The importer should use the SABER vehicle-import service before shipping, select an accepted inspection body and obtain the vehicle shipment conformity certificate. Electric vehicles also fall under SASO electric-vehicle conformity requirements. Confirm the route for the exact model and VIN before loading.' },
       { q: 'How much does Saudi vehicle conformity certification cost?', a: 'There is no dependable universal flat fee. Cost varies by vehicle category, assessment body, inspection location, shipment size and any additional testing. Request the live amount shown by SABER and a written inspection-body quotation before signing the vehicle order.' },
@@ -951,7 +951,7 @@ Often, yes — and the rules change faster than most buyer guides acknowledge. K
 
 Guessing wrong on powertrain is expensive — a container of the wrong technology sits unsold while a competitor with the right one turns their stock in weeks. You don't have to guess. Tell us your destination city, climate and buyer profile, and we'll recommend which of our in-stock BEV, PHEV, EREV or ICE models fits — with a landed-cost quote attached.
 
-**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20powertrain%20recommendations%20for%20my%20market) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20powertrain%20recommendations%20for%20my%20market) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'Which powertrain is best for cold-climate markets with limited charging infrastructure?', a: 'EREV. It drives like a full electric vehicle day-to-day but carries a small combustion engine purely to generate power once the battery runs low, so cold-weather range loss or a gap in the charging network never strands the buyer. Deepal S07 and Deepal S09 are our top-performing models for exactly this reason in Russia and Central Asia.' },
       { q: 'Does powertrain type affect import duty or VAT in CIS/Gulf markets?', a: 'Often, yes, and the rules change over time. Kazakhstan is a current example: EVs clear at 0% duty under WTO terms, but the duty-and-VAT-free quota was exhausted in October 2025 and VAT rose to 16% from January 2026. Confirm current treatment for your specific destination before finalizing an order — do not rely on a general guide for this.' },
@@ -1061,7 +1061,7 @@ Duty, VAT and the recycling fee in Kazakhstan changed twice in the last year and
 
 Kazakhstan's rules have already changed twice in the last year — the quota closed, then VAT rose. Waiting rarely makes the math better. If Almaty or Aktau is your market, send us your target model and quantity and we'll return a full landed-cost quote — FOB, freight, duty and current VAT — so you're pricing against real numbers, not last year's.
 
-**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20a%20Kazakhstan%20landed-cost%20quote) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20a%20Kazakhstan%20landed-cost%20quote) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'Do electric cars still clear duty-free in Kazakhstan in 2026?', a: 'The 0% customs tariff still applies to EVs under Kazakhstan\'s WTO commitments if the vehicle stays in the country, but the duty-and-VAT-free quota was exhausted around 15 October 2025, and VAT rose to 16% from 1 January 2026. So an EV is no longer fully free — budget the 16% VAT plus the recycling fee.' },
       { q: 'Can I import a car cheaply into Kazakhstan and move it to Russia?', a: 'No. A vehicle cleared at the 0% WTO tariff carries a "Kazakhstan-only" clause and cannot be re-exported to other EAEU countries (Russia, Belarus, Armenia, Kyrgyzstan). It is strictly enforced. Import for the Kazakhstan market, not as transit.' },
@@ -1144,7 +1144,7 @@ Russia's recycling fee has changed several times and is indexed annually — the
 
 The queues at Russia's borders in late 2025 were dealers who waited too long to model this fee — don't repeat that scramble. Send us your target model and volume and we'll return the full landed cost, recycling fee included, calculated against current rates rather than a guess.
 
-**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20a%20Russia%20landed-cost%20quote%20including%20recycling%20fee) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20a%20Russia%20landed-cost%20quote%20including%20recycling%20fee) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'How is Russia\'s recycling fee calculated in 2026?', a: 'Since December 2025 it is tied to engine power on a progressive scale, with the preferential (lower) rate kept only for cars up to 160 hp. Above 160 hp the fee rises sharply. It is indexed 10–20% annually and sits on top of the 15% import tariff and VAT.' },
       { q: 'Do most Chinese SUVs fall under the 160 hp preferential band?', a: 'No. Most modern Chinese SUVs — including the popular export models — produce well over 160 hp (typically 177–260 PS, and much higher for PHEV/EREV flagships), which places them above the preferential band where the fee is highest. Budget the fee explicitly per model.' },
@@ -1226,7 +1226,7 @@ We hold **MOFCOM authorized exporter status and AEO customs certification since 
 
 Don't take our word for it — ask us to prove every item above before you commit a deposit anywhere. Pick a target model from our [in-stock vehicle lineup](/cars/) and tell us your destination; we'll send our MOFCOM licence number, a sample document set, and a reference you can call.
 
-**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20to%20verify%20your%20export%20credentials%20before%20ordering) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20to%20verify%20your%20export%20credentials%20before%20ordering) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'How do I verify a Chinese car exporter is legitimate?', a: 'Ask for their MOFCOM authorized exporter certificate and number (verifiable via the Chinese embassy/consulate), confirm the invoicing company matches the bank account name, require a pre-shipment photo & video inspection, and check contactable references with delivery proof. A legitimate exporter passes all of these; a grey-market reseller usually cannot show the export licence.' },
       { q: 'What is the safest way to pay a Chinese car supplier?', a: 'T/T 30% deposit + 70% before shipment (ideally after you receive the pre-shipment inspection report), or an L/C at sight from a major bank. Never pay 100% up front, and never wire to a personal bank account that does not match the invoicing company name.' },
@@ -1322,7 +1322,7 @@ Distributor line-ups and UAE fees change — brands re-sign dealers, and GCC con
 
 If you're buying at trade volume — dealer stock, fleet, or re-export through Jebel Ali — send us your target models and quantity. We'll return CIF Jebel Ali pricing with GCC certification, current duty/VAT math, and container configuration, so you can compare the two channels on real numbers instead of showroom guesses.
 
-**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20a%20CIF%20Jebel%20Ali%20trade%20quote) or email [cai@evautopro.com](mailto:cai@evautopro.com) — we reply within 24 hours, usually faster.`,
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20a%20CIF%20Jebel%20Ali%20trade%20quote) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'Who are the official Chinese car distributors in the UAE?', a: 'As of early 2026: Jetour is sold through The Elite Cars in Dubai, Geely through AGMC, BYD through Al-Futtaim, and Chery and Zeekr through AW Rostamani Group. Line-ups change as brands re-sign dealers, so confirm directly with the brand before relying on this.' },
       { q: 'Is it cheaper to import a Chinese car directly from China to the UAE?', a: 'At trade volume, yes — typically 15–25% lower landed cost than official retail, because UAE import costs are low (~5% duty + 5% VAT) and the saving is mostly distributor margin. For a single retail vehicle, the saving rarely justifies the import process; buy from the official dealer instead.' },
@@ -1420,7 +1420,7 @@ Send us the model, quantity and destination city. We will provide the China-side
 
 **Official references:** [Uzbekistan Integrated Tariff](https://tarif.customs.uz/en?lang=en_EN) · [Government conformity update](https://gov.uz/en/eco/news/view/87493) · [Ministry guidance on customs payments and utilization fee](https://gov.uz/en/miit/sections/view/12769).
 
-**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20an%20Uzbekistan%20vehicle%20import%20quote) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20an%20Uzbekistan%20vehicle%20import%20quote) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com).`,
     faqs: [
       { q: 'Are electric cars duty-free in Uzbekistan in 2026?', a: 'Do not assume a blanket exemption from an older article. Run the exact BEV HS code, origin and transaction through Uzbekistan’s official Integrated Tariff service and confirm VAT and recycling fee with a licensed broker before ordering.' },
       { q: 'Do electric cars need environmental certification in Uzbekistan?', a: 'Under the September 2025 reform, electric vehicles are not assessed for an emissions category. They still require the applicable wheeled-vehicle safety conformity, customs and registration documents.' },
@@ -1528,7 +1528,7 @@ Send the target quantity, Addis Ababa delivery point and charging plan. We will 
 
 **Official references:** [Ethiopia Ministry of Planning climate portal](https://climate.mopd.gov.et/about/) · [Ethiopian Customs Commission directives](https://www.ecc.gov.et/directives) · [National Bank foreign-exchange directives](https://nbe.gov.et/directives/foreign-exchange-management/) · [Ministry of Transport e-mobility strategy](https://www.motl.gov.et/news/-e-mobility-).
 
-**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20pure%20BEV%20quote%20for%20Ethiopia) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20pure%20BEV%20quote%20for%20Ethiopia) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com).`,
     faqs: [
       { q: 'Can Ethiopia import gasoline or diesel cars in 2026?', a: 'Ethiopia introduced a ban on gasoline- and diesel-vehicle imports in February 2024, and official 2026 climate policy continues the electric-mobility transition. Obtain written customs confirmation for any claimed exception before shipping.' },
       { q: 'Can I import a PHEV or EREV as an electric car to Ethiopia?', a: 'Do not assume so. Both contain a fuel-burning engine. The conservative compliant recommendation is a pure BEV unless Ethiopian Customs gives written approval for the exact PHEV/EREV classification.' },
@@ -1628,7 +1628,7 @@ Send the model, quantity and target port. We will provide the China-side quote, 
 
 **Official references:** [Chile Customs](https://www.aduana.cl/) · [Chile Customs decision on China FTA origin evidence](https://www.aduana.cl/fallo-de-segunda-instancia-n-17-de-06-01-2010/aduana/2010-03-12/105416.html) · [3CV](https://www.mtt.gob.cl/3cv).
 
-**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20Chile%20vehicle%20import%20quote) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20Chile%20vehicle%20import%20quote) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com).`,
     faqs: [
       { q: 'Are Chinese cars duty-free in Chile?', a: 'A qualifying vehicle may receive the Chile–China FTA preferential rate, but the importer must verify the exact 2026 HS schedule and provide valid proof of origin and transport evidence. Preference is not automatic.' },
       { q: 'What VAT applies to imported cars in Chile?', a: 'Chile’s IVA is 19%. Ask the broker to calculate it on the legally applicable import base together with any customs duty and charges for the exact shipment.' },
@@ -1702,7 +1702,7 @@ Add both sets of handling, storage and border costs. Georgia wins when consolida
 
 **Official references:** [Georgia vehicle levy calculator and 180-day refund notice](https://www.rs.ge/CarClearance-en?cat=2&tab=1) · [Georgia HS/tax service](https://www.rs.ge/CommodityCodes-en) · [Georgia Tax Code](https://www.rs.ge/Media/Default/კანონმდებლობა/კანონები/tax%20code.pdf).
 
-**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20Georgia%20re-export%20vehicle%20quote) or email [cai@evautopro.com](mailto:cai@evautopro.com).`,
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20a%20Georgia%20re-export%20vehicle%20quote) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com).`,
     faqs: [
       { q: 'Why is Georgia used for car re-export?', a: 'Poti/Batumi access and a formal customs mechanism support regional redistribution. Revenue Service states that eligible duty and excise can be refunded when the car is exported and leaves within 180 days.' },
       { q: 'Are imported cars tax-free in Georgia?', a: 'No. Import duty, excise and fees are calculated under Georgian rules. A qualifying 180-day re-export can refund paid import duty and excise, but other costs require separate treatment.' },
@@ -1754,7 +1754,7 @@ RoRo exposes the vehicle to more handoffs and normally forbids loose items. Cont
 
 Quote the same origin, destination, insurance and inland scope. Require RoRo port charges and container stuffing, rack, unloading and demurrage to be visible—not hidden outside the ocean rate.
 
-WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20please%20compare%20RoRo%20and%2040HQ%20for%20my%20models) or [cai@evautopro.com](mailto:cai@evautopro.com).`,
+WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20please%20compare%20RoRo%20and%2040HQ%20for%20my%20models) or [gacaicai@gmail.com](mailto:gacaicai@gmail.com).`,
     faqs: [
       { q: 'Is RoRo cheaper than container shipping?', a: 'Often for one operable vehicle to a RoRo port. A 40HQ can become cheaper per unit when several compatible cars share the box, but include racks, loading, unloading and inland charges.' },
       { q: 'How many cars fit in a 40HQ?', a: 'Common plans range from two to four, but no count is guaranteed from length alone. Model width/height, rack engineering, weight and carrier rules determine the approved load.' },
@@ -1810,7 +1810,7 @@ The [Changan CS55 Plus](/cars/changan-cs55-plus/) illustrates the process: the i
 
 **Not ideal for:** buyers expecting an official distributor to repair an unauthorized parallel-import vehicle for free.
 
-Read the [China auto-parts sourcing guide](/news/guide-to-sourcing-chinese-auto-parts/) and verify the exporter before payment. WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20send%20a%20VIN-matched%20spare-parts%20and%20warranty%20plan) or [cai@evautopro.com](mailto:cai@evautopro.com).`,
+Read the [China auto-parts sourcing guide](/news/guide-to-sourcing-chinese-auto-parts/) and verify the exporter before payment. WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20send%20a%20VIN-matched%20spare-parts%20and%20warranty%20plan) or [gacaicai@gmail.com](mailto:gacaicai@gmail.com).`,
     faqs: [
       { q: 'Do Chinese cars have an international warranty?', a: 'Not automatically. Confirm whether the VIN is covered by an official destination-country network or only by a written exporter parts arrangement.' },
       { q: 'Are Chinese car parts difficult to obtain?', a: 'They are easier when ordered by VIN and OEM part number. Dealers should import a fast-moving starter pack with the vehicles instead of waiting for a breakdown.' },
@@ -1858,7 +1858,7 @@ Link the payment to a real product such as [Geely Coolray](/cars/geely-coolray/)
 
 **Never accept:** beneficiary mismatch, last-minute bank-detail change without independent callback, 100% to a personal account, Western Union or cryptocurrency for a normal B2B vehicle order.
 
-WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20send%20your%20T%2FT%20and%20L%2FC%20payment%20terms) or [cai@evautopro.com](mailto:cai@evautopro.com).`,
+WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20send%20your%20T%2FT%20and%20L%2FC%20payment%20terms) or [gacaicai@gmail.com](mailto:gacaicai@gmail.com).`,
     faqs: [
       { q: 'Is T/T 30/70 safe for buying cars from China?', a: 'It is common, but only after verifying the exporter and matching company bank account. Tie the 70% balance to VIN-level inspection and shipping readiness.' },
       { q: 'Is L/C safer than T/T?', a: 'It reduces payment risk when documents comply, but banks do not inspect vehicle quality. Poor wording and document discrepancies can still delay or trigger payment.' },
