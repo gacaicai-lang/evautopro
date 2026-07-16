@@ -538,6 +538,84 @@ export const cars: Record<string, Car> = {
     ],
     gallery: launderedGallery('geely-atlas', 'Geely Atlas'),
   },
+
+  'nevo-q05': {
+    brand: 'Changan NEVO', brand_cn: '长安启源', brand_slug: 'qiyuan',
+    model: 'NEVO Q05', slug: 'nevo-q05', year: 2026,
+    subtitle: 'Compact Electric SUV · China domestic name "Qiyuan Q05"',
+    body_type: 'Compact SUV', fuel_type: 'BEV', drive: 'FWD', seats: 5,
+    hero_image: '/images/vehicles/evautopro-nevo-q05-01.webp',
+    pricing: { fob_min: 18500, fob_max: 21800,
+      cif: [
+        { country: 'UAE (Jebel Ali)', min: 20000, max: 23600 },
+        { country: 'Kazakhstan (Almaty)', min: 21500, max: 25500 }] },
+    specs: { motor_ps: 163, motor_kw: 120, torque_nm: 190, battery_kwh: 51.9, range_wltp: 462, top_speed: 160, accel: 8.2, dimensions: '4435×1855×1600', wheelbase: 2735, tires: '225/60 R17', transmission: 'Single-Speed Reduction Gear' },
+    features: {
+      exterior: ['LED Flowing Taillights (Ultra trim)', 'Panoramic Glass Roof w/ Power Sunshade (Ultra trim)', 'Power Tailgate w/ Anti-pinch (Ultra trim)', '17"-18" Alloy Wheels'],
+      interior: ['14.6" Touchscreen + 10.17" Digital Instrument', 'Microfiber Leather Seats', '256-Color Ambient Lighting (Ultra trim)', '50W Wireless Fast Charging (Ultra trim)'],
+      safety: ['3D Transparent Chassis Panoramic View', 'Integrated Adaptive Cruise + Lane Centering', 'Front + Side Airbags (Curtain Airbags on Ultra)', 'Tire Pressure Monitoring + ISOFIX'],
+    },
+    stock_status: 'Made to Order', stock_units: 0, lead_time_days: 30, moq: 1,
+    supported_markets: ['UAE', 'Kazakhstan'],
+    shipping_methods: ['RoRo', 'Container'],
+    certifications: ['GCC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
+    faqs: [
+      { q: 'What is NEVO? Is this the same as "Qiyuan"?', a: 'Yes — Changan Qiyuan (长安启源) is the China domestic brand name; NEVO is the official export-market brand name used on Changan\'s global site and in Thailand, where this exact Q05 launched in May 2026.' },
+      { q: 'Is the Q05 a genuine BEV?', a: 'Yes — 51.9 kWh LFP battery (CATL), 462 km NEDC range, single front motor (120 kW / 163 PS). This is the current-generation electric platform, not the earlier plug-in hybrid Q05 sold in some markets — confirm generation with us before ordering, the two are not interchangeable.' },
+      { q: 'Where is this confirmed on official sale today?', a: 'Thailand (launched May 2026, CKD-assembled) and Uzbekistan. Announced for future launch in South Africa (2027), Indonesia/Latin America/Europe (H2 2026) — not yet live in those markets.' },
+      { q: 'Charging?', a: 'AC up to 6.6 kW, DC fast charging up to 162 kW — 30%→80% in about 15 minutes. Ultra trim supports V2L (vehicle-to-load, 6.6 kW discharge).' },
+      { q: 'MOQ and lead time?', a: 'Newly catalogued for our export program — made to order, MOQ 1 unit, ~30-day lead time. Contact us for current factory allocation.' },
+    ],
+    gallery: {
+      appearance: [
+        galleryItem('/images/vehicles/evautopro-nevo-q05-01.webp', 'NEVO Q05 studio side profile, silver'),
+        galleryItem('/images/vehicles/evautopro-nevo-q05-appearance-01.webp', 'NEVO Q05 studio side profile, dark green'),
+      ],
+    },
+  },
+
+  'nevo-a07': {
+    brand: 'Changan NEVO', brand_cn: '长安启源', brand_slug: 'qiyuan',
+    model: 'NEVO A07', slug: 'nevo-a07', year: 2026,
+    subtitle: 'Mid-Large Sedan · BEV or EREV · China domestic name "Qiyuan A07"',
+    body_type: 'Mid-Large Sedan', fuel_type: 'EREV', drive: 'RWD', seats: 5,
+    hero_image: '/images/vehicles/evautopro-nevo-a07-01.webp',
+    pricing: { fob_min: 19640, fob_max: 22450,
+      cif: [
+        { country: 'UAE (Jebel Ali)', min: 21200, max: 24300 },
+        { country: 'Saudi Arabia (Jeddah)', min: 21500, max: 24700 }] },
+    specs: { motor_ps: 268, motor_kw: 200, battery_kwh: 35.1, range_cltc: 310, top_speed: 172, dimensions: '4905×1910×1480', wheelbase: 2900, weight: 1805, tires: '19"' },
+    features: {
+      exterior: ['Frameless Flush Door Handles', 'Hidden Door Handles', 'Large Panoramic Glass Roof', 'Through-type LED Taillights'],
+      interior: ['AR-HUD Augmented Reality Head-Up Display', '15.4" Touchscreen (Snapdragon 8155)', 'D-shaped Steering Wheel', 'Dual Wireless Charging Pads'],
+      safety: ['L2 Assisted Driving + Full-Speed Adaptive Cruise', '540° Panoramic Camera + Transparent Chassis', 'Anti-pinch Power Tailgate', 'Multi-airbag Protection'],
+    },
+    stock_status: 'Made to Order', stock_units: 0, lead_time_days: 30, moq: 1,
+    supported_markets: ['UAE', 'Saudi Arabia', 'Russia'],
+    shipping_methods: ['RoRo', 'Container'],
+    certifications: ['GCC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
+    faqs: [
+      { q: 'BEV or EREV — which version is this?', a: 'NEVO A07 is available in both: a pure-electric version (190kW/255PS motor, 79kWh LFP battery, 730km CLTC) and an extended-range EREV version (200kW/268PS motor + 1.5L range-extender engine, 35.1kWh battery, 310km pure-electric / 1,570km combined). Tell us which powertrain your market needs.' },
+      { q: 'Is this the same brand as NEVO Q05?', a: 'Yes — A07 was Changan Qiyuan\'s first model (debuted 2023), exported under the NEVO brand name like the rest of the lineup.' },
+      { q: 'Real export track record?', a: 'A trading-platform claim of "50+ export countries" could not be officially confirmed and should be treated as marketing, not verified fact. What is confirmed: real delivery records to Russia, Kyrgyzstan and Saudi Arabia via established export channels.' },
+      { q: 'FOB pricing accuracy?', a: 'Multiple trade platforms quote different FOB figures for this model ($14,000-$23,000 range depending on source and trim) — confirm current pricing with us before ordering rather than relying on any single listed number.' },
+      { q: 'MOQ and lead time?', a: 'Newly catalogued for our export program — made to order, MOQ 1 unit, ~30-day lead time. Contact us for current factory allocation.' },
+    ],
+    gallery: {
+      appearance: [
+        galleryItem('/images/vehicles/evautopro-nevo-a07-01.webp', 'NEVO A07 real-world exterior, front 3/4'),
+      ],
+      console: [
+        galleryItem('/images/vehicles/evautopro-nevo-a07-console-01.webp', 'NEVO A07 cockpit with tablet-style touchscreen'),
+      ],
+    },
+  },
+
+  // NEVO Q07: research complete (specs/pricing/FAQs all sourced — see
+  // qiyuan-真实阵容研究-2026-07-16.md §6.3), but no real photo could be
+  // verified this session (browser tool couldn't reach candidate sources).
+  // Kept as a ready:false quote-form entry in brands/qiyuan.astro until a
+  // real image is sourced — do not re-add here with a substitute photo.
 };
 
 export const carSlugs = Object.keys(cars);

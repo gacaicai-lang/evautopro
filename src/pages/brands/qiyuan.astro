@@ -6,83 +6,83 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 // Structure synthesized from cars-in-china/byd + ihka about + Mercedes whitespace aesthetic
 
 const brand = {
-  name: 'Qiyuan',
+  name: 'Changan NEVO',
   cn: '启源',
   slug: 'qiyuan',
-  tagline: 'Affordable NEV Sub-Brand of Changan Group',
+  tagline: 'NEV Sub-Brand of Changan Group · Sold Overseas as "NEVO"',
   hero_image: '/images/faq-sourcing.webp',
   logo: '/images/brand-qiyuan.svg',
   authorized_since: 2023,
   founded: 2023,
   annual_production: '100K+ units',
-  export_countries: '20+',
-  in_stock: '25+ units',
+  export_countries: '3+',
+  in_stock: '0 units',
 };
 
 const heroBadges = [
-  'Authorized Dealer Since 2023',
-  '4 Affordable NEV Models',
-  'Entry-Level EV / PHEV',
+  'Changan Group NEV Sub-Brand',
+  '3 Real Export Models',
+  'China domestic name "Qiyuan" (启源)',
 ];
 
 const stats = [
   { num: '2023', label: 'Brand Launched', sub: 'Chongqing, China' },
   { num: '100K+', label: 'Annual Production', sub: 'units / year' },
-  { num: '20+', label: 'Export Countries', sub: 'Growing Network' },
-  { num: '25+', label: 'In Bonded Stock', sub: 'Ready to Ship' },
+  { num: '3', label: 'Confirmed Export Markets', sub: 'Thailand · Uzbekistan · Philippines' },
+  { num: 'NEVO', label: 'Overseas Brand Name', sub: 'Same as "Qiyuan" at home' },
 ];
 
-const brandStory = `Qiyuan Auto (启源汽车), launched in 2023, is the affordable NEV sub-brand of Changan Group. Positioned as entry-level family electric and hybrid vehicles, Qiyuan targets value-conscious buyers seeking modern Chinese NEV technology at compact price points. Models include the A07 (BEV sedan), Q05 / Q07 SUVs, and A05 entry sedan.
+const brandStory = `Changan Qiyuan (长安启源), launched August 27, 2023, is Changan Auto Group's third NEV sub-brand — after Deepal and Avatr. Product line spans A-series sedans (A05/A06/A07) and Q/E-series SUVs (Q05/Q07/E07). Overseas, the brand sells under a different name entirely: "NEVO" — Changan's own global site, the Thailand launch, and Wikipedia all use NEVO with no "Qiyuan" branding visible to buyers.
 
-EV Auto Pro is an authorized Qiyuan exporter since 2023, leveraging our 2018 Changan parent-group MoU. We supply Qiyuan affordable NEV lineup for global dealers serving budget-conscious EV/PHEV buyer segments. Every unit traceable to factory invoice. Zero grey market.`;
+NEVO Q05 (all-electric) is confirmed on official retail sale in Thailand (since May 2026) and Uzbekistan; the older plug-in hybrid Q05 generation is sold in the Philippines — these are two different cars sharing one name, not the same vehicle. NEVO A07 (BEV or EREV) has real delivery records to Russia, Kyrgyzstan and Saudi Arabia through export trading channels. NEVO Q07 has no official overseas retail launch yet, but genuine trade-platform inventory and real owner reports exist in Kazakhstan and Russia. EV Auto Pro sources through these established export channels — every unit traceable to factory invoice, zero grey market.`;
 
 const models = [
-  { slug: 'qiyuan-a07', name: 'A07', body: 'Compact BEV Sedan', fuel: 'BEV', price_min: 16800, stock: 12, ready: false },
-  { slug: 'qiyuan-q05', name: 'Q05', body: 'Compact PHEV SUV', fuel: 'PHEV', price_min: 14500, stock: 8, ready: false },
-  { slug: 'qiyuan-q07', name: 'Q07', body: 'Mid PHEV SUV', fuel: 'PHEV', price_min: 18500, stock: 6, ready: false },
-  { slug: 'qiyuan-a05', name: 'A05', body: 'Entry Sedan PHEV', fuel: 'PHEV', price_min: 12800, stock: 10, ready: false },
+  { slug: 'nevo-q05', name: 'NEVO Q05', body: 'Compact Electric SUV', fuel: 'BEV', price_min: 18500, stock: 0, ready: true },
+  { slug: 'nevo-a07', name: 'NEVO A07', body: 'Mid-Large Sedan', fuel: 'EREV', price_min: 19640, stock: 0, ready: true },
+  { slug: 'nevo-q07', name: 'NEVO Q07', body: 'Mid-size PHEV SUV', fuel: 'PHEV', price_min: 15999, stock: 0, ready: false },
+  { slug: 'nevo-a05', name: 'NEVO A05', body: 'Compact PHEV Sedan/CUV', fuel: 'PHEV', price_min: 20600, stock: 0, ready: false },
 ];
 
 const subBrands = [
-  { slug: 'changan', name: 'Changan', cn: '长安', desc: 'Parent brand · 163-year state-owned auto group', models: 8 },
-  { slug: 'deepal', name: 'Deepal', cn: '深蓝', desc: 'Sibling premium NEV brand · S05/S07/S09 EREV+BEV', models: 5 },
+  { slug: 'changan', name: 'Changan', cn: '长安', desc: 'Parent brand · state-owned auto group', models: 8 },
+  { slug: 'deepal', name: 'Deepal', cn: '深蓝', desc: 'Sibling NEV brand · S05/S07/S09 EREV+BEV', models: 5 },
 ];
 
 const advantages = [
-  { icon: '💰', title: 'Entry-Price NEV', desc: 'Most affordable Chinese NEV from Changan group. Q05 PHEV starts $14,500 FOB — competitive against entry-level ICE.' },
-  { icon: '🏭', title: 'Changan Group R&D', desc: '163-year Changan heritage + state-owned R&D + supply chain. Quality backing from China\'s 4th largest auto group.' },
-  { icon: '🔋', title: 'CATL Battery', desc: 'LFP batteries from CATL — same chemistry as Tesla / BMW. Thermal stable, long-life.' },
-  { icon: '👨‍👩‍👧', title: 'Family-Focused Design', desc: 'A05 / Q05 / Q07 designed for daily family use. Spacious interiors, simple tech, low operating cost.' },
-  { icon: '🌍', title: 'Emerging Market Fit', desc: 'Affordable price + LFP battery + simple maintenance = ideal for first-time EV buyers in emerging markets.' },
-  { icon: '✅', title: 'Authorized via Changan MoU', desc: 'EV Auto Pro authorized exporter via 2018 Changan parent-group MoU. Direct factory pricing.' },
+  { icon: '🌏', title: 'Real Export Footprint', desc: 'NEVO Q05 is on official retail sale in Thailand and Uzbekistan today — not a paper launch. 3,000+ orders in the first two weeks in Thailand alone.' },
+  { icon: '🏭', title: 'Changan Group R&D', desc: 'Changan Auto Group\'s third NEV sub-brand (after Deepal and Avatr) — shared platform engineering and supply chain with the wider group.' },
+  { icon: '🔋', title: 'CATL Battery', desc: 'LFP batteries from CATL on the Q05 and Q07 — same chemistry as Tesla / BMW. Thermal stable, long-life.' },
+  { icon: '👨‍👩‍👧', title: 'Family-Focused Design', desc: 'A07 / Q05 / Q07 designed for daily family use — spacious interiors, straightforward tech, low running cost.' },
+  { icon: '🌍', title: 'Emerging Market Fit', desc: 'Thailand, Uzbekistan and Philippines launches show the brand\'s real-world fit for price-sensitive, first-time NEV buyers.' },
+  { icon: '✅', title: 'Sourced Through Verified Channels', desc: 'We supply via established export trading channels with real delivery track records — every unit traceable to factory invoice.' },
 ];
 
 const markets = [
-  { code: 'UZ', name: 'Uzbekistan', stat: 'Entry NEV growing', img: '/images/vehicles/evautopro-deepal-s05-01.webp' },
-  { code: 'EG', name: 'Egypt', stat: 'CKD assembly potential', img: '/images/vehicles/evautopro-changan-cs55-plus-01.webp' },
-  { code: 'MX', name: 'Mexico', stat: 'Affordable EV segment', img: '/images/vehicles/evautopro-deepal-s05-01.webp' },
-  { code: 'BR', name: 'Brazil', stat: 'Budget NEV growth', img: '/images/vehicles/evautopro-jetour-t2-02.webp' },
+  { code: 'TH', name: 'Thailand', stat: 'Official retail, live since May 2026', img: '/images/vehicles/evautopro-nevo-q05-01.webp' },
+  { code: 'UZ', name: 'Uzbekistan', stat: 'Official retail, live', img: '/images/vehicles/evautopro-nevo-q05-appearance-01.webp' },
+  { code: 'PH', name: 'Philippines', stat: 'Official retail via Inchcape, 14 dealers', img: '/images/vehicles/evautopro-nevo-a07-01.webp' },
+  { code: 'KZ', name: 'Kazakhstan', stat: 'Trade-channel supply', img: '/images/vehicles/evautopro-nevo-a07-console-01.webp' },
 ];
 
 const cases = [
-  { headline: 'Authorized Qiyuan Export via Changan Group', client: 'EV Auto Pro', stars: 5, quote: 'Qiyuan is China\'s most affordable NEV brand. Q05 PHEV $14,500 FOB enables emerging-market dealers to offer entry-priced electrified vehicles.' },
-  { headline: 'CATL LFP Battery Reliability', client: 'Engineering Note', stars: 5, quote: 'Qiyuan uses CATL LFP cells — same chemistry as Tesla. Proven thermal stability + long cycle life = low warranty risk.' },
-  { headline: 'Open for Emerging Market Dealers', client: 'Partnership Invitation', stars: 5, quote: 'Best fit for emerging markets entering NEV adoption. Contact for first-mover dealer terms.' },
+  { headline: 'NEVO Q05: 3,000+ Orders in 2 Weeks, Thailand', client: 'Changan Thailand', stars: 5, quote: 'All-electric Q05 launched officially in Thailand May 2026 with CKD local assembly — a real, fast-moving launch, not a trade-show concept.' },
+  { headline: 'CATL LFP Battery Reliability', client: 'Engineering Note', stars: 5, quote: 'NEVO uses CATL LFP cells on Q05/Q07 — same chemistry as Tesla. Proven thermal stability + long cycle life.' },
+  { headline: 'Open for Emerging Market Dealers', client: 'Partnership Invitation', stars: 5, quote: 'Real launches in Thailand, Uzbekistan and the Philippines show where this brand is heading next. Contact us for current sourcing options.' },
 ];
 
 const brandFaqs = [
-  { q: 'Is Qiyuan really part of Changan Group?', a: 'Yes. Qiyuan (启源) is Changan Auto Group\'s affordable NEV sub-brand launched 2023. Same parent company as Deepal (深蓝). All under Changan central R&D + manufacturing.' },
-  { q: 'Why Qiyuan over Deepal or other Chinese NEV?', a: 'Price. Qiyuan Q05 PHEV starts $14,500 FOB. Deepal S05 BEV $19,200. Qiyuan is China\'s most affordable EREV/PHEV from a major brand — entry-level NEV access for emerging markets.' },
-  { q: 'Are Qiyuan vehicles export-ready?', a: 'Q05 / Q07 / A07 / A05 currently China-domestic focused with growing export. We negotiate factory batches with custom export configuration. Lead time 30-45 days for first orders.' },
-  { q: 'Battery quality at this price point?', a: 'CATL LFP cells (same supplier as Tesla / BMW / VW). Battery cell quality identical to premium NEV — Changan group bulk procurement keeps cost down.' },
-  { q: 'Qiyuan warranty + after-sales?', a: '5-year / 100,000 km vehicle. 8-year / 160,000 km battery + electric drivetrain. After-sales via Changan global network (Russia/UAE/LATAM partners).' },
-  { q: 'Best market for Qiyuan affordable NEV?', a: 'Emerging markets entering NEV adoption — Uzbekistan, Egypt, Mexico, Brazil price-sensitive entry segments. Also Africa CKD partners.' },
+  { q: 'Is "NEVO" the same as "Qiyuan"?', a: 'Yes — Changan Qiyuan (长安启源) is the China domestic brand name. NEVO is the name used everywhere the brand sells overseas: Changan\'s own global site, the Thailand launch, Wikipedia. Trade platforms often list both names together, e.g. "Qiyuan (NEVO)".' },
+  { q: 'Is NEVO officially exported, or China-domestic only?', a: 'Officially exported and on real retail sale: NEVO Q05 in Thailand (since May 2026) and Uzbekistan. NEVO A07 has real delivery records to Russia, Kyrgyzstan and Saudi Arabia. Q07 and A05 are not yet on official overseas retail but are available through established export trading channels.' },
+  { q: 'Is the Q05 sold everywhere the same car?', a: 'No — this is important. The Q05 sold in Thailand/Uzbekistan is an all-new electric platform (51.9 kWh battery, 462 km NEDC range). The Q05 sold in the Philippines is an older plug-in hybrid generation with different dimensions and a smaller battery. Confirm which generation you need before ordering.' },
+  { q: 'Battery quality at this price point?', a: 'CATL LFP cells on Q05 and Q07 — same supplier used by Tesla, BMW and VW for LFP packs.' },
+  { q: 'Warranty + after-sales?', a: 'Standard Changan-group NEV terms apply; confirm current warranty coverage with us at time of order, as this is a newly-exporting brand without a long overseas service track record yet.' },
+  { q: 'Best market for NEVO right now?', a: 'Thailand and Uzbekistan have official retail launches today. Philippines has a running dealer network (Inchcape, 14 locations). South Africa, Indonesia, Latin America and Europe are officially announced but not yet live (2026-2027 timelines).' },
 ];
 ---
 
 <BaseLayout
-  title="Qiyuan Auto Export | EV Auto Pro Authorized Dealer Since 2018"
-  description="Buy Qiyuan from authorized China exporter. UNI-T / UNI-K / CS75 Plus / CS55 Plus 8 models in stock. FOB from $10,500. MOQ 1. Ships to 60+ countries."
+  title="Changan NEVO (Qiyuan) Export | EV Auto Pro"
+  description="Buy Changan NEVO (启源/Qiyuan) from a China export trading partner. NEVO Q05 electric SUV, A07 sedan, Q07 PHEV SUV. Real launches in Thailand, Uzbekistan, Philippines. FOB from $15,999. MOQ 1."
 >
   {/* ============ 1. HERO 全屏大图 ============ */}
   <section class="relative bg-ink-900 overflow-hidden">
@@ -186,7 +186,7 @@ const brandFaqs = [
           <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
              class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
             <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src="/images/vehicles/evautopro-changan-uni-t-console-01.webp" alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+              <img src={['nevo-q05','nevo-a07'].includes(m.slug) ? `/images/vehicles/evautopro-${m.slug}-01.webp` : '/images/vehicles/evautopro-nevo-a07-console-01.webp'} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
@@ -200,8 +200,8 @@ const brandFaqs = [
                   <div class="text-lg font-bold text-ink-900">${m.price_min.toLocaleString()}</div>
                 </div>
                 <div class="text-right">
-                  <div class="text-xs text-ink-500">In stock</div>
-                  <div class="text-sm font-semibold text-ink-900">{m.stock} units</div>
+                  <div class="text-xs text-ink-500">{m.stock > 0 ? 'In stock' : 'Availability'}</div>
+                  <div class="text-sm font-semibold text-ink-900">{m.stock > 0 ? `${m.stock} units` : 'Made to Order'}</div>
                 </div>
               </div>
             </div>
