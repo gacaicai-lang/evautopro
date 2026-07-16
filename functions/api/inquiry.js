@@ -131,19 +131,22 @@ export async function onRequestPost(context) {
   // ---- 3. 邮件通知（用 Resend，可选） ----
   if (env.RESEND_API_KEY) {
     try {
-      await fetch('https://api.resend.com/emails', {
+      const resendResp = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${env.RESEND_API_KEY}`,
           'content-type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'EV Auto Pro <inquiry@evautopro.com>',
+          from: 'EV Auto Pro <onboarding@resend.dev>',
           to: ['gacaicai@gmail.com'],
           subject: `🚗 新询盘 · ${data.name || ''} from ${enriched.country}`,
           html: Object.entries(data).map(([k, v]) => `<p><b>${k}</b>: ${v}</p>`).join(''),
         }),
       });
+      if (!resendResp.ok) {
+        console.error('Resend rejected the email:', resendResp.status, await resendResp.text());
+      }
     } catch (e) {
       console.error('Email failed:', e);
     }
