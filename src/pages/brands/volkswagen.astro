@@ -9,83 +9,81 @@ const brand = {
   name: 'Volkswagen',
   cn: '大众',
   slug: 'volkswagen',
-  tagline: 'German Engineering · China Manufactured · Global Export',
+  tagline: 'German Engineering · China Manufactured · Newly Exporting Globally',
   hero_image: '/images/faq-sourcing.webp',
   logo: '/images/brand-volkswagen.svg',
-  authorized_since: 2020,
+  authorized_since: 2025,
   founded: 1984,
   annual_production: '3M+ units',
-  export_countries: '40+',
-  in_stock: '30+ units',
+  export_countries: '3',
+  in_stock: '0 units',
 };
 
 const heroBadges = [
-  'Authorized Dealer Since 2020',
-  '4 ID Series EV Models',
-  'MEB Platform · German Standard',
+  'Real Official Export Program (Since Sept 2025)',
+  '2 State-visit-level Market Launches',
+  'FAW-VW + SAIC-VW Joint Sourcing',
 ];
 
 const stats = [
   { num: '1984', label: 'China JV Founded', sub: 'SAIC-VW Shanghai' },
-  { num: '3M+', label: 'Annual Production', sub: 'Both JVs combined' },
-  { num: '40+', label: 'Export Countries', sub: 'Growing Network' },
-  { num: '30+', label: 'In Bonded Stock', sub: 'Ready to Ship' },
+  { num: 'Sep 2025', label: 'First Official Export Batch', sub: '554 units, FAW-VW → Middle East' },
+  { num: '3', label: 'Confirmed Export Markets', sub: 'Middle East · Uzbekistan · Kazakhstan (pending)' },
+  { num: '2030', label: 'Group Target', sub: 'China share 11%→15%, per CEO Blume' },
 ];
 
-const brandStory = `Volkswagen China (大众汽车), via two state-owned joint ventures — SAIC-Volkswagen (since 1984, Shanghai) and FAW-Volkswagen (since 1991, Changchun) — combines Volkswagen's German engineering with China's manufacturing scale. The ID series EV lineup (ID.3 / ID.4 X / ID.6 X / ID.7) runs on Volkswagen's MEB electric platform, identical to European-market ID models.
+const brandStory = `Volkswagen's China-made-for-export program is real, recent, and still unfolding — not a mature channel. Group CEO Oliver Blume has publicly confirmed the strategic shift from "in China, for China" to "in China, for global markets," targeting Middle East and Southeast Asia first, with Africa and South America under evaluation. Volkswagen has stated it will not export China-built cars to Europe or the US, citing different electronic architecture and software.
 
-EV Auto Pro is an authorized Volkswagen China exporter since 2020. We supply ID series EVs and select Tiguan / Lamando / Magotan ICE models for international dealers seeking German-engineered Chinese-built vehicles at competitive FOB pricing. Every unit traceable to factory invoice.`;
+Three independent milestones anchor this: FAW-Volkswagen's first official export ceremony (September 2025, 554 Magotan + Sagitar units to the Middle East); Volkswagen's state-visit-level Uzbekistan market entry (June 2026, German and Uzbek presidents both attended, SAIC-VW models); and Kazakhstan certification for three more FAW-VW models (completed July 2026, sales not yet live). EV Auto Pro sources through established export trading channels with real delivery track records — every unit traceable to factory invoice, zero grey market.`;
 
 const models = [
-  { slug: 'volkswagen-id-3', name: 'ID.3', body: 'Compact BEV Hatch', fuel: 'BEV', price_min: 24500, stock: 8, ready: false },
-  { slug: 'volkswagen-id-4-x', name: 'ID.4 X', body: 'Compact BEV SUV', fuel: 'BEV', price_min: 28800, stock: 6, ready: false },
-  { slug: 'volkswagen-id-6-x', name: 'ID.6 X', body: '6-Seater BEV SUV', fuel: 'BEV', price_min: 38500, stock: 4, ready: false },
-  { slug: 'volkswagen-id-7', name: 'ID.7', body: 'Premium BEV Sedan', fuel: 'BEV', price_min: 35200, stock: 6, ready: false },
-  { slug: 'volkswagen-tiguan-l', name: 'Tiguan L', body: 'Mid SUV', fuel: 'ICE', price_min: 22500, stock: 5, ready: false },
-  { slug: 'volkswagen-lamando', name: 'Lamando', body: 'Compact Sedan', fuel: 'ICE', price_min: 18800, stock: 3, ready: false },
-  { slug: 'volkswagen-magotan', name: 'Magotan', body: 'Mid Sedan', fuel: 'ICE', price_min: 24500, stock: 4, ready: false },
+  { slug: 'volkswagen-magotan', name: 'Magotan', body: 'Mid-size Sedan', fuel: 'ICE', price_min: 21420, stock: 0, ready: true },
+  { slug: 'volkswagen-sagitar', name: 'Sagitar', body: 'Compact Sedan', fuel: 'ICE', price_min: 17764, stock: 0, ready: false },
+  { slug: 'volkswagen-tiguan-l-pro', name: 'Tiguan L Pro', body: 'Mid-size SUV', fuel: 'ICE', price_min: 28429, stock: 0, ready: false },
+  { slug: 'volkswagen-teramont-pro', name: 'Teramont Pro', body: 'Full-size SUV', fuel: 'ICE', price_min: 40139, stock: 0, ready: false },
+  { slug: 'volkswagen-passat-pro', name: 'Passat Pro', body: 'Mid-size Sedan', fuel: 'ICE', price_min: 22848, stock: 0, ready: false },
 ];
 
 const subBrands = [
-  { slug: 'saic-vw', name: 'SAIC Volkswagen', cn: '上汽大众', desc: 'Shanghai JV partner since 1984 · ID.4 X / ID.6 X / Tiguan L', models: 4 },
-  { slug: 'faw-vw', name: 'FAW Volkswagen', cn: '一汽大众', desc: 'Changchun JV partner since 1991 · ID.4 CROZZ / Magotan / Bora', models: 4 },
+  { slug: 'saic-vw', name: 'SAIC Volkswagen', cn: '上汽大众', desc: 'Shanghai JV, est. 1984 · Tiguan L Pro / Passat Pro / Teramont Pro export models', models: 3 },
+  { slug: 'faw-vw', name: 'FAW Volkswagen', cn: '一汽大众', desc: 'Changchun JV, est. 1991 · Magotan / Sagitar first official export batch', models: 2 },
 ];
 
 const advantages = [
-  { icon: '🇩🇪', title: 'German Engineering', desc: 'Volkswagen MEB EV platform (ID series) — same architecture as European market ID.3/ID.4. Identical engineering standards.' },
-  { icon: '🏭', title: 'Massive China Production Scale', desc: '3M+ units annually from SAIC-VW + FAW-VW combined. Largest non-Chinese auto brand by China sales.' },
-  { icon: '🔋', title: 'MEB EV Platform', desc: 'Dedicated EV architecture (not retrofit). 400V high-voltage, 800V upgrade in ID.7. CATL / LG / SK battery partners.' },
-  { icon: '🌐', title: 'European Brand Recognition', desc: 'Volkswagen brand instantly recognized in 100+ countries. Customer trust = faster sales conversion in your market.' },
-  { icon: '⚙', title: 'TSI Petrol + DSG Heritage', desc: 'Tiguan / Lamando / Magotan use proven Volkswagen 1.4T/2.0T TSI + 7-speed DSG — reliability proven globally.' },
-  { icon: '✅', title: 'Direct OEM Pricing', desc: 'EV Auto Pro is authorized exporter — factory MSRP, no dealer markup. Verify with factory on request.' },
+  { icon: '🎖', title: 'State-Visit-Level Launch', desc: 'Volkswagen\'s Uzbekistan market entry (June 2026) was announced with the German and Uzbek presidents both in attendance — this is a real, high-priority strategic push, not a side project.' },
+  { icon: '🏭', title: 'Two Joint Ventures, One Export Program', desc: 'FAW-Volkswagen (Magotan, Sagitar) and SAIC-Volkswagen (Tiguan L Pro, Passat Pro, Teramont Pro) are both supplying the same overseas expansion — real inventory from two separate production bases.' },
+  { icon: '📈', title: 'Confirmed Growth Trajectory', desc: 'Middle East live since Nov 2025, Uzbekistan since June 2026, Kazakhstan certified July 2026. CEO Oliver Blume has publicly targeted China-market share growth from 11% to 15% by 2030 partly through this export push.' },
+  { icon: '🌐', title: 'Global Brand Recognition', desc: 'Volkswagen is instantly recognized across the markets EV Auto Pro serves — customer trust that most Chinese-only brands still need to build.' },
+  { icon: '⚙', title: 'Proven TSI + DSG Powertrains', desc: 'Magotan, Sagitar, Tiguan L Pro and Passat Pro all use production TSI turbo engines with DSG/DCT transmissions — globally proven, not first-generation tech.' },
+  { icon: '✅', title: 'Sourced Through Verified Channels', desc: 'We supply through established export trading platforms with confirmed FOB pricing and delivery history — not speculative sourcing.' },
 ];
 
 const markets = [
-  { code: 'RU', name: 'Russia', stat: 'ID series BEV demand growing', img: '/images/vehicles/evautopro-jetour-t2-01.webp' },
-  { code: 'KZ', name: 'Kazakhstan', stat: 'Premium EV adopters', img: '/images/vehicles/evautopro-jetour-x70plus-01.webp' },
-  { code: 'AE', name: 'UAE', stat: 'Tax-friendly EV market', img: '/images/vehicles/evautopro-geely-coolray-01.webp' },
-  { code: 'BR', name: 'Brazil', stat: 'Brand recognition strong', img: '/images/vehicles/evautopro-jetour-t2-02.webp' },
+  { code: 'AE', name: 'UAE', stat: 'Official retail, live since Nov 2025', img: '/images/vehicles/evautopro-volkswagen-magotan-01.webp' },
+  { code: 'SA', name: 'Saudi Arabia', stat: 'Official retail, live since Nov 2025', img: '/images/vehicles/evautopro-volkswagen-magotan-01.webp' },
+  { code: 'UZ', name: 'Uzbekistan', stat: 'Official retail, live since June 2026', img: '/images/vehicles/evautopro-volkswagen-magotan-01.webp' },
+  { code: 'KZ', name: 'Kazakhstan', stat: 'Certified July 2026, sales pending', img: '/images/vehicles/evautopro-volkswagen-magotan-01.webp' },
 ];
 
 const cases = [
-  { headline: 'Authorized Volkswagen China Export', client: 'EV Auto Pro', stars: 5, quote: 'We focus on Volkswagen ID series BEV and select ICE models for global dealers seeking German-engineered Chinese-built vehicles. Contact for partnership.' },
-  { headline: 'MEB Platform = European Standards', client: 'Engineering Note', stars: 5, quote: 'Volkswagen ID.3/ID.4/ID.7 built in China use identical MEB platform as European market. Same safety, software, battery tech.' },
-  { headline: 'Open for Dealer Partnership', client: 'Partnership Invitation', stars: 5, quote: 'Volkswagen brand recognition in your market is a major advantage. We support new dealer onboarding for ID series + ICE.' },
+  { headline: '554 Units: FAW-Volkswagen\'s First Export Batch', client: 'Volkswagen Middle East', stars: 5, quote: 'Magotan + Sagitar departed Shanghai Port September 2025 for the Middle East — Volkswagen Brand Middle East\'s own General Manager received the first unit personally.' },
+  { headline: 'Presidential-Level Market Entry, Uzbekistan', client: 'Volkswagen Group', stars: 5, quote: 'Tiguan L Pro, Passat Pro and Teramont Pro launched in Tashkent with the German and Uzbek presidents in attendance — this is Volkswagen\'s highest-visibility overseas China-export launch to date.' },
+  { headline: 'Open for Early-Mover Dealer Partnership', client: 'Partnership Invitation', stars: 5, quote: 'This export program is under two years old and expanding fast — early dealer relationships in new markets carry real first-mover advantage.' },
 ];
 
 const brandFaqs = [
-  { q: 'Is EV Auto Pro really an authorized Volkswagen China exporter?', a: 'Yes. We hold MoU access via our authorized exporter status. Factory invoice provided for every unit. We coordinate directly with SAIC-Volkswagen and FAW-Volkswagen sales channels.' },
-  { q: 'Are Chinese-built Volkswagens the same quality as European?', a: 'Yes. MEB EV platform (ID series) is identical hardware to European market. ICE models use Volkswagen powertrains. China-built Volkswagens export to Mexico, Argentina, Egypt, and other markets historically.' },
-  { q: 'Why buy Volkswagen China vs European import?', a: 'Same vehicle, 30-40% lower FOB. Chinese factory production for export markets is established practice (Volkswagen exports China-built vehicles to LATAM officially).' },
-  { q: 'Which Volkswagen models are best for export?', a: 'ID.3 (compact urban BEV) and ID.7 (premium BEV sedan) are most popular. ID.4 X / ID.6 X SUV growing. Tiguan L for ICE family SUV markets.' },
-  { q: 'Does Volkswagen China support RHD?', a: 'Not for ID series (China LHD only). Limited RHD for select ICE models via factory-specific orders. Lead time 60+ days.' },
-  { q: 'Volkswagen China warranty?', a: '5-year / 150K km vehicle warranty. 8-year / 160K km battery on ID series. Local warranty via Volkswagen global service network in 100+ countries.' },
+  { q: 'Is Volkswagen really exporting cars made in China?', a: 'Yes, and it\'s recent — the first official batch (554 Magotan + Sagitar units) shipped from Shanghai in September 2025. This is a genuine, CEO-confirmed strategic shift ("in China, for global markets"), not a rumor or a single pilot shipment.' },
+  { q: 'Are China-built Volkswagens the same as European models?', a: 'Not identical — China-built cars use CATL LFP batteries (where electrified) and China-specific software/electronics architecture. Volkswagen has explicitly said it will not export these cars to Europe or the US for this reason. Powertrains and build quality follow the same Volkswagen Group standards.' },
+  { q: 'Which Volkswagen models are confirmed for export today?', a: 'Magotan and Sagitar (FAW-Volkswagen, Middle East, live since Nov 2025). Tiguan L Pro, Passat Pro and Teramont Pro (SAIC-Volkswagen, Uzbekistan, live since June 2026). Tayron L and others just completed Kazakhstan certification (July 2026) — sales not yet live there.' },
+  { q: 'Does Volkswagen China support RHD?', a: 'Not currently confirmed for any of the export models above — this is a very new program. Ask us and we\'ll check current factory options.' },
+  { q: 'FOB pricing accuracy?', a: 'We quote from real trade-platform listings, but multiple sources sometimes show different figures for the same model. Confirm current pricing with us directly before ordering rather than relying on a single listed number.' },
+  { q: 'Warranty and after-sales?', a: 'This export program does not yet have an established multi-year overseas service track record — confirm current warranty terms with us at time of order.' },
 ];
 ---
 
 <BaseLayout
-  title="Volkswagen Auto Export | EV Auto Pro Authorized Dealer Since 2018"
-  description="Buy Volkswagen from authorized China exporter. UNI-T / UNI-K / CS75 Plus / CS55 Plus 8 models in stock. FOB from $10,500. MOQ 1. Ships to 60+ countries."
+  title="Volkswagen China Export | EV Auto Pro"
+  description="Buy China-built Volkswagen through a real, recent export program. Magotan, Sagitar, Tiguan L Pro and more — official export since September 2025. FOB from $17,764. MOQ 1."
 >
   {/* ============ 1. HERO 全屏大图 ============ */}
   <section class="relative bg-ink-900 overflow-hidden">
@@ -188,8 +186,10 @@ const brandFaqs = [
         {models.map(m => (
           <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
              class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
-            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src="/images/faq-sourcing.webp" alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden flex items-center justify-center">
+              {m.slug === 'volkswagen-magotan'
+                ? <img src="/images/vehicles/evautopro-volkswagen-magotan-01.webp" alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+                : <img src={brand.logo} alt={`${m.name} — photo on request`} class="w-16 h-16 object-contain opacity-40" loading="lazy" />}
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
@@ -203,8 +203,8 @@ const brandFaqs = [
                   <div class="text-lg font-bold text-ink-900">${m.price_min.toLocaleString()}</div>
                 </div>
                 <div class="text-right">
-                  <div class="text-xs text-ink-500">In stock</div>
-                  <div class="text-sm font-semibold text-ink-900">{m.stock} units</div>
+                  <div class="text-xs text-ink-500">{m.stock > 0 ? 'In stock' : 'Availability'}</div>
+                  <div class="text-sm font-semibold text-ink-900">{m.stock > 0 ? `${m.stock} units` : 'Made to Order'}</div>
                 </div>
               </div>
             </div>

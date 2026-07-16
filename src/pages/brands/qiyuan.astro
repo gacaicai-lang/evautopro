@@ -185,8 +185,10 @@ const brandFaqs = [
         {models.map(m => (
           <a href={m.ready ? `/cars/${m.slug}/` : '/contact/quote/?model=' + m.slug}
              class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
-            <div class="aspect-[16/10] bg-ink-100 overflow-hidden">
-              <img src={['nevo-q05','nevo-a07'].includes(m.slug) ? `/images/vehicles/evautopro-${m.slug}-01.webp` : '/images/vehicles/evautopro-nevo-a07-console-01.webp'} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+            <div class="aspect-[16/10] bg-ink-100 overflow-hidden flex items-center justify-center">
+              {['nevo-q05','nevo-a07'].includes(m.slug)
+                ? <img src={`/images/vehicles/evautopro-${m.slug}-01.webp`} alt={m.name} class="w-full h-full object-cover" loading="lazy" />
+                : <img src={brand.logo} alt={`${m.name} — photo on request`} class="w-16 h-16 object-contain opacity-40" loading="lazy" />}
             </div>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">

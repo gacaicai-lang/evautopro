@@ -616,6 +616,47 @@ export const cars: Record<string, Car> = {
   // verified this session (browser tool couldn't reach candidate sources).
   // Kept as a ready:false quote-form entry in brands/qiyuan.astro until a
   // real image is sourced — do not re-add here with a substitute photo.
+
+  'volkswagen-magotan': {
+    brand: 'Volkswagen', brand_cn: '大众', brand_slug: 'volkswagen',
+    model: 'Magotan', slug: 'volkswagen-magotan', year: 2025,
+    subtitle: 'Mid-size Sedan · FAW-Volkswagen · China\'s First Official VW Export Model · 迈腾',
+    body_type: 'Mid-size Sedan', fuel_type: 'ICE', drive: 'FWD', seats: 5,
+    hero_image: '/images/vehicles/evautopro-volkswagen-magotan-01.webp',
+    pricing: { fob_min: 21420, fob_max: 28736,
+      cif: [
+        { country: 'UAE (Jebel Ali)', min: 23200, max: 31100 },
+        { country: 'Saudi Arabia (Jeddah)', min: 23600, max: 31600 }] },
+    specs: { motor_ps: 150, motor_kw: 110, torque_nm: 250, top_speed: 210, accel: 9.4, dimensions: '4866×1832×1479', wheelbase: 2871, weight: 1452, tires: '215/55 R17', transmission: '7-Speed DCT' },
+    features: {
+      exterior: ['Polygonal Grille w/ Chrome Strips + Blackened LED Headlights', 'Full-width Smoked LED Taillights w/ Chrome Trim', '18" Semi-closed Alloy Wheels (Luxury trim)', 'Panoramic Sunroof'],
+      interior: ['Triple-screen Cockpit: 10.25" Digital Instrument + 15" 2K Floating Display + 11.6" Co-pilot Screen (top trim)', 'Qualcomm Snapdragon 8155, 5G + AR Real-scene Navigation', 'Head-Up Display + Electronic Gear Shifter', '12-Way Power-Adjustable Microfiber Leather Seats'],
+      safety: ['DJI-developed L2+ Assisted Driving (Adaptive Cruise, Lane Keep, Lane Change Assist)', 'Front + Rear Parking Radar with Reverse Camera', 'Auto Hold Hill-start Assist', 'Electronic Parking Brake + Ventilated Front Discs'],
+    },
+    stock_status: 'Made to Order', stock_units: 0, lead_time_days: 30, moq: 1,
+    supported_markets: ['UAE', 'Saudi Arabia', 'Kazakhstan'],
+    shipping_methods: ['RoRo', 'Container'],
+    certifications: ['GCC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
+    faqs: [
+      { q: 'Is the Magotan a genuine official Volkswagen export model?', a: 'Yes — it\'s the flagship model of FAW-Volkswagen\'s first-ever official export program. 554 Magotan + Sagitar units departed Shanghai Port in September 2025 for the Middle East, with Volkswagen Brand Middle East\'s own General Manager receiving the first unit at the handover ceremony.' },
+      { q: 'Is "Magotan" the same car as the Kazakhstan-market "Passat"?', a: 'Yes for the Kazakhstan case specifically — FAW-Volkswagen\'s Magotan will be rebadged "Passat" for the Kazakhstan market (certified July 2026). This is different from SAIC-Volkswagen\'s own separate "Passat Pro" model sold in China and Uzbekistan — same name, two different cars from two different joint ventures.' },
+      { q: 'What powertrain options are available?', a: '1.4T (150 hp / 110 kW / 250 N·m, dry 7-speed DCT) on Comfort/Luxury trims, or 2.0T (186 hp / 137 kW / 320 N·m, wet 7-speed DCT) on the top Luxury trim.' },
+      { q: 'Which markets can this ship to today?', a: 'Middle East (UAE/Saudi Arabia) has been live since November 2025. Kazakhstan just completed certification (July 2026) — sales expected H2 2026 via distributor Orbis Auto/Mercur Autos.' },
+      { q: 'MOQ and lead time?', a: 'Made to order — this is a newly catalogued model for our export program. MOQ 1 unit, ~30-day lead time. Contact us for current factory allocation.' },
+    ],
+    gallery: {
+      appearance: [
+        galleryItem('/images/vehicles/evautopro-volkswagen-magotan-01.webp', 'Volkswagen Magotan studio 3/4 view, black'),
+      ],
+    },
+  },
+
+  // Volkswagen Sagitar and Tiguan L Pro: research complete (specs/pricing/
+  // FAQs sourced — see volkswagen-真实阵容研究-2026-07-16.md §5, §6) but
+  // no real photo verified this session (image-source fetches timed out
+  // repeatedly). Kept as ready:false quote-form entries in
+  // brands/volkswagen.astro pending real images — do not add here with a
+  // substitute photo.
 };
 
 export const carSlugs = Object.keys(cars);
