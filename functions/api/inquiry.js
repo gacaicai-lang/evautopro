@@ -2,6 +2,27 @@
 // POST /api/inquiry
 // 部署后：表单 submit → 触发飞书 webhook + 写飞书 base + 邮件给彩老板
 
+// The notification email's envelope (from/to) never reflects who actually
+// submitted the form — it's always onboarding@resend.dev -> gacaicai@gmail.com.
+// The only place the visitor's real address shows up is the plain-text
+// `email` field they typed, which could be a typo or fake. An MX lookup on
+// that domain is a cheap, real signal: no MX record means mail to that
+// address will bounce no matter what, so it's worth flagging inline.
+async function checkEmailDomain(email) {
+  const domain = String(email || '').split('@')[1];
+  if (!domain) return { checked: false, valid: false, domain: null };
+  try {
+    const resp = await fetch(`https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=MX`, {
+      headers: { accept: 'application/dns-json' },
+    });
+    const json = await resp.json();
+    const valid = Array.isArray(json.Answer) && json.Answer.length > 0;
+    return { checked: true, valid, domain };
+  } catch (e) {
+    return { checked: false, valid: false, domain };
+  }
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
 
@@ -36,6 +57,9 @@ export async function onRequestPost(context) {
     });
   }
 
+  const emailCheck = hasEmail ? await checkEmailDomain(data.email) : { checked: false, valid: false, domain: null };
+  const emailLooksFake = hasEmail && emailCheck.checked && !emailCheck.valid;
+
   // Enrich with meta
   const enriched = {
     ...data,
@@ -44,6 +68,7 @@ export async function onRequestPost(context) {
     country: request.headers.get('cf-ipcountry') || 'unknown',
     ua: request.headers.get('user-agent') || 'unknown',
     referer: request.headers.get('referer') || '',
+    email_domain_has_mx: emailCheck.checked ? emailCheck.valid : null,
   };
 
   // ---- 0. KV backup (INQUIRIES binding) — every lead is stored even when
@@ -140,8 +165,13 @@ export async function onRequestPost(context) {
         body: JSON.stringify({
           from: 'EV Auto Pro <onboarding@resend.dev>',
           to: ['gacaicai@gmail.com'],
-          subject: `🚗 新询盘 · ${data.name || ''} from ${enriched.country}`,
-          html: Object.entries(data).map(([k, v]) => `<p><b>${k}</b>: ${v}</p>`).join(''),
+          ...(hasEmail ? { reply_to: data.email } : {}),
+          subject: `${emailLooksFake ? '⚠️ [邮箱可能无效] ' : ''}🚗 新询盘 · ${data.name || ''} from ${enriched.country}`,
+          html:
+            (emailLooksFake
+              ? `<p style="color:#b91c1c;font-weight:bold;">⚠️ ${data.email} 的域名 "${emailCheck.domain}" 查不到MX记录，这个邮箱大概率是假的/打错的，回信前先跟WhatsApp核实一下</p>`
+              : '') +
+            Object.entries(data).map(([k, v]) => `<p><b>${k}</b>: ${v}</p>`).join(''),
         }),
       });
       if (!resendResp.ok) {
