@@ -171,7 +171,9 @@ export async function onRequestPost(context) {
             (emailLooksFake
               ? `<p style="color:#b91c1c;font-weight:bold;">⚠️ ${data.email} 的域名 "${emailCheck.domain}" 查不到MX记录，这个邮箱大概率是假的/打错的，回信前先跟WhatsApp核实一下</p>`
               : '') +
-            Object.entries(data).map(([k, v]) => `<p><b>${k}</b>: ${v}</p>`).join(''),
+            Object.entries(data).map(([k, v]) => `<p><b>${k}</b>: ${v}</p>`).join('') +
+            `<hr/><p style="color:#6b7280;font-size:12px;">来源页: ${enriched.referer || '(direct / no referrer)'}<br/>` +
+            `国家(IP定位): ${enriched.country}<br/>IP: ${enriched.ip}<br/>时间: ${enriched.ts}</p>`,
         }),
       });
       if (!resendResp.ok) {
