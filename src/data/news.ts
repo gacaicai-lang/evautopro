@@ -2793,9 +2793,13 @@ The upside is on emissions, not fuel economy: E85 combustion produces roughly **
 
 As of 2022, roughly **20.9 million flex-fuel vehicles** were on US roads, but the segment is narrowing: currently only Ford and General Motors produce new flex-fuel models. Vehicles built before 2008 generally cannot safely run high-ethanol blends at all — check your owner's manual before fueling with anything above E15.
 
+![Geely Coolray exterior, front three-quarter studio shot](/images/vehicles/evautopro-geely-coolray-appearance-02.webp)
+
 ## Where Flex-Fuel Actually Matters: Export Markets, Not US Tax Returns
 
 Flex-fuel technology matters more as a **market-entry requirement** than a US tax strategy. Brazil is the clearest example: it mandates ethanol-compatible (E25) engines for passenger vehicles sold there, independent of any tax-credit question — it's a fuel-market reality (Brazil blends ethanol into its gasoline supply nationwide), not an optional feature. The [Geely Coolray](/cars/geely-coolray/) in EV Auto Pro's export catalog is built with an E25 flex-fuel-compatible engine specifically to meet this requirement, alongside INMETRO certification for the Brazilian market.
+
+![Geely Coolray interior console and dashboard, the same export-spec model referenced above](/images/vehicles/evautopro-geely-coolray-console-01.webp)
 
 If you're a dealer or importer sourcing flex-fuel-compatible vehicles for Brazil or another ethanol-blend market — rather than a US individual weighing a purchase against your own tax return — that's a question EV Auto Pro can actually help with.
 
