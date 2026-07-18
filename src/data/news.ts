@@ -135,7 +135,7 @@ Send the target model, quantity, destination city and preferred port. We will re
       { q: 'Are right-hand-drive cars allowed for Saudi registration?', a: 'Saudi Arabia is a left-hand-drive market, and ZATCA prohibits importing vehicles whose steering has been converted from right to left. Order a factory left-hand-drive specification and confirm Saudi conformity before shipment.' },
       { q: 'Which Chinese powertrain is practical for Saudi Arabia?', a: 'BEVs can suit buyers with dependable home or workplace charging in major cities. For long intercity driving and uneven charging access, EREV or PHEV models such as Deepal S07/S09 or Jetour T2 provide fuel backup, subject to VIN-level Saudi certification.' },
     ],
-    related: ['chinese-car-dealers-uae-vs-direct-import-2026', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'how-to-verify-a-chinese-car-exporter-before-you-pay'],
+    related: ['jetour-x90-plus-import-guide-2026', 'chinese-car-dealers-uae-vs-direct-import-2026', 'how-to-verify-a-chinese-car-exporter-before-you-pay'],
   },
 
   '2026-china-nev-export-rules-guide': {
@@ -182,7 +182,7 @@ For dealers importing Chinese vehicles, 2026 brings stronger guarantees:
 
 ## How EV Auto Pro Complies
 
-We supply vehicles across our active export catalog — [Jetour, Changan NEVO, Volkswagen and more](/cars/) — with pre-shipment photo/video inspection on every order and full export documentation. Ask us for our current MOFCOM export licence number and destination-market certifications (EAC / GCC / INMETRO) for your specific model before ordering — don't take a general claim on this page as a substitute for checking the actual document.
+We supply vehicles across our active export catalog — [Jetour, Changan NEVO, Volkswagen and more](/cars/) — with pre-shipment photo/video inspection on every order and full export documentation. Before ordering, ask us to walk you through the export licensing and destination-market certifications (EAC / GCC / INMETRO) that apply to your specific model and route — don't take any general claim on any supplier's page, including this one, as a substitute for seeing the actual documents.
 
 ## What's Next: 2027 Outlook
 
@@ -363,7 +363,7 @@ We handle EAC certification and can quote all six models above from our active e
       { q: 'Cheapest reliable Chinese SUV for Russia?', a: 'Changan CS55 Plus ($14,500 FOB). Best-seller globally + Russia, strongest parts availability.' },
       { q: 'Premium Chinese SUV for Moscow?', a: 'Deepal S09 EREV ($36,500). Competes with German premium. Triple Snapdragon 8295 screens + Meridian audio + air suspension.' },
     ],
-    related: ['changan-uni-t-vs-jetour-t2-comparison', '2026-china-nev-export-rules-guide'],
+    related: ['jetour-x90-plus-import-guide-2026', 'changan-uni-t-vs-jetour-t2-comparison', '2026-china-nev-export-rules-guide'],
   },
 
 
@@ -588,7 +588,7 @@ For off-road niche: **ShanHai T1** ($25,800). Boxy retro styling popular in 2026
     faqs: [
       { q: 'Jetour vs Chery — same?', a: 'Jetour is Chery Group sub-brand (since 2018). Separate brand, separate dealer network. Sharing engines + R&D.' },
       { q: 'Best-selling Jetour?', a: 'X70 Plus globally. T2 PHEV in Central Asia + Russia specifically.' },
-    ], related: ['changan-uni-t-vs-jetour-t2-comparison', 'jetour-t2-vs-geely-coolray-africa'],
+    ], related: ['jetour-x90-plus-import-guide-2026', 'jetour-dashing-vs-x50-entry-level-comparison', 'jetour-t1-vs-t1-idm-ice-or-phev'],
   },
 
   'can-you-drive-phev-without-charging': {
@@ -915,7 +915,7 @@ Guessing wrong on powertrain is expensive — a container of the wrong technolog
       { q: 'What is the real-world range difference between EREV and PHEV?', a: 'PHEVs typically carry a smaller battery (15-35 kWh) with 30-50 km of pure electric range before the engine mechanically takes over. EREVs carry a similar-or-larger battery but the engine never mechanically drives the wheels — it only generates electricity — which usually gives a longer pure-electric range (150-215 km CLTC on our current models) with the combustion engine purely as a range extender rather than the primary driver.' },
       { q: 'Which EV Auto Pro models are ready stock in each powertrain category?', a: 'BEV: Deepal S05. PHEV: Jetour T2. EREV: Deepal S07 and Deepal S09. ICE: Changan UNI-T, Changan CS55 Plus, Geely Coolray, Geely Atlas. We do not currently hold HEV in ready stock but can source on request.' },
     ],
-    related: ['can-you-drive-phev-without-charging', 'deepal-s07-alternatives', 'changan-uni-t-vs-jetour-t2-comparison'],
+    related: ['jetour-t1-vs-t1-idm-ice-or-phev', 'nevo-a07-buying-guide-bev-vs-erev', 'can-you-drive-phev-without-charging'],
   },
 
   'import-cars-from-china-to-kazakhstan-2026': {
@@ -1025,7 +1025,7 @@ Kazakhstan's rules have already changed twice in the last year — the quota clo
       { q: 'What is the cheapest way to ship a car from China to Kazakhstan?', a: 'For Central Asia the block train via the Khorgos border to Almaty or Aktau is usually the most economical option and avoids sea freight. Truck and container are also available. We quote the current lane rate with your order.' },
       { q: 'Which Chinese models are best for Kazakhstan?', a: 'It depends on climate and charging access — EREV and ICE models handle cold winters and thin charging networks well, while BEVs suit the major cities. Ask us for a stock list matched to your region and we\'ll include landed-cost math.' },
     ],
-    related: ['bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'geely-coolray-export-deep-dive', 'guide-to-sourcing-chinese-auto-parts'],
+    related: ['volkswagen-china-export-program-explained', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'geely-coolray-export-deep-dive'],
   },
 
   'import-cars-from-china-to-russia-2026-recycling-fee': {
@@ -1640,7 +1640,7 @@ The [Geely Atlas](/cars/geely-atlas/) and [Geely Coolray](/cars/geely-coolray/) 
 | Buyer | Better route | Not ideal for |
 | --- | --- | --- |
 | Georgian retail dealer | Import and local registration | RHD/converted vehicles |
-| Armenia/Azerbaijan trader | Time-controlled re-export | Stock without confirmed onward buyer |
+| [Armenia](/news/import-cars-from-china-to-armenia-2026/)/Azerbaijan trader | Time-controlled re-export | Stock without confirmed onward buyer |
 | Central Asia buyer | Compare Georgia hub vs direct rail | Extra handling that exceeds direct-route saving |
 
 ## Documents
@@ -1664,7 +1664,7 @@ Add both sets of handling, storage and border costs. Georgia wins when consolida
       { q: 'Are imported cars tax-free in Georgia?', a: 'No. Import duty, excise and fees are calculated under Georgian rules. A qualifying 180-day re-export can refund paid import duty and excise, but other costs require separate treatment.' },
       { q: 'Can right-hand-drive cars register in Georgia?', a: 'Right-hand-drive and converted-steering cars face multiplied excise treatment. Confirm registration eligibility separately; factory LHD is the safer choice for Georgian retail.' },
       { q: 'Is Georgia cheaper than direct shipping to Central Asia?', a: 'Only when consolidation or onward-market access offsets the extra port, storage and customs stage. Compare both routes on total delivered cost and time.' },
-    ], related: ['import-cars-from-china-to-russia-2026-recycling-fee', 'import-cars-from-china-to-kazakhstan-2026', 'roro-vs-container-shipping-cars-from-china'],
+    ], related: ['import-cars-from-china-to-armenia-2026', 'import-cars-from-china-to-russia-2026-recycling-fee', 'import-cars-from-china-to-kazakhstan-2026'],
   },
 
   'roro-vs-container-shipping-cars-from-china': {
@@ -1995,7 +1995,7 @@ If you're evaluating the Changan NEVO lineup for your market, we can walk you th
       { q: 'Where can I actually buy a NEVO today?', a: 'The NEVO Q05 launched in Thailand in May 2026 (CKD-assembled) and is sold in Uzbekistan. The NEVO A07 has confirmed real delivery records to Russia, Kyrgyzstan, and Saudi Arabia through established export channels. Ask us directly if your market isn\'t on this list.' },
       { q: 'Is the A07 EREV the same as a regular hybrid?', a: 'Not exactly. The NEVO A07 EREV pairs a 200kW/268PS motor with a 1.5L range-extender engine and a 35.1kWh battery. It drives as a pure EV for 310km on battery alone; after that, the engine generates electricity for the motor rather than driving the wheels directly, extending total combined range to 1,570km.' },
       { q: 'How much does a NEVO cost FOB?', a: 'NEVO Q05 is quoted FOB $18,500–21,800. NEVO A07 (either BEV or EREV configuration) is quoted FOB $19,640–22,450. Final pricing depends on trim and battery/powertrain configuration — confirm current numbers with EV Auto Pro before ordering.' },
-    ], related: ['import-cars-from-china-to-uzbekistan-2026', 'how-to-choose-changan-suv', 'deepal-s07-alternatives'],
+    ], related: ['nevo-a07-buying-guide-bev-vs-erev', 'import-cars-from-china-to-uzbekistan-2026', 'how-to-choose-changan-suv'],
   },
 
   'import-cars-from-china-to-armenia-2026': {

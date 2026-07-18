@@ -24,6 +24,13 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      # Content publish gate — blocks the deploy on fabricated-credential
+      # claims, phantom-model pricing, broken internal links, or missing
+      # images in src/data/news.ts. See scripts/article-gate.py header for
+      # the 2026-07-18 incident that made this mandatory.
+      - name: Article publish gate
+        run: python3 scripts/article-gate.py
+
       - name: Build Astro site
         run: npx astro build
 
