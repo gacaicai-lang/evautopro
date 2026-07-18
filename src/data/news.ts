@@ -2754,7 +2754,61 @@ Interested in FOB pricing, trim availability, or export documentation for the Je
       { q: 'What\'s the total driving range with a full tank and full charge?', a: 'Combined range with the 2.0T engine and battery working together is up to 1000km. Pure-electric-only range on the WLTC cycle is 100km.' },
       { q: 'Where can I currently buy the Jetour G700 for export?', a: 'It\'s confirmed for sale in the UAE (launched September 2025) and Qatar (launched November 2025) under GCC certification. Jetour is expanding into Latin America in 2026, naming Ecuador, Panama, and Mexico as target markets under early-market allocation.' },
       { q: 'Is the G700 good off-road, or is it mostly a luxury cruiser with off-road styling?', a: 'The specs indicate genuine off-road capability: 35°/28°/21° approach/departure/breakover angles, 230mm ground clearance, 900mm wading depth, and a 360° transparent chassis camera for terrain visibility. These are dedicated off-road figures, not soft-roader numbers.' },
-    ], related: ['jetour-g700-luxury-off-road-phev-deep-dive'],
+    ], related: ['jetour-x90-plus-import-guide-2026', 'jetour-t1-vs-t1-idm-ice-or-phev'],
+  },
+
+  'is-a-flex-fuel-vehicle-energy-efficient-for-taxes': {
+    slug: 'is-a-flex-fuel-vehicle-energy-efficient-for-taxes', category: 'guide', categoryLabel: 'Buyer Guide',
+    title: 'Is a Flex-Fuel Vehicle Tax Efficient? 2026 Answer',
+    excerpt: 'No federal tax credit exists for flex-fuel vehicle purchases in the US, and E85 delivers 15-27% fewer miles per gallon than gasoline. Here is the full breakdown, with sources.',
+    hero: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-07-19 09:00:00', readMin: 6,
+    body: `No — a flex-fuel vehicle is not tax efficient in the US, and it is not particularly energy efficient either. There is no federal tax credit for buying or owning a flex-fuel vehicle: the IRS's only flex-fuel-adjacent credit, the Alternative Fuel Vehicle Refueling Property Credit (Form 8911), covers fueling *infrastructure* — EV chargers, hydrogen and propane dispensing equipment — not vehicle purchases, and it does not list E85/ethanol pumps among the eligible property types. On the efficiency side, a flex-fuel vehicle running on E85 gets **15% to 27% fewer miles per gallon** than the same vehicle on regular gasoline, because ethanol carries roughly two-thirds the energy density of gasoline per gallon. Even when E85 is priced lower at the pump, the actual cost per mile is often higher.
+
+## Is There Any Federal Tax Credit for Flex-Fuel Vehicles?
+
+No. A TurboTax community answer and a direct read of current IRS guidance both confirm this plainly: unlike plug-in electric vehicles (Form 8936) or fuel cell vehicles (Form 8910), flex-fuel/E85-capable vehicles have never had a dedicated federal purchase credit, and none exists for 2026.
+
+The credit people sometimes confuse this with — the Alternative Fuel Vehicle Refueling Property Credit — is real, but it does not apply to the vehicle at all. For property placed in service between January 1, 2023 and June 30, 2026, it covers:
+
+| Claimant | Credit rate | Cap | What it actually covers |
+| --- | --- | --- | --- |
+| Individuals | 30% of installation cost | $1,000 per item | EV chargers, hydrogen refueling, propane dispensing — installed at a primary residence |
+| Businesses | 6% base rate (30% if prevailing-wage/apprenticeship requirements are met) | $100,000 per item | Same categories, commercial installation |
+
+Both individual and business claims additionally require the installation to sit inside a qualifying low-income or non-urban census tract. E85/ethanol fueling equipment is not named among the eligible property categories in current IRS guidance.
+
+**State-level treatment varies and changes over time** — some states have offered flex-fuel-specific incentives in the past (South Carolina is a documented example), but these programs have expiration dates and eligibility rules that shift year to year. Check your state Department of Revenue's current guidance before assuming any state credit applies — do not rely on this article, or any other general article, for your specific state's current rules.
+
+## How Much Less Efficient Is E85 Really?
+
+Ethanol contains about two-thirds the energy per gallon that gasoline does (methanol, used in some other flex-fuel contexts, carries roughly half). That translates directly into fewer miles per gallon: independent testing puts the real-world gap at **15% to 27% fewer MPG** on E85 compared to the same vehicle running on gasoline, depending on the vehicle and the exact ethanol blend (flex-fuel blends typically run 51%-83% ethanol).
+
+The upside is on emissions, not fuel economy: E85 combustion produces roughly **23% less nitrogen oxide and 30% less carbon monoxide** than regular gasoline. That is a genuine environmental benefit — it just is not a tax benefit, and it does not offset the fuel-economy penalty at the pump.
+
+## Is Flex-Fuel Worth It at All?
+
+**Best for**: drivers in regions where E85 is reliably available and priced enough below gasoline (usually 15%+ cheaper per gallon) to offset the MPG penalty, and drivers who specifically want the lower NOx/CO emissions profile regardless of running cost.
+
+**Not ideal for**: anyone buying a flex-fuel vehicle expecting a tax break — there isn't one at the federal level in 2026 — or anyone assuming E85's lower sticker price per gallon automatically means lower cost per mile. It usually does not.
+
+As of 2022, roughly **20.9 million flex-fuel vehicles** were on US roads, but the segment is narrowing: currently only Ford and General Motors produce new flex-fuel models. Vehicles built before 2008 generally cannot safely run high-ethanol blends at all — check your owner's manual before fueling with anything above E15.
+
+## Where Flex-Fuel Actually Matters: Export Markets, Not US Tax Returns
+
+Flex-fuel technology matters more as a **market-entry requirement** than a US tax strategy. Brazil is the clearest example: it mandates ethanol-compatible (E25) engines for passenger vehicles sold there, independent of any tax-credit question — it's a fuel-market reality (Brazil blends ethanol into its gasoline supply nationwide), not an optional feature. The [Geely Coolray](/cars/geely-coolray/) in EV Auto Pro's export catalog is built with an E25 flex-fuel-compatible engine specifically to meet this requirement, alongside INMETRO certification for the Brazilian market.
+
+If you're a dealer or importer sourcing flex-fuel-compatible vehicles for Brazil or another ethanol-blend market — rather than a US individual weighing a purchase against your own tax return — that's a question EV Auto Pro can actually help with.
+
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27m%20looking%20for%20flex-fuel%2FE25-compatible%20vehicles%20for%20export) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com).
+
+**Sources:** [IRS: Alternative Fuel Vehicle Refueling Property Credit](https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit) · [TurboTax Community: Is there a tax break for flex fuel vehicles?](https://ttlc.intuit.com/community/tax-credits-deductions/discussion/is-there-a-tax-break-for-flex-fuel-vehicles/00/72980) · [CarParts.com: The Pros and Cons of Flexible Fuel Vehicles](https://www.carparts.com/blog/the-pros-and-cons-of-flexible-fuel-vehicles/)`,
+    faqs: [
+      { q: 'Is there a federal tax credit for buying a flex-fuel vehicle in 2026?', a: 'No. Flex-fuel/E85-capable vehicles have never had a dedicated federal purchase tax credit, unlike plug-in EVs (Form 8936) or fuel cell vehicles (Form 8910). The Alternative Fuel Vehicle Refueling Property Credit (Form 8911) is sometimes confused with a vehicle credit, but it only covers fueling infrastructure like EV chargers and hydrogen/propane equipment — not the vehicle itself, and not E85 pumps specifically.' },
+      { q: 'Are flex-fuel vehicles more fuel efficient than gasoline vehicles?', a: 'No — the opposite. Running on E85, a flex-fuel vehicle gets 15% to 27% fewer miles per gallon than the same vehicle on regular gasoline, because ethanol has about two-thirds the energy density of gasoline. Lower price per gallon at the pump does not reliably translate into a lower cost per mile.' },
+      { q: 'What is the actual benefit of a flex-fuel vehicle, if not tax savings or fuel economy?', a: 'Lower emissions: E85 produces roughly 23% less nitrogen oxide and 30% less carbon monoxide than regular gasoline. In markets like Brazil, flex-fuel capability is also a market-entry requirement (E25-blended fuel is standard nationwide), not an optional efficiency feature.' },
+      { q: 'Can I put regular gasoline in a flex-fuel vehicle?', a: 'Yes — flex-fuel vehicles are designed to run on gasoline, E85, or any blend in between, with the engine automatically adjusting. The reverse is not always true: vehicles manufactured before 2008 generally cannot safely run high-ethanol blends above E15, so check the owner\'s manual before fueling a pre-2008 vehicle with E85.' },
+      { q: 'Do any states offer a flex-fuel vehicle tax credit even though the federal government does not?', a: 'Some states have offered flex-fuel-specific incentives in the past — South Carolina is one documented example — but state programs carry expiration dates and eligibility rules that change over time. Confirm current rules directly with your state Department of Revenue rather than relying on a general article.' },
+    ], related: ['bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'geely-coolray-export-deep-dive'],
   },
 
 };
