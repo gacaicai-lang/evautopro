@@ -8,6 +8,16 @@
 // `email` field they typed, which could be a typo or fake. An MX lookup on
 // that domain is a cheap, real signal: no MX record means mail to that
 // address will bounce no matter what, so it's worth flagging inline.
+// Every value below comes straight from an anonymous public form submission.
+// It gets interpolated into an HTML email body, so it must be escaped —
+// otherwise a submitter can inject markup (e.g. a fake "click here to
+// verify" link) into the notification Philip reads in his inbox.
+function escapeHtml(str) {
+  return String(str ?? '').replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[c]));
+}
+
 async function checkEmailDomain(email) {
   const domain = String(email || '').split('@')[1];
   if (!domain) return { checked: false, valid: false, domain: null };
@@ -169,11 +179,11 @@ export async function onRequestPost(context) {
           subject: `${emailLooksFake ? '⚠️ [邮箱可能无效] ' : ''}🚗 新询盘 · ${data.name || ''} from ${enriched.country}`,
           html:
             (emailLooksFake
-              ? `<p style="color:#b91c1c;font-weight:bold;">⚠️ ${data.email} 的域名 "${emailCheck.domain}" 查不到MX记录，这个邮箱大概率是假的/打错的，回信前先跟WhatsApp核实一下</p>`
+              ? `<p style="color:#b91c1c;font-weight:bold;">⚠️ ${escapeHtml(data.email)} 的域名 "${escapeHtml(emailCheck.domain)}" 查不到MX记录，这个邮箱大概率是假的/打错的，回信前先跟WhatsApp核实一下</p>`
               : '') +
-            Object.entries(data).map(([k, v]) => `<p><b>${k}</b>: ${v}</p>`).join('') +
-            `<hr/><p style="color:#6b7280;font-size:12px;">来源页: ${enriched.referer || '(direct / no referrer)'}<br/>` +
-            `国家(IP定位): ${enriched.country}<br/>IP: ${enriched.ip}<br/>时间: ${enriched.ts}</p>`,
+            Object.entries(data).map(([k, v]) => `<p><b>${escapeHtml(k)}</b>: ${escapeHtml(v)}</p>`).join('') +
+            `<hr/><p style="color:#6b7280;font-size:12px;">来源页: ${escapeHtml(enriched.referer) || '(direct / no referrer)'}<br/>` +
+            `国家(IP定位): ${escapeHtml(enriched.country)}<br/>IP: ${escapeHtml(enriched.ip)}<br/>时间: ${escapeHtml(enriched.ts)}</p>`,
         }),
       });
       if (!resendResp.ok) {
@@ -186,7 +196,7 @@ export async function onRequestPost(context) {
 
   return new Response(JSON.stringify({ ok: true, message: 'Thank you! Our team will reply within 24 hours.' }), {
     status: 200,
-    headers: { 'content-type': 'application/json', 'access-control-allow-origin': '*' },
+    headers: { 'content-type': 'application/json', 'access-control-allow-origin': 'https://evautopro.com' },
   });
 }
 
@@ -194,7 +204,7 @@ export async function onRequestOptions() {
   return new Response(null, {
     status: 200,
     headers: {
-      'access-control-allow-origin': '*',
+      'access-control-allow-origin': 'https://evautopro.com',
       'access-control-allow-methods': 'POST, OPTIONS',
       'access-control-allow-headers': 'content-type',
     },
