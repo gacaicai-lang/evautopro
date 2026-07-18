@@ -2777,11 +2777,15 @@ The credit people sometimes confuse this with — the Alternative Fuel Vehicle R
 
 Both individual and business claims additionally require the installation to sit inside a qualifying low-income or non-urban census tract. E85/ethanol fueling equipment is not named among the eligible property categories in current IRS guidance.
 
+![Comparison chart: federal tax credit eligibility by vehicle/property type — EV (Form 8936), fuel cell (Form 8910) and charging infrastructure (Form 8911) all have a credit; flex-fuel vehicle purchases have none](/images/news/flex-fuel-tax-credit-eligibility.webp)
+
 **State-level treatment varies and changes over time** — some states have offered flex-fuel-specific incentives in the past (South Carolina is a documented example), but these programs have expiration dates and eligibility rules that shift year to year. Check your state Department of Revenue's current guidance before assuming any state credit applies — do not rely on this article, or any other general article, for your specific state's current rules.
 
 ## How Much Less Efficient Is E85 Really?
 
 Ethanol contains about two-thirds the energy per gallon that gasoline does (methanol, used in some other flex-fuel contexts, carries roughly half). That translates directly into fewer miles per gallon: independent testing puts the real-world gap at **15% to 27% fewer MPG** on E85 compared to the same vehicle running on gasoline, depending on the vehicle and the exact ethanol blend (flex-fuel blends typically run 51%-83% ethanol).
+
+![Bar chart comparing miles per gallon: gasoline at 100% baseline, E85 low estimate at 73%, E85 high estimate at 85%](/images/news/flex-fuel-mpg-comparison.webp)
 
 The upside is on emissions, not fuel economy: E85 combustion produces roughly **23% less nitrogen oxide and 30% less carbon monoxide** than regular gasoline. That is a genuine environmental benefit — it just is not a tax benefit, and it does not offset the fuel-economy penalty at the pump.
 
@@ -2791,7 +2795,7 @@ The upside is on emissions, not fuel economy: E85 combustion produces roughly **
 
 **Not ideal for**: anyone buying a flex-fuel vehicle expecting a tax break — there isn't one at the federal level in 2026 — or anyone assuming E85's lower sticker price per gallon automatically means lower cost per mile. It usually does not.
 
-As of 2022, roughly **20.9 million flex-fuel vehicles** were on US roads, but the segment is narrowing: currently only Ford and General Motors produce new flex-fuel models. Vehicles built before 2008 generally cannot safely run high-ethanol blends at all — check your owner's manual before fueling with anything above E15.
+The existing US fleet has held roughly flat, not collapsed: **21 million flex-fuel vehicles in 2017**, versus **20.9 million in 2022**, per the Department of Energy's Alternative Fuels Data Center. What's actually shrinking is new production, not the installed base — currently only Ford and General Motors produce new flex-fuel models, down from a wider field of automakers a decade ago. Vehicles built before 2008 generally cannot safely run high-ethanol blends at all — check your owner's manual before fueling with anything above E15.
 
 ![Geely Coolray exterior, front three-quarter studio shot](/images/vehicles/evautopro-geely-coolray-appearance-02.webp)
 
@@ -2805,7 +2809,7 @@ If you're a dealer or importer sourcing flex-fuel-compatible vehicles for Brazil
 
 **Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27m%20looking%20for%20flex-fuel%2FE25-compatible%20vehicles%20for%20export) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com).
 
-**Sources:** [IRS: Alternative Fuel Vehicle Refueling Property Credit](https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit) · [TurboTax Community: Is there a tax break for flex fuel vehicles?](https://ttlc.intuit.com/community/tax-credits-deductions/discussion/is-there-a-tax-break-for-flex-fuel-vehicles/00/72980) · [CarParts.com: The Pros and Cons of Flexible Fuel Vehicles](https://www.carparts.com/blog/the-pros-and-cons-of-flexible-fuel-vehicles/)`,
+**Sources:** [IRS: Alternative Fuel Vehicle Refueling Property Credit](https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit) · [TurboTax Community: Is there a tax break for flex fuel vehicles?](https://ttlc.intuit.com/community/tax-credits-deductions/discussion/is-there-a-tax-break-for-flex-fuel-vehicles/00/72980) · [CarParts.com: The Pros and Cons of Flexible Fuel Vehicles](https://www.carparts.com/blog/the-pros-and-cons-of-flexible-fuel-vehicles/) · [U.S. DOE Alternative Fuels Data Center: Flexible Fuel Vehicles](https://afdc.energy.gov/vehicles/flexible-fuel)`,
     faqs: [
       { q: 'Is there a federal tax credit for buying a flex-fuel vehicle in 2026?', a: 'No. Flex-fuel/E85-capable vehicles have never had a dedicated federal purchase tax credit, unlike plug-in EVs (Form 8936) or fuel cell vehicles (Form 8910). The Alternative Fuel Vehicle Refueling Property Credit (Form 8911) is sometimes confused with a vehicle credit, but it only covers fueling infrastructure like EV chargers and hydrogen/propane equipment — not the vehicle itself, and not E85 pumps specifically.' },
       { q: 'Are flex-fuel vehicles more fuel efficient than gasoline vehicles?', a: 'No — the opposite. Running on E85, a flex-fuel vehicle gets 15% to 27% fewer miles per gallon than the same vehicle on regular gasoline, because ethanol has about two-thirds the energy density of gasoline. Lower price per gallon at the pump does not reliably translate into a lower cost per mile.' },
