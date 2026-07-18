@@ -4,11 +4,14 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'
 
-# Decap CMS admin needs its own looser script/connect policy to load the
-# unpkg.com bundle and talk to GitHub's API — scoped to /admin/* only so the
-# rest of the site keeps the strict policy above. (The CMS is still
-# non-functional today for an unrelated reason: OAUTH_CLIENT_ID/SECRET are
-# not configured in the Pages project — this override just stops the CSP
-# from being an *additional* reason it's broken.)
-/admin/*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://api.netlify.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
+# NOTE: /admin/ (Decap CMS) is blocked by the CSP above (unpkg.com isn't
+# allow-listed) and was already non-functional before that for an unrelated
+# reason (OAUTH_CLIENT_ID/SECRET unset). A per-path CSP override was tried
+# here and reverted 2026-07-19 — Cloudflare Pages' _headers does not replace
+# a broader path's headers with a narrower path's, it SENDS BOTH, and
+# browsers enforce the intersection of multiple CSP headers, so a looser
+# /admin/* rule has no effect while the site-wide rule above still applies.
+# A real fix needs either restructuring _headers to avoid any overlapping
+# path patterns, or a Cloudflare Pages project-level config (not available
+# via this API token). Not fixed — CMS is confirmed unused this session and
+# leaving it CSP-blocked is not itself a security risk.
