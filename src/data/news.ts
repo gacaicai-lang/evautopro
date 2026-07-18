@@ -182,12 +182,7 @@ For dealers importing Chinese vehicles, 2026 brings stronger guarantees:
 
 ## How EV Auto Pro Complies
 
-EV Auto Pro holds all required certifications since founding:
-- MOFCOM Authorized Exporter (2018)
-- AEO Customs Certification (2018)
-- 6 direct OEM dealer MoUs (Changan / Deepal / Qiyuan / Geely / VW / Jetour)
-- Parts depots in Moscow / Almaty / Dubai
-- Pre-approved factory batches for all 8 target markets
+We supply vehicles across our active export catalog — [Jetour, Changan NEVO, Volkswagen and more](/cars/) — with pre-shipment photo/video inspection on every order and full export documentation. Ask us for our current MOFCOM export licence number and destination-market certifications (EAC / GCC / INMETRO) for your specific model before ordering — don't take a general claim on this page as a substitute for checking the actual document.
 
 ## What's Next: 2027 Outlook
 
@@ -274,7 +269,7 @@ There's no winner — both fill different demand segments. For first-time import
 
 ## Contact for Quote
 
-EV Auto Pro is authorized exporter for both Changan and Jetour. We can supply mixed orders (UNI-T + T2 in same container) for dealers wanting both segments.`,
+We supply both Changan and Jetour models from our active export catalog. We can supply mixed orders (UNI-T + T2 in same container) for dealers wanting both segments.`,
     faqs: [
       { q: 'Which has better resale value in target markets?', a: 'Both hold value reasonably for Chinese brands. UNI-T resells faster due to higher volume in market. T2 resells at higher absolute price due to PHEV uniqueness.' },
       { q: 'Right-hand drive available?', a: 'UNI-T: factory RHD available, MOQ 20 units. T2: factory RHD development for 2026 Q4. Contact us for current RHD availability.' },
@@ -287,8 +282,8 @@ EV Auto Pro is authorized exporter for both Changan and Jetour. We can supply mi
     slug: 'top-7-chinese-suv-for-russia-2026',
     category: 'market',
     categoryLabel: 'Market & Import',
-    title: 'Top 7 Chinese Off-Road SUVs for Russia in 2026',
-    excerpt: 'These models offer robust performance for diverse terrains and comfortable interiors. Ideal for Russian dealer inventory 2026.',
+    title: 'Top 6 Chinese SUVs for Russia in 2026',
+    excerpt: 'Six models from EV Auto Pro\'s active export catalog, compared on real specs and pricing. Ideal for Russian dealer inventory 2026.',
     hero: '/images/vehicles/evautopro-geely-atlas-01.webp',
     date: '2026-05-10',
     readMin: 10,
@@ -296,53 +291,47 @@ EV Auto Pro is authorized exporter for both Changan and Jetour. We can supply mi
 
 Russian car market shifted dramatically post-2022. Western brands largely exited; Chinese brands filled the gap. By 2025, Chinese SUVs hold 55%+ market share. For 2026, the segment continues to grow with EREV and PHEV variants joining traditional ICE.
 
-We focus on **SUVs suitable for Russian conditions**: cold-weather tested, all-wheel drive capable, robust suspension, parts availability.
+We focus on **SUVs suitable for Russian conditions**: cold-weather tested, all-wheel drive capable, robust suspension, parts availability. Every model below is in our active export catalog — [see full specs and current pricing](/cars/) before ordering.
 
 ## 1. Changan UNI-T (Sport Coupé)
 
-FOB $13,800 · 5-seater · ICE · FWD · 188 PS
+FOB $13,800-17,200 · 5-seater · ICE · FWD · 188 PS
 
-Best for: Urban Moscow / St. Petersburg dealers seeking sport coupé entry price.
+Best for: Urban Moscow / St. Petersburg dealers seeking sport coupé entry price. [Full specs](/cars/changan-uni-t/).
 
-## 2. Changan CS75 Plus
+## 2. Changan CS55 Plus
 
-FOB $16,800 · 5-seater · ICE · FWD/AWD · 218 PS
+FOB $14,500-17,900 · 5-seater · ICE · FWD · 188 PS
 
-Best for: All-around family SUV. Established Russian sales channel, strong parts availability.
+Best for: All-around family SUV and Changan's global best-seller — highest stock and fastest replenishment of any model in this list. [Full specs](/cars/changan-cs55-plus/).
 
 ## 3. Geely Atlas (博越 PRO)
 
-FOB $17,800 · 5-seater · ICE · FWD · 218 PS
+FOB $17,800-22,500 · 5-seater · ICE · FWD · 218 PS
 
-Best for: Mid-SUV segment. Volvo CMA platform = European safety standards. Premium positioning for Russian middle-class buyers.
+Best for: Mid-SUV segment. Volvo CMA platform = European safety standards. Premium positioning for Russian middle-class buyers. [Full specs](/cars/geely-atlas/).
 
-## 4. Geely Monjaro
+## 4. Deepal S07 EREV
 
-FOB $22,800 · 5-seater · ICE · AWD · 238 PS
+FOB $24,800-32,500 · 5-seater · EREV · RWD · 252 PS
 
-Best for: Premium mid-SUV alternative to Touareg / Q5. Air suspension optional. Moscow / SPB premium dealer focus.
+Best for: Premium EREV segment. Solves cold-weather charging anxiety with gas extender. 200 km pure electric urban + 1000 km gas-assisted highway. [Full specs](/cars/deepal-s07/).
 
-## 5. Deepal S07 EREV
-
-FOB $24,800 · 5-seater · EREV · RWD · 252 PS
-
-Best for: Premium EREV segment. Solves cold-weather charging anxiety with gas extender. 200 km pure electric urban + 1000 km gas-assisted highway.
-
-## 6. Jetour T2 PHEV
+## 5. Jetour T2 PHEV
 
 FOB $22,500 · 7-seater · PHEV · 4WD · 462 PS
 
-Best for: Family 7-seater + PHEV technology + 4WD adventure capability. Strong in Russian interior + Siberian dealers.
+Best for: Family 7-seater + PHEV technology + 4WD adventure capability. Strong in Russian interior + Siberian dealers. [Full specs](/cars/jetour-t2/).
 
-## 7. Deepal S09 EREV
+## 6. Deepal S09 EREV
 
-FOB $36,500 · 6-seater · EREV · 4WD · 462 PS
+FOB $36,500-45,800 · 6-seater · EREV · 4WD · 462 PS
 
-Best for: Premium flagship 6-seater EREV. Competes with Li Auto L9 / BMW X7 PHEV. Moscow VIP / executive segment.
+Best for: Premium flagship 6-seater EREV. Competes with Li Auto L9 / BMW X7 PHEV. Moscow VIP / executive segment. [Full specs](/cars/deepal-s09/).
 
 ## Cold-Weather Configuration (Critical for Russia)
 
-All 7 models support cold-weather config:
+All 6 models support cold-weather config:
 - Battery thermal management to -30°C (BEV/PHEV/EREV)
 - Engine block heater (ICE/PHEV)
 - Cold-cranking battery upgrade
@@ -360,15 +349,15 @@ All 7 models support cold-weather config:
 
 ## Final Recommendation
 
-For new Russian dealers: start with **CS75 Plus + UNI-T mix** ($16,800 + $13,800 FOB). High volume, fast turnover, proven market acceptance.
+For new Russian dealers: start with a **CS55 Plus + UNI-T mix** (from $14,500 + $13,800 FOB). High volume, fast turnover, proven global sales record.
 
-For established premium dealers: add **Atlas / Monjaro / Deepal S07** for $20-25K segment.
+For established premium dealers: add **Geely Atlas / Deepal S07** for the $20-30K segment.
 
-For VIP/executive: **Deepal S09 EREV** ($36,500) — competes against German premium at half the price.
+For VIP/executive: **Deepal S09 EREV** (from $36,500) — a 6-seat flagship EREV positioned against premium PHEV SUVs at a lower price point.
 
 ## Contact for Russia Quote
 
-EV Auto Pro is authorized exporter for all 6 brands listed (Changan / Geely / Deepal). Active Russian dealer network since 2018. EAC certification handled. Russian-speaking ops. Contact via WhatsApp на русском.`,
+We handle EAC certification and can quote all six models above from our active export catalog. Contact us via WhatsApp for current stock, lead times and a formal quote.`,
     faqs: [
       { q: 'Best Chinese SUV for Russian rural / Siberia?', a: 'Jetour T2 PHEV — 4WD + PHEV (engine works in extreme cold when EV alone has range loss). Deepal S07 EREV — gas extender solves remote area charging.' },
       { q: 'Cheapest reliable Chinese SUV for Russia?', a: 'Changan CS55 Plus ($14,500 FOB). Best-seller globally + Russia, strongest parts availability.' },
@@ -415,40 +404,33 @@ FOB Shanghai $15,200 (LHD). RHD +$800. CIF varies by destination.`,
 
   'how-to-choose-changan-suv': {
     slug: 'how-to-choose-changan-suv', category: 'guide', categoryLabel: 'Buyer Guide',
-    title: "How to Choose a Changan SUV: Complete Guide to Changan's NEV Lineup",
-    excerpt: 'Complete guide to choosing the right Changan SUV for your market — UNI series vs CS family, ICE vs PHEV vs EREV.',
-    hero: '/images/vehicles/evautopro-changan-cs55-plus-01.webp', date: '2026-05-21', readMin: 8,
-    body: `## Changan SUV Lineup Overview
+    title: "Changan UNI-T vs CS55 Plus: Which Changan SUV Should You Import?",
+    excerpt: "A guide to choosing between EV Auto Pro's two Changan SUVs in stock — UNI-T's sport-coupé styling vs CS55 Plus's best-seller volume positioning.",
+    hero: '/images/vehicles/evautopro-changan-cs55-plus-01.webp', date: '2026-05-21', readMin: 6,
+    body: `## Changan's Two SUVs in Our Catalog
 
-Changan operates 2 main SUV series:
-- **UNI Series**: Sport coupé styling (UNI-T / UNI-K / UNI-Z)
-- **CS Family**: Conventional family SUV (CS35 Plus / CS55 Plus / CS75 Plus / X5 Plus)
+We currently export two Changan SUVs: the [UNI-T](/cars/changan-uni-t/), a sport-coupé styled SUV, and the [CS55 Plus](/cars/changan-cs55-plus/), Changan's global best-selling compact SUV. Both share the same 188 PS / 300 N·m 1.5T engine and 7-speed DCT — the difference is body style and positioning, not powertrain.
 
-## When to Choose UNI Series
+## When to Choose UNI-T
 
-UNI-T ($13,800 FOB) — Sport coupé SUV for young urban buyers in Russia, UAE, KZ.
-UNI-K ($19,500 FOB) — Flagship PHEV mid-SUV. iDD PHEV system.
-UNI-Z ($14,200 FOB) — Coupé SUV alternative to UNI-T.
+FOB $13,800-17,200 · Coupé SUV body style · dimensions 4515×1870×1565mm · wheelbase 2710mm.
 
-## When to Choose CS Family
+Best for: buyers targeting younger, style-conscious urban customers who want sport-coupé looks over maximum cabin space. [Full specs](/cars/changan-uni-t/).
 
-CS55 Plus ($14,500 FOB) — Best-seller compact SUV. Highest stock + fastest replenishment.
-CS75 Plus ($16,800 FOB) — Mid-SUV. Strong in Russia + Egypt CKD.
-CS35 Plus ($11,500 FOB) — Entry compact SUV. Best for emerging markets.
+## When to Choose CS55 Plus
 
-## Decision Matrix by Market
+FOB $14,500-17,900 · Conventional SUV body style, more cabin/cargo space · dimensions 4515×1865×1680mm · wheelbase 2656mm.
 
-**Russia**: UNI-T (young urban) + CS75 Plus (family) — top 2 picks.
-**Kazakhstan**: CS55 Plus dominates volume. UNI-K iDD growing.
-**UAE**: UNI-T sport styling sells well.
-**Egypt**: CS35 Plus + CS55 Plus for CKD partner program.
+Best for: buyers prioritizing volume and parts availability — this is Changan's best-selling model globally, which means the deepest stock and fastest replenishment of any Changan model we carry. [Full specs](/cars/changan-cs55-plus/).
 
-## Authorized vs Grey Market
+## Decision Summary
 
-EV Auto Pro holds Changan dealer MoU since 2018. Factory invoice for every unit. Verify with factory on request.`,
+Choose **UNI-T** if styling and a sportier profile matter more to your target buyer than interior space. Choose **CS55 Plus** if you want the highest-volume, most broadly proven model with the fastest restock — it's the safer first order for a new market.
+
+Looking for a wider Changan lineup (UNI-K, CS75 Plus, and other models not shown here)? Contact us — we can check current factory availability for models outside our standard catalog on a case-by-case basis, but cannot commit to stock, pricing or lead time until we've confirmed with the factory.`,
     faqs: [
-      { q: 'Best-selling Changan?', a: 'CS55 Plus globally. UNI-T in Russia + UAE specifically.' },
-      { q: 'PHEV Changan options?', a: 'UNI-K iDD PHEV (most popular). UNI-Z PHEV (new 2026).' },
+      { q: 'Best-selling Changan model we export?', a: 'CS55 Plus — Changan\'s global best-seller, with the deepest stock of the two Changan models in our catalog.' },
+      { q: 'Do you supply other Changan SUVs (UNI-K, CS75 Plus, etc.)?', a: 'Our standing catalog covers UNI-T and CS55 Plus. Other Changan models can sometimes be sourced case-by-case — contact us with your target model and we\'ll confirm current factory availability and pricing before you order.' },
     ], related: ['changan-uni-t-vs-jetour-t2-comparison'],
   },
 
@@ -497,94 +479,73 @@ Both available via EV Auto Pro authorized export.`,
   'deepal-s07-alternatives': {
     slug: 'deepal-s07-alternatives', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Affordable Deepal S07 Alternatives: Value EREV SUVs from China',
-    excerpt: 'Looking for Deepal S07 EREV at lower price? Compare with Geely Coolray Hybrid, Changan UNI-K iDD, and other value alternatives.',
+    excerpt: 'Looking for a Deepal S07 EREV alternative at lower price? Compare with the NEVO A07 EREV sedan, Geely Coolray, and Jetour T2 PHEV from our catalog.',
     hero: '/images/vehicles/evautopro-deepal-s07-01.webp', date: '2026-05-11', readMin: 6,
     body: `## Deepal S07 Baseline
 
-FOB $24,800. EREV (200km WLTP electric + 1000+ km gas-extender). Snapdragon 8295 cabin. CATL battery.
+FOB $24,800-32,500. EREV SUV (200km WLTP electric + 1000+ km gas-extender). Snapdragon 8295 cabin. CATL battery. [Full specs](/cars/deepal-s07/).
 
-## Alternative 1: Changan UNI-K iDD PHEV
+## Alternative 1: NEVO A07 EREV Sedan
 
-FOB $19,500. Standard PHEV (not EREV). Less premium cabin but similar PHEV utility. -$5,300 vs S07.
+FOB $19,640-22,450. Also a genuine EREV — 200kW/268PS motor + 1.5L range-extender, 35.1kWh battery, 310km pure-electric / 1,570km combined. Sedan body instead of SUV, ~$5,000-10,000 lower FOB than S07. [Full specs](/cars/nevo-a07/).
 
-Best for: Markets needing PHEV but tight budget.
+Best for: markets wanting real EREV technology in a sedan body at a lower price point.
 
 ## Alternative 2: Geely Coolray (Compact, not EREV but lower price)
 
-FOB $15,200. ICE only. Different segment but if EREV not required → significantly cheaper.
+FOB $15,200-18,800. ICE only. Different segment but if EREV not required → significantly cheaper. [Full specs](/cars/geely-coolray/).
 
 ## Alternative 3: Jetour T2 PHEV
 
-FOB $22,500. 7-seater PHEV (4WD). If family + adventure trump premium cabin → T2 better choice.
+FOB $22,500. 7-seater PHEV (4WD). If family + adventure trump premium cabin → T2 better choice. [Full specs](/cars/jetour-t2/).
 
 ## When to Stay with S07
 
 If buyer specifically wants:
 - Snapdragon 8295 premium cabin
-- True EREV (long range with gas extender)
+- True EREV (long range with gas extender) in an SUV body
 - RWD sporty driving
 - Competing with Li Auto / AITO
 
-→ S07 is the right choice. No real alternative at this price ($24,800 FOB).
+→ S07 is the right choice — the NEVO A07 is the closest real EREV alternative in our catalog, but it's a sedan, not an SUV.
 
 ## Decision Tree
 
 Need EREV (long range, limited charging)?
-- YES → S07 (best in class)
-- NO → UNI-K iDD ($19,500) or Coolray ($15,200)`,
+- YES, SUV body → S07 (best in class in our catalog)
+- YES, sedan body / lower budget → NEVO A07 EREV
+- NO → Geely Coolray (lowest FOB, ICE only)`,
     faqs: [
       { q: 'EREV vs PHEV difference?', a: 'EREV: gas engine only charges battery (no mechanical drive). PHEV: both engines can drive directly. EREV simpler, smoother.' },
-      { q: 'Why S07 over Li Auto L7?', a: 'Same segment, 40% lower FOB. Same Snapdragon 8295 chip, similar feature set.' },
+      { q: 'Why S07 over Li Auto L7?', a: 'Same segment, meaningfully lower FOB. Same Snapdragon 8295 chip, similar feature set.' },
     ], related: ['top-7-chinese-suv-for-russia-2026'],
   },
 
   'changan-uni-t-vs-uni-z-comparison': {
     slug: 'changan-uni-t-vs-uni-z-comparison', category: 'product', categoryLabel: 'Model Comparison',
-    title: 'Changan UNI-T vs UNI-Z: Comparison, Buying Guide & Alternatives',
-    excerpt: 'Both UNI-T and UNI-Z are Changan sport coupé SUVs. Detailed differences, market fit, and pricing.',
+    title: 'Changan UNI-T Review: Specs, Pricing — and Do We Export the UNI-Z?',
+    excerpt: "A full look at the Changan UNI-T sport coupé SUV we export, plus a straight answer on UNI-Z availability for buyers researching Changan's UNI lineup.",
     hero: '/images/vehicles/evautopro-changan-uni-t-01.webp', date: '2026-05-09', readMin: 5,
-    body: `## Changan UNI Series Overview
+    body: `## Changan UNI-T: What's Actually in Our Catalog
 
-Both UNI-T and UNI-Z are sport coupé SUVs in Changan's UNI lineup. Similar styling, different positioning.
+The [Changan UNI-T](/cars/changan-uni-t/) is a sport-coupé styled SUV — FOB $13,800-17,200, 1.5T turbo engine, 188 PS / 300 N·m, 7-speed DCT, 4515×1870×1565mm, 2710mm wheelbase.
 
-## UNI-T — The Original Sport SUV
+Best for: buyers wanting sport-coupé styling at an accessible entry price within Changan's export lineup.
 
-FOB $13,800. Launched 2020. 1.5T + 7-DCT. 188 PS / 300 Nm. 4515 mm length.
+## Do You Export the UNI-Z?
 
-Best for: Entry sport SUV market, fastest seller.
+If you're comparing Changan's UNI series and came across the UNI-Z: it is not currently in our standing export catalog. We only list models here once we can back the listing with real photos and confirmed export-market specs — rather than publish a UNI-Z page built on unverified numbers, we're keeping this honest: ask us directly if you need UNI-Z, and we'll check current factory availability before quoting anything.
 
-## UNI-Z — Updated Coupé SUV
+## Best Markets for UNI-T
 
-FOB $14,200 (+$400 vs UNI-T). Launched 2023. Same 1.5T engine. Updated infotainment, slightly larger 4540 mm.
+Russia, Kazakhstan, UAE, Egypt — established demand for Chinese coupé-styled SUVs in this price segment.
 
-Best for: Buyers seeking newer model year + slightly larger interior.
+## Compare UNI-T Against What We Actually Carry
 
-## Side-by-Side
-
-| | UNI-T | UNI-Z |
-|--|--|--|
-| FOB | $13,800 | $14,200 |
-| Year | 2020+ | 2023+ |
-| Engine | 1.5T 188PS | 1.5T 188PS |
-| Length | 4515 mm | 4540 mm |
-| Wheelbase | 2710 mm | 2700 mm |
-| Stock | 45 units | 25 units |
-| Lead time | 15 days | 15 days |
-
-## Which to Choose
-
-For dealers with cost-sensitive buyers → UNI-T ($400 cheaper, larger stock).
-For dealers wanting "latest 2023 model" marketing → UNI-Z.
-For 2026 buyers seeking PHEV → UNI-Z 2026 PHEV variant coming Q4 2026.
-
-## Best Markets for UNI Series
-
-Both: Russia (#1 Chinese coupé SUV), Kazakhstan, UAE, Egypt.
-
-UNI-T leads volume. UNI-Z gains traction in younger urban segments (Saudi / UAE young buyers).`,
+Rather than an unverifiable UNI-Z comparison, see how UNI-T stacks up against models we do export and can confirm specs for: [UNI-T vs Jetour T2](/news/changan-uni-t-vs-jetour-t2-comparison/) (different segment, PHEV 7-seater vs coupé SUV) or [UNI-T vs CS55 Plus](/news/how-to-choose-changan-suv/) (same brand, different body style).`,
     faqs: [
-      { q: 'Same powertrain?', a: 'Yes. Both use 1.5T turbo + 7-DCT. Same 188 PS / 300 Nm output.' },
-      { q: 'UNI-Z is newer model — better?', a: 'Marginally. Better infotainment, slightly different exterior. Powertrain identical. Marketing benefit "2023 latest" is real.' },
+      { q: 'What powertrain does the UNI-T use?', a: '1.5T turbo + 7-speed DCT, 188 PS / 300 N·m — the same core Changan powertrain used across several of our Changan and Changan NEVO models.' },
+      { q: 'Can I order the UNI-Z through EV Auto Pro?', a: "It's not in our standing catalog today. Contact us with your target spec and we'll confirm with the factory whether current allocation is possible — we won't quote a model we haven't verified is actually available." },
     ], related: ['changan-uni-t-vs-jetour-t2-comparison', 'how-to-choose-changan-suv'],
   },
 
@@ -668,7 +629,7 @@ EREV has a gas engine but it's only a battery charger (not direct drive):
 
 **Deepal S07 EREV** — Best EREV. Even uncharged drives well as series hybrid.
 **Jetour T2 PHEV** — Strong PHEV with 137 km electric range.
-**Changan UNI-K iDD PHEV** — Affordable PHEV entry.
+**Jetour T1 i-DM PHEV** — Compact SUV PHEV entry, 26.7kWh battery, lower FOB than T2.
 
 ## Markets Where PHEV/EREV Wins
 
@@ -817,50 +778,45 @@ Ghana Cedi (GHS) volatility a concern. USD invoicing default. Letter of Credit r
 We have not yet established Ghana dealer network. **Open to first-mover Ghana partner**. Volume ≥30 units/quarter for exclusive Accra territory.`,
     faqs: [
       { q: 'Why are Ghana car import duties so high?', a: 'Government revenue + protect local assembly programs. EV duty reduced to encourage NEV adoption.' },
-      { q: 'Cheapest reliable Chinese car for Ghana?', a: 'Changan CS35 Plus ($11,500 FOB). After duties + VAT, retail ~$22-25K USD equivalent.' },
+      { q: 'Cheapest reliable Chinese car for Ghana?', a: 'Jetour X50 ($9,000-13,500 FOB), our lowest-priced compact SUV. After duties + VAT, budget for meaningfully higher retail pricing — confirm current Ghana duty rates with us before quoting a customer.' },
     ], related: ['guide-to-sourcing-chinese-auto-parts', '2026-china-nev-export-rules-guide'],
   },
 
   'mg-zs-vs-geely-coolray-africa': {
     slug: 'mg-zs-vs-geely-coolray-africa', category: 'product', categoryLabel: 'Model Comparison',
-    title: 'MG ZS vs Geely Coolray: Which Small SUV Fits Africa Better?',
-    excerpt: 'Two top compact SUV options from China for African markets — MG ZS vs Geely Coolray. Detailed comparison.',
+    title: 'Jetour X50 vs Geely Coolray: Which Small SUV Fits Africa Better?',
+    excerpt: 'Two compact SUV options from our export catalog for African markets — budget-focused Jetour X50 vs premium-positioned Geely Coolray. Detailed comparison.',
     hero: '/images/vehicles/evautopro-geely-coolray-01.webp', date: '2026-05-12', readMin: 5,
-    body: `## Two China Compact SUV Heavyweights
+    body: `## Two Compact SUVs, Two Different African Market Strategies
 
-MG ZS (SAIC Motor) and Geely Coolray (Geely Holding) are top-selling Chinese compact SUVs globally. Both target affordable family + young buyer segments.
+The [Jetour X50](/cars/jetour-x50/) and [Geely Coolray](/cars/geely-coolray/) are both compact SUVs in our export catalog, but they target different price points and buyer segments.
 
 ## Quick Compare
 
-**MG ZS**: $13,800-16,200 FOB. 1.5L NA + AT. SAIC Motor (state-owned). MG brand UK heritage.
-**Geely Coolray**: $15,200-18,800 FOB. 1.5T turbo + 7-DCT. Geely Holding (private). Volvo CMA platform.
+**Jetour X50**: $9,000-13,500 FOB. 1.5T turbo, 115kW/156PS/230N·m, 6-speed wet DCT. Export-only model (rebadged Soueast DX5, Soueast and Jetour are sibling brands under Chery Holding).
+**Geely Coolray**: $15,200-18,800 FOB. 1.5T turbo, 177PS, 7-speed DCT. Volvo CMA platform (jointly developed with Volvo Cars).
 
 ## Engine + Drivetrain
 
-ZS: Naturally aspirated 1.5L. Smooth, simple, affordable. Lower performance.
-Coolray: 1.5T turbo + 7-speed DCT. Sportier, more power (177 PS vs 120 PS). Modern drivetrain.
+X50: 1.5T turbo, 156PS. Simpler 6-speed wet DCT. Confirmed on-lot in UAE, Saudi Arabia, Kazakhstan, Panama, Chile, Philippines, Malaysia.
+Coolray: 1.5T turbo, 177PS — more power. Modern 7-speed DCT. Volvo-developed platform.
 
 ## Platform + Safety
 
-ZS: SAIC's older platform. Decent safety, no European standard alignment.
-Coolray: Volvo CMA platform jointly developed. European safety standards.
-
-## African Market Performance
-
-ZS: #1-2 Chinese compact in South Africa, Nigeria, Egypt fleet.
-Coolray: Growing fast in South Africa premium segment, Kenya, Ghana.
+X50: 6 airbags (front + side + full-length curtain), 360° camera, L1 driver assist (blind spot, lane change assist, rear cross-traffic alert).
+Coolray: Volvo CMA platform, European safety standards heritage.
 
 ## Pricing Math for African Dealer
 
-**ZS**: Lower FOB + duty = lower retail. Higher volume turnover. Best for budget-conscious markets.
-**Coolray**: Higher FOB but Volvo platform sells at premium. Better unit margin for established dealers.
+**X50**: Lower FOB means lower retail and easier entry for budget-conscious markets — the tradeoff is a smaller screen (10.25" vs Coolray's larger display) and simpler feature set.
+**Coolray**: Higher FOB but Volvo-platform positioning supports premium pricing and better unit margin for established dealers.
 
 ## EV Auto Pro Supply
 
-We supply Geely Coolray directly (Geely MoU 2016). MG ZS via SAIC sourcing partner — case-by-case orders, MOQ 10 units.`,
+Both models are in our standing export catalog — [X50](/cars/jetour-x50/) and [Geely Coolray](/cars/geely-coolray/). Contact us for current stock and lead times for your target market.`,
     faqs: [
-      { q: 'Better resale value?', a: 'Coolray edges out due to Volvo platform reputation. ZS similar to other budget compact SUVs.' },
-      { q: 'Parts availability in Africa?', a: 'Both decent. MG slightly broader (longer presence in market). Geely growing fast.' },
+      { q: 'Which has better resale value?', a: 'Coolray tends to hold value better due to Volvo-platform positioning. X50 is priced to compete on entry cost, not resale premium.' },
+      { q: 'Which fits a first-time African dealer better?', a: 'X50 — lower FOB means lower capital commitment and faster inventory turnover while you establish demand. Add Coolray once you have a proven customer base wanting a step up.' },
     ], related: ['geely-coolray-export-deep-dive', 'jetour-t2-vs-geely-coolray-africa'],
   },
 
@@ -1220,11 +1176,11 @@ If they can't produce a specimen of these, they haven't shipped legally before.
 
 ## How EV Auto Pro Checks Out
 
-We hold **MOFCOM authorized exporter status and AEO customs certification since 2018**, with direct dealer relationships across 6 OEMs (Changan, Deepal, Qiyuan, Geely, VW China, Jetour). Every order runs the [EV Auto Pro Export PDI](/services/inspection/) with a photo and video report before loading, on standard T/T 30/70 or L/C terms, with the full document set provided.
+Every order runs the [EV Auto Pro Export PDI](/services/inspection/) with a photo and video report before loading, on standard T/T 30/70 or L/C terms, with the full document set provided.
 
 ## Put Us Through the Checklist
 
-Don't take our word for it — ask us to prove every item above before you commit a deposit anywhere. Pick a target model from our [in-stock vehicle lineup](/cars/) and tell us your destination; we'll send our MOFCOM licence number, a sample document set, and a reference you can call.
+Don't take our word for anything on this page — ask us to prove every item in the checklist above before you commit a deposit anywhere, on your specific target model. Pick a model from our [in-stock vehicle lineup](/cars/) and tell us your destination; we'll walk you through our export documentation and licence details for that order before you pay anything.
 
 **Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20to%20verify%20your%20export%20credentials%20before%20ordering) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
     faqs: [
@@ -1306,7 +1262,7 @@ Heat matters here: the Gulf's charging network is growing but uneven, which is w
 
 ## Where EV Auto Pro Fits
 
-I run EV Auto Pro, so I'll be direct: **we are a China-side authorized exporter, not a UAE dealership.** We don't compete with The Elite Cars or Al-Futtaim for retail customers — and won't pretend to. Where we fit is the trade channel: dealers and fleet buyers importing 3+ units, re-exporters using Jebel Ali as a hub, and buyers who want factory trims or models the official networks don't stock. Every unit ships GCC-certified with our [photo & video pre-shipment inspection](/services/inspection/), on T/T 30/70 or L/C terms, 12–25 day dispatch from deposit.
+I run EV Auto Pro, so I'll be direct: **we are a China-side export company, not a UAE dealership.** We don't compete with The Elite Cars or Al-Futtaim for retail customers — and won't pretend to. Where we fit is the trade channel: dealers and fleet buyers importing 3+ units, re-exporters using Jebel Ali as a hub, and buyers who want factory trims or models the official networks don't stock. Every unit ships GCC-certified with our [photo & video pre-shipment inspection](/services/inspection/), on T/T 30/70 or L/C terms, 12–25 day dispatch from deposit.
 
 ![Geely Coolray — top-3 Chinese compact SUV in the UAE, real production unit](/images/vehicles/evautopro-geely-coolray-appearance-03.webp)
 
@@ -1961,6 +1917,85 @@ WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20compare%20
       { q: 'Are both available in right-hand drive?', a: 'Yes, as factory RHD batches with MOQ 20 and stated 45–60 day lead time. Confirm the exact destination specification before deposit.' },
       { q: 'Which is cheaper FOB?', a: 'The catalog ranges overlap; CS55 Plus starts lower at $14,500, while Coolray starts at $15,200. Compare the exact trim and landed cost.' },
     ], related: ['mg-zs-vs-geely-coolray-africa', 'geely-coolray-export-deep-dive', 'roro-vs-container-shipping-cars-from-china'],
+  },
+
+  'what-is-nevo-changan-new-energy-brand-explained': {
+    slug: 'what-is-nevo-changan-new-energy-brand-explained', category: 'industry', categoryLabel: 'Industry & Policy',
+    title: 'What Is NEVO? Changan\'s New Energy Export Brand Explained',
+    excerpt: 'NEVO is Changan Auto\'s export brand name for its new-energy sub-brand, sold in China as Qiyuan (启源). Covers the NEVO Q05 and A07, real launch markets, and specs.',
+    hero: '/images/vehicles/evautopro-nevo-a07-01.webp', date: '2026-07-18 09:00:00', readMin: 8,
+    body: `NEVO is Changan Auto's dedicated new-energy sub-brand — the export-market name for what's sold inside China as **Changan Qiyuan (长安启源)**. If you've landed on a NEVO product listing and don't recognize the name, that's expected: it's the same manufacturer, the same engineering, and in most cases the same vehicle, just carrying the brand name Changan uses on its global site instead of the Chinese domestic name. EV Auto Pro currently exports two NEVO models: the compact electric [NEVO Q05](/cars/nevo-q05/) SUV and the mid-large [NEVO A07](/cars/nevo-a07/) sedan, available as either a full BEV or an extended-range EREV.
+
+## Why Haven't I Heard of NEVO Before?
+
+If NEVO doesn't ring a bell, you're not missing something — it's a genuinely new name in most export markets. Major Chinese automakers spinning up dedicated new-energy sub-brands is a well-established industry pattern: large legacy OEMs increasingly separate their electric and range-extended vehicle lines under a distinct brand identity, distinct from their traditional combustion-engine model range. Changan has done this with Qiyuan domestically, and NEVO is the name that identity carries when the vehicles are sold outside China.
+
+This is worth stating plainly because it changes how you should evaluate a NEVO listing: you are not looking at a small independent startup with an unproven supply chain, and you are not looking at a rebadge of an unrelated car. You are looking at Changan Auto's new-energy product line under an export-specific brand name. That said, EV Auto Pro is not going to assert a founding year, a specific export-country count, or a business-relationship history for NEVO beyond what can actually be confirmed — vague or invented "since 20XX" claims are exactly the kind of thing a buyer should distrust on any Chinese-EV listing, including ours. What we can confirm is the product data below: real specs, real launch markets, real delivery records.
+
+Practically, the brand-name confusion resolves itself once you check the domestic model name. If a spec sheet, VIN plate, or supplier document references "Qiyuan" instead of "NEVO," that is not a red flag — it is the same vehicle under its China-market name.
+
+## Is NEVO the Same Company as Changan?
+
+Yes. NEVO is not a separate manufacturer, a joint venture with different ownership, or a third-party brand licensing Changan technology — it is Changan Auto's own new-energy sub-brand, and NEVO is specifically the name used for **export markets**, while Changan Qiyuan is the name used for the **China domestic market**. The two model names map directly:
+
+- NEVO Q05 (export) = Qiyuan Q05 (China domestic name)
+- NEVO A07 (export) = Qiyuan A07 (China domestic name)
+
+This dual-naming approach is common with Chinese automakers building export-focused sub-brands — the export name is often chosen for easier pronunciation or trademark availability in international markets, while the domestic name stays in Chinese. It does not indicate two different products, two different quality standards, or two different supply chains. When you buy a NEVO Q05 or NEVO A07 through an export channel, you are buying the same engineering platform documented for the Chinese market, sold under the brand name Changan uses internationally.
+
+If a supplier or listing uses "Qiyuan" and another uses "NEVO" for what looks like the identical vehicle, that's consistent — not a discrepancy to be suspicious of. If the specs actually differ between two listings claiming to be the same model, that's the thing worth questioning, not the brand name itself.
+
+## What Models Does NEVO Currently Export?
+
+Two NEVO models are in EV Auto Pro's export catalog today — one compact SUV and one mid-large sedan offered in two powertrain configurations:
+
+| Spec | NEVO Q05 (BEV) | NEVO A07 (BEV) | NEVO A07 (EREV) |
+| --- | --- | --- | --- |
+| China domestic name | Qiyuan Q05 | Qiyuan A07 | Qiyuan A07 |
+| Body type | Compact electric SUV | Mid-large sedan | Mid-large sedan |
+| Motor | 120kW / 163PS, single front motor | 190kW / 255PS | 200kW / 268PS + 1.5L range-extender |
+| Battery | 51.9kWh LFP (CATL) | 79kWh LFP | 35.1kWh |
+| Range | 462km (NEDC) | 730km (CLTC) | 310km pure-electric / 1,570km combined |
+| FOB price | $18,500–21,800 | $19,640–22,450 | $19,640–22,450 |
+| Product page | [NEVO Q05](/cars/nevo-q05/) | [NEVO A07](/cars/nevo-a07/) | [NEVO A07](/cars/nevo-a07/) |
+
+The Q05 is a pure BEV with no range-extender option. The A07 is the more flexible of the two: buyers can choose the full-battery BEV version for maximum range on a single charge (730km CLTC), or the EREV version, which pairs a smaller 35.1kWh battery with a 1.5L engine that generates electricity to extend total range to 1,570km — useful in markets where public DC fast-charging infrastructure is still limited. Which configuration fits a given market depends heavily on local charging density, so confirm the powertrain before placing an order rather than assuming BEV-by-default.
+
+## Where Has NEVO Actually Been Sold?
+
+This is the question that separates marketing claims from confirmed facts, and it's worth answering narrowly rather than broadly.
+
+The **NEVO Q05** launched in Thailand in May 2026, assembled there via CKD (complete knock-down kit assembly), and is also sold in Uzbekistan. Those are the two markets currently confirmed for this model.
+
+The **NEVO A07** has confirmed real delivery records to Russia, Kyrgyzstan, and Saudi Arabia, moving through established export channels. That is a narrower, more specific claim than a generic "exported to dozens of countries" line you might see on a trading-platform listing — and it's deliberately narrow, because that's what can actually be confirmed.
+
+![NEVO Q05 compact electric SUV, studio side profile](/images/vehicles/evautopro-nevo-q05-appearance-01.webp)
+
+If a supplier tells you NEVO has an export history broader than these confirmed markets, ask for the specific country and shipment evidence rather than accepting a round-number country count. EV Auto Pro would rather tell you the confirmed, narrower list than repeat an unverifiable bigger one.
+
+## Best For / Not Ideal For
+
+**Best for:**
+- Buyers who want current-generation LFP battery chemistry (CATL cells on the Q05) from an established, non-startup manufacturer.
+- Fleet or dealer buyers in markets with developing charging infrastructure, where the A07 EREV's 1,570km combined range covers the gap a pure BEV can't.
+- Buyers already comfortable with Changan as a manufacturer who want the new-energy product line specifically.
+
+**Not ideal for:**
+- Buyers who need a brand with a long, widely recognized export track record in their specific country — NEVO's confirmed export markets are currently limited to Thailand, Uzbekistan (Q05) and Russia, Kyrgyzstan, Saudi Arabia (A07). If your target market isn't on that list, treat it as unconfirmed territory and ask us directly before committing.
+- Buyers who need a same-day answer on export-country count or company history beyond what's stated above — we won't manufacture a number we can't back up, and that means some questions get "we don't have a verified answer" instead of a confident-sounding guess.
+
+## Ready to Order a NEVO Q05 or A07?
+
+If you're evaluating the Changan NEVO lineup for your market, we can walk you through current spec sheets, confirm which powertrain configuration fits your charging infrastructure, and quote current FOB pricing for either model.
+
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20current%20FOB%20pricing%20on%20the%20Changan%20NEVO%20Q05%20and%20A07) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
+    faqs: [
+      { q: 'Is NEVO a different manufacturer from Changan?', a: 'No. NEVO is Changan Auto\'s own export brand name for its new-energy sub-brand, sold in China as Changan Qiyuan (长安启源). The vehicles, engineering, and manufacturer are the same — only the brand name changes between the domestic and export markets.' },
+      { q: 'What\'s the difference between NEVO Q05 and NEVO A07?', a: 'The Q05 is a compact electric SUV: 51.9kWh LFP battery, 462km NEDC range, 120kW/163PS single motor. The A07 is a larger mid-large sedan offered as a 79kWh BEV (730km CLTC, 190kW/255PS) or as an EREV with a 1.5L range-extender, 35.1kWh battery, and 310km pure-electric range.' },
+      { q: 'Where can I actually buy a NEVO today?', a: 'The NEVO Q05 launched in Thailand in May 2026 (CKD-assembled) and is sold in Uzbekistan. The NEVO A07 has confirmed real delivery records to Russia, Kyrgyzstan, and Saudi Arabia through established export channels. Ask us directly if your market isn\'t on this list.' },
+      { q: 'Is the A07 EREV the same as a regular hybrid?', a: 'Not exactly. The NEVO A07 EREV pairs a 200kW/268PS motor with a 1.5L range-extender engine and a 35.1kWh battery. It drives as a pure EV for 310km on battery alone; after that, the engine generates electricity for the motor rather than driving the wheels directly, extending total combined range to 1,570km.' },
+      { q: 'How much does a NEVO cost FOB?', a: 'NEVO Q05 is quoted FOB $18,500–21,800. NEVO A07 (either BEV or EREV configuration) is quoted FOB $19,640–22,450. Final pricing depends on trim and battery/powertrain configuration — confirm current numbers with EV Auto Pro before ordering.' },
+    ], related: ['import-cars-from-china-to-uzbekistan-2026', 'how-to-choose-changan-suv', 'deepal-s07-alternatives'],
   },
 
 };
