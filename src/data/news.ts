@@ -1998,6 +1998,765 @@ If you're evaluating the Changan NEVO lineup for your market, we can walk you th
     ], related: ['import-cars-from-china-to-uzbekistan-2026', 'how-to-choose-changan-suv', 'deepal-s07-alternatives'],
   },
 
+  'import-cars-from-china-to-armenia-2026': {
+    slug: 'import-cars-from-china-to-armenia-2026', category: 'market', categoryLabel: 'Market & Import',
+    title: 'Import Cars from China to Armenia (2026 Guide)',
+    excerpt: 'Import cars from China to Armenia in 2026: the EAEU duty tiers (15-20% by vehicle age), 20% VAT, the Poti/Batumi shipping route via Georgia, and whether the new EV quota applies to dealers.',
+    hero: '/images/vehicles/evautopro-geely-atlas-01.webp', date: '2026-07-18 09:00:00', readMin: 8,
+    body: `To import cars from China to Armenia in 2026, a dealer bringing in a legal-entity shipment budgets three layers of cost: an age-based EAEU customs duty (15% of the customs value for cars up to 3 years old, rising steeply for older units), 20% VAT charged on the customs value plus duty, and freight routed through Georgia's Poti or Batumi port, since Armenia has no coastline of its own. A new EAEU quota also opens 15,000 duty-free electric and hybrid import slots for 2026, though it is not yet clearly confirmed whether a commercial dealer import qualifies for the customs-duty exemption or only the VAT relief. This guide breaks down the numbers, the shipping route, and the paperwork for a first order.
+
+## What Does Vehicle Import Duty Cost in Armenia?
+
+Armenia is a member of the Eurasian Economic Union (EAEU), so passenger vehicles do not clear at the general goods tariff — they follow their own age-and-engine-based schedule under the EAEU Common Customs Tariff. For a legal entity (dealer/importer) bringing in a car:
+
+| Vehicle age | Duty rate | Basis |
+| --- | --- | --- |
+| Up to 3 years old | 15% | Customs (CIF) value |
+| 3–7 years old | 20%, minimum €0.44/cm³ | Customs value or engine displacement — whichever is higher |
+| Over 7 years old | Specific duty per cm³ | Fixed EUR/cm³ rate, steep enough to rule out most older used cars as a cost-effective import |
+
+For a dealer sourcing new or current-model-year stock from China — the kind of order this route is built for — the 15% tier is normally the one that applies.
+
+One important flag before you price a shipment: these figures come from [brokers.am's customs clearance guide](https://brokers.am/en/blog/avtomeqenaneri-maqsazercum), a private customs-broker resource, not Armenia's State Revenue Committee directly. We were not able to independently verify them against the official EAEU Common Customs Tariff or the relevant annex of Armenia's Tax Code at the time of writing. Treat the table above as a planning figure, not a quoted rate — have a licensed Armenian customs broker confirm the exact duty for your model year and engine size before signing a purchase contract.
+
+## What Other Taxes Apply Besides Duty?
+
+VAT in Armenia is 20%, and this figure is well confirmed across independent sources: the [US Commerce Department's trade.gov Armenia Import Tariffs guide](https://www.trade.gov/country-commercial-guides/armenia-import-tariffs), [PwC's Worldwide Tax Summaries](https://taxsummaries.pwc.com/armenia/corporate/other-taxes), and [armenian-lawyer.com's import compliance guide](https://armenian-lawyer.com/business-immigration/armenia-import-customs-procedures-compliance-guide/) all agree on the rate. The important detail dealers miss: VAT is applied to the customs value **plus** the duty already paid, not to the customs value alone. Budget it as a tax on a tax, not a flat 20% of the car's price.
+
+There is also a separate environmental tax for vehicles over 5 years old when the importer is a legal entity. Broker sources put the rate around 2% at 6 years old, scaling with age, but we could not confirm an exact official schedule — if your order includes any vehicle past the 5-year mark, get the current environmental-tax figure in writing from your broker before quoting a retail price.
+
+![Passenger vehicles boarding a RoRo vessel at a commercial port](/images/services/shipping.webp)
+
+## Does the 2026 EAEU EV Quota Help a Dealer Importing for Resale?
+
+Effective January 1, 2026, the Eurasian Economic Commission opened a duty-free quota of 15,000 electric and hybrid vehicles (model years 2024–2026) across Armenia, Belarus and Kyrgyzstan combined. This is confirmed through the [EEC's own announcement](https://eec.eaeunion.org/en/news/mezhpravsovet-predostavil-tarifnuyu-lgotu-na-vvoz-elektromobiley-v-armeniyu-belarus-i-kyrgyzstan-v-2/) and reported by [Armenpress](https://armenpress.am/en/article/1237410) and [Arka.am](https://arka.am/en/news/business/armenia-will-be-granted-duty-free-quota-for-import-of-15-000-electric-vehicles-in-2026-/).
+
+Here is the part that matters before you build a business case around it: the sources do not fully agree on who qualifies.
+
+- The EEC's own notice restricts the **customs-duty exemption** to permanent residents of Armenia, Belarus or Kyrgyzstan, and explicitly bars resale to residents of Russia or Kazakhstan — language that reads as a personal-use benefit, not a dealer allocation.
+- Armenpress and Arka.am describe the quota more broadly as covering "electric vehicles including hybrids," with the **VAT exemption** extended to both individuals and legal entities.
+
+So the VAT-only relief looks more plausibly available to a legal-entity dealer than the customs-duty exemption does. Whether a China-import dealer bringing EVs in for resale can access the duty-free portion of this quota at all is **not clearly confirmed** by any source we found. Do not promise a customer duty-free EV pricing until you have direct written confirmation from Armenia's State Revenue Committee (petekamutner.am / src.am) or the EEC on how the quota applies to commercial imports.
+
+## What's the Shipping Route from China to Yerevan?
+
+Armenia is landlocked, so every car arriving from China moves through a neighboring country's port. Multiple independent freight forwarders — [Sino-Shipping](https://www.sino-shipping.com/shipping-from-china-to-armenia/), [Basenton](https://www.basenton.com/shipping-from-china-to-armenia/) and [SDI Logistics](https://www.sdilogistics-shippings.com/ocean-freight/four-transportation-routes-from-china-to.html) — converge on the same route: sea freight from China to Georgia's Poti or Batumi port, roughly 35–45 days transit, followed by RoRo or trucking overland along the Tbilisi–Yerevan corridor into Armenia.
+
+There is no Armenian government source confirming this route directly (Armenia has no ports of its own), but the consensus across independent commercial sources is consistent enough to plan around. If you're new to this corridor, it's worth reading our [Georgia import and re-export guide](/news/import-cars-from-china-to-georgia-2026-reexport-hub/) first — Georgia's Poti and Batumi ports are the same gateway Armenia-bound cars pass through, and that guide covers Georgian port handling, the 180-day re-export refund mechanism, and documentation in more depth.
+
+![Export professionals reviewing a vehicle shipment file](/images/services/export-process.webp)
+
+## Jetour X50 or Changan CS55 Plus: Which Fits a First Armenian Order?
+
+Both are compact SUVs and both ship as current-model-year stock, which is what keeps them in the 15% duty tier rather than the steeper 3–7-year bracket.
+
+| | [Jetour X50](/cars/jetour-x50/) | [Changan CS55 Plus](/cars/changan-cs55-plus/) |
+| --- | --- | --- |
+| Body type | Compact SUV | Compact SUV |
+| FOB price (China) | $9,000 – $13,500 | $14,500 – $17,900 |
+| Market position | Entry-level urban compact SUV | Changan's best-selling compact SUV |
+| Fits best | A value-conscious first order, lower entry price | Buyers who want the proven, higher-volume model |
+
+![Jetour X50 official UAE marketing campaign shot](/images/vehicles/evautopro-jetour-x50-appearance-01.webp)
+
+The X50's lower FOB gives a first-time Armenian importer more room to absorb the 15% duty and 20% VAT stack while still landing at a competitive retail price. The CS55 Plus costs more per unit but carries best-seller status, which matters if you're trying to move volume quickly in a market where buyers may not yet recognize the brand. Neither figure above includes freight, duty or VAT — those are quoted per shipment once route and quantity are confirmed.
+
+![Changan CS55 Plus — Changan's best-selling export SUV, real production unit](/images/vehicles/evautopro-changan-cs55-plus-appearance-01.webp)
+
+## What Documents Does Armenian Customs Require?
+
+Prepare this set before the vehicle loads in China, then have your Armenian broker confirm anything specific to your importer registration:
+
+- Customs declaration filed through Armenia's electronic DTI system
+- Commercial invoice / sales contract
+- Packing list
+- Bill of Lading (or CMR for the overland leg from Georgia)
+- Certificate of origin
+- For used vehicles: proof of prior registration/ownership
+
+This list is confirmed by [armenian-lawyer.com's import procedures guide](https://armenian-lawyer.com/business-immigration/armenia-import-customs-procedures-compliance-guide/) and the [US Commerce Department's Armenia import requirements guide](https://www.trade.gov/country-commercial-guides/armenia-import-requirements-and-documentation). Keep the VIN, invoice value and model description consistent across every document — a mismatch between the commercial invoice and the DTI declaration is one of the most common reasons a shipment gets held at clearance.
+
+## Who Is This Import Route Best For?
+
+**Best for:** Armenian dealers and importers doing legal-entity shipments of new or current-model-year Chinese SUVs, who can budget the 15% duty + 20% VAT stack, route through Georgia's Poti/Batumi ports, and want to start with a value-priced model like the [Jetour X50](/cars/jetour-x50/) or a proven seller like the [Changan CS55 Plus](/cars/changan-cs55-plus/).
+
+**Not ideal for:** anyone planning to import a car older than 7 years — the specific per-cm³ duty tier at that age is intentionally punitive and rarely worth it economically. It's also not the right route for a buyer counting on the 2026 EV quota as a guaranteed duty-free path for resale stock — the customs-duty exemption appears, on the EEC's own wording, to be restricted to permanent residents importing for personal use, with resale to Russia or Kazakhstan explicitly barred. Confirm your eligibility in writing with Armenia's State Revenue Committee before pricing any EV order around that quota.
+
+## Get a Landed-Cost Quote Before You Order
+
+Armenia's vehicle duty tiers, the environmental tax schedule, and the reach of the 2026 EV quota all have gaps that only a licensed Armenian broker or the State Revenue Committee can close with certainty. What we can do from the China side is quote your FOB price, prepare export documentation, and route the shipment through Poti or Batumi — send us your target model and quantity and we'll return a full quote so your local broker can confirm the final landed numbers.
+
+**Sources & further reading:** [brokers.am — car customs clearance guide](https://brokers.am/en/blog/avtomeqenaneri-maqsazercum) · [trade.gov — Armenia Import Tariffs](https://www.trade.gov/country-commercial-guides/armenia-import-tariffs) · [trade.gov — Armenia Import Requirements and Documentation](https://www.trade.gov/country-commercial-guides/armenia-import-requirements-and-documentation) · [PwC Worldwide Tax Summaries — Armenia](https://taxsummaries.pwc.com/armenia/corporate/other-taxes) · [armenian-lawyer.com — Import Customs Procedures & Compliance Guide](https://armenian-lawyer.com/business-immigration/armenia-import-customs-procedures-compliance-guide/) · [EEC official announcement — 2026 EV quota](https://eec.eaeunion.org/en/news/mezhpravsovet-predostavil-tarifnuyu-lgotu-na-vvoz-elektromobiley-v-armeniyu-belarus-i-kyrgyzstan-v-2/) · [Armenpress](https://armenpress.am/en/article/1237410) · [Arka.am](https://arka.am/en/news/business/armenia-will-be-granted-duty-free-quota-for-import-of-15-000-electric-vehicles-in-2026-/). Always confirm current duty, VAT and quota rules with Armenia's State Revenue Committee or a licensed customs broker before finalizing an order.
+
+**Talk to us:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%20need%20an%20Armenia%20vehicle%20import%20quote) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
+    faqs: [
+      { q: 'What is the customs duty on a car imported from China to Armenia?', a: 'Under the EAEU Common Customs Tariff, a legal-entity import pays 15% of the customs (CIF) value for a vehicle up to 3 years old, 20% of customs value with a minimum of €0.44/cm³ of engine displacement for a 3-7 year old car, and a steep specific per-cm³ duty for anything older. These figures come from a customs-broker source and are not yet confirmed against Armenia\'s State Revenue Committee directly — verify with a licensed broker before pricing.' },
+      { q: 'How much VAT do I pay importing a car into Armenia?', a: '20% VAT, applied to the customs value plus the duty already paid, not to the customs value alone. This rate is confirmed by the US Commerce Department\'s trade.gov guide and PwC\'s Worldwide Tax Summaries. A separate environmental tax also applies to legal-entity imports of vehicles over 5 years old.' },
+      { q: 'Can a dealer import electric vehicles into Armenia duty-free under the 2026 quota?', a: 'Armenia has a 2026 EAEU quota for 15,000 duty-free EVs/hybrids, but sources disagree on scope: the EEC\'s own notice restricts the customs-duty exemption to permanent residents importing for personal use, while Armenpress and Arka.am describe a broader VAT exemption for both individuals and legal entities. Whether a China-import dealer qualifies for the duty-free portion is not clearly confirmed — get written confirmation from Armenia\'s State Revenue Committee before pricing an order around it.' },
+      { q: 'How do cars ship from China to Armenia since it has no ports?', a: 'Cars move by sea freight from China to Georgia\'s Poti or Batumi port (roughly 35-45 days transit), then overland by RoRo or truck along the Tbilisi-Yerevan corridor into Armenia. This route is confirmed by multiple independent freight forwarders, though no Armenian government source verifies it directly since the country is landlocked.' },
+      { q: 'What documents does Armenian customs require for an imported car?', a: 'You need a customs declaration filed through Armenia\'s electronic DTI system, commercial invoice or sales contract, packing list, Bill of Lading or CMR, certificate of origin, and for used vehicles, proof of prior registration or ownership. Keep the VIN and invoice value consistent across every document to avoid clearance delays.' },
+    ], related: ['import-cars-from-china-to-georgia-2026-reexport-hub', 'import-cars-from-china-to-kazakhstan-2026', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import'],
+  },
+  'volkswagen-china-export-program-explained': {
+    slug: 'volkswagen-china-export-program-explained', category: 'industry', categoryLabel: 'Industry & Policy',
+    title: 'Volkswagen\'s China Export Program Explained: What Buyers Need to Know',
+    excerpt: 'FAW-Volkswagen shipped 554 Magotan and Sagitar units from Shanghai Port in September 2025 as China\'s first official VW export. Here\'s how the program works.',
+    hero: '/images/vehicles/evautopro-volkswagen-magotan-01.webp', date: '2026-07-18 10:30:00', readMin: 8,
+    body: `Volkswagen's China export program is real and factory-backed — not a grey-market rebadge job. In September 2025, FAW-Volkswagen (one of Volkswagen's two Chinese joint-venture manufacturers) shipped 554 Magotan and Sagitar units out of Shanghai Port bound for the Middle East, marking China's first official Volkswagen export shipment. Volkswagen Brand Middle East's own General Manager personally received the first unit at the handover ceremony. The flagship model of that program, the [Volkswagen Magotan](/cars/volkswagen-magotan/), has been on sale in the UAE and Saudi Arabia since November 2025, with Kazakhstan completing certification in July 2026.
+
+## Is This Actually an Official Volkswagen Program, or Just a Rebadged Export Car?
+
+This is the question every skeptical buyer should ask first, and it's a fair one — plenty of "China export" listings are grey-market vehicles with no factory involvement at all. The Magotan export program is different in one specific, checkable way: it wasn't handed off quietly. When the first 554 units (a mix of Magotan and Sagitar) left Shanghai Port in September 2025, Volkswagen Brand Middle East's own General Manager was present to personally receive the first unit at the handover ceremony. That's a regional brand executive, not a third-party distributor or reseller, putting their name on the shipment.
+
+The Magotan itself is built by FAW-Volkswagen — one of Volkswagen's two long-running joint-venture manufacturers in China (the other being SAIC-Volkswagen, which matters later in this article). In China, the Magotan (迈腾) is FAW-Volkswagen's flagship mid-size sedan. This September 2025 shipment was the model's, and the program's, first-ever official export run — meaning there's no decade of export history to point to yet, but there is a documented factory-to-market handover to anchor the claim of "official" on.
+
+For a buyer, the practical takeaway is: verify the shipment date, the port, and the receiving party independently if you want extra assurance — all three are specific enough to check, which is itself a signal of a real program rather than a marketing claim.
+
+## Which Markets Can Actually Buy the Export Magotan Right Now?
+
+As of July 2026, the program covers three markets at three different stages — worth knowing before you inquire, so you're not asking for something that isn't sellable in your country yet.
+
+| Market | Status | Detail |
+|---|---|---|
+| UAE | Live | On sale since November 2025 |
+| Saudi Arabia | Live | On sale since November 2025 |
+| Kazakhstan | Certified, pre-sales | Certification completed July 2026; sales expected H2 2026 via distributor Orbis Auto/Mercur Autos |
+
+UAE and Saudi Arabia are the most mature part of the program — both have had live retail availability for roughly eight months as of this writing. Kazakhstan is the newest addition: certification cleared in July 2026, and the distributor network (Orbis Auto and Mercur Autos) is already named, but actual sales are expected in the second half of 2026 rather than immediately. If you're outside these three markets, the honest answer is that this program hasn't been confirmed to extend there yet — ask directly rather than assuming coverage.
+
+## Is the Kazakhstan "Passat" the Same Car as the Magotan — or a Different Vehicle Entirely?
+
+This is the single most important clarification in this article, because it's where buyers researching Volkswagen exports online are most likely to get confused.
+
+For the Kazakhstan market specifically, FAW-Volkswagen's Magotan will be sold under the name **"Passat"** rather than "Magotan." Mechanically and in every spec that matters, it's the same export vehicle described in this article — just rebadged for that one market.
+
+Here's the part that trips people up: Volkswagen's *other* Chinese joint venture, SAIC-Volkswagen, builds and sells its own, completely separate model also called **"Passat Pro"** — sold in China and Uzbekistan. Same brand, same name (Passat), but two different cars from two different joint-venture manufacturers, with no shared platform lineage implied by this naming overlap.
+
+If you're sourcing from China and someone quotes you a "VW Passat," the first question to ask is which joint venture built it — FAW-Volkswagen (the Magotan-based export car, rebadged Passat for Kazakhstan only) or SAIC-Volkswagen (the separate Passat Pro, sold in China and Uzbekistan). Confirm the manufacturer and market before assuming you're getting the model described in this article.
+
+## What Engine and Spec Options Does the Export Magotan Come With?
+
+The export Magotan is offered with two turbocharged four-cylinder options, split across trim levels:
+
+| Spec | 1.4T (Comfort / Luxury) | 2.0T (top Luxury trim) |
+|---|---|---|
+| Power | 150 hp (110 kW) | 186 hp (137 kW) |
+| Torque | 250 N·m | 320 N·m |
+| Transmission | Dry 7-speed DCT | Wet 7-speed DCT |
+
+Both engines sit in the same body: 4,866mm long × 1,832mm wide × 1,479mm tall, on a 2,871mm wheelbase, with a curb weight of 1,452kg. Top speed is 210 km/h, and 0–100 km/h takes 9.4 seconds. Note the transmission difference too: the 1.4T uses a dry-clutch 7-speed DCT, while the 2.0T uses a wet-clutch 7-speed DCT — wet clutches are the more common choice for handling higher torque loads over sustained driving, which is consistent with the 2.0T's higher 320 N·m figure versus the 1.4T's 250 N·m. Buyers cross-shopping mid-size sedans for the Middle East or Central Asia should note the 2.0T is reserved for the top Luxury trim only; the 1.4T covers both Comfort and Luxury, so the entry point into the Magotan lineup is a 1.4T Comfort car, not the 2.0T.
+
+## What Does It Cost, and How Do You Actually Order One?
+
+FOB pricing for the export Magotan runs **$21,420–$28,736**, spanning the trim and engine choices described above. Full trim-by-trim pricing and spec detail is on the [Volkswagen Magotan product page](/cars/volkswagen-magotan/).
+
+Because this is a newly catalogued export model — the program itself only started shipping in September 2025 — it is currently made to order rather than held in ready stock. MOQ is 1 unit, with a lead time of roughly 30 days. That's a meaningfully different buying process than sourcing an established export model with units already sitting at port; budget the extra weeks accordingly.
+
+One thing this article deliberately does not do is quote you a landed cost including duty, VAT, or registration fees — those rules are set by each destination country, change on their own schedule, and differ by market. If you're importing into Kazakhstan specifically, see our [Kazakhstan import guide](/news/import-cars-from-china-to-kazakhstan-2026/) for current duty and VAT figures; for UAE buyers weighing this against a local dealer, see our [UAE dealers vs. direct import guide](/news/chinese-car-dealers-uae-vs-direct-import-2026/). Always confirm current rates with your customs broker before finalizing a budget.
+
+## Best For / Not Ideal For
+
+**Best for:**
+- Buyers in the UAE or Saudi Arabia who want a globally recognized Volkswagen badge in the mid-size sedan segment, available for order today.
+- Kazakhstan buyers or distributors planning around an H2 2026 launch window, who want to lock in early with Orbis Auto/Mercur Autos or a China-side exporter ahead of local retail.
+- Buyers who want engine choice — 1.4T for a lower entry price, or 2.0T on the top Luxury trim for more power.
+- Buyers comfortable with a made-to-order process (roughly 30 days) rather than needing a unit shipped this week.
+
+**Not ideal for:**
+- Buyers needing immediate stock — this model has no ready stock on hand; every order is made to order.
+- Buyers in markets outside UAE, Saudi Arabia, and Kazakhstan — the program has not been confirmed to extend further yet, and we won't claim coverage that isn't documented.
+- Anyone who was actually looking for SAIC-Volkswagen's Passat Pro (the China/Uzbekistan model) — this is a different car from a different joint venture, and we cannot substitute one for the other.
+
+## Frequently Asked Questions
+
+**Is the Magotan a genuine official Volkswagen export model?**
+Yes — it's the flagship model of FAW-Volkswagen's first-ever official export program. 554 Magotan and Sagitar units departed Shanghai Port in September 2025 for the Middle East, with Volkswagen Brand Middle East's own General Manager receiving the first unit at the handover ceremony.
+
+**Is "Magotan" the same car as the Kazakhstan-market "Passat"?**
+Yes, for the Kazakhstan case specifically — FAW-Volkswagen's Magotan is rebadged "Passat" for the Kazakhstan market, certified July 2026. This is different from SAIC-Volkswagen's own separate "Passat Pro" sold in China and Uzbekistan — same name, two different cars from two different joint ventures.
+
+**What powertrain options are available?**
+Two: a 1.4T (150 hp / 110 kW / 250 N·m, dry 7-speed DCT) on Comfort and Luxury trims, or a 2.0T (186 hp / 137 kW / 320 N·m, wet 7-speed DCT) on the top Luxury trim only. Both share the same body: 4,866×1,832×1,479mm, 1,452kg, 210 km/h top speed, 0–100 km/h in 9.4 seconds.
+
+**Which markets can this ship to today?**
+The UAE and Saudi Arabia have been live since November 2025 — retail-ready today. Kazakhstan completed certification in July 2026, with sales expected in the second half of 2026 through distributor Orbis Auto/Mercur Autos, where the car will be sold as the "Passat." No other markets are confirmed for this program yet.
+
+**What's the MOQ and lead time?**
+This is a newly catalogued model within the export program, so it's made to order rather than shipped from ready stock — MOQ is 1 unit, with a lead time of roughly 30 days from confirmed order to production slot. Contact us for current factory allocation before you finalize a purchase timeline.
+
+## How Do You Get a Quote for the Export Magotan?
+
+If you're sourcing the Volkswagen Magotan for the UAE, Saudi Arabia, or Kazakhstan, reach out with your target market and trim and we'll confirm current FOB pricing and allocation against the September 2025 export program.
+
+[WhatsApp: +86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27m%20interested%20in%20the%20Volkswagen%20Magotan%20export%20program%20%28FOB%20pricing%20%2B%20lead%20time%29.) · [gacaicai@gmail.com](mailto:gacaicai@gmail.com)`,
+    faqs: [
+      { q: 'Is the Magotan a genuine official Volkswagen export model?', a: 'Yes — it\'s the flagship model of FAW-Volkswagen\'s first-ever official export program. 554 Magotan and Sagitar units departed Shanghai Port in September 2025 for the Middle East, with Volkswagen Brand Middle East\'s own General Manager receiving the first unit at the handover ceremony.' },
+      { q: 'Is "Magotan" the same car as the Kazakhstan-market "Passat"?', a: 'Yes, for the Kazakhstan case specifically — FAW-Volkswagen\'s Magotan is rebadged "Passat" for the Kazakhstan market, certified July 2026. This is different from SAIC-Volkswagen\'s own separate "Passat Pro" sold in China and Uzbekistan — same name, two different cars from two different joint ventures.' },
+      { q: 'What powertrain options are available?', a: 'Two: a 1.4T (150 hp / 110 kW / 250 N·m, dry 7-speed DCT) on Comfort and Luxury trims, or a 2.0T (186 hp / 137 kW / 320 N·m, wet 7-speed DCT) on the top Luxury trim only. Both share the same body: 4,866×1,832×1,479mm, 1,452kg, 210 km/h top speed, 0–100 km/h in 9.4 seconds.' },
+      { q: 'Which markets can this ship to today?', a: 'The UAE and Saudi Arabia have been live since November 2025 — retail-ready today. Kazakhstan completed certification in July 2026, with sales expected in the second half of 2026 through distributor Orbis Auto/Mercur Autos, where the car will be sold as the "Passat." No other markets are confirmed for this program yet.' },
+      { q: 'What\'s the MOQ and lead time?', a: 'This is a newly catalogued model within the export program, so it\'s made to order rather than shipped from ready stock — MOQ is 1 unit, with a lead time of roughly 30 days from confirmed order to production slot. Contact us for current factory allocation before you finalize a purchase timeline.' },
+    ], related: ['import-cars-from-china-to-kazakhstan-2026', 'chinese-car-dealers-uae-vs-direct-import-2026', 'how-to-verify-a-chinese-car-exporter-before-you-pay'],
+  },
+  'jetour-x90-plus-import-guide-2026': {
+    slug: 'jetour-x90-plus-import-guide-2026', category: 'guide', categoryLabel: 'Buyer Guide',
+    title: 'Jetour X90 Plus Import Guide: Specs, Pricing, Markets (2026)',
+    excerpt: 'A decision-stage import guide to the Jetour X90 Plus flagship 7-seater: full engine and dimension specs, the real FOB price range ($12,990-$26,500), current official export markets, and sourced 2026 duty/VAT rates for UAE, Saudi Arabia, Qatar, Nigeria, Egypt, Kazakhstan, and Russia.',
+    hero: '/images/vehicles/evautopro-jetour-x90-plus-01.webp', date: '2026-07-18 12:00:00', readMin: 11,
+    body: `The Jetour X90 Plus is a full-size, factory 5/6/7-seat flagship SUV built on a front-wheel-drive ICE platform, positioned as Jetour's premium three-row option for buyers who need genuine cabin space rather than a compact crossover with an extra row squeezed in. It's offered with two turbocharged engines — a 1.6TGDI (145kW/197PS) or a flagship 2.0TGDI (187kW/254PS) — both paired to a 7-speed wet dual-clutch transmission. Trade-platform FOB listings currently range from $12,990 to $26,500 depending on engine, trim, and seat configuration, though Jetour has not published an official factory list price. This guide covers the full spec sheet, real current import markets, and the duty/tax structure you'll actually face before you commit to an order.
+
+## What Is the Jetour X90 Plus?
+
+The Jetour X90 Plus sits at the top of Jetour's SUV lineup as the brand's premium flagship 7-seater — a full-size, internal-combustion SUV built on a front-wheel-drive layout with factory 5, 6, or 7-seat configurations depending on which trim you order. It's positioned above the smaller [Jetour X70 Plus](/cars/jetour-x70-plus/) for buyers who need genuine third-row space rather than an occasional-use rear bench bolted onto a compact-class platform.
+
+At 4858mm long, 1925mm wide, and 1780mm tall on a 2850mm wheelbase, the X90 Plus is built for markets where family size, ride-hailing fleets, or multi-generational travel make a true 3-row SUV a practical requirement rather than a luxury. It's currently certified and sold through official or regional-dealer channels across seven markets spanning the Gulf, North Africa, West Africa, Russia, and Central Asia — see the [full X90 Plus product page](/cars/jetour-x90-plus/) for the complete spec sheet and current photos.
+
+The rest of this guide breaks down engine choices, cargo capacity, real FOB pricing, and the duty/tax structure you'll face in each import market.
+
+## What Engine and Performance Specs Does the Jetour X90 Plus Offer?
+
+The X90 Plus is offered with two turbocharged gasoline engines, both paired to the same 7-speed wet dual-clutch transmission (DCT) driving the front wheels:
+
+| Spec | 1.6TGDI (Entry) | 2.0TGDI (Flagship) |
+|---|---|---|
+| Power | 145 kW / 197 PS | 187 kW / 254 PS |
+| Torque | 290 N·m | 390 N·m |
+| Transmission | 7-speed wet DCT | 7-speed wet DCT |
+| Drive layout | FWD | FWD |
+
+Jetour rates the X90 Plus lineup for a 190 km/h top speed.
+
+The choice between the two comes down to how the vehicle will actually be used. The 1.6TGDI's 290N·m is adequate for city and highway driving with a typical passenger load, and a smaller-displacement engine generally means lower running costs and — depending on the destination market's tax bands — a lighter duty bill (Egypt, for example, tiers customs duty by engine displacement; see the tax section below). The 2.0TGDI's extra 100N·m of torque and 57PS matters more when the vehicle is regularly loaded with 6-7 occupants plus cargo, or used in hillier terrain. Neither engine is offered with a hybrid or EV powertrain in the specs provided — this is a pure ICE lineup.
+
+## What Are the Dimensions, Weight, and Cargo Capacity?
+
+| Spec | Value |
+|---|---|
+| Length x Width x Height | 4858 x 1925 x 1780 mm |
+| Wheelbase | 2850 mm |
+| Weight | 1742 kg |
+| Seating configuration | 5, 6, or 7 seats (factory options) |
+| Cargo (5-seat, seats up) | 486 L |
+| Cargo (all seats folded) | 1052 L |
+
+At 4858mm long and riding on a 2850mm wheelbase, the X90 Plus falls into the full-size SUV class — long enough to give the second and third rows genuine legroom rather than the compressed +2 seating common in smaller 7-seat crossovers. The 1742kg factory weight is worth flagging for two practical reasons: it feeds into recycling/utilization fee calculations in markets like Russia and Kazakhstan where fees are partly displacement- or weight-linked, and it's a data point your freight forwarder will need for accurate shipping cost quotes.
+
+Cargo capacity swings from 486L with all seats up (5-seat configuration, behind the third row) to 1052L with the rear seats folded flat — enough for the vehicle to double as family hauler and cargo runner without needing a roof box for most loads. If your use case is fleet or commercial (ride-hailing, tour operators), confirm which seat configuration (5/6/7) your specific export unit ships in, since cargo volume changes meaningfully between configurations.
+
+## How Much Does the Jetour X90 Plus Cost to Import (FOB Pricing)?
+
+Current FOB (Free On Board) prices on trade platforms for the Jetour X90 Plus range from $12,990 to $26,500, depending on engine (1.6TGDI vs 2.0TGDI), seat configuration (5/6/7), and trim level. Jetour has not published an official factory list price for the X90 Plus, so this range reflects real listings on trade platforms rather than a manufacturer MSRP — treat it as a market indicator, not a locked-in quote.
+
+That's an important distinction for budgeting: FOB price alone tells you what you'd pay to get the vehicle loaded onto a vessel at the export port. It does not include freight, insurance, the destination country's customs duty and VAT (see the next section), registration, or any dealer/agent margin layered on by a local distributor. On a vehicle in this price bracket, duty and tax alone can add anywhere from roughly 10% of value (Qatar, at the low end) to well over 100% (Egypt, at the high end for larger-displacement engines) — so the FOB figure is the starting point of a landed-cost calculation, not the answer to it.
+
+Before placing an order, request a current, written FOB quote tied to your exact spec (engine, seat count, trim) and target port — trade-platform listing ranges move with demand and shouldn't be treated as a fixed price.
+
+## Which Markets Can You Currently Import the Jetour X90 Plus Into?
+
+Per official and regional-dealer sources, the Jetour X90 Plus is currently sold through official or regional-dealer channels in seven markets: Saudi Arabia, UAE, Qatar, Russia, Kazakhstan, Egypt, and Nigeria.
+
+The vehicle carries GCC conformity certification, covering the Gulf Cooperation Council markets (Saudi Arabia, UAE, Qatar), and EAC (Eurasian Conformity) certification, covering Russia and Kazakhstan. Egypt and Nigeria are covered through regional-dealer presence per the source data, separate from the GCC/EAC certification schemes.
+
+If your target market isn't on this list, that doesn't automatically rule out import — it means there's no confirmed official or dealer channel yet, and you'd need to independently verify homologation, type-approval, and certification requirements with your destination country's transport/customs authority before committing to an order. Grey-market or parallel import into a country without an established X90 Plus presence carries meaningfully more compliance risk (and often a longer, costlier homologation process) than ordering into one of the seven markets above.
+
+For any of these seven markets, confirm current certification validity with your supplier before finalizing an order — vehicle certification schemes are periodically updated, and a certificate valid today may need renewal or revalidation by the time your order ships.
+
+## What Import Duties and Taxes Should You Budget For?
+
+Duty and tax structures vary significantly by market and change periodically, so treat the figures below as a starting point for budgeting, not a final landed-cost number. All figures were checked against official/authoritative sources in July 2026 — verify current rates with a licensed customs broker in your destination country before ordering.
+
+| Market | Customs Duty | VAT / Other Taxes |
+|---|---|---|
+| UAE | 5% of CIF value (GCC common external tariff) | 5% VAT |
+| Saudi Arabia | ~5% of CIF value (GCC common external tariff) | 15% VAT (ZATCA) |
+| Qatar | 5% of CIF value (ad valorem) | No VAT currently in effect |
+| Nigeria | 5% (used vehicles) / 10% (new vehicles) — effective July 1, 2026 | VIN-based customs valuation system + Green Tax Surcharge (from July 1, 2026) |
+| Egypt | 30% (engines ≤1,600cc) / 100% (engines >1,600cc) | 14% VAT + 3–8.5% development/service fee |
+| Kazakhstan | EAEU Unified Customs Tariff — 15% ad valorem (company imports); personal imports use a per-cm³ combined payment scaled by vehicle age | 16% VAT (from January 1, 2026) |
+| Russia | Utilization/recycling fee restructured December 1, 2025, calculated by engine displacement and power | Both X90 Plus engines (197PS/254PS) exceed the 160PS threshold for Russia's preferential personal-use recycling-fee rate — standard/commercial fee schedule applies, confirm exact figure with a broker |
+
+Two notes specific to the X90 Plus. In Egypt, the exact duty band depends on precise engine displacement in cubic centimeters, which isn't specified in the source spec sheet beyond the "1.6TGDI"/"2.0TGDI" naming — confirm the registered cc figure before assuming which band applies, since it's the difference between 30% and 100% duty. In Russia, both the 145kW (197PS) and 187kW (254PS) engines sit above the 160PS cutoff used for Russia's lowest personal-use recycling-fee tier, so expect the standard/commercial fee schedule rather than the low preferential rate often quoted in general Russia car-import guides.
+
+Sources: [UAE customs duties guide](https://inlex-partners.com/blog/uae-customs-duties/), [Saudi Arabia VAT — ZATCA](https://zatca.gov.sa/en/RulesRegulations/VAT/Pages/default.aspx), [Qatar import duties](https://traddal.com/resources/calculate-duties-taxes-imports-qatar), [Nigeria 2026 vehicle tariff cut](https://www.premiumtimesng.com/news/893489-customs-announces-lower-tariffs-on-imported-vehicles-sets-%E2%82%A611tn-revenue-goal.html), [Egypt car import customs duties](https://www.yallamotor.com/news/2025-car-import-customs-duties-in-egypt:-full-guide,-tax-rates,-and-cost-calculations-54641), [Kazakhstan customs calculator](https://stsx.co/customs-calculator), [Russia recycling fee rules](https://eng.autostat.ru/news/27063/).
+
+## Jetour X90 Plus vs Jetour X70 Plus: Which Flagship Fits Your Market?
+
+If the X90 Plus's full-size footprint (4858mm long, 2850mm wheelbase) and $12,990-$26,500 FOB range are more vehicle and more budget than your target buyers need, it's worth knowing Jetour also sells the [Jetour X70 Plus](/cars/jetour-x70-plus/) as a smaller sibling in the same flagship-tier family. We don't have verified specs or FOB pricing for the X70 Plus in this guide — check the dedicated product page for its dimensions, engine options, and current pricing — but as a general rule, let seating requirement decide first: if your market genuinely needs factory 6/7-seat capacity with the cargo and interior room that implies, the X90 Plus is the right starting point; if you're serving buyers who rarely fill a third row and want a smaller footprint or lower entry price, it's worth comparing against the X70 Plus before committing to an order.
+
+## Best For / Not Ideal For
+
+**Best for:**
+- Importers in markets that already have GCC or EAC certification coverage (Saudi Arabia, UAE, Qatar, Russia, Kazakhstan), where homologation friction is lower
+- Buyers who need genuine factory 6- or 7-seat capacity — large families, tour operators, ride-hailing fleets — not just an occasional-use third row
+- Buyers who want an engine choice: the 1.6TGDI for lower running costs and, in tiered markets like Egypt, potentially lower duty exposure, or the 2.0TGDI for extra torque when routinely loaded with 6-7 occupants
+
+**Not ideal for:**
+- Buyers who need a fixed, published factory price to budget against — none exists for the X90 Plus yet, so every order needs a live quote tied to current trade-platform listings
+- Buyers wanting a hybrid or EV powertrain — the X90 Plus lineup covered here is ICE-only (1.6TGDI/2.0TGDI), with no electrified option in the current spec sheet
+- Cost-sensitive buyers targeting Egypt with the larger 2.0TGDI engine — if it lands in the >1,600cc duty band, customs duty alone hits 100% of value before VAT and fees are even added
+- Markets outside the seven listed above — importing there means starting homologation and certification verification from scratch rather than relying on an established dealer channel
+
+## Get a Current Quote for the Jetour X90 Plus
+
+FOB pricing, seat configuration availability, and duty/tax rules shift by market and by month — the fastest way to get numbers you can actually budget against is to ask directly. [Message us on WhatsApp](https://wa.me/8615964467914?text=Hi%2C%20I%27m%20interested%20in%20importing%20the%20Jetour%20X90%20Plus.%20Please%20send%20current%20FOB%20pricing%20and%20available%20configurations.) at +86 159 6446 7914 with your target country, preferred engine, and seat configuration, or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) with the same details. See the full [Jetour X90 Plus product page](/cars/jetour-x90-plus/) for additional photos and specs.`,
+    faqs: [
+      { q: 'What\'s the difference between the Jetour X90 Plus\'s two engine options?', a: 'The entry 1.6TGDI makes 145kW (197PS) and 290N·m of torque, while the flagship 2.0TGDI makes 187kW (254PS) and 390N·m. Both route power through a 7-speed wet dual-clutch transmission to the front wheels, and Jetour rates both configurations for a 190km/h top speed. The practical difference is torque and mid-range pull rather than top speed — the 2.0TGDI\'s extra 100N·m matters most when the vehicle is loaded with 6-7 occupants and cargo.' },
+      { q: 'Is the Jetour X90 Plus available with 7 seats?', a: 'Yes. It\'s a factory-built SUV offered in 5, 6, or 7-seat configurations, with cargo space ranging from 486L behind the third row (5-seat layout, seats up) to 1052L with all seats folded flat. Confirm your target market\'s specific seat-count and cargo requirement with your supplier before ordering, since not every configuration is necessarily stocked at every export point.' },
+      { q: 'What certifications does the Jetour X90 Plus carry for import?', a: 'It holds GCC conformity certification, covering Gulf Cooperation Council markets like Saudi Arabia, UAE, and Qatar, and EAC (Eurasian Conformity) certification, covering Russia and Kazakhstan. Confirm with your supplier that the specific unit and engine variant you\'re ordering matches the certification required for your destination market, since certification can be configuration-specific.' },
+      { q: 'How much does the Jetour X90 Plus cost FOB, and why isn\'t there a fixed price?', a: 'Trade-platform listings currently show FOB prices ranging from $12,990 to $26,500 depending on engine, seat configuration, and trim. Jetour has not published an official factory list price, so this range reflects real market listings rather than a manufacturer MSRP — get a current quote tied to your exact spec before budgeting, since prices move with trim and demand.' },
+      { q: 'Which countries can I import the Jetour X90 Plus into right now?', a: 'Based on official and regional-dealer sources, the X90 Plus is currently sold through official or regional-dealer channels in Saudi Arabia, UAE, Russia, Egypt, Nigeria, Qatar, and Kazakhstan. If your target market isn\'t on this list, it doesn\'t necessarily mean import is impossible — it means there\'s no confirmed dealer presence yet, so homologation and certification feasibility need separate verification.' },
+    ], related: ['how-to-choose-jetour-lineup', 'top-7-chinese-suv-for-russia-2026', 'import-cars-from-china-to-saudi-arabia-2026'],
+  },
+  'nevo-a07-buying-guide-bev-vs-erev': {
+    slug: 'nevo-a07-buying-guide-bev-vs-erev', category: 'guide', categoryLabel: 'Buyer Guide',
+    title: 'NEVO A07 Buying Guide: BEV vs EREV, Specs, Pricing',
+    excerpt: 'The NEVO A07 comes as a 730km-range BEV or a 1,570km-combined EREV — the real decision most buyers face. Here\'s the spec breakdown, honest FOB pricing range, confirmed export markets, and sourced import-duty numbers for Russia, Kyrgyzstan, and Saudi Arabia.',
+    hero: '/images/vehicles/evautopro-nevo-a07-01.webp', date: '2026-07-18 13:30:00', readMin: 9,
+    body: `The NEVO A07 — sold in China as the Qiyuan A07 — is a mid-large RWD sedan built on two distinct powertrains: a pure-electric BEV with a 79kWh LFP battery rated at 730km CLTC range, and an EREV with a 1.5L range-extender engine plus a 35.1kWh battery good for 1,570km combined range. Confirmed FOB export pricing for the [NEVO A07](/cars/nevo-a07/) runs $19,640–22,450 per unit, though quotes vary by trim and trading platform. The decision that actually matters for most buyers isn't trim color or options — it's BEV or EREV, and the right answer depends heavily on where the car is going.
+
+## What Is the NEVO A07, Exactly?
+
+The NEVO A07 is the export badge for a vehicle sold domestically in China as the Qiyuan A07. It's a mid-large, 5-seat sedan with a rear-wheel-drive layout — a configuration more common on premium/executive sedans than budget front-drive cars, and a useful signal of which segment this model is aiming at.
+
+Exterior tech includes hidden (flush) door handles, a styling choice shared with several recent Chinese EV launches. Inside, the cabin is built around an AR-HUD (augmented-reality head-up display) and a 15.4-inch central touchscreen running on a Qualcomm Snapdragon 8155 chip — the same chipset widely used across current-generation Chinese EV infotainment systems for fast UI response and split-screen multitasking.
+
+The single biggest thing to understand before requesting a quote is that "NEVO A07" isn't one car — it's two, sharing a body but differing completely in how they store and deliver energy. One is a full battery-electric vehicle; the other is an extended-range electric vehicle with a small gasoline engine on board purely to recharge the battery, not to drive the wheels directly. That distinction is covered in full below, because it's the real decision facing most buyers, not a footnote.
+
+## BEV or EREV — Which NEVO A07 Should You Buy?
+
+This is the core choice. Both versions use electric motors to drive the wheels, but they solve the range problem in opposite ways.
+
+The **BEV** uses a single 190kW/255PS motor drawing from a 79kWh LFP (lithium iron phosphate) battery, rated at 730km on China's CLTC test cycle. LFP chemistry is generally valued for thermal stability and longer cycle life versus higher-density NMC packs, though we don't have model-specific cycle-life figures to quote here. There's no engine, no fuel tank, and no combustion maintenance — just a charger.
+
+The **EREV** uses a more powerful 200kW/268PS motor, but a much smaller 35.1kWh battery, backed by a 1.5L range-extender engine that generates electricity to keep driving once the battery is low. That gives it only 310km of pure-electric range for daily commuting, but a combined range of 1,570km once you count the engine's contribution — more than double the BEV's total range, with the tradeoff of carrying an engine and needing occasional fuel stops.
+
+| | BEV | EREV |
+|---|---|---|
+| Motor power | 190kW / 255PS | 200kW / 268PS |
+| Range-extender engine | None | 1.5L |
+| Battery | 79kWh LFP | 35.1kWh |
+| Pure-electric range | 730km (CLTC) | 310km (CLTC) |
+| Combined range | 730km | 1,570km |
+| Refuels via | Charging only | Charging + gasoline |
+| Best fit | Markets with dense, reliable charging | Markets with sparse or unreliable charging |
+
+If you're deploying into a city with mature DC fast-charging infrastructure and mostly do daily-range driving, the BEV's simpler drivetrain and longer pure-electric range make sense. If you're serving a market where public charging is thin, unreliable, or nonexistent outside major cities — which describes a lot of the export corridors this model actually ships into — the EREV's 1,570km combined range removes range anxiety from the equation entirely.
+
+## How Big Is the NEVO A07, and How Does It Drive?
+
+Confirmed dimensions and drivetrain figures for the EREV version: length/width/height of 4905×1910×1480mm, a 2900mm wheelbase, curb weight of 1805kg, and a top speed of 172km/h. That places it in the mid-large sedan class — longer and wider than a compact sedan, with a wheelbase (2900mm) generous enough to suggest strong rear legroom, though we don't have official cabin measurements to confirm that directly.
+
+One thing to flag honestly: the dimensions, weight, and top speed above are the figures we have confirmed for the EREV. We were not given separately verified figures for the BEV version, and while it's common for a manufacturer to share a body shell across powertrain variants (the battery-only BEV would plausibly weigh differently given the pack-size difference — 79kWh versus 35.1kWh), we're not going to assume that or invent BEV-specific numbers. If BEV-specific weight, dimensions, or top speed matter for your shipping calculations or homologation paperwork, ask us to confirm them before you order.
+
+The RWD layout itself is worth noting for buyers used to front-drive Chinese EV exports — it's a mechanical layout more associated with larger, higher-positioned sedans, and it changes weight distribution versus a front-drive equivalent, though we don't have a published front/rear weight split to quote.
+
+## What Does It Cost to Import a NEVO A07?
+
+Our confirmed FOB export price range for the NEVO A07 is **$19,640–22,450 per unit**. That's the figure we can stand behind from our own channel.
+
+Be aware that pricing quoted across different B2B trading platforms for this model varies more widely — we've seen figures anywhere from $14,000 to $23,000 depending on the source and trim referenced. That spread is large enough that treating any single number you see online as a fixed, final price would be a mistake. Trim level (BEV vs. EREV, equipment package), order volume, and which platform is quoting all move the number. Request a current, trim-specific quote before committing to an order rather than budgeting off a headline figure from a listing site.
+
+We don't have confirmed MOQ (minimum order quantity) or production lead-time figures to share here — ask directly when requesting your quote so you can build an accurate delivery timeline.
+
+## Where Can the NEVO A07 Actually Be Delivered?
+
+We have confirmed real delivery records for the NEVO A07 to three markets: **Russia, Kyrgyzstan, and Saudi Arabia**, moved through established export channels.
+
+We want to be direct about what we're not claiming: some trading platforms advertise this model as available to "50+ export countries." We looked into that claim and could not independently confirm it, so we're not repeating it as fact here. If your destination market isn't Russia, Kyrgyzstan, or Saudi Arabia, that doesn't necessarily mean it's unavailable — it means we don't have a confirmed delivery record for it yet, and you should ask us directly about logistics, homologation, and lead time for your specific country before assuming availability.
+
+## What Import Duties and Taxes Should You Budget For?
+
+Duty and tax rules change often and vary sharply by destination, so treat the figures below as a planning baseline sourced at the time of writing (July 2026), not a guarantee — confirm current numbers with local customs before you order.
+
+**Russia**: Vehicles are subject to a per-unit "utilization" (recycling) fee. As of January 1, 2025, that fee is 667,400 rubles for electric vehicles and series hybrids up to three years old, rising to 1.17 million rubles for units older than three years, with the schedule set to increase 10–20% annually through 2030 ([AUTOSTAT](https://eng.autostat.ru/news/25667/)). The fee is calculated partly on motor power, and vehicles above roughly 90kW — which covers both the A07 BEV (190kW) and EREV (200kW) — fall into the higher EV-tier bracket rather than a baseline passenger-car rate.
+
+**Kyrgyzstan**: The Eurasian Economic Union (EAEU), which sets Kyrgyzstan's common external tariff, granted a 2026 duty-free import quota specifically for "series hybrids" (EAEU tariff code 8703 80 000 5) — a category that covers EREV-type vehicles like the A07 EREV — capped at 15,000 units, restricted to permanent residents of Kyrgyzstan, with resale to Russian, Kazakh, or Belarusian citizens prohibited ([Eurasian Economic Commission](https://eec.eaeunion.org/en/news/mezhpravsovet-predostavil-tarifnuyu-lgotu-na-vvoz-elektromobiley-v-armeniyu-belarus-i-kyrgyzstan-v-2/)). Some 2026 reporting indicates this quota may already be close to exhausted ([AKIpress](https://akipress.com/news:905600:Kyrgyzstan_s_duty-free_import_quota_for_15,000_electric_vehicles_exhausted/)); once it's used up, imports revert to the EAEU's 15% common external tariff. Confirm live quota status before ordering.
+
+**Saudi Arabia**: VAT is confirmed at 15%, in effect since July 2020, and the GCC common external tariff applies a baseline of at least 5% on most goods imported from outside the GCC bloc ([U.S. Commercial Service Saudi Arabia guide](https://www.trade.gov/country-commercial-guides/saudi-arabia-import-tariffs)). We could not independently verify the exact HS-code-specific duty line for this vehicle through ZATCA's public portal at time of writing, so treat combined landed tax/duty in the region of 20% of assessed value as a planning estimate and confirm the precise figure with ZATCA before committing.
+
+## Who Should Buy the NEVO A07 — and Who Shouldn't?
+
+**Best for:**
+- Buyers in markets with sparse or unreliable public charging who want the EREV's 1,570km combined range as an anxiety-free buffer
+- Buyers in EAEU markets like Kyrgyzstan who may qualify for the 2026 duty-free "series hybrid" quota (confirm live status first)
+- Buyers who want maximum pure-EV range on an LFP pack for daily driving with zero engine involvement — the BEV's 730km CLTC / 79kWh combination
+- Buyers who want a modern tech package (AR-HUD, 15.4" Snapdragon 8155 screen, hidden door handles) in a mid-large RWD sedan body
+
+**Not ideal for:**
+- Buyers who need one locked FOB number before requesting a quote — actual pricing depends on trim and moves within a documented $14,000–23,000 spread across trading platforms
+- Buyers outside Russia, Kyrgyzstan, and Saudi Arabia who need pre-confirmed delivery logistics — other markets aren't verified yet, so ask before assuming availability
+- Buyers who need BEV-specific curb weight, dimensions, or top speed confirmed upfront for homologation — our verified data currently covers the EREV's figures only
+- Buyers who treat CLTC range numbers as guaranteed real-world range — CLTC is a lab test cycle, and actual range shifts with driving conditions, temperature, and load
+
+## Ready to Get a Current Quote?
+
+FOB pricing, delivery timelines, and duty specifics move by trim and by destination country — everything above is a planning baseline, not a final quote. Message us on WhatsApp at [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27m%20interested%20in%20the%20NEVO%20A07%20-%20please%20send%20current%20FOB%20pricing%20and%20export%20details%20for%20my%20country.) with your destination country and whether you want the BEV or EREV, or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com?subject=NEVO%20A07%20Inquiry). Full specs and photos are on the [NEVO A07](/cars/nevo-a07/) product page.`,
+    faqs: [
+      { q: 'What\'s the real difference between the NEVO A07 BEV and EREV?', a: 'The BEV runs a single 190kW/255PS motor off a 79kWh LFP battery for 730km CLTC range with no engine at all. The EREV pairs a 200kW/268PS motor with a 1.5L range-extender engine and a smaller 35.1kWh battery, giving 310km of pure-electric range for daily driving plus 1,570km combined range once the engine contributes. Pick the BEV where charging is reliable; pick the EREV where it isn\'t.' },
+      { q: 'Is the NEVO A07 the same car as the Qiyuan A07?', a: 'Yes. NEVO A07 is the export name for the same vehicle sold domestically in China as the Qiyuan A07. Both badges cover the same mid-large, 5-seat, RWD sedan with hidden door handles, an AR-HUD, and a 15.4-inch Snapdragon 8155-powered touchscreen — there\'s no difference in the underlying product.' },
+      { q: 'How much does a NEVO A07 cost FOB?', a: 'Our confirmed FOB range is $19,640–22,450 per unit. Other trading platforms quote anywhere from $14,000 to $23,000 depending on trim and source, so treat any single number you see online as a starting point rather than a fixed price. Request a current, trim-specific quote before ordering.' },
+      { q: 'Can I import a NEVO A07 to my country?', a: 'We have confirmed delivery records to Russia, Kyrgyzstan, and Saudi Arabia through established export channels. We could not verify broader "50+ countries" claims made by some trading platforms, so if your market isn\'t one of these three, ask us directly about logistics and homologation before assuming it\'s available.' },
+      { q: 'What import duties apply in Russia, Kyrgyzstan, or Saudi Arabia?', a: 'Each market differs and the rules change yearly. Russia charges a per-vehicle utilization fee (667,400 rubles for EVs/series hybrids under three years old as of 2025, rising annually through 2030). Kyrgyzstan has a 2026 EAEU duty-free quota for series hybrids that may already be exhausted. Saudi Arabia applies 15% VAT plus a roughly 5% GCC baseline customs duty. Confirm exact current figures with local customs before ordering.' },
+    ], related: ['what-is-nevo-changan-new-energy-brand-explained', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'deepal-s07-alternatives'],
+  },
+  'jetour-dashing-vs-x50-entry-level-comparison': {
+    slug: 'jetour-dashing-vs-x50-entry-level-comparison', category: 'product', categoryLabel: 'Model Comparison',
+    title: 'Jetour Dashing vs Jetour X50: Which Entry-Level SUV Fits Your Market?',
+    excerpt: 'The Jetour Dashing (FOB $13,000-16,800) and Jetour X50 (FOB $9,000-13,500) are both compact SUVs from Jetour, but they differ sharply in size, tech, and price. Here\'s the full spec-by-spec breakdown to help you pick the right entry-level model for your market.',
+    hero: '/images/vehicles/evautopro-jetour-dashing-01.webp', date: '2026-07-18 15:00:00', readMin: 8,
+    body: `Both the Jetour Dashing and the Jetour X50 are compact, front-wheel-drive, five-seat SUVs sold under the same brand, but they sit at different points on the price-and-size spectrum. The Dashing is the larger, better-equipped model, with FOB pricing of $13,000-16,800 and a flagship 197PS turbo option, while the X50 is the smaller, export-only model priced at FOB $9,000-13,500 with a single 156PS engine. For a distributor sourcing an **entry-level SUV** from Jetour, the real decision is whether your market wants more size, screen, and driver-assist tech at a higher landed cost, or the lowest possible entry price on a smaller footprint. Both models are currently confirmed for sale in the Gulf region.
+
+## What Are the Core Differences Between the Jetour Dashing and Jetour X50?
+
+The [Jetour Dashing](/cars/jetour-dashing/) is part of Jetour's "Vanguard Technology" line, positioned as a youth-focused compact SUV with two engine tiers and a tech-forward cabin. The [Jetour X50](/cars/jetour-x50/) is a smaller, simpler compact SUV built for export markets only — it's a rebadged Soueast DX5. Soueast and Jetour are sibling brands under Chery Holding, and a platform-sharing arrangement between them began around 2022, which is why the X50 carries Jetour badging on a Soueast-engineered base. One practical consequence: the X50 does not appear on Jetour's main global site (jetourglobal.com) because it's maintained by regional distributors rather than the central Jetour team, so buyers typically confirm it through local dealer inventory rather than the global product catalog.
+
+Both models share the same basic layout — FWD, 5-seat, compact SUV body style — and even overlap on their entry-level engine output (115kW/156PS on both). Where they diverge is in overall size, cabin technology, and how far up the price ladder each one goes. The Dashing offers a second, more powerful engine tier that the X50 does not; the X50 keeps things to one drivetrain configuration across its lineup, which is part of why it can be priced lower.
+
+## How Do Their Engines and Performance Compare?
+
+The Dashing gives buyers a choice of two powertrains. The entry engine is a 1.5T producing 115kW/156PS, available with either a 6-speed manual or a DCT gearbox. The flagship engine is a 1.6TGDI making 145kW/197PS and 290N·m of torque, paired exclusively with a 7-speed DCT. Jetour rates the Dashing's top speed at 200km/h.
+
+The X50 offers a single powertrain: a 1.5T turbo producing 115kW/156PS and 230N·m of torque, mated to a 6-speed wet DCT. Jetour has not published a top-speed figure for the X50 in the data available here. Notably, this 1.5T unit is from the same core powertrain family used in the larger Jetour X70, so the engine itself is a known quantity in Jetour's lineup — it's simply carried into a smaller, lighter body in the X50.
+
+In practical terms: if a market's buyers care about having a manual-transmission option or a higher-output flagship trim, the Dashing covers both; the X50's single-spec approach trades that flexibility for a simpler, lower-cost lineup. Torque output between the two entry-level 156PS engines differs slightly (230N·m on the X50 versus figures not separately broken out for the Dashing's base 1.5T beyond its shared power rating), which is a detail distributors should confirm directly with Jetour for their specific market allocation.
+
+## Which Model Is Bigger — Does Size Matter for Your Market?
+
+Size is one of the clearest differentiators between these two models, and it's a major driver of the price gap.
+
+| Dimension | Jetour Dashing | Jetour X50 |
+|---|---|---|
+| Length | 4600mm | 4397mm |
+| Width | 1900mm | 1841mm |
+| Height | 1685mm | 1654mm |
+| Wheelbase | 2720mm | 2601mm |
+| Curb weight | 1530kg | Not provided |
+
+The Dashing is longer by 203mm, wider by 59mm, and has a wheelbase 119mm longer than the X50's. In a compact SUV segment, that wheelbase difference typically translates into noticeably more rear legroom and cargo space in the Dashing. For markets where family-sized interior room is a selling point, the Dashing's larger footprint is a real advantage. For markets where tight urban parking, narrower streets, or lower per-unit landed weight and shipping cost matter more, the X50's smaller dimensions work in its favor — a lighter, smaller vehicle generally means lower shipping and, in many markets, lower registration or fuel-consumption-linked costs, though exact figures for those categories aren't part of the data provided here.
+
+Neither size is objectively "better" — it depends entirely on what your buyers in that specific market are used to and what they're cross-shopping against.
+
+## How Do the Tech and Safety Features Differ?
+
+This is where the price gap becomes most visible, and it's worth being direct about it: the X50's lower price is not just about a smaller body — it also reflects a simpler feature set.
+
+The Dashing comes with a 15.6-inch touchscreen, an 8-inch head-up display (HUD), and L2.5 assisted driving capability. The X50 comes with a 10.25-inch touchscreen and 6 airbags; no HUD or assisted-driving tier is listed for the X50 in the data available here. On the transmission side, the Dashing's flagship engine pairs with a 7-speed DCT while the X50 uses a 6-speed wet DCT across its lineup.
+
+None of this makes the X50 a bad vehicle — 10.25 inches is still a full modern touchscreen, and 6 airbags is a legitimate safety baseline. But buyers who cross-shop the two side by side, especially in markets where the Dashing is also available, will notice the gap immediately: bigger screen, HUD, and a driver-assist tier on the Dashing versus a more basic (and less expensive) equipment list on the X50. Distributors should set buyer expectations accordingly rather than presenting the X50 as a stripped-price version of the exact same experience.
+
+## What's the Full Spec-by-Spec Comparison?
+
+| Spec | Jetour Dashing | Jetour X50 |
+|---|---|---|
+| Body style | Compact SUV | Compact SUV |
+| Drivetrain | FWD | FWD |
+| Seats | 5 | 5 |
+| Entry engine | 1.5T, 115kW/156PS | 1.5T, 115kW/156PS/230N·m |
+| Entry transmission | 6-speed manual or DCT | 6-speed wet DCT |
+| Flagship engine | 1.6TGDI, 145kW/197PS/290N·m | Not offered |
+| Flagship transmission | 7-speed DCT | — |
+| Top speed | 200km/h | Not provided |
+| Length x Width x Height | 4600 x 1900 x 1685mm | 4397 x 1841 x 1654mm |
+| Wheelbase | 2720mm | 2601mm |
+| Curb weight | 1530kg | Not provided |
+| Touchscreen | 15.6" | 10.25" |
+| Head-up display | 8" HUD | Not offered |
+| Driver assist | L2.5 assisted driving | Not specified |
+| Airbags | Not specified | 6 |
+| FOB price range | $13,000-16,800 | $9,000-13,500 |
+| Certifications | GCC, EAC, SASO | GCC |
+| Confirmed markets | Saudi Arabia, UAE, Russia | UAE, Saudi Arabia, Kazakhstan, Panama, Chile, Philippines, Malaysia |
+
+## Which Markets Are Each Model Actually Sold In?
+
+The Dashing is confirmed for sale in Saudi Arabia, UAE, and Russia, and it carries three certifications: GCC, EAC (Eurasian Economic Union), and SASO (Saudi Arabia). That EAC certification lines up directly with its Russia market presence, and SASO with its Saudi presence — the certification list matches the confirmed sales markets closely.
+
+The X50 has a broader confirmed footprint: it's been spotted on-lot in UAE, Saudi Arabia, Kazakhstan, Panama, Chile, Philippines, and Malaysia, based on regional dealer sites and photos. Its only listed certification is GCC, which covers the Gulf markets (UAE, Saudi Arabia) directly but doesn't explain its presence in Kazakhstan, Latin America, or Southeast Asia — those markets likely operate under separate regional homologation handled by local distributors, consistent with the X50 being a distributor-managed export model rather than one centrally coordinated by Jetour's global team.
+
+For a distributor evaluating either model, this matters practically: if your market requires GCC certification, both models qualify. If it requires EAC or SASO specifically, only the Dashing currently has that certification on record. And if you're in a market like Kazakhstan, Panama, Chile, Philippines, or Malaysia where the X50 has on-the-ground presence but the Dashing doesn't have confirmed sales, that's a meaningful data point — it suggests regional distributors have already done groundwork for the X50 in those territories that hasn't been replicated for the Dashing yet.
+
+## Best For / Not Ideal For
+
+**Jetour Dashing — best for:**
+- Markets where buyers cross-shop on cabin tech (15.6" screen, HUD) and want an assisted-driving feature (L2.5)
+- Buyers who want a manual-transmission option or a higher-output 197PS flagship trim
+- Markets needing EAC or SASO certification specifically
+- Family-oriented buyers who value the extra 119mm of wheelbase and larger overall footprint
+
+**Jetour Dashing — not ideal for:**
+- Markets where FOB budget is capped well under $13,000
+- Buyers who don't value the extra tech and would rather pay less for a smaller, simpler vehicle
+
+**Jetour X50 — best for:**
+- Markets prioritizing the lowest possible entry price point (FOB from $9,000)
+- Markets already showing on-the-ground distributor presence — Kazakhstan, Panama, Chile, Philippines, Malaysia — where local homologation groundwork may already exist
+- Buyers who want a smaller, easier-to-park compact SUV with a straightforward single-spec lineup
+
+**Jetour X50 — not ideal for:**
+- Buyers expecting HUD, a large 15.6" screen, or assisted-driving features — none of these are offered
+- Markets requiring EAC or SASO certification, since only GCC certification is confirmed
+- Buyers who want a manual-transmission or higher-power engine option, since the X50 offers only one drivetrain configuration
+
+## Frequently Asked Questions
+
+**What's the actual price difference between the Jetour Dashing and Jetour X50?**
+FOB pricing for the Dashing runs $13,000-16,800; the X50 runs $9,000-13,500. There's a $13,000-13,500 overlap zone where a base-spec Dashing and a top-spec X50 could land close together, but on average the Dashing costs more — which tracks with its larger body, second engine tier, and added tech (bigger screen, HUD, L2.5 assist).
+
+**Is the Jetour X50 the same vehicle as the Jetour X70?**
+No. The X50 is a distinct, smaller model — a rebadged Soueast DX5 — but it shares its core 1.5T powertrain family (115kW/156PS) with the Jetour X70. So the engine lineage is related, but the body, dimensions, and overall vehicle are not the same.
+
+**Why isn't the Jetour X50 listed on Jetour's main global website?**
+Because it's an export-only model maintained by regional distributors rather than the central jetourglobal.com team. Soueast and Jetour are sibling brands under Chery Holding, and a platform-sharing arrangement between them began around 2022 — that's the basis for the X50 carrying Jetour badging.
+
+**Which markets currently sell the Jetour Dashing vs the Jetour X50?**
+The Dashing is confirmed in Saudi Arabia, UAE, and Russia (GCC, EAC, SASO certified). The X50 has been confirmed on-lot in UAE, Saudi Arabia, Kazakhstan, Panama, Chile, Philippines, and Malaysia, though it's only certified to GCC standard in the data available here.
+
+**Does the Jetour X50 offer the same safety and driver-assist tech as the Dashing?**
+No. The Dashing includes L2.5 assisted driving as a feature; that capability isn't listed for the X50, which is confirmed to have 6 airbags. This is a genuine gap between the two models, not just a marketing difference — buyers wanting assisted-driving tech should look to the Dashing.
+
+## Ready to Compare Sourcing Options?
+
+If you're weighing the Jetour Dashing against the Jetour X50 for your specific market's certification requirements and price point, reach out and we'll walk through the fit together.
+
+**WhatsApp:** [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27m%20interested%20in%20comparing%20the%20Jetour%20Dashing%20and%20Jetour%20X50%20for%20my%20market.%20Can%20you%20share%20more%20details%3F)
+
+**Email:** [gacaicai@gmail.com](mailto:gacaicai@gmail.com)`,
+    faqs: [
+      { q: 'What\'s the actual price difference between the Jetour Dashing and Jetour X50?', a: 'FOB pricing for the Dashing runs $13,000-16,800; the X50 runs $9,000-13,500. There\'s a $13,000-13,500 overlap zone where a base-spec Dashing and a top-spec X50 could land close together, but on average the Dashing costs more, which tracks with its larger body, second engine tier, and added tech (bigger screen, HUD, L2.5 assist).' },
+      { q: 'Is the Jetour X50 the same vehicle as the Jetour X70?', a: 'No. The X50 is a distinct, smaller model, a rebadged Soueast DX5, but it shares its core 1.5T powertrain family (115kW/156PS) with the Jetour X70. So the engine lineage is related, but the body, dimensions, and overall vehicle are not the same.' },
+      { q: 'Why isn\'t the Jetour X50 listed on Jetour\'s main global website?', a: 'Because it\'s an export-only model maintained by regional distributors rather than the central jetourglobal.com team. Soueast and Jetour are sibling brands under Chery Holding, and a platform-sharing arrangement between them began around 2022, which is the basis for the X50 carrying Jetour badging.' },
+      { q: 'Which markets currently sell the Jetour Dashing vs the Jetour X50?', a: 'The Dashing is confirmed in Saudi Arabia, UAE, and Russia (GCC, EAC, SASO certified). The X50 has been confirmed on-lot in UAE, Saudi Arabia, Kazakhstan, Panama, Chile, Philippines, and Malaysia, though it\'s only certified to GCC standard in the data available here.' },
+      { q: 'Does the Jetour X50 offer the same safety and driver-assist tech as the Dashing?', a: 'No. The Dashing includes L2.5 assisted driving as a feature; that capability isn\'t listed for the X50, which is confirmed to have 6 airbags. This is a genuine gap between the two models, not just a marketing difference, so buyers wanting assisted-driving tech should look to the Dashing.' },
+    ], related: [],
+  },
+  'jetour-t1-vs-t1-idm-ice-or-phev': {
+    slug: 'jetour-t1-vs-t1-idm-ice-or-phev', category: 'product', categoryLabel: 'Model Comparison',
+    title: 'Jetour T1 vs T1 i-DM: Gasoline or Plug-In Hybrid — Which Should You Import?',
+    excerpt: 'Same 4705mm body, same 2800mm wheelbase, same cabin tech — the Jetour T1 and T1 i-DM differ almost entirely in powertrain. Here\'s how the gasoline and plug-in hybrid versions compare on power, price, 4WD availability, and import duties across Russia, Saudi Arabia, and the UAE.',
+    hero: '/images/vehicles/evautopro-jetour-t1-01.webp', date: '2026-07-18 16:30:00', readMin: 7,
+    body: `The Jetour T1 and Jetour T1 i-DM share the exact same 4705×1967×1843mm body, 2800mm wheelbase, and cabin tech — the only real decision is what's under the hood. The T1 runs a conventional 1.5T or flagship 2.0T petrol engine (up to 187kW/254PS/390N·m) with available real-time 4WD, while the T1 i-DM pairs a 1.5T dedicated hybrid engine (99kW/200N·m) with a 150kW/310N·m electric motor and a 26.7kWh LFP battery, FWD only. For most buyers weighing Jetour T1 vs T1 i-DM, the choice isn't styling — it's whether your market's duty structure, terrain needs, and customer expectations favor a gasoline drivetrain or a plug-in hybrid one.
+
+## What's actually different between the T1 and the T1 i-DM?
+
+These are the same vehicle sold under two names in two markets. In China, the gasoline version is badged Jetour Freedom (捷途自由者); the plug-in hybrid version is badged Shanhai T1 (山海T1). On the export site they're listed as two trims of one platform: [Jetour T1](/cars/jetour-t1/) and [Jetour T1 i-DM](/cars/jetour-t1-idm/).
+
+Both share identical exterior dimensions (4705×1967×1843mm), the same 2800mm wheelbase, and the same cabin tech stack — a 15.6"/12.8" touchscreen depending on trim, a Snapdragon 8155 chipset, and multi-language voice control including Russian. So if you're choosing based on how the car looks or how the cabin feels, you won't find a meaningful difference — both are the same crossover SUV body.
+
+Where they diverge is entirely mechanical: engine type, transmission, drivetrain layout, and battery. The T1 is a straightforward internal-combustion crossover with a choice of two engine states of tune. The T1 i-DM replaces that with a dedicated hybrid engine, an electric motor, a single-speed DHT (dedicated hybrid transmission), and an LFP battery pack — plug-in capable, meaning it can run on grid-charged electric power for part of its usage before the engine engages.
+
+## How do the two powertrains stack up on paper?
+
+| Spec | Jetour T1 (Gasoline) | Jetour T1 i-DM (PHEV) |
+|---|---|---|
+| China domestic name | Jetour Freedom (捷途自由者) | Shanhai T1 (山海T1) |
+| Body / platform | 4705×1967×1843mm, 2800mm wheelbase | Same — 4705×1967×1843mm, 2800mm wheelbase |
+| Engine | 1.5T (135kW) or 2.0T (187kW/254PS/390N·m) | 1.5T dedicated hybrid engine (99kW/200N·m) |
+| Electric motor | — | 150kW/310N·m |
+| Battery | — | 26.7kWh LFP |
+| Transmission | 7DCT (1.5T) or 8AT (2.0T) | Single-speed DHT |
+| Drivetrain | FWD (1.5T) or real-time 4WD w/ electronic limited-slip diff (2.0T Lux) | FWD only (export lineup) |
+| Top speed | 180km/h | Not provided by Jetour |
+| Curb weight | 1811kg | Not provided by Jetour |
+| Electric-only / combined range | — | Not officially published — confirm before ordering |
+| Infotainment | 15.6"/12.8" by trim, Snapdragon 8155, multi-language voice incl. Russian | Same |
+| L2 driver assist | 2.0T Lux trim only | Both trims |
+| FOB price | $18,700–$21,200 | $21,700–$24,500 |
+| Export markets | Russia, Saudi Arabia, UAE, South Africa | Russia, Saudi Arabia, UAE |
+| Certifications | GCC, EAC | GCC, EAC |
+
+Two things stand out that aren't obvious from spec sheets alone. First, L2 driver assist is standard across both T1 i-DM trims but limited to the top 2.0T Lux trim on the gasoline T1 — so a base-trim T1 buyer gets less driver assistance than any T1 i-DM buyer. Second, 4WD only exists on the gasoline side; the PHEV export lineup is FWD-only for now.
+
+## Does the T1 i-DM cost more to land, and by how much?
+
+Yes. FOB pricing for the T1 i-DM runs $21,700–$24,500 versus $18,700–$21,200 for the gasoline T1 — roughly a $3,000 premium at comparable trim, before freight, insurance, and destination-market duties are added. That premium buys the hybrid engine, electric motor, DHT, and 26.7kWh LFP battery pack.
+
+What it does not yet buy you is a published electric range figure to quote a customer. Jetour has not released an official combined WLTC or CLTC range number for the T1 i-DM, so if a client asks "how many kilometers on electric power," you cannot answer that with a hard number today — get it in writing from Jetour or your EV Auto Pro contact before committing to an order where range is part of the sales pitch.
+
+Whether that $3,000 gap is worth it depends entirely on your destination market: fuel-cost differentials, any duty treatment that favors hybrids, and whether your customer base actually values plug-in capability over straightforward gasoline simplicity.
+
+## Which markets can you actually import each version into?
+
+This is where the two models genuinely part ways in availability. The gasoline T1 is currently listed for Russia, Saudi Arabia, UAE, and South Africa. The T1 i-DM is listed for Russia, Saudi Arabia, and UAE only — South Africa does not currently have the plug-in hybrid version on the export site.
+
+If South Africa is your target market, the decision is already made for you: order the T1. For Russia, Saudi Arabia, and UAE, both versions are available and both carry the same certifications — GCC (Gulf Cooperation Council conformity) and EAC (Eurasian Economic Union conformity for Russia and neighboring EAEU markets). Neither model has a certification advantage over the other in the three markets where both are sold.
+
+## Does the T1 i-DM offer 4WD like the T1's 2.0T Lux trim?
+
+No — not on the export lineup as it stands. The gasoline T1's 2.0T Lux trim has a real-time 4WD system with an electronic limited-slip differential, engineered for traction on loose or slick surfaces. The T1 i-DM sold through the export site is FWD only.
+
+It's worth noting that China's domestic Shanhai T1 lineup does include a rear-motor AWD trim — the platform is capable of it — but that configuration is not currently listed for export markets. If you have a customer who specifically needs 4WD traction (mountain routes in Saudi Arabia, winter conditions in Russia, unpaved terrain in South Africa), the gasoline T1's 2.0T Lux trim is your only confirmed 4WD option right now between these two models.
+
+## What will import duties and fees look like in Russia, Saudi Arabia, and the UAE?
+
+Duty treatment for these two powertrains is not a simple story, and the numbers below should be confirmed with a customs broker at time of shipment rather than treated as final:
+
+- **UAE**: Standard passenger vehicle imports carry a 5% customs duty on CIF value plus 5% VAT, per UAE customs guidance. Fully electric vehicles have benefited from duty incentives in some periods, but that BEV-specific treatment is not confirmed to extend to plug-in hybrids — the T1 i-DM should be assumed subject to the standard 5% rate unless your broker confirms an exemption applies to your specific import channel.
+- **Saudi Arabia**: ZATCA applies a 5% customs duty on motor cars plus 15% VAT on the duty-inclusive value. No hybrid-specific carve-out for that standard "motor cars" tariff line appeared in official ZATCA guidance, so plan for both the T1 and T1 i-DM to face the same 5%+15% structure unless you find written confirmation otherwise.
+- **Russia**: the utilization (recycling) fee is structured differently by powertrain rather than being a flat rate. Gasoline models are assessed largely by engine displacement and horsepower; hybrids and EVs are assessed off the electric motor's peak (or 30-minute) power output, and crossing certain power thresholds moves a vehicle into a materially higher fee bracket. Rates were re-indexed again from January 1, 2026 under a phased schedule Russia adopted in 2024, so pull a current quote for the exact trim and kW figures rather than reusing last year's number.
+
+Because Russia's fee logic genuinely diverges by powertrain, don't assume the T1 i-DM is automatically cheaper or pricier to land than the T1 — run the landed-cost math for your specific destination and trim before locking in an order.
+
+## Which buyer should choose which version?
+
+**Best for the Jetour T1 (gasoline):**
+- Markets or customers who need 4WD now — the electronic-LSD real-time 4WD system is only confirmed on the 2.0T Lux trim.
+- South Africa import programs, where the T1 is currently the only version listed.
+- Buyers prioritizing the lower $18,700–$21,200 FOB entry point and a fueling model with no charging-infrastructure dependency.
+
+**Best for the Jetour T1 i-DM (PHEV):**
+- Russia, Saudi Arabia, or UAE buyers targeting customers who want lower running costs from the 26.7kWh LFP battery and standard L2 driver assist across the whole trim range, not just the top gasoline trim.
+- Importers comfortable confirming exact electric range, duty classification, and delivery timing with Jetour and local customs before finalizing orders.
+
+**Not ideal for:**
+- Anyone needing 4WD in a PHEV — it isn't offered on the export T1 i-DM lineup today.
+- South Africa orders — the i-DM isn't listed for that market; use the T1.
+- Sales pitches that require a hard electric-range number today — it isn't published yet, so don't promise a figure to a customer until Jetour confirms one in writing.
+
+## Frequently asked questions
+
+**Is the Jetour T1 i-DM available with 4WD?**
+Not on the export lineup. The T1 i-DM sold through the export site is FWD only. Real-time 4WD with an electronic limited-slip differential is available only on the gasoline T1's 2.0T Lux trim. China's domestic Shanhai T1 range does include a rear-motor AWD trim, but it has not been listed for export markets, so it isn't currently orderable through evautopro.com.
+
+**What's the FOB price difference between the T1 and T1 i-DM?**
+The gasoline T1 is priced $18,700–$21,200 FOB. The T1 i-DM is priced $21,700–$24,500 FOB — roughly a $3,000 premium at comparable trim for the hybrid engine, 150kW/310N·m electric motor, DHT, and 26.7kWh LFP battery pack, before freight and destination-market duties.
+
+**What's the electric range of the T1 i-DM?**
+Jetour has not published an official combined WLTC or CLTC range figure for the T1 i-DM as of this writing. The battery is a 26.7kWh LFP pack paired with a 150kW/310N·m motor and a 99kW/200N·m 1.5T hybrid engine, but no combined range or fuel-economy number is available yet — confirm this directly with Jetour or your EV Auto Pro contact before quoting a customer.
+
+**Which markets can I currently import the T1 i-DM into?**
+Russia, Saudi Arabia, and the UAE. Unlike the gasoline T1, which is also listed for South Africa, the T1 i-DM is not currently available for South African import through the export lineup.
+
+**Do import duties differ between the gasoline T1 and the plug-in hybrid T1 i-DM?**
+In Russia, yes structurally — the utilization fee for gasoline vehicles is calculated off engine displacement and horsepower, while hybrids and EVs are calculated off electric motor power output, with different thresholds triggering higher fee brackets. In the UAE and Saudi Arabia, both currently fall under the same standard vehicle duty structure (5% customs duty in both markets) based on available official guidance, though PHEV-specific exemptions are not confirmed — verify with your customs broker before ordering.
+
+## Ready to compare landed costs for your market?
+
+Both the [Jetour T1](/cars/jetour-t1/) and [Jetour T1 i-DM](/cars/jetour-t1-idm/) are in EV Auto Pro's export lineup for Russia, Saudi Arabia, and the UAE (T1 only for South Africa). If you need current FOB quotes, trim availability, or help running the landed-cost comparison for your specific destination, reach out directly:
+
+- WhatsApp: [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27m%20comparing%20the%20Jetour%20T1%20and%20T1%20i-DM%20for%20import%20%E2%80%94%20can%20you%20send%20current%20FOB%20pricing%20and%20trim%20availability%20for%20my%20market%3F)
+- Email: [gacaicai@gmail.com](mailto:gacaicai@gmail.com)`,
+    faqs: [
+      { q: 'Is the Jetour T1 i-DM available with 4WD?', a: 'Not on the export lineup. The T1 i-DM sold through the export site is FWD only. Real-time 4WD with an electronic limited-slip differential is available only on the gasoline T1\'s 2.0T Lux trim. China\'s domestic Shanhai T1 range does include a rear-motor AWD trim, but it has not been listed for export markets, so it isn\'t currently orderable through evautopro.com.' },
+      { q: 'What\'s the FOB price difference between the T1 and T1 i-DM?', a: 'The gasoline T1 is priced $18,700-$21,200 FOB. The T1 i-DM is priced $21,700-$24,500 FOB — roughly a $3,000 premium at comparable trim for the hybrid engine, 150kW/310N·m electric motor, DHT, and 26.7kWh LFP battery pack, before freight and destination-market duties.' },
+      { q: 'What\'s the electric range of the T1 i-DM?', a: 'Jetour has not published an official combined WLTC or CLTC range figure for the T1 i-DM as of this writing. The battery is a 26.7kWh LFP pack paired with a 150kW/310N·m motor and a 99kW/200N·m 1.5T hybrid engine, but no combined range or fuel-economy number is available yet — confirm this directly with Jetour or your EV Auto Pro contact before quoting a customer.' },
+      { q: 'Which markets can I currently import the T1 i-DM into?', a: 'Russia, Saudi Arabia, and the UAE. Unlike the gasoline T1, which is also listed for South Africa, the T1 i-DM is not currently available for South African import through the export lineup.' },
+      { q: 'Do import duties differ between the gasoline T1 and the plug-in hybrid T1 i-DM?', a: 'In Russia, yes structurally — the utilization fee for gasoline vehicles is calculated off engine displacement and horsepower, while hybrids and EVs are calculated off electric motor power output, with different thresholds triggering higher fee brackets. In the UAE and Saudi Arabia, both currently fall under the same standard vehicle duty structure (5% customs duty in both markets) based on available official guidance, though PHEV-specific exemptions are not confirmed — verify with your customs broker before ordering.' },
+    ], related: ['how-to-choose-jetour-lineup', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'can-you-drive-phev-without-charging'],
+  },
+  'jetour-g700-luxury-off-road-phev-deep-dive': {
+    slug: 'jetour-g700-luxury-off-road-phev-deep-dive', category: 'product', categoryLabel: 'Model Comparison',
+    title: 'Jetour G700: Luxury Off-Road PHEV Flagship for Export',
+    excerpt: 'Jetour\'s new flagship pairs a 665kW PHEV powertrain with genuine off-road hardware (35°/28°/21° angles, 900mm wading) and up to 1000km combined range — full specs, trim comparison, and current export markets for buyers.',
+    hero: '/images/vehicles/evautopro-jetour-g700-01.webp', date: '2026-07-18 18:00:00', readMin: 9,
+    body: `The Jetour G700 is Jetour's new flagship luxury off-road plug-in hybrid, launched in October 2025 under the brand's Zongheng (GAIA) series. It pairs a 2.0T engine with dual electric motors and a 2-speed DHT to deliver a combined 665kW / 904PS / 1135N·m through a 4WD system, backed by a 34.13kWh LFP battery for 100km of pure-electric WLTC range and up to 1000km combined range with the engine running. FOB pricing for export runs $46,300–$58,200, and the model is currently confirmed for sale in the UAE and Qatar with GCC certification, expanding into Latin America in 2026.
+
+## What Is the Jetour G700, and Why Is It Jetour's New Flagship?
+
+The G700 sits at the top of Jetour's lineup as its first dedicated luxury off-road PHEV, built under the Zongheng (GAIA) series that Jetour launched to compete in the premium off-road SUV segment. Where earlier Jetour models targeted value-focused SUV buyers, the G700 is positioned as a halo product: a full-size off-roader with genuine trail hardware (35°/28°/21° approach/departure/breakover angles, 230mm ground clearance) combined with plug-in hybrid efficiency and a tech-heavy cabin.
+
+Dimensionally, the G700 is a large vehicle — 5198mm long, 2050mm wide, 1956mm tall, on a 2870mm wheelbase, with a curb weight of 3180kg. That places it in the same size class as full-size luxury off-road SUVs, and the weight reflects the combination of a traditional body-on-frame-capable off-road structure with a sizeable battery pack and dual-motor hybrid hardware.
+
+For export buyers, the "flagship" positioning matters commercially as much as technically: it's the model Jetour is using to enter premium GCC and Latin American markets rather than volume segments, launching first in the UAE (September 2025) and Qatar (November 2025) before expanding further. Buyers considering the G700 should evaluate it as a top-of-lineup halo model — priced and equipped accordingly — rather than a mainstream SUV replacement. Full specifications and current configuration options are listed on the [Jetour G700 product page](/cars/jetour-g700/).
+
+## What Powers the 665kW System, and How Fast Is It?
+
+The G700's powertrain combines a 2.0T turbocharged engine with dual electric motors through a 2-speed DHT (dedicated hybrid transmission), driving all four wheels. Combined system output is 665kW (904PS) and 1135N·m of torque — figures that place it well above typical mainstream PHEV SUVs and into performance-flagship territory.
+
+That output translates directly into acceleration: Jetour rates the G700 at 0-100km/h in 4.6 seconds, with a top speed of 180km/h. For a 3180kg off-road-capable SUV, that acceleration figure comes from the instant torque delivery of the dual-motor electric side layering onto the combustion engine's output — a common PHEV advantage, but unusually strong here given the vehicle's size and off-road-oriented mass.
+
+The 2-speed DHT is notable because most PHEV systems use a single-speed reduction gear; a 2-speed unit is typically chosen to better manage both low-speed off-road torque multiplication and high-speed cruising efficiency, which fits the G700's dual identity as an off-roader and a long-distance touring flagship. Combined with full-time 4WD, the driveline is built to put that torque down across varied terrain and surface conditions rather than just on-road.
+
+For export buyers coming from diesel or naturally aspirated V6 body-on-frame off-roaders, the G700's powertrain represents a significant power and torque step up, delivered through a smaller-displacement engine supplemented by electrification rather than sheer displacement.
+
+## How Far Can the G700 Go on Electric Power Alone?
+
+The G700 uses a 34.13kWh LFP (lithium iron phosphate) battery pack, which delivers 100km of pure-electric range on the WLTC test cycle. LFP chemistry is generally favored for its thermal stability and cycle life, which matters for a vehicle marketed on off-road durability and long ownership cycles rather than maximum energy density.
+
+With the 2.0T engine engaged, combined range extends up to 1000km — putting the G700 in the long-range PHEV category where a full tank-and-charge cycle can cover cross-country distances without refueling or recharging stops, a relevant selling point in export markets with sparser charging infrastructure, such as parts of the GCC and Latin America.
+
+Charging is handled through an 800V platform, which allows DC fast-charging from 30% to 80% state of charge in approximately 30 minutes. The 800V architecture is a meaningful spec for export buyers evaluating future-proofing: it's the same voltage class used by current-generation flagship EVs, and it means the G700 isn't limited by 400V-era charging speeds even though it's a plug-in hybrid rather than a pure EV.
+
+For buyers in markets where public DC fast-charging is still being built out, the practical takeaway is that the G700 functions as a capable hybrid on combustion power alone (up to 1000km combined) with the 100km electric range available for daily local driving on a home or destination charger, rather than requiring frequent fast-charging stops.
+
+## Can the G700 Actually Handle Off-Road Terrain?
+
+Yes — the G700's off-road geometry is genuine, not cosmetic. Approach, departure, and breakover angles of 35°/28°/21° are consistent with dedicated off-road SUVs, not soft-roaders, and 230mm of ground clearance gives meaningful room to clear rocks, ruts, and uneven trail surfaces. Wading depth is rated at 900mm, which covers most river-crossing and flood-transit scenarios encountered on serious off-road routes.
+
+These figures matter in context: the G700's 3180kg weight and 4WD system need to be paired with real geometry to justify the "off-road flagship" label, and the specs given here (rather than marketing language) are what buyers should compare against competing off-road PHEVs in the same class.
+
+The G700 also includes a 360° transparent chassis camera system, which displays a real-time view beneath the vehicle — showing wheel position and terrain directly under the chassis, normally hidden from the driver. This is specifically an off-road tool: it helps drivers place wheels precisely on rock crawls, avoid obstacles the undercarriage can't see, and navigate tight trail sections where visual judgment alone is unreliable.
+
+Combined, the approach/departure/breakover angles, ground clearance, wading depth, and transparent chassis camera give the G700 a genuine off-road capability profile that goes beyond typical crossover-SUV specs — relevant for export buyers in markets like the GCC, where desert and off-highway driving is a real use case rather than a marketing angle.
+
+## What's Inside the Cabin, and How Do the Trims Differ?
+
+The G700 is offered in two trim tiers with a meaningful seating and technology difference: Comfort trim seats 5, while Luxury and Flagship trims seat 6. Buyers should confirm which configuration they're ordering, since the seating layout — not just equipment level — changes between trims.
+
+| Feature | Comfort Trim | Luxury / Flagship Trim |
+|---|---|---|
+| Seating | 5 seats | 6 seats |
+| L2 autonomous driving assist | Not specified as included | Included |
+| 15.6" touchscreen (Snapdragon 8255) | Standard across trims | Standard across trims |
+| 35.4" LCD digital instrument cluster | Standard across trims | Standard across trims |
+| 360° transparent chassis camera | Standard across trims | Standard across trims |
+
+The infotainment core — a 15.6" touchscreen running on a Snapdragon 8255 chipset — is a current-generation automotive SoC choice, paired with a 35.4" LCD instrument display that spans a significant portion of the dashboard width. L2 autonomous driving assist (lane-centering and adaptive driving-assist features typical of L2 systems) is confirmed as available on Luxury and Flagship trim, giving upper-trim buyers a highway-assist feature set on top of the off-road hardware shared across the range.
+
+For export buyers, the practical decision point is seating capacity plus driver-assist features: fleet or family-use buyers wanting 6-seat capacity and L2 assist should specify Luxury or Flagship trim, while 5-seat Comfort trim covers buyers prioritizing base configuration and cost within the FOB range.
+
+## What Does the G700 Cost, and Where Can Export Buyers Get It?
+
+FOB pricing for the Jetour G700 ranges from $46,300 to $58,200, varying by trim and configuration. That range should be treated as the ex-works starting point for export orders — it does not include destination-market duties, VAT, freight, or local registration costs, which vary by country and should be confirmed directly with local customs and tax authorities before landed-cost budgeting.
+
+The G700 is currently sold in the UAE, where it launched in September 2025, and Qatar, where it followed in November 2025 — both markets covered under GCC certification. Jetour is expanding the model into Latin America in 2026, with Ecuador, Panama, and Mexico named as target markets; this is described as early-market allocation, meaning availability and timing in these markets is still in rollout rather than fully established.
+
+For distributors and fleet buyers evaluating the G700 for a new market, the current confirmed footprint (UAE, Qatar, GCC certification) plus the named 2026 Latin American expansion gives a clear picture of where Jetour is prioritizing supply. Buyers in markets outside this list should ask directly about allocation timing rather than assume availability. Full current configuration and ordering details are maintained on the [Jetour G700 product page](/cars/jetour-g700/).
+
+## Best For / Not Ideal For
+
+**Best for:**
+- Distributors and buyers in markets with real off-road use cases (desert, unpaved terrain, river crossings) who also want PHEV efficiency and long combined range
+- Fleet or family buyers who need 6-seat capacity and are willing to specify Luxury/Flagship trim for L2 driving assist
+- Markets with 800V-capable DC fast-charging infrastructure, where the 30-minute 30%→80% charge time is actually usable
+- Buyers positioning a genuine flagship/halo model in a premium GCC- or Latin America-facing lineup, rather than a volume mainstream SUV
+
+**Not ideal for:**
+- Budget-focused fleet orders — at $46,300–$58,200 FOB, the G700 is priced as a flagship, not an entry-level SUV
+- Markets with little to no DC fast-charging access, where the 100km electric range and 800V charging advantage go largely unused and the vehicle functions mainly as a heavy combustion-hybrid
+- Buyers needing confirmed availability outside the UAE, Qatar, and the named 2026 Latin American markets (Ecuador, Panama, Mexico) — other regions are not yet confirmed
+- Applications requiring the 6-seat Luxury/Flagship configuration on a Comfort-trim budget, since the seating and L2 assist differences are trim-locked, not optional add-ons
+
+## Frequently Asked Questions
+
+**What is the actual difference between Comfort and Luxury/Flagship trim on the G700?**
+Comfort trim seats 5; Luxury and Flagship trim seats 6. Luxury/Flagship also includes L2 autonomous driving assist, which is not confirmed as available on Comfort. Core tech — the 15.6" touchscreen, Snapdragon 8255 chipset, 35.4" instrument display, and 360° transparent chassis camera — is standard across trims.
+
+**How long does it take to charge the G700's battery?**
+On the 800V platform, DC fast-charging takes the 34.13kWh LFP battery from 30% to 80% state of charge in approximately 30 minutes. Full electric range on a full charge is 100km (WLTC).
+
+**What's the total driving range with a full tank and full charge?**
+Combined range with the 2.0T engine and battery working together is up to 1000km. Pure-electric-only range on the WLTC cycle is 100km.
+
+**Where can I currently buy the Jetour G700 for export?**
+It's confirmed for sale in the UAE (launched September 2025) and Qatar (launched November 2025) under GCC certification. Jetour is expanding into Latin America in 2026, naming Ecuador, Panama, and Mexico as target markets under early-market allocation.
+
+**Is the G700 good off-road, or is it mostly a luxury cruiser with off-road styling?**
+The specs indicate genuine off-road capability: 35°/28°/21° approach/departure/breakover angles, 230mm ground clearance, 900mm wading depth, and a 360° transparent chassis camera for terrain visibility. These are dedicated off-road figures, not soft-roader numbers.
+
+---
+
+Interested in FOB pricing, trim availability, or export documentation for the Jetour G700? Contact EV Auto Pro directly:
+
+- **WhatsApp:** [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27m%20interested%20in%20the%20Jetour%20G700%20PHEV%20for%20export%20-%20can%20you%20share%20current%20FOB%20pricing%20and%20trim%20availability%3F)
+- **Email:** [gacaicai@gmail.com](mailto:gacaicai@gmail.com)`,
+    faqs: [
+      { q: 'What is the actual difference between Comfort and Luxury/Flagship trim on the G700?', a: 'Comfort trim seats 5; Luxury and Flagship trim seats 6. Luxury/Flagship also includes L2 autonomous driving assist, which is not confirmed as available on Comfort. Core tech — the 15.6" touchscreen, Snapdragon 8255 chipset, 35.4" instrument display, and 360° transparent chassis camera — is standard across trims.' },
+      { q: 'How long does it take to charge the G700\'s battery?', a: 'On the 800V platform, DC fast-charging takes the 34.13kWh LFP battery from 30% to 80% state of charge in approximately 30 minutes. Full electric range on a full charge is 100km (WLTC).' },
+      { q: 'What\'s the total driving range with a full tank and full charge?', a: 'Combined range with the 2.0T engine and battery working together is up to 1000km. Pure-electric-only range on the WLTC cycle is 100km.' },
+      { q: 'Where can I currently buy the Jetour G700 for export?', a: 'It\'s confirmed for sale in the UAE (launched September 2025) and Qatar (launched November 2025) under GCC certification. Jetour is expanding into Latin America in 2026, naming Ecuador, Panama, and Mexico as target markets under early-market allocation.' },
+      { q: 'Is the G700 good off-road, or is it mostly a luxury cruiser with off-road styling?', a: 'The specs indicate genuine off-road capability: 35°/28°/21° approach/departure/breakover angles, 230mm ground clearance, 900mm wading depth, and a 360° transparent chassis camera for terrain visibility. These are dedicated off-road figures, not soft-roader numbers.' },
+    ], related: ['jetour-g700-luxury-off-road-phev-deep-dive'],
+  },
+
 };
 
 export const newsSlugs = Object.keys(news);
