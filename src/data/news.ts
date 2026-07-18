@@ -2797,6 +2797,8 @@ The upside is on emissions, not fuel economy: E85 combustion produces roughly **
 
 The existing US fleet has held roughly flat, not collapsed: **21 million flex-fuel vehicles in 2017**, versus **20.9 million in 2022**, per the Department of Energy's Alternative Fuels Data Center. What's actually shrinking is new production, not the installed base — currently only Ford and General Motors produce new flex-fuel models, down from a wider field of automakers a decade ago. Vehicles built before 2008 generally cannot safely run high-ethanol blends at all — check your owner's manual before fueling with anything above E15.
 
+![Line chart of US flex-fuel vehicle fleet size 2017-2022, showing two reported data points (21.0 million in 2017, 20.9 million in 2022) connected by a dashed estimated trend line for the unreported years in between](/images/news/flex-fuel-fleet-trend.webp)
+
 ![Geely Coolray exterior, front three-quarter studio shot](/images/vehicles/evautopro-geely-coolray-appearance-02.webp)
 
 ## Where Flex-Fuel Actually Matters: Export Markets, Not US Tax Returns
