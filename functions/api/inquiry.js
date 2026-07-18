@@ -18,12 +18,27 @@ function escapeHtml(str) {
   }[c]));
 }
 
+// Same reasoning as escapeHtml(), for the Feishu card's lark_md (markdown-lite)
+// renderer instead of HTML — it natively interprets **bold**, [text](url)
+// hyperlinks and <at id=all></at> mass-mentions, so an unescaped visitor
+// field could inject a phishing link or an @everyone ping into the internal
+// notification channel.
+function escapeLarkMd(str) {
+  return String(str ?? '').replace(/[\\*_~`<>[\]]/g, (c) => '\\' + c);
+}
+
+// 5s timeout on every outbound call — none of these are essential to the
+// visitor's own response, but an unbounded fetch() to a slow dependency
+// would otherwise stall the whole Function on every single submission.
+const TIMEOUT_MS = 5000;
+
 async function checkEmailDomain(email) {
   const domain = String(email || '').split('@')[1];
   if (!domain) return { checked: false, valid: false, domain: null };
   try {
     const resp = await fetch(`https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=MX`, {
       headers: { accept: 'application/dns-json' },
+      signal: AbortSignal.timeout(TIMEOUT_MS),
     });
     const json = await resp.json();
     const valid = Array.isArray(json.Answer) && json.Answer.length > 0;
@@ -81,53 +96,53 @@ export async function onRequestPost(context) {
     email_domain_has_mx: emailCheck.checked ? emailCheck.valid : null,
   };
 
+  // Four independent notification/storage channels. None of their outcomes
+  // depend on each other, so they run concurrently via Promise.allSettled
+  // instead of sequential awaits — one slow/hung dependency no longer stalls
+  // every other channel or the visitor's own response.
+  const channels = [];
+
   // ---- 0. KV backup (INQUIRIES binding) — every lead is stored even when
   //         no notification channel is configured yet ----
   if (env.INQUIRIES) {
-    try {
+    channels.push((async () => {
       const key = `inquiry:${enriched.ts}:${crypto.randomUUID().slice(0, 8)}`;
       await env.INQUIRIES.put(key, JSON.stringify(enriched));
-    } catch (e) {
-      console.error('KV backup failed:', e);
-    }
+    })().catch((e) => console.error('KV backup failed:', e)));
   }
 
   // ---- 1. 推飞书机器人（cc-notify 等价） ----
   if (env.FEISHU_WEBHOOK) {
-    try {
-      await fetch(env.FEISHU_WEBHOOK, {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          msg_type: 'interactive',
-          card: {
-            header: { template: 'red', title: { tag: 'plain_text', content: '🚗 新询盘 evautopro.com' } },
-            elements: [
-              { tag: 'div', text: { tag: 'lark_md', content:
-                `**${data.name || '匿名'}** · ${data.company || '-'} · ${enriched.country}\n` +
-                `**Email**: ${data.email}\n` +
-                `**WhatsApp**: ${data.whatsapp || '-'}\n` +
-                `**Model**: ${data.model_interested || '-'}\n` +
-                `**Qty**: ${data.quantity || '-'}\n` +
-                `**Market**: ${data.target_market || '-'}\n\n` +
-                `**Message**:\n${data.message || '-'}` } },
-            ],
-          },
-        }),
-      });
-    } catch (e) {
-      // log but don't fail user
-      console.error('Feishu notify failed:', e);
-    }
+    channels.push(fetch(env.FEISHU_WEBHOOK, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+      body: JSON.stringify({
+        msg_type: 'interactive',
+        card: {
+          header: { template: 'red', title: { tag: 'plain_text', content: '🚗 新询盘 evautopro.com' } },
+          elements: [
+            { tag: 'div', text: { tag: 'lark_md', content:
+              `**${escapeLarkMd(data.name) || '匿名'}** · ${escapeLarkMd(data.company) || '-'} · ${escapeLarkMd(enriched.country)}\n` +
+              `**Email**: ${escapeLarkMd(data.email)}\n` +
+              `**WhatsApp**: ${escapeLarkMd(data.whatsapp) || '-'}\n` +
+              `**Model**: ${escapeLarkMd(data.model_interested) || '-'}\n` +
+              `**Qty**: ${escapeLarkMd(data.quantity) || '-'}\n` +
+              `**Market**: ${escapeLarkMd(data.target_market) || '-'}\n\n` +
+              `**Message**:\n${escapeLarkMd(data.message) || '-'}` } },
+          ],
+        },
+      }),
+    }).catch((e) => console.error('Feishu notify failed:', e)));
   }
 
   // ---- 2. 写飞书 Base 询盘表（可选） ----
   if (env.FEISHU_BASE_TOKEN && env.FEISHU_TABLE_ID) {
-    try {
-      // Get tenant access token
+    channels.push((async () => {
       const tokenResp = await fetch('https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
+        signal: AbortSignal.timeout(TIMEOUT_MS),
         body: JSON.stringify({
           app_id: env.FEISHU_APP_ID,
           app_secret: env.FEISHU_APP_SECRET,
@@ -141,6 +156,7 @@ export async function onRequestPost(context) {
           'authorization': `Bearer ${tenant_access_token}`,
           'content-type': 'application/json',
         },
+        signal: AbortSignal.timeout(TIMEOUT_MS),
         body: JSON.stringify({
           fields: {
             '姓名': data.name || '',
@@ -158,20 +174,19 @@ export async function onRequestPost(context) {
           },
         }),
       });
-    } catch (e) {
-      console.error('Feishu base write failed:', e);
-    }
+    })().catch((e) => console.error('Feishu base write failed:', e)));
   }
 
   // ---- 3. 邮件通知（用 Resend，可选） ----
   if (env.RESEND_API_KEY) {
-    try {
+    channels.push((async () => {
       const resendResp = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${env.RESEND_API_KEY}`,
           'content-type': 'application/json',
         },
+        signal: AbortSignal.timeout(TIMEOUT_MS),
         body: JSON.stringify({
           from: 'EV Auto Pro <onboarding@resend.dev>',
           to: ['gacaicai@gmail.com'],
@@ -189,10 +204,10 @@ export async function onRequestPost(context) {
       if (!resendResp.ok) {
         console.error('Resend rejected the email:', resendResp.status, await resendResp.text());
       }
-    } catch (e) {
-      console.error('Email failed:', e);
-    }
+    })().catch((e) => console.error('Email failed:', e)));
   }
+
+  await Promise.allSettled(channels);
 
   return new Response(JSON.stringify({ ok: true, message: 'Thank you! Our team will reply within 24 hours.' }), {
     status: 200,

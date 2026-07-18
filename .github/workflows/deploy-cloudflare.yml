@@ -11,6 +11,11 @@ on:
       - main
   workflow_dispatch:
 
+# This workflow only needs to read the repo and deploy to Cloudflare — it
+# never pushes back to GitHub, so it gets no write access by default.
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -41,7 +46,10 @@ jobs:
         # every other install step in this repo has to work around. Direct
         # npx avoids touching the project's dependency tree at all — this is
         # the exact command verified working by hand on 2026-07-09.
+        # wrangler pinned to an exact version (was @latest, which silently
+        # runs whatever wrangler ships on deploy day with live CF deploy
+        # credentials) — bump this deliberately, not automatically.
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx --yes wrangler@latest pages deploy dist --project-name evautopro --branch main
+        run: npx --yes wrangler@4.112.0 pages deploy dist --project-name evautopro --branch main

@@ -3,3 +3,12 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'
+
+# Decap CMS admin needs its own looser script/connect policy to load the
+# unpkg.com bundle and talk to GitHub's API — scoped to /admin/* only so the
+# rest of the site keeps the strict policy above. (The CMS is still
+# non-functional today for an unrelated reason: OAUTH_CLIENT_ID/SECRET are
+# not configured in the Pages project — this override just stops the CSP
+# from being an *additional* reason it's broken.)
+/admin/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://api.netlify.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'
