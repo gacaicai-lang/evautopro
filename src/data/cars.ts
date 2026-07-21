@@ -358,7 +358,7 @@ export const cars: Record<string, Car> = {
       { q: 'What powers the T1 i-DM?', a: '1.5T dedicated hybrid engine (99 kW / 200 N·m) + 150 kW / 310 N·m electric motor, 26.7 kWh LFP battery, single-speed DHT. Official spec sheet does not publish a combined WLTC/CLTC range figure — ask us for the latest confirmed number.' },
       { q: 'Is 4WD available?', a: 'The export version is front-wheel drive only. A rear-motor AWD trim exists in the China domestic lineup but is not currently listed on the export site — we can check factory availability on request.' },
       { q: 'MOQ and lead time?', a: 'Newly catalogued model — made to order, MOQ 1 unit, ~30-day lead time while we build first-batch stock.' },
-      { q: 'Best export market?', a: 'Ships alongside T1 to Russia/CIS, Saudi Arabia, UAE and South Africa — same target markets, PHEV option for buyers wanting lower running costs.' },
+      { q: 'Best export market?', a: 'Ships alongside T1 to Russia/CIS, Saudi Arabia and the UAE — a PHEV option for buyers wanting lower running costs. (The gasoline T1 is additionally listed for South Africa; the i-DM export lineup currently is not.)' },
     ],
     gallery: {
       appearance: [

@@ -2144,7 +2144,7 @@ The export Magotan is offered with two turbocharged four-cylinder options, split
 | Torque | 250 N·m | 320 N·m |
 | Transmission | Dry 7-speed DCT | Wet 7-speed DCT |
 
-Both engines sit in the same body: 4,866mm long × 1,832mm wide × 1,479mm tall, on a 2,871mm wheelbase, with a curb weight of 1,452kg. Top speed is 210 km/h, and 0–100 km/h takes 9.4 seconds. Note the transmission difference too: the 1.4T uses a dry-clutch 7-speed DCT, while the 2.0T uses a wet-clutch 7-speed DCT — wet clutches are the more common choice for handling higher torque loads over sustained driving, which is consistent with the 2.0T's higher 320 N·m figure versus the 1.4T's 250 N·m. Buyers cross-shopping mid-size sedans for the Middle East or Central Asia should note the 2.0T is reserved for the top Luxury trim only; the 1.4T covers both Comfort and Luxury, so the entry point into the Magotan lineup is a 1.4T Comfort car, not the 2.0T.
+Both engines sit in the same body: 4,866mm long × 1,832mm wide × 1,479mm tall, on a 2,871mm wheelbase. For the 1.4T, curb weight is 1,452kg, top speed is 210 km/h, and 0–100 km/h takes 9.4 seconds; equivalent performance figures for the 2.0T aren't published in our current spec data — expect the more powerful 2.0T to be at least as quick. Note the transmission difference too: the 1.4T uses a dry-clutch 7-speed DCT, while the 2.0T uses a wet-clutch 7-speed DCT — wet clutches are the more common choice for handling higher torque loads over sustained driving, which is consistent with the 2.0T's higher 320 N·m figure versus the 1.4T's 250 N·m. Buyers cross-shopping mid-size sedans for the Middle East or Central Asia should note the 2.0T is reserved for the top Luxury trim only; the 1.4T covers both Comfort and Luxury, so the entry point into the Magotan lineup is a 1.4T Comfort car, not the 2.0T.
 
 ## What Does It Cost, and How Do You Actually Order One?
 
@@ -2167,23 +2167,6 @@ One thing this article deliberately does not do is quote you a landed cost inclu
 - Buyers in markets outside UAE, Saudi Arabia, and Kazakhstan — the program has not been confirmed to extend further yet, and we won't claim coverage that isn't documented.
 - Anyone who was actually looking for SAIC-Volkswagen's Passat Pro (the China/Uzbekistan model) — this is a different car from a different joint venture, and we cannot substitute one for the other.
 
-## Frequently Asked Questions
-
-**Is the Magotan a genuine official Volkswagen export model?**
-Yes — it's the flagship model of FAW-Volkswagen's first-ever official export program. 554 Magotan and Sagitar units departed Shanghai Port in September 2025 for the Middle East, with Volkswagen Brand Middle East's own General Manager receiving the first unit at the handover ceremony.
-
-**Is "Magotan" the same car as the Kazakhstan-market "Passat"?**
-Yes, for the Kazakhstan case specifically — FAW-Volkswagen's Magotan is rebadged "Passat" for the Kazakhstan market, certified July 2026. This is different from SAIC-Volkswagen's own separate "Passat Pro" sold in China and Uzbekistan — same name, two different cars from two different joint ventures.
-
-**What powertrain options are available?**
-Two: a 1.4T (150 hp / 110 kW / 250 N·m, dry 7-speed DCT) on Comfort and Luxury trims, or a 2.0T (186 hp / 137 kW / 320 N·m, wet 7-speed DCT) on the top Luxury trim only. Both share the same body: 4,866×1,832×1,479mm, 1,452kg, 210 km/h top speed, 0–100 km/h in 9.4 seconds.
-
-**Which markets can this ship to today?**
-The UAE and Saudi Arabia have been live since November 2025 — retail-ready today. Kazakhstan completed certification in July 2026, with sales expected in the second half of 2026 through distributor Orbis Auto/Mercur Autos, where the car will be sold as the "Passat." No other markets are confirmed for this program yet.
-
-**What's the MOQ and lead time?**
-This is a newly catalogued model within the export program, so it's made to order rather than shipped from ready stock — MOQ is 1 unit, with a lead time of roughly 30 days from confirmed order to production slot. Contact us for current factory allocation before you finalize a purchase timeline.
-
 ## How Do You Get a Quote for the Export Magotan?
 
 If you're sourcing the Volkswagen Magotan for the UAE, Saudi Arabia, or Kazakhstan, reach out with your target market and trim and we'll confirm current FOB pricing and allocation against the September 2025 export program.
@@ -2192,7 +2175,7 @@ If you're sourcing the Volkswagen Magotan for the UAE, Saudi Arabia, or Kazakhst
     faqs: [
       { q: 'Is the Magotan a genuine official Volkswagen export model?', a: 'Yes — it\'s the flagship model of FAW-Volkswagen\'s first-ever official export program. 554 Magotan and Sagitar units departed Shanghai Port in September 2025 for the Middle East, with Volkswagen Brand Middle East\'s own General Manager receiving the first unit at the handover ceremony.' },
       { q: 'Is "Magotan" the same car as the Kazakhstan-market "Passat"?', a: 'Yes, for the Kazakhstan case specifically — FAW-Volkswagen\'s Magotan is rebadged "Passat" for the Kazakhstan market, certified July 2026. This is different from SAIC-Volkswagen\'s own separate "Passat Pro" sold in China and Uzbekistan — same name, two different cars from two different joint ventures.' },
-      { q: 'What powertrain options are available?', a: 'Two: a 1.4T (150 hp / 110 kW / 250 N·m, dry 7-speed DCT) on Comfort and Luxury trims, or a 2.0T (186 hp / 137 kW / 320 N·m, wet 7-speed DCT) on the top Luxury trim only. Both share the same body: 4,866×1,832×1,479mm, 1,452kg, 210 km/h top speed, 0–100 km/h in 9.4 seconds.' },
+      { q: 'What powertrain options are available?', a: 'Two: a 1.4T (150 hp / 110 kW / 250 N·m, dry 7-speed DCT) on Comfort and Luxury trims, or a 2.0T (186 hp / 137 kW / 320 N·m, wet 7-speed DCT) on the top Luxury trim only. Both share the same body: 4,866×1,832×1,479mm, 2,871mm wheelbase. The 1.4T is rated at 1,452kg, 210 km/h top speed and 0–100 km/h in 9.4 seconds; equivalent figures for the 2.0T are not published in our spec data.' },
       { q: 'Which markets can this ship to today?', a: 'The UAE and Saudi Arabia have been live since November 2025 — retail-ready today. Kazakhstan completed certification in July 2026, with sales expected in the second half of 2026 through distributor Orbis Auto/Mercur Autos, where the car will be sold as the "Passat." No other markets are confirmed for this program yet.' },
       { q: 'What\'s the MOQ and lead time?', a: 'This is a newly catalogued model within the export program, so it\'s made to order rather than shipped from ready stock — MOQ is 1 unit, with a lead time of roughly 30 days from confirmed order to production slot. Contact us for current factory allocation before you finalize a purchase timeline.' },
     ], related: ['import-cars-from-china-to-kazakhstan-2026', 'chinese-car-dealers-uae-vs-direct-import-2026', 'how-to-verify-a-chinese-car-exporter-before-you-pay'],
@@ -2415,7 +2398,7 @@ Both models share the same basic layout — FWD, 5-seat, compact SUV body style 
 
 The Dashing gives buyers a choice of two powertrains. The entry engine is a 1.5T producing 115kW/156PS, available with either a 6-speed manual or a DCT gearbox. The flagship engine is a 1.6TGDI making 145kW/197PS and 290N·m of torque, paired exclusively with a 7-speed DCT. Jetour rates the Dashing's top speed at 200km/h.
 
-The X50 offers a single powertrain: a 1.5T turbo producing 115kW/156PS and 230N·m of torque, mated to a 6-speed wet DCT. Jetour has not published a top-speed figure for the X50 in the data available here. Notably, this 1.5T unit is from the same core powertrain family used in the larger Jetour X70, so the engine itself is a known quantity in Jetour's lineup — it's simply carried into a smaller, lighter body in the X50.
+The X50 offers a single powertrain: a 1.5T turbo producing 115kW/156PS and 230N·m of torque, mated to a 6-speed wet DCT. Jetour has not published a top-speed figure for the X50 — confirm it with the regional distributor if it matters for your market. Notably, this 1.5T unit is from the same core powertrain family used in the larger Jetour X70, so the engine itself is a known quantity in Jetour's lineup — it's simply carried into a smaller, lighter body in the X50.
 
 In practical terms: if a market's buyers care about having a manual-transmission option or a higher-output flagship trim, the Dashing covers both; the X50's single-spec approach trades that flexibility for a simpler, lower-cost lineup. Torque output between the two entry-level 156PS engines differs slightly (230N·m on the X50 versus figures not separately broken out for the Dashing's base 1.5T beyond its shared power rating), which is a detail distributors should confirm directly with Jetour for their specific market allocation.
 
@@ -2431,7 +2414,7 @@ Size is one of the clearest differentiators between these two models, and it's a
 | Wheelbase | 2720mm | 2601mm |
 | Curb weight | 1530kg | Not provided |
 
-The Dashing is longer by 203mm, wider by 59mm, and has a wheelbase 119mm longer than the X50's. In a compact SUV segment, that wheelbase difference typically translates into noticeably more rear legroom and cargo space in the Dashing. For markets where family-sized interior room is a selling point, the Dashing's larger footprint is a real advantage. For markets where tight urban parking, narrower streets, or lower per-unit landed weight and shipping cost matter more, the X50's smaller dimensions work in its favor — a lighter, smaller vehicle generally means lower shipping and, in many markets, lower registration or fuel-consumption-linked costs, though exact figures for those categories aren't part of the data provided here.
+The Dashing is longer by 203mm, wider by 59mm, and has a wheelbase 119mm longer than the X50's. In a compact SUV segment, that wheelbase difference typically translates into noticeably more rear legroom and cargo space in the Dashing. For markets where family-sized interior room is a selling point, the Dashing's larger footprint is a real advantage. For markets where tight urban parking, narrower streets, or lower per-unit landed weight and shipping cost matter more, the X50's smaller dimensions work in its favor — a lighter, smaller vehicle generally means lower shipping and, in many markets, lower registration or fuel-consumption-linked costs, though registration and fuel-tax costs vary by market — ask us for a landed-cost estimate for your destination.
 
 Neither size is objectively "better" — it depends entirely on what your buyers in that specific market are used to and what they're cross-shopping against.
 
@@ -2439,9 +2422,9 @@ Neither size is objectively "better" — it depends entirely on what your buyers
 
 This is where the price gap becomes most visible, and it's worth being direct about it: the X50's lower price is not just about a smaller body — it also reflects a simpler feature set.
 
-The Dashing comes with a 15.6-inch touchscreen, an 8-inch head-up display (HUD), and L2.5 assisted driving capability. The X50 comes with a 10.25-inch touchscreen and 6 airbags; no HUD or assisted-driving tier is listed for the X50 in the data available here. On the transmission side, the Dashing's flagship engine pairs with a 7-speed DCT while the X50 uses a 6-speed wet DCT across its lineup.
+The Dashing comes with a 15.6-inch touchscreen, an 8-inch head-up display (HUD), and L2.5 assisted driving. The X50 comes with a 10.25-inch touchscreen, 6 airbags, and an L1 assist package — blind-spot detection, lane-change assist, rear cross-traffic alert, and door-open warning — but no HUD, and its assist tier stops at L1 rather than the Dashing's L2.5. On the transmission side, the Dashing's flagship engine pairs with a 7-speed DCT while the X50 uses a 6-speed wet DCT across its lineup.
 
-None of this makes the X50 a bad vehicle — 10.25 inches is still a full modern touchscreen, and 6 airbags is a legitimate safety baseline. But buyers who cross-shop the two side by side, especially in markets where the Dashing is also available, will notice the gap immediately: bigger screen, HUD, and a driver-assist tier on the Dashing versus a more basic (and less expensive) equipment list on the X50. Distributors should set buyer expectations accordingly rather than presenting the X50 as a stripped-price version of the exact same experience.
+None of this makes the X50 a bad vehicle — 10.25 inches is still a full modern touchscreen, 6 airbags is a legitimate safety baseline, and an L1 assist package covers the most common safety aids. But buyers who cross-shop the two side by side, especially in markets where the Dashing is also available, will notice the gap immediately: bigger screen, HUD, and a higher L2.5 assist tier on the Dashing versus a more basic (and less expensive) equipment list on the X50. Distributors should set buyer expectations accordingly rather than presenting the X50 as a stripped-price version of the exact same experience.
 
 ## What's the Full Spec-by-Spec Comparison?
 
@@ -2460,7 +2443,7 @@ None of this makes the X50 a bad vehicle — 10.25 inches is still a full modern
 | Curb weight | 1530kg | Not provided |
 | Touchscreen | 15.6" | 10.25" |
 | Head-up display | 8" HUD | Not offered |
-| Driver assist | L2.5 assisted driving | Not specified |
+| Driver assist | L2.5 assisted driving | L1 assist package (BSD, lane-change assist, RCTA, door-open warning) |
 | Airbags | Not specified | 6 |
 | FOB price range | $13,000-16,800 | $9,000-13,500 |
 | Certifications | GCC, EAC, SASO | GCC |
@@ -2492,26 +2475,9 @@ For a distributor evaluating either model, this matters practically: if your mar
 - Buyers who want a smaller, easier-to-park compact SUV with a straightforward single-spec lineup
 
 **Jetour X50 — not ideal for:**
-- Buyers expecting HUD, a large 15.6" screen, or assisted-driving features — none of these are offered
+- Buyers expecting HUD, a large 15.6" screen, or L2-level assisted driving — the X50 tops out at an L1 assist package and a 10.25" screen, with no HUD
 - Markets requiring EAC or SASO certification, since only GCC certification is confirmed
 - Buyers who want a manual-transmission or higher-power engine option, since the X50 offers only one drivetrain configuration
-
-## Frequently Asked Questions
-
-**What's the actual price difference between the Jetour Dashing and Jetour X50?**
-FOB pricing for the Dashing runs $13,000-16,800; the X50 runs $9,000-13,500. There's a $13,000-13,500 overlap zone where a base-spec Dashing and a top-spec X50 could land close together, but on average the Dashing costs more — which tracks with its larger body, second engine tier, and added tech (bigger screen, HUD, L2.5 assist).
-
-**Is the Jetour X50 the same vehicle as the Jetour X70?**
-No. The X50 is a distinct, smaller model — a rebadged Soueast DX5 — but it shares its core 1.5T powertrain family (115kW/156PS) with the Jetour X70. So the engine lineage is related, but the body, dimensions, and overall vehicle are not the same.
-
-**Why isn't the Jetour X50 listed on Jetour's main global website?**
-Because it's an export-only model maintained by regional distributors rather than the central jetourglobal.com team. Soueast and Jetour are sibling brands under Chery Holding, and a platform-sharing arrangement between them began around 2022 — that's the basis for the X50 carrying Jetour badging.
-
-**Which markets currently sell the Jetour Dashing vs the Jetour X50?**
-The Dashing is confirmed in Saudi Arabia, UAE, and Russia (GCC, EAC, SASO certified). The X50 has been confirmed on-lot in UAE, Saudi Arabia, Kazakhstan, Panama, Chile, Philippines, and Malaysia, though it's only certified to GCC standard in the data available here.
-
-**Does the Jetour X50 offer the same safety and driver-assist tech as the Dashing?**
-No. The Dashing includes L2.5 assisted driving as a feature; that capability isn't listed for the X50, which is confirmed to have 6 airbags. This is a genuine gap between the two models, not just a marketing difference — buyers wanting assisted-driving tech should look to the Dashing.
 
 ## Ready to Compare Sourcing Options?
 
@@ -2524,9 +2490,9 @@ If you're weighing the Jetour Dashing against the Jetour X50 for your specific m
       { q: 'What\'s the actual price difference between the Jetour Dashing and Jetour X50?', a: 'FOB pricing for the Dashing runs $13,000-16,800; the X50 runs $9,000-13,500. There\'s a $13,000-13,500 overlap zone where a base-spec Dashing and a top-spec X50 could land close together, but on average the Dashing costs more, which tracks with its larger body, second engine tier, and added tech (bigger screen, HUD, L2.5 assist).' },
       { q: 'Is the Jetour X50 the same vehicle as the Jetour X70?', a: 'No. The X50 is a distinct, smaller model, a rebadged Soueast DX5, but it shares its core 1.5T powertrain family (115kW/156PS) with the Jetour X70. So the engine lineage is related, but the body, dimensions, and overall vehicle are not the same.' },
       { q: 'Why isn\'t the Jetour X50 listed on Jetour\'s main global website?', a: 'Because it\'s an export-only model maintained by regional distributors rather than the central jetourglobal.com team. Soueast and Jetour are sibling brands under Chery Holding, and a platform-sharing arrangement between them began around 2022, which is the basis for the X50 carrying Jetour badging.' },
-      { q: 'Which markets currently sell the Jetour Dashing vs the Jetour X50?', a: 'The Dashing is confirmed in Saudi Arabia, UAE, and Russia (GCC, EAC, SASO certified). The X50 has been confirmed on-lot in UAE, Saudi Arabia, Kazakhstan, Panama, Chile, Philippines, and Malaysia, though it\'s only certified to GCC standard in the data available here.' },
-      { q: 'Does the Jetour X50 offer the same safety and driver-assist tech as the Dashing?', a: 'No. The Dashing includes L2.5 assisted driving as a feature; that capability isn\'t listed for the X50, which is confirmed to have 6 airbags. This is a genuine gap between the two models, not just a marketing difference, so buyers wanting assisted-driving tech should look to the Dashing.' },
-    ], related: [],
+      { q: 'Which markets currently sell the Jetour Dashing vs the Jetour X50?', a: 'The Dashing is confirmed in Saudi Arabia, UAE, and Russia (GCC, EAC, SASO certified). The X50 has been confirmed on-lot in UAE, Saudi Arabia, Kazakhstan, Panama, Chile, Philippines, and Malaysia; its only certification on record is GCC, so confirm the standard required for your market before ordering.' },
+      { q: 'Does the Jetour X50 offer the same safety and driver-assist tech as the Dashing?', a: 'Both carry driver-assist, at different levels. The X50 has an L1 assist package (blind-spot detection, lane-change assist, rear cross-traffic alert, door-open warning) plus 6 airbags; the Dashing steps up to L2.5 assisted driving. So the X50 isn\'t bare-bones — but buyers who specifically want L2-level assistance should choose the Dashing.' },
+    ], related: ['how-to-choose-jetour-lineup', 'jetour-t1-vs-t1-idm-ice-or-phev', 'chinese-car-dealers-uae-vs-direct-import-2026'],
   },
   'jetour-t1-vs-t1-idm-ice-or-phev': {
     slug: 'jetour-t1-vs-t1-idm-ice-or-phev', category: 'product', categoryLabel: 'Model Comparison',
@@ -2557,7 +2523,7 @@ Where they diverge is entirely mechanical: engine type, transmission, drivetrain
 | Top speed | 180km/h | Not provided by Jetour |
 | Curb weight | 1811kg | Not provided by Jetour |
 | Electric-only / combined range | — | Not officially published — confirm before ordering |
-| Infotainment | 15.6"/12.8" by trim, Snapdragon 8155, multi-language voice incl. Russian | Same |
+| Infotainment | 15.6" (Lux) / 12.8" (Comfort), Snapdragon 8155, multi-language voice incl. Russian | 15.6" touchscreen + 10.25" digital instrument, Snapdragon 8155 |
 | L2 driver assist | 2.0T Lux trim only | Both trims |
 | FOB price | $18,700–$21,200 | $21,700–$24,500 |
 | Export markets | Russia, Saudi Arabia, UAE, South Africa | Russia, Saudi Arabia, UAE |
@@ -2610,23 +2576,6 @@ Because Russia's fee logic genuinely diverges by powertrain, don't assume the T1
 - Anyone needing 4WD in a PHEV — it isn't offered on the export T1 i-DM lineup today.
 - South Africa orders — the i-DM isn't listed for that market; use the T1.
 - Sales pitches that require a hard electric-range number today — it isn't published yet, so don't promise a figure to a customer until Jetour confirms one in writing.
-
-## Frequently asked questions
-
-**Is the Jetour T1 i-DM available with 4WD?**
-Not on the export lineup. The T1 i-DM sold through the export site is FWD only. Real-time 4WD with an electronic limited-slip differential is available only on the gasoline T1's 2.0T Lux trim. China's domestic Shanhai T1 range does include a rear-motor AWD trim, but it has not been listed for export markets, so it isn't currently orderable through evautopro.com.
-
-**What's the FOB price difference between the T1 and T1 i-DM?**
-The gasoline T1 is priced $18,700–$21,200 FOB. The T1 i-DM is priced $21,700–$24,500 FOB — roughly a $3,000 premium at comparable trim for the hybrid engine, 150kW/310N·m electric motor, DHT, and 26.7kWh LFP battery pack, before freight and destination-market duties.
-
-**What's the electric range of the T1 i-DM?**
-Jetour has not published an official combined WLTC or CLTC range figure for the T1 i-DM as of this writing. The battery is a 26.7kWh LFP pack paired with a 150kW/310N·m motor and a 99kW/200N·m 1.5T hybrid engine, but no combined range or fuel-economy number is available yet — confirm this directly with Jetour or your EV Auto Pro contact before quoting a customer.
-
-**Which markets can I currently import the T1 i-DM into?**
-Russia, Saudi Arabia, and the UAE. Unlike the gasoline T1, which is also listed for South Africa, the T1 i-DM is not currently available for South African import through the export lineup.
-
-**Do import duties differ between the gasoline T1 and the plug-in hybrid T1 i-DM?**
-In Russia, yes structurally — the utilization fee for gasoline vehicles is calculated off engine displacement and horsepower, while hybrids and EVs are calculated off electric motor power output, with different thresholds triggering higher fee brackets. In the UAE and Saudi Arabia, both currently fall under the same standard vehicle duty structure (5% customs duty in both markets) based on available official guidance, though PHEV-specific exemptions are not confirmed — verify with your customs broker before ordering.
 
 ## Ready to compare landed costs for your market?
 
@@ -2695,9 +2644,11 @@ The G700 is offered in two trim tiers with a meaningful seating and technology d
 |---|---|---|
 | Seating | 5 seats | 6 seats |
 | L2 autonomous driving assist | Not specified as included | Included |
-| 15.6" touchscreen (Snapdragon 8255) | Standard across trims | Standard across trims |
-| 35.4" LCD digital instrument cluster | Standard across trims | Standard across trims |
-| 360° transparent chassis camera | Standard across trims | Standard across trims |
+| 15.6" touchscreen (Snapdragon 8255) | Listed for the model line* | Listed for the model line* |
+| 35.4" LCD digital instrument cluster | Listed for the model line* | Listed for the model line* |
+| 360° transparent chassis camera | Listed for the model line* | Listed for the model line* |
+
+*Listed in the G700's overall spec sheet; per-trim fitment isn't itemized in our current data — some equipment (audio, sunroof, L2 assist) is known to vary by trim, so confirm the exact configuration at order.
 
 The infotainment core — a 15.6" touchscreen running on a Snapdragon 8255 chipset — is a current-generation automotive SoC choice, paired with a 35.4" LCD instrument display that spans a significant portion of the dashboard width. L2 autonomous driving assist (lane-centering and adaptive driving-assist features typical of L2 systems) is confirmed as available on Luxury and Flagship trim, giving upper-trim buyers a highway-assist feature set on top of the off-road hardware shared across the range.
 
@@ -2707,9 +2658,9 @@ For export buyers, the practical decision point is seating capacity plus driver-
 
 FOB pricing for the Jetour G700 ranges from $46,300 to $58,200, varying by trim and configuration. That range should be treated as the ex-works starting point for export orders — it does not include destination-market duties, VAT, freight, or local registration costs, which vary by country and should be confirmed directly with local customs and tax authorities before landed-cost budgeting.
 
-The G700 is currently sold in the UAE, where it launched in September 2025, and Qatar, where it followed in November 2025 — both markets covered under GCC certification. Jetour is expanding the model into Latin America in 2026, with Ecuador, Panama, and Mexico named as target markets; this is described as early-market allocation, meaning availability and timing in these markets is still in rollout rather than fully established.
+The G700 launched in the UAE in September 2025 and Qatar in November 2025 — both covered under GCC certification. Saudi Arabia is also a GCC-certified, quotable market for the model (we carry a CIF Jeddah quote of roughly $50,900–$64,000), though without a separately dated launch like the UAE and Qatar. Jetour is expanding the model into Latin America in 2026, with Ecuador, Panama, and Mexico named as target markets; this is described as early-market allocation, meaning availability and timing in these markets is still in rollout rather than fully established.
 
-For distributors and fleet buyers evaluating the G700 for a new market, the current confirmed footprint (UAE, Qatar, GCC certification) plus the named 2026 Latin American expansion gives a clear picture of where Jetour is prioritizing supply. Buyers in markets outside this list should ask directly about allocation timing rather than assume availability. Full current configuration and ordering details are maintained on the [Jetour G700 product page](/cars/jetour-g700/).
+For distributors and fleet buyers evaluating the G700 for a new market, the current confirmed footprint (UAE and Qatar launched, Saudi Arabia GCC-certified and quotable) plus the named 2026 Latin American expansion gives a clear picture of where Jetour is prioritizing supply. Buyers in markets outside this list should ask directly about allocation timing rather than assume availability. Full current configuration and ordering details are maintained on the [Jetour G700 product page](/cars/jetour-g700/).
 
 ## Best For / Not Ideal For
 
@@ -2722,27 +2673,8 @@ For distributors and fleet buyers evaluating the G700 for a new market, the curr
 **Not ideal for:**
 - Budget-focused fleet orders — at $46,300–$58,200 FOB, the G700 is priced as a flagship, not an entry-level SUV
 - Markets with little to no DC fast-charging access, where the 100km electric range and 800V charging advantage go largely unused and the vehicle functions mainly as a heavy combustion-hybrid
-- Buyers needing confirmed availability outside the UAE, Qatar, and the named 2026 Latin American markets (Ecuador, Panama, Mexico) — other regions are not yet confirmed
+- Buyers needing confirmed availability outside the UAE and Qatar (launched), Saudi Arabia (GCC-certified and quotable), and the named 2026 Latin American markets (Ecuador, Panama, Mexico) — other regions are not yet scheduled
 - Applications requiring the 6-seat Luxury/Flagship configuration on a Comfort-trim budget, since the seating and L2 assist differences are trim-locked, not optional add-ons
-
-## Frequently Asked Questions
-
-**What is the actual difference between Comfort and Luxury/Flagship trim on the G700?**
-Comfort trim seats 5; Luxury and Flagship trim seats 6. Luxury/Flagship also includes L2 autonomous driving assist, which is not confirmed as available on Comfort. Core tech — the 15.6" touchscreen, Snapdragon 8255 chipset, 35.4" instrument display, and 360° transparent chassis camera — is standard across trims.
-
-**How long does it take to charge the G700's battery?**
-On the 800V platform, DC fast-charging takes the 34.13kWh LFP battery from 30% to 80% state of charge in approximately 30 minutes. Full electric range on a full charge is 100km (WLTC).
-
-**What's the total driving range with a full tank and full charge?**
-Combined range with the 2.0T engine and battery working together is up to 1000km. Pure-electric-only range on the WLTC cycle is 100km.
-
-**Where can I currently buy the Jetour G700 for export?**
-It's confirmed for sale in the UAE (launched September 2025) and Qatar (launched November 2025) under GCC certification. Jetour is expanding into Latin America in 2026, naming Ecuador, Panama, and Mexico as target markets under early-market allocation.
-
-**Is the G700 good off-road, or is it mostly a luxury cruiser with off-road styling?**
-The specs indicate genuine off-road capability: 35°/28°/21° approach/departure/breakover angles, 230mm ground clearance, 900mm wading depth, and a 360° transparent chassis camera for terrain visibility. These are dedicated off-road figures, not soft-roader numbers.
-
----
 
 Interested in FOB pricing, trim availability, or export documentation for the Jetour G700? Contact EV Auto Pro directly:
 
@@ -2752,7 +2684,7 @@ Interested in FOB pricing, trim availability, or export documentation for the Je
       { q: 'What is the actual difference between Comfort and Luxury/Flagship trim on the G700?', a: 'Comfort trim seats 5; Luxury and Flagship trim seats 6. Luxury/Flagship also includes L2 autonomous driving assist, which is not confirmed as available on Comfort. Core tech — the 15.6" touchscreen, Snapdragon 8255 chipset, 35.4" instrument display, and 360° transparent chassis camera — is standard across trims.' },
       { q: 'How long does it take to charge the G700\'s battery?', a: 'On the 800V platform, DC fast-charging takes the 34.13kWh LFP battery from 30% to 80% state of charge in approximately 30 minutes. Full electric range on a full charge is 100km (WLTC).' },
       { q: 'What\'s the total driving range with a full tank and full charge?', a: 'Combined range with the 2.0T engine and battery working together is up to 1000km. Pure-electric-only range on the WLTC cycle is 100km.' },
-      { q: 'Where can I currently buy the Jetour G700 for export?', a: 'It\'s confirmed for sale in the UAE (launched September 2025) and Qatar (launched November 2025) under GCC certification. Jetour is expanding into Latin America in 2026, naming Ecuador, Panama, and Mexico as target markets under early-market allocation.' },
+      { q: 'Where can I currently buy the Jetour G700 for export?', a: 'It launched in the UAE (September 2025) and Qatar (November 2025) under GCC certification. Saudi Arabia is also a GCC-certified, quotable market for the G700 (we carry a CIF Jeddah quote), though without a separately dated launch like the UAE and Qatar. Jetour is expanding into Latin America in 2026, naming Ecuador, Panama, and Mexico as target markets under early-market allocation.' },
       { q: 'Is the G700 good off-road, or is it mostly a luxury cruiser with off-road styling?', a: 'The specs indicate genuine off-road capability: 35°/28°/21° approach/departure/breakover angles, 230mm ground clearance, 900mm wading depth, and a 360° transparent chassis camera for terrain visibility. These are dedicated off-road figures, not soft-roader numbers.' },
     ], related: ['jetour-x90-plus-import-guide-2026', 'jetour-t1-vs-t1-idm-ice-or-phev'],
   },
