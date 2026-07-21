@@ -207,7 +207,7 @@ export const cars: Record<string, Car> = {
       safety: ['L2 Assisted Driving (ACC + LKA + AEB)', '360° Panoramic Camera + Blind Spot Detection + Forward Collision Warning', '6-8 Airbags (confirm exact count by trim with factory)', 'Hill Descent/Hold Control + ESP + Tire Pressure Monitoring + ISOFIX'],
     },
     stock_status: 'Made to Order', stock_units: 0, lead_time_days: 30, moq: 1,
-    supported_markets: ['Russia', 'Saudi Arabia', 'UAE', 'Egypt', 'Nigeria', 'Kazakhstan'],
+    supported_markets: ['Russia', 'Saudi Arabia', 'UAE', 'Egypt', 'Nigeria', 'Qatar', 'Kazakhstan'],
     shipping_methods: ['RoRo', 'Container', 'Block Train'],
     certifications: ['GCC', 'EAC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
     faqs: [
@@ -658,7 +658,7 @@ export const cars: Record<string, Car> = {
       cif: [
         { country: 'UAE (Jebel Ali)', min: 20000, max: 23600 },
         { country: 'Kazakhstan (Almaty)', min: 21500, max: 25500 }] },
-    specs: { motor_ps: 163, motor_kw: 120, torque_nm: 190, battery_kwh: 51.9, range_wltp: 462, top_speed: 160, accel: 8.2, dimensions: '4435×1855×1600', wheelbase: 2735, tires: '225/60 R17', transmission: 'Single-Speed Reduction Gear' },
+    specs: { motor_ps: 163, motor_kw: 120, torque_nm: 190, battery_kwh: 51.9, range_cltc: 506, top_speed: 160, accel: 8.2, dimensions: '4435×1855×1600', wheelbase: 2735, tires: '225/60 R17', transmission: 'Single-Speed Reduction Gear' },
     features: {
       exterior: ['LED Flowing Taillights (Ultra trim)', 'Panoramic Glass Roof w/ Power Sunshade (Ultra trim)', 'Power Tailgate w/ Anti-pinch (Ultra trim)', '17"-18" Alloy Wheels'],
       interior: ['14.6" Touchscreen + 10.17" Digital Instrument', 'Microfiber Leather Seats', '256-Color Ambient Lighting (Ultra trim)', '50W Wireless Fast Charging (Ultra trim)'],
@@ -670,7 +670,7 @@ export const cars: Record<string, Car> = {
     certifications: ['GCC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
     faqs: [
       { q: 'What is NEVO? Is this the same as "Qiyuan"?', a: 'Yes — Changan Qiyuan (长安启源) is the China domestic brand name; NEVO is the official export-market brand name used on Changan\'s global site and in Thailand, where this exact Q05 launched in May 2026.' },
-      { q: 'Is the Q05 a genuine BEV?', a: 'Yes — 51.9 kWh LFP battery (CATL), 462 km NEDC range, single front motor (120 kW / 163 PS). This is the current-generation electric platform, not the earlier plug-in hybrid Q05 sold in some markets — confirm generation with us before ordering, the two are not interchangeable.' },
+      { q: 'Is the Q05 a genuine BEV?', a: 'Yes — 51.9 kWh LFP battery (CATL), rated 506 km CLTC / 462 km NEDC, single front motor (120 kW / 163 PS). This is the current-generation electric platform, not the earlier plug-in hybrid Q05 sold in some markets — confirm generation with us before ordering, the two are not interchangeable.' },
       { q: 'Where is this confirmed on official sale today?', a: 'Thailand (launched May 2026, CKD-assembled) and Uzbekistan. Announced for future launch in South Africa (2027), Indonesia/Latin America/Europe (H2 2026) — not yet live in those markets.' },
       { q: 'Charging?', a: 'AC up to 6.6 kW, DC fast charging up to 162 kW — 30%→80% in about 15 minutes. Ultra trim supports V2L (vehicle-to-load, 6.6 kW discharge).' },
       { q: 'MOQ and lead time?', a: 'Newly catalogued for our export program — made to order, MOQ 1 unit, ~30-day lead time. Contact us for current factory allocation.' },
@@ -700,7 +700,7 @@ export const cars: Record<string, Car> = {
       safety: ['L2 Assisted Driving + Full-Speed Adaptive Cruise', '540° Panoramic Camera + Transparent Chassis', 'Anti-pinch Power Tailgate', 'Multi-airbag Protection'],
     },
     stock_status: 'Made to Order', stock_units: 0, lead_time_days: 30, moq: 1,
-    supported_markets: ['UAE', 'Saudi Arabia', 'Russia'],
+    supported_markets: ['UAE', 'Saudi Arabia', 'Russia', 'Kyrgyzstan'],
     shipping_methods: ['RoRo', 'Container'],
     certifications: ['GCC'], payment_terms: ['T/T 30+70', 'L/C at sight'],
     faqs: [

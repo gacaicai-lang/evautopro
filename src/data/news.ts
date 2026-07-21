@@ -1924,7 +1924,7 @@ WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20compare%20
     title: 'What Is NEVO? Changan\'s New Energy Export Brand Explained',
     excerpt: 'NEVO is Changan Auto\'s export brand name for its new-energy sub-brand, sold in China as Qiyuan (启源). Covers the NEVO Q05 and A07, real launch markets, and specs.',
     hero: '/images/vehicles/evautopro-nevo-a07-01.webp', date: '2026-07-18 09:00:00', readMin: 8,
-    body: `NEVO is Changan Auto's dedicated new-energy sub-brand — the export-market name for what's sold inside China as **Changan Qiyuan (长安启源)**. If you've landed on a NEVO product listing and don't recognize the name, that's expected: it's the same manufacturer, the same engineering, and in most cases the same vehicle, just carrying the brand name Changan uses on its global site instead of the Chinese domestic name. EV Auto Pro currently exports two NEVO models: the compact electric [NEVO Q05](/cars/nevo-q05/) SUV and the mid-large [NEVO A07](/cars/nevo-a07/) sedan, available as either a full BEV or an extended-range EREV.
+    body: `NEVO is Changan Auto's dedicated new-energy sub-brand — the export-market name for what's sold inside China as **Changan Qiyuan (长安启源)**. If you've landed on a NEVO product listing and don't recognize the name, that's expected: it's the same manufacturer, the same engineering, and in most cases the same vehicle, just carrying the brand name Changan uses on its global site instead of the Chinese domestic name. EV Auto Pro currently offers two NEVO models for export: the compact electric [NEVO Q05](/cars/nevo-q05/) SUV and the mid-large [NEVO A07](/cars/nevo-a07/) sedan, available as either a full BEV or an extended-range EREV. Both are newly catalogued and made to order rather than held in stock.
 
 ## Why Haven't I Heard of NEVO Before?
 
@@ -1955,7 +1955,7 @@ Two NEVO models are in EV Auto Pro's export catalog today — one compact SUV an
 | Body type | Compact electric SUV | Mid-large sedan | Mid-large sedan |
 | Motor | 120kW / 163PS, single front motor | 190kW / 255PS | 200kW / 268PS + 1.5L range-extender |
 | Battery | 51.9kWh LFP (CATL) | 79kWh LFP | 35.1kWh |
-| Range | 462km (NEDC) | 730km (CLTC) | 310km pure-electric / 1,570km combined |
+| Range | 506km CLTC / 462km NEDC | 730km (CLTC) | 310km pure-electric / 1,570km combined |
 | FOB price | $18,500–21,800 | $19,640–22,450 | $19,640–22,450 |
 | Product page | [NEVO Q05](/cars/nevo-q05/) | [NEVO A07](/cars/nevo-a07/) | [NEVO A07](/cars/nevo-a07/) |
 
@@ -1991,7 +1991,7 @@ If you're evaluating the Changan NEVO lineup for your market, we can walk you th
 **Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20current%20FOB%20pricing%20on%20the%20Changan%20NEVO%20Q05%20and%20A07) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
     faqs: [
       { q: 'Is NEVO a different manufacturer from Changan?', a: 'No. NEVO is Changan Auto\'s own export brand name for its new-energy sub-brand, sold in China as Changan Qiyuan (长安启源). The vehicles, engineering, and manufacturer are the same — only the brand name changes between the domestic and export markets.' },
-      { q: 'What\'s the difference between NEVO Q05 and NEVO A07?', a: 'The Q05 is a compact electric SUV: 51.9kWh LFP battery, 462km NEDC range, 120kW/163PS single motor. The A07 is a larger mid-large sedan offered as a 79kWh BEV (730km CLTC, 190kW/255PS) or as an EREV with a 1.5L range-extender, 35.1kWh battery, and 310km pure-electric range.' },
+      { q: 'What\'s the difference between NEVO Q05 and NEVO A07?', a: 'The Q05 is a compact electric SUV: 51.9kWh LFP battery, rated 506km CLTC / 462km NEDC, 120kW/163PS single motor. The A07 is a larger mid-large sedan offered as a 79kWh BEV (730km CLTC, 190kW/255PS) or as an EREV with a 1.5L range-extender, 35.1kWh battery, and 310km pure-electric range.' },
       { q: 'Where can I actually buy a NEVO today?', a: 'The NEVO Q05 launched in Thailand in May 2026 (CKD-assembled) and is sold in Uzbekistan. The NEVO A07 has confirmed real delivery records to Russia, Kyrgyzstan, and Saudi Arabia through established export channels. Ask us directly if your market isn\'t on this list.' },
       { q: 'Is the A07 EREV the same as a regular hybrid?', a: 'Not exactly. The NEVO A07 EREV pairs a 200kW/268PS motor with a 1.5L range-extender engine and a 35.1kWh battery. It drives as a pure EV for 310km on battery alone; after that, the engine generates electricity for the motor rather than driving the wheels directly, extending total combined range to 1,570km.' },
       { q: 'How much does a NEVO cost FOB?', a: 'NEVO Q05 is quoted FOB $18,500–21,800. NEVO A07 (either BEV or EREV configuration) is quoted FOB $19,640–22,450. Final pricing depends on trim and battery/powertrain configuration — confirm current numbers with EV Auto Pro before ordering.' },
@@ -2048,18 +2048,22 @@ There is no Armenian government source confirming this route directly (Armenia h
 
 ## Jetour X50 or Changan CS55 Plus: Which Fits a First Armenian Order?
 
-Both are compact SUVs and both ship as current-model-year stock, which is what keeps them in the 15% duty tier rather than the steeper 3–7-year bracket.
+Both are current-model-year (2026) compact SUVs, which keeps them in the 15% duty tier rather than the steeper 3–7-year bracket. They differ on availability, though: the CS55 Plus is held in stock (roughly 12-day dispatch), while the X50 is made to order on about a 35-day lead time — a real factor when you're planning a first shipment's timing.
 
 | | [Jetour X50](/cars/jetour-x50/) | [Changan CS55 Plus](/cars/changan-cs55-plus/) |
 | --- | --- | --- |
 | Body type | Compact SUV | Compact SUV |
 | FOB price (China) | $9,000 – $13,500 | $14,500 – $17,900 |
+| Availability | Made to order, ~35-day lead time | In stock, ~12-day dispatch |
+| Certification on record | GCC | GCC + EAC |
 | Market position | Entry-level urban compact SUV | Changan's best-selling compact SUV |
-| Fits best | A value-conscious first order, lower entry price | Buyers who want the proven, higher-volume model |
+| Fits best | A value-conscious first order, lower entry price | Buyers who want the proven, higher-volume model — and EAC already on record |
 
 ![Jetour X50 official UAE marketing campaign shot](/images/vehicles/evautopro-jetour-x50-appearance-01.webp)
 
 The X50's lower FOB gives a first-time Armenian importer more room to absorb the 15% duty and 20% VAT stack while still landing at a competitive retail price. The CS55 Plus costs more per unit but carries best-seller status, which matters if you're trying to move volume quickly in a market where buyers may not yet recognize the brand. Neither figure above includes freight, duty or VAT — those are quoted per shipment once route and quantity are confirmed.
+
+One certification point specific to Armenia: as an EAEU member state, Armenia registers vehicles under the EAEU type-approval (EAC/OTTC) regime, not the GCC standard used in Gulf markets. The CS55 Plus already carries EAC on our records; the X50's export program is documented to GCC only, so its EAC/EAEU-registration status must be confirmed for Armenia before you order. Ask us to verify the exact type-approval position for your chosen model and trim — it's the difference between a car that can be registered in Yerevan and one that clears customs but can't be plated.
 
 ![Changan CS55 Plus — Changan's best-selling export SUV, real production unit](/images/vehicles/evautopro-changan-cs55-plus-appearance-01.webp)
 
@@ -2206,7 +2210,7 @@ The X90 Plus is offered with two turbocharged gasoline engines, both paired to t
 | Transmission | 7-speed wet DCT | 7-speed wet DCT |
 | Drive layout | FWD | FWD |
 
-Jetour rates the X90 Plus lineup for a 190 km/h top speed.
+Jetour rates the flagship 2.0TGDI at a 190 km/h top speed; a top-speed figure for the entry 1.6TGDI isn't published in our spec data.
 
 The choice between the two comes down to how the vehicle will actually be used. The 1.6TGDI's 290N·m is adequate for city and highway driving with a typical passenger load, and a smaller-displacement engine generally means lower running costs and — depending on the destination market's tax bands — a lighter duty bill (Egypt, for example, tiers customs duty by engine displacement; see the tax section below). The 2.0TGDI's extra 100N·m of torque and 57PS matters more when the vehicle is regularly loaded with 6-7 occupants plus cargo, or used in hillier terrain. Neither engine is offered with a hybrid or EV powertrain in the specs provided — this is a pure ICE lineup.
 
@@ -2223,7 +2227,7 @@ The choice between the two comes down to how the vehicle will actually be used. 
 
 At 4858mm long and riding on a 2850mm wheelbase, the X90 Plus falls into the full-size SUV class — long enough to give the second and third rows genuine legroom rather than the compressed +2 seating common in smaller 7-seat crossovers. The 1742kg factory weight is worth flagging for two practical reasons: it feeds into recycling/utilization fee calculations in markets like Russia and Kazakhstan where fees are partly displacement- or weight-linked, and it's a data point your freight forwarder will need for accurate shipping cost quotes.
 
-Cargo capacity swings from 486L with all seats up (5-seat configuration, behind the third row) to 1052L with the rear seats folded flat — enough for the vehicle to double as family hauler and cargo runner without needing a roof box for most loads. If your use case is fleet or commercial (ride-hailing, tour operators), confirm which seat configuration (5/6/7) your specific export unit ships in, since cargo volume changes meaningfully between configurations.
+Cargo capacity swings from 486L in the 5-seat configuration with seats up to 1052L with the rear seats folded flat — enough for the vehicle to double as family hauler and cargo runner without needing a roof box for most loads. If your use case is fleet or commercial (ride-hailing, tour operators), confirm which seat configuration (5/6/7) your specific export unit ships in, since cargo volume changes meaningfully between configurations.
 
 ## How Much Does the Jetour X90 Plus Cost to Import (FOB Pricing)?
 
@@ -2263,7 +2267,18 @@ Sources: [UAE customs duties guide](https://inlex-partners.com/blog/uae-customs-
 
 ## Jetour X90 Plus vs Jetour X70 Plus: Which Flagship Fits Your Market?
 
-If the X90 Plus's full-size footprint (4858mm long, 2850mm wheelbase) and $12,990-$26,500 FOB range are more vehicle and more budget than your target buyers need, it's worth knowing Jetour also sells the [Jetour X70 Plus](/cars/jetour-x70-plus/) as a smaller sibling in the same flagship-tier family. We don't have verified specs or FOB pricing for the X70 Plus in this guide — check the dedicated product page for its dimensions, engine options, and current pricing — but as a general rule, let seating requirement decide first: if your market genuinely needs factory 6/7-seat capacity with the cargo and interior room that implies, the X90 Plus is the right starting point; if you're serving buyers who rarely fill a third row and want a smaller footprint or lower entry price, it's worth comparing against the X70 Plus before committing to an order.
+If the X90 Plus's full-size footprint and $12,990-$26,500 FOB range are more vehicle and more budget than your target buyers need, Jetour also sells the [Jetour X70 Plus](/cars/jetour-x70-plus/) as a smaller, lower-priced sibling in the same family. Here's how the two compare on the numbers in our catalog:
+
+| Spec | X90 Plus | X70 Plus |
+|---|---|---|
+| Length / wheelbase | 4858mm / 2850mm | 4749mm / 2720mm |
+| Top engine | 2.0TGDI, 254PS | 1.6TGDI, 197PS |
+| Top speed | 190 km/h (flagship 2.0TGDI) | 185 km/h |
+| Seats | 5 / 6 / 7 | 7 |
+| FOB range | $12,990-$26,500 | $11,000-$18,300 |
+| Export markets in catalog | Russia, Saudi Arabia, UAE, Egypt, Nigeria, Qatar, Kazakhstan | Russia, Egypt, UAE, Kazakhstan |
+
+Let seating and budget decide: if your market needs the larger body and up to 254PS, the X90 Plus is the starting point; if buyers want a lower entry price and the X70 Plus's four confirmed markets cover you, it's the more economical order.
 
 ## Best For / Not Ideal For
 
@@ -2282,8 +2297,8 @@ If the X90 Plus's full-size footprint (4858mm long, 2850mm wheelbase) and $12,99
 
 FOB pricing, seat configuration availability, and duty/tax rules shift by market and by month — the fastest way to get numbers you can actually budget against is to ask directly. [Message us on WhatsApp](https://wa.me/8615964467914?text=Hi%2C%20I%27m%20interested%20in%20importing%20the%20Jetour%20X90%20Plus.%20Please%20send%20current%20FOB%20pricing%20and%20available%20configurations.) at +86 159 6446 7914 with your target country, preferred engine, and seat configuration, or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) with the same details. See the full [Jetour X90 Plus product page](/cars/jetour-x90-plus/) for additional photos and specs.`,
     faqs: [
-      { q: 'What\'s the difference between the Jetour X90 Plus\'s two engine options?', a: 'The entry 1.6TGDI makes 145kW (197PS) and 290N·m of torque, while the flagship 2.0TGDI makes 187kW (254PS) and 390N·m. Both route power through a 7-speed wet dual-clutch transmission to the front wheels, and Jetour rates both configurations for a 190km/h top speed. The practical difference is torque and mid-range pull rather than top speed — the 2.0TGDI\'s extra 100N·m matters most when the vehicle is loaded with 6-7 occupants and cargo.' },
-      { q: 'Is the Jetour X90 Plus available with 7 seats?', a: 'Yes. It\'s a factory-built SUV offered in 5, 6, or 7-seat configurations, with cargo space ranging from 486L behind the third row (5-seat layout, seats up) to 1052L with all seats folded flat. Confirm your target market\'s specific seat-count and cargo requirement with your supplier before ordering, since not every configuration is necessarily stocked at every export point.' },
+      { q: 'What\'s the difference between the Jetour X90 Plus\'s two engine options?', a: 'The entry 1.6TGDI makes 145kW (197PS) and 290N·m of torque, while the flagship 2.0TGDI makes 187kW (254PS) and 390N·m. Both route power through a 7-speed wet dual-clutch transmission to the front wheels. Jetour rates the flagship 2.0TGDI at 190km/h; a top-speed figure for the 1.6TGDI isn\'t published in our spec data. The practical difference is torque and mid-range pull — the 2.0TGDI\'s extra 100N·m matters most when the vehicle is loaded with 6-7 occupants and cargo.' },
+      { q: 'Is the Jetour X90 Plus available with 7 seats?', a: 'Yes. It\'s a factory-built SUV offered in 5, 6, or 7-seat configurations, with cargo space ranging from 486L in the 5-seat layout (seats up) to 1052L with all seats folded flat. Confirm your target market\'s specific seat-count and cargo requirement with your supplier before ordering, since not every configuration is necessarily stocked at every export point.' },
       { q: 'What certifications does the Jetour X90 Plus carry for import?', a: 'It holds GCC conformity certification, covering Gulf Cooperation Council markets like Saudi Arabia, UAE, and Qatar, and EAC (Eurasian Conformity) certification, covering Russia and Kazakhstan. Confirm with your supplier that the specific unit and engine variant you\'re ordering matches the certification required for your destination market, since certification can be configuration-specific.' },
       { q: 'How much does the Jetour X90 Plus cost FOB, and why isn\'t there a fixed price?', a: 'Trade-platform listings currently show FOB prices ranging from $12,990 to $26,500 depending on engine, seat configuration, and trim. Jetour has not published an official factory list price, so this range reflects real market listings rather than a manufacturer MSRP — get a current quote tied to your exact spec before budgeting, since prices move with trim and demand.' },
       { q: 'Which countries can I import the Jetour X90 Plus into right now?', a: 'Based on official and regional-dealer sources, the X90 Plus is currently sold through official or regional-dealer channels in Saudi Arabia, UAE, Russia, Egypt, Nigeria, Qatar, and Kazakhstan. If your target market isn\'t on this list, it doesn\'t necessarily mean import is impossible — it means there\'s no confirmed dealer presence yet, so homologation and certification feasibility need separate verification.' },
@@ -2338,7 +2353,7 @@ Our confirmed FOB export price range for the NEVO A07 is **$19,640–22,450 per 
 
 Be aware that pricing quoted across different B2B trading platforms for this model varies more widely — we've seen figures anywhere from $14,000 to $23,000 depending on the source and trim referenced. That spread is large enough that treating any single number you see online as a fixed, final price would be a mistake. Trim level (BEV vs. EREV, equipment package), order volume, and which platform is quoting all move the number. Request a current, trim-specific quote before committing to an order rather than budgeting off a headline figure from a listing site.
 
-We don't have confirmed MOQ (minimum order quantity) or production lead-time figures to share here — ask directly when requesting your quote so you can build an accurate delivery timeline.
+The A07 is made to order with an MOQ of 1 unit and a lead time of roughly 30 days — confirm current factory allocation when you request your quote so you can build an accurate delivery timeline.
 
 ## Where Can the NEVO A07 Actually Be Delivered?
 
@@ -2350,9 +2365,9 @@ We want to be direct about what we're not claiming: some trading platforms adver
 
 Duty and tax rules change often and vary sharply by destination, so treat the figures below as a planning baseline sourced at the time of writing (July 2026), not a guarantee — confirm current numbers with local customs before you order.
 
-**Russia**: Vehicles are subject to a per-unit "utilization" (recycling) fee. As of January 1, 2025, that fee is 667,400 rubles for electric vehicles and series hybrids up to three years old, rising to 1.17 million rubles for units older than three years, with the schedule set to increase 10–20% annually through 2030 ([AUTOSTAT](https://eng.autostat.ru/news/25667/)). The fee is calculated partly on motor power, and vehicles above roughly 90kW — which covers both the A07 BEV (190kW) and EREV (200kW) — fall into the higher EV-tier bracket rather than a baseline passenger-car rate.
+**Russia**: The decisive cost is the per-unit "utilization" (recycling) fee, and its structure changed in December 2025. The fee now scales with **engine/motor power on a progressive scale**, and the preferential (low) rate is kept only for vehicles up to **160 hp** — above that line the fee rises sharply, on top of Russia's 15% import tariff and VAT. Both A07 variants sit well above 160 hp (the BEV's 190kW/255PS and the EREV's 200kW/268PS), so neither qualifies for the preferential rate — budget the higher power-tier fee. See our dedicated [Russia recycling-fee guide](/news/import-cars-from-china-to-russia-2026-recycling-fee/) for the current schedule and worked examples before you price an order.
 
-**Kyrgyzstan**: The Eurasian Economic Union (EAEU), which sets Kyrgyzstan's common external tariff, granted a 2026 duty-free import quota specifically for "series hybrids" (EAEU tariff code 8703 80 000 5) — a category that covers EREV-type vehicles like the A07 EREV — capped at 15,000 units, restricted to permanent residents of Kyrgyzstan, with resale to Russian, Kazakh, or Belarusian citizens prohibited ([Eurasian Economic Commission](https://eec.eaeunion.org/en/news/mezhpravsovet-predostavil-tarifnuyu-lgotu-na-vvoz-elektromobiley-v-armeniyu-belarus-i-kyrgyzstan-v-2/)). Some 2026 reporting indicates this quota may already be close to exhausted ([AKIpress](https://akipress.com/news:905600:Kyrgyzstan_s_duty-free_import_quota_for_15,000_electric_vehicles_exhausted/)); once it's used up, imports revert to the EAEU's 15% common external tariff. Confirm live quota status before ordering.
+**Kyrgyzstan**: The Eurasian Economic Union (EAEU), which sets Kyrgyzstan's common external tariff, granted a 2026 duty-free import quota specifically for "series hybrids" (EAEU tariff code 8703 80 000 5) — a category that covers EREV-type vehicles like the A07 EREV — capped at 15,000 units, restricted to permanent residents of Kyrgyzstan, with resale to Russian, Kazakh, or Belarusian citizens prohibited ([Eurasian Economic Commission](https://eec.eaeunion.org/en/news/mezhpravsovet-predostavil-tarifnuyu-lgotu-na-vvoz-elektromobiley-v-armeniyu-belarus-i-kyrgyzstan-v-2/)). AKIpress reported in 2026 that this quota has been **fully exhausted** ([AKIpress](https://akipress.com/news:905600:Kyrgyzstan_s_duty-free_import_quota_for_15,000_electric_vehicles_exhausted/)); with the quota used up, imports revert to the EAEU's 15% common external tariff, so plan Kyrgyzstan landed cost around the 15% tariff rather than the duty-free rate. Confirm live status before ordering in case the quota is reopened or expanded.
 
 **Saudi Arabia**: VAT is confirmed at 15%, in effect since July 2020, and the GCC common external tariff applies a baseline of at least 5% on most goods imported from outside the GCC bloc ([U.S. Commercial Service Saudi Arabia guide](https://www.trade.gov/country-commercial-guides/saudi-arabia-import-tariffs)). We could not independently verify the exact HS-code-specific duty line for this vehicle through ZATCA's public portal at time of writing, so treat combined landed tax/duty in the region of 20% of assessed value as a planning estimate and confirm the precise figure with ZATCA before committing.
 
@@ -2360,7 +2375,7 @@ Duty and tax rules change often and vary sharply by destination, so treat the fi
 
 **Best for:**
 - Buyers in markets with sparse or unreliable public charging who want the EREV's 1,570km combined range as an anxiety-free buffer
-- Buyers in EAEU markets like Kyrgyzstan who may qualify for the 2026 duty-free "series hybrid" quota (confirm live status first)
+- Buyers in EAEU markets like Kyrgyzstan — but budget the 15% common external tariff, since the 2026 duty-free "series hybrid" quota has been reported fully exhausted
 - Buyers who want maximum pure-EV range on an LFP pack for daily driving with zero engine involvement — the BEV's 730km CLTC / 79kWh combination
 - Buyers who want a modern tech package (AR-HUD, 15.4" Snapdragon 8155 screen, hidden door handles) in a mid-large RWD sedan body
 
@@ -2378,7 +2393,7 @@ FOB pricing, delivery timelines, and duty specifics move by trim and by destinat
       { q: 'Is the NEVO A07 the same car as the Qiyuan A07?', a: 'Yes. NEVO A07 is the export name for the same vehicle sold domestically in China as the Qiyuan A07. Both badges cover the same mid-large, 5-seat, RWD sedan with hidden door handles, an AR-HUD, and a 15.4-inch Snapdragon 8155-powered touchscreen — there\'s no difference in the underlying product.' },
       { q: 'How much does a NEVO A07 cost FOB?', a: 'Our confirmed FOB range is $19,640–22,450 per unit. Other trading platforms quote anywhere from $14,000 to $23,000 depending on trim and source, so treat any single number you see online as a starting point rather than a fixed price. Request a current, trim-specific quote before ordering.' },
       { q: 'Can I import a NEVO A07 to my country?', a: 'We have confirmed delivery records to Russia, Kyrgyzstan, and Saudi Arabia through established export channels. We could not verify broader "50+ countries" claims made by some trading platforms, so if your market isn\'t one of these three, ask us directly about logistics and homologation before assuming it\'s available.' },
-      { q: 'What import duties apply in Russia, Kyrgyzstan, or Saudi Arabia?', a: 'Each market differs and the rules change yearly. Russia charges a per-vehicle utilization fee (667,400 rubles for EVs/series hybrids under three years old as of 2025, rising annually through 2030). Kyrgyzstan has a 2026 EAEU duty-free quota for series hybrids that may already be exhausted. Saudi Arabia applies 15% VAT plus a roughly 5% GCC baseline customs duty. Confirm exact current figures with local customs before ordering.' },
+      { q: 'What import duties apply in Russia, Kyrgyzstan, or Saudi Arabia?', a: 'Each market differs and the rules change often. Russia charges a per-vehicle utilization (recycling) fee that, since December 2025, scales with motor power — the preferential rate applies only up to 160 hp, and both A07 variants (255-268 PS) sit above that, so budget the higher power-tier fee plus the 15% tariff and VAT. Kyrgyzstan\'s 2026 EAEU duty-free series-hybrid quota has been reported fully exhausted, so plan around the 15% common external tariff. Saudi Arabia applies 15% VAT plus a roughly 5% GCC baseline customs duty. Confirm exact current figures with local customs before ordering.' },
     ], related: ['what-is-nevo-changan-new-energy-brand-explained', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'deepal-s07-alternatives'],
   },
   'jetour-dashing-vs-x50-entry-level-comparison': {
