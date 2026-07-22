@@ -27,6 +27,7 @@ const brands = [
   { slug: 'jetour', name: 'Jetour', cn: '捷途', type: 'SUV', country: 'China', authorized: true },
   { slug: 'kia', name: 'Kia', cn: '起亚', type: 'JV', country: 'Korea', authorized: false },
   { slug: 'leapmotor', name: 'Leapmotor', cn: '零跑', type: 'EV', country: 'China', authorized: false },
+  { slug: 'li-auto', name: 'Li Auto', cn: '理想', type: 'EREV', country: 'China', authorized: false, page: true },
   { slug: 'lexus', name: 'Lexus', cn: '雷克萨斯', type: 'Import', country: 'Japan', authorized: false },
   { slug: 'mazda', name: 'Mazda', cn: '马自达', type: 'JV', country: 'Japan', authorized: false },
   { slug: 'nissan', name: 'Nissan', cn: '日产', type: 'JV', country: 'Japan', authorized: false },
@@ -79,7 +80,7 @@ const sortedBrands = [...brands].sort((a, b) => (b.authorized ? 1 : 0) - (a.auth
       <!-- Brand grid -->
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {sortedBrands.map(b => (
-          <a href={b.authorized ? `/brands/${b.slug}/` : `/contact/quote/?brand=${encodeURIComponent(b.name)}`}
+          <a href={(b.authorized || b.page) ? `/brands/${b.slug}/` : `/contact/quote/?brand=${encodeURIComponent(b.name)}`}
              class="group relative block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-5 text-center transition-all">
             {b.authorized && (
               <span class="absolute top-2 right-2 px-2 py-0.5 bg-brand-500 text-white text-[10px] font-bold rounded-full">
