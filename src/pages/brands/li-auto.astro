@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// Li Auto (理想) brand page — HONEST SOURCING framing.
-// evautopro is NOT a Li Auto authorized dealer (Li Auto runs its own regional
-// dealer network — signed dealerships in UAE/Saudi Apr 2026). We are a China-side
-// export sourcing intermediary. NO authorized-dealer/MoU claims, NO fabricated
-// customer cases, NO fabricated stock or FOB. All brand facts are verifiable.
+// Li Auto (理想) brand page — export-sourcing framing.
+// Presents evautopro as sourcing Li Auto L-series for export; does NOT raise
+// the dealer-authorization question either way (per Philip 2026-07-23).
+// Discipline: NO fabricated MoU/customer cases/stock/FOB — models are
+// quote-on-request; all brand facts are verifiable.
 // Built 2026-07-23 after a real Li Auto inquiry came in via ChatGPT referral.
 // Model photos: none in library yet — using neutral text cards until real
 // Li Auto photos are sourced (do NOT substitute another brand's car photo).
@@ -38,7 +38,7 @@ const brandStory = `Li Auto (理想汽车, Li Auto Inc.), founded in 2015 and he
 
 Li Auto began its overseas expansion in late 2025, entering Egypt, Kazakhstan and Azerbaijan, and signed regional dealership partnerships in the UAE and Saudi Arabia in 2026 — the same Middle East and Central Asia markets EV Auto Pro's dealer customers serve.
 
-EV Auto Pro is a China-side export sourcing partner, not a Li Auto authorized dealer. For dealers and fleet buyers who want to source Li Auto L-series vehicles for export, we handle procurement, export documentation, certification (EAC / GCC / INMETRO), and shipping. Ask us for current availability and a landed-cost quote for your market.`;
+EV Auto Pro sources Li Auto L-series vehicles from China for export. For dealers and fleet buyers, we handle procurement with factory-traceable invoicing, export and destination-market documentation (EAC / GCC / INMETRO), and shipping. Ask us for current availability and a landed-cost quote for your market.`;
 
 // Real Li Auto L-series models. No fabricated per-model FOB — quote on request.
 const models = [
@@ -65,7 +65,7 @@ const markets = [
 ];
 
 const brandFaqs = [
-  { q: 'Is EV Auto Pro an authorized Li Auto dealer?', a: 'No — and we will not claim to be. Li Auto operates its own regional dealer network (it signed dealerships in the UAE and Saudi Arabia in 2026). EV Auto Pro is a China-side export sourcing partner: for buyers who want to source Li Auto L-series vehicles for export, we handle procurement, documentation and shipping, and quote real landed cost. If you need OEM-warranty retail in a market Li Auto covers directly, its local dealer is the right channel; if you are a dealer or fleet buyer sourcing units for export, talk to us.' },
+  { q: 'Can EV Auto Pro supply Li Auto for export?', a: 'Yes. We source the Li Auto L-series — L6, L7 and L9 — from China for export to dealers and fleet buyers. Tell us the model, destination country and quantity, and we\'ll confirm current availability and send a real FOB/CIF quote with the duty and certification picture for your market.' },
   { q: 'What is EREV, and why does it matter for my market?', a: 'EREV (Extended-Range Electric Vehicle) drives on electric power day to day, but carries a small petrol engine that only generates electricity to recharge the battery — never driving the wheels directly. The result is a genuine EV experience with a combined range above 1,000 km and no dependence on public fast-charging. That is exactly why EREV suits markets in the Gulf, Central Asia and Africa where charging infrastructure is still being built out.' },
   { q: 'Which Li Auto models can you source?', a: 'The L-series EREV SUVs: Li L6 (entry mid-size), Li L7 (mid-large), and Li L9 (full-size flagship, with an International Exclusive Version announced for overseas markets). Ask us for current export availability and specs for your target market — we quote per confirmed configuration rather than publishing a fixed price we cannot guarantee.' },
   { q: 'What does a Li Auto export order cost?', a: 'We do not publish a fixed FOB for Li Auto because availability and configuration for export vary — quoting a number we cannot hold would not be honest. Tell us the model, destination country and quantity, and we will come back with a real FOB/CIF quote plus the duty and certification picture for your market.' },
@@ -139,7 +139,7 @@ const brandFaqs = [
         <div>
           <h3 class="text-2xl font-bold text-ink-900 mb-2">How EV Auto Pro sources Li Auto for export</h3>
           <p class="text-base text-ink-700 leading-relaxed">
-            We are an export sourcing partner, not a Li Auto authorized dealer — Li Auto runs its own regional dealer network. For dealers and fleet buyers who want Li Auto L-series units for export, we handle procurement with factory-traceable invoicing, export and destination-market documentation (EAC / GCC / INMETRO), and shipping (RoRo, container, or block train). We quote real availability and landed cost per order rather than publishing a price we cannot guarantee. If a market is one Li Auto already serves directly, we will tell you so plainly.
+            For dealers and fleet buyers who want Li Auto L-series units for export, we handle procurement with factory-traceable invoicing, export and destination-market documentation (EAC / GCC / INMETRO), and shipping (RoRo, container, or block train). We quote real availability and landed cost per confirmed order — so the number you get is one we can actually hold to.
           </p>
         </div>
       </div>
