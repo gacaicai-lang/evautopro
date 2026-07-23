@@ -139,6 +139,7 @@ Send the target model, quantity, destination city and preferred port. We will re
   },
 
   '2026-china-nev-export-rules-guide': {
+    expertInsight: 'In our experience the authorized-exporter certificate scan is the easy part to produce; the number that actually matters is the MOFCOM registration you can independently confirm through a Chinese embassy or consulate, since a grey-market reseller can still print a convincing-looking document. Watch the ten-unit line as well, because the mandatory third-party inspection and battery health certification only trigger at orders of ten units or more, so a dealer placing a small trial batch can quietly forfeit the exact quality control these 2026 rules were built to guarantee. We tell buyers to demand the 360-degree photo and video report and the pre-approved factory batch for their destination certification, whether EAC, GCC or INMETRO, regardless of order size, and to treat that destination pre-approval as the real driver of faster customs clearance rather than the brand name on the car.',
     slug: '2026-china-nev-export-rules-guide',
     category: 'industry',
     categoryLabel: 'Industry & Policy',
@@ -209,6 +210,7 @@ Want specs, FOB pricing and a direct quote? See the [Jetour T2 i-DM](/cars/jetou
   },
 
   'changan-uni-t-vs-jetour-t2-comparison': {
+    expertInsight: 'In our experience the per-unit margin gap everyone fixates on — $14,000-21,000 on the T2 versus $7,500-12,500 on the UNI-T — is the wrong number to optimize first. What actually decides a first Russia order is working capital and turnover: a T2 ties up roughly $33,800 landed per unit and moves slower, while a UNI-T locks up about $22,500 and clears faster off a deeper 45-unit stock, so a cash-constrained dealer recovers and reorders sooner even at the thinner margin. We usually tell newer importers to prove the channel on UNI-T volume, then layer in T2 units once the cash cycle is established — which is exactly why we load both in one mixed container.',
     slug: 'changan-uni-t-vs-jetour-t2-comparison',
     category: 'product',
     categoryLabel: 'Model Comparison',
@@ -283,6 +285,7 @@ Want specs, FOB pricing and a direct quote? See the [Changan UNI-T](/cars/changa
   },
 
   'top-7-chinese-suv-for-russia-2026': {
+    expertInsight: 'In our experience the model a new Russian dealer picks matters less than the route and the cold-weather spec behind it. The Khorgos block train runs 30% cheaper than RoRo and clears EAC in advance, so it usually moves landed cost more than chasing the small FOB spread between two similar ICE SUVs like the UNI-T and CS55 Plus. For anything electrified this far north the real deciding factor is range retention, not headline EV range, which is exactly why the EREV path pairs 200 km of urban electric with a 1000 km gas-assisted highway extender rather than leaning on the battery alone. If you can only stock one line first, we would weigh the CS55 Plus for its highest stock and fastest replenishment, because turnover in Russia is set by parts availability, not by the cheapest sticker.',
     slug: 'top-7-chinese-suv-for-russia-2026',
     category: 'market',
     categoryLabel: 'Market & Import',
@@ -373,6 +376,7 @@ We handle EAC certification and can quote all six models above from our active e
 
 
   'geely-coolray-export-deep-dive': {
+    expertInsight: 'In our experience the real deciding factor on a first Coolray order is not the $15,200 FOB but whether the build already matches your market homologation, because each destination certifies differently — GCC and ESMA in the UAE, EAC in Kazakhstan, INMETRO in Brazil — and Brazil additionally requires the E25 flex-fuel engine, so a unit specced for one market can be stuck at customs in another. The buyers who get burned are the ones who lock price before confirming certification and fuel spec. On right-hand-drive, note that the MOQ of 20 units and 45 to 60 day lead leaves no room for a cheap test order, so treat RHD as a market commitment rather than a trial.',
     slug: 'geely-coolray-export-deep-dive', category: 'market', categoryLabel: 'Market & Import',
     title: 'Geely Coolray Export Deep Dive: UAE, KZ, BR Markets',
     excerpt: 'Complete buyer guide for Geely Coolray RHD and LHD variants across UAE, Kazakhstan, and Brazil markets.',
@@ -409,6 +413,7 @@ Want specs, FOB pricing and a direct quote? See the [Geely Coolray](/cars/geely-
   },
 
   'how-to-choose-changan-suv': {
+    expertInsight: 'In our experience the choice buyers agonize over here is narrower than it looks: both SUVs run the identical 188 PS 1.5T and 7-speed DCT, so you are picking a body style, not a different car. That reframes the real deciding factor — for a first order into an unproven market it is restock velocity, not the UNI-T slightly lower FOB floor or its coupe looks. We steer new dealers onto the CS55 Plus first because as Changan\'s global best-seller it carries the deepest stock and fastest replenishment; add the UNI-T once you know your buyers will pay for styling over the extra cabin height (1680mm vs 1565mm) that the conventional body gives you.',
     slug: 'how-to-choose-changan-suv', category: 'guide', categoryLabel: 'Buyer Guide',
     title: "Changan UNI-T vs CS55 Plus: Which Changan SUV Should You Import?",
     excerpt: "A guide to choosing between EV Auto Pro's two Changan SUVs in stock — UNI-T's sport-coupé styling vs CS55 Plus's best-seller volume positioning.",
@@ -441,6 +446,7 @@ Looking for a wider Changan lineup (UNI-K, CS75 Plus, and other models not shown
   },
 
   'jetour-t2-vs-geely-coolray-africa': {
+    expertInsight: 'In our experience the real deciding factor is not off-road capability versus city size, it is how fast your working capital turns. The T2 ties up roughly 7,300 dollars more per unit at FOB (22,500 versus 15,200), so its 14K-21K dealer margin only pays off if you have the fleet and rural channels to move a 7-seater, and on an urban lot, where the article itself flags the T2 as too large, that capital just sits. Most first-time Africa buyers get this wrong by chasing the higher headline margin instead of the market they can actually reach, and remember the PHEV edge is decisive only where charging is genuinely absent, which is the one gap the cheaper Coolray cannot close.',
     slug: 'jetour-t2-vs-geely-coolray-africa', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Jetour T2 vs Geely Coolray: Which Small SUV Fits Africa Better?',
     excerpt: 'Africa SUV buyers face a choice — Jetour T2 7-seater PHEV adventure or Geely Coolray compact CMA platform. Detailed comparison.',
@@ -485,6 +491,7 @@ Want specs, FOB pricing and a direct quote? See the [Jetour T2](/cars/jetour-t2/
   },
 
   'deepal-s07-alternatives': {
+    expertInsight: 'In our experience the common mistake here is assuming the S07 premium buys more range, and it does not. The cheaper NEVO A07 actually posts more pure-electric range (310km versus 200km) and more combined range (1,570km versus 1000+km) while sitting $5,000-10,000 lower FOB, so the S07 premium is really paying for the SUV body and the Snapdragon 8295 cabin, not the powertrain. That makes body style the real deciding factor: if your market needs a sedan the A07 is not a compromise EREV but the stronger range play, and the S07 only earns its price when the buyer specifically wants an SUV silhouette or the premium cabin to compete with Li Auto and AITO.',
     slug: 'deepal-s07-alternatives', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Affordable Deepal S07 Alternatives: Value EREV SUVs from China',
     excerpt: 'Looking for a Deepal S07 EREV alternative at lower price? Compare with the NEVO A07 EREV sedan, Geely Coolray, and Jetour T2 PHEV from our catalog.',
@@ -530,6 +537,7 @@ Need EREV (long range, limited charging)?
   },
 
   'changan-uni-t-vs-uni-z-comparison': {
+    expertInsight: 'In our experience the real deciding factor between the UNI-T and a model like the UNI-Z is not styling or the spec sheet buyers find online, it is whether an exporter can actually confirm current factory allocation and back the listing with real photos and export-market specs. The UNI-T earns its catalog spot partly because its 1.5T / 188 PS / 300 N·m powertrain is shared across several Changan and NEVO models, which quietly solves parts supply and mechanic familiarity in the markets that buy it — Russia, Kazakhstan, UAE and Egypt. Most dealers chase a number for a model that is not yet in any verified export pipeline, then lose weeks when the quote cannot be honored — which is why the UNI-T, with its published catalog specs and export markets, is the safer place to put first orders, and we would rather tell you the UNI-Z is unconfirmed than quote a page built on unverified figures.',
     slug: 'changan-uni-t-vs-uni-z-comparison', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Changan UNI-T Review: Specs, Pricing — and Do We Export the UNI-Z?',
     excerpt: "A full look at the Changan UNI-T sport coupé SUV we export, plus a straight answer on UNI-Z availability for buyers researching Changan's UNI lineup.",
@@ -558,6 +566,7 @@ Rather than an unverifiable UNI-Z comparison, see how UNI-T stacks up against mo
   },
 
   'how-to-choose-jetour-lineup': {
+    expertInsight: 'In our experience the real deciding factor on a first Jetour order is not the model tier but whether the destination market can actually charge, because if it cannot, the T2 PHEV 137 km electric range is dead weight and you have paid the extra 4,000 dollars FOB over the X70 Plus for a benefit the market never uses. Most first-time dealers over-index on the flashier PHEV spec sheet, but we push the X70 Plus at 18,500 FOB first, not because it is cheapest but because established parts and the fastest stock turnover are what carry a new dealer through the first sales cycle. Keep the PHEVs for markets like the UAE or Moscow where charging exists occasionally, and treat the off-road ShanHai T1 as a niche add-on rather than a volume bet.',
     slug: 'how-to-choose-jetour-lineup', category: 'guide', categoryLabel: 'Buyer Guide',
     title: "How to Choose a Jetour Car: Complete Guide to Jetour's Vehicle Lineup",
     excerpt: "Jetour focuses exclusively on SUVs and adventure-styled family vehicles. Complete guide to choosing between T2, X70 Plus, Dasheng.",
@@ -602,6 +611,7 @@ Want specs, FOB pricing and a direct quote? See the [Jetour X90 Plus](/cars/jeto
   },
 
   'can-you-drive-phev-without-charging': {
+    expertInsight: 'In our experience the deciding factor is not the headline electric range but whether the buyer will ever charge at all. A PHEV like the Jetour T2, with its 137 km electric range, becomes a heavier ICE that burns 5-15% more fuel when it never sees a plug, so for genuinely charge-less markets we steer dealers toward an EREV such as the Deepal S07, which still runs as a series hybrid when uncharged. The point most buyers miss is that a battery kept topped up by the engine rather than by frequent DC fast charging actually cycles less and lasts longer, so zero charging is a fuel-cost problem, not a durability one.',
     slug: 'can-you-drive-phev-without-charging', category: 'guide', categoryLabel: 'Buyer Guide',
     title: 'Can You Drive a Plug-In Hybrid Without Charging? An Essential Guide',
     excerpt: 'PHEV / EREV explained for markets with limited charging infrastructure. Practical guide for African, Central Asian, and Latin American dealers.',
@@ -656,6 +666,7 @@ Want specs, FOB pricing and a direct quote? See the [Jetour T2 PHEV](/cars/jetou
   },
 
   'guide-to-sourcing-chinese-auto-parts': {
+    expertInsight: 'In our experience the money a dealer loses in Africa is rarely the part price, it is the 7 to 14 day wait to reship from Shanghai because there is still no local parts depot. So the real deciding factor is which wear items you pre-stock, not whether you buy OEM or Tier-1. Most buyers get this backwards: they agonize over the 20 to 40 percent they save on aftermarket brake pads, then run out because they carried normal inventory instead of the 2x we recommend. Air filters are the quiet killer at 3x faster clogging on dust roads, so treat them as consumables to over-stock, and save the OEM premium for the safety-critical brake and suspension work where a cheap copy is not worth the risk.',
     slug: 'guide-to-sourcing-chinese-auto-parts', category: 'guide', categoryLabel: 'Buyer Guide',
     title: "A Guide to Sourcing China's Dustproof Auto Parts for African Roads",
     excerpt: 'African road conditions demand robust auto parts. Guide to sourcing dustproof, vibration-resistant Chinese OEM and aftermarket parts.',
@@ -706,6 +717,7 @@ Want specs, FOB pricing and a direct quote? See the [Changan CS55 Plus](/cars/ch
   },
 
   'china-vs-japan-vs-usa-models': {
+    expertInsight: 'In our experience the platform matters more than the badge on the grille, and that is exactly why we steer dealers toward Volkswagen China over the legacy JV nameplates: the ID series rides the same MEB platform as Europe at 30-40% lower FOB, so the price gap costs you almost nothing in engineering, whereas a China-built Toyota or Honda often trades a smaller 1.5T engine and stripped trim for that same discount. The mistake most first-time buyers make is chasing FOB and skipping the warranty line, because a China JV frequently will not honor coverage in your market, so get it confirmed in writing before you sign or the savings vanish at the first aftersales claim. Read the spec sheet the way we source it, feature by feature, not by assuming the China car equals the Japan or US version.',
     slug: 'china-vs-japan-vs-usa-models', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Toyota, Honda, Mercedes: China vs. USA Model Differences & Import Guide',
     excerpt: 'Chinese-built Toyota / Honda / Mercedes models differ from US/Japan versions. Import guide for international dealers.',
@@ -754,6 +766,7 @@ Want specs, FOB pricing and a direct quote? See the [Volkswagen Magotan](/cars/v
   },
 
   'import-chinese-cars-to-ghana': {
+    expertInsight: 'In our experience the number most Ghana buyers fixate on, FOB price, is the least decisive one, because the standard 35-45% duty plus 17.5% VAT and 2.5% NHIL can add more to landed cost than the vehicle itself. That duty stack is exactly why the EV incentive matters more than the sticker: a Deepal S07 EREV at 24,800 USD carrying the reduced 5-15% EV rate lands closer to a 14,500 USD ICE SUV like the CS55 Plus than the raw FOB gap suggests. The catch is that this math rides on the 2024-plus government incentive, so we tell first-movers to confirm the current EV duty rate before quoting a customer, not after. And because Cedi volatility can erase a deal faster than duty does, we invoice in USD and back first orders with a letter of credit.',
     slug: 'import-chinese-cars-to-ghana', category: 'market', categoryLabel: 'Market & Import',
     title: 'How to Import Cars from China to Ghana: Process, Costs & Model Guide',
     excerpt: 'Complete guide to importing Chinese cars to Ghana — customs, duties, port logistics, and recommended models for Ghana market.',
@@ -801,6 +814,7 @@ Want specs, FOB pricing and a direct quote? See the [Jetour X70 Plus](/cars/jeto
   },
 
   'mg-zs-vs-geely-coolray-africa': {
+    expertInsight: 'In our experience the real decision here is capital allocation, not the spec sheet: both models run the same 1.5T turbo, so dealers over-index on the 177PS versus 156PS and the screen size when the number that actually moves the business is the FOB gap. At $9,000 to $13,500 the X50 lets a first-time dealer float more units and turn inventory faster to establish demand, while the Coolray at $15,200 to $18,800 only earns its premium once you have a proven base that will pay for its Volvo-platform resale story. One thing most buyers miss is that the X50 is export-only, so there is no China home-market price for customers to anchor against, which leaves you more room to set your own retail than the Coolray does.',
     slug: 'mg-zs-vs-geely-coolray-africa', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Jetour X50 vs Geely Coolray: Which Small SUV Fits Africa Better?',
     excerpt: 'Two compact SUV options from our export catalog for African markets — budget-focused Jetour X50 vs premium-positioned Geely Coolray. Detailed comparison.',
@@ -1940,6 +1954,7 @@ WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20compare%20
   },
 
   'what-is-nevo-changan-new-energy-brand-explained': {
+    expertInsight: 'In our experience the decision that actually costs money here is not NEVO-versus-Qiyuan branding but the A07 powertrain, and buyers routinely get it backwards. The BEV and EREV sit in the same $19,640 to $22,450 FOB band, so defaulting to the BEV to cut cost saves nothing while risking a car that strands customers wherever DC fast-charging is thin; where charging density is low, the EREV 1,570km combined range is the safer bet at the same price. And when you cross-check two supplier listings, the real red flag is a spec that differs between them, not one sheet reading Qiyuan and another reading NEVO.',
     slug: 'what-is-nevo-changan-new-energy-brand-explained', category: 'industry', categoryLabel: 'Industry & Policy',
     title: 'What Is NEVO? Changan\'s New Energy Export Brand Explained',
     excerpt: 'NEVO is Changan Auto\'s export brand name for its new-energy sub-brand, sold in China as Qiyuan (启源). Covers the NEVO Q05 and A07, real launch markets, and specs.',
@@ -2019,6 +2034,7 @@ If you're evaluating the Changan NEVO lineup for your market, we can walk you th
   },
 
   'import-cars-from-china-to-armenia-2026': {
+    expertInsight: 'In our experience the number that sinks a first Armenian order is not the FOB gap between the X50 and the CS55 Plus but the type-approval line: Armenia registers vehicles on the EAEU EAC/OTTC regime, so a car documented to GCC only can clear customs and still fail to plate in Yerevan. We would not let the lower entry price decide the model on its own, because the CS55 Plus already carries EAC on our records while the EAC status of the X50 has to be confirmed before you order, not after the container is on the water. Two other things dealers routinely get wrong: the 20% VAT is not a flat share of the car, it lands on the customs value plus the duty already paid, and on EVs we would not quote anything duty-free off the 2026 quota until the State Revenue Committee confirms in writing that a resale importer qualifies at all.',
     slug: 'import-cars-from-china-to-armenia-2026', category: 'market', categoryLabel: 'Market & Import',
     title: 'Import Cars from China to Armenia (2026 Guide)',
     excerpt: 'Import cars from China to Armenia in 2026: the EAEU duty tiers (15-20% by vehicle age), 20% VAT, the Poti/Batumi shipping route via Georgia, and whether the new EV quota applies to dealers.',
@@ -2122,6 +2138,7 @@ Armenia's vehicle duty tiers, the environmental tax schedule, and the reach of t
     ], related: ['import-cars-from-china-to-georgia-2026-reexport-hub', 'import-cars-from-china-to-kazakhstan-2026', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import'],
   },
   'volkswagen-china-export-program-explained': {
+    expertInsight: 'In our sourcing experience the costliest mistake is not the badge but the name: a China quote for a VW Passat can mean two entirely different cars — the FAW-Volkswagen Magotan (rebadged Passat for Kazakhstan only) or the separate SAIC-Volkswagen Passat Pro sold in China and Uzbekistan — and we cannot substitute one for the other. So before comparing a single FOB figure in the 21,420 to 28,736 dollar range, pin down which joint venture built the unit and which of the three markets you are actually shipping into (UAE and Saudi Arabia live since November 2025, Kazakhstan only certified in July 2026 for an H2 2026 launch). And because the program only began shipping in September 2025, every car is made to order on a roughly 30-day lead time with no ready stock — so for a Kazakhstan buyer the real move is locking allocation now, not waiting for units that do not yet sit at port.',
     slug: 'volkswagen-china-export-program-explained', category: 'industry', categoryLabel: 'Industry & Policy',
     title: 'Volkswagen\'s China Export Program Explained: What Buyers Need to Know',
     excerpt: 'FAW-Volkswagen shipped 554 Magotan and Sagitar units from Shanghai Port in September 2025 as China\'s first official VW export. Here\'s how the program works.',
@@ -2205,6 +2222,7 @@ If you're sourcing the Volkswagen Magotan for the UAE, Saudi Arabia, or Kazakhst
     ], related: ['import-cars-from-china-to-kazakhstan-2026', 'chinese-car-dealers-uae-vs-direct-import-2026', 'how-to-verify-a-chinese-car-exporter-before-you-pay'],
   },
   'jetour-x90-plus-import-guide-2026': {
+    expertInsight: 'In our experience the number that actually decides a Jetour X90 Plus deal is registered engine displacement, not the FOB price. The 1.6TGDI and 2.0TGDI badges are marketing names rather than the exact cubic-centimeter figure Egyptian customs uses to band duty, and a variant that registers above 1,600cc flips customs duty from 30% to 100% of value, dwarfing any few-hundred-dollar swing in the FOB quote. We confirm the exact cc on the certificate before letting a buyer commit to Egypt, and we flag the reverse trap for Russia, where both engines sit above the 160PS line and never qualify for the low personal-use recycling-fee rate that general import guides tend to quote.',
     slug: 'jetour-x90-plus-import-guide-2026', category: 'guide', categoryLabel: 'Buyer Guide',
     title: 'Jetour X90 Plus Import Guide: Specs, Pricing, Markets (2026)',
     excerpt: 'A decision-stage import guide to the Jetour X90 Plus flagship 7-seater: full engine and dimension specs, the real FOB price range ($12,990-$26,500), current official export markets, and sourced 2026 duty/VAT rates for UAE, Saudi Arabia, Qatar, Nigeria, Egypt, Kazakhstan, and Russia.',
@@ -2325,6 +2343,7 @@ FOB pricing, seat configuration availability, and duty/tax rules shift by market
     ], related: ['how-to-choose-jetour-lineup', 'top-7-chinese-suv-for-russia-2026', 'import-cars-from-china-to-saudi-arabia-2026'],
   },
   'nevo-a07-buying-guide-bev-vs-erev': {
+    expertInsight: 'In our experience the BEV-versus-EREV call gets made on range anxiety alone, but the factor that actually decides landed cost is the destination duty math, not the spec sheet. Shipping into Russia, both variants sit above the 160hp preferential line, so the powertrain choice buys you nothing on the utilization fee — you pay the higher power-tier rate either way. The one place the EREV genuinely earned a tax edge was the Kyrgyzstan series-hybrid quota, and with that quota reported exhausted for 2026 you should budget the 15 percent EAEU tariff regardless and let real charging conditions on the ground, not paperwork, settle the choice.',
     slug: 'nevo-a07-buying-guide-bev-vs-erev', category: 'guide', categoryLabel: 'Buyer Guide',
     title: 'NEVO A07 Buying Guide: BEV vs EREV, Specs, Pricing',
     excerpt: 'The NEVO A07 comes as a 730km-range BEV or a 1,570km-combined EREV — the real decision most buyers face. Here\'s the spec breakdown, honest FOB pricing range, confirmed export markets, and sourced import-duty numbers for Russia, Kyrgyzstan, and Saudi Arabia.',
@@ -2417,6 +2436,7 @@ FOB pricing, delivery timelines, and duty specifics move by trim and by destinat
     ], related: ['what-is-nevo-changan-new-energy-brand-explained', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'deepal-s07-alternatives'],
   },
   'jetour-dashing-vs-x50-entry-level-comparison': {
+    expertInsight: 'In our experience the trap sits in the $13,000-13,500 overlap, where a base Dashing and a top-spec X50 land at nearly the same FOB and buyers fixate on the sticker instead of the paperwork. Once the prices converge like that, price stops deciding anything — the real gate is certification, because only the Dashing carries EAC and SASO while the X50 is GCC-only, so any market that mandates EAC or SASO ends the conversation no matter how close the numbers get. And because the X50 is a distributor-managed export model that never shows up on jetourglobal.com, we always confirm its spec and homologation against local dealer inventory before quoting rather than trusting a global catalog, especially for the Kazakhstan, Panama, Chile, Philippines and Malaysia markets where its groundwork already exists but the Dashing has no confirmed sales.',
     slug: 'jetour-dashing-vs-x50-entry-level-comparison', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Jetour Dashing vs Jetour X50: Which Entry-Level SUV Fits Your Market?',
     excerpt: 'The Jetour Dashing (FOB $13,000-16,800) and Jetour X50 (FOB $9,000-13,500) are both compact SUVs from Jetour, but they differ sharply in size, tech, and price. Here\'s the full spec-by-spec breakdown to help you pick the right entry-level model for your market.',
@@ -2530,6 +2550,7 @@ If you're weighing the Jetour Dashing against the Jetour X50 for your specific m
     ], related: ['how-to-choose-jetour-lineup', 'jetour-t1-vs-t1-idm-ice-or-phev', 'chinese-car-dealers-uae-vs-direct-import-2026'],
   },
   'jetour-t1-vs-t1-idm-ice-or-phev': {
+    expertInsight: 'In our experience the roughly $3,000 FOB gap between the T1 and T1 i-DM is the least important number in this comparison — the deciding factor is landed cost plus what you can honestly promise the customer. Dealers reflexively assume the plug-in hybrid lands cheaper on duty, but Russia assesses its utilization fee off the i-DM\'s electric-motor power rather than engine displacement, and crossing a power threshold can push it into a higher bracket than the gasoline car — so we run the math per trim and destination before quoting, never assuming the PHEV is automatically cheaper to land. The mistake we see most is selling the i-DM on electric range: Jetour has published no combined WLTC or CLTC figure, so any kilometer number you quote today is invented. And if the customer needs 4WD or ships to South Africa, the choice is already made — only the gasoline T1 offers either.',
     slug: 'jetour-t1-vs-t1-idm-ice-or-phev', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Jetour T1 vs T1 i-DM: Gasoline or Plug-In Hybrid — Which Should You Import?',
     excerpt: 'Same 4705mm body, same 2800mm wheelbase, same cabin tech — the Jetour T1 and T1 i-DM differ almost entirely in powertrain. Here\'s how the gasoline and plug-in hybrid versions compare on power, price, 4WD availability, and import duties across Russia, Saudi Arabia, and the UAE.',
@@ -2627,6 +2648,7 @@ Both the [Jetour T1](/cars/jetour-t1/) and [Jetour T1 i-DM](/cars/jetour-t1-idm/
     ], related: ['how-to-choose-jetour-lineup', 'bev-vs-phev-vs-erev-vs-hybrid-which-to-import', 'can-you-drive-phev-without-charging'],
   },
   'jetour-g700-luxury-off-road-phev-deep-dive': {
+    expertInsight: 'In our experience the 800V charging spec sells the G700 on paper but rarely closes the deal, because most of its confirmed markets — the GCC and the 2026 Latin American rollout — still lack the DC fast-charging network that makes 800V usable; here the vehicle earns its keep as a 1000km-combined touring off-roader on geometry like the 35°/28°/21° angles and 900mm wading, not on the plug. The mistake we see buyers make is ordering on the FOB number ($46,300 to $58,200) and only then learning that the six-seat layout and L2 assist are trim-locked to Luxury and Flagship rather than options, so fleet and family orders should be specced by seating first. And with Latin America still on early-market allocation, outside launched UAE and Qatar plus quotable Saudi Arabia, we confirm allocation timing before we ever quote a customer a delivery date.',
     slug: 'jetour-g700-luxury-off-road-phev-deep-dive', category: 'product', categoryLabel: 'Model Comparison',
     title: 'Jetour G700: Luxury Off-Road PHEV Flagship for Export',
     excerpt: 'Jetour\'s new flagship pairs a 665kW PHEV powertrain with genuine off-road hardware (35°/28°/21° angles, 900mm wading) and up to 1000km combined range — full specs, trim comparison, and current export markets for buyers.',
@@ -2725,6 +2747,7 @@ Interested in FOB pricing, trim availability, or export documentation for the Je
   },
 
   'is-a-flex-fuel-vehicle-energy-efficient-for-taxes': {
+    expertInsight: 'In our experience flex-fuel only becomes a real sourcing decision once you stop treating it as a US tax angle: there is no federal purchase credit, and the 15-27% MPG penalty on E85 usually eats any lower pump price. Where it actually decides a deal is market access — Brazil mandates E25-compatible engines nationwide, so for that market flex-fuel is a certification gate rather than an option, and a unit still needs INMETRO approval to clear. What most buyers miss is that new US flex-fuel production has narrowed to just Ford and GM, which is precisely why importers sourcing E25-ready cars for Brazil increasingly look to export-spec models like the Geely Coolray built to that requirement.',
     slug: 'is-a-flex-fuel-vehicle-energy-efficient-for-taxes', category: 'guide', categoryLabel: 'Buyer Guide',
     title: 'Is a Flex-Fuel Vehicle Tax Efficient? 2026 Answer',
     excerpt: 'No federal tax credit exists for flex-fuel vehicle purchases in the US, and E85 delivers 15-27% fewer miles per gallon than gasoline. Here is the full breakdown, with sources.',
