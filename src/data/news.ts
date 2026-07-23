@@ -197,7 +197,9 @@ China's auto industry is expected to export 6+ million vehicles in 2026, up from
 
 The 2026 policy update strengthens China auto export's foundation. International dealers benefit from clearer rules, better quality control, and longer-term partnerships with authorized exporters.
 
-If you're entering Chinese vehicle import — now is the time. Contact EV Auto Pro for compliant authorized supply.`,
+If you're entering Chinese vehicle import — now is the time. Contact EV Auto Pro for compliant authorized supply.
+
+Want specs, FOB pricing and a direct quote? See the [Jetour T2 i-DM](/cars/jetour-t2/) product page in our export catalogue.`,
     faqs: [
       { q: 'Does the new policy apply to used cars too?', a: 'The 2026 Quality Export Initiative primarily targets new vehicles. Used car export rules are evolving separately. EV Auto Pro focuses on new vehicles, with certified used coming Q3 2026.' },
       { q: 'How do I verify an exporter is MOFCOM-authorized?', a: 'Ask for the MOFCOM authorized exporter certificate scan. Real authorization includes registration number you can verify via Chinese embassy/consulate in your country.' },
@@ -269,7 +271,9 @@ There's no winner — both fill different demand segments. For first-time import
 
 ## Contact for Quote
 
-We supply both Changan and Jetour models from our active export catalog. We can supply mixed orders (UNI-T + T2 in same container) for dealers wanting both segments.`,
+We supply both Changan and Jetour models from our active export catalog. We can supply mixed orders (UNI-T + T2 in same container) for dealers wanting both segments.
+
+Want specs, FOB pricing and a direct quote? See the [Changan UNI-T](/cars/changan-uni-t/) and [Jetour T2](/cars/jetour-t2/) product pages in our export catalogue.`,
     faqs: [
       { q: 'Which has better resale value in target markets?', a: 'Both hold value reasonably for Chinese brands. UNI-T resells faster due to higher volume in market. T2 resells at higher absolute price due to PHEV uniqueness.' },
       { q: 'Right-hand drive available?', a: 'UNI-T: factory RHD available, MOQ 20 units. T2: factory RHD development for 2026 Q4. Contact us for current RHD availability.' },
@@ -395,7 +399,9 @@ Factory RHD available for UK, SA, Pakistan, Indonesia markets. MOQ 20 units, 45-
 
 ## Pricing
 
-FOB Shanghai $15,200 (LHD). RHD +$800. CIF varies by destination.`,
+FOB Shanghai $15,200 (LHD). RHD +$800. CIF varies by destination.
+
+Want specs, FOB pricing and a direct quote? See the [Geely Coolray](/cars/geely-coolray/) product page in our export catalogue.`,
     faqs: [
       { q: 'Coolray vs Binyue?', a: 'Same vehicle. Coolray is export name, Binyue (缤越) is China domestic name.' },
       { q: 'CMA platform meaning?', a: 'Shared with Volvo XC40. European safety standards at China prices.' },
@@ -469,7 +475,9 @@ FOB $15,200. 5-seater compact. 1.5T turbo + 7-DCT. Volvo CMA platform safety.
 **Choose T2** for: Fleet operators, large families, off-road / rural markets.
 **Choose Coolray** for: Urban dealers, value buyers, fuel-efficient compact segment.
 
-Both available via EV Auto Pro authorized export.`,
+Both available via EV Auto Pro authorized export.
+
+Want specs, FOB pricing and a direct quote? See the [Jetour T2](/cars/jetour-t2/) and [Geely Coolray](/cars/geely-coolray/) product pages in our export catalogue.`,
     faqs: [
       { q: 'Better for Lagos / Cairo traffic?', a: 'Coolray (compact, easier parking). T2 too large for dense city.' },
       { q: 'Best ROI for Africa dealer?', a: 'T2 higher unit margin ($14K-21K dealer margin). Coolray faster turnover, larger volume.' },
@@ -584,7 +592,9 @@ For first-time Jetour dealer: **X70 Plus** ($18,500). Highest global volume, fas
 
 For premium positioning: **T2 PHEV** ($22,500). Modern PHEV adventure styling.
 
-For off-road niche: **ShanHai T1** ($25,800). Boxy retro styling popular in 2026.`,
+For off-road niche: **ShanHai T1** ($25,800). Boxy retro styling popular in 2026.
+
+Want specs, FOB pricing and a direct quote? See the [Jetour X90 Plus](/cars/jetour-x90-plus/) and [Jetour T2](/cars/jetour-t2/) product pages in our export catalogue.`,
     faqs: [
       { q: 'Jetour vs Chery — same?', a: 'Jetour is Chery Group sub-brand (since 2018). Separate brand, separate dealer network. Sharing engines + R&D.' },
       { q: 'Best-selling Jetour?', a: 'X70 Plus globally. T2 PHEV in Central Asia + Russia specifically.' },
@@ -636,7 +646,9 @@ EREV has a gas engine but it's only a battery charger (not direct drive):
 - **Africa (Egypt / Kenya / Nigeria)**: Limited grid → EREV (S07) best.
 - **Russia rural**: Long distances → S07 or T2.
 - **Saudi Arabia desert**: Charging stations sparse → EREV ideal.
-- **LATAM rural**: Spread infrastructure → PHEV good middle ground.`,
+- **LATAM rural**: Spread infrastructure → PHEV good middle ground.
+
+Want specs, FOB pricing and a direct quote? See the [Jetour T2 PHEV](/cars/jetour-t2/) and [Deepal S07 EREV](/cars/deepal-s07/) product pages in our export catalogue.`,
     faqs: [
       { q: 'PHEV without charging vs ICE — fuel use?', a: 'Without charging, PHEV uses 5-15% MORE fuel than equivalent ICE due to battery weight. With charging, PHEV uses 50-70% less fuel. Charging makes huge difference.' },
       { q: 'EREV battery degradation if always gas?', a: 'EREV battery cycles less when constantly gas-charged vs frequently DC-fast-charged. Actually longer battery life.' },
@@ -684,7 +696,9 @@ We supply parts via 3 channels:
 
 ## CKD Assembly Partners
 
-For Egypt / Algeria / South Africa with CKD assembly programs, we supply parts kits at lower duty rates. Long-term partnership only.`,
+For Egypt / Algeria / South Africa with CKD assembly programs, we supply parts kits at lower duty rates. Long-term partnership only.
+
+Want specs, FOB pricing and a direct quote? See the [Changan CS55 Plus](/cars/changan-cs55-plus/) product page in our export catalogue.`,
     faqs: [
       { q: 'How fast can parts ship to Africa?', a: '7-14 days from Shanghai via DHL/FedEx Express. We do not yet have Africa parts depot — Shanghai direct ship.' },
       { q: 'OEM warranty on aftermarket parts?', a: 'OEM parts: factory warranty applies. Quality aftermarket: supplier warranty (Bosch/ZF/CATL). Cheap aftermarket: no warranty.' },
@@ -730,7 +744,9 @@ Made by SAIC-VW + FAW-VW. ID series EV, Tiguan L (China-only LWB), Magotan, Lama
 
 ## EV Auto Pro Scope
 
-We focus on **Chinese domestic brands** primarily (Changan, Geely, Jetour, Deepal, Qiyuan). We supply Volkswagen China via authorized JV access. Other JV brands (Toyota/Honda/Mercedes/BMW) we source via case-by-case partner network.`,
+We focus on **Chinese domestic brands** primarily (Changan, Geely, Jetour, Deepal, Qiyuan). We supply Volkswagen China via authorized JV access. Other JV brands (Toyota/Honda/Mercedes/BMW) we source via case-by-case partner network.
+
+Want specs, FOB pricing and a direct quote? See the [Volkswagen Magotan](/cars/volkswagen-magotan/) product page in our export catalogue.`,
     faqs: [
       { q: 'Should I buy China-built Toyota vs Japan-built?', a: 'For domestic Chinese market models (Camry, Corolla) — yes, lower FOB. For premium (Lexus) — Japan-built only.' },
       { q: 'Why VW China is interesting?', a: 'MEB EV platform identical to European market. 30-40% lower FOB. Same engineering standards.' },
@@ -775,7 +791,9 @@ Ghana Cedi (GHS) volatility a concern. USD invoicing default. Letter of Credit r
 
 ## EV Auto Pro Ghana Setup
 
-We have not yet established Ghana dealer network. **Open to first-mover Ghana partner**. Volume ≥30 units/quarter for exclusive Accra territory.`,
+We have not yet established Ghana dealer network. **Open to first-mover Ghana partner**. Volume ≥30 units/quarter for exclusive Accra territory.
+
+Want specs, FOB pricing and a direct quote? See the [Jetour X70 Plus](/cars/jetour-x70-plus/) and [Changan CS55 Plus](/cars/changan-cs55-plus/) product pages in our export catalogue.`,
     faqs: [
       { q: 'Why are Ghana car import duties so high?', a: 'Government revenue + protect local assembly programs. EV duty reduced to encourage NEV adoption.' },
       { q: 'Cheapest reliable Chinese car for Ghana?', a: 'Jetour X50 ($9,000-13,500 FOB), our lowest-priced compact SUV. After duties + VAT, budget for meaningfully higher retail pricing — confirm current Ghana duty rates with us before quoting a customer.' },
@@ -1182,7 +1200,9 @@ Every order runs the [EV Auto Pro Export PDI](/services/inspection/) with a phot
 
 Don't take our word for anything on this page — ask us to prove every item in the checklist above before you commit a deposit anywhere, on your specific target model. Pick a model from our [in-stock vehicle lineup](/cars/) and tell us your destination; we'll walk you through our export documentation and licence details for that order before you pay anything.
 
-**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20to%20verify%20your%20export%20credentials%20before%20ordering) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.`,
+**Talk to us now:** WhatsApp [+86 159 6446 7914](https://wa.me/8615964467914?text=Hi%2C%20I%27d%20like%20to%20verify%20your%20export%20credentials%20before%20ordering) or email [gacaicai@gmail.com](mailto:gacaicai@gmail.com) — we reply within 24 hours, usually faster.
+
+Want specs, FOB pricing and a direct quote? See the [Geely Coolray](/cars/geely-coolray/) product page in our export catalogue.`,
     faqs: [
       { q: 'How do I verify a Chinese car exporter is legitimate?', a: 'Ask for their MOFCOM authorized exporter certificate and number (verifiable via the Chinese embassy/consulate), confirm the invoicing company matches the bank account name, require a pre-shipment photo & video inspection, and check contactable references with delivery proof. A legitimate exporter passes all of these; a grey-market reseller usually cannot show the export licence.' },
       { q: 'What is the safest way to pay a Chinese car supplier?', a: 'T/T 30% deposit + 70% before shipment (ideally after you receive the pre-shipment inspection report), or an L/C at sight from a major bank. Never pay 100% up front, and never wire to a personal bank account that does not match the invoicing company name.' },
