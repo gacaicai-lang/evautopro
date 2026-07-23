@@ -41,10 +41,15 @@ Li Auto began its overseas expansion in late 2025, entering Egypt, Kazakhstan an
 EV Auto Pro sources Li Auto L-series vehicles from China for export. For dealers and fleet buyers, we handle procurement with factory-traceable invoicing, export and destination-market documentation (EAC / GCC / INMETRO), and shipping. Ask us for current availability and a landed-cost quote for your market.`;
 
 // Real Li Auto L-series models. No fabricated per-model FOB — quote on request.
+// image: set to a file in /images/vehicles/ when available. imageType:
+//   'real'  = genuine official/media photo (shown plainly)
+//   'illus' = AI-generated illustration (shown WITH a visible "Illustration" tag —
+//             never passed off as a real product photo; house rule 宁可缺图不货不对板)
+// Leave image empty ⇒ clean text card (current state).
 const models = [
-  { name: 'Li L6', body: 'Mid-size SUV', fuel: 'EREV', note: 'Entry L-series, 5-seat family EREV' },
-  { name: 'Li L7', body: 'Mid-large SUV', fuel: 'EREV', note: '5-seat EREV, larger cabin than L6' },
-  { name: 'Li L9', body: 'Full-size Flagship SUV', fuel: 'EREV', note: '6-seat flagship; International Exclusive Version announced for overseas markets' },
+  { name: 'Li L6', body: 'Mid-size SUV', fuel: 'EREV', note: 'Entry L-series, 5-seat family EREV', image: '', imageType: '' },
+  { name: 'Li L7', body: 'Mid-large SUV', fuel: 'EREV', note: '5-seat EREV, larger cabin than L6', image: '', imageType: '' },
+  { name: 'Li L9', body: 'Full-size Flagship SUV', fuel: 'EREV', note: '6-seat flagship; International Exclusive Version announced for overseas markets', image: '', imageType: '' },
 ];
 
 const advantages = [
@@ -157,7 +162,19 @@ const brandFaqs = [
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {models.map(m => (
           <a href={`/contact/quote/?brand=Li%20Auto&model=${encodeURIComponent(m.name)}`}
-             class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl p-6 transition-all">
+             class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-lg rounded-xl overflow-hidden transition-all">
+            {m.image && (
+              <div class="relative aspect-[3/2] bg-ink-100 overflow-hidden">
+                <img src={m.image} alt={`${m.name} — ${m.imageType === 'illus' ? 'illustration' : 'photo'}`}
+                     class="w-full h-full object-cover" loading="lazy" />
+                {m.imageType === 'illus' && (
+                  <span class="absolute bottom-2 right-2 px-2 py-0.5 bg-ink-900/70 text-white text-[10px] font-medium rounded backdrop-blur-sm">
+                    Illustration
+                  </span>
+                )}
+              </div>
+            )}
+          <div class="p-6">
             <div class="flex items-center gap-2 mb-3">
               <span class="px-2 py-0.5 bg-ink-100 text-ink-600 text-xs rounded">{m.body}</span>
               <span class="px-2 py-0.5 bg-brand-50 text-brand-700 text-xs rounded">{m.fuel}</span>
@@ -165,6 +182,7 @@ const brandFaqs = [
             <h3 class="text-xl font-semibold text-ink-900 group-hover:text-brand-500 transition-colors mb-2">{m.name}</h3>
             <p class="text-sm text-ink-600 leading-relaxed mb-4">{m.note}</p>
             <span class="inline-flex items-center text-sm font-semibold text-brand-500">Request a quote →</span>
+          </div>
           </a>
         ))}
       </div>
