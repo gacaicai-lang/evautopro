@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { cars, type Car } from '../../data/cars';
+import { news } from '../../data/news';
 import WhatsAppField from '../../components/WhatsAppField.astro';
 
 export function getStaticPaths() {
@@ -232,6 +233,13 @@ const relatedCars = Object.values(cars)
   .sort((a, b) => b.score - a.score)
   .slice(0, 4)
   .map(x => x.c);
+
+// --- Related guides & comparisons (bidirectional link: articles that already
+//     reference this model link back here from the product page) ----------------
+const relatedArticles = Object.values(news)
+  .filter(a => a.body?.includes(`/cars/${car.slug}/`))
+  .map(a => ({ slug: a.slug, title: a.title, categoryLabel: a.categoryLabel }))
+  .slice(0, 6);
 
 // --- Gallery ------------------------------------------------------------------
 const heroThumbs = (car.gallery?.appearance ?? []).slice(0, 5);
@@ -926,7 +934,30 @@ const waLink = (text: string) => `https://wa.me/8615964467914?text=${encodeURICo
   </section>
 
   {/* ====================================================================
-       SECTION 12 — Related vehicles
+       SECTION 12 — Related guides & comparisons (product ↔ article backlinks)
+       ==================================================================== */}
+  {relatedArticles.length > 0 && (
+    <section class="pb-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-base lg:text-lg font-bold text-ink-900">Guides &amp; Comparisons Featuring the {car.model}</h2>
+          <a href="/news/" class="text-xs font-semibold text-brand-500 hover:text-brand-600">All guides →</a>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {relatedArticles.map(a => (
+            <a href={`/news/${a.slug}/`} class="group block bg-white border border-ink-200 hover:border-brand-500 hover:shadow-md rounded-xl p-5 transition-all">
+              <div class="text-[10px] text-brand-500 uppercase font-semibold tracking-wider mb-2">{a.categoryLabel}</div>
+              <h3 class="text-sm font-semibold text-ink-900 group-hover:text-brand-500 transition-colors leading-snug">{a.title}</h3>
+              <span class="inline-flex items-center text-xs font-semibold text-brand-500 mt-3">Read guide →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {/* ====================================================================
+       SECTION 13 — Related vehicles
        ==================================================================== */}
   <section class="pb-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
